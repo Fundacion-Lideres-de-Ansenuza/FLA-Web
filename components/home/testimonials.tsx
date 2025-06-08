@@ -23,9 +23,7 @@ export default function Testimonials() {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-extrabold text-gray-900 mb-8 tracking-wide">TESTIMONIOS</h2>
         </div>
-
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Images Grid */}
           <div className="grid grid-cols-2 gap-6">
             <Image
               src="/placeholder.svg?height=200&width=200"
@@ -56,8 +54,6 @@ export default function Testimonials() {
               className="rounded-2xl w-full h-auto shadow-lg"
             />
           </div>
-
-          {/* Testimonials */}
           <div className="space-y-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-red-500 text-white p-8 rounded-2xl relative shadow-md">
@@ -74,8 +70,6 @@ export default function Testimonials() {
                 </div>
               </div>
             ))}
-
-            {/* Navigation */}
             <div className="flex justify-center space-x-4 mt-8">
               <button className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center hover:bg-gray-400">
                 <ChevronLeft className="h-5 w-5" />

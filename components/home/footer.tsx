@@ -38,7 +38,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Social Media */}
           <div>
             <h3 className="text-lg font-bold mb-4">Seguinos</h3>
             <div className="flex space-x-6">
