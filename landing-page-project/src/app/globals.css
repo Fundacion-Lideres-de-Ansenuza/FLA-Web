@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+:root {
+  --background-rgb: 255, 255, 255; /* brand-white */
+  --foreground-rgb: 31, 41, 55; /* text-dark */
+
+  /* Example for primary blue if needed as CSS var */
+  /* --primary-blue-rgb: 59, 130, 246; */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-rgb: 10, 10, 10; /* A generic dark background */
+    --foreground-rgb: 237, 237, 237; /* A generic light foreground for dark mode */
+  }
+}
+
+body {
+  background-color: rgb(var(--background-rgb));
+  color: rgb(var(--foreground-rgb));
+  /* Font family will be set via next/font in layout.tsx */
+}
