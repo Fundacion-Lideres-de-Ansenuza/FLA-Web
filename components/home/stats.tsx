@@ -6,13 +6,13 @@ export default function Stats() {
   ]
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-20 bg-gray-50 border-t border-b border-gray-200">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className={`text-5xl lg:text-7xl font-bold ${stat.color} mb-4`}>{stat.number}</div>
-              <div className="text-gray-700 font-medium text-lg whitespace-pre-line">{stat.label}</div>
+            <div key={index} className="text-center bg-white rounded-2xl shadow p-8">
+              <div className={`text-5xl lg:text-7xl font-extrabold ${stat.color} mb-4 drop-shadow`}>{stat.number}</div>
+              <div className="text-gray-700 font-semibold text-lg whitespace-pre-line tracking-wide">{stat.label}</div>
             </div>
           ))}
         </div>

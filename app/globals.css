@@ -1,2 +1,15 @@
-@import "tailwindcss/preflight";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+body {
+  background-color: #fff;
+  color: #1a202c;
+  font-family: 'Inter', 'Helvetica Neue', Arial, 'sans-serif';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  background-color: #fff;
+}
