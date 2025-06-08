@@ -2,6 +2,18 @@
 
 This is the official website for Fundación Líderes de Ansenuza (FLA), a non-profit organization. It's built using Next.js, providing a modern and efficient web experience.
 
+---
+
+## About Fundación Líderes de Ansenuza (FLA)
+
+Fundación Líderes de Ansenuza (FLA) is a non-profit organization dedicated to promoting leadership, education, and social development in the Ansenuza region of Argentina. FLA works to empower individuals and communities through educational programs, social initiatives, and collaborative projects that foster positive change and sustainable growth.
+
+- **Mission:** To inspire and develop leaders who contribute to the well-being and progress of the Ansenuza region.
+- **Vision:** A thriving, inclusive, and empowered community where every individual has the opportunity to reach their full potential.
+- **Website:** [https://www.lideresdeansenuza.org](https://www.lideresdeansenuza.org)
+
+---
+
 ## Project Description
 
 FLA-Web is a website designed to represent the Fundación Líderes de Ansenuza, showcasing its mission, programs, news, and contact information. The site aims to engage visitors, inform them about the organization's activities, and provide a way for them to get involved.
