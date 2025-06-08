@@ -61,7 +61,7 @@ export default function Testimonials() {
           <div className="space-y-6">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-red-500 text-white p-6 rounded-2xl relative">
-                <p className="text-sm leading-relaxed mb-4">"{testimonial.content}"</p>
+                <p className="text-sm leading-relaxed mb-4">&quot;{testimonial.content}&quot;</p>
                 <div className="flex items-center">
                   <Image
                     src={testimonial.avatar || "/placeholder.svg"}
