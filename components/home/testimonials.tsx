@@ -18,49 +18,49 @@ export default function Testimonials() {
   ]
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-20 bg-gray-50 border-t border-b border-gray-200">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">TESTIMONIOS</h2>
+          <h2 className="text-4xl font-extrabold text-gray-900 mb-8 tracking-wide">TESTIMONIOS</h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Images Grid */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-6">
             <Image
               src="/placeholder.svg?height=200&width=200"
               alt="Testimonio 1"
               width={200}
               height={200}
-              className="rounded-2xl w-full h-auto"
+              className="rounded-2xl w-full h-auto shadow-lg"
             />
             <Image
               src="/placeholder.svg?height=200&width=200"
               alt="Testimonio 2"
               width={200}
               height={200}
-              className="rounded-2xl w-full h-auto"
+              className="rounded-2xl w-full h-auto shadow-lg"
             />
             <Image
               src="/placeholder.svg?height=200&width=200"
               alt="Testimonio 3"
               width={200}
               height={200}
-              className="rounded-2xl w-full h-auto"
+              className="rounded-2xl w-full h-auto shadow-lg"
             />
             <Image
               src="/placeholder.svg?height=200&width=200"
               alt="Testimonio 4"
               width={200}
               height={200}
-              className="rounded-2xl w-full h-auto"
+              className="rounded-2xl w-full h-auto shadow-lg"
             />
           </div>
 
           {/* Testimonials */}
-          <div className="space-y-6">
+          <div className="space-y-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-red-500 text-white p-6 rounded-2xl relative">
+              <div key={index} className="bg-red-500 text-white p-8 rounded-2xl relative shadow-md">
                 <p className="text-sm leading-relaxed mb-4">&quot;{testimonial.content}&quot;</p>
                 <div className="flex items-center">
                   <Image
