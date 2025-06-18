@@ -1,0 +1,16 @@
+{
+    "mcpServers": {
+      "Framelink Figma MCP": {
+        "command": "cmd",
+        "args": ["/c", "npx", "-y", "figma-developer-mcp", "--figma-api-key=apikey", "--stdio"]
+      }
+    },
+"canva-dev": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@canva/cli@latest",
+        "mcp"
+      ]
+    }
+  }
