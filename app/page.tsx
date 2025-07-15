@@ -1,7 +1,6 @@
 import Header from "@/components/navbar"
 import Hero from "@/components/home/hero"
 import VideoSection from "@/components/home/video-section"
-import CallToAction from "@/components/home/call-to-action"
 import Testimonials from "@/components/home/testimonials"
 import WhyWeDoIt from "@/components/home/why-we-do-it"
 import CurrentPrograms from "@/components/home/current-programs"
@@ -15,7 +14,6 @@ export default function Home() {
       <Hero />
       <Stats />
       <VideoSection />
-      <CallToAction />
       <Testimonials />
       <WhyWeDoIt />
       <CurrentPrograms />
