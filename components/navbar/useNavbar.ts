@@ -1,20 +1,20 @@
 'use client'
-import { usePathname } from "next/navigation"
-import { useState, useCallback } from "react"
-import { NAV_ITEMS } from "./_constants"
 
-export const useNavbar = () => {
+import { usePathname } from "next/navigation"
+import { useState, useCallback, useMemo } from "react"
+import { NAV_ITEMS } from "./_constants"
+import type { NavbarHook } from "./types"
+
+export const useNavbar = (): NavbarHook => {
   const pathname = usePathname()
   const [hoveredItem, setHoveredItem] = useState<string | null>(null)
 
-  const getActiveItem = useCallback(() => {
+  const activeItem = useMemo(() => {
     return NAV_ITEMS.find(item => pathname?.startsWith(item.href))?.name || null
   }, [pathname])
 
   const handleMouseEnter = useCallback((itemName: string) => {
-    if (itemName) {
-      setHoveredItem(itemName)
-    }
+    setHoveredItem(itemName)
   }, [])
 
   const handleMouseLeave = useCallback(() => {
@@ -22,12 +22,12 @@ export const useNavbar = () => {
   }, [])
 
   const isActive = useCallback((itemName: string) => {
-    return getActiveItem() === itemName
-  }, [getActiveItem])
+    return activeItem === itemName
+  }, [activeItem])
 
   return {
     hoveredItem,
-    activeItem: getActiveItem(),
+    activeItem,
     isActive,
     handleMouseEnter,
     handleMouseLeave
