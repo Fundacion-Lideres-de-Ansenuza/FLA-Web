@@ -18,21 +18,8 @@ export default function Hero() {
             </div>
 
             <div className="row-start-1 md:row-auto flex justify-center md:justify-end">
-              <div className="w-24 h-24 lg:w-28 lg:h-28 bg-red-600 rounded-full flex items-center justify-center shadow-lg">
-                <svg
-                  className="w-14 h-14 lg:w-26 lg:h-26 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="3"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 4 L12 20" />
-                  <path d="M4 12 L20 12" />
-                  <path d="M6 6 L18 18" />
-                  <path d="M6 18 L18 6" />
-                </svg>
+              <Image src="/images/Iconoito.png" alt="Logo" width={115} height={115} />
               </div>
-            </div>
           </div>
 
           <div className="w-full max-w-7xl px-4">

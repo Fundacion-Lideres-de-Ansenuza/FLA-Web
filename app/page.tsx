@@ -1,4 +1,4 @@
-import Header from "@/components/home/header"
+import Header from "@/components/navbar"
 import Hero from "@/components/home/hero"
 import Stats from "@/components/home/stats"
 import VideoSection from "@/components/home/video-section"
