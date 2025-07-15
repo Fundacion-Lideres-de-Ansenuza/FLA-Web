@@ -6,7 +6,7 @@ export function useCountAnimation(target: number, isVisible: boolean) {
   useEffect(() => {
     if (!isVisible || !target || target <= 0) return
 
-    let start = 0
+    const start = 0
     const duration = 2000
     const startTime = performance?.now() || Date.now()
 
@@ -20,7 +20,8 @@ export function useCountAnimation(target: number, isVisible: boolean) {
       setCount(current)
 
       if (progress < 1) {
-        requestAnimationFrame?.(animate) || setTimeout(() => animate(Date.now()), 16)
+        const animationId = requestAnimationFrame?.(animate) || setTimeout(() => animate(Date.now()), 16)
+        return animationId
       }
     }
 

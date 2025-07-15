@@ -1,4 +1,3 @@
-import { ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
 
 export default function Testimonials() {
@@ -32,7 +31,7 @@ export default function Testimonials() {
               alt="Testimonio 1"
               width={200}
               height={100}
-              className="rounded-4xl w-full h-[200px] sm:h-[300px] md:h-[400px] shadow-lg object-cover"
+              className="rounded-3xl w-full h-[200px] sm:h-[300px] md:h-[400px] shadow-lg object-cover"
             />
             <div className="grid grid-cols-2 gap-6 justify-center items-center">
               <Image
@@ -47,7 +46,7 @@ export default function Testimonials() {
                 alt="Testimonio 3"
                 width={200}
                 height={200}
-                className="rounded-2xl w-full h-[200px] sm:h-[300px] md:h-[350px]   shadow-lg object-cover"
+                className="rounded-2xl w-full h-[200px] sm:h-[300px] md:h-[350px] shadow-lg object-cover"
               />
             </div>
           </div>
@@ -55,8 +54,6 @@ export default function Testimonials() {
           <div className="space-y-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="relative flex items-center">
-
-                
                 <div 
                   className="text-white p-8 rounded-2xl shadow-md w-full font-saridona"
                   style={{ backgroundColor: testimonial.bgColor }}
@@ -73,16 +70,8 @@ export default function Testimonials() {
                     <span className="font-semibold">{testimonial.name}</span>
                   </div>
                 </div>
-
               </div>
             ))}
-                            {/* <button className="absolute -left-12 w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center hover:bg-gray-400 z-10">
-                  <ChevronLeft className="h-5 w-5" />
-                </button>
-                
-                <button className="absolute -right-12 w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center hover:bg-gray-400 z-10">
-                  <ChevronRight className="h-5 w-5" />
-                </button> */}
           </div>
         </div>
       </div>
