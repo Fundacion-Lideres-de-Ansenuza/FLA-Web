@@ -9,6 +9,11 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			fontFamily: {
+				'saridona': ['Saridona', 'serif'],
+				'arimo': ['Arimo', 'sans-serif'],
+				'contrail': ['Contrail One', 'cursive'],
+			},
 			colors: {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
