@@ -2,13 +2,13 @@
 
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 import { useNavbar } from "./useNavbar"
 import { NAV_ITEMS, BRAND_COLOR } from "./_constants"
 
 export default function Header() {
   const { 
     hoveredItem, 
-    activeItem, 
     isActive, 
     isMobileMenuOpen,
     handleMouseEnter, 
@@ -22,9 +22,11 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <img 
+            <Image 
               src="/images/Iconoito.png" 
               alt="Fundación Líderes de Ansenuza" 
+              width={48}
+              height={48}
               className="h-12 w-auto"
             />
           </div>
