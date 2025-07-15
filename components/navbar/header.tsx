@@ -6,7 +6,16 @@ import { useNavbar } from "./useNavbar"
 import { NAV_ITEMS, BRAND_COLOR } from "./_constants"
 
 export default function Header() {
-  const { hoveredItem, activeItem, isActive, handleMouseEnter, handleMouseLeave } = useNavbar()
+  const { 
+    hoveredItem, 
+    activeItem, 
+    isActive, 
+    isMobileMenuOpen,
+    handleMouseEnter, 
+    handleMouseLeave,
+    toggleMobileMenu,
+    closeMobileMenu 
+  } = useNavbar()
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50 border-b border-gray-100">
@@ -70,13 +79,104 @@ export default function Header() {
             CONTACTANOS
           </Button>
           
-          <button className="lg:hidden p-2 rounded-full hover:bg-gray-100 transition">
-            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+          <button 
+            className="lg:hidden p-2 rounded-full hover:bg-gray-100 transition relative z-50"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle mobile menu"
+          >
+            <motion.div
+              animate={isMobileMenuOpen ? "open" : "closed"}
+              className="w-7 h-7 flex flex-col justify-center items-center"
+            >
+              <motion.span
+                className="block w-6 h-0.5 bg-gray-600 mb-1"
+                variants={{
+                  closed: { rotate: 0, y: 0 },
+                  open: { rotate: 45, y: 6 }
+                }}
+                transition={{ duration: 0.3 }}
+              />
+              <motion.span
+                className="block w-6 h-0.5 bg-gray-600 mb-1"
+                variants={{
+                  closed: { opacity: 1 },
+                  open: { opacity: 0 }
+                }}
+                transition={{ duration: 0.3 }}
+              />
+              <motion.span
+                className="block w-6 h-0.5 bg-gray-600"
+                variants={{
+                  closed: { rotate: 0, y: 0 },
+                  open: { rotate: -45, y: -6 }
+                }}
+                transition={{ duration: 0.3 }}
+              />
+            </motion.div>
           </button>
         </div>
       </div>
+
+            <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="lg:hidden bg-white border-b border-gray-100 overflow-hidden"
+          >
+            <div className="container mx-auto px-4 py-6">
+              <nav className="flex flex-col space-y-1">
+                {NAV_ITEMS.map((item, index) => (
+                  <motion.a
+                    key={item.name}
+                    href={item.href}
+                    className={`px-4 py-4 rounded-lg text-base font-semibold transition-all duration-200 ${
+                      isActive(item.name) 
+                        ? 'text-white' 
+                        : 'text-gray-700 active:bg-gray-50'
+                    }`}
+                    style={{
+                      backgroundColor: isActive(item.name) ? BRAND_COLOR : 'transparent'
+                    }}
+                    onClick={closeMobileMenu}
+                    whileTap={{ scale: 0.98 }}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ 
+                      delay: index * 0.1,
+                      duration: 0.3,
+                      ease: "easeOut"
+                    }}
+                  >
+                    {item.name}
+                  </motion.a>
+                ))}
+                <motion.div
+                  className="pt-6 border-t border-gray-200"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ 
+                    delay: NAV_ITEMS.length * 0.1,
+                    duration: 0.3,
+                    ease: "easeOut"
+                  }}
+                >
+                  <motion.div whileTap={{ scale: 0.98 }}>
+                    <Button 
+                      className="w-full bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-bold shadow transition"
+                      onClick={closeMobileMenu}
+                    >
+                      CONTACTANOS
+                    </Button>
+                  </motion.div>
+                </motion.div>
+              </nav>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   )
 } 
