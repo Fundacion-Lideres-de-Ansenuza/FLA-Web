@@ -1,10 +1,12 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import localFont from "next/font/local"
 import "./tailwind.css"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
+const fla = localFont({ src: "../public/fonts/FLA.otf", variable: "--font-fla", display: "swap" })
 
 export const metadata: Metadata = {
   title: "Fundación Compromiso - Jóvenes transformando la educación",
@@ -31,7 +33,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Contrail+One&display=swap" rel="stylesheet" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} ${fla.variable}`}>{children}</body>
     </html>
   )
 }

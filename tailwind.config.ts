@@ -10,6 +10,7 @@ const config: Config = {
 	theme: {
 		extend: {
 			fontFamily: {
+					'fla': ['var(--font-fla)', 'serif'],
 				'saridona': ['Saridona', 'serif'],
 				'arimo': ['Arimo', 'sans-serif'],
 				'contrail': ['Contrail One', 'cursive'],

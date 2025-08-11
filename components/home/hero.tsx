@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="flex flex-col items-center gap-10">
           <div className="grid md:grid-cols-3 gap-8 items-center w-full max-w-7xl lg:max-w-8xl">
             <div className="md:col-span-2 space-y-6 text-left">
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-900 leading-tight tracking-tight font-saridona">
+              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-900 leading-tight font-saridona">
                 Jóvenes transformando la educación
               </h1>
               <p className="text-lg lg:text-xl text-gray-600 leading-relaxed font-arimo">
