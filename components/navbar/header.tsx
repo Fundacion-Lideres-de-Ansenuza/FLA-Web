@@ -19,15 +19,15 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50 border-b border-gray-100">
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <Image 
               src="/images/LogoFLA.png" 
               alt="Fundación Líderes de Ansenuza" 
-              width={70}
-              height={70}
-              className="h-16 w-auto"
+              width={100}
+              height={100}
+              className="h-24 w-auto"
             />
           </div>
           

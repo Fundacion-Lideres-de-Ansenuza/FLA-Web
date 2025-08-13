@@ -22,7 +22,7 @@ export default function Testimonials() {
     <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-extrabold text-gray-900 mb-8 tracking-wide font-saridona">TESTIMONIOS</h2>
+          <h2 className="text-4xl md:text-5xl text-gray-900 mb-8 tracking-wide font-saridona">TESTIMONIOS</h2>
         </div>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="grid grid-cols-1 gap-6">
