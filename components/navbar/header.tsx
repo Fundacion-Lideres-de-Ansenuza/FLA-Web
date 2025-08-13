@@ -23,7 +23,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <Image 
-              src="/images/Iconoito.png" 
+              src="/images/LogoFLA.png" 
               alt="Fundación Líderes de Ansenuza" 
               width={48}
               height={48}
