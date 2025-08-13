@@ -30,14 +30,14 @@ ttps://www.youtube.com/@fundacionlideresdeansenuza4512" target="_blank" rel="noo
           </div>
 
           <div>
-              <h3 className="text-lg font-bold mb-4">Contacto</h3>
+              <h3 className="text-lg mb-4">Contacto</h3>
               <p className="text-gray-400 text-base mb-2">Independencia 350</p>
               <p className="text-gray-400 text-base mb-2">Miramar de Ansenuza</p>
               <p className="text-gray-400 text-base">Córdoba, Argentina</p>
             </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-4">Newsletter</h3>
+            <h3 className="text-lg mb-4">Newsletter</h3>
             <p className="text-gray-400 text-base mb-4">Suscribite acá</p>
             <div className="flex">
               <input
