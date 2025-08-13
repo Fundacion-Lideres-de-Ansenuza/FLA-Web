@@ -9,12 +9,12 @@ const inter = Inter({ subsets: ["latin"] })
 const fla = localFont({ src: "../public/fonts/FLA.otf", variable: "--font-fla", display: "swap" })
 
 export const metadata: Metadata = {
-  title: "Fundación Compromiso - Jóvenes transformando la educación",
+  title: "Fundación Líderes de Ansenuza - Jóvenes transformando la educación",
   description: "Somos una ONG que diseña y ejecuta programas educativos gratuitos en el territorio argentino.",
   keywords: "educación, jóvenes, ONG, programas educativos, Argentina, voluntariado",
-  authors: [{ name: "Fundación Compromiso" }],
+  authors: [{ name: "Fundación Líderes de Ansenuza" }],
   openGraph: {
-    title: "Fundación Compromiso - Jóvenes transformando la educación",
+    title: "Fundación Líderes de Ansenuza - Jóvenes transformando la educación",
     description: "Somos una ONG que diseña y ejecuta programas educativos gratuitos en el territorio argentino.",
     type: "website",
     locale: "es_AR",

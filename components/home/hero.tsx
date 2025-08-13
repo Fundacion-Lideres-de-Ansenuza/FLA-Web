@@ -18,7 +18,7 @@ export default function Hero() {
             </div>
 
             <div className="row-start-1 md:row-auto hidden sm:flex justify-center md:justify-end">
-              <Image src="/images/Iconoito.png" alt="Logo" width={115} height={115} />
+              <Image src="/images/LogoFLA.png" alt="Fundación Líderes de Ansenuza" width={115} height={115} />
             </div>
           </div>
 
