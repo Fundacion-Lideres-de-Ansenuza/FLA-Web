@@ -1,4 +1,5 @@
 import { FaTiktok, FaInstagram, FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -7,9 +8,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12">
           <div className="space-y-6">
             <div className="flex items-center space-x-3 mb-8">
-              <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center shadow-md">
-                <span className="text-white font-extrabold text-lg">F</span>
-              </div>
+              <Image src="/images/LogoFLA.png" alt="Fundación Líderes de Ansenuza" width={100} height={100} />
               <div className="text-red-500 font-extrabold text-xl leading-tight">
                 Fundación
                 <br />

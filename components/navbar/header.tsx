@@ -25,9 +25,9 @@ export default function Header() {
             <Image 
               src="/images/LogoFLA.png" 
               alt="Fundación Líderes de Ansenuza" 
-              width={48}
-              height={48}
-              className="h-12 w-auto"
+              width={70}
+              height={70}
+              className="h-16 w-auto"
             />
           </div>
           
