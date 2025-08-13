@@ -1,37 +1,42 @@
 import Image from "next/image"
+import Link from "next/link"
+
+type Program = { name: string; logo: string; href: string }
 
 export default function CurrentPrograms() {
-  const programs = [
-    { name: "Potenciate", logo: "/placeholder.svg?height=80&width=120" },
-    { name: "Futuras", logo: "/placeholder.svg?height=80&width=120" },
-    { name: "Experiencia Ambiental", logo: "/placeholder.svg?height=80&width=120" },
-    { name: "Somos", logo: "/placeholder.svg?height=80&width=120" },
+  const programs: Program[] = [
+    { name: "Potenciate", logo: "/images/programs/potenciate.png", href: "/programas/potenciate" },
+    { name: "Futuras", logo: "/images/programs/futuras.png", href: "/programas/futuras" },
+    { name: "Experiencia Ambiental", logo: "/images/programs/exp_ambientalia.png", href: "/programas/experiencia-ambiental" },
+    { name: "Somos", logo: "/images/programs/somos.png", href: "/programas/somos" },
   ]
 
   return (
-    <section className="py-20 bg-gray-50 border-t border-b border-gray-200">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-extrabold text-gray-900 mb-8 tracking-wide">PROGRAMAS ACTUALES</h2>
+      <div className="text-left mb-10">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">PROGRAMAS ACTUALES</h2>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 items-center">
           {programs.map((program, index) => (
-            <div key={index} className="text-center bg-white rounded-2xl shadow p-6 flex flex-col items-center justify-center">
+            <Link key={index} href={program.href} className="block group">
               <Image
                 src={program.logo || "/placeholder.svg"}
                 alt={program.name}
-                width={120}
-                height={80}
-                className="mx-auto mb-4"
+                width={360}
+                height={180}
+                className="mx-auto h-28 md:h-32 lg:h-36 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
-              <span className="text-gray-700 font-semibold text-lg">{program.name}</span>
-            </div>
+            </Link>
           ))}
         </div>
-        <div className="text-center">
-          <button className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-full font-bold shadow-lg">
+        <div className="text-center mt-12">
+          <Link
+            href="/programas"
+            className="inline-block bg-[#f45e5e] hover:bg-[#f67a7a] text-white px-10 py-3 md:px-12 md:py-4 rounded-full font-contrail text-xl md:text-2xl shadow-lg"
+          >
             Ver todos los programas
-          </button>
+          </Link>
         </div>
       </div>
     </section>

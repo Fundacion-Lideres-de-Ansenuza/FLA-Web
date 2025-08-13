@@ -1,4 +1,3 @@
-import { Facebook, Twitter, Linkedin, Instagram, InstagramIcon } from "lucide-react"
 import { FaTiktok, FaInstagram, FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa"
 
 export default function Footer() {
