@@ -1,4 +1,5 @@
 import type React from "react"
+import Image from "next/image"
 
 export default function WhyWeDoIt(): React.ReactElement {
   return (
@@ -12,7 +13,13 @@ export default function WhyWeDoIt(): React.ReactElement {
         <div className="grid lg:grid-cols-2 gap-8 mb-8">
           <div className="relative rounded-3xl overflow-hidden shadow-xl">
             <div className="absolute inset-0">
-              <img src="/images/IMG_0745-min.png" alt="Impacto social" className="w-full h-full object-cover" />
+              <Image 
+                src="/images/IMG_0745-min.png" 
+                alt="Impacto social" 
+                className="w-full h-full object-cover" 
+                width={600}
+                height={400}
+              />
             </div>
             <div className="absolute inset-0 bg-red-600/80" />
             <div className="relative text-white p-10">
@@ -26,7 +33,13 @@ export default function WhyWeDoIt(): React.ReactElement {
 
           <div className="relative rounded-3xl overflow-hidden shadow-xl">
             <div className="absolute inset-0">
-              <img src="/images/TESTIMONIO_1CUT.png" alt="Educación" className="w-full h-full object-cover" />
+              <Image 
+                src="/images/TESTIMONIO_1CUT.png" 
+                alt="Educación" 
+                className="w-full h-full object-cover" 
+                width={600}
+                height={400}
+              />
             </div>
             <div className="absolute inset-0 bg-red-700/80" />
             <div className="relative text-white p-10">
@@ -40,7 +53,13 @@ export default function WhyWeDoIt(): React.ReactElement {
 
         <div className="relative rounded-3xl overflow-hidden shadow-xl">
           <div className="absolute inset-0">
-            <img src="/images/IMG_0621-min.png" alt="Oportunidades" className="w-full h-full object-cover" />
+            <Image 
+              src="/images/IMG_0621-min.png" 
+              alt="Oportunidades" 
+              className="w-full h-full object-cover" 
+              width={1200}
+              height={600}
+            />
           </div>
           <div className="absolute inset-0 bg-red-800/80" />
           <div className="relative text-white p-10">

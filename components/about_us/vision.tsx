@@ -1,7 +1,5 @@
-import Image from "next/image";
 import { JSX } from "react";
-
-const imgCapturaDePantalla20250806ALaS2012491: string = "http://localhost:3845/assets/becbc097c0959380a0028a376f9ae0ac22ea006d.png";
+import Image from "next/image";
 const girlVision = "/images/about_us/girlVision.png"
 
 export default function Vision(): JSX.Element {
