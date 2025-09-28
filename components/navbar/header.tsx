@@ -22,13 +22,18 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <Image 
-              src="/images/LogoFLA.png" 
-              alt="Fundación Líderes de Ansenuza" 
-              width={100}
-              height={100}
-              className="h-24 w-auto"
-            />
+            <div
+              className="cursor-pointer transition-transform hover:scale-105"
+              onClick={() => window.location.href = '/'}
+            >
+              <Image
+                src="/images/LogoFLA.png"
+                alt="Fundación Líderes de Ansenuza"
+                width={100}
+                height={100}
+                className="h-24 w-auto"
+              />
+            </div>
           </div>
           
           <nav 
@@ -77,7 +82,10 @@ export default function Header() {
             ))}
           </nav>
 
-          <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-2 rounded-full hidden lg:block font-bold shadow transition">
+          <Button
+            className="bg-red-600 hover:bg-red-700 text-white px-8 py-2 rounded-full hidden lg:block font-bold shadow transition"
+            onClick={() => window.location.href = '/contactanos'}
+          >
             CONTACTANOS
           </Button>
           
@@ -166,9 +174,12 @@ export default function Header() {
                   }}
                 >
                   <motion.div whileTap={{ scale: 0.98 }}>
-                    <Button 
+                    <Button
                       className="w-full bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-bold shadow transition"
-                      onClick={closeMobileMenu}
+                      onClick={() => {
+                        closeMobileMenu();
+                        window.location.href = '/contactanos';
+                      }}
                     >
                       CONTACTANOS
                     </Button>
