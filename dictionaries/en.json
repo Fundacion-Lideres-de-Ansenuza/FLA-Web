@@ -1,0 +1,63 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Youth transforming education",
+    "subtitle": "We are an NGO that designs and implements free educational programs in Argentina.",
+    "volunteer_button": "Volunteer",
+    "alliances_button": "Alliances",
+    "donate_button": "Donate"
+  },
+  "stats": [
+    { "label": "Current\nvolunteers" },
+    { "label": "Participants over\nthe years" },
+    { "label": "Social impact\nprojects" }
+  ],
+  "video_section": {
+    "title": "Learn our history"
+  },
+  "testimonials": {
+    "title": "TESTIMONIALS",
+    "items": [
+      {
+        "name": "Sofía Martínez",
+        "content": "FLA showed me that there is a world of opportunities within my reach and made me see that I am capable of achieving anything I set my mind to. It made me feel confident and fearless."
+      },
+      {
+        "name": "Camila Díaz",
+        "content": "From the very first moment, FLA makes you feel unique, special, and supported. It shows you and gives you many opportunities to reach your goals and set new ones."
+      }
+    ]
+  },
+  "why_we_do_it": {
+    "title": "WHY WE DO IT?",
+    "cards": [
+      {
+        "title": "Social Impact",
+        "description": "Because we encourage those who participate in our programs to carry out projects that generate transformations in their communities."
+      },
+      {
+        "title": "Education",
+        "description": "Because we believe in education as a resource and tool to solve social problems."
+      },
+      {
+        "title": "Opportunities",
+        "description": "Because we believe that talent has no borders, we bring transformative experiences to the most remote corners, so that every young person can be an agent of change in their community."
+      }
+    ]
+  },
+  "current_programs": {
+    "title": "CURRENT PROGRAMS",
+    "view_all_button": "View all programs"
+  },
+  "footer": {
+    "contact": "Contact",
+    "newsletter": "Newsletter",
+    "subscribe": "Subscribe here",
+    "email_placeholder": "Your email",
+    "copyright": "© {year} Fundación Lideres de Ansenuza. All rights reserved."
+  }
+}

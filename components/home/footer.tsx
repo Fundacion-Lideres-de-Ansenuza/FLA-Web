@@ -1,7 +1,22 @@
 import { FaTiktok, FaInstagram, FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa"
 import Image from "next/image"
 
-export default function Footer() {
+type FooterDictionary = {
+  contact: string;
+  newsletter: string;
+  subscribe: string;
+  email_placeholder: string;
+  copyright: string;
+}
+
+interface FooterProps {
+  dictionary: FooterDictionary;
+}
+
+export default function Footer({ dictionary }: FooterProps) {
+  const currentYear = new Date().getFullYear();
+  const copyrightText = dictionary.copyright.replace('{year}', currentYear.toString());
+
   return (
     <footer className="bg-[#2b2b2b] text-white py-8 border-t border-[#2b2b2b]">
       <div className="container mx-auto px-4">
@@ -30,19 +45,19 @@ ttps://www.youtube.com/@fundacionlideresdeansenuza4512" target="_blank" rel="noo
           </div>
 
           <div>
-              <h3 className="text-lg mb-4">Contacto</h3>
+              <h3 className="text-lg mb-4">{dictionary.contact}</h3>
               <p className="text-gray-400 text-base mb-2">Independencia 350</p>
               <p className="text-gray-400 text-base mb-2">Miramar de Ansenuza</p>
               <p className="text-gray-400 text-base">Córdoba, Argentina</p>
             </div>
 
           <div>
-            <h3 className="text-lg mb-4">Newsletter</h3>
-            <p className="text-gray-400 text-base mb-4">Suscribite acá</p>
+            <h3 className="text-lg mb-4">{dictionary.newsletter}</h3>
+            <p className="text-gray-400 text-base mb-4">{dictionary.subscribe}</p>
             <div className="flex">
               <input
                 type="email"
-                placeholder="Tu email"
+                placeholder={dictionary.email_placeholder}
                 className="flex-1 px-4 py-3 rounded-l-lg bg-[#1f1e1e] text-white border border-[#1f1e1e] focus:outline-none focus:border-red-500 text-base"
               />
               <button className="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-r-lg text-lg font-bold">→</button>
@@ -52,7 +67,7 @@ ttps://www.youtube.com/@fundacionlideresdeansenuza4512" target="_blank" rel="noo
 
         <div className="border-t border-gray-800 pt-6 mt-10 text-center">
           <p className="text-gray-400 text-base font-medium">
-            © { new Date().getFullYear() } Fundación Lideres de Ansenuza. Todos los derechos reservados.
+            {copyrightText}
           </p>
         </div>
       </div>

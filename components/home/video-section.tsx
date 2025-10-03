@@ -2,7 +2,15 @@ import { Play } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
-export default function VideoSection() {
+type VideoSectionDictionary = {
+  title: string;
+}
+
+interface VideoSectionProps {
+  dictionary: VideoSectionDictionary;
+}
+
+export default function VideoSection({ dictionary }: VideoSectionProps) {
   return (
     <section className="py-20 bg-white border-b border-gray-100">
       <div className="container mx-auto px-4">
@@ -32,7 +40,7 @@ export default function VideoSection() {
               </div>
               
               <span className="text-white font-contrail font-bold text-sm sm:text-lg md:text-xl lg:text-2xl ml-1 sm:ml-2">
-                Conocé nuestra historia
+                {dictionary.title}
               </span>
             </Link>
           </div>

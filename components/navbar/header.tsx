@@ -4,9 +4,28 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { useNavbar } from "./useNavbar"
-import { NAV_ITEMS, BRAND_COLOR } from "./_constants"
+import { BRAND_COLOR } from "./_constants"
+import type { Locale } from "@/i18n/config"
+import LanguageSwitcher from "@/components/language-switcher"
 
-export default function Header() {
+type Navigation = {
+  home: string;
+  about: string;
+  contact: string;
+}
+
+interface HeaderProps {
+  lang: Locale;
+  navigation: Navigation;
+}
+
+export default function Header({ lang, navigation }: HeaderProps) {
+  const navItems = [
+    { name: navigation.home, href: `/${lang}` },
+    { name: navigation.about, href: `/${lang}/quienes-somos` },
+    { name: navigation.contact, href: `/${lang}/contactanos` },
+  ]
+
   const { 
     hoveredItem, 
     isActive, 
@@ -15,7 +34,7 @@ export default function Header() {
     handleMouseLeave,
     toggleMobileMenu,
     closeMobileMenu 
-  } = useNavbar()
+  } = useNavbar(navItems)
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50 border-b border-gray-100">
@@ -24,7 +43,7 @@ export default function Header() {
           <div className="flex items-center space-x-3">
             <div
               className="cursor-pointer transition-transform hover:scale-105"
-              onClick={() => window.location.href = '/'}
+              onClick={() => window.location.href = `/${lang}`}
             >
               <Image
                 src="/images/LogoFLA.png"
@@ -36,58 +55,60 @@ export default function Header() {
             </div>
           </div>
           
-          <nav 
-            className="hidden lg:flex items-center relative" 
-            onMouseLeave={handleMouseLeave}
-          >
-            {NAV_ITEMS.map((item) => (
-              <motion.div
-                key={item.name}
-                className="relative"
-                onMouseEnter={() => handleMouseEnter(item.name)}
-              >
-                <AnimatePresence mode="wait">
-                  {(isActive(item.name) || hoveredItem === item.name) && (
-                    <motion.div
-                      layoutId={isActive(item.name) ? "activeBackground" : "hoverBackground"}
-                      className="absolute inset-0 rounded-full"
-                      style={{ backgroundColor: BRAND_COLOR }}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.8 }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 500,
-                        damping: 30,
-                        duration: 0.15
-                      }}
-                    />
-                  )}
-                </AnimatePresence>
-                
-                <motion.a
-                  href={item.href}
-                  className={`px-5 py-2 rounded-full text-base font-semibold transition-colors duration-200 relative z-10 block ${
-                    isActive(item.name) 
-                      ? 'text-white' 
-                      : 'text-gray-700 hover:text-white'
-                  }`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          <div className="hidden lg:flex items-center gap-4">
+            <nav
+              className="flex items-center relative"
+              onMouseLeave={handleMouseLeave}
+            >
+              {navItems.map((item) => (
+                <motion.div
+                  key={item.name}
+                  className="relative"
+                  onMouseEnter={() => handleMouseEnter(item.name)}
                 >
-                  {item.name}
-                </motion.a>
-              </motion.div>
-            ))}
-          </nav>
+                  <AnimatePresence mode="wait">
+                    {(isActive(item.name) || hoveredItem === item.name) && (
+                      <motion.div
+                        layoutId={isActive(item.name) ? "activeBackground" : "hoverBackground"}
+                        className="absolute inset-0 rounded-full"
+                        style={{ backgroundColor: BRAND_COLOR }}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 500,
+                          damping: 30,
+                          duration: 0.15
+                        }}
+                      />
+                    )}
+                  </AnimatePresence>
 
-          <Button
-            className="bg-red-600 hover:bg-red-700 text-white px-8 py-2 rounded-full hidden lg:block font-bold shadow transition"
-            onClick={() => window.location.href = '/contactanos'}
-          >
-            CONTACTANOS
-          </Button>
+                  <motion.a
+                    href={item.href}
+                    className={`px-5 py-2 rounded-full text-base font-semibold transition-colors duration-200 relative z-10 block ${
+                      isActive(item.name)
+                        ? 'text-white'
+                        : 'text-gray-700 hover:text-white'
+                    }`}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  >
+                    {item.name}
+                  </motion.a>
+                </motion.div>
+              ))}
+            </nav>
+            <Button
+              className="bg-red-600 hover:bg-red-700 text-white px-8 py-2 rounded-full font-bold shadow transition"
+              onClick={() => window.location.href = `/${lang}/contactanos`}
+            >
+              {navigation.contact}
+            </Button>
+            <LanguageSwitcher />
+          </div>
           
           <button 
             className="lg:hidden p-2 rounded-full hover:bg-gray-100 transition relative z-50"
@@ -127,7 +148,7 @@ export default function Header() {
         </div>
       </div>
 
-            <AnimatePresence>
+      <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -137,8 +158,11 @@ export default function Header() {
             className="lg:hidden bg-white border-b border-gray-100 overflow-hidden"
           >
             <div className="container mx-auto px-4 py-6">
+              <div className="flex justify-end mb-4">
+                <LanguageSwitcher />
+              </div>
               <nav className="flex flex-col space-y-1">
-                {NAV_ITEMS.map((item, index) => (
+                {navItems.map((item, index) => (
                   <motion.a
                     key={item.name}
                     href={item.href}
@@ -168,7 +192,7 @@ export default function Header() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ 
-                    delay: NAV_ITEMS.length * 0.1,
+                    delay: navItems.length * 0.1,
                     duration: 0.3,
                     ease: "easeOut"
                   }}
@@ -178,10 +202,10 @@ export default function Header() {
                       className="w-full bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-bold shadow transition"
                       onClick={() => {
                         closeMobileMenu();
-                        window.location.href = '/contactanos';
+                        window.location.href = `/${lang}/contactanos`;
                       }}
                     >
-                      CONTACTANOS
+                      {navigation.contact}
                     </Button>
                   </motion.div>
                 </motion.div>

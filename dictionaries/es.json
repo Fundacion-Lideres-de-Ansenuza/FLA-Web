@@ -1,0 +1,63 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Quiénes Somos",
+    "contact": "Contactanos"
+  },
+  "hero": {
+    "title": "Jóvenes transformando la educación",
+    "subtitle": "Somos una ONG que diseña y ejecuta programas educativos gratuitos en el territorio argentino.",
+    "volunteer_button": "Voluntariado",
+    "alliances_button": "Alianzas",
+    "donate_button": "Donar"
+  },
+  "stats": [
+    { "label": "Voluntarios\nactuales" },
+    { "label": "Participantes a lo\nlargo de los años" },
+    { "label": "Proyectos de\nimpacto social" }
+  ],
+  "video_section": {
+    "title": "Conocé nuestra historia"
+  },
+  "testimonials": {
+    "title": "TESTIMONIOS",
+    "items": [
+      {
+        "name": "Sofía Martínez",
+        "content": "FLA me mostró que hay un mundo de oportunidades a mi alcance y me hizo ver que soy capaz de lograr cualquier cosa que me proponga. Me hizo sentirme segura y sin miedos."
+      },
+      {
+        "name": "Camila Díaz",
+        "content": "FLA desde el primer momento te hace sentir única, especial y acompañada. Te muestra y brinda muchísimas oportunidades para que alcances tus metas y te propongas nuevas."
+      }
+    ]
+  },
+  "why_we_do_it": {
+    "title": "POR QUÉ LO HACEMOS?",
+    "cards": [
+      {
+        "title": "Impacto social",
+        "description": "Porque impulsamos a quienes participan en nuestros programas a llevar a cabo proyectos que generen transformaciones en sus comunidades."
+      },
+      {
+        "title": "Educación",
+        "description": "Porque creemos en la educación como recurso y herramienta para solucionar problemas sociales."
+      },
+      {
+        "title": "Oportunidades",
+        "description": "Porque creemos que el talento no tiene fronteras, llevamos experiencias transformadoras hasta los rincones más alejados, para que cada joven pueda ser agente de cambio en su comunidad."
+      }
+    ]
+  },
+  "current_programs": {
+    "title": "PROGRAMAS ACTUALES",
+    "view_all_button": "Ver todos los programas"
+  },
+  "footer": {
+    "contact": "Contacto",
+    "newsletter": "Newsletter",
+    "subscribe": "Suscribite acá",
+    "email_placeholder": "Tu email",
+    "copyright": "© {year} Fundación Lideres de Ansenuza. Todos los derechos reservados."
+  }
+}

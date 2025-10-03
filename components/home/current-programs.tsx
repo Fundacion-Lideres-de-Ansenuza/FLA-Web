@@ -3,7 +3,16 @@ import Link from "next/link"
 
 type Program = { name: string; logo: string; href: string }
 
-export default function CurrentPrograms() {
+type CurrentProgramsDictionary = {
+  title: string;
+  view_all_button: string;
+}
+
+interface CurrentProgramsProps {
+  dictionary: CurrentProgramsDictionary;
+}
+
+export default function CurrentPrograms({ dictionary }: CurrentProgramsProps) {
   const programs: Program[] = [
     { name: "Potenciate", logo: "/images/programs/potenciate.png", href: "/programas/potenciate" },
     { name: "Futuras", logo: "/images/programs/futuras.png", href: "/programas/futuras" },
@@ -15,7 +24,7 @@ export default function CurrentPrograms() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
       <div className="text-left mb-10">
-          <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">PROGRAMAS ACTUALES</h2>
+          <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">{dictionary.title}</h2>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 items-center">
           {programs.map((program, index) => (
@@ -35,7 +44,7 @@ export default function CurrentPrograms() {
             href="/programas"
             className="inline-block bg-[#f45e5e] hover:bg-[#f67a7a] text-white px-10 py-3 md:px-12 md:py-4 rounded-full font-contrail text-xl md:text-2xl shadow-lg"
           >
-            Ver todos los programas
+            {dictionary.view_all_button}
           </Link>
         </div>
       </div>

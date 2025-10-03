@@ -2,17 +2,17 @@
 
 import { usePathname } from "next/navigation"
 import { useState, useCallback, useMemo, useEffect } from "react"
-import { NAV_ITEMS } from "./_constants"
-import type { NavbarHook } from "./types"
+import type { NavItem, NavbarHook } from "./types"
 
-export const useNavbar = (): NavbarHook => {
+export const useNavbar = (navItems: NavItem[]): NavbarHook => {
   const pathname = usePathname()
   const [hoveredItem, setHoveredItem] = useState<string | null>(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const activeItem = useMemo(() => {
-    return NAV_ITEMS.find(item => pathname?.startsWith(item.href))?.name || null
-  }, [pathname])
+    const cleanedPathname = pathname.split('/').slice(2).join('/')
+    return navItems.find(item => `/${cleanedPathname}`.startsWith(item.href))?.name || null
+  }, [pathname, navItems])
 
   const handleMouseEnter = useCallback((itemName: string) => {
     setHoveredItem(itemName)

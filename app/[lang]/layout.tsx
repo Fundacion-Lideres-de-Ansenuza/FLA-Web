@@ -2,12 +2,18 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter, Contrail_One, Arimo } from "next/font/google"
 import localFont from "next/font/local"
-import "./tailwind.css"
-import "./globals.css"
+import "@/app/tailwind.css"
+import "@/app/globals.css"
 import Header from "@/components/navbar"
 import Footer from "@/components/home/footer"
 import { AccessibilityProvider } from "@/lib/context/AccessibilityContext"
 import Accessibility from "@/components/accessibility/Accessibility"
+import { i18n, type Locale } from "@/i18n/config"
+import { getDictionary } from "@/lib/get-dictionary"
+
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }))
+}
 
 const inter = Inter({ subsets: ["latin"] })
 const arimo = Arimo({
@@ -15,10 +21,9 @@ const arimo = Arimo({
   display: "swap",
   variable: "--font-arimo",
 })
-const fla = localFont({ src: "../public/fonts/FLA.otf", variable: "--font-fla", display: "swap" })
-const saridona = localFont({ src: "../public/fonts/Saridona_personal use.ttf", variable: "--font-saridona", display: "swap" })
+const fla = localFont({ src: "../../public/fonts/FLA.otf", variable: "--font-fla", display: "swap" })
+const saridona = localFont({ src: "../../public/fonts/Saridona_personal use.ttf", variable: "--font-saridona", display: "swap" })
 const contrailOne = Contrail_One({ weight: "400", subsets: ["latin"], variable: "--font-contrail-one", display: "swap" })
-const arimo = Arimo({ subsets: ["latin"], variable: "--font-arimo", display: "swap" })
 
 export const metadata: Metadata = {
   title: "Fundación Líderes de Ansenuza - Jóvenes transformando la educación",
@@ -33,22 +38,26 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode
+  params: { lang: Locale }
 }) {
+  const dictionary = await getDictionary(params.lang)
+
   return (
-    <html lang="es">
+    <html lang={params.lang}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       </head>
       <body className={`${inter.className} ${fla.variable} ${saridona.variable} ${contrailOne.variable} ${arimo.variable}`}>
         <AccessibilityProvider>
-          <Header />
+          <Header lang={params.lang} navigation={dictionary.navigation} />
           {children}
-          <Footer />
+          <Footer dictionary={dictionary.footer} />
           <Accessibility />
         </AccessibilityProvider>
       </body>

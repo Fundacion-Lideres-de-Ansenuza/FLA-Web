@@ -1,28 +1,31 @@
 import Image from "next/image"
 
-export default function Testimonials() {
-  const testimonials = [
-    {
-      name: "Sofía Martínez",
-      content:
-        "FLA me mostró que hay un mundo de oportunidades a mi alcance y me hizo ver que soy capaz de lograr cualquier cosa que me proponga. Me hizo sentirme segura y sin miedos.",
-      avatar: "/images/IMG_0621-min.png",
-      bgColor: "#f45e5f"
-    },
-    {
-      name: "Camila Díaz",
-      content:
-        "FLA desde el primer momento te hace sentir única, especial y acompañada. Te muestra y brinda muchísimas oportunidades para que alcances tus metas y te propongas nuevas.",
-      avatar: "/images/IMG_0621-min.png",
-      bgColor: "#bc2222"
-    },
-  ]
+type Testimonial = {
+  name: string;
+  content: string;
+}
+
+type TestimonialsDictionary = {
+  title: string;
+  items: Testimonial[];
+}
+
+interface TestimonialsProps {
+  dictionary: TestimonialsDictionary;
+}
+
+export default function Testimonials({ dictionary }: TestimonialsProps) {
+  const testimonials = dictionary.items.map((item, index) => ({
+    ...item,
+    avatar: "/images/IMG_0621-min.png",
+    bgColor: index % 2 === 0 ? "#f45e5f" : "#bc2222"
+  }));
 
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl text-gray-900 mb-8 tracking-wide font-saridona">TESTIMONIOS</h2>
+          <h2 className="text-4xl md:text-5xl text-gray-900 mb-8 tracking-wide font-saridona">{dictionary.title}</h2>
         </div>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="grid grid-cols-1 gap-6">

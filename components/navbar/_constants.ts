@@ -1,12 +1,4 @@
-import type { NavItem, AnimationConfig } from "./types"
-
-export const NAV_ITEMS: NavItem[] = [
-  { name: "PROGRAMAS", href: "/programas" },
-  { name: "QUIENES SOMOS", href: "/quienes-somos" },
-  { name: "DONAR", href: "/donar" },
-  { name: "BLOG", href: "/blog" },
-  { name: "CAMPUS", href: "/campus" }
-] as const
+import type { AnimationConfig } from "./types"
 
 export const BRAND_COLOR = '#f45e5e'
 

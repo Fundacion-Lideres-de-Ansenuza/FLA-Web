@@ -2,9 +2,9 @@
 
 import { JSX } from "react"
 import { motion } from "framer-motion"
-import ContactIntro from "../../components/contactanos/contact-intro"
-import ContactForm from "../../components/contactanos/contact-form"
-import ContactInfo from "../../components/contactanos/contact-info"
+import ContactIntro from "@/components/contactanos/contact-intro"
+import ContactForm from "@/components/contactanos/contact-form"
+import ContactInfo from "@/components/contactanos/contact-info"
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },

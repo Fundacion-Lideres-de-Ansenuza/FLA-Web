@@ -1,7 +1,19 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
-export default function Hero() {
+type HeroDictionary = {
+  title: string;
+  subtitle: string;
+  volunteer_button: string;
+  alliances_button: string;
+  donate_button: string;
+}
+
+interface HeroProps {
+  dictionary: HeroDictionary;
+}
+
+export default function Hero({ dictionary }: HeroProps) {
   return (
     <section className="bg-white py-12 lg:py-16">
       <div className="container mx-auto px-4">
@@ -9,10 +21,10 @@ export default function Hero() {
           <div className="grid md:grid-cols-3 gap-8 items-center w-full max-w-7xl lg:max-w-8xl">
             <div className="md:col-span-2 space-y-6 text-left">
               <h1 className="text-5xl lg:text-6xl xl:text-7xl text-gray-900 leading-tight font-saridona">
-                Jóvenes transformando la educación
+                {dictionary.title}
               </h1>
               <p className="text-lg lg:text-xl text-gray-600 leading-relaxed font-arimo">
-                Somos una ONG que diseña y ejecuta programas educativos gratuitos en el territorio argentino.
+                {dictionary.subtitle}
               </p>
               <div className="w-1/2 h-1.5 bg-[#f45e5e] rounded-full" />
             </div>
@@ -35,13 +47,13 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-6 items-center justify-center">
             <Button className="bg-[#90140e] hover:bg-[#a01810] text-white px-10 py-6 rounded-full text-2xl font-bold shadow-lg transition-transform transform hover:scale-105 w-[250px] lg:w-[280px] font-contrail">
-              Voluntariado
+              {dictionary.volunteer_button}
             </Button>
             <Button className="bg-[#bd2222] hover:bg-[#d12828] text-white px-10 py-6 rounded-full text-2xl font-bold shadow-lg transition-transform transform hover:scale-105 w-[250px] lg:w-[280px] font-contrail">
-              Alianzas
+              {dictionary.alliances_button}
             </Button>
             <Button className="bg-[#f45e5e] hover:bg-[#f67a7a] text-white px-10 py-6 rounded-full text-2xl font-bold shadow-lg transition-transform transform hover:scale-105 w-[250px] lg:w-[280px] font-contrail">
-              Donar
+              {dictionary.donate_button}
             </Button>
           </div>
         </div>
