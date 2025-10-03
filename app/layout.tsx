@@ -6,6 +6,8 @@ import "./tailwind.css"
 import "./globals.css"
 import Header from "@/components/navbar"
 import Footer from "@/components/home/footer"
+import { AccessibilityProvider } from "@/lib/context/AccessibilityContext"
+import Accessibility from "@/components/accessibility/Accessibility"
 
 const inter = Inter({ subsets: ["latin"] })
 const arimo = Arimo({
@@ -16,6 +18,7 @@ const arimo = Arimo({
 const fla = localFont({ src: "../public/fonts/FLA.otf", variable: "--font-fla", display: "swap" })
 const saridona = localFont({ src: "../public/fonts/Saridona_personal use.ttf", variable: "--font-saridona", display: "swap" })
 const contrailOne = Contrail_One({ weight: "400", subsets: ["latin"], variable: "--font-contrail-one", display: "swap" })
+const arimo = Arimo({ subsets: ["latin"], variable: "--font-arimo", display: "swap" })
 
 export const metadata: Metadata = {
   title: "Fundación Líderes de Ansenuza - Jóvenes transformando la educación",
@@ -36,12 +39,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html>
-      <head />
-      <body className={`${inter.className} ${arimo.variable} ${fla.variable} ${saridona.variable} ${contrailOne.variable}`}>
-        <Header />
-        {children}
-        <Footer />
+    <html lang="es">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+      </head>
+      <body className={`${inter.className} ${fla.variable} ${saridona.variable} ${contrailOne.variable} ${arimo.variable}`}>
+        <AccessibilityProvider>
+          <Header />
+          {children}
+          <Footer />
+          <Accessibility />
+        </AccessibilityProvider>
       </body>
     </html>
   )
