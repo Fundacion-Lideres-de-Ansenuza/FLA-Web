@@ -18,7 +18,6 @@ const arimo = Arimo({
 const fla = localFont({ src: "../public/fonts/FLA.otf", variable: "--font-fla", display: "swap" })
 const saridona = localFont({ src: "../public/fonts/Saridona_personal use.ttf", variable: "--font-saridona", display: "swap" })
 const contrailOne = Contrail_One({ weight: "400", subsets: ["latin"], variable: "--font-contrail-one", display: "swap" })
-const arimo = Arimo({ subsets: ["latin"], variable: "--font-arimo", display: "swap" })
 
 export const metadata: Metadata = {
   title: "Fundación Líderes de Ansenuza - Jóvenes transformando la educación",
