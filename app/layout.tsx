@@ -6,6 +6,8 @@ import "./tailwind.css"
 import "./globals.css"
 import Header from "@/components/navbar"
 import Footer from "@/components/home/footer"
+import { AccessibilityProvider } from "@/lib/context/AccessibilityContext"
+import Accessibility from "@/components/accessibility/Accessibility"
 
 const inter = Inter({ subsets: ["latin"] })
 const fla = localFont({ src: "../public/fonts/FLA.otf", variable: "--font-fla", display: "swap" })
@@ -31,15 +33,20 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html>
+    <html lang="es">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
       </head>
-      <Header />
-      <body className={`${inter.className} ${fla.variable} ${saridona.variable} ${contrailOne.variable}`}>{children}</body>
-      <Footer />
+      <body className={`${inter.className} ${fla.variable} ${saridona.variable} ${contrailOne.variable}`}>
+        <AccessibilityProvider>
+          <Header />
+          {children}
+          <Footer />
+          <Accessibility />
+        </AccessibilityProvider>
+      </body>
     </html>
   )
 }
