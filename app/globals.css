@@ -33,12 +33,52 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff !important;
 }
 
+.high-contrast *,
+.high-contrast *::before,
+.high-contrast *::after {
+  background-color: transparent !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
 .high-contrast a {
   color: #ffff00 !important;
 }
 
+.high-contrast a:hover,
+.high-contrast a:focus {
+  color: #ffff88 !important;
+}
+
+.high-contrast button,
+.high-contrast input,
+.high-contrast textarea,
+.high-contrast select {
+  background-color: #333 !important;
+  color: #fff !important;
+  border: 2px solid #fff !important;
+}
+
+.high-contrast button:hover,
+.high-contrast button:focus {
+  background-color: #555 !important;
+}
+
 .high-contrast h1, .high-contrast h2, .high-contrast h3, .high-contrast h4, .high-contrast h5, .high-contrast h6 {
   color: #fff !important;
+}
+
+.high-contrast p, .high-contrast span, .high-contrast div, .high-contrast li {
+  color: #fff !important;
+}
+
+.high-contrast img {
+  filter: contrast(1.5) brightness(0.6) saturate(0.8) !important;
+}
+
+.high-contrast img[alt*="icono"], .high-contrast img[alt*="Icono"],
+.high-contrast img[alt*="logo"], .high-contrast img[alt*="Logo"] {
+  filter: brightness(0) invert(1) !important;
 }
 
 .negative-contrast {

@@ -12,7 +12,7 @@ const config: Config = {
 			fontFamily: {
 					'fla': ['var(--font-fla)', 'serif'],
 				'saridona': ['Saridona', 'serif'],
-				'arimo': ['Arimo', 'sans-serif'],
+				'arimo': ['var(--font-arimo)', 'sans-serif'],
 				'contrail': ['Contrail One', 'cursive'],
 			},
 			colors: {
