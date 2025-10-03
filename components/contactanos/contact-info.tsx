@@ -1,4 +1,4 @@
-import { Mail, Phone, Clock, Users, MapPin } from "lucide-react"
+import { Mail, Phone, Clock, Users } from "lucide-react"
 
 export default function ContactInfo() {
   return (
