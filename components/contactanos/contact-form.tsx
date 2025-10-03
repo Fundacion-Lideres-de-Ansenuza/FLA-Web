@@ -27,7 +27,7 @@ export default function ContactForm() {
       asunto: "",
       mensaje: ""
     })
-    alert("¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.")
+    alert("¡Gracias por tu mensaje! Nos pondremos en contacto con vos pronto.")
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -38,20 +38,20 @@ export default function ContactForm() {
   }
 
   return (
-    <Card className="shadow-xl border-0 bg-white">
-      <CardHeader className="bg-[#f45e5e] text-white rounded-t-lg">
-        <CardTitle className="text-3xl font-contrail-one flex items-center justify-center">
-          <Heart className="mr-3 h-8 w-8" />
+    <Card className="shadow-2xl border-0 bg-white rounded-2xl overflow-hidden">
+      <CardHeader className="bg-chart-5 text-white p-6">
+        <CardTitle className="text-2xl md:text-3xl font-contrail-one flex items-center justify-center">
+          <Heart className="mr-3 h-7 w-7" />
           Envíanos un mensaje
         </CardTitle>
       </CardHeader>
-      <CardContent className="p-8">
+      <CardContent className="p-6 md:p-8">
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label
                 htmlFor="nombre"
-                className="block text-sm font-medium text-gray-700 mb-2 font-['Arimo:Regular',_sans-serif]"
+                className="block text-sm font-medium text-gray-700 mb-2 font-arimo"
               >
                 Nombre completo *
               </label>
@@ -62,14 +62,14 @@ export default function ContactForm() {
                 required
                 value={formData.nombre}
                 onChange={handleChange}
-                className="w-full border-2 border-gray-200 focus:border-[#f45e5e] transition-colors"
+                className="w-full border-2 border-gray-200 focus:border-chart-5 focus:ring-chart-5/50 transition-colors"
                 placeholder="Tu nombre"
               />
             </div>
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700 mb-2 font-['Arimo:Regular',_sans-serif]"
+                className="block text-sm font-medium text-gray-700 mb-2 font-arimo"
               >
                 Correo electrónico *
               </label>
@@ -80,17 +80,17 @@ export default function ContactForm() {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full border-2 border-gray-200 focus:border-[#f45e5e] transition-colors"
+                className="w-full border-2 border-gray-200 focus:border-chart-5 focus:ring-chart-5/50 transition-colors"
                 placeholder="tu@email.com"
               />
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label
                 htmlFor="telefono"
-                className="block text-sm font-medium text-gray-700 mb-2 font-['Arimo:Regular',_sans-serif]"
+                className="block text-sm font-medium text-gray-700 mb-2 font-arimo"
               >
                 Teléfono
               </label>
@@ -100,14 +100,14 @@ export default function ContactForm() {
                 type="tel"
                 value={formData.telefono}
                 onChange={handleChange}
-                className="w-full border-2 border-gray-200 focus:border-[#f45e5e] transition-colors"
+                className="w-full border-2 border-gray-200 focus:border-chart-5 focus:ring-chart-5/50 transition-colors"
                 placeholder="+54 123 456 7890"
               />
             </div>
             <div>
               <label
                 htmlFor="asunto"
-                className="block text-sm font-medium text-gray-700 mb-2 font-['Arimo:Regular',_sans-serif]"
+                className="block text-sm font-medium text-gray-700 mb-2 font-arimo"
               >
                 Asunto *
               </label>
@@ -118,7 +118,7 @@ export default function ContactForm() {
                 required
                 value={formData.asunto}
                 onChange={handleChange}
-                className="w-full border-2 border-gray-200 focus:border-[#f45e5e] transition-colors"
+                className="w-full border-2 border-gray-200 focus:border-chart-5 focus:ring-chart-5/50 transition-colors"
                 placeholder="¿En qué podemos ayudarte?"
               />
             </div>
@@ -127,7 +127,7 @@ export default function ContactForm() {
           <div>
             <label
               htmlFor="mensaje"
-              className="block text-sm font-medium text-gray-700 mb-2 font-['Arimo:Regular',_sans-serif]"
+              className="block text-sm font-medium text-gray-700 mb-2 font-arimo"
             >
               Mensaje *
             </label>
@@ -138,14 +138,14 @@ export default function ContactForm() {
               value={formData.mensaje}
               onChange={handleChange}
               rows={6}
-              className="w-full border-2 border-gray-200 focus:border-[#f45e5e] transition-colors resize-none"
-              placeholder="Cuéntanos más sobre tu consulta, idea o cómo quieres colaborar con nosotros..."
+              className="w-full border-2 border-gray-200 focus:border-chart-5 focus:ring-chart-5/50 transition-colors resize-none"
+              placeholder="Contanos más sobre tu consulta, idea o cómo querés colaborar con nosotros..."
             />
           </div>
 
           <Button
             type="submit"
-            className="w-full bg-[#f45e5e] hover:bg-[#e05555] text-white py-4 text-lg font-semibold transition-all duration-300 transform hover:scale-105"
+            className="w-full bg-chart-5 hover:bg-chart-5/90 text-white py-3 text-lg font-semibold transition-all duration-300 transform hover:scale-105 rounded-lg"
           >
             <Send className="mr-3 h-6 w-6" />
             Enviar mensaje
