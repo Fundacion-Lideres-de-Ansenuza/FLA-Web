@@ -40,7 +40,7 @@ export default function ContactForm() {
   return (
     <Card className="shadow-2xl border-0 bg-white rounded-2xl overflow-hidden">
       <CardHeader className="bg-chart-5 text-white p-6">
-        <CardTitle className="text-2xl md:text-3xl font-contrail-one flex items-center justify-center">
+        <CardTitle className="text-2xl md:text-3xl font-contrail-one flex items-center justify-center text-[#bc2222]">
           <Heart className="mr-3 h-7 w-7" />
           Envíanos un mensaje
         </CardTitle>
@@ -145,7 +145,7 @@ export default function ContactForm() {
 
           <Button
             type="submit"
-            className="w-full bg-chart-5 hover:bg-chart-5/90 text-white py-3 text-lg font-semibold transition-all duration-300 transform hover:scale-105 rounded-lg"
+            className="w-full bg-[#bc2222] hover:bg-[#bc2222]/90 text-white py-3 text-lg font-semibold transition-all duration-300 transform hover:scale-105 rounded-lg"
           >
             <Send className="mr-3 h-6 w-6" />
             Enviar mensaje

@@ -1,4 +1,4 @@
-import { Mail, Phone, Clock, Users } from "lucide-react"
+import { Mail, Phone, Clock, Users, MapPin } from "lucide-react"
 
 export default function ContactInfo() {
   return (
@@ -12,8 +12,8 @@ export default function ContactInfo() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="flex items-start space-x-4 p-6 bg-chart-1/10 rounded-2xl border border-chart-1/20 transition-all hover:bg-chart-1/20">
-          <div className="w-12 h-12 bg-chart-1 rounded-xl flex items-center justify-center flex-shrink-0">
+        <div className="flex items-start space-x-4 p-6 bg-[#f45e5e]/10 rounded-2xl border border-[#f45e5e]/20 transition-all hover:bg-[#f45e5e]/20">
+          <div className="w-12 h-12 bg-[#f45e5e] rounded-xl flex items-center justify-center flex-shrink-0">
             <Mail className="h-6 w-6 text-white" />
           </div>
           <div className="flex-1">
@@ -23,8 +23,8 @@ export default function ContactInfo() {
           </div>
         </div>
 
-        <div className="flex items-start space-x-4 p-6 bg-chart-2/10 rounded-2xl border border-chart-2/20 transition-all hover:bg-chart-2/20">
-          <div className="w-12 h-12 bg-chart-2 rounded-xl flex items-center justify-center flex-shrink-0">
+        <div className="flex items-start space-x-4 p-6 bg-[#bc2222]/10 rounded-2xl border border-[#bc2222]/20 transition-all hover:bg-[#bc2222]/20">
+          <div className="w-12 h-12 bg-[#bc2222] rounded-xl flex items-center justify-center flex-shrink-0">
             <Phone className="h-6 w-6 text-white" />
           </div>
           <div className="flex-1">
@@ -34,8 +34,8 @@ export default function ContactInfo() {
           </div>
         </div>
 
-        <div className="flex items-start space-x-4 p-6 bg-chart-3/10 rounded-2xl border border-chart-3/20 transition-all hover:bg-chart-3/20">
-          <div className="w-12 h-12 bg-chart-3 rounded-xl flex items-center justify-center flex-shrink-0">
+        <div className="flex items-start space-x-4 p-6 bg-[#90140e]/10 rounded-2xl border border-[#90140e]/20 transition-all hover:bg-[#90140e]/20 md:col-span-2">
+          <div className="w-12 h-12 bg-[#90140e] rounded-xl flex items-center justify-center flex-shrink-0">
             <Clock className="h-6 w-6 text-white" />
           </div>
           <div className="flex-1">
@@ -45,8 +45,8 @@ export default function ContactInfo() {
           </div>
         </div>
 
-        <div className="flex items-start space-x-4 p-6 bg-chart-4/10 rounded-2xl border border-chart-4/20 transition-all hover:bg-chart-4/20">
-          <div className="w-12 h-12 bg-chart-4 rounded-xl flex items-center justify-center flex-shrink-0">
+        <div className="flex items-start space-x-4 p-6 bg-[#f45e5e]/10 rounded-2xl border border-[#f45e5e]/20 transition-all hover:bg-[#f45e5e]/20 md:col-span-2">
+          <div className="w-12 h-12 bg-[#f45e5e] rounded-xl flex items-center justify-center flex-shrink-0">
             <Users className="h-6 w-6 text-white" />
           </div>
           <div className="flex-1">
