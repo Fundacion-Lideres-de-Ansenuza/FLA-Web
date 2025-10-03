@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Contrail_One } from "next/font/google"
+import { Inter, Contrail_One, Arimo } from "next/font/google"
 import localFont from "next/font/local"
 import "./tailwind.css"
 import "./globals.css"
@@ -13,6 +13,7 @@ const inter = Inter({ subsets: ["latin"] })
 const fla = localFont({ src: "../public/fonts/FLA.otf", variable: "--font-fla", display: "swap" })
 const saridona = localFont({ src: "../public/fonts/Saridona_personal use.ttf", variable: "--font-saridona", display: "swap" })
 const contrailOne = Contrail_One({ weight: "400", subsets: ["latin"], variable: "--font-contrail-one", display: "swap" })
+const arimo = Arimo({ subsets: ["latin"], variable: "--font-arimo", display: "swap" })
 
 export const metadata: Metadata = {
   title: "Fundación Líderes de Ansenuza - Jóvenes transformando la educación",
@@ -37,9 +38,8 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
       </head>
-      <body className={`${inter.className} ${fla.variable} ${saridona.variable} ${contrailOne.variable}`}>
+      <body className={`${inter.className} ${fla.variable} ${saridona.variable} ${contrailOne.variable} ${arimo.variable}`}>
         <AccessibilityProvider>
           <Header />
           {children}
