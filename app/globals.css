@@ -22,3 +22,46 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-fla), serif;
   letter-spacing: 0.06em;
 }
+
+/* Accessibility Styles */
+.grayscale {
+  filter: grayscale(100%);
+}
+
+.high-contrast {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.high-contrast a {
+  color: #ffff00 !important;
+}
+
+.high-contrast h1, .high-contrast h2, .high-contrast h3, .high-contrast h4, .high-contrast h5, .high-contrast h6 {
+  color: #fff !important;
+}
+
+.negative-contrast {
+  filter: invert(100%);
+}
+
+.light-background {
+  background: #f0f0f0 !important;
+  color: #000 !important;
+}
+
+.light-background h1, .light-background h2, .light-background h3, .light-background h4, .light-background h5, .light-background h6 {
+  color: #000 !important;
+}
+
+.underline-links a {
+  text-decoration: underline !important;
+}
+
+.readable-font {
+  font-family: 'Arial', sans-serif !important;
+}
+
+.readable-font h1, .readable-font h2, .readable-font h3, .readable-font h4, .readable-font h5, .readable-font h6 {
+  font-family: 'Arial', sans-serif !important;
+}
