@@ -10,7 +10,11 @@ import LanguageSwitcher from "@/components/language-switcher"
 
 type Navigation = {
   home: string;
+  programs: string;
   about: string;
+  donate: string;
+  blog: string;
+  campus: string;
   contact: string;
 }
 
@@ -22,7 +26,11 @@ interface HeaderProps {
 export default function Header({ lang, navigation }: HeaderProps) {
   const navItems = [
     { name: navigation.home, href: `/${lang}` },
+    { name: navigation.programs, href: `/${lang}/programas` },
     { name: navigation.about, href: `/${lang}/quienes-somos` },
+    { name: navigation.donate, href: `/${lang}/donar` },
+    { name: navigation.blog, href: `/${lang}/blog` },
+    { name: navigation.campus, href: `/${lang}/campus` },
     { name: navigation.contact, href: `/${lang}/contactanos` },
   ]
 

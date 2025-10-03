@@ -1,7 +1,11 @@
 {
   "navigation": {
     "home": "Home",
+    "programs": "Programs",
     "about": "About Us",
+    "donate": "Donate",
+    "blog": "Blog",
+    "campus": "Campus",
     "contact": "Contact"
   },
   "hero": {
@@ -52,6 +56,29 @@
   "current_programs": {
     "title": "CURRENT PROGRAMS",
     "view_all_button": "View all programs"
+  },
+  "introduction": {
+    "title": "THE FOUNDATION",
+    "subtitle": "The Leaders of Ansenuza Foundation is a non-governmental organization based in Miramar de Ansenuza, Córdoba, whose work revolves around the design and execution of educational programs in Argentina.",
+    "paragraph1_part1": "At the ",
+    "paragraph1_part2": "Leaders of Ansenuza Foundation",
+    "paragraph1_part3": " (FLA), we believe in the potential of every young person to transform their community and build a better future. Our mission is to train change agents, offering opportunities, tools, and support for young people to develop leadership and generate social impact.",
+    "paragraph2": "We work throughout Argentina, with special attention to rural and semi-urban regions, as well as large cities. Our goal is to reach those who need it most, providing experiential experiences, without economic barriers, that promote learning through action and innovation.",
+    "paragraph3": "FLA not only focuses on training leaders, but on creating an inclusive, diverse, and committed community, where young people find a safe space to enhance their ideas and sustainable projects.",
+    "paragraph4_part1": "Being at FLA means being part of a ",
+    "paragraph4_part2": "movement that is committed to equal opportunities and the power of youth to generate a real and lasting impact. ",
+    "paragraph4_part3": "Together, we are building a future full of possibilities and leadership for everyone."
+  },
+  "about_us": {
+    "mission_vision_values": "Mission, Vision and Values",
+    "mission": {
+      "title": "Mission",
+      "description": "To empower young people from all over the country to be leaders through educational and motivational programs, providing support for development opportunities that allow them to carry out social impact projects."
+    },
+    "vision": {
+      "title": "Vision",
+      "description": "A world in which new generations have access to quality education, which allows them to decide freely and have the motivation to become leaders and positively transform their communities."
+    }
   },
   "footer": {
     "contact": "Contact",

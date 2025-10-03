@@ -1,7 +1,11 @@
 {
   "navigation": {
     "home": "Inicio",
+    "programs": "Programas",
     "about": "Quiénes Somos",
+    "donate": "Donar",
+    "blog": "Blog",
+    "campus": "Campus",
     "contact": "Contactanos"
   },
   "hero": {
@@ -52,6 +56,29 @@
   "current_programs": {
     "title": "PROGRAMAS ACTUALES",
     "view_all_button": "Ver todos los programas"
+  },
+  "introduction": {
+    "title": "LA FUNDACIÓN",
+    "subtitle": "La Fundación Líderes de Ansenuza es una organización no gubernamental con sede en Miramar de Ansenuza, Córdoba, cuyo trabajo gira en torno al diseño y ejecución de programas educativos en el territorio argentino.",
+    "paragraph1_part1": "En la ",
+    "paragraph1_part2": "Fundación Líderes de Ansenuza",
+    "paragraph1_part3": " (FLA), creemos en el potencial de cada joven para transformar su comunidad y construir un futuro mejor. Nuestra misión es formar agentes de cambio, ofreciendo oportunidades, herramientas y acompañamiento para que los jóvenes desarrollen liderazgo y generen impacto social.",
+    "paragraph2": "Trabajamos en todo el territorio argentino, con especial atención a las regiones rurales y semiurbanas, así como a las grandes ciudades. Nuestro objetivo es llegar a quienes más lo necesitan, brindando experiencias vivenciales, sin barreras económicas, que promueven el aprendizaje mediante la acción y la innovación.",
+    "paragraph3": "FLA no solo se centra en la formación de líderes, sino en crear una comunidad inclusiva, diversa y comprometida, donde los jóvenes encuentran un espacio seguro para potenciar sus ideas y proyectos sostenibles.",
+    "paragraph4_part1": "Estar en FLA significa ser parte de un ",
+    "paragraph4_part2": "movimiento que apuesta a la igualdad de oportunidades y al poder de la juventud para generar un impacto real y duradero. ",
+    "paragraph4_part3": "Juntos, estamos construyendo un futuro lleno de posibilidades y liderazgo para todos."
+  },
+  "about_us": {
+    "mission_vision_values": "Misión, Visión y Valores",
+    "mission": {
+      "title": "Misión",
+      "description": "Empoderar a jóvenes de todo el país a ser líderes a través de programas educativos y motivacionales, brindando acompañamiento ante oportunidades de desarrollo les permita concretar proyectos de impacto social."
+    },
+    "vision": {
+      "title": "Visión",
+      "description": "Un mundo en el que las nuevas generaciones tengan acceso a educación de calidad, que les permita decidir con libertad y que tengan la motivación de convertirse en líderes y transformar positivamente sus comunidades."
+    }
   },
   "footer": {
     "contact": "Contacto",
