@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { useCountAnimation } from "@/components/stats/hooks/useCountAnimation";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 import type { Stat } from "./types";
 import type { ProgramColors } from "./types";
 
@@ -51,12 +53,15 @@ interface StatCardProps {
 }
 
 function StatCard({ stat, index, color }: StatCardProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true });
   const numericValue = parseInt(stat.value.replace(/\D/g, "")) || 0;
   const suffix = stat.value.replace(/[0-9]/g, "");
-  const count = useCountAnimation(numericValue);
+  const count = useCountAnimation(numericValue, isInView);
 
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, scale: 0.8 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
