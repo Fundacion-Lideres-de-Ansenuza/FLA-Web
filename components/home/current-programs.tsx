@@ -1,15 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
-
-type Program = { name: string; logo: string; href: string }
+import { ACTIVE_PROGRAMS } from "@/lib/data/programs"
 
 export default function CurrentPrograms() {
-  const programs: Program[] = [
-    { name: "Potenciate", logo: "/images/programs/potenciate.png", href: "/programas/potenciate" },
-    { name: "Futuras", logo: "/images/programs/futuras.png", href: "/programas/futuras" },
-    { name: "Experiencia Ambientalia", logo: "/images/programs/exp_ambientalia.png", href: "/programas/ambientalia" },
-    { name: "Somos", logo: "/images/programs/somos.png", href: "/programas/somos" },
-  ]
+  const programs = ACTIVE_PROGRAMS.map(program => ({
+    name: program.title,
+    logo: `/images/Logos/${program.slug === 'ambientalia' ? 'Experiencia Ambientalia' : program.title}.png`,
+    href: `/programas/${program.slug}`
+  }))
 
   return (
     <section className="py-20 bg-white">
@@ -26,6 +24,7 @@ export default function CurrentPrograms() {
                 width={360}
                 height={180}
                 className="mx-auto h-28 md:h-32 lg:h-36 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                priority={index < 2}
               />
             </Link>
           ))}

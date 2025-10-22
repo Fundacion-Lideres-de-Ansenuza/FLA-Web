@@ -9,9 +9,10 @@ interface EnrollmentInfoProps {
   description: string;
   availablePeriod?: string;
   colors: ProgramColors;
+  isHistorical?: boolean;
 }
 
-export default function EnrollmentInfo({ description, availablePeriod, colors }: EnrollmentInfoProps) {
+export default function EnrollmentInfo({ description, availablePeriod, colors, isHistorical = false }: EnrollmentInfoProps) {
   return (
     <section id="inscripcion" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
@@ -23,7 +24,9 @@ export default function EnrollmentInfo({ description, availablePeriod, colors }:
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">¿Cómo anotarme?</h2>
+            <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">
+              {isHistorical ? "Información del Programa" : "¿Cómo anotarme?"}
+            </h2>
           </motion.div>
 
           <motion.div
@@ -39,30 +42,34 @@ export default function EnrollmentInfo({ description, availablePeriod, colors }:
             </div>
 
             {availablePeriod && (
-              <div className="flex items-center gap-4 bg-white p-4 rounded-xl">
-                <Calendar size={24} style={{ color: colors.primary }} />
+              <div className={`flex items-center gap-4 p-4 rounded-xl ${isHistorical ? 'bg-amber-50 border border-amber-200' : 'bg-white'}`}>
+                <Calendar size={24} style={{ color: isHistorical ? '#f59e0b' : colors.primary }} />
                 <div>
-                  <p className="text-sm text-gray-600 font-semibold">Período de inscripción</p>
+                  <p className="text-sm text-gray-600 font-semibold">
+                    {isHistorical ? "Estado del programa" : "Período de inscripción"}
+                  </p>
                   <p className="text-gray-900">{availablePeriod}</p>
                 </div>
               </div>
             )}
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-center"
-          >
-            <p className="text-gray-600">
-              ¿Tenés dudas?{" "}
-              <Link href="/contactanos" className="font-semibold hover:underline" style={{ color: colors.primary }}>
-                Contactanos
-              </Link>
-            </p>
-          </motion.div>
+          {!isHistorical && (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-center"
+            >
+              <p className="text-gray-600">
+                ¿Tenés dudas?{" "}
+                <Link href="/contactanos" className="font-semibold hover:underline" style={{ color: colors.primary }}>
+                  Contactanos
+                </Link>
+              </p>
+            </motion.div>
+          )}
         </div>
       </div>
     </section>

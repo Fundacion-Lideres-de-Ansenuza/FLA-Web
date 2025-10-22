@@ -1,6 +1,7 @@
 export interface ProgramData {
   title: string;
   slug: string;
+  status: 'active' | 'historical';
   shortDescription: string;
   fullDescription: string;
   location?: string;
@@ -47,11 +48,13 @@ export interface ProgramData {
     secondary: string;
     accent: string;
   };
+  year?: string;
 }
 
 export const AMBIENTALIA_DATA: ProgramData = {
   title: "Experiencia Ambientalia",
   slug: "ambientalia",
+  status: 'active',
   shortDescription: "Programa de educación ambiental que conecta a jóvenes con sus ecosistemas y biodiversidad, desarrollando habilidades de liderazgo a través de proyectos comunitarios ambientales.",
   fullDescription: "Experiencia Ambientalia es un programa de educación ambiental desarrollado por Fundación Líderes de Ansenuza en conjunto con Manomet Conservation Sciences y la Oficina Ejecutiva de la RHRAP, que se lleva a cabo anualmente desde 2021. El programa busca conectar a jóvenes con sus ecosistemas y biodiversidad, al mismo tiempo que desarrolla en ellos habilidades de liderazgo a través del diseño e implementación de proyectos comunitarios de índole ambiental.",
   location: "El programa nació en el sitio RHRAP Laguna Mar Chiquita, en el interior de Córdoba, Argentina. Sin embargo, además de implementarse allí, se desarrolla en otros sitios importantes para aves playeras, principalmente lagos salados, como en el Monumento Natural Laguna de los Pozuelos en Jujuy y en lagos de Estados Unidos como el Lago Mono, el Gran Lago Salado, el Lago Walker y el Lago Abert. El programa es llevado adelante en cada sitio por socios locales, y puede variar en duración, actividades y enfoque.",
@@ -204,6 +207,7 @@ export const AMBIENTALIA_DATA: ProgramData = {
 export const SOMOS_DATA: ProgramData = {
   title: "SOMOS",
   slug: "somos",
+  status: 'active',
   shortDescription: "Programa gratuito de liderazgo en diversidad para jóvenes de entre 15 y 19 años de Argentina que quieran convertirse en líderes de sus comunidades.",
   fullDescription: "SOMOS es un programa gratuito de liderazgo en diversidad, para jóvenes de entre 15 y 19 años de Argentina, que quieran convertirse en líderes de sus comunidades. Durante 2 meses, lxs participantes aprenden sobre diversidad, desarrollan habilidades de liderazgo, y llevan adelante una acción de impacto social que transforme su comunidad. Todo esto a través de talleres con expertxs, mentorías personalizadas, y materiales exclusivos creados especialmente para el programa.",
   location: "SOMOS llega a FLA para abrir espacios de diálogo, debate y aprendizaje colectivo, promoviendo los valores de la organización. Creemos en una sociedad más justa, igualitaria, empática y respetuosa, y sabemos que el cambio empieza en cada unx de nosotrxs.",
@@ -304,4 +308,413 @@ export const SOMOS_DATA: ProgramData = {
     accent: "#a78bfa"
   }
 };
+
+export const POTENCIATE_DATA: ProgramData = {
+  title: "Potenciate",
+  slug: "potenciate",
+  status: 'historical',
+  year: "2021",
+  shortDescription: "Programa de mentoría disruptivo de doce semanas, diseñado para inspirar a jóvenes argentinos a descubrir su pasión y transformarse en agentes de cambio capaces de impulsar proyectos de impacto social.",
+  fullDescription: "Potenciate fue un programa de mentoría disruptivo de doce semanas, diseñado para inspirar a jóvenes argentinos a descubrir su pasión y transformarse en agentes de cambio capaces de impulsar proyectos de impacto social.",
+  location: "El programa se expandió a 11 provincias de Argentina (con foco en Catamarca y la zona centro del país).",
+  duration: "12 semanas",
+  modality: "Programa virtual con mentoría individual semanal combinada con dinámicas, desafíos y juegos, junto a encuentros grupales con especialistas y talleres oficiales.",
+  requirements: [
+    "Aprendices: jóvenes de 15 a 17 años interesados en el autoconocimiento y la gestión de proyectos",
+    "Mentores: jóvenes agentes de cambio con experiencia comprobable en voluntariado y gestión de proyectos de impacto social"
+  ],
+  enrollmentInfo: {
+    description: "Este programa fue realizado en 2021 y actualmente no se encuentra disponible para inscripción.",
+    availablePeriod: "Programa finalizado"
+  },
+  stages: [
+    {
+      title: "CONÓCETE",
+      description: "Etapa de autoconocimiento donde los participantes exploraron sus fortalezas, valores y pasiones.",
+      icon: "User"
+    },
+    {
+      title: "INSPÍRATE",
+      description: "Networking con líderes y especialistas que inspiraron a los participantes a través de sus experiencias.",
+      icon: "Lightbulb"
+    },
+    {
+      title: "ENTRÁ EN ACCIÓN",
+      description: "Ejecución de proyectos de impacto social con el acompañamiento de mentores.",
+      icon: "Rocket"
+    }
+  ],
+  stats: [
+    {
+      label: "Provincias alcanzadas",
+      value: "11"
+    },
+    {
+      label: "Egresados",
+      value: "35"
+    },
+    {
+      label: "Ediciones realizadas",
+      value: "1"
+    }
+  ],
+  successStories: [
+    {
+      title: "Plataforma de inspiración y networking",
+      description: "El programa funcionó como plataforma de inspiración y networking para que los jóvenes pudieran tomar acción e impulsar proyectos de impacto social. El 88% de los participantes consideró que el manual de ejercicios fue una de las herramientas más útiles."
+    }
+  ],
+  blogPosts: [],
+  faqs: [],
+  sponsors: [
+    {
+      name: "Embajada de Estados Unidos en Argentina"
+    },
+    {
+      name: "Global Changemakers"
+    }
+  ],
+  gallery: {
+    type: 'images',
+    images: []
+  },
+  colors: {
+    primary: "#f97316",
+    secondary: "#ea580c",
+    accent: "#fb923c"
+  }
+};
+
+export const FUTURAS_DATA: ProgramData = {
+  title: "FUTURAS",
+  slug: "futuras",
+  status: 'historical',
+  year: "2017-2024",
+  shortDescription: "Programa gratuito e innovador de liderazgo, mentoría y empoderamiento femenino diseñado para que mujeres jóvenes argentinas desarrollaran su autoconocimiento y adquirieran herramientas de gestión de proyectos para resolver problemas comunitarios.",
+  fullDescription: "FUTURAS fue un programa gratuito e innovador de liderazgo, mentoría y empoderamiento femenino diseñado para que mujeres jóvenes argentinas desarrollaran su autoconocimiento y adquirieran herramientas de gestión de proyectos para resolver problemas comunitarios. El programa, con siete ediciones realizadas, tuvo la visión de formar líderes comprometidas con sus comunidades y conscientes del liderazgo femenino.",
+  location: "Incluía la Cumbre Presencial de Mujeres Líderes en Miramar de Ansenuza, Córdoba, donde las participantes viajaban para conocerse, generar una red de agentes de cambio y obtener inspiración directa de mujeres referentes y líderes.",
+  duration: "Variable según edición",
+  modality: "Modalidad mixta (virtual y presencial) con mentoría individual en duplas y talleres especializados con capacitaciones asincrónicas.",
+  requirements: [
+    "Aprendices: Mujeres de 15 a 19 años de cualquier provincia de Argentina",
+    "Mentoras: Mujeres mayores de 20 años con experiencia en liderazgo o mentoría"
+  ],
+  enrollmentInfo: {
+    description: "Este programa fue realizado entre 2017 y 2024 y actualmente no se encuentra disponible para inscripción.",
+    availablePeriod: "Programa finalizado"
+  },
+  stages: [
+    {
+      title: "Mentoría Individual",
+      description: "Acompañamiento personalizado en duplas mentora-aprendiz para el desarrollo de habilidades de liderazgo.",
+      icon: "Users"
+    },
+    {
+      title: "Talleres Especializados",
+      description: "Capacitaciones en gestión de proyectos, liderazgo y networking.",
+      icon: "BookOpen"
+    },
+    {
+      title: "Cumbre Presencial",
+      description: "Encuentro presencial de mujeres líderes en Miramar de Ansenuza, Córdoba.",
+      icon: "MapPin"
+    }
+  ],
+  stats: [
+    {
+      label: "Ediciones realizadas",
+      value: "7"
+    },
+    {
+      label: "Participantes egresadas",
+      value: "248"
+    },
+    {
+      label: "Provincias participantes",
+      value: "18"
+    },
+    {
+      label: "Oradores",
+      value: "112"
+    }
+  ],
+  successStories: [
+    {
+      title: "Amplia representatividad nacional",
+      description: "Participaron jóvenes de 18 distintas provincias de la República Argentina, logrando una amplia representatividad nacional y formando una red de mujeres líderes comprometidas con sus comunidades."
+    }
+  ],
+  blogPosts: [],
+  faqs: [],
+  sponsors: [],
+  gallery: {
+    type: 'images',
+    images: []
+  },
+  colors: {
+    primary: "#ec4899",
+    secondary: "#db2777",
+    accent: "#f472b6"
+  }
+};
+
+export const IMPULSATEC_DATA: ProgramData = {
+  title: "ImpulsaTEC",
+  slug: "impulsatec",
+  status: 'historical',
+  year: "2024",
+  shortDescription: "Programa educativo federal de capacitación y mentoría diseñado para empoderar a jóvenes del interior de Argentina con herramientas tecnológicas y habilidades blandas para potenciar sus proyectos de impacto social.",
+  fullDescription: "ImpulsaTEC fue un programa educativo federal de capacitación y mentoría diseñado para empoderar a jóvenes (15 a 24 años) del interior de Argentina. El objetivo central fue brindarles herramientas tecnológicas y habilidades blandas para potenciar sus proyectos de impacto social. El programa buscó construir una red de jóvenes comprometidos que utilizaran las nuevas tecnologías como motor de cambio positivo en sus comunidades.",
+  location: "Federal, dirigido a jóvenes del interior de Argentina",
+  duration: "Variable",
+  modality: "Programa virtual con capacitaciones abiertas y mentoría quincenal, con experiencia presencial final en Buenos Aires.",
+  requirements: [
+    "Tener entre 15 y 24 años",
+    "Ser del interior de Argentina",
+    "Tener un proyecto de impacto social o interés en desarrollarlo"
+  ],
+  enrollmentInfo: {
+    description: "Este programa fue realizado en 2024 y actualmente no se encuentra disponible para inscripción.",
+    availablePeriod: "Programa finalizado"
+  },
+  stages: [
+    {
+      title: "Capacitaciones Virtuales",
+      description: "7 talleres especializados sobre Inteligencia Artificial, Metodologías Ágiles, UX, Liderazgo y Networking.",
+      icon: "Monitor"
+    },
+    {
+      title: "Mentoría con EY GDS",
+      description: "Acompañamiento quincenal de mentores profesionales de EY GDS Argentina.",
+      icon: "Users"
+    },
+    {
+      title: "Experiencia Presencial",
+      description: "Los 15 participantes destacados visitaron las oficinas de EY GDS en Buenos Aires y participaron en actividades culturales y de networking.",
+      icon: "Building"
+    }
+  ],
+  stats: [
+    {
+      label: "Jóvenes participantes",
+      value: "500+"
+    },
+    {
+      label: "Premiados",
+      value: "15"
+    },
+    {
+      label: "Ediciones realizadas",
+      value: "1"
+    }
+  ],
+  successStories: [
+    {
+      title: "Alianza estratégica con EY GDS Argentina",
+      description: "El programa se desarrolló en alianza con EY GDS, cuyos profesionales especializados actuaron como mentores y reforzaron el vínculo entre el sector privado y el compromiso social juvenil."
+    },
+    {
+      title: "Reconocimiento a la innovación",
+      description: "15 jóvenes fueron premiados por la innovación y el compromiso de sus proyectos, recibiendo kits tecnológicos y oportunidades de financiamiento."
+    }
+  ],
+  blogPosts: [],
+  faqs: [],
+  sponsors: [
+    {
+      name: "EY GDS Argentina"
+    }
+  ],
+  gallery: {
+    type: 'images',
+    images: []
+  },
+  colors: {
+    primary: "#3b82f6",
+    secondary: "#2563eb",
+    accent: "#60a5fa"
+  }
+};
+
+export const CIENCIA_FUERA_DE_LA_CAJA_DATA: ProgramData = {
+  title: "Ciencia Fuera de la Caja",
+  slug: "ciencia-fuera-de-la-caja",
+  status: 'historical',
+  year: "2020",
+  shortDescription: "Programa educativo y concurso científico virtual de alto impacto para desarrollar el pensamiento científico, la creatividad y el pensamiento lateral en jóvenes argentinos.",
+  fullDescription: "Ciencia Fuera de la Caja fue un programa educativo y concurso científico virtual de alto impacto, impulsado por la Embajada de los Estados Unidos en Argentina. El objetivo fue desarrollar el pensamiento científico, la creatividad y el pensamiento lateral en jóvenes argentinos, utilizando retos de diversas ramas de la ciencia.",
+  location: "Nacional, con participantes de todo el país divididos en regiones",
+  duration: "Variable",
+  modality: "Concurso virtual con desafíos prácticos y experiencia presencial final para los ganadores.",
+  requirements: [
+    "Ser estudiante de nivel secundario",
+    "Tener interés en las ciencias",
+    "Completar desafíos virtuales semanales"
+  ],
+  enrollmentInfo: {
+    description: "Este programa fue realizado en 2020 y actualmente no se encuentra disponible para inscripción.",
+    availablePeriod: "Programa finalizado"
+  },
+  stages: [
+    {
+      title: "Desafíos Virtuales",
+      description: "Retos virtuales prácticos con un promedio del 90% de efectividad en la enseñanza de conocimientos clave.",
+      icon: "Lightbulb"
+    },
+    {
+      title: "Videollamadas con Científicos",
+      description: "Encuentros con científicos destacados de Argentina como Laura Frulla, Carlos Sosa y Jerónimo Batista.",
+      icon: "Video"
+    },
+    {
+      title: "Foros Creativos",
+      description: "Desarrollo del pensamiento lateral a través de foros creativos con un promedio de 73.4 entradas por semana.",
+      icon: "MessageSquare"
+    },
+    {
+      title: "Premio Inmersivo",
+      description: "Los 5 ganadores viajaron a La Cumbrecita, Córdoba, para una experiencia de cierre presencial.",
+      icon: "Award"
+    }
+  ],
+  stats: [
+    {
+      label: "Participantes inscritos",
+      value: "234"
+    },
+    {
+      label: "Participación femenina",
+      value: "65%"
+    },
+    {
+      label: "Nuevos en actividades científicas",
+      value: "44%"
+    },
+    {
+      label: "Recomendarían el programa",
+      value: "83%"
+    }
+  ],
+  successStories: [
+    {
+      title: "Metodología comprobada",
+      description: "El programa alcanzó un promedio del 90% de participantes que adquirió los conocimientos centrales de cada desafío."
+    },
+    {
+      title: "Comunidad y networking",
+      description: "El 69% de los participantes generó un vínculo o amistad con otro participante, creando una comunidad científica juvenil."
+    },
+    {
+      title: "Alto impacto educativo",
+      description: "El ciclo de conferencias con científicos generó más de 139 horas de reproducción."
+    }
+  ],
+  blogPosts: [],
+  faqs: [],
+  sponsors: [
+    {
+      name: "Embajada de Estados Unidos en Argentina"
+    }
+  ],
+  gallery: {
+    type: 'images',
+    images: []
+  },
+  colors: {
+    primary: "#06b6d4",
+    secondary: "#0891b2",
+    accent: "#22d3ee"
+  }
+};
+
+export const AVENTURA_MATEMATICA_DATA: ProgramData = {
+  title: "Aventura Matemágica",
+  slug: "aventura-matematica",
+  status: 'historical',
+  year: "2021",
+  shortDescription: "Iniciativa completamente en línea dirigida a jóvenes de todo el país que transformó la educación científica tradicional en un concurso virtual inmersivo combinando matemática y creatividad.",
+  fullDescription: "Aventura Matemágica fue una iniciativa completamente en línea y de inscripción libre dirigida a jóvenes de todo el país. El programa consistió en desafíos semanales que combinaron matemática y creatividad, complementados con encuentros ocasionales (simposios) con científicos y matemáticos invitados.",
+  location: "Nacional, con participantes divididos en cinco regiones geográficas",
+  duration: "Variable (8 desafíos + final)",
+  modality: "Concurso virtual inmersivo con aprendizaje lúdico. Se presentaron conceptos de matemática en mundos de ficción conocidos como Harry Potter y Alicia en el país de las maravillas.",
+  requirements: [
+    "Ser estudiante de nivel secundario",
+    "Tener interés en matemática y creatividad",
+    "Completar desafíos semanales en diversos formatos (videos, historietas, escritos)"
+  ],
+  enrollmentInfo: {
+    description: "Este programa fue realizado en 2021 y actualmente no se encuentra disponible para inscripción.",
+    availablePeriod: "Programa finalizado"
+  },
+  stages: [
+    {
+      title: "Etapa 1: Desafíos Creativos",
+      description: "Desafíos semanales presentados en mundos de ficción, evaluando creatividad en las respuestas.",
+      icon: "Wand2"
+    },
+    {
+      title: "Etapa 2: Matemagos",
+      description: "25 semifinalistas recibieron una caja sorpresa con materiales y merchandising para desafíos especiales.",
+      icon: "Gift"
+    },
+    {
+      title: "Gran Final",
+      description: "5 finalistas (uno por región) compitieron por premios que incluían computadora, kits tecnológicos y juegos de mesa.",
+      icon: "Trophy"
+    }
+  ],
+  stats: [
+    {
+      label: "Participantes inscritos",
+      value: "300"
+    },
+    {
+      label: "Semifinalistas",
+      value: "25"
+    },
+    {
+      label: "Finalistas",
+      value: "5"
+    },
+    {
+      label: "Desafíos realizados",
+      value: "8"
+    }
+  ],
+  successStories: [
+    {
+      title: "Aprendizaje lúdico innovador",
+      description: "El programa destacó por transformar la educación científica tradicional en una experiencia inmersiva y altamente creativa, haciendo el contenido matemático interactivo y accesible."
+    },
+    {
+      title: "Elemento sorpresa",
+      description: "La caja sorpresa enviada a los semifinalistas garantizó un compromiso continuo y emocionante, promoviendo el trabajo científico tanto individual como colaborativo."
+    }
+  ],
+  blogPosts: [],
+  faqs: [],
+  sponsors: [],
+  gallery: {
+    type: 'images',
+    images: []
+  },
+  colors: {
+    primary: "#a855f7",
+    secondary: "#9333ea",
+    accent: "#c084fc"
+  }
+};
+
+export const ALL_PROGRAMS: ProgramData[] = [
+  AMBIENTALIA_DATA,
+  SOMOS_DATA,
+  POTENCIATE_DATA,
+  FUTURAS_DATA,
+  IMPULSATEC_DATA,
+  CIENCIA_FUERA_DE_LA_CAJA_DATA,
+  AVENTURA_MATEMATICA_DATA
+];
+
+export const ACTIVE_PROGRAMS: ProgramData[] = ALL_PROGRAMS.filter(p => p.status === 'active');
+export const HISTORICAL_PROGRAMS: ProgramData[] = ALL_PROGRAMS.filter(p => p.status === 'historical');
 
