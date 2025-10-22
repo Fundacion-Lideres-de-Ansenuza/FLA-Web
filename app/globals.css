@@ -18,9 +18,15 @@ main {
   background-color: #fff;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
   font-family: var(--font-fla), serif;
   letter-spacing: 0.06em;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: var(--font-arimo), 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 /* Accessibility Styles */

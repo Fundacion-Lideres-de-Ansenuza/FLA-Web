@@ -7,7 +7,7 @@ export default function CurrentPrograms() {
   const programs: Program[] = [
     { name: "Potenciate", logo: "/images/programs/potenciate.png", href: "/programas/potenciate" },
     { name: "Futuras", logo: "/images/programs/futuras.png", href: "/programas/futuras" },
-    { name: "Experiencia Ambiental", logo: "/images/programs/exp_ambientalia.png", href: "/programas/experiencia-ambiental" },
+    { name: "Experiencia Ambientalia", logo: "/images/programs/exp_ambientalia.png", href: "/programas/ambientalia" },
     { name: "Somos", logo: "/images/programs/somos.png", href: "/programas/somos" },
   ]
 
