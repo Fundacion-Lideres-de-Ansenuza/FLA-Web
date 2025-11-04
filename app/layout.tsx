@@ -38,12 +38,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es">
+    <html lang="es" className="overflow-x-hidden">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       </head>
-      <body className={`${inter.className} ${fla.variable} ${saridona.variable} ${contrailOne.variable} ${arimo.variable}`}>
+      <body className={`${inter.className} ${fla.variable} ${saridona.variable} ${contrailOne.variable} ${arimo.variable} overflow-x-hidden`}>
         <AccessibilityProvider>
           <Header />
           {children}

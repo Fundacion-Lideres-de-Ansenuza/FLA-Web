@@ -705,6 +705,110 @@ export const AVENTURA_MATEMATICA_DATA: ProgramData = {
   }
 };
 
+export const LIDERES_DATA: ProgramData = {
+  title: "Líderes",
+  slug: "lideres",
+  status: 'active',
+  shortDescription: "Programa de Fundación Líderes de Ansenuza encargado de reunir, impulsar, acompañar y reconocer a todas aquellas personas que luego de haber transitado por al menos un programa de la fundación quieran seguir potenciando sus habilidades para convertirse en líderes de sus comunidades.",
+  fullDescription: "Líderes es el programa de Fundación Líderes de Ansenuza encargado de reunir, impulsar, acompañar y reconocer a todas aquellas personas que luego de haber transitado por al menos un programa de la fundación quieran seguir potenciando sus habilidades para convertirse en líderes de sus comunidades, a través de la implementación de nuevos programas exclusivos para su comunidad. En Líderes nos enfocamos en acompañar desde el compromiso sabiendo que hay personas maravillosas en nuestra comunidad que pueden lograr cosas inimaginables si se las une con las oportunidades correctas. Seguimos apostando por los jóvenes que alguna vez pasaron por la fundación, impulsamos el continuo desarrollo de su liderazgo y generamos un impacto post programa.",
+  location: "Nacional, dirigido a ex-participantes de programas de FLA",
+  duration: "Continuo",
+  modality: "Comunidad activa con talleres, capacitaciones, acompañamiento personalizado, encuentros presenciales y mix de oportunidades quincenal.",
+  requirements: [
+    "Haber participado en al menos un programa realizado por la Fundación Líderes de Ansenuza"
+  ],
+  enrollmentInfo: {
+    description: "Una vez que egresaron del programa deben completar la solicitud de ingreso a la comunidad y dependiendo del programa el registro de proyectos. Para ello debes solicitarlo enviando un mail a comunidad@lideresdeansenuza.org y te contactaremos para indicarte los pasos a seguir.",
+    availablePeriod: "Inscripción continua"
+  },
+  stages: [
+    {
+      title: "Talleres y capacitaciones",
+      description: "Durante el año, desde Líderes se proponen diferentes iniciativas como talleres o capacitaciones para continuar formándose en habilidades clave para el liderazgo.",
+      icon: "GraduationCap"
+    },
+    {
+      title: "Acompañamiento personalizado",
+      description: "Acompañamiento personalizado en la continuidad de tus proyectos para impulsar el desarrollo continuo de tu liderazgo.",
+      icon: "Users"
+    },
+    {
+      title: "Encuentros presenciales",
+      description: "Se realizan encuentros presenciales en provincias, para que ex-participantes puedan conocerse y compartir experiencias.",
+      icon: "MapPin"
+    },
+    {
+      title: "Mix de oportunidades",
+      description: "Cada 15 días se comparten oportunidades de convocatorias externas e internas dentro de la iniciativa \"mix de oportunidades\" con el objetivo de que puedan continuar formándose.",
+      icon: "Rocket"
+    }
+  ],
+  stats: [],
+  successStories: [
+    {
+      title: "Milagros Tacacho",
+      description: "La verdad, estoy sumamente agradecida con el staff de Líderes y FLA en general, porque gracias a ustedes pude comprender mejor lo que me gusta y las iniciativas que puedo tomar o crear. Me hace muy feliz estar conectada conmigo misma y poder mejorar cada día con nuevas herramientas. ¡Sigan compartiendo oportunidades y sonrisas!",
+      link: "https://www.linkedin.com/posts/fundaci%C3%B3n-l%C3%ADderes-de-ansenuza_l%C3%ADderes-activity-7330652674113060865-Cj5Y?utm_source=share&utm_medium=member_desktop&rcm=ACoAADca_hwBU7Nri-goKb9Z9UJBItH8_u7ihkc"
+    },
+    {
+      title: "Guillermina Rieznik",
+      description: "Aprovechar el espacio para decir que me encanta toda la magia que transmiten con esa pasión que le ponen a todo. Son un staff hermoso 💖💖.",
+      link: "https://www.linkedin.com/posts/fundaci%C3%B3n-l%C3%ADderes-de-ansenuza_l%C3%ADderes-activity-7330652674113060865-Cj5Y?utm_source=share&utm_medium=member_desktop&rcm=ACoAADca_hwBU7Nri-goKb9Z9UJBItH8_u7ihkc"
+    },
+    {
+      title: "Marilyn Mercado",
+      description: "Felicito a los del Staff por todo lo q hacen, he aprovechado muchas oportunidades❤❤",
+      link: "https://www.linkedin.com/posts/fundaci%C3%B3n-l%C3%ADderes-de-ansenuza_l%C3%ADderes-activity-7330652674113060865-Cj5Y?utm_source=share&utm_medium=member_desktop&rcm=ACoAADca_hwBU7Nri-goKb9Z9UJBItH8_u7ihkc"
+    }
+  ],
+  blogPosts: [
+    {
+      title: "Mateadas y Líderes: un encuentro de inspiración y conexiones",
+      url: "https://www.lideresdeansenuza.org/2024/10/23/mateadas-y-lideres-un-encuentro-de-inspiracion-y-conexiones/"
+    },
+    {
+      title: "Reviviendo momentos inolvidables: lo mejor de la Cumbre Presencial de Líderes, el reencuentro",
+      url: "https://www.lideresdeansenuza.org/2023/03/24/reviviendo-momentos-inolvidables-lo-mejor-de-la-cumbre-presencial-de-lideres-el-reencuentro/"
+    },
+    {
+      title: "Un viaje diplomático",
+      url: "https://www.lideresdeansenuza.org/2023/03/22/un-viaje-diplomatico/"
+    }
+  ],
+  faqs: [
+    {
+      question: "¿Qué función tiene cada grupo de WhatsApp de la comunidad?",
+      answer: "Comunidad de Líderes FLA: grupo abierto de interacción. Info FLA: grupo cerrado, donde se comparte información institucional. Mix de oportunidades: grupo cerrado, donde se comparten convocatorias internas y externas."
+    },
+    {
+      question: "¿Hasta qué edad puedo ser parte de la comunidad?",
+      answer: "No hay edad límite para ser parte de la comunidad de Líderes."
+    },
+    {
+      question: "Si participé de FLA hace muchos años, ¿Puedo ingresar ahora a la comunidad?",
+      answer: "¡Sí, podés ser parte de Líderes! Mandanos un mail con tu nombre y programa que fuiste parte a comunidad@lideresdeansenuza.org para contarte los pasos a seguir."
+    },
+    {
+      question: "Si fui mentor, orador, profesor de algún programa de FLA ¿Puedo ser parte de la comunidad?",
+      answer: "¡Sí, podés ser parte de Líderes! Mandanos un mail con tu nombre y programa que fuiste parte a comunidad@lideresdeansenuza.org para contarte los pasos a seguir."
+    }
+  ],
+  sponsors: [
+    {
+      name: "EY GDS Argentina"
+    }
+  ],
+  gallery: {
+    type: 'images',
+    images: []
+  },
+  colors: {
+    primary: "#dc2626",
+    secondary: "#991b1b",
+    accent: "#f87171"
+  }
+};
+
 export const ALL_PROGRAMS: ProgramData[] = [
   AMBIENTALIA_DATA,
   SOMOS_DATA,
@@ -712,7 +816,8 @@ export const ALL_PROGRAMS: ProgramData[] = [
   FUTURAS_DATA,
   IMPULSATEC_DATA,
   CIENCIA_FUERA_DE_LA_CAJA_DATA,
-  AVENTURA_MATEMATICA_DATA
+  AVENTURA_MATEMATICA_DATA,
+  LIDERES_DATA
 ];
 
 export const ACTIVE_PROGRAMS: ProgramData[] = ALL_PROGRAMS.filter(p => p.status === 'active');

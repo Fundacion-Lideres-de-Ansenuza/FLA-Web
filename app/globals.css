@@ -12,6 +12,34 @@ body {
   font-family: 'Inter', 'Helvetica Neue', Arial, 'sans-serif';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden !important;
+}
+
+html {
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dc2626;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b91c1c;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #dc2626 #f1f1f1;
 }
 
 main {
