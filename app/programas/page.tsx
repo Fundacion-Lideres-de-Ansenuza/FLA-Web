@@ -14,7 +14,7 @@ function getLogoFileName(title: string, slug: string): string {
     "Ciencia Fuera de la Caja": "Ciencia fuera de la caja",
     "Aventura Matemágica": "Aventura Matemagica"
   };
-  
+
   return logoMap[title] || title;
 }
 
@@ -92,16 +92,30 @@ export default function ProgramasPage() {
                       <div
                         className="h-48 relative overflow-hidden"
                         style={{
-                          background: `linear-gradient(135deg, ${program.colors.primary} 0%, ${program.colors.secondary} 100%)`
+                          background: program.colors.primary
                         }}
                       >
                         <div className="absolute inset-0 flex items-center justify-center p-8">
+                          <div
+                            className="absolute inset-0 flex items-center justify-center"
+                          >
+                            <div
+                              className="transition-all duration-500 group-hover:scale-110"
+                              style={{
+                                width: `${180 + program.title.length * 5}px`,
+                                height: `${140 + program.title.length * 2}px`,
+                                backgroundColor: program.colors.accent,
+                                opacity: 0.9,
+                                borderRadius: `${40 + (program.title.length % 5) * 5}% ${60 - (program.title.length % 5) * 5}% ${50 + (program.title.length % 3) * 10}% ${50 - (program.title.length % 3) * 10}% / ${60 - (program.title.length % 4) * 5}% ${40 + (program.title.length % 4) * 5}% ${55 + (program.title.length % 2) * 10}% ${45 - (program.title.length % 2) * 10}%`
+                              }}
+                            />
+                          </div>
                           <Image
                             src={`/images/Logos/${getLogoFileName(program.title, program.slug)}.png`}
                             alt={program.title}
                             width={300}
                             height={150}
-                            className="object-contain max-h-32 filter drop-shadow-lg group-hover:scale-110 transition-transform duration-300"
+                            className="object-contain max-h-32 filter drop-shadow-lg group-hover:scale-110 transition-transform duration-300 relative z-10"
                             priority
                           />
                         </div>
@@ -150,12 +164,26 @@ export default function ProgramasPage() {
                   >
                     <div className="bg-white border-2 border-gray-200 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                       <div
-                        className="h-32 relative overflow-hidden flex items-center justify-center"
+                        className="h-48 relative overflow-hidden flex items-center justify-center"
                         style={{
-                          background: `linear-gradient(135deg, ${program.colors.primary} 0%, ${program.colors.secondary} 100%)`
+                          background: program.colors.primary
                         }}
                       >
-                        <div className="absolute inset-0 flex items-center justify-center p-4">
+                        <div
+                          className="absolute inset-0 flex items-center justify-center"
+                        >
+                          <div
+                            className="transition-all duration-500 group-hover:scale-110"
+                            style={{
+                              width: `${150 + program.title.length * 4}px`,
+                              height: `${100 + program.title.length * 2}px`,
+                              backgroundColor: program.colors.accent,
+                              opacity: 0.9,
+                              borderRadius: `${40 + (program.title.length % 5) * 5}% ${60 - (program.title.length % 5) * 5}% ${50 + (program.title.length % 3) * 10}% ${50 - (program.title.length % 3) * 10}% / ${60 - (program.title.length % 4) * 5}% ${40 + (program.title.length % 4) * 5}% ${55 + (program.title.length % 2) * 10}% ${45 - (program.title.length % 2) * 10}%`
+                            }}
+                          />
+                        </div>
+                        <div className="absolute inset-0 flex items-center justify-center p-4 relative z-10">
                           <Image
                             src={`/images/Logos/${getLogoFileName(program.title, program.slug)}.png`}
                             alt={program.title}
