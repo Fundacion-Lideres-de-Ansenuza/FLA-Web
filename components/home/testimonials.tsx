@@ -50,15 +50,17 @@ export default function Testimonials() {
               />
             </div>
           </div>
-          
+
           <div className="space-y-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="relative flex items-center">
-                <div 
+                <div
                   className="text-white p-8 rounded-2xl shadow-md w-full font-saridona"
                   style={{ backgroundColor: testimonial.bgColor }}
                 >
-                  <p className="text-sm leading-relaxed mb-4">&quot;{testimonial.content}&quot;</p>
+                  <p className="text-gray-700 mb-6 relative z-10 font-saridona text-xl leading-relaxed">
+                    "{testimonial.content}"
+                  </p>
                   <div className="flex items-center">
                     <Image
                       src={testimonial.avatar}

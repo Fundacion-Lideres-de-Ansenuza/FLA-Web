@@ -3,12 +3,12 @@ import Image from "next/image"
 
 export default function Hero() {
   return (
-    <section className="bg-white py-12 lg:py-16">
+    <section className="bg-white py-8 lg:py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center gap-10">
           <div className="grid md:grid-cols-3 gap-8 items-center w-full max-w-7xl lg:max-w-8xl">
             <div className="md:col-span-2 space-y-6 text-left">
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl text-gray-900 leading-tight font-saridona">
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl text-gray-900 leading-tight font-saridona tracking-widest">
                 Jóvenes transformando la educación
               </h1>
               <p className="text-lg lg:text-xl text-gray-600 leading-relaxed font-arimo">

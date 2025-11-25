@@ -15,26 +15,27 @@ export default function Footer() {
                 <span className="text-sm font-semibold">Lideres de Ansenuza</span>
               </div>
               <div className="flex space-x-6">
-            </div>
+              </div>
             </div>
             <div className="flex space-x-6">
-            <a href="https://www.instagram.com/fundacionlideresdeansenuza/" target="_blank" rel="noopener noreferrer"><FaInstagram className="h-7 w-7 text-gray-400 hover:text-white cursor-pointer transition-colors" /></a>
+              <a href="https://www.instagram.com/fundacionlideresdeansenuza/" target="_blank" rel="noopener noreferrer"><FaInstagram className="h-7 w-7 text-gray-400 hover:text-white cursor-pointer transition-colors" /></a>
               <a href="https://www.facebook.com/fundacionlideresdeansenuza" target="_blank" rel="noopener noreferrer"><FaFacebook className="h-7 w-7 text-gray-400 hover:text-white cursor-pointer transition-colors" /></a>
               <a href="https://www.linkedin.com/company/fundaci%C3%B3n-l%C3%ADderes-de-ansenuza/posts/?feedView=all" target="_blank" rel="noopener noreferrer"><FaLinkedin className="h-7 w-7 text-gray-400 hover:text-white cursor-pointer transition-colors" /></a>
               <a href="https://www.tiktok.com/@fundacionlideresansenuza" target="_blank" rel="noopener noreferrer"><FaTiktok className="h-7 w-7 text-gray-400 hover:text-white cursor-pointer transition-colors" /></a>
               <a href="h
 ttps://www.youtube.com/@fundacionlideresdeansenuza4512" target="_blank" rel="noopener noreferrer"><FaYoutube className="h-7 w-7 text-gray-400 hover:text-white cursor-pointer transition-colors" /></a>
-</div>
+            </div>
 
 
           </div>
 
           <div>
-              <h3 className="text-lg mb-4">Contacto</h3>
-              <p className="text-gray-400 text-base mb-2">Independencia 350</p>
-              <p className="text-gray-400 text-base mb-2">Miramar de Ansenuza</p>
-              <p className="text-gray-400 text-base">Córdoba, Argentina</p>
-            </div>
+            <h3 className="text-lg mb-4 font-bold">Contacto</h3>
+            <p className="text-gray-400 text-base mb-2">Independencia 350</p>
+            <p className="text-gray-400 text-base mb-2">Miramar de Ansenuza</p>
+            <p className="text-gray-400 text-base mb-2">Córdoba, Argentina</p>
+            <p className="text-gray-400 text-base">contacto@lideresdeansenuza.org</p>
+          </div>
 
           <div>
             <h3 className="text-lg mb-4">Newsletter</h3>
@@ -52,7 +53,7 @@ ttps://www.youtube.com/@fundacionlideresdeansenuza4512" target="_blank" rel="noo
 
         <div className="border-t border-gray-800 pt-6 mt-10 text-center">
           <p className="text-gray-400 text-base font-medium">
-            © { new Date().getFullYear() } Fundación Lideres de Ansenuza. Todos los derechos reservados.
+            © {new Date().getFullYear()} Fundación Lideres de Ansenuza. Todos los derechos reservados.
           </p>
         </div>
       </div>
