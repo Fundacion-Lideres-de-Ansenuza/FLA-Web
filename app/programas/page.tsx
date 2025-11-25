@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ACTIVE_PROGRAMS, HISTORICAL_PROGRAMS } from "@/lib/data/programs";
+import { generateBlobRadius } from "@/lib/shapes";
 
 function getLogoFileName(title: string, slug: string): string {
   const logoMap: Record<string, string> = {
@@ -14,7 +15,7 @@ function getLogoFileName(title: string, slug: string): string {
     "Ciencia Fuera de la Caja": "Ciencia fuera de la caja",
     "Aventura Matemágica": "Aventura Matemagica"
   };
-  
+
   return logoMap[title] || title;
 }
 
@@ -90,12 +91,17 @@ export default function ProgramasPage() {
                   >
                     <div className="bg-white border-2 border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                       <div
-                        className="h-48 relative overflow-hidden"
-                        style={{
-                          background: `linear-gradient(135deg, ${program.colors.primary} 0%, ${program.colors.secondary} 100%)`
-                        }}
+                        className="h-48 relative overflow-hidden flex items-center justify-center"
+                        style={{ backgroundColor: program.colors.primary }}
                       >
-                        <div className="absolute inset-0 flex items-center justify-center p-8">
+                        <div
+                          className="absolute w-40 h-40 transition-transform duration-500 group-hover:scale-110"
+                          style={{
+                            backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                            borderRadius: generateBlobRadius(program.title)
+                          }}
+                        />
+                        <div className="relative z-10 p-8">
                           <Image
                             src={`/images/Logos/${getLogoFileName(program.title, program.slug)}.png`}
                             alt={program.title}
@@ -151,11 +157,16 @@ export default function ProgramasPage() {
                     <div className="bg-white border-2 border-gray-200 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                       <div
                         className="h-32 relative overflow-hidden flex items-center justify-center"
-                        style={{
-                          background: `linear-gradient(135deg, ${program.colors.primary} 0%, ${program.colors.secondary} 100%)`
-                        }}
+                        style={{ backgroundColor: program.colors.primary }}
                       >
-                        <div className="absolute inset-0 flex items-center justify-center p-4">
+                        <div
+                          className="absolute w-24 h-24 transition-transform duration-500 group-hover:scale-110"
+                          style={{
+                            backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                            borderRadius: generateBlobRadius(program.title)
+                          }}
+                        />
+                        <div className="relative z-10 p-4">
                           <Image
                             src={`/images/Logos/${getLogoFileName(program.title, program.slug)}.png`}
                             alt={program.title}
@@ -165,7 +176,7 @@ export default function ProgramasPage() {
                           />
                         </div>
                         <div className="absolute top-2 right-2 z-10">
-                          <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-semibold">
+                          <span className="bg-white/80 backdrop-blur-sm text-gray-700 px-3 py-1 rounded-full text-xs font-semibold shadow-sm">
                             {program.year}
                           </span>
                         </div>
