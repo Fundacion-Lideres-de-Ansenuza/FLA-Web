@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ACTIVE_PROGRAMS, HISTORICAL_PROGRAMS } from "@/lib/data/programs";
 import { generateBlobRadius } from "@/lib/shapes";
 
-function getLogoFileName(title: string, slug: string): string {
+function getLogoFileName(title: string): string {
   const logoMap: Record<string, string> = {
     "Experiencia Ambientalia": "Experiencia Ambientalia",
     "SOMOS": "Somos",
@@ -103,7 +103,7 @@ export default function ProgramasPage() {
                         />
                         <div className="relative z-10 p-8">
                           <Image
-                            src={`/images/Logos/${getLogoFileName(program.title, program.slug)}.png`}
+                            src={`/images/Logos/${getLogoFileName(program.title)}.png`}
                             alt={program.title}
                             width={300}
                             height={150}
@@ -168,7 +168,7 @@ export default function ProgramasPage() {
                         />
                         <div className="relative z-10 p-4">
                           <Image
-                            src={`/images/Logos/${getLogoFileName(program.title, program.slug)}.png`}
+                            src={`/images/Logos/${getLogoFileName(program.title)}.png`}
                             alt={program.title}
                             width={200}
                             height={100}

@@ -20,10 +20,7 @@ export function generateBlobRadius(text: string): string {
   const v3 = getVal(30, 70, 3);
   const v4 = getVal(30, 70, 4);
   
-  const v5 = getVal(30, 70, 5);
-  const v6 = getVal(30, 70, 6);
-  const v7 = getVal(30, 70, 7);
-  const v8 = getVal(30, 70, 8);
+
 
   return `${v1}% ${100 - v1}% ${v2}% ${100 - v2}% / ${v3}% ${v4}% ${100 - v4}% ${100 - v3}%`;
 }
