@@ -7,18 +7,18 @@ import { useNavbar } from "./useNavbar"
 import { NAV_ITEMS, BRAND_COLOR } from "./_constants"
 
 export default function Header() {
-  const { 
-    hoveredItem, 
-    isActive, 
+  const {
+    hoveredItem,
+    isActive,
     isMobileMenuOpen,
-    handleMouseEnter, 
+    handleMouseEnter,
     handleMouseLeave,
     toggleMobileMenu,
-    closeMobileMenu 
+    closeMobileMenu
   } = useNavbar()
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50 border-b border-gray-100">
+    <header className="bg-gray-50 shadow-sm sticky top-0 z-50 border-b border-gray-100">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
@@ -35,9 +35,9 @@ export default function Header() {
               />
             </div>
           </div>
-          
-          <nav 
-            className="hidden lg:flex items-center relative" 
+
+          <nav
+            className="hidden lg:flex items-center relative"
             onMouseLeave={handleMouseLeave}
           >
             {NAV_ITEMS.map((item) => (
@@ -64,14 +64,13 @@ export default function Header() {
                     />
                   )}
                 </AnimatePresence>
-                
+
                 <motion.a
                   href={item.href}
-                  className={`px-5 py-2 rounded-full text-base font-semibold transition-colors duration-200 relative z-10 block ${
-                    isActive(item.name) 
-                      ? 'text-white' 
+                  className={`px-5 py-2 rounded-full text-base font-semibold transition-colors duration-200 relative z-10 block ${isActive(item.name)
+                      ? 'text-white'
                       : 'text-gray-700 hover:text-white'
-                  }`}
+                    }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -88,8 +87,8 @@ export default function Header() {
           >
             CONTACTANOS
           </Button>
-          
-          <button 
+
+          <button
             className="lg:hidden p-2 rounded-full hover:bg-gray-100 transition relative z-50"
             onClick={toggleMobileMenu}
             aria-label="Toggle mobile menu"
@@ -127,7 +126,7 @@ export default function Header() {
         </div>
       </div>
 
-            <AnimatePresence>
+      <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -142,11 +141,10 @@ export default function Header() {
                   <motion.a
                     key={item.name}
                     href={item.href}
-                    className={`px-4 py-4 rounded-lg text-base font-semibold transition-all duration-200 ${
-                      isActive(item.name) 
-                        ? 'text-white' 
+                    className={`px-4 py-4 rounded-lg text-base font-semibold transition-all duration-200 ${isActive(item.name)
+                        ? 'text-white'
                         : 'text-gray-700 active:bg-gray-50'
-                    }`}
+                      }`}
                     style={{
                       backgroundColor: isActive(item.name) ? BRAND_COLOR : 'transparent'
                     }}
@@ -154,7 +152,7 @@ export default function Header() {
                     whileTap={{ scale: 0.98 }}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ 
+                    transition={{
                       delay: index * 0.1,
                       duration: 0.3,
                       ease: "easeOut"
@@ -167,7 +165,7 @@ export default function Header() {
                   className="pt-6 border-t border-gray-200"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ 
+                  transition={{
                     delay: NAV_ITEMS.length * 0.1,
                     duration: 0.3,
                     ease: "easeOut"

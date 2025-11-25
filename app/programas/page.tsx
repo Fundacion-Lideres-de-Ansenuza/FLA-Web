@@ -56,11 +56,11 @@ export default function ProgramasPage() {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 font-fla break-words">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-6 font-fla break-words">
               Nuestros Programas
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/95 leading-relaxed px-2">
-              Programas educativos gratuitos que transforman vidas en toda Argentina
+              Educativos gratuitos que transforman vidas en toda Argentina
             </p>
           </div>
         </div>
@@ -73,9 +73,9 @@ export default function ProgramasPage() {
           <div className="max-w-6xl mx-auto">
             <div className="mb-16">
               <div className="flex items-center gap-3 mb-8">
-                <div className="w-2 h-12 bg-green-500 rounded-full flex-shrink-0" />
-                <h2 className="text-3xl sm:text-4xl md:text-5xl text-gray-900 break-words">
-                  Programas Vigentes
+                <div className="w-2 h-12 bg-[#f45e5e] rounded-full flex-shrink-0" />
+                <h2 className="text-3xl sm:text-4xl md:text-5xl text-gray-900 break-words font-arimo">
+                  VIGENTES
                 </h2>
               </div>
               <p className="text-lg text-gray-600 mb-12">
@@ -139,8 +139,8 @@ export default function ProgramasPage() {
             <div className="border-t-2 border-gray-200 pt-16">
               <div className="flex items-center gap-3 mb-8">
                 <div className="w-2 h-12 bg-amber-500 rounded-full flex-shrink-0" />
-                <h2 className="text-3xl sm:text-4xl md:text-5xl text-gray-900 break-words">
-                  Programas Históricos
+                <h2 className="text-3xl sm:text-4xl md:text-5xl text-gray-900 break-words font-arimo">
+                  HISTÓRICOS
                 </h2>
               </div>
               <p className="text-lg text-gray-600 mb-12">
