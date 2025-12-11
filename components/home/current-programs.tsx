@@ -2,10 +2,20 @@ import Image from "next/image"
 import Link from "next/link"
 import { ACTIVE_PROGRAMS } from "@/lib/data/programs"
 
+function getLogoFileName(title: string): string {
+  const logoMap: Record<string, string> = {
+    "Experiencia Ambientalia": "Experiencia Ambientalia",
+    "SOMOS": "Somos",
+    "Líderes": "lideres",
+  }
+
+  return logoMap[title] || title
+}
+
 export default function CurrentPrograms() {
   const programs = ACTIVE_PROGRAMS.map(program => ({
     name: program.title,
-    logo: `/images/Logos/${program.slug === 'ambientalia' ? 'Experiencia Ambientalia' : program.title}.png`,
+    logo: `/images/Logos/${getLogoFileName(program.title)}.png`,
     href: `/programas/${program.slug}`,
     description: program.shortDescription,
     colors: program.colors

@@ -8,7 +8,7 @@ function VolunteersWithStars(): JSX.Element {
   return (
     <div className="bg-[#f45e5e] h-[64px] rounded-[20px] w-[220px] flex items-center justify-center shadow-md">
       <Image src={imageStars} alt="stars" width={76} height={76} />
-    </div>
+        </div>
   );
 }
 

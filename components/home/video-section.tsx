@@ -14,22 +14,22 @@ export default function VideoSection() {
               allowFullScreen
             />
           </div>
-        </div>
+          </div>
 
         <div className="mt-6">
-          <Link 
-            href="/nuestra-historia"
+            <Link 
+              href="/nuestra-historia"
             className="group w-full bg-[#90130d] hover:bg-[#a01810] transition-colors duration-300 px-4 sm:px-6 md:px-8 py-4 flex items-center justify-center gap-3 shadow-lg hover:shadow-xl rounded-2xl"
-          >
+            >
             <div className="flex items-center gap-2">
               <div className="w-6 h-3 bg-[#bc2222] rounded-full"></div>
               <div className="w-10 h-3 bg-[#f45e5e] rounded-full"></div>
-            </div>
-            
+              </div>
+              
             <span className="text-white font-contrail font-bold text-base sm:text-lg md:text-xl">
-              Conocé nuestra historia
-            </span>
-          </Link>
+                Conocé nuestra historia
+              </span>
+            </Link>
         </div>
       </div>
     </section>
