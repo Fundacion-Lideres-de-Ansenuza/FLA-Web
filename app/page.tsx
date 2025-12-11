@@ -11,9 +11,9 @@ export default function Home() {
       <Hero />
       <Stats />
       <VideoSection />
-      <Testimonials />
       <WhyWeDoIt />
       <CurrentPrograms />
+      <Testimonials />
     </main>
   )
 }

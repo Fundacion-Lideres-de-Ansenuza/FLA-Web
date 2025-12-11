@@ -23,8 +23,8 @@ export default function SuccessStories({ stories, colors }: SuccessStoriesProps)
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">Historias de éxito</h2>
-            <p className="text-lg text-gray-600">
+            <h2 className="text-3xl md:text-4xl text-gray-900 mb-3 font-contrail-one">Historias de éxito</h2>
+            <p className="text-base md:text-lg text-gray-600">
               Jóvenes que están transformando sus comunidades
             </p>
           </motion.div>

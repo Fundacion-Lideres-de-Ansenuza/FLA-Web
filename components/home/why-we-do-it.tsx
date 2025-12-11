@@ -3,11 +3,11 @@ import Image from "next/image"
 
 export default function WhyWeDoIt(): React.ReactElement {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-16 bg-gradient-to-b from-white via-rose-50 to-white">
       <div className="container mx-auto px-4">
-        <div className="text-left mb-10 flex items-center">
-          <h2 className="text-4xl md:text-5xl text-gray-900 mb-4 transform rotate-180 mr-2">?</h2>
-          <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">POR QUÉ LO HACEMOS?</h2>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl text-gray-900 mb-3 font-contrail-one">¿Por qué lo hacemos?</h2>
+          <p className="text-base md:text-lg text-gray-600 font-arimo">Porque la educación crea oportunidades y transforma comunidades.</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 mb-8">
@@ -21,10 +21,10 @@ export default function WhyWeDoIt(): React.ReactElement {
                 height={400}
               />
             </div>
-            <div className="absolute inset-0 bg-red-600/80" />
+            <div className="absolute inset-0 bg-[#bc2222]/75" />
             <div className="relative text-white p-10">
-              <h3 className="text-5xl md:text-6xl leading-none">Impacto social</h3>
-              <p className="mt-6 text-lg md:text-xl leading-relaxed max-w-xl">
+              <h3 className="text-3xl md:text-4xl leading-tight">Impacto social</h3>
+              <p className="mt-4 text-base md:text-lg leading-relaxed max-w-xl">
                 Porque impulsamos a quienes participan en nuestros programas a llevar a cabo proyectos que generen
                 transformaciones en sus comunidades.
               </p>
@@ -41,10 +41,10 @@ export default function WhyWeDoIt(): React.ReactElement {
                 height={400}
               />
             </div>
-            <div className="absolute inset-0 bg-red-700/80" />
+            <div className="absolute inset-0 bg-[#d63c3c]/75" />
             <div className="relative text-white p-10">
-              <h3 className="text-5xl md:text-6xl leading-none">Educación</h3>
-              <p className="mt-6 text-lg md:text-xl leading-relaxed max-w-xl">
+              <h3 className="text-3xl md:text-4xl leading-tight">Educación</h3>
+              <p className="mt-4 text-base md:text-lg leading-relaxed max-w-xl">
                 Porque creemos en la educación como recurso y herramienta para solucionar problemas sociales.
               </p>
             </div>
@@ -61,10 +61,10 @@ export default function WhyWeDoIt(): React.ReactElement {
               height={600}
             />
           </div>
-          <div className="absolute inset-0 bg-red-800/80" />
+          <div className="absolute inset-0 bg-[#f45e5e]/75" />
           <div className="relative text-white p-10">
-            <h3 className="text-5xl md:text-6xl leading-none">Oportunidades</h3>
-            <p className="mt-6 text-lg md:text-xl leading-relaxed max-w-4xl">
+            <h3 className="text-3xl md:text-4xl leading-tight">Oportunidades</h3>
+            <p className="mt-4 text-base md:text-lg leading-relaxed max-w-4xl">
               Porque creemos que el talento no tiene fronteras, llevamos experiencias transformadoras hasta los rincones
               más alejados, para que cada joven pueda ser agente de cambio en su comunidad.
             </p>

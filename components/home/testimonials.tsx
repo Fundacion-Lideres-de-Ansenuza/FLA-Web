@@ -22,7 +22,7 @@ export default function Testimonials() {
     <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl text-gray-900 mb-8 tracking-wide font-saridona">TESTIMONIOS</h2>
+          <h2 className="text-3xl md:text-4xl text-gray-900 mb-6 tracking-tight font-contrail-one">Testimonios</h2>
         </div>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="grid grid-cols-1 gap-6">
@@ -58,9 +58,7 @@ export default function Testimonials() {
                   className="text-white p-8 rounded-2xl shadow-md w-full font-saridona"
                   style={{ backgroundColor: testimonial.bgColor }}
                 >
-                  <p className="text-gray-700 mb-6 relative z-10 font-saridona text-xl leading-relaxed">
-                    "{testimonial.content}"
-                  </p>
+                  <p className="text-sm leading-relaxed mb-4 italic">&quot;{testimonial.content}&quot;</p>
                   <div className="flex items-center">
                     <Image
                       src={testimonial.avatar}

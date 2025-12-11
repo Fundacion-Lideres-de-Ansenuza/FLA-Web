@@ -21,8 +21,8 @@ export default function ProgramDescription({ fullDescription, location, duration
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
-            <h2 className="text-4xl md:text-5xl text-gray-900 mb-8">Sobre el programa</h2>
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+            <h2 className="text-3xl md:text-4xl text-gray-900 mb-6 font-contrail-one">Sobre el programa</h2>
+            <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 font-arimo">
               {fullDescription}
             </p>
           </motion.div>

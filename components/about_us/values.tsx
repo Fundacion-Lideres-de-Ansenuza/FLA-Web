@@ -6,22 +6,22 @@ const imageStars: string = "/images/voluntarioEstrellitas.png";
 
 function VolunteersWithStars(): JSX.Element {
   return (
-              <div className="bg-[#bd2222] h-[90px] rounded-[80px] w-[289px] flex items-center justify-center">
-        <Image src={imageStars} alt="stars" width={100} height={100} />
-        </div>
+    <div className="bg-[#f45e5e] h-[64px] rounded-[20px] w-[220px] flex items-center justify-center shadow-md">
+      <Image src={imageStars} alt="stars" width={76} height={76} />
+    </div>
   );
 }
 
 function ValueComponent({ title, description }: { title: string; description: string }): JSX.Element {
   return (
-    <div className="mb-12">
-      <div className="flex justify-between items-center mb-4">
-        <div className="bg-[#90140e] h-[90px] rounded-[80px] w-[834px] flex items-center justify-start pl-5">
-          <p className="font-contrail-one text-[#ffffff] text-[55.15px] text-start">{title}</p>
+    <div className="mb-8">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-3 mb-3">
+        <div className="bg-gradient-to-r from-[#bc2222] to-[#f45e5e] h-[68px] rounded-[24px] w-full md:w-[75%] flex items-center px-5 shadow-md">
+          <p className="font-contrail-one text-[#ffffff] text-[28px] md:text-[32px] text-start">{title}</p>
         </div>
         <VolunteersWithStars />
       </div>
-      <p className="font-['Arimo:Regular',_sans-serif] font-normal text-[#160101] text-[40px] leading-[normal] pl-5 text-justify">{description}</p>
+      <p className="font-['Arimo:Regular',_sans-serif] font-normal text-[#160101] text-[18px] md:text-[20px] leading-relaxed pl-1 md:pl-2 text-justify">{description}</p>
     </div>
   );
 }
@@ -29,7 +29,7 @@ function ValueComponent({ title, description }: { title: string; description: st
 function Values(): JSX.Element {
   return (
     <div className="px-4 py-8">
-      <h3 className="font-contrail-one text-[#160101] text-[80px] text-center">Valores</h3>
+      <h3 className="font-contrail-one text-[#160101] text-[36px] md:text-[44px] text-center mb-4">Valores</h3>
 
       <ValueComponent title="LIDERAZGO" description="No solo cultivamos este valor en las personas con las que trabajamos sino también en el equipo y en toda la organización. Creemos en el liderazgo que incluye y transforma, que inspira y acompaña, que confía y hace que las cosas pasen." />
 
