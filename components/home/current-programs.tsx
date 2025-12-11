@@ -7,30 +7,40 @@ export default function CurrentPrograms() {
     name: program.title,
     logo: `/images/Logos/${program.slug === 'ambientalia' ? 'Experiencia Ambientalia' : program.title}.png`,
     href: `/programas/${program.slug}`,
-    description: program.shortDescription
+    description: program.shortDescription,
+    colors: program.colors
   }))
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-10">
-          <h2 className="text-4xl md:text-5xl text-gray-900 mb-4 font-arimo font-bold">PROGRAMAS ACTUALES</h2>
+      <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl text-gray-900 mb-3 font-contrail-one tracking-tight">Programas actuales</h2>
+          <p className="text-base md:text-lg text-gray-600 font-arimo">Elegí el programa que mejor se adapte a vos y conocé sus detalles al instante.</p>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 items-center">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 items-stretch">
           {programs.map((program, index) => (
-            <Link key={index} href={program.href} className="block group relative">
-              <div className="relative">
-                <Image
-                  src={program.logo || "/placeholder.svg"}
-                  alt={program.name}
-                  width={360}
-                  height={180}
-                  className="mx-auto h-28 md:h-32 lg:h-36 w-auto object-contain transition-transform duration-300 group-hover:scale-105 group-hover:opacity-20"
-                  priority={index < 2}
-                />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 text-center">
-                  <p className="text-sm text-gray-800 font-medium bg-white/90 p-2 rounded shadow-sm">
-                    {program.description.split('.').slice(0, 2).join('. ') + '.'}
+            <Link key={index} href={program.href} className="block group">
+              <div className="h-full rounded-2xl border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 bg-white overflow-hidden">
+                <div
+                  className="h-28 md:h-32 flex items-center justify-center px-4"
+                  style={{ backgroundColor: `${program.colors.primary}1f` }}
+                >
+                  <div className="bg-white/90 rounded-xl px-3 py-2 shadow-sm">
+              <Image
+                src={program.logo || "/placeholder.svg"}
+                alt={program.name}
+                width={360}
+                height={180}
+                      className="mx-auto h-16 md:h-20 lg:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                priority={index < 2}
+              />
+                  </div>
+                </div>
+                <div className="p-5 text-center">
+                  <p className="text-base font-semibold text-gray-900">{program.name}</p>
+                  <p className="text-sm text-gray-600 mt-2 line-clamp-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {program.description}
                   </p>
                 </div>
               </div>
@@ -44,6 +54,9 @@ export default function CurrentPrograms() {
           >
             Ver todos los programas
           </Link>
+          <p className="text-sm md:text-base text-gray-700 mt-4 font-arimo">
+            ¿Necesitás ayuda para elegir? Escribinos a <a href="mailto:contacto@lideresdeansenuza.org" className="font-semibold text-[#bc2222] hover:underline">contacto@lideresdeansenuza.org</a>
+          </p>
         </div>
       </div>
     </section>

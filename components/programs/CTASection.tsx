@@ -25,7 +25,7 @@ export default function CTASection({ title, colors }: CTASectionProps) {
           transition={{ duration: 0.7 }}
           className="max-w-4xl mx-auto text-center"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-white mb-6" style={{ fontFamily: 'var(--font-fla), serif', letterSpacing: '0.06em' }}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-white mb-6" style={{ fontFamily: 'var(--font-fla), serif', letterSpacing: '0.02em' }}>
             ¿Listo para ser parte de {title}?
           </h2>
           <p className="text-xl md:text-2xl text-white/95 mb-10 leading-relaxed">
@@ -40,6 +40,12 @@ export default function CTASection({ title, colors }: CTASectionProps) {
               <ArrowRight size={20} />
             </Link>
           </div>
+          <p className="text-sm md:text-base text-white/90 mt-4">
+            ¿Tenés dudas?{" "}
+            <Link href="/contactanos" className="font-semibold underline-offset-4 hover:underline">
+              Contactanos
+            </Link>
+          </p>
         </motion.div>
       </div>
     </section>

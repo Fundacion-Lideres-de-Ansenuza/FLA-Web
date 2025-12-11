@@ -8,7 +8,7 @@ export const NAV_ITEMS: NavItem[] = [
   { name: "CAMPUS", href: "/campus" }
 ] as const
 
-export const BRAND_COLOR = '#f45e5e'
+export const BRAND_COLOR = '#bc2222'
 
 export const ANIMATION_CONFIG: AnimationConfig = {
   background: {

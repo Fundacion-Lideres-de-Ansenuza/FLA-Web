@@ -11,7 +11,7 @@ interface RequirementsProps {
 
 export default function Requirements({ requirements, colors }: RequirementsProps) {
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
+    <section className="py-16 md:py-24" style={{ backgroundColor: `${colors.primary}0d` }}>
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <motion.div
@@ -21,8 +21,8 @@ export default function Requirements({ requirements, colors }: RequirementsProps
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">Requisitos</h2>
-            <p className="text-lg text-gray-600">
+            <h2 className="text-3xl md:text-4xl text-gray-900 mb-3 font-contrail-one">Requisitos</h2>
+            <p className="text-base md:text-lg text-gray-600 font-arimo">
               Para participar del programa, deberás cumplir con los siguientes requisitos:
             </p>
           </motion.div>

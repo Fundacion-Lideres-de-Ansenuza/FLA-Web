@@ -14,7 +14,7 @@ interface ImpactStatsProps {
 
 export default function ImpactStats({ stats, colors }: ImpactStatsProps) {
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
+    <section className="py-16 md:py-24" style={{ backgroundColor: `${colors.primary}0d` }}>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -24,8 +24,8 @@ export default function ImpactStats({ stats, colors }: ImpactStatsProps) {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">Nuestro impacto</h2>
-            <p className="text-lg text-gray-600">
+            <h2 className="text-3xl md:text-4xl text-gray-900 mb-3 font-contrail-one">Nuestro impacto</h2>
+            <p className="text-base md:text-lg text-gray-600">
               Resultados que transforman comunidades
             </p>
           </motion.div>

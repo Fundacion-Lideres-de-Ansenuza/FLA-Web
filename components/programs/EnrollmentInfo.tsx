@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { Calendar, FileText } from "lucide-react";
 import type { ProgramColors } from "./types";
 
@@ -54,22 +53,6 @@ export default function EnrollmentInfo({ description, availablePeriod, colors, i
             )}
           </motion.div>
 
-          {!isHistorical && (
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-center"
-            >
-              <p className="text-gray-600">
-                ¿Tenés dudas?{" "}
-                <Link href="/contactanos" className="font-semibold hover:underline" style={{ color: colors.primary }}>
-                  Contactanos
-                </Link>
-              </p>
-            </motion.div>
-          )}
         </div>
       </div>
     </section>
