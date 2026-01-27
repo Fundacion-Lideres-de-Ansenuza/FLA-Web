@@ -24,7 +24,7 @@ export default function Sponsors({ sponsors }: SponsorsProps) {
             <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">Con el apoyo de</h2>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 items-center">
             {sponsors.map((sponsor, index) => (
               <motion.div
                 key={index}

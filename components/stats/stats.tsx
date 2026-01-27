@@ -37,7 +37,7 @@ export default function Stats() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {STATS_DATA?.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-5xl lg:text-6xl xl:text-7xl font-black text-[#bd2222] mb-4 drop-shadow-lg font-contrail">
+              <div className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-[#bd2222] mb-4 drop-shadow-lg font-contrail">
                 +<AnimatedNumber target={stat?.number || 0} isVisible={isVisible} />
               </div>
               <div className="text-gray-700 font-bold text-lg lg:text-xl whitespace-pre-line tracking-wide font-contrail">
