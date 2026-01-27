@@ -33,7 +33,7 @@ export default function Hero() {
               alt="Jóvenes colaborando en educación"
               width={1400}
               height={500}
-              className="w-full h-[380px] lg:h-[460px] rounded-[90px] shadow-2xl object-cover"
+              className="w-full h-[280px] sm:h-[340px] lg:h-[460px] rounded-3xl sm:rounded-[60px] lg:rounded-[90px] shadow-2xl object-cover"
               priority
             />
           </div>

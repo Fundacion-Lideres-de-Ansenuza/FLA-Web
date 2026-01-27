@@ -31,7 +31,7 @@ export default function Testimonials() {
               alt="Testimonio 1"
               width={200}
               height={100}
-              className="rounded-3xl w-full h-[200px] sm:h-[300px] md:h-[400px] shadow-lg object-cover"
+              className="rounded-3xl w-full h-[180px] sm:h-[250px] md:h-[350px] lg:h-[400px] shadow-lg object-cover"
             />
             <div className="grid grid-cols-2 gap-6 justify-center items-center">
               <Image
@@ -39,14 +39,14 @@ export default function Testimonials() {
                 alt="Testimonio 2"
                 width={200}
                 height={200}
-                className="rounded-2xl w-full h-[200px] sm:h-[300px] md:h-[350px] shadow-lg object-cover"
+                className="rounded-2xl w-full h-[140px] sm:h-[200px] md:h-[280px] lg:h-[350px] shadow-lg object-cover"
               />
               <Image
                 src="/images/TESTIMONIO_3_MIN.png"
                 alt="Testimonio 3"
                 width={200}
                 height={200}
-                className="rounded-2xl w-full h-[200px] sm:h-[300px] md:h-[350px] shadow-lg object-cover"
+                className="rounded-2xl w-full h-[140px] sm:h-[200px] md:h-[280px] lg:h-[350px] shadow-lg object-cover"
               />
             </div>
           </div>

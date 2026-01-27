@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#2b2b2b] text-white py-8 border-t border-[#2b2b2b]">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
           <div className="space-y-6">
             <div className="flex items-center space-x-3 mb-8">
               <Image src="/images/LogoFLA.png" alt="Fundación Líderes de Ansenuza" width={100} height={100} />
