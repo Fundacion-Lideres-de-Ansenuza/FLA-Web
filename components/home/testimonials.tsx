@@ -8,7 +8,6 @@ import { ChevronUp, ChevronDown, Quote } from "lucide-react"
 enum TestimonialRole {
   VOLUNTARIO = "Voluntarix",
   PARTICIPANTE = "Participante",
-  ANONIMO = "Anónimo"
 }
 
 interface Testimonial {
