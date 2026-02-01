@@ -1,12 +1,18 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ACTIVE_PROGRAMS } from "@/lib/data/programs"
+import { generateBlobRadius } from "@/lib/shapes"
 
 function getLogoFileName(title: string): string {
   const logoMap: Record<string, string> = {
     "Experiencia Ambientalia": "Experiencia Ambientalia",
     "SOMOS": "Somos",
     "Líderes": "lideres",
+    "Potenciate": "Potenciate",
+    "FUTURAS": "Futuras",
+    "ImpulsaTEC": "Impulsatec",
+    "Ciencia Fuera de la Caja": "Ciencia fuera de la caja",
+    "Aventura Matemágica": "Aventura Matemagica"
   }
 
   return logoMap[title] || title
@@ -15,6 +21,7 @@ function getLogoFileName(title: string): string {
 export default function CurrentPrograms() {
   const programs = ACTIVE_PROGRAMS.map(program => ({
     name: program.title,
+    slug: program.slug,
     logo: `/images/Logos/${getLogoFileName(program.title)}.png`,
     href: `/programas/${program.slug}`,
     description: program.shortDescription,
@@ -22,31 +29,37 @@ export default function CurrentPrograms() {
   }))
 
   return (
-    <section className="py-8 bg-white">
+    <section className="py-16 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl text-gray-900 mb-3 font-contrail-one tracking-tight">Programas actuales</h2>
-          <p className="text-base md:text-lg text-gray-600 font-arimo">Elegí el programa que mejor se adapte a vos y conocé sus detalles al instante.</p>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl text-gray-900 mb-4 font-contrail-one tracking-tight">Programas actuales</h2>
+          <p className="text-base md:text-xl text-gray-600 font-arimo max-w-2xl mx-auto">Elegí el programa que mejor se adapte a vos y conocé sus detalles al instante.</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16 items-center justify-items-center">
           {programs.map((program, index) => (
-            <Link key={index} href={program.href} className="block group">
-              <div className="h-full rounded-2xl border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 bg-white overflow-hidden">
+            <Link key={index} href={program.href} className="block group w-full max-w-sm">
+              <div className="relative flex flex-col items-center text-center transition-all duration-300">
                 <div
-                  className="h-28 md:h-32 flex items-center justify-center px-4"
-                  style={{ backgroundColor: `${program.colors.primary}1f` }}
+                  className="w-64 h-64 md:w-72 md:h-72 flex items-center justify-center relative mb-6 transition-all duration-500 group-hover:scale-110"
+                  style={{
+                    backgroundColor: `${program.colors.primary}1f`,
+                    borderRadius: generateBlobRadius(program.name)
+                  }}
                 >
-                  <div className="bg-white/90 rounded-xl px-3 py-2 shadow-sm">
+                  <div className="absolute inset-0 opacity-20" style={{ backgroundColor: `${program.colors.accent}1f`, borderRadius: generateBlobRadius(program.name + 'bg') }} />
+                  <div className="bg-white/95 rounded-2xl p-6 shadow-xl relative z-10 w-48 h-32 flex items-center justify-center">
                     <Image
                       src={program.logo || "/placeholder.svg"}
                       alt={program.name}
                       width={360}
                       height={180}
-                      className="mx-auto h-16 md:h-20 lg:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                      className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
                       priority={index < 2}
                     />
                   </div>
                 </div>
+                <h3 className="text-2xl font-contrail-one text-gray-900 mb-2">{program.name}</h3>
+                <p className="text-gray-600 font-arimo line-clamp-2 px-4">{program.description}</p>
               </div>
             </Link>
           ))}
