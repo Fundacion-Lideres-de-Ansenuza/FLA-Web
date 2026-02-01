@@ -59,7 +59,6 @@ export default function CurrentPrograms() {
                   </div>
                 </div>
                 <h3 className="text-2xl font-contrail-one text-gray-900 mb-2">{program.name}</h3>
-                <p className="text-gray-600 font-arimo line-clamp-2 px-4">{program.description}</p>
               </div>
             </Link>
           ))}
