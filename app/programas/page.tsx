@@ -94,18 +94,18 @@ export default function ProgramasPage() {
                       <div
                         className="w-72 h-72 md:w-80 md:h-80 relative flex items-center justify-center mb-8 transition-all duration-500 group-hover:scale-105"
                         style={{
-                          backgroundColor: `${program.colors.primary}1f`,
+                          backgroundColor: `${program.colors.primary}25`,
                           borderRadius: generateBlobRadius(program.title)
                         }}
                       >
-                        <div className="absolute inset-0 opacity-30" style={{ backgroundColor: `${program.colors.accent}20`, borderRadius: generateBlobRadius(program.title + 'bg') }} />
-                        <div className="relative z-10 bg-white/95 rounded-2xl p-6 shadow-2xl w-56 h-36 flex items-center justify-center">
+                        <div className="absolute inset-0 opacity-30" style={{ backgroundColor: `${program.colors.accent}30`, borderRadius: generateBlobRadius(program.title + 'bg') }} />
+                        <div className="relative z-10 w-60 h-40 flex items-center justify-center p-4">
                           <Image
                             src={`/images/Logos/${getLogoFileName(program.title)}.png`}
                             alt={program.title}
                             width={300}
                             height={150}
-                            className="object-contain max-h-full filter drop-shadow-lg group-hover:scale-110 transition-transform duration-300"
+                            className="object-contain max-h-full filter drop-shadow-xl group-hover:scale-110 transition-transform duration-300"
                             priority
                           />
                         </div>
@@ -134,38 +134,7 @@ export default function ProgramasPage() {
               </div>
             </div>
 
-            <div className="mb-16">
-              <div className="bg-gradient-to-r from-[#fff4f4] via-[#fde7e7] to-[#fff4f4] rounded-2xl p-6 md:p-8 shadow-inner">
-                <h3 className="text-xl md:text-2xl font-contrail-one text-gray-900 text-center mb-4">Momentos de nuestros programas</h3>
-                <div className="overflow-x-auto">
-                  <div className="flex gap-4 md:gap-6 min-w-full pb-2">
-                    {showcasePrograms.map((program) => (
-                      <div
-                        key={program.slug}
-                        className="min-w-[180px] bg-white rounded-xl shadow-sm border border-gray-100 p-4 flex flex-col items-center gap-3"
-                      >
-                        <div
-                          className="w-full h-24 flex items-center justify-center rounded-lg"
-                          style={{ backgroundColor: `${program.colors.primary}12` }}
-                        >
-                          <Image
-                            src={`/images/Logos/${getLogoFileName(program.title)}.png`}
-                            alt={program.title}
-                            width={200}
-                            height={90}
-                            className="h-16 w-auto object-contain"
-                          />
-                        </div>
-                        <p className="text-sm font-semibold text-gray-800 text-center line-clamp-2">{program.title}</p>
-                        <span className="text-xs text-gray-500 text-center line-clamp-2">{program.shortDescription}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="border-t-2 border-gray-200 pt-16">
+            <div className="border-gray-200 pt-16">
               <div className="text-center mb-6">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl text-gray-900 break-words font-contrail-one tracking-tight">
                   Programas históricos
@@ -187,18 +156,18 @@ export default function ProgramasPage() {
                       <div
                         className="w-56 h-56 md:w-64 md:h-64 relative flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-105"
                         style={{
-                          backgroundColor: `${program.colors.primary}12`,
+                          backgroundColor: `${program.colors.primary}18`,
                           borderRadius: generateBlobRadius(program.title)
                         }}
                       >
-                        <div className="absolute inset-0 opacity-20" style={{ backgroundColor: `${program.colors.accent}15`, borderRadius: generateBlobRadius(program.title + 'hist') }} />
-                        <div className="relative z-10 bg-white/90 rounded-2xl p-5 shadow-xl w-44 h-28 flex items-center justify-center">
+                        <div className="absolute inset-0 opacity-20" style={{ backgroundColor: `${program.colors.accent}20`, borderRadius: generateBlobRadius(program.title + 'hist') }} />
+                        <div className="relative z-10 w-48 h-32 flex items-center justify-center p-4">
                           <Image
                             src={`/images/Logos/${getLogoFileName(program.title)}.png`}
                             alt={program.title}
                             width={200}
                             height={100}
-                            className="object-contain max-h-full filter drop-shadow-md group-hover:scale-110 transition-transform duration-300"
+                            className="object-contain max-h-full filter drop-shadow-lg group-hover:scale-110 transition-transform duration-300"
                           />
                         </div>
                         <div className="absolute top-0 right-0 z-20">

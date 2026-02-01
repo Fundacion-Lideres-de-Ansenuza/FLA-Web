@@ -42,18 +42,18 @@ export default function CurrentPrograms() {
                 <div
                   className="w-64 h-64 md:w-72 md:h-72 flex items-center justify-center relative mb-6 transition-all duration-500 group-hover:scale-110"
                   style={{
-                    backgroundColor: `${program.colors.primary}1f`,
+                    backgroundColor: `${program.colors.primary}25`,
                     borderRadius: generateBlobRadius(program.name)
                   }}
                 >
-                  <div className="absolute inset-0 opacity-20" style={{ backgroundColor: `${program.colors.accent}1f`, borderRadius: generateBlobRadius(program.name + 'bg') }} />
-                  <div className="bg-white/95 rounded-2xl p-6 shadow-xl relative z-10 w-48 h-32 flex items-center justify-center">
+                  <div className="absolute inset-0 opacity-20" style={{ backgroundColor: `${program.colors.accent}25`, borderRadius: generateBlobRadius(program.name + 'bg') }} />
+                  <div className="relative z-10 w-48 h-32 flex items-center justify-center p-4">
                     <Image
                       src={program.logo || "/placeholder.svg"}
                       alt={program.name}
                       width={360}
                       height={180}
-                      className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                      className="h-full w-full object-contain filter drop-shadow-md transition-transform duration-300 group-hover:scale-105"
                       priority={index < 2}
                     />
                   </div>
