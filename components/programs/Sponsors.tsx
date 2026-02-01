@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import type { Sponsor } from "./types";
 
 interface SponsorsProps {
@@ -35,11 +36,14 @@ export default function Sponsors({ sponsors }: SponsorsProps) {
                 className="flex items-center justify-center p-4 bg-white rounded-xl hover:shadow-md transition-shadow duration-300"
               >
                 {sponsor.logo ? (
-                  <img
-                    src={sponsor.logo}
-                    alt={sponsor.name}
-                    className="max-w-full h-auto max-h-16 object-contain"
-                  />
+                  <div className="relative w-full h-16">
+                    <Image
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
                 ) : (
                   <span className="text-lg font-semibold text-gray-700 text-center">
                     {sponsor.name}
