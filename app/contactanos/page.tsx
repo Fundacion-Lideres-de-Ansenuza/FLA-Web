@@ -13,7 +13,7 @@ const fadeIn = {
 
 export default function Contactanos(): JSX.Element {
   return (
-    <main className="min-h-screen bg-white container mx-auto px-4 overflow-hidden">
+    <main className="min-h-screen bg-white container mx-auto px-4 overflow-hidden pt-[108px] sm:pt-[120px]">
       <motion.div
         initial="hidden"
         animate="visible"

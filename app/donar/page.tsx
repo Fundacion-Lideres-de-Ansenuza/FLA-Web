@@ -48,7 +48,7 @@ export default function DonationPage() {
     }
 
     return (
-        <main className="min-h-screen bg-white pt-24 pb-20 overflow-x-hidden">
+        <main className="min-h-screen bg-white pt-[108px] sm:pt-[120px] pb-20 overflow-x-hidden">
             <div className="container mx-auto px-4 max-w-6xl">
                 {/* Header Section Matches Site Identity */}
                 <div className="flex flex-col items-center gap-6 text-center mb-16">

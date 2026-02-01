@@ -8,7 +8,7 @@ import EnjoyFla from "@/components/about_us/EnjoyFla";
 
 export default function QuienesSomos(): JSX.Element {
   return (
-    <main className="min-h-screen bg-white max-w-6xl mx-auto px-4 md:px-6">
+    <main className="min-h-screen bg-white max-w-6xl mx-auto px-4 md:px-6 pt-[108px] sm:pt-[120px]">
       <Introduction />
       <section className="bg-gradient-to-r from-[#fff4f4] via-[#fde7e7] to-[#fff4f4] rounded-3xl p-6 md:p-8 my-6 text-center">
         <h2 className="text-3xl md:text-4xl font-contrail-one text-gray-900 mb-3">Autoridades</h2>
