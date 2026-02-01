@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function VideoSection() {
   return (
-    <section className="py-14 bg-white border-b border-gray-100">
+    <section className="py-8 bg-white border-b border-gray-100">
       <div className="container mx-auto px-4">
         <div className="relative rounded-3xl overflow-hidden shadow-xl">
           <div className="aspect-video w-full">
@@ -14,22 +14,18 @@ export default function VideoSection() {
               allowFullScreen
             />
           </div>
-          </div>
+        </div>
 
-        <div className="mt-6">
-            <Link 
-              href="/nuestra-historia"
-            className="group w-full bg-[#90130d] hover:bg-[#a01810] transition-colors duration-300 px-4 sm:px-6 md:px-8 py-4 flex items-center justify-center gap-3 shadow-lg hover:shadow-xl rounded-2xl"
-            >
-            <div className="flex items-center gap-2">
-              <div className="w-6 h-3 bg-[#bc2222] rounded-full"></div>
-              <div className="w-10 h-3 bg-[#f45e5e] rounded-full"></div>
-              </div>
-              
-            <span className="text-white font-contrail font-bold text-base sm:text-lg md:text-xl">
-                Conocé nuestra historia
-              </span>
-            </Link>
+
+        <div className="mt-8 flex justify-center">
+          <Link
+            href="/quienes-somos"
+            className="relative group px-12 py-5 bg-gradient-to-r from-red-600 to-red-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden before:absolute before:inset-0 before:bg-white/10 before:translate-x-[-100%] hover:before:translate-x-0 before:transition-transform before:duration-500"
+          >
+            <span className="relative text-white text-xl md:text-2xl font-contrail tracking-wide">
+              Conocé nuestra historia
+            </span>
+          </Link>
         </div>
       </div>
     </section>

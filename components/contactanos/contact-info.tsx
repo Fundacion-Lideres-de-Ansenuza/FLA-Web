@@ -1,13 +1,17 @@
+"use client"
+
 import { Mail, Phone, Clock, Users } from "lucide-react"
+import { useTranslation } from "react-i18next"
 
 export default function ContactInfo() {
+  const { t } = useTranslation()
+
   return (
     <div className="space-y-8">
       <div>
-        <h3 className="text-4xl font-contrail-one text-[#000000] mb-6">Información de contacto</h3>
+        <h3 className="text-4xl font-contrail-one text-[#000000] mb-6">{t('contact.info.title')}</h3>
         <p className="font-arimo text-black text-lg leading-relaxed">
-          Estamos aquí para escucharte y trabajar juntos. Podés contactarnos de varias formas.
-          No dudes en escribirnos, ¡tu mensaje es importante para nosotros!
+          {t('contact.info.description')}
         </p>
       </div>
 
@@ -17,9 +21,9 @@ export default function ContactInfo() {
             <Mail className="h-6 w-6 text-white" />
           </div>
           <div className="flex-1">
-            <h4 className="font-contrail-one text-black text-xl mb-2">Correo electrónico</h4>
+            <h4 className="font-contrail-one text-black text-xl mb-2">{t('contact.info.email')}</h4>
             <p className="font-arimo text-black text-base">info@fundacionlideresdeansenuza.org</p>
-            <p className="font-arimo text-gray-600 text-sm">Respondemos en 24-48 horas</p>
+            <p className="font-arimo text-gray-600 text-sm">{t('contact.info.emailResponse')}</p>
           </div>
         </div>
 
@@ -28,9 +32,9 @@ export default function ContactInfo() {
             <Phone className="h-6 w-6 text-white" />
           </div>
           <div className="flex-1">
-            <h4 className="font-contrail-one text-black text-xl mb-2">Teléfono</h4>
+            <h4 className="font-contrail-one text-black text-xl mb-2">{t('contact.info.phone')}</h4>
             <p className="font-arimo text-black text-base">+54 358 123 4567</p>
-            <p className="font-arimo text-gray-600 text-sm">Lunes a Viernes, 9:00 - 18:00</p>
+            <p className="font-arimo text-gray-600 text-sm">{t('contact.info.phoneHours')}</p>
           </div>
         </div>
 
@@ -39,9 +43,9 @@ export default function ContactInfo() {
             <Clock className="h-6 w-6 text-white" />
           </div>
           <div className="flex-1">
-            <h4 className="font-contrail-one text-black text-xl mb-2">Horarios de atención</h4>
-            <p className="font-arimo text-black text-base">Lunes a Viernes: 9:00 - 18:00</p>
-            <p className="font-arimo text-gray-600 text-sm">Sábados: 9:00 - 12:00 (solo urgencias)</p>
+            <h4 className="font-contrail-one text-black text-xl mb-2">{t('contact.info.officeHours')}</h4>
+            <p className="font-arimo text-black text-base">{t('contact.info.weekdays')}</p>
+            <p className="font-arimo text-gray-600 text-sm">{t('contact.info.saturday')}</p>
           </div>
         </div>
 
@@ -50,9 +54,9 @@ export default function ContactInfo() {
             <Users className="h-6 w-6 text-white" />
           </div>
           <div className="flex-1">
-            <h4 className="font-contrail-one text-black text-xl mb-2">¿Querés colaborar?</h4>
-            <p className="font-arimo text-black text-base">Voluntariado • Donaciones • Alianzas</p>
-            <p className="font-arimo text-gray-600 text-sm">Todas las formas de apoyo son bienvenidas</p>
+            <h4 className="font-contrail-one text-black text-xl mb-2">{t('contact.info.collaborate')}</h4>
+            <p className="font-arimo text-black text-base">{t('contact.info.collaborateOptions')}</p>
+            <p className="font-arimo text-gray-600 text-sm">{t('contact.info.collaborateText')}</p>
           </div>
         </div>
       </div>

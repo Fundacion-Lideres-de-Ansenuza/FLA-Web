@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ExternalLink, Images } from "lucide-react";
 import type { ProgramColors } from "./types";
 
@@ -76,12 +77,13 @@ export default function Gallery({ type, url, images, colors }: GalleryProps) {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="aspect-square rounded-xl overflow-hidden"
+                  className="relative aspect-square rounded-xl overflow-hidden"
                 >
-                  <img
+                  <Image
                     src={image}
                     alt={`Galería imagen ${index + 1}`}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    fill
+                    className="object-cover hover:scale-110 transition-transform duration-300"
                   />
                 </motion.div>
               ))}

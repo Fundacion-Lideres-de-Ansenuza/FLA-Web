@@ -15,12 +15,10 @@ export function generateBlobRadius(text: string): string {
   // Generate 8 values for the blob radius (4 for top/bottom/left/right, 4 for corners)
   // Format: top-left top-right bottom-right bottom-left / top-left top-right bottom-right bottom-left
   
-  const v1 = getVal(30, 70, 1);
-  const v2 = getVal(30, 70, 2);
-  const v3 = getVal(30, 70, 3);
-  const v4 = getVal(30, 70, 4);
+  const v1 = getVal(25, 75, 1);
+  const v2 = getVal(25, 75, 2);
+  const v3 = getVal(25, 75, 3);
+  const v4 = getVal(25, 75, 4);
   
-
-
   return `${v1}% ${100 - v1}% ${v2}% ${100 - v2}% / ${v3}% ${v4}% ${100 - v4}% ${100 - v3}%`;
 }

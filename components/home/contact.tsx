@@ -44,7 +44,7 @@ export default function Contact() {
 					</p>
 				</div>
 
-				<div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+				<div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
 					<Card className="shadow-xl border-0">
 						<CardHeader>
 							<CardTitle className="text-2xl text-gray-900">

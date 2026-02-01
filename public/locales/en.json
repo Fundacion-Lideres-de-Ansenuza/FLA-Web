@@ -1,0 +1,182 @@
+{
+  "nav": {
+    "programas": "PROGRAMS",
+    "quienes_somos": "ABOUT US",
+    "donar": "DONATE",
+    "blog": "BLOG",
+    "campus": "CAMPUS",
+    "contactanos": "CONTACT US"
+  },
+  "language": {
+    "es": "Spanish",
+    "en": "English",
+    "label": "Language"
+  },
+  "hero": {
+    "title": "Youth Transforming Education",
+    "description": "We design and run free educational programs throughout Argentina so that more young people can lead change in their communities.",
+    "voluntariado": "Volunteer",
+    "alianzas": "Partnerships",
+    "donar": "Donate"
+  },
+  "stats": {
+    "volunteers": "Current\nVolunteers",
+    "participants": "Participants\nOver the Years",
+    "projects": "Social Impact\nProjects"
+  },
+  "whyWeDoIt": {
+    "title": "Why We Do It",
+    "subtitle": "Because education creates opportunities and transforms communities.",
+    "socialImpact": {
+      "title": "Social Impact",
+      "description": "We empower participants in our programs to carry out projects that generate transformations in their communities."
+    },
+    "education": {
+      "title": "Education",
+      "description": "We believe in education as a resource and tool to solve social problems."
+    },
+    "opportunities": {
+      "title": "Opportunities",
+      "description": "Because we believe talent has no borders, we bring transformative experiences to the most remote places, so every young person can be an agent of change in their community."
+    }
+  },
+  "currentPrograms": {
+    "title": "Current Programs",
+    "subtitle": "Choose the program that best suits you and learn about it instantly.",
+    "viewAll": "View all programs"
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "subtitle": "Discover what the people who are part of our FLAmily have to say"
+  },
+  "footer": {
+    "tagline": "Empowering the next generation of leaders in the Ansenuza region through education and innovation.",
+    "contact": "Contact",
+    "directContact": "Direct Contact",
+    "newsletter": "Newsletter",
+    "newsletterText": "Stay up to date with all our news.",
+    "emailPlaceholder": "Your email",
+    "copyright": "© {{year}} Fundación Líderes de Ansenuza. All rights reserved.",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "aboutUs": {
+    "foundation": {
+      "title": "THE FOUNDATION",
+      "intro": "Fundación Líderes de Ansenuza is a non-governmental organization based in Miramar de Ansenuza, Córdoba, whose work revolves around the design and execution of educational programs in Argentina.",
+      "paragraph1": "At Fundación Líderes de Ansenuza (FLA), we believe in the potential of every young person to transform their community and build a better future. Our mission is to train agents of change, offering opportunities, tools, and support for young people to develop leadership and generate social impact.",
+      "paragraph2": "We work throughout Argentina, with special attention to rural and semi-urban regions, as well as large cities. Our goal is to reach those who need it most, providing hands-on experiences, without economic barriers, that promote learning through action and innovation.",
+      "paragraph3": "FLA not only focuses on training leaders but also on creating an inclusive, diverse, and committed community where young people find a safe space to enhance their ideas and sustainable projects.",
+      "paragraph4": "Being part of FLA means being part of a movement that bets on equal opportunities and the power of youth to generate real and lasting impact. Together, we are building a future full of possibilities and leadership for everyone."
+    },
+    "authorities": {
+      "title": "Authorities",
+      "description": "We present the foundation's leadership team and the people who support our institutional management."
+    },
+    "missionVisionValues": "Mission, Vision and Values"
+  },
+  "donate": {
+    "title": "How to Donate?",
+    "subtitle": "Your contribution allows thousands of young people to access free educational programs. Choose the method you prefer.",
+    "tabs": {
+      "online": "Donate Online",
+      "paypal": "PayPal",
+      "transfer": "Bank Transfer"
+    },
+    "online": {
+      "title": "Donate Online Platform",
+      "description": "For fast and secure national donations in Argentine pesos.",
+      "steps": [
+        "Go to líderesdeansenuza.org",
+        "Select the 'Donate' option in the menu",
+        "Click on the Donate Online logo",
+        "Choose the amount (you can use 'Other amount' in ARS)",
+        "Define the frequency (monthly or one-time)",
+        "Complete your personal information",
+        "Enter your card details (processed via Donate Online + Mercado Pago)",
+        "Confirm by pressing 'Donate to Fundación Líderes de Ansenuza'",
+        "You will receive a welcome email with the details"
+      ],
+      "button": "Go to Form"
+    },
+    "paypal": {
+      "title": "International Donations",
+      "description": "If you are outside Argentina or prefer to use international cards.",
+      "steps": [
+        "Go to líderesdeansenuza.org",
+        "Select the 'Donate' option in the menu",
+        "Click on the PayPal logo",
+        "Choose the amount (you can use 'Other')",
+        "Select the frequency (check box for monthly)",
+        "Choose to pay with PayPal or Card",
+        "Complete billing and contact information",
+        "Confirm by pressing 'Accept and donate now'"
+      ],
+      "button": "Donate via PayPal"
+    },
+    "transfer": {
+      "title": "Direct Bank Transfer",
+      "description": "Use these details to make your contribution directly from your online banking or virtual wallet.",
+      "cbu": "CBU",
+      "alias": "Alias",
+      "name": "Name",
+      "cuit": "CUIT",
+      "receiptTitle": "Need a receipt?",
+      "receiptText": "Contact us through our contact page attaching the proof of payment to issue your official donation receipt.",
+      "contactPage": "contact page"
+    }
+  },
+  "contact": {
+    "title": "CONTACT US",
+    "subtitle": "Want to be part of the change? Have questions about our programs? Want to collaborate with us? We are here to listen.",
+    "form": {
+      "title": "Send us a message",
+      "name": "Full name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+54 123 456 7890",
+      "subject": "Subject",
+      "subjectPlaceholder": "How can we help you?",
+      "message": "Message",
+      "messagePlaceholder": "Tell us more about your inquiry, idea, or how you want to collaborate with us...",
+      "send": "Send message",
+      "success": "Thank you for your message! We will contact you soon.",
+      "required": "*"
+    },
+    "info": {
+      "title": "Contact Information",
+      "description": "We are here to listen and work together. You can contact us in several ways. Don't hesitate to write to us, your message is important to us!",
+      "email": "Email",
+      "emailResponse": "We respond within 24-48 hours",
+      "phone": "Phone",
+      "phoneHours": "Monday to Friday, 9:00 AM - 6:00 PM",
+      "officeHours": "Office Hours",
+      "weekdays": "Monday to Friday: 9:00 AM - 6:00 PM",
+      "saturday": "Saturdays: 9:00 AM - 12:00 PM (emergencies only)",
+      "collaborate": "Want to collaborate?",
+      "collaborateOptions": "Volunteering • Donations • Partnerships",
+      "collaborateText": "All forms of support are welcome"
+    }
+  },
+  "programs": {
+    "title": "Our Programs",
+    "subtitle": "Free educational programs that transform lives throughout Argentina",
+    "active": {
+      "title": "Active Programs",
+      "subtitle": "Active programs you can participate in now",
+      "openEnrollment": "✓ Open enrollment",
+      "learnMore": "Learn more"
+    },
+    "historical": {
+      "title": "Historical Programs",
+      "subtitle": "Programs that have left their mark on thousands of young people throughout Argentina",
+      "viewHistory": "View history"
+    },
+    "cta": {
+      "title": "Want to know more about our programs?",
+      "subtitle": "If you have any questions or want more information on how to participate, don't hesitate to contact us",
+      "button": "Contact Us"
+    }
+  }
+}

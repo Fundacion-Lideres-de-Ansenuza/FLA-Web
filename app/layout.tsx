@@ -8,6 +8,7 @@ import Header from "@/components/navbar"
 import Footer from "@/components/home/footer"
 import { AccessibilityProvider } from "@/lib/context/AccessibilityContext"
 import Accessibility from "@/components/accessibility/Accessibility"
+import I18nProvider from "@/components/I18nProvider"
 
 const inter = Inter({ subsets: ["latin"] })
 const arimo = Arimo({
@@ -44,12 +45,14 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       </head>
       <body className={`${inter.className} ${fla.variable} ${saridona.variable} ${contrailOne.variable} ${arimo.variable} overflow-x-hidden`}>
-        <AccessibilityProvider>
-          <Header />
-          {children}
-          <Footer />
-          <Accessibility />
-        </AccessibilityProvider>
+        <I18nProvider>
+          <AccessibilityProvider>
+            <Header />
+            {children}
+            <Footer />
+            <Accessibility />
+          </AccessibilityProvider>
+        </I18nProvider>
       </body>
     </html>
   )

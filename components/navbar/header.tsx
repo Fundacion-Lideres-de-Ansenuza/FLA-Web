@@ -5,8 +5,11 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { useNavbar } from "./useNavbar"
 import { NAV_ITEMS } from "./_constants"
+import LanguageSwitcher from "./LanguageSwitcher"
+import { useTranslation } from "react-i18next"
 
 export default function Header() {
+  const { t } = useTranslation()
   const {
     hoveredItem,
     isActive,
@@ -17,8 +20,13 @@ export default function Header() {
     closeMobileMenu
   } = useNavbar()
 
+  const getNavLabel = (name: string) => {
+    const key = name.toLowerCase().replace(/\s+/g, '_')
+    return t(`nav.${key}`, name)
+  }
+
   return (
-    <header className="sticky top-0 z-50 border-b border-[#a81c1c] bg-gradient-to-r from-[#bc2222] via-[#f45e5e] to-[#bc2222] shadow-md backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-[100] border-b border-[#a81c1c] bg-gradient-to-r from-[#bc2222] via-[#f45e5e] to-[#bc2222] shadow-md backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
@@ -27,17 +35,17 @@ export default function Header() {
               onClick={() => window.location.href = '/'}
             >
               <Image
-                src="/images/LogoFLA.png"
+                src="/images/Logos/fla-logo-blanco.png"
                 alt="Fundación Líderes de Ansenuza"
-                width={100}
-                height={100}
-                className="h-24 w-auto"
+                width={160}
+                height={160}
+                className="h-32 w-auto py-1"
               />
             </div>
           </div>
 
           <nav
-            className="hidden lg:flex items-center relative"
+            className="hidden lg:flex items-center space-x-2 relative"
             onMouseLeave={handleMouseLeave}
           >
             {NAV_ITEMS.map((item) => (
@@ -67,30 +75,32 @@ export default function Header() {
 
                 <motion.a
                   href={item.href}
-                    className={`px-5 py-2 rounded-full text-base font-semibold transition-colors duration-200 relative z-10 block ${
-                    isActive(item.name) 
-                      ? 'text-white'
-                      : 'text-white/85 hover:text-white'
-                  }`}
+                  className={`px-5 py-2 rounded-full text-base font-semibold transition-colors duration-200 relative z-10 block ${isActive(item.name)
+                    ? 'text-white'
+                    : 'text-white/85 hover:text-white'
+                    }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
-                  {item.name}
+                  {getNavLabel(item.name)}
                 </motion.a>
               </motion.div>
             ))}
           </nav>
 
-          <Button
-            className="bg-white hover:bg-white/90 text-[#bc2222] px-8 py-2 rounded-full hidden lg:block font-bold shadow transition"
-            onClick={() => window.location.href = '/contactanos'}
-          >
-            CONTACTANOS
-          </Button>
+          <div className="hidden lg:flex items-center space-x-6">
+            <LanguageSwitcher />
+            <Button
+              className="bg-white hover:bg-white/90 text-[#bc2222] px-8 py-2 rounded-full font-bold shadow transition uppercase"
+              onClick={() => window.location.href = '/contactanos'}
+            >
+              {t('nav.contactanos')}
+            </Button>
+          </div>
 
           <button
-            className="lg:hidden p-2 rounded-full hover:bg-gray-100 transition relative z-50"
+            className="lg:hidden p-2 rounded-full hover:bg-white/10 transition relative z-50 text-white"
             onClick={toggleMobileMenu}
             aria-label="Toggle mobile menu"
           >
@@ -99,7 +109,7 @@ export default function Header() {
               className="w-7 h-7 flex flex-col justify-center items-center"
             >
               <motion.span
-                className="block w-6 h-0.5 bg-gray-600 mb-1"
+                className="block w-6 h-0.5 bg-current mb-1"
                 variants={{
                   closed: { rotate: 0, y: 0 },
                   open: { rotate: 45, y: 6 }
@@ -107,7 +117,7 @@ export default function Header() {
                 transition={{ duration: 0.3 }}
               />
               <motion.span
-                className="block w-6 h-0.5 bg-gray-600 mb-1"
+                className="block w-6 h-0.5 bg-current mb-1"
                 variants={{
                   closed: { opacity: 1 },
                   open: { opacity: 0 }
@@ -115,7 +125,7 @@ export default function Header() {
                 transition={{ duration: 0.3 }}
               />
               <motion.span
-                className="block w-6 h-0.5 bg-gray-600"
+                className="block w-6 h-0.5 bg-current"
                 variants={{
                   closed: { rotate: 0, y: 0 },
                   open: { rotate: -45, y: -6 }
@@ -136,17 +146,16 @@ export default function Header() {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="lg:hidden bg-gradient-to-b from-[#bc2222] via-[#d63c3c] to-[#f45e5e] border-b border-[#a81c1c] overflow-hidden text-white"
           >
-            <div className="container mx-auto px-4 py-6">
-              <nav className="flex flex-col space-y-1">
+            <div className="container mx-auto px-4 py-8">
+              <nav className="flex flex-col space-y-2">
                 {NAV_ITEMS.map((item, index) => (
                   <motion.a
                     key={item.name}
                     href={item.href}
-                    className={`px-4 py-4 rounded-lg text-base font-semibold transition-all duration-200 ${
-                      isActive(item.name) 
-                        ? 'text-white' 
-                        : 'text-white/80 active:bg-white/10'
-                    }`}
+                    className={`px-4 py-4 rounded-lg text-lg font-semibold transition-all duration-200 ${isActive(item.name)
+                      ? 'text-white'
+                      : 'text-white/80 active:bg-white/10'
+                      }`}
                     style={{
                       backgroundColor: isActive(item.name) ? 'rgba(255,255,255,0.14)' : 'transparent'
                     }}
@@ -160,28 +169,38 @@ export default function Header() {
                       ease: "easeOut"
                     }}
                   >
-                    {item.name}
+                    {getNavLabel(item.name)}
                   </motion.a>
                 ))}
+
+                <div className="pt-6 pb-2 border-t border-white/20">
+                  <div className="flex items-center justify-between px-4 mb-6">
+                    <span className="text-sm font-medium opacity-70 uppercase tracking-wider">
+                      Language / Idioma
+                    </span>
+                    <LanguageSwitcher />
+                  </div>
+                </div>
+
                 <motion.div
-                  className="pt-6 border-t border-gray-200"
+                  className="pt-2"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
-                    delay: NAV_ITEMS.length * 0.1,
+                    delay: NAV_ITEMS.length * 0.1 + 0.2,
                     duration: 0.3,
                     ease: "easeOut"
                   }}
                 >
                   <motion.div whileTap={{ scale: 0.98 }}>
                     <Button
-                        className="w-full bg-white text-[#bc2222] hover:bg-white/90 px-8 py-4 rounded-lg font-bold shadow transition"
+                      className="w-full bg-white text-[#bc2222] hover:bg-white/90 px-8 py-6 rounded-xl font-bold text-lg shadow-lg transition uppercase"
                       onClick={() => {
                         closeMobileMenu();
                         window.location.href = '/contactanos';
                       }}
                     >
-                      CONTACTANOS
+                      {t('nav.contactanos')}
                     </Button>
                   </motion.div>
                 </motion.div>
@@ -192,4 +211,4 @@ export default function Header() {
       </AnimatePresence>
     </header>
   )
-} 
+}

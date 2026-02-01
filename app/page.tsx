@@ -7,7 +7,7 @@ import Stats from "@/components/stats/stats"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white pt-[108px] sm:pt-[120px]">
       <Hero />
       <Stats />
       <VideoSection />
