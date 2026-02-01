@@ -1,7 +1,12 @@
+'use client'
+
 import { FaTiktok, FaInstagram, FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa"
 import Image from "next/image"
+import { useTranslation } from "react-i18next"
 
 export default function Footer() {
+  const { t } = useTranslation()
+
   return (
     <footer className="bg-[#2a2a2a] text-white py-10 border-t border-white/5 relative overflow-hidden">
       {/* Subtle decorative background element */}
@@ -33,7 +38,7 @@ export default function Footer() {
             </div>
 
             <p className="text-gray-400 text-lg leading-relaxed max-w-md">
-              Empoderando a la próxima generación de líderes en la región de Ansenuza a través de la educación y la innovación.
+              {t('footer.tagline')}
             </p>
 
             <div className="flex items-center gap-5">
@@ -59,7 +64,7 @@ export default function Footer() {
 
           {/* Contact Section */}
           <div className="md:col-span-6 lg:col-span-3 space-y-6">
-            <h3 className="text-xl font-contrail text-white tracking-wider uppercase">Contacto</h3>
+            <h3 className="text-xl font-contrail text-white tracking-wider uppercase">{t('footer.contact')}</h3>
             <div className="space-y-4 text-gray-400 font-arimo">
               <div className="group flex items-start gap-3">
                 <div className="mt-1 w-1.5 h-1.5 rounded-full bg-red-600 group-hover:scale-125 transition-transform" />
@@ -79,7 +84,7 @@ export default function Footer() {
                   href="/contactanos"
                   className="inline-flex items-center text-red-500 font-bold hover:text-red-400 transition-colors gap-2 group/link"
                 >
-                  Contacto Directo
+                  {t('footer.directContact')}
                   <span className="group-hover/link:translate-x-1 transition-transform">→</span>
                 </a>
               </div>
@@ -88,12 +93,12 @@ export default function Footer() {
 
           {/* Newsletter Section */}
           <div className="md:col-span-6 lg:col-span-4 space-y-6">
-            <h3 className="text-xl font-contrail text-white tracking-wider uppercase">Newsletter</h3>
-            <p className="text-gray-400 font-arimo">Mantenete al tanto de todas nuestras novedades.</p>
+            <h3 className="text-xl font-contrail text-white tracking-wider uppercase">{t('footer.newsletter')}</h3>
+            <p className="text-gray-400 font-arimo">{t('footer.newsletterText')}</p>
             <form className="relative flex group">
               <input
                 type="email"
-                placeholder="Tu email"
+                placeholder={t('footer.emailPlaceholder')}
                 className="w-full pl-6 pr-16 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-red-600/50 focus:border-red-600/50 transition-all"
               />
               <button className="absolute right-2 top-2 bottom-2 bg-red-600 hover:bg-red-700 text-white px-5 rounded-xl font-black transition-all transform active:scale-95 flex items-center justify-center">
@@ -106,11 +111,11 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="mt-20 pt-10 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-6">
           <p className="text-gray-500 font-arimo text-sm">
-            © {new Date().getFullYear()} Fundación Lideres de Ansenuza. Todos los derechos reservados.
+            {t('footer.copyright', { year: new Date().getFullYear() })}
           </p>
           <div className="flex items-center gap-8">
             <a href="/politicas-de-privacidad" className="text-gray-500 hover:text-white text-sm font-medium transition-colors">
-              Políticas de Privacidad
+              {t('footer.privacyPolicy')}
             </a>
             <div className="w-1.5 h-1.5 rounded-full bg-white/10" />
             <span className="text-gray-500 text-sm font-medium">

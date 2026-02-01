@@ -1,8 +1,13 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
+import { useTranslation } from "react-i18next"
 
 export default function Hero() {
+  const { t } = useTranslation()
+
   return (
     <section className="bg-white py-8 lg:py-8">
       <div className="container mx-auto px-4">
@@ -10,10 +15,10 @@ export default function Hero() {
           <div className="grid md:grid-cols-3 gap-8 items-center w-full">
             <div className="md:col-span-2 space-y-5 text-left">
               <h1 className="text-4xl lg:text-5xl xl:text-6xl text-gray-900 leading-tight tracking-tight font-contrail-one">
-                Jóvenes transformando la educación
+                {t('hero.title')}
               </h1>
               <p className="text-base lg:text-lg text-gray-700 leading-relaxed font-arimo max-w-3xl">
-                Diseñamos y ejecutamos programas educativos gratuitos en todo el territorio argentino para que más jóvenes lideren el cambio en sus comunidades.
+                {t('hero.description')}
               </p>
               <div className="w-2/3 h-1.5 bg-[#f45e5e] rounded-full" />
             </div>
@@ -36,13 +41,13 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 items-center justify-center">
             <Button asChild className="bg-[#90140e] hover:bg-[#a01810] text-white px-8 py-5 rounded-full text-lg md:text-xl font-bold shadow-lg transition-transform transform hover:scale-105 w-[240px] lg:w-[260px] font-contrail">
-              <Link href="/contactanos">Voluntariado</Link>
+              <Link href="/contactanos">{t('hero.voluntariado')}</Link>
             </Button>
             <Button asChild className="bg-[#bd2222] hover:bg-[#d12828] text-white px-8 py-5 rounded-full text-lg md:text-xl font-bold shadow-lg transition-transform transform hover:scale-105 w-[240px] lg:w-[260px] font-contrail">
-              <Link href="/contactanos">Alianzas</Link>
+              <Link href="/contactanos">{t('hero.alianzas')}</Link>
             </Button>
             <Button asChild className="bg-[#f45e5e] hover:bg-[#f67a7a] text-white px-8 py-5 rounded-full text-lg md:text-xl font-bold shadow-lg transition-transform transform hover:scale-105 w-[240px] lg:w-[260px] font-contrail">
-              <Link href="/donar">Donar</Link>
+              <Link href="/donar">{t('hero.donar')}</Link>
             </Button>
           </div>
         </div>

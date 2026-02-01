@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
 import { ACTIVE_PROGRAMS, HISTORICAL_PROGRAMS } from "@/lib/data/programs";
 import { generateBlobRadius } from "@/lib/shapes";
+import { useTranslation } from "react-i18next";
 
 function getLogoFileName(title: string): string {
   const logoMap: Record<string, string> = {
@@ -19,35 +21,9 @@ function getLogoFileName(title: string): string {
   return logoMap[title] || title;
 }
 
-export const metadata: Metadata = {
-  title: "Nuestros Programas - Fundación Líderes de Ansenuza",
-  description: "Conocé todos los programas educativos de FLA: programas vigentes como SOMOS y Experiencia Ambientalia, y nuestros programas históricos que han impactado a miles de jóvenes en Argentina.",
-  keywords: [
-    "programas fla",
-    "programas educativos argentina",
-    "somos",
-    "ambientalia",
-    "potenciate",
-    "futuras",
-    "impulsatec",
-    "fundación líderes ansenuza"
-  ],
-  openGraph: {
-    title: "Nuestros Programas - FLA",
-    description: "Programas educativos gratuitos que transforman vidas en toda Argentina",
-    type: "website",
-    locale: "es_AR",
-    url: "https://www.lideresdeansenuza.org/programas",
-    siteName: "Fundación Líderes de Ansenuza"
-  },
-  robots: {
-    index: true,
-    follow: true
-  }
-};
-
 export default function ProgramasPage() {
-  const showcasePrograms = [...ACTIVE_PROGRAMS, ...HISTORICAL_PROGRAMS].slice(0, 8);
+  const { t } = useTranslation();
+
   return (
     <main className="min-h-screen bg-white overflow-x-hidden pt-[108px] sm:pt-[120px]">
       <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-[#f45e5e] to-[#d63c3c]">
@@ -58,10 +34,10 @@ export default function ProgramasPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl text-white mb-4 font-contrail-one tracking-tight break-words">
-              Nuestros Programas
+              {t('programs.title')}
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-white/95 leading-relaxed px-4 max-w-3xl mx-auto font-arimo">
-              Programas educativos gratuitos que transforman vidas en toda Argentina
+              {t('programs.subtitle')}
             </p>
           </div>
         </div>
@@ -75,12 +51,12 @@ export default function ProgramasPage() {
             <div className="mb-16">
               <div className="text-center mb-6">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl text-gray-900 break-words font-contrail-one tracking-tight">
-                  Programas vigentes
+                  {t('programs.active.title')}
                 </h2>
                 <div className="w-16 h-1.5 bg-[#bc2222] mx-auto rounded-full mt-3" />
               </div>
               <p className="text-base md:text-lg text-gray-600 mb-10 text-center">
-                Programas activos en los que podés participar ahora
+                {t('programs.active.subtitle')}
               </p>
 
               <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start justify-items-center">
@@ -120,11 +96,11 @@ export default function ProgramasPage() {
                         </p>
                         <div className="inline-flex items-center gap-2 text-sm">
                           <span className="px-4 py-1.5 rounded-full font-bold shadow-sm" style={{ backgroundColor: `${program.colors.primary}18`, color: program.colors.primary }}>
-                            ✓ Inscripciones abiertas
+                            {t('programs.active.openEnrollment')}
                           </span>
                         </div>
                         <div className="mt-6 flex items-center justify-center gap-2 font-bold" style={{ color: program.colors.primary }}>
-                          <span>Conocer programa</span>
+                          <span>{t('programs.active.learnMore')}</span>
                           <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
                         </div>
                       </div>
@@ -137,12 +113,12 @@ export default function ProgramasPage() {
             <div className="border-gray-200 pt-16">
               <div className="text-center mb-6">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl text-gray-900 break-words font-contrail-one tracking-tight">
-                  Programas históricos
+                  {t('programs.historical.title')}
                 </h2>
                 <div className="w-16 h-1.5 bg-[#bc2222] mx-auto rounded-full mt-3" />
               </div>
               <p className="text-base md:text-lg text-gray-600 mb-10 text-center">
-                Programas que han dejado huella en miles de jóvenes de toda Argentina
+                {t('programs.historical.subtitle')}
               </p>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 items-start justify-items-center">
@@ -185,7 +161,7 @@ export default function ProgramasPage() {
                           {program.shortDescription}
                         </p>
                         <div className="flex items-center justify-center gap-2 font-bold text-sm" style={{ color: program.colors.primary }}>
-                          <span>Ver historia</span>
+                          <span>{t('programs.historical.viewHistory')}</span>
                           <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
                         </div>
                       </div>
@@ -202,16 +178,16 @@ export default function ProgramasPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl text-gray-900 mb-6 break-words px-2">
-              ¿Querés saber más sobre nuestros programas?
+              {t('programs.cta.title')}
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Si tenés alguna consulta o querés más información sobre cómo participar, no dudes en contactarnos
+              {t('programs.cta.subtitle')}
             </p>
             <Link
               href="/contactanos"
               className="inline-block bg-[#bc2222] hover:bg-[#d63c3c] text-white px-10 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
-              Contactanos
+              {t('programs.cta.button')}
             </Link>
           </div>
         </div>
@@ -219,4 +195,3 @@ export default function ProgramasPage() {
     </main>
   );
 }
-

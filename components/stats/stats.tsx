@@ -1,8 +1,14 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { STATS_DATA } from './_constants/constants'
 import { useCountAnimation } from './hooks/useCountAnimation'
+import { useTranslation } from 'react-i18next'
+
+const STATS_DATA = [
+  { number: 100, labelKey: "stats.volunteers" },
+  { number: 2200, labelKey: "stats.participants" },
+  { number: 50, labelKey: "stats.projects" },
+]
 
 function AnimatedNumber({ target, isVisible }: { target: number; isVisible: boolean }) {
   const count = useCountAnimation(target, isVisible)
@@ -10,6 +16,7 @@ function AnimatedNumber({ target, isVisible }: { target: number; isVisible: bool
 }
 
 export default function Stats() {
+  const { t } = useTranslation()
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
 
@@ -41,7 +48,7 @@ export default function Stats() {
                 +<AnimatedNumber target={stat?.number || 0} isVisible={isVisible} />
               </div>
               <div className="text-gray-700 font-bold text-lg lg:text-xl whitespace-pre-line tracking-wide font-contrail">
-                {stat?.label || ''}
+                {t(stat?.labelKey || '')}
               </div>
             </div>
           ))}
@@ -49,4 +56,4 @@ export default function Stats() {
       </div>
     </section>
   )
-} 
+}

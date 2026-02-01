@@ -1,7 +1,10 @@
+'use client'
+
 import Image from "next/image"
 import Link from "next/link"
 import { ACTIVE_PROGRAMS } from "@/lib/data/programs"
 import { generateBlobRadius } from "@/lib/shapes"
+import { useTranslation } from "react-i18next"
 
 function getLogoFileName(title: string): string {
   const logoMap: Record<string, string> = {
@@ -19,6 +22,8 @@ function getLogoFileName(title: string): string {
 }
 
 export default function CurrentPrograms() {
+  const { t } = useTranslation()
+
   const programs = ACTIVE_PROGRAMS.map(program => ({
     name: program.title,
     slug: program.slug,
@@ -32,8 +37,8 @@ export default function CurrentPrograms() {
     <section className="py-16 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl text-gray-900 mb-4 font-contrail-one tracking-tight">Programas actuales</h2>
-          <p className="text-base md:text-xl text-gray-600 font-arimo max-w-2xl mx-auto">Elegí el programa que mejor se adapte a vos y conocé sus detalles al instante.</p>
+          <h2 className="text-3xl md:text-5xl text-gray-900 mb-4 font-contrail-one tracking-tight">{t('currentPrograms.title')}</h2>
+          <p className="text-base md:text-xl text-gray-600 font-arimo max-w-2xl mx-auto">{t('currentPrograms.subtitle')}</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16 items-center justify-items-center">
           {programs.map((program, index) => (
@@ -68,7 +73,7 @@ export default function CurrentPrograms() {
             href="/programas"
             className="inline-block bg-[#f45e5e] hover:bg-[#f67a7a] text-white px-10 py-3 md:px-12 md:py-4 rounded-full font-contrail text-xl md:text-2xl shadow-lg"
           >
-            Ver todos los programas
+            {t('currentPrograms.viewAll')}
           </Link>
         </div>
       </div>

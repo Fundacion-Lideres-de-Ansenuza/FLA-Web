@@ -7,8 +7,10 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Send, Heart } from "lucide-react"
+import { useTranslation } from "react-i18next"
 
 export default function ContactForm() {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
@@ -19,7 +21,7 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Formulario enviado:", formData)
+    console.log("Form submitted:", formData)
     setFormData({
       nombre: "",
       email: "",
@@ -27,7 +29,7 @@ export default function ContactForm() {
       asunto: "",
       mensaje: ""
     })
-    alert("¡Gracias por tu mensaje! Nos pondremos en contacto con vos pronto.")
+    alert(t('contact.form.success'))
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -42,7 +44,7 @@ export default function ContactForm() {
       <CardHeader className="bg-chart-5 text-white p-6">
         <CardTitle className="text-2xl md:text-3xl font-contrail-one flex items-center justify-center text-[#bc2222]">
           <Heart className="mr-3 h-7 w-7" />
-          Envíanos un mensaje
+          {t('contact.form.title')}
         </CardTitle>
       </CardHeader>
       <CardContent className="p-6 md:p-8">
@@ -53,7 +55,7 @@ export default function ContactForm() {
                 htmlFor="nombre"
                 className="block text-sm font-medium text-gray-700 mb-2 font-arimo"
               >
-                Nombre completo *
+                {t('contact.form.name')} {t('contact.form.required')}
               </label>
               <Input
                 id="nombre"
@@ -63,7 +65,7 @@ export default function ContactForm() {
                 value={formData.nombre}
                 onChange={handleChange}
                 className="w-full border-2 border-gray-200 focus:border-chart-5 focus:ring-chart-5/50 transition-colors"
-                placeholder="Tu nombre"
+                placeholder={t('contact.form.namePlaceholder')}
               />
             </div>
             <div>
@@ -71,7 +73,7 @@ export default function ContactForm() {
                 htmlFor="email"
                 className="block text-sm font-medium text-gray-700 mb-2 font-arimo"
               >
-                Correo electrónico *
+                {t('contact.form.email')} {t('contact.form.required')}
               </label>
               <Input
                 id="email"
@@ -81,7 +83,7 @@ export default function ContactForm() {
                 value={formData.email}
                 onChange={handleChange}
                 className="w-full border-2 border-gray-200 focus:border-chart-5 focus:ring-chart-5/50 transition-colors"
-                placeholder="tu@email.com"
+                placeholder={t('contact.form.emailPlaceholder')}
               />
             </div>
           </div>
@@ -92,7 +94,7 @@ export default function ContactForm() {
                 htmlFor="telefono"
                 className="block text-sm font-medium text-gray-700 mb-2 font-arimo"
               >
-                Teléfono
+                {t('contact.form.phone')}
               </label>
               <Input
                 id="telefono"
@@ -101,7 +103,7 @@ export default function ContactForm() {
                 value={formData.telefono}
                 onChange={handleChange}
                 className="w-full border-2 border-gray-200 focus:border-chart-5 focus:ring-chart-5/50 transition-colors"
-                placeholder="+54 123 456 7890"
+                placeholder={t('contact.form.phonePlaceholder')}
               />
             </div>
             <div>
@@ -109,7 +111,7 @@ export default function ContactForm() {
                 htmlFor="asunto"
                 className="block text-sm font-medium text-gray-700 mb-2 font-arimo"
               >
-                Asunto *
+                {t('contact.form.subject')} {t('contact.form.required')}
               </label>
               <Input
                 id="asunto"
@@ -119,7 +121,7 @@ export default function ContactForm() {
                 value={formData.asunto}
                 onChange={handleChange}
                 className="w-full border-2 border-gray-200 focus:border-chart-5 focus:ring-chart-5/50 transition-colors"
-                placeholder="¿En qué podemos ayudarte?"
+                placeholder={t('contact.form.subjectPlaceholder')}
               />
             </div>
           </div>
@@ -129,7 +131,7 @@ export default function ContactForm() {
               htmlFor="mensaje"
               className="block text-sm font-medium text-gray-700 mb-2 font-arimo"
             >
-              Mensaje *
+              {t('contact.form.message')} {t('contact.form.required')}
             </label>
             <Textarea
               id="mensaje"
@@ -139,7 +141,7 @@ export default function ContactForm() {
               onChange={handleChange}
               rows={6}
               className="w-full border-2 border-gray-200 focus:border-chart-5 focus:ring-chart-5/50 transition-colors resize-none"
-              placeholder="Contanos más sobre tu consulta, idea o cómo querés colaborar con nosotros..."
+              placeholder={t('contact.form.messagePlaceholder')}
             />
           </div>
 
@@ -148,7 +150,7 @@ export default function ContactForm() {
             className="w-full bg-[#bc2222] hover:bg-[#bc2222]/90 text-white py-3 text-lg font-semibold transition-all duration-300 transform hover:scale-105 rounded-lg"
           >
             <Send className="mr-3 h-6 w-6" />
-            Enviar mensaje
+            {t('contact.form.send')}
           </Button>
         </form>
       </CardContent>

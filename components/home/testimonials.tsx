@@ -4,6 +4,8 @@ import Image from "next/image"
 import { useState, useEffect, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronUp, ChevronDown, Quote } from "lucide-react"
+import { useTranslation } from "react-i18next"
+
 
 enum TestimonialRole {
   VOLUNTARIO = "Voluntarix",
@@ -170,6 +172,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
 }
 
 export default function Testimonials() {
+  const { t } = useTranslation()
   const [currentIndex, setCurrentIndex] = useState(0)
   const [direction, setDirection] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
@@ -218,10 +221,10 @@ export default function Testimonials() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl text-gray-900 mb-4 tracking-tight font-contrail-one">
-            Testimonios
+            {t('testimonials.title')}
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Descubrí lo que dicen las personas que forman parte de nuestra FLAmilia
+            {t('testimonials.subtitle')}
           </p>
         </div>
 

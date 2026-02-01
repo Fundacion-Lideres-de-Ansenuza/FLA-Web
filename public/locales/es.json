@@ -1,0 +1,182 @@
+{
+  "nav": {
+    "programas": "PROGRAMAS",
+    "quienes_somos": "QUIÉNES SOMOS",
+    "donar": "DONAR",
+    "blog": "BLOG",
+    "campus": "CAMPUS",
+    "contactanos": "CONTÁCTANOS"
+  },
+  "language": {
+    "es": "Español",
+    "en": "English",
+    "label": "Idioma"
+  },
+  "hero": {
+    "title": "Jóvenes transformando la educación",
+    "description": "Diseñamos y ejecutamos programas educativos gratuitos en todo el territorio argentino para que más jóvenes lideren el cambio en sus comunidades.",
+    "voluntariado": "Voluntariado",
+    "alianzas": "Alianzas",
+    "donar": "Donar"
+  },
+  "stats": {
+    "volunteers": "Voluntarios\nactuales",
+    "participants": "Participantes a lo\nlargo de los años",
+    "projects": "Proyectos de\nimpacto social"
+  },
+  "whyWeDoIt": {
+    "title": "¿Por qué lo hacemos?",
+    "subtitle": "Porque la educación crea oportunidades y transforma comunidades.",
+    "socialImpact": {
+      "title": "Impacto social",
+      "description": "Porque impulsamos a quienes participan en nuestros programas a llevar a cabo proyectos que generen transformaciones en sus comunidades."
+    },
+    "education": {
+      "title": "Educación",
+      "description": "Porque creemos en la educación como recurso y herramienta para solucionar problemas sociales."
+    },
+    "opportunities": {
+      "title": "Oportunidades",
+      "description": "Porque creemos que el talento no tiene fronteras, llevamos experiencias transformadoras hasta los rincones más alejados, para que cada joven pueda ser agente de cambio en su comunidad."
+    }
+  },
+  "currentPrograms": {
+    "title": "Programas Actuales",
+    "subtitle": "Elegí el programa que mejor se adapte a vos y conocé sus detalles al instante.",
+    "viewAll": "Ver todos los programas"
+  },
+  "testimonials": {
+    "title": "Testimonios",
+    "subtitle": "Descubrí lo que dicen las personas que forman parte de nuestra FLAmilia"
+  },
+  "footer": {
+    "tagline": "Empoderando a la próxima generación de líderes en la región de Ansenuza a través de la educación y la innovación.",
+    "contact": "Contacto",
+    "directContact": "Contacto Directo",
+    "newsletter": "Newsletter",
+    "newsletterText": "Mantenete al tanto de todas nuestras novedades.",
+    "emailPlaceholder": "Tu email",
+    "copyright": "© {{year}} Fundación Lideres de Ansenuza. Todos los derechos reservados.",
+    "privacyPolicy": "Políticas de Privacidad"
+  },
+  "aboutUs": {
+    "foundation": {
+      "title": "LA FUNDACIÓN",
+      "intro": "La Fundación Líderes de Ansenuza es una organización no gubernamental con sede en Miramar de Ansenuza, Córdoba, cuyo trabajo gira en torno al diseño y ejecución de programas educativos en el territorio argentino.",
+      "paragraph1": "En la Fundación Líderes de Ansenuza (FLA), creemos en el potencial de cada joven para transformar su comunidad y construir un futuro mejor. Nuestra misión es formar agentes de cambio, ofreciendo oportunidades, herramientas y acompañamiento para que los jóvenes desarrollen liderazgo y generen impacto social.",
+      "paragraph2": "Trabajamos en todo el territorio argentino, con especial atención a las regiones rurales y semiurbanas, así como a las grandes ciudades. Nuestro objetivo es llegar a quienes más lo necesitan, brindando experiencias vivenciales, sin barreras económicas, que promueven el aprendizaje mediante la acción y la innovación.",
+      "paragraph3": "FLA no solo se centra en la formación de líderes, sino en crear una comunidad inclusiva, diversa y comprometida, donde los jóvenes encuentran un espacio seguro para potenciar sus ideas y proyectos sostenibles.",
+      "paragraph4": "Estar en FLA significa ser parte de un movimiento que apuesta a la igualdad de oportunidades y al poder de la juventud para generar un impacto real y duradero. Juntos, estamos construyendo un futuro lleno de posibilidades y liderazgo para todos."
+    },
+    "authorities": {
+      "title": "Autoridades",
+      "description": "Presentamos al equipo directivo de la fundación y a las personas que acompañan nuestra gestión institucional."
+    },
+    "missionVisionValues": "Misión, Visión y Valores"
+  },
+  "donate": {
+    "title": "¿Cómo Donar?",
+    "subtitle": "Tu contribución permite que miles de jóvenes accedan a programas educativos gratuitos. Elegí el método que prefieras.",
+    "tabs": {
+      "online": "Donar Online",
+      "paypal": "PayPal",
+      "transfer": "Transferencia"
+    },
+    "online": {
+      "title": "Plataforma Donar Online",
+      "description": "Para donaciones nacionales rápidas y seguras en pesos argentinos.",
+      "steps": [
+        "Ingresá a líderesdeansenuza.org",
+        "Seleccioná la opción 'Donar' en el menú",
+        "Hacé clic en el logo de Donar Online",
+        "Elegí el monto (puedes usar 'Otro monto' en ARS)",
+        "Definí la frecuencia (mensual o única vez)",
+        "Completá tus datos personales",
+        "Ingresá los datos de tu tarjeta (procesado vía Donar Online + Mercado Pago)",
+        "Confirmá presionando 'Donar a Fundación Líderes de Ansenuza'",
+        "Recibirás un mail de bienvenida con el detalle"
+      ],
+      "button": "Ir al Formulario"
+    },
+    "paypal": {
+      "title": "Donaciones Internacionales",
+      "description": "Si te encontrás fuera de Argentina o preferís usar tarjetas internacionales.",
+      "steps": [
+        "Ingresá a líderesdeansenuza.org",
+        "Seleccioná la opción 'Donar' en el menú",
+        "Hacé clic en el logo de PayPal",
+        "Elegí el monto (puedes usar 'Other')",
+        "Seleccioná la frecuencia (marcar casilla para mensual)",
+        "Elegí pagar con PayPal o Tarjeta",
+        "Completá los datos de facturación y contacto",
+        "Confirmá presionando 'Aceptar y donar ahora'"
+      ],
+      "button": "Donar por PayPal"
+    },
+    "transfer": {
+      "title": "Transferencia Directa",
+      "description": "Usa estos datos para realizar tu aporte directamente desde tu homebanking o billetera virtual.",
+      "cbu": "CBU",
+      "alias": "Alias",
+      "name": "Nombre",
+      "cuit": "CUIT",
+      "receiptTitle": "¿Necesitás un recibo?",
+      "receiptText": "Escribinos a través de nuestra página de contacto adjuntando el comprobante para emitir tu recibo de donación oficial.",
+      "contactPage": "página de contacto"
+    }
+  },
+  "contact": {
+    "title": "CONTÁCTANOS",
+    "subtitle": "¿Querés ser parte del cambio? ¿Tenés preguntas sobre nuestros programas? ¿Querés colaborar con nosotros? Estamos aquí para escucharte.",
+    "form": {
+      "title": "Envíanos un mensaje",
+      "name": "Nombre completo",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "tu@email.com",
+      "phone": "Teléfono",
+      "phonePlaceholder": "+54 123 456 7890",
+      "subject": "Asunto",
+      "subjectPlaceholder": "¿En qué podemos ayudarte?",
+      "message": "Mensaje",
+      "messagePlaceholder": "Contanos más sobre tu consulta, idea o cómo querés colaborar con nosotros...",
+      "send": "Enviar mensaje",
+      "success": "¡Gracias por tu mensaje! Nos pondremos en contacto con vos pronto.",
+      "required": "*"
+    },
+    "info": {
+      "title": "Información de contacto",
+      "description": "Estamos aquí para escucharte y trabajar juntos. Podés contactarnos de varias formas. No dudes en escribirnos, ¡tu mensaje es importante para nosotros!",
+      "email": "Correo electrónico",
+      "emailResponse": "Respondemos en 24-48 horas",
+      "phone": "Teléfono",
+      "phoneHours": "Lunes a Viernes, 9:00 - 18:00",
+      "officeHours": "Horarios de atención",
+      "weekdays": "Lunes a Viernes: 9:00 - 18:00",
+      "saturday": "Sábados: 9:00 - 12:00 (solo urgencias)",
+      "collaborate": "¿Querés colaborar?",
+      "collaborateOptions": "Voluntariado • Donaciones • Alianzas",
+      "collaborateText": "Todas las formas de apoyo son bienvenidas"
+    }
+  },
+  "programs": {
+    "title": "Nuestros Programas",
+    "subtitle": "Programas educativos gratuitos que transforman vidas en toda Argentina",
+    "active": {
+      "title": "Programas vigentes",
+      "subtitle": "Programas activos en los que podés participar ahora",
+      "openEnrollment": "✓ Inscripciones abiertas",
+      "learnMore": "Conocer programa"
+    },
+    "historical": {
+      "title": "Programas históricos",
+      "subtitle": "Programas que han dejado huella en miles de jóvenes de toda Argentina",
+      "viewHistory": "Ver historia"
+    },
+    "cta": {
+      "title": "¿Querés saber más sobre nuestros programas?",
+      "subtitle": "Si tenés alguna consulta o querés más información sobre cómo participar, no dudes en contactarnos",
+      "button": "Contactanos"
+    }
+  }
+}
