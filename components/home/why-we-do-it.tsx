@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export default function WhyWeDoIt(): React.ReactElement {
   return (
-    <section className="py-16 bg-gradient-to-b from-white via-rose-50 to-white">
+    <section className="py-8 bg-gradient-to-b from-white via-rose-50 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl text-gray-900 mb-3 font-contrail-one">¿Por qué lo hacemos?</h2>

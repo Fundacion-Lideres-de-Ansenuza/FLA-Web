@@ -22,7 +22,7 @@ export default function CurrentPrograms() {
   }))
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-8 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl text-gray-900 mb-3 font-contrail-one tracking-tight">Programas actuales</h2>
@@ -47,12 +47,6 @@ export default function CurrentPrograms() {
                     />
                   </div>
                 </div>
-                <div className="p-5 text-center">
-                  <p className="text-base font-semibold text-gray-900">{program.name}</p>
-                  <p className="text-sm text-gray-600 mt-2 line-clamp-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    {program.description}
-                  </p>
-                </div>
               </div>
             </Link>
           ))}
@@ -64,9 +58,6 @@ export default function CurrentPrograms() {
           >
             Ver todos los programas
           </Link>
-          <p className="text-sm md:text-base text-gray-700 mt-4 font-arimo">
-            ¿Necesitás ayuda para elegir? Escribinos a <a href="mailto:contacto@lideresdeansenuza.org" className="font-semibold text-[#bc2222] hover:underline">contacto@lideresdeansenuza.org</a>
-          </p>
         </div>
       </div>
     </section>

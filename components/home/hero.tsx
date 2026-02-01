@@ -4,15 +4,11 @@ import Link from "next/link"
 
 export default function Hero() {
   return (
-    <section className="bg-white py-10 lg:py-14">
+    <section className="bg-white py-8 lg:py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center gap-10">
-          <div className="grid md:grid-cols-3 gap-8 items-center w-full max-w-7xl lg:max-w-8xl">
+          <div className="grid md:grid-cols-3 gap-8 items-center w-full">
             <div className="md:col-span-2 space-y-5 text-left">
-              <div className="inline-flex items-center gap-3 text-[#bc2222] font-semibold uppercase tracking-[0.08em] text-sm sm:text-base font-arimo">
-                <Image src="/images/LogoFLA.png" alt="Fundación Líderes de Ansenuza" width={48} height={48} className="h-12 w-auto" />
-                <span>Fundación Líderes de Ansenuza</span>
-              </div>
               <h1 className="text-4xl lg:text-5xl xl:text-6xl text-gray-900 leading-tight tracking-tight font-contrail-one">
                 Jóvenes transformando la educación
               </h1>
@@ -27,7 +23,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="w-full max-w-8xl px-4">
+          <div className="w-full">
             <Image
               src="/images/DSC_0044.jpg"
               alt="Jóvenes colaborando en educación"

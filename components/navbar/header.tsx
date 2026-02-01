@@ -18,7 +18,7 @@ export default function Header() {
   } = useNavbar()
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#a81c1c] bg-gradient-to-r from-[#bc2222] via-[#f45e5e] to-[#bc2222] shadow-md backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-[100] border-b border-[#a81c1c] bg-gradient-to-r from-[#bc2222] via-[#f45e5e] to-[#bc2222] shadow-md backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
@@ -27,11 +27,11 @@ export default function Header() {
               onClick={() => window.location.href = '/'}
             >
               <Image
-                src="/images/LogoFLA.png"
+                src="/images/Logos/fla-logo-blanco.png"
                 alt="Fundación Líderes de Ansenuza"
-                width={100}
-                height={100}
-                className="h-24 w-auto"
+                width={160}
+                height={160}
+                className="h-32 w-auto py-1"
               />
             </div>
           </div>
@@ -67,11 +67,10 @@ export default function Header() {
 
                 <motion.a
                   href={item.href}
-                    className={`px-5 py-2 rounded-full text-base font-semibold transition-colors duration-200 relative z-10 block ${
-                    isActive(item.name) 
-                      ? 'text-white'
-                      : 'text-white/85 hover:text-white'
-                  }`}
+                  className={`px-5 py-2 rounded-full text-base font-semibold transition-colors duration-200 relative z-10 block ${isActive(item.name)
+                    ? 'text-white'
+                    : 'text-white/85 hover:text-white'
+                    }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -142,11 +141,10 @@ export default function Header() {
                   <motion.a
                     key={item.name}
                     href={item.href}
-                    className={`px-4 py-4 rounded-lg text-base font-semibold transition-all duration-200 ${
-                      isActive(item.name) 
-                        ? 'text-white' 
-                        : 'text-white/80 active:bg-white/10'
-                    }`}
+                    className={`px-4 py-4 rounded-lg text-base font-semibold transition-all duration-200 ${isActive(item.name)
+                      ? 'text-white'
+                      : 'text-white/80 active:bg-white/10'
+                      }`}
                     style={{
                       backgroundColor: isActive(item.name) ? 'rgba(255,255,255,0.14)' : 'transparent'
                     }}
@@ -175,7 +173,7 @@ export default function Header() {
                 >
                   <motion.div whileTap={{ scale: 0.98 }}>
                     <Button
-                        className="w-full bg-white text-[#bc2222] hover:bg-white/90 px-8 py-4 rounded-lg font-bold shadow transition"
+                      className="w-full bg-white text-[#bc2222] hover:bg-white/90 px-8 py-4 rounded-lg font-bold shadow transition"
                       onClick={() => {
                         closeMobileMenu();
                         window.location.href = '/contactanos';
