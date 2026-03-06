@@ -2,12 +2,11 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { JSX, useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 
-const VALUES = [
+const VALUE_DEFINITIONS = [
   {
-    title: "LIDERAZGO",
-    description:
-      "No solo cultivamos este valor en las personas con las que trabajamos, sino también en el equipo y en toda la organización. Creemos en un liderazgo que incluye, transforma, inspira y hace que las cosas pasen.",
+    key: "leadership",
     colors: {
       fill: "#8f1f1b",
       stroke: "#f6c5bf",
@@ -15,9 +14,7 @@ const VALUES = [
     },
   },
   {
-    title: "COMPROMISO",
-    description:
-      "Impulsamos soluciones a problemas sociales junto a líderes locales y emergentes, brindando herramientas de desarrollo personal y profesional y dando lo mejor de nosotros en cada proyecto y actividad.",
+    key: "commitment",
     colors: {
       fill: "#a82822",
       stroke: "#f1b1aa",
@@ -25,9 +22,7 @@ const VALUES = [
     },
   },
   {
-    title: "EMPATÍA",
-    description:
-      "El corazón de FLA son las personas. Por y para ellas trabajamos, invirtiendo tiempo y recursos en el desarrollo integral de cada una, desde la autenticidad, el amor y la entrega.",
+    key: "empathy",
     colors: {
       fill: "#c03d34",
       stroke: "#f5bfb8",
@@ -35,9 +30,7 @@ const VALUES = [
     },
   },
   {
-    title: "LIBERTAD",
-    description:
-      "Defendemos la libertad de elegir, pensar y ser, respetando a los demás y sus singularidades. También nos guiamos por nuestros principios para decidir con autonomía como organización.",
+    key: "freedom",
     colors: {
       fill: "#d95a4d",
       stroke: "#f8cbc3",
@@ -45,9 +38,7 @@ const VALUES = [
     },
   },
   {
-    title: "INNOVACIÓN",
-    description:
-      "Nos reinventamos para mantenernos a la vanguardia, con propuestas educativas disruptivas y de calidad. Somos una usina de ideas construida de manera colaborativa, con movimiento constante.",
+    key: "innovation",
     colors: {
       fill: "#eb7a63",
       stroke: "#ffd8d0",
@@ -97,15 +88,24 @@ function createSegmentPath(startAngle: number, endAngle: number): SegmentPath {
 }
 
 export default function Values(): JSX.Element {
+  const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const values = useMemo(() => {
+    return VALUE_DEFINITIONS.map((valueDefinition) => ({
+      ...valueDefinition,
+      title: t(`aboutUs.values.${valueDefinition.key}.title`),
+      description: t(`aboutUs.values.${valueDefinition.key}.description`),
+    }));
+  }, [t]);
 
   const segments = useMemo(() => {
     const start = 180;
-    const sweep = 180 / VALUES.length;
-    return VALUES.map((_, index) =>
+    const sweep = 180 / values.length;
+    return values.map((_, index) =>
       createSegmentPath(start - sweep * index, start - sweep * (index + 1))
     );
-  }, []);
+  }, [values]);
 
   return (
     <section className="px-0 py-0 -mt-2">
@@ -114,7 +114,7 @@ export default function Values(): JSX.Element {
           <div className="relative aspect-[10/7] w-full">
             <svg viewBox="0 0 1000 560" className="h-full w-full" aria-hidden="true">
               {segments.map((segment, index) => {
-                const value = VALUES[index];
+                const value = values[index];
                 const isActive = activeIndex === index;
 
                 return (
@@ -136,7 +136,7 @@ export default function Values(): JSX.Element {
             </svg>
 
             {segments.map((segment, index) => {
-              const value = VALUES[index];
+              const value = values[index];
               const isActive = activeIndex === index;
               const xPercent = (segment.labelX / 1000) * 100;
               const yPercent = (segment.labelY / 560) * 100;
@@ -173,7 +173,7 @@ export default function Values(): JSX.Element {
           <div className="mt-2 px-4 text-center md:mt-3 md:px-8 lg:mt-4">
               <AnimatePresence mode="wait">
                 <motion.div
-                  key={VALUES[activeIndex].title}
+                  key={values[activeIndex].title}
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
@@ -181,10 +181,10 @@ export default function Values(): JSX.Element {
                   className="mx-auto max-w-2xl text-center"
                 >
                   <p className="text-[11px] font-black uppercase tracking-[0.34em] text-[#9d211c] md:text-[12px]">
-                    {VALUES[activeIndex].title}
+                    {values[activeIndex].title}
                   </p>
                   <p className="mt-3 text-[15px] leading-relaxed text-[#341715] md:text-[18px]">
-                    {VALUES[activeIndex].description}
+                    {values[activeIndex].description}
                   </p>
                 </motion.div>
               </AnimatePresence>

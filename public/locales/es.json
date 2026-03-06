@@ -61,7 +61,9 @@
   },
   "aboutUs": {
     "foundation": {
+      "badge": "Fundación FLA",
       "title": "LA FUNDACIÓN",
+      "imageAlt": "Equipo de la Fundación Líderes de Ansenuza",
       "intro": "La Fundación Líderes de Ansenuza es una organización no gubernamental con sede en Miramar de Ansenuza, Córdoba, cuyo trabajo gira en torno al diseño y ejecución de programas educativos en el territorio argentino.",
       "paragraph1": "En la Fundación Líderes de Ansenuza (FLA), creemos en el potencial de cada joven para transformar su comunidad y construir un futuro mejor. Nuestra misión es formar agentes de cambio, ofreciendo oportunidades, herramientas y acompañamiento para que los jóvenes desarrollen liderazgo y generen impacto social.",
       "paragraph2": "Trabajamos en todo el territorio argentino, con especial atención a las regiones rurales y semiurbanas, así como a las grandes ciudades. Nuestro objetivo es llegar a quienes más lo necesitan, brindando experiencias vivenciales, sin barreras económicas, que promueven el aprendizaje mediante la acción y la innovación.",
@@ -72,7 +74,51 @@
       "title": "Autoridades",
       "description": "Presentamos al equipo directivo de la fundación y a las personas que acompañan nuestra gestión institucional."
     },
-    "missionVisionValues": "Misión, Visión y Valores"
+    "missionVisionValues": "Misión, Visión y Valores",
+    "mission": {
+      "tag": "Misión",
+      "text": "Empoderar a jóvenes de todo el país a ser líderes a través de programas educativos y motivacionales, brindando acompañamiento ante oportunidades de desarrollo que les permita concretar proyectos de impacto social.",
+      "imageAlt": "Misión de la fundación"
+    },
+    "vision": {
+      "tag": "Visión",
+      "text": "Un mundo en el que las nuevas generaciones tengan acceso a educación de calidad, que les permita decidir con libertad y que tengan la motivación de convertirse en líderes y transformar positivamente sus comunidades.",
+      "imageAlt": "Visión de la fundación"
+    },
+    "values": {
+      "leadership": {
+        "title": "LIDERAZGO",
+        "description": "No solo cultivamos este valor en las personas con las que trabajamos, sino también en el equipo y en toda la organización. Creemos en un liderazgo que incluye, transforma, inspira y hace que las cosas pasen."
+      },
+      "commitment": {
+        "title": "COMPROMISO",
+        "description": "Impulsamos soluciones a problemas sociales junto a líderes locales y emergentes, brindando herramientas de desarrollo personal y profesional y dando lo mejor de nosotros en cada proyecto y actividad."
+      },
+      "empathy": {
+        "title": "EMPATÍA",
+        "description": "El corazón de FLA son las personas. Por y para ellas trabajamos, invirtiendo tiempo y recursos en el desarrollo integral de cada una, desde la autenticidad, el amor y la entrega."
+      },
+      "freedom": {
+        "title": "LIBERTAD",
+        "description": "Defendemos la libertad de elegir, pensar y ser, respetando a los demás y sus singularidades. También nos guiamos por nuestros principios para decidir con autonomía como organización."
+      },
+      "innovation": {
+        "title": "INNOVACIÓN",
+        "description": "Nos reinventamos para mantenernos a la vanguardia, con propuestas educativas disruptivas y de calidad. Somos una usina de ideas construida de manera colaborativa, con movimiento constante."
+      }
+    },
+    "volunteers": {
+      "activeCommunity": "Comunidad activa",
+      "current": "Voluntarios actuales",
+      "imageAlt": "Mapa de voluntarios"
+    },
+    "enjoyFla": {
+      "badge": "Vida en FLA",
+      "title": "Lo que significa ser parte",
+      "imageAlt1": "Equipo junto",
+      "imageAlt2": "Equipo feliz",
+      "imageAlt3": "Chicos sonriendo"
+    }
   },
   "donate": {
     "title": "¿Cómo Donar?",

@@ -61,7 +61,9 @@
   },
   "aboutUs": {
     "foundation": {
+      "badge": "FLA Foundation",
       "title": "THE FOUNDATION",
+      "imageAlt": "Fundación Líderes de Ansenuza team",
       "intro": "Fundación Líderes de Ansenuza is a non-governmental organization based in Miramar de Ansenuza, Córdoba, whose work revolves around the design and execution of educational programs in Argentina.",
       "paragraph1": "At Fundación Líderes de Ansenuza (FLA), we believe in the potential of every young person to transform their community and build a better future. Our mission is to train agents of change, offering opportunities, tools, and support for young people to develop leadership and generate social impact.",
       "paragraph2": "We work throughout Argentina, with special attention to rural and semi-urban regions, as well as large cities. Our goal is to reach those who need it most, providing hands-on experiences, without economic barriers, that promote learning through action and innovation.",
@@ -72,7 +74,51 @@
       "title": "Authorities",
       "description": "We present the foundation's leadership team and the people who support our institutional management."
     },
-    "missionVisionValues": "Mission, Vision and Values"
+    "missionVisionValues": "Mission, Vision and Values",
+    "mission": {
+      "tag": "Mission",
+      "text": "Empower young people from across the country to become leaders through educational and motivational programs, providing support and development opportunities so they can carry out social impact projects.",
+      "imageAlt": "Foundation mission"
+    },
+    "vision": {
+      "tag": "Vision",
+      "text": "A world where new generations have access to quality education, can decide with freedom, and have the motivation to become leaders and positively transform their communities.",
+      "imageAlt": "Foundation vision"
+    },
+    "values": {
+      "leadership": {
+        "title": "LEADERSHIP",
+        "description": "We not only cultivate this value in the people we work with, but also in our team and throughout the organization. We believe in leadership that includes, transforms, inspires, and makes things happen."
+      },
+      "commitment": {
+        "title": "COMMITMENT",
+        "description": "We drive solutions to social problems together with local and emerging leaders, providing personal and professional development tools and giving our best in every project and activity."
+      },
+      "empathy": {
+        "title": "EMPATHY",
+        "description": "People are at the heart of FLA. We work for and with them, investing time and resources in each person's holistic development, through authenticity, care, and dedication."
+      },
+      "freedom": {
+        "title": "FREEDOM",
+        "description": "We defend the freedom to choose, think, and be, respecting others and their uniqueness. We are also guided by our principles to decide with autonomy as an organization."
+      },
+      "innovation": {
+        "title": "INNOVATION",
+        "description": "We reinvent ourselves to stay at the forefront, with disruptive and high-quality educational proposals. We are a collaborative idea engine in constant motion."
+      }
+    },
+    "volunteers": {
+      "activeCommunity": "Active community",
+      "current": "Current volunteers",
+      "imageAlt": "Volunteer map"
+    },
+    "enjoyFla": {
+      "badge": "Life at FLA",
+      "title": "What it means to be part",
+      "imageAlt1": "Team together",
+      "imageAlt2": "Happy team",
+      "imageAlt3": "Smiling youth"
+    }
   },
   "donate": {
     "title": "How to Donate?",
