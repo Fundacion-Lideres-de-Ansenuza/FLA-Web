@@ -26,7 +26,7 @@ export default function QuienesSomos(): JSX.Element {
           </p>
         </section>
 
-        <div className="space-y-6 md:space-y-10">
+        <div className="space-y-2 md:space-y-4">
           <Mission />
           <Vision />
           <Values />

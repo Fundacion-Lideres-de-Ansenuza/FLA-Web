@@ -1,10 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
 import { JSX, useMemo, useState } from "react";
-
-const imageStars = "/images/voluntarioEstrellitas.png";
 
 const VALUES = [
   {
@@ -111,25 +108,11 @@ export default function Values(): JSX.Element {
   }, []);
 
   return (
-    <section className="px-0 py-2">
-      <div className="mb-8 flex flex-col items-center justify-center text-center">
-        <div className="rounded-[26px] bg-[linear-gradient(135deg,#bc2222_0%,#f45e5e_100%)] px-6 py-4 shadow-lg">
-          <Image src={imageStars} alt="Decoración valores" width={86} height={86} />
-        </div>
-        <h3 className="mt-5 text-[36px] text-[#160101] md:text-[44px] font-contrail-one">Valores</h3>
-      </div>
-
+    <section className="px-0 py-0 -mt-2">
       <div className="mx-auto max-w-4xl">
-        <div className="relative overflow-hidden rounded-t-[220px] rounded-b-[30px] border border-[#efd3ce] bg-[radial-gradient(circle_at_50%_100%,#fff8f6_0%,#fff1ee_48%,#ffffff_100%)] px-3 pb-6 pt-5 shadow-[0_24px_70px_rgba(144,20,14,0.08)] md:px-6 md:pb-8">
-          <div className="absolute inset-x-8 bottom-0 top-[34%] rounded-t-[999px] bg-[radial-gradient(circle_at_50%_110%,rgba(255,255,255,0.98)_0%,rgba(255,245,242,0.96)_55%,rgba(252,231,227,0.92)_100%)]" />
-          <div className="absolute inset-x-[12%] bottom-[8%] top-[42%] rounded-t-[999px] border border-white/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.34)_0%,rgba(255,255,255,0.82)_100%)] blur-[1px]" />
-
+        <div className="relative">
           <div className="relative aspect-[10/7] w-full">
-            <svg viewBox="0 0 1000 620" className="h-full w-full" aria-hidden="true">
-              <path
-                d="M 70 520 A 430 430 0 0 1 930 520 L 770 520 A 270 270 0 0 0 230 520 Z"
-                fill="rgba(255,255,255,0.54)"
-              />
+            <svg viewBox="0 0 1000 560" className="h-full w-full" aria-hidden="true">
               {segments.map((segment, index) => {
                 const value = VALUES[index];
                 const isActive = activeIndex === index;
@@ -156,7 +139,7 @@ export default function Values(): JSX.Element {
               const value = VALUES[index];
               const isActive = activeIndex === index;
               const xPercent = (segment.labelX / 1000) * 100;
-              const yPercent = (segment.labelY / 620) * 100;
+              const yPercent = (segment.labelY / 560) * 100;
 
               return (
                 <button
@@ -185,7 +168,9 @@ export default function Values(): JSX.Element {
               );
             })}
 
-            <div className="absolute inset-x-[8%] bottom-[5%] top-[39%] flex items-center justify-center px-5 text-center md:inset-x-[13%] md:px-12">
+          </div>
+
+          <div className="mt-2 px-4 text-center md:mt-3 md:px-8 lg:mt-4">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={VALUES[activeIndex].title}
@@ -193,17 +178,16 @@ export default function Values(): JSX.Element {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
                   transition={{ duration: 0.26, ease: "easeOut" }}
-                  className="w-full"
+                  className="mx-auto max-w-2xl text-center"
                 >
                   <p className="text-[11px] font-black uppercase tracking-[0.34em] text-[#9d211c] md:text-[12px]">
                     {VALUES[activeIndex].title}
                   </p>
-                  <p className="mx-auto mt-3 max-w-[32rem] text-[15px] leading-relaxed text-[#341715] md:text-[18px]">
+                  <p className="mt-3 text-[15px] leading-relaxed text-[#341715] md:text-[18px]">
                     {VALUES[activeIndex].description}
                   </p>
                 </motion.div>
               </AnimatePresence>
-            </div>
           </div>
         </div>
       </div>
