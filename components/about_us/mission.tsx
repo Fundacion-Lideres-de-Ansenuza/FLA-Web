@@ -1,20 +1,33 @@
 import Image from "next/image";
 import { JSX } from "react";
 
-const girlTeaching : string = "/images/about_us/girlTeaching.png"
+const girlTeaching = "/images/about_us/girlTeaching.png";
 
 export default function Mission(): JSX.Element {
   return (
-    <div className="px-4 py-8">
-      <div className="max-w-3xl bg-[#bc2222] h-[72px] rounded-[28px] mb-6 flex items-center justify-start mr-auto px-6 shadow-md">
-        <p className="font-contrail-one text-[#ffffff] text-[32px]">Misión</p>
+    <section className="overflow-hidden rounded-[34px] border border-[#f1d8d8] bg-white shadow-[0_22px_60px_rgba(144,20,14,0.06)]">
+      <div className="grid items-center gap-0 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="relative min-h-[260px] lg:min-h-[100%]">
+          <Image
+            src={girlTeaching}
+            alt="Misión de la fundación"
+            fill
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 40vw"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(188,34,34,0.12)_0%,rgba(244,94,94,0.26)_100%)]" />
+        </div>
+
+        <div className="px-6 py-8 md:px-10 md:py-10">
+          <span className="inline-flex rounded-full bg-[#bc2222] px-4 py-1.5 text-xs font-black uppercase tracking-[0.22em] text-white shadow-lg">
+            Misión
+          </span>
+          <p className="mt-5 text-[18px] md:text-[20px] leading-relaxed text-[#2c1818] font-arimo">
+            Empoderar a jóvenes de todo el país a ser líderes a través de programas educativos y motivacionales,
+            brindando acompañamiento ante oportunidades de desarrollo que les permita concretar proyectos de impacto social.
+          </p>
+        </div>
       </div>
-      <section className="flex flex-col md:flex-row gap-6 items-center font-['Arimo:Regular',_sans-serif] font-normal text-[#160101] text-[18px] md:text-[20px] leading-relaxed">
-        <Image src={girlTeaching} alt="girl teaching in fla" width={360} height={320} className="mb-4 md:mb-0 rounded-2xl shadow-md" />
-        <article className="w-full md:max-w-[60%]">
-            <p className="mb-0 text-justify">Empoderar a jóvenes de todo el país a ser líderes a través de programas educativos y motivacionales, brindando acompañamiento ante oportunidades de desarrollo que les permita concretar proyectos de impacto social.</p>
-        </article>
-      </section>
-    </div>
+    </section>
   );
 }

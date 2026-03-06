@@ -6,6 +6,7 @@ import EnrollmentInfo from "@/components/programs/EnrollmentInfo";
 import ProgramStages from "@/components/programs/ProgramStages";
 import ImpactStats from "@/components/programs/ImpactStats";
 import SuccessStories from "@/components/programs/SuccessStories";
+import Gallery from "@/components/programs/Gallery";
 import { AVENTURA_MATEMATICA_DATA } from "@/lib/data/programs";
 
 export const metadata: Metadata = {
@@ -79,7 +80,14 @@ export default function AventuraMatematicaPage() {
         stories={AVENTURA_MATEMATICA_DATA.successStories}
         colors={AVENTURA_MATEMATICA_DATA.colors}
       />
+
+      <Gallery
+        type={AVENTURA_MATEMATICA_DATA.gallery.type}
+        url={AVENTURA_MATEMATICA_DATA.gallery.url}
+        images={AVENTURA_MATEMATICA_DATA.gallery.images}
+        colors={AVENTURA_MATEMATICA_DATA.colors}
+        title={AVENTURA_MATEMATICA_DATA.title}
+      />
     </main>
   );
 }
-

@@ -30,7 +30,7 @@ export default function ImpactStats({ stats, colors }: ImpactStatsProps) {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
               <StatCard
                 key={index}
@@ -66,19 +66,22 @@ function StatCard({ stat, index, color }: StatCardProps) {
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="text-center"
+      className="flex justify-center"
     >
-      <div className="mb-4">
-        <span
-          className="text-4xl md:text-5xl lg:text-6xl font-bold"
-          style={{ color }}
-        >
-          {count}
-          {suffix}
-        </span>
+      <div className="flex min-h-[220px] w-full max-w-[280px] flex-col items-center justify-center rounded-[28px] border border-white/70 bg-white/85 px-6 py-8 text-center shadow-[0_18px_50px_rgba(0,0,0,0.06)]">
+        <div className="mb-4 flex h-[78px] items-center justify-center">
+          <span
+            className="inline-flex items-center justify-center text-4xl md:text-5xl lg:text-6xl font-bold leading-none"
+            style={{ color }}
+          >
+            {count}
+            {suffix}
+          </span>
+        </div>
+        <p className="max-w-[18ch] text-gray-700 font-medium text-sm md:text-base leading-snug text-center">
+          {stat.label}
+        </p>
       </div>
-      <p className="text-gray-700 font-medium text-sm md:text-base">{stat.label}</p>
     </motion.div>
   );
 }
-

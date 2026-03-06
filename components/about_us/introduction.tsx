@@ -2,42 +2,51 @@
 
 import { JSX } from "react";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
-const imgSerParteDeFlaNoEsSimplementeVoluntariarEsConectarConPersonasIncreiblesCrearRecuerdosInolvidablesYApostarASerParteDelCambioQueDeseasVerEnLaComunidadEnFlaHemosCompartidoMomento1: string = "http://localhost:3845/assets/97bc07ceeb67b50d3ce0ee0490daee7ada3429bc.png";
+const introImage = "/images/about_us/PrimeraGrandeFla.png";
 
 export default function Introduction(): JSX.Element {
   const { t } = useTranslation();
 
   return (
-    <div className="px-4 py-8">
-      <div className="max-w-5xl mx-auto mb-6">
-        <h1 className="font-contrail-one text-[#000000] text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] tracking-tight">
-          {t('aboutUs.foundation.title')}
-        </h1>
-        <p className="font-['Arimo:Regular',_sans-serif] font-normal text-[#000000] text-[20px] md:text-[22px] mt-3 leading-relaxed">
-          {t('aboutUs.foundation.intro')}
-        </p>
+    <section className="pt-4 md:pt-6">
+      <div className="overflow-hidden rounded-[40px] border border-[#f1d6d6] bg-white shadow-[0_26px_80px_rgba(144,20,14,0.08)]">
+        <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="flex flex-col justify-center px-6 py-8 md:px-10 md:py-12 lg:px-12">
+            <span className="inline-flex w-fit rounded-full bg-[#bc2222] px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-white shadow-lg">
+              Fundación FLA
+            </span>
+            <h1 className="mt-5 text-[34px] sm:text-[44px] md:text-[54px] lg:text-[62px] leading-[0.96] tracking-tight text-[#160101] font-contrail-one">
+              {t('aboutUs.foundation.title')}
+            </h1>
+            <p className="mt-5 max-w-2xl text-[18px] md:text-[21px] leading-relaxed text-gray-700 font-arimo">
+              {t('aboutUs.foundation.intro')}
+            </p>
+          </div>
+
+          <div className="relative min-h-[280px] lg:min-h-full">
+            <Image
+              src={introImage}
+              alt="Equipo de la Fundación Líderes de Ansenuza"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 45vw"
+              priority
+            />
+            <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(188,34,34,0.12)_0%,rgba(244,94,94,0.34)_100%)]" />
+          </div>
+        </div>
       </div>
 
-      <div className="max-w-5xl mx-auto mb-8 rounded-3xl sm:rounded-[50px] md:rounded-[80px] overflow-hidden relative shadow-lg">
-        <div className="w-full h-[180px] sm:h-[220px] md:h-[260px] bg-center bg-cover bg-no-repeat" style={{ backgroundImage: `url('${imgSerParteDeFlaNoEsSimplementeVoluntariarEsConectarConPersonasIncreiblesCrearRecuerdosInolvidablesYApostarASerParteDelCambioQueDeseasVerEnLaComunidadEnFlaHemosCompartidoMomento1}')` }} />
-        <div className="absolute inset-0 bg-[#f45e5e] opacity-45 rounded-3xl sm:rounded-[50px] md:rounded-[80px]" />
+      <div className="mx-auto mt-8 max-w-5xl rounded-[32px] border border-[#f4dddd] bg-white/90 px-6 py-7 shadow-[0_20px_60px_rgba(144,20,14,0.05)] md:px-8 md:py-8">
+        <div className="space-y-5 text-[17px] md:text-[19px] leading-relaxed text-[#2c1818] font-arimo">
+          <p>{t('aboutUs.foundation.paragraph1')}</p>
+          <p>{t('aboutUs.foundation.paragraph2')}</p>
+          <p>{t('aboutUs.foundation.paragraph3')}</p>
+          <p>{t('aboutUs.foundation.paragraph4')}</p>
+        </div>
       </div>
-
-      <div className="max-w-5xl mx-auto font-['Arimo:Regular',_sans-serif] font-normal text-[#160101] text-[18px] md:text-[20px] leading-relaxed mb-8 space-y-4">
-        <p className="mb-0">
-          {t('aboutUs.foundation.paragraph1')}
-        </p>
-        <p className="mb-0">
-          {t('aboutUs.foundation.paragraph2')}
-        </p>
-        <p className="mb-0">
-          {t('aboutUs.foundation.paragraph3')}
-        </p>
-        <p className="mb-0">
-          {t('aboutUs.foundation.paragraph4')}
-        </p>
-      </div>
-    </div>
+    </section>
   );
 }

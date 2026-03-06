@@ -7,6 +7,7 @@ import ProgramStages from "@/components/programs/ProgramStages";
 import ImpactStats from "@/components/programs/ImpactStats";
 import SuccessStories from "@/components/programs/SuccessStories";
 import Sponsors from "@/components/programs/Sponsors";
+import Gallery from "@/components/programs/Gallery";
 import { CIENCIA_FUERA_DE_LA_CAJA_DATA } from "@/lib/data/programs";
 
 export const metadata: Metadata = {
@@ -82,7 +83,14 @@ export default function CienciaFueraDeLaCajaPage() {
       />
 
       <Sponsors sponsors={CIENCIA_FUERA_DE_LA_CAJA_DATA.sponsors} />
+
+      <Gallery
+        type={CIENCIA_FUERA_DE_LA_CAJA_DATA.gallery.type}
+        url={CIENCIA_FUERA_DE_LA_CAJA_DATA.gallery.url}
+        images={CIENCIA_FUERA_DE_LA_CAJA_DATA.gallery.images}
+        colors={CIENCIA_FUERA_DE_LA_CAJA_DATA.colors}
+        title={CIENCIA_FUERA_DE_LA_CAJA_DATA.title}
+      />
     </main>
   );
 }
-

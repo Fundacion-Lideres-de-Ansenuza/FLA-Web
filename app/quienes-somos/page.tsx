@@ -13,20 +13,39 @@ export default function QuienesSomos(): JSX.Element {
   const { t } = useTranslation();
 
   return (
-    <main className="min-h-screen bg-white max-w-6xl mx-auto px-4 md:px-6 pt-[108px] sm:pt-[120px]">
-      <Introduction />
-      <section className="bg-gradient-to-r from-[#fff4f4] via-[#fde7e7] to-[#fff4f4] rounded-3xl p-6 md:p-8 my-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-contrail-one text-gray-900 mb-3">{t('aboutUs.authorities.title')}</h2>
-        <p className="text-base md:text-lg text-gray-700 font-arimo max-w-3xl mx-auto">
-          {t('aboutUs.authorities.description')}
-        </p>
-      </section>
-      <h2 className="text-center text-3xl md:text-4xl font-contrail-one mb-4">{t('aboutUs.missionVisionValues')}</h2>
-      <Mission />
-      <Vision />
-      <Values />
-      <Volunteers />
-      <EnjoyFla />
+    <main className="min-h-screen bg-[linear-gradient(180deg,#ffffff_0%,#fff8f8_26%,#ffffff_100%)] pt-[108px] sm:pt-[120px]">
+      <div className="mx-auto w-full max-w-6xl px-4 pb-16 md:px-6 md:pb-24">
+        <Introduction />
+
+        <section className="my-10 overflow-hidden rounded-[36px] border border-[#f2d7d7] bg-[linear-gradient(135deg,#fff4f4_0%,#ffffff_48%,#fde8e8_100%)] px-6 py-8 text-center shadow-[0_24px_70px_rgba(144,20,14,0.08)] md:px-10 md:py-10">
+          <span className="inline-flex rounded-full bg-[#bc2222] px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-white shadow-lg">
+            Equipo institucional
+          </span>
+          <h2 className="mt-4 text-3xl md:text-4xl font-contrail-one text-gray-900">
+            {t('aboutUs.authorities.title')}
+          </h2>
+          <p className="mx-auto mt-3 max-w-3xl text-base md:text-lg text-gray-700 font-arimo">
+            {t('aboutUs.authorities.description')}
+          </p>
+        </section>
+
+        <section className="mb-10 text-center">
+          <span className="inline-flex rounded-full border border-[#f0d3d3] bg-white px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-[#bc2222]">
+            Esencia FLA
+          </span>
+          <h2 className="mt-4 text-3xl md:text-4xl font-contrail-one text-gray-900">
+            {t('aboutUs.missionVisionValues')}
+          </h2>
+        </section>
+
+        <div className="space-y-8 md:space-y-10">
+          <Mission />
+          <Vision />
+          <Values />
+          <Volunteers />
+          <EnjoyFla />
+        </div>
+      </div>
     </main>
   );
 }

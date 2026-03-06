@@ -5,6 +5,20 @@ import Link from "next/link";
 import { ACTIVE_PROGRAMS, HISTORICAL_PROGRAMS } from "@/lib/data/programs";
 import { generateBlobRadius } from "@/lib/shapes";
 import { useTranslation } from "react-i18next";
+import ProgramsShowcaseSlider from "@/components/programs/ProgramsShowcaseSlider";
+
+const LOGO_PRESENTATION: Record<string, string> = {
+  "Experiencia Ambientalia": "max-w-[88%] max-h-[76%]",
+  "SOMOS": "max-w-[78%] max-h-[62%]",
+  "LÃ­deres": "max-w-[74%] max-h-[74%]",
+  "Potenciate": "max-w-[78%] max-h-[68%]",
+  "FUTURAS": "max-w-[82%] max-h-[66%]",
+  "ImpulsaTEC": "max-w-[84%] max-h-[66%]",
+  "Ciencia Fuera de la Caja": "max-w-[86%] max-h-[64%]",
+  "Aventura MatemÃ¡gica": "max-w-[86%] max-h-[66%]",
+  "Academia de conservaciÃ³n": "max-w-[84%] max-h-[66%]",
+  "Comprometidxs": "max-w-[82%] max-h-[64%]",
+}
 
 function getLogoFileName(title: string): string {
   const logoMap: Record<string, string> = {
@@ -19,6 +33,10 @@ function getLogoFileName(title: string): string {
   };
 
   return logoMap[title] || title;
+}
+
+function getLogoPresentation(title: string): string {
+  return LOGO_PRESENTATION[title] || "max-w-[82%] max-h-[68%]"
 }
 
 export default function ProgramasPage() {
@@ -75,13 +93,13 @@ export default function ProgramasPage() {
                         }}
                       >
                         <div className="absolute inset-0 opacity-30" style={{ backgroundColor: `${program.colors.accent}30`, borderRadius: generateBlobRadius(program.title + 'bg') }} />
-                        <div className="relative z-10 w-60 h-40 flex items-center justify-center p-4">
+                        <div className="relative z-10 flex h-40 w-60 items-center justify-center rounded-[28px] border border-white/50 bg-white/65 p-5 backdrop-blur-sm shadow-[0_12px_30px_rgba(255,255,255,0.18)]">
                           <Image
                             src={`/images/Logos/${getLogoFileName(program.title)}.png`}
                             alt={program.title}
                             width={300}
                             height={150}
-                            className="object-contain max-h-full filter drop-shadow-xl group-hover:scale-110 transition-transform duration-300"
+                            className={`h-auto w-auto object-contain drop-shadow-xl transition-transform duration-300 group-hover:scale-105 ${getLogoPresentation(program.title)}`}
                             priority
                           />
                         </div>
@@ -110,7 +128,9 @@ export default function ProgramasPage() {
               </div>
             </div>
 
-            <div className="border-gray-200 pt-16">
+            <ProgramsShowcaseSlider />
+
+            <div className="border-gray-200 pt-6 md:pt-8">
               <div className="text-center mb-6">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl text-gray-900 break-words font-contrail-one tracking-tight">
                   {t('programs.historical.title')}
@@ -137,13 +157,13 @@ export default function ProgramasPage() {
                         }}
                       >
                         <div className="absolute inset-0 opacity-20" style={{ backgroundColor: `${program.colors.accent}20`, borderRadius: generateBlobRadius(program.title + 'hist') }} />
-                        <div className="relative z-10 w-48 h-32 flex items-center justify-center p-4">
+                        <div className="relative z-10 flex h-32 w-48 items-center justify-center rounded-[24px] border border-white/60 bg-white/72 p-4 backdrop-blur-sm shadow-[0_10px_24px_rgba(255,255,255,0.18)]">
                           <Image
                             src={`/images/Logos/${getLogoFileName(program.title)}.png`}
                             alt={program.title}
                             width={200}
                             height={100}
-                            className="object-contain max-h-full filter drop-shadow-lg group-hover:scale-110 transition-transform duration-300"
+                            className={`h-auto w-auto object-contain drop-shadow-lg transition-transform duration-300 group-hover:scale-105 ${getLogoPresentation(program.title)}`}
                           />
                         </div>
                         <div className="absolute top-0 right-0 z-20">

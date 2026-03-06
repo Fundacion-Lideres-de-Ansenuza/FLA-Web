@@ -9,6 +9,7 @@ import SuccessStories from "@/components/programs/SuccessStories";
 import BlogLinks from "@/components/programs/BlogLinks";
 import FAQ from "@/components/programs/FAQ";
 import CTASection from "@/components/programs/CTASection";
+import Gallery from "@/components/programs/Gallery";
 import { SOMOS_DATA } from "@/lib/data/programs";
 
 export const metadata: Metadata = {
@@ -230,17 +231,24 @@ export default function SomosPage() {
           colors={SOMOS_DATA.colors}
         />
 
-        <FAQ
-          faqs={SOMOS_DATA.faqs}
-          colors={SOMOS_DATA.colors}
-        />
+      <FAQ
+        faqs={SOMOS_DATA.faqs}
+        colors={SOMOS_DATA.colors}
+      />
 
-        <CTASection
-          title={SOMOS_DATA.title}
-          colors={SOMOS_DATA.colors}
-        />
+      <Gallery
+        type={SOMOS_DATA.gallery.type}
+        url={SOMOS_DATA.gallery.url}
+        images={SOMOS_DATA.gallery.images}
+        colors={SOMOS_DATA.colors}
+        title={SOMOS_DATA.title}
+      />
+
+      <CTASection
+        title={SOMOS_DATA.title}
+        colors={SOMOS_DATA.colors}
+      />
       </main>
     </>
   );
 }
-

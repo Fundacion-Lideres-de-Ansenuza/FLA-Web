@@ -22,7 +22,7 @@ export default function ContactInfo() {
           </div>
           <div className="flex-1">
             <h4 className="font-contrail-one text-black text-xl mb-2">{t('contact.info.email')}</h4>
-            <p className="font-arimo text-black text-base">info@fundacionlideresdeansenuza.org</p>
+            <p className="font-arimo text-black text-base">contacto@lideresdeansenuza.org</p>
             <p className="font-arimo text-gray-600 text-sm">{t('contact.info.emailResponse')}</p>
           </div>
         </div>

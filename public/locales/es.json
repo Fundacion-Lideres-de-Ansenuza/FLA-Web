@@ -5,7 +5,7 @@
     "donar": "DONAR",
     "blog": "BLOG",
     "campus": "CAMPUS",
-    "contactanos": "CONTÁCTANOS"
+    "contactanos": "CONTACTANOS"
   },
   "language": {
     "es": "Español",
@@ -14,7 +14,7 @@
   },
   "hero": {
     "title": "Jóvenes transformando la educación",
-    "description": "Diseñamos y ejecutamos programas educativos gratuitos en todo el territorio argentino para que más jóvenes lideren el cambio en sus comunidades.",
+    "description": "Diseñamos y ejecutamos programas educativos que impulsan a jóvenes a liderar el cambio en sus comunidades.",
     "voluntariado": "Voluntariado",
     "alianzas": "Alianzas",
     "donar": "Donar"
@@ -42,7 +42,7 @@
   },
   "currentPrograms": {
     "title": "Programas Actuales",
-    "subtitle": "Elegí el programa que mejor se adapte a vos y conocé sus detalles al instante.",
+    "subtitle": "Elegí la experiencia educativa que mejor se adapte a vos y conocé sus detalles al instante.",
     "viewAll": "Ver todos los programas"
   },
   "testimonials": {
@@ -86,15 +86,12 @@
       "title": "Plataforma Donar Online",
       "description": "Para donaciones nacionales rápidas y seguras en pesos argentinos.",
       "steps": [
-        "Ingresá a líderesdeansenuza.org",
-        "Seleccioná la opción 'Donar' en el menú",
-        "Hacé clic en el logo de Donar Online",
-        "Elegí el monto (puedes usar 'Otro monto' en ARS)",
-        "Definí la frecuencia (mensual o única vez)",
-        "Completá tus datos personales",
-        "Ingresá los datos de tu tarjeta (procesado vía Donar Online + Mercado Pago)",
-        "Confirmá presionando 'Donar a Fundación Líderes de Ansenuza'",
-        "Recibirás un mail de bienvenida con el detalle"
+        "Entrá a líderesdeansenuza.org y abrí la opción Donar.",
+        "Elegí Donar Online.",
+        "Definí monto y frecuencia.",
+        "Completá tus datos.",
+        "Ingresá la tarjeta.",
+        "Confirmá la donación."
       ],
       "button": "Ir al Formulario"
     },
@@ -102,14 +99,12 @@
       "title": "Donaciones Internacionales",
       "description": "Si te encontrás fuera de Argentina o preferís usar tarjetas internacionales.",
       "steps": [
-        "Ingresá a líderesdeansenuza.org",
-        "Seleccioná la opción 'Donar' en el menú",
-        "Hacé clic en el logo de PayPal",
-        "Elegí el monto (puedes usar 'Other')",
-        "Seleccioná la frecuencia (marcar casilla para mensual)",
-        "Elegí pagar con PayPal o Tarjeta",
-        "Completá los datos de facturación y contacto",
-        "Confirmá presionando 'Aceptar y donar ahora'"
+        "Entrá a líderesdeansenuza.org y abrí la opción Donar.",
+        "Elegí PayPal.",
+        "Definí monto y frecuencia.",
+        "Elegí pagar con PayPal o tarjeta.",
+        "Completá tus datos.",
+        "Confirmá la donación."
       ],
       "button": "Donar por PayPal"
     },
@@ -126,7 +121,7 @@
     }
   },
   "contact": {
-    "title": "CONTÁCTANOS",
+    "title": "CONTACTANOS",
     "subtitle": "¿Querés ser parte del cambio? ¿Tenés preguntas sobre nuestros programas? ¿Querés colaborar con nosotros? Estamos aquí para escucharte.",
     "form": {
       "title": "Envíanos un mensaje",
@@ -172,6 +167,14 @@
       "title": "Programas históricos",
       "subtitle": "Programas que han dejado huella en miles de jóvenes de toda Argentina",
       "viewHistory": "Ver historia"
+    },
+    "showcase": {
+      "eyebrow": "Momentos FLA",
+      "title": "Un recorrido visual por cada experiencia",
+      "subtitle": "Agregamos este slider para dar más color y movimiento a la página. Después solo reemplazamos estas imágenes por las fotos finales de cada propuesta.",
+      "note": "Slider listo para reemplazar con tus fotos.",
+      "previous": "Imagen anterior",
+      "next": "Imagen siguiente"
     },
     "cta": {
       "title": "¿Querés saber más sobre nuestros programas?",

@@ -7,6 +7,7 @@ import ProgramStages from "@/components/programs/ProgramStages";
 import ImpactStats from "@/components/programs/ImpactStats";
 import SuccessStories from "@/components/programs/SuccessStories";
 import Sponsors from "@/components/programs/Sponsors";
+import Gallery from "@/components/programs/Gallery";
 import { POTENCIATE_DATA } from "@/lib/data/programs";
 
 export const metadata: Metadata = {
@@ -84,7 +85,14 @@ export default function PotenciatePage() {
       />
 
       <Sponsors sponsors={POTENCIATE_DATA.sponsors} />
+
+      <Gallery
+        type={POTENCIATE_DATA.gallery.type}
+        url={POTENCIATE_DATA.gallery.url}
+        images={POTENCIATE_DATA.gallery.images}
+        colors={POTENCIATE_DATA.colors}
+        title={POTENCIATE_DATA.title}
+      />
     </main>
   );
 }
-

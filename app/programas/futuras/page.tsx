@@ -6,6 +6,7 @@ import EnrollmentInfo from "@/components/programs/EnrollmentInfo";
 import ProgramStages from "@/components/programs/ProgramStages";
 import ImpactStats from "@/components/programs/ImpactStats";
 import SuccessStories from "@/components/programs/SuccessStories";
+import Gallery from "@/components/programs/Gallery";
 import { FUTURAS_DATA } from "@/lib/data/programs";
 
 export const metadata: Metadata = {
@@ -79,7 +80,14 @@ export default function FuturasPage() {
         stories={FUTURAS_DATA.successStories}
         colors={FUTURAS_DATA.colors}
       />
+
+      <Gallery
+        type={FUTURAS_DATA.gallery.type}
+        url={FUTURAS_DATA.gallery.url}
+        images={FUTURAS_DATA.gallery.images}
+        colors={FUTURAS_DATA.colors}
+        title={FUTURAS_DATA.title}
+      />
     </main>
   );
 }
-

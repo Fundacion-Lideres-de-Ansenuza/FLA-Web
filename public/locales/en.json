@@ -86,15 +86,12 @@
       "title": "Donate Online Platform",
       "description": "For fast and secure national donations in Argentine pesos.",
       "steps": [
-        "Go to líderesdeansenuza.org",
-        "Select the 'Donate' option in the menu",
-        "Click on the Donate Online logo",
-        "Choose the amount (you can use 'Other amount' in ARS)",
-        "Define the frequency (monthly or one-time)",
-        "Complete your personal information",
-        "Enter your card details (processed via Donate Online + Mercado Pago)",
-        "Confirm by pressing 'Donate to Fundación Líderes de Ansenuza'",
-        "You will receive a welcome email with the details"
+        "Go to líderesdeansenuza.org and open Donate.",
+        "Choose Donate Online.",
+        "Set amount and frequency.",
+        "Complete your details.",
+        "Enter your card.",
+        "Confirm the donation."
       ],
       "button": "Go to Form"
     },
@@ -102,14 +99,12 @@
       "title": "International Donations",
       "description": "If you are outside Argentina or prefer to use international cards.",
       "steps": [
-        "Go to líderesdeansenuza.org",
-        "Select the 'Donate' option in the menu",
-        "Click on the PayPal logo",
-        "Choose the amount (you can use 'Other')",
-        "Select the frequency (check box for monthly)",
-        "Choose to pay with PayPal or Card",
-        "Complete billing and contact information",
-        "Confirm by pressing 'Accept and donate now'"
+        "Go to líderesdeansenuza.org and open Donate.",
+        "Choose PayPal.",
+        "Set amount and frequency.",
+        "Choose PayPal or card.",
+        "Complete your details.",
+        "Confirm the donation."
       ],
       "button": "Donate via PayPal"
     },
@@ -172,6 +167,14 @@
       "title": "Historical Programs",
       "subtitle": "Programs that have left their mark on thousands of young people throughout Argentina",
       "viewHistory": "View history"
+    },
+    "showcase": {
+      "eyebrow": "FLA Moments",
+      "title": "A visual journey through each experience",
+      "subtitle": "This slider adds motion and color to the page for now. Later we can simply replace these images with the final photos for each initiative.",
+      "note": "Slider ready to swap with your final photos.",
+      "previous": "Previous image",
+      "next": "Next image"
     },
     "cta": {
       "title": "Want to know more about our programs?",

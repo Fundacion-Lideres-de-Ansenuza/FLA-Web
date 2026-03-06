@@ -15,6 +15,15 @@ body {
   overflow-x: hidden !important;
 }
 
+p,
+li,
+blockquote,
+dd {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
 html {
   overflow-x: hidden !important;
   scroll-behavior: smooth;

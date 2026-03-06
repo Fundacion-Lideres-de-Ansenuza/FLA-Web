@@ -1,47 +1,61 @@
-import React from 'react';
-import Image from "next/image";
 import { JSX } from "react";
+import Image from "next/image";
 
-const imageStars: string = "/images/voluntarioEstrellitas.png";
+const imageStars = "/images/voluntarioEstrellitas.png";
 
-function VolunteersWithStars(): JSX.Element {
+const VALUES = [
+  {
+    title: "LIDERAZGO",
+    description:
+      "No solo cultivamos este valor en las personas con las que trabajamos sino también en el equipo y en toda la organización. Creemos en el liderazgo que incluye y transforma, que inspira y acompaña, que confía y hace que las cosas pasen.",
+  },
+  {
+    title: "COMPROMISO",
+    description:
+      "Por llevar soluciones a problemas sociales de la mano de líderes locales y emergentes, brindando herramientas de desarrollo personal y profesional. Por dar lo mejor en cada proyecto y actividad.",
+  },
+  {
+    title: "EMPATÍA",
+    description:
+      "El corazón de FLA son las personas. Por y para ellas trabajamos; e invertimos tiempo y recursos en el desarrollo integral de cada una, desde la autenticidad, el amor y la entrega.",
+  },
+  {
+    title: "LIBERTAD",
+    description:
+      "De elegir, de pensar, de ser quien cada uno es respetando a los demás y sus singularidades. De guiarnos como organización por nuestros principios y tomar decisiones de forma autónoma.",
+  },
+  {
+    title: "INNOVACIÓN",
+    description:
+      "Porque no tenemos miedo de reinventarnos para estar a la vanguardia, entregando propuestas educativas disruptivas y de calidad. Porque somos una usina de ideas que se construye de forma colaborativa minuto a minuto.",
+  },
+];
+
+export default function Values(): JSX.Element {
   return (
-    <div className="bg-[#f45e5e] h-[64px] rounded-[20px] w-[220px] flex items-center justify-center shadow-md">
-      <Image src={imageStars} alt="stars" width={76} height={76} />
+    <section className="rounded-[34px] border border-[#f1d8d8] bg-white px-6 py-8 shadow-[0_22px_60px_rgba(144,20,14,0.06)] md:px-8 md:py-10">
+      <div className="mb-8 flex flex-col items-center justify-center text-center">
+        <div className="rounded-[26px] bg-[linear-gradient(135deg,#bc2222_0%,#f45e5e_100%)] px-6 py-4 shadow-lg">
+          <Image src={imageStars} alt="Decoración valores" width={86} height={86} />
         </div>
-  );
-}
-
-function ValueComponent({ title, description }: { title: string; description: string }): JSX.Element {
-  return (
-    <div className="mb-8">
-      <div className="flex flex-col md:flex-row justify-between items-center gap-3 mb-3">
-        <div className="bg-gradient-to-r from-[#bc2222] to-[#f45e5e] h-[68px] rounded-[24px] w-full md:w-[75%] flex items-center px-5 shadow-md">
-          <p className="font-contrail-one text-[#ffffff] text-[28px] md:text-[32px] text-start">{title}</p>
-        </div>
-        <VolunteersWithStars />
+        <h3 className="mt-5 text-[36px] md:text-[44px] text-[#160101] font-contrail-one">Valores</h3>
       </div>
-      <p className="font-['Arimo:Regular',_sans-serif] font-normal text-[#160101] text-[18px] md:text-[20px] leading-relaxed pl-1 md:pl-2 text-justify">{description}</p>
-    </div>
+
+      <div className="grid gap-4 md:grid-cols-2">
+        {VALUES.map((value) => (
+          <article
+            key={value.title}
+            className="rounded-[28px] border border-[#f4dddd] bg-[linear-gradient(180deg,#fffafa_0%,#ffffff_100%)] p-6 shadow-[0_12px_30px_rgba(144,20,14,0.04)]"
+          >
+            <div className="inline-flex rounded-full bg-[linear-gradient(135deg,#bc2222_0%,#f45e5e_100%)] px-4 py-2 text-sm font-black tracking-[0.16em] text-white">
+              {value.title}
+            </div>
+            <p className="mt-4 text-[17px] md:text-[18px] leading-relaxed text-[#2c1818] font-arimo">
+              {value.description}
+            </p>
+          </article>
+        ))}
+      </div>
+    </section>
   );
 }
-
-function Values(): JSX.Element {
-  return (
-    <div className="px-4 py-8">
-      <h3 className="font-contrail-one text-[#160101] text-[36px] md:text-[44px] text-center mb-4">Valores</h3>
-
-      <ValueComponent title="LIDERAZGO" description="No solo cultivamos este valor en las personas con las que trabajamos sino también en el equipo y en toda la organización. Creemos en el liderazgo que incluye y transforma, que inspira y acompaña, que confía y hace que las cosas pasen." />
-
-      <ValueComponent title="COMPROMISO" description="Por llevar soluciones a problemas sociales de la mano de líderes locales y emergentes, brindando herramientas de desarrollo personal y profesional. Por dar lo mejor en cada proyecto y actividad." />
-
-      <ValueComponent title="EMPATÍA" description="El corazón de FLA son las personas. Por y para ellas trabajamos; e invertimos tiempo y recursos en el desarrollo integral de cada una, desde la autenticidad, el amor y la entrega." />
-
-      <ValueComponent title="LIBERTAD" description="De elegir, de pensar, de ser quien cada uno es respetando a los demás y sus singularidades. De guiarnos como organización por nuestros principios y tomar decisiones de forma autónoma." />
-        <ValueComponent title="INNOVACIÓN" description="Porque no tenemos miedo de reinventarnos para estar a la vanguardia, entregando programas educativos disruptivos y de calidad. Porque somos una usina de ideas que se construye de forma colaborativa minuto a minuto." />
-
-    </div>
-  );
-}
-
-export default Values;
