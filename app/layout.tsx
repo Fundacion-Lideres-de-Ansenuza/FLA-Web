@@ -21,6 +21,7 @@ const saridona = localFont({ src: "../public/fonts/Saridona_personal use.ttf", v
 const contrailOne = Contrail_One({ weight: "400", subsets: ["latin"], variable: "--font-contrail-one", display: "swap" })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.lideresdeansenuza.org"),
   title: "Fundación Líderes de Ansenuza - Jóvenes transformando la educación",
   description: "Somos una ONG que diseña y ejecuta programas educativos gratuitos en el territorio argentino.",
   keywords: "educación, jóvenes, ONG, programas educativos, Argentina, voluntariado",

@@ -217,9 +217,9 @@ export default function Testimonials() {
   }
 
   return (
-    <section className="py-8 overflow-hidden">
+    <section className="py-8 sm:py-9 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-10">
           <h2 className="text-3xl md:text-4xl text-gray-900 mb-4 tracking-tight font-contrail-one">
             {t('testimonials.title')}
           </h2>
@@ -228,35 +228,35 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="grid grid-cols-1 gap-6">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
+          <div className="grid grid-cols-1 gap-4">
             <Image
               src="/images/TESTIMONIO_1CUT.png"
               alt="Testimonio 1"
               width={200}
               height={100}
-              className="rounded-3xl w-full h-[180px] sm:h-[250px] md:h-[350px] lg:h-[400px] shadow-lg object-cover"
+              className="rounded-3xl w-full h-[180px] sm:h-[240px] md:h-[320px] lg:h-[360px] shadow-lg object-cover"
             />
-            <div className="grid grid-cols-2 gap-6 justify-center items-center">
+            <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <Image
                 src="/images/TESTIMONIO_2.png"
                 alt="Testimonio 2"
                 width={200}
                 height={200}
-                className="rounded-2xl w-full h-[140px] sm:h-[200px] md:h-[280px] lg:h-[350px] shadow-lg object-cover"
+                className="rounded-2xl w-full h-[140px] sm:h-[190px] md:h-[250px] lg:h-[290px] shadow-lg object-cover"
               />
               <Image
                 src="/images/TESTIMONIO_3_MIN.png"
                 alt="Testimonio 3"
                 width={200}
                 height={200}
-                className="rounded-2xl w-full h-[140px] sm:h-[200px] md:h-[280px] lg:h-[350px] shadow-lg object-cover"
+                className="rounded-2xl w-full h-[140px] sm:h-[190px] md:h-[250px] lg:h-[290px] shadow-lg object-cover"
               />
             </div>
           </div>
 
           <div
-            className="relative flex items-center gap-4"
+            className="relative flex items-center gap-4 rounded-[28px] border border-[#eed6d6] bg-white/90 p-4 shadow-[0_18px_44px_rgba(144,20,14,0.08)]"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >

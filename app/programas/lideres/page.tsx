@@ -9,6 +9,7 @@ import BlogLinks from "@/components/programs/BlogLinks";
 import FAQ from "@/components/programs/FAQ";
 import Sponsors from "@/components/programs/Sponsors";
 import CTASection from "@/components/programs/CTASection";
+import Gallery from "@/components/programs/Gallery";
 import { LIDERES_DATA } from "@/lib/data/programs";
 
 export const metadata: Metadata = {
@@ -108,6 +109,14 @@ export default function LideresPage() {
 
       <Sponsors sponsors={LIDERES_DATA.sponsors} />
 
+      <Gallery
+        type={LIDERES_DATA.gallery.type}
+        url={LIDERES_DATA.gallery.url}
+        images={LIDERES_DATA.gallery.images}
+        colors={LIDERES_DATA.colors}
+        title={LIDERES_DATA.title}
+      />
+
       <CTASection
         title={LIDERES_DATA.title}
         colors={LIDERES_DATA.colors}
@@ -115,4 +124,3 @@ export default function LideresPage() {
     </main>
   );
 }
-

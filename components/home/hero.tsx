@@ -9,18 +9,18 @@ export default function Hero() {
   const { t } = useTranslation()
 
   return (
-    <section className="bg-white py-8 lg:py-8">
+    <section className="bg-transparent py-6 lg:py-7">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center gap-10">
-          <div className="grid md:grid-cols-3 gap-8 items-center w-full">
-            <div className="md:col-span-2 space-y-5 text-left">
+        <div className="flex flex-col items-center gap-7 lg:gap-8">
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-center w-full rounded-[32px] border border-[#f3d7d7] bg-white/85 px-5 py-6 shadow-[0_20px_60px_rgba(144,20,14,0.06)] backdrop-blur-sm sm:px-7 lg:px-10 lg:py-8">
+            <div className="md:col-span-2 space-y-4 text-center md:text-center">
               <h1 className="text-4xl lg:text-5xl xl:text-6xl text-gray-900 leading-tight tracking-tight font-contrail-one">
                 {t('hero.title')}
               </h1>
-              <p className="text-base lg:text-lg text-gray-700 leading-relaxed font-arimo max-w-3xl">
+              <p className="text-base lg:text-lg text-gray-700 leading-relaxed font-arimo max-w-3xl mx-auto">
                 {t('hero.description')}
               </p>
-              <div className="w-2/3 h-1.5 bg-[#f45e5e] rounded-full" />
+              <div className="w-40 sm:w-52 h-1.5 bg-gradient-to-r from-[#90140e] via-[#bc2222] to-[#f45e5e] rounded-full mx-auto" />
             </div>
 
             <div className="row-start-1 md:row-auto hidden sm:flex justify-center md:justify-end">
@@ -34,12 +34,12 @@ export default function Hero() {
               alt="Jóvenes colaborando en educación"
               width={1400}
               height={500}
-              className="w-full h-[280px] sm:h-[340px] lg:h-[460px] rounded-3xl sm:rounded-[60px] lg:rounded-[90px] shadow-2xl object-cover"
+              className="w-full h-[260px] sm:h-[320px] lg:h-[420px] rounded-3xl sm:rounded-[52px] lg:rounded-[72px] shadow-[0_30px_80px_rgba(144,20,14,0.16)] object-cover"
               priority
             />
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 items-center justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 items-center justify-center">
             <Button asChild className="bg-[#90140e] hover:bg-[#a01810] text-white px-8 py-5 rounded-full text-lg md:text-xl font-bold shadow-lg transition-transform transform hover:scale-105 w-[240px] lg:w-[260px] font-contrail">
               <Link href="/contactanos">{t('hero.voluntariado')}</Link>
             </Button>

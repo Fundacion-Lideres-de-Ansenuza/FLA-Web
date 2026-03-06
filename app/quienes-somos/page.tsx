@@ -13,20 +13,27 @@ export default function QuienesSomos(): JSX.Element {
   const { t } = useTranslation();
 
   return (
-    <main className="min-h-screen bg-white max-w-6xl mx-auto px-4 md:px-6 pt-[108px] sm:pt-[120px]">
-      <Introduction />
-      <section className="bg-gradient-to-r from-[#fff4f4] via-[#fde7e7] to-[#fff4f4] rounded-3xl p-6 md:p-8 my-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-contrail-one text-gray-900 mb-3">{t('aboutUs.authorities.title')}</h2>
-        <p className="text-base md:text-lg text-gray-700 font-arimo max-w-3xl mx-auto">
-          {t('aboutUs.authorities.description')}
-        </p>
-      </section>
-      <h2 className="text-center text-3xl md:text-4xl font-contrail-one mb-4">{t('aboutUs.missionVisionValues')}</h2>
-      <Mission />
-      <Vision />
-      <Values />
-      <Volunteers />
-      <EnjoyFla />
+    <main className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(244,94,94,0.14)_0%,rgba(244,94,94,0)_32%),radial-gradient(circle_at_top_right,rgba(188,34,34,0.12)_0%,rgba(188,34,34,0)_30%),linear-gradient(180deg,#fffdfc_0%,#fff5f3_24%,#fff1ee_52%,#fff7f5_78%,#ffffff_100%)] pt-[108px] sm:pt-[120px]">
+      <div className="mx-auto w-full max-w-5xl px-4 pb-14 md:px-6 md:pb-24">
+        <Introduction />
+
+        <section className="my-8 md:my-10 px-2 text-center">
+          <h2 className="text-3xl md:text-4xl font-contrail-one text-gray-900">
+            {t('aboutUs.authorities.title')}
+          </h2>
+          <p className="mx-auto mt-3 max-w-3xl text-base md:text-lg text-gray-700 font-arimo">
+            {t('aboutUs.authorities.description')}
+          </p>
+        </section>
+
+        <div className="space-y-6 md:space-y-10">
+          <Mission />
+          <Vision />
+          <Values />
+          <Volunteers />
+          <EnjoyFla />
+        </div>
+      </div>
     </main>
   );
 }

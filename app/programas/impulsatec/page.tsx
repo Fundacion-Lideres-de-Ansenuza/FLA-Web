@@ -7,6 +7,7 @@ import ProgramStages from "@/components/programs/ProgramStages";
 import ImpactStats from "@/components/programs/ImpactStats";
 import SuccessStories from "@/components/programs/SuccessStories";
 import Sponsors from "@/components/programs/Sponsors";
+import Gallery from "@/components/programs/Gallery";
 import { IMPULSATEC_DATA } from "@/lib/data/programs";
 
 export const metadata: Metadata = {
@@ -83,7 +84,14 @@ export default function ImpulsatecPage() {
       />
 
       <Sponsors sponsors={IMPULSATEC_DATA.sponsors} />
+
+      <Gallery
+        type={IMPULSATEC_DATA.gallery.type}
+        url={IMPULSATEC_DATA.gallery.url}
+        images={IMPULSATEC_DATA.gallery.images}
+        colors={IMPULSATEC_DATA.colors}
+        title={IMPULSATEC_DATA.title}
+      />
     </main>
   );
 }
-

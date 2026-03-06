@@ -182,12 +182,65 @@ export default function AmbientaliaPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen bg-[linear-gradient(180deg,#ffffff_0%,#f3fff8_18%,#ffffff_42%,#ffffff_100%)]">
         <ProgramHeader
           title={AMBIENTALIA_DATA.title}
           description={AMBIENTALIA_DATA.shortDescription}
           colors={AMBIENTALIA_DATA.colors}
         />
+
+        <section className="relative overflow-hidden bg-[linear-gradient(135deg,#ecfdf5_0%,#ffffff_40%,#d1fae5_100%)] py-14 md:py-16">
+          <div className="absolute inset-0 opacity-60">
+            <div className="absolute -left-12 top-6 h-36 w-36 rounded-full bg-[#34d399]/30 blur-3xl" />
+            <div className="absolute right-0 top-0 h-44 w-44 rounded-full bg-[#10b981]/20 blur-3xl" />
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-6xl mx-auto grid gap-8 lg:grid-cols-[1fr_0.95fr] items-center">
+              <div className="space-y-5">
+                <span className="inline-flex rounded-full bg-[#10b981] px-4 py-1.5 text-xs font-black uppercase tracking-[0.22em] text-white shadow-lg">
+                  Identidad Ambientalia
+                </span>
+                <h2 className="text-4xl md:text-5xl font-contrail-one tracking-tight text-[#064e3b]">
+                  Una experiencia con más naturaleza, territorio e impacto visible
+                </h2>
+                <p className="max-w-2xl text-base md:text-lg leading-relaxed text-emerald-950/80 font-arimo">
+                  Reforzamos esta página con una atmósfera más verde para que respire mejor la esencia de Ambientalia:
+                  biodiversidad, liderazgo joven, comunidad y acción ambiental concreta.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  {AMBIENTALIA_DATA.stats.slice(0, 4).map((stat) => (
+                    <div
+                      key={stat.label}
+                      className="rounded-full border border-[#86efac] bg-white/85 px-4 py-2 shadow-sm"
+                    >
+                      <span className="font-contrail-one text-xl text-[#047857]">{stat.value}</span>
+                      <span className="ml-2 text-sm font-arimo text-[#14532d]">{stat.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-[32px] border border-[#bbf7d0] bg-white/80 p-6 shadow-[0_24px_60px_rgba(16,185,129,0.12)] backdrop-blur-sm">
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <div className="rounded-[24px] bg-[#10b981] px-5 py-6 text-white shadow-lg">
+                    <p className="text-xs font-black uppercase tracking-[0.2em] text-white/70">Color base</p>
+                    <p className="mt-3 font-contrail-one text-3xl">Bosque y agua</p>
+                    <p className="mt-2 text-sm font-arimo text-white/85">
+                      Una paleta que conecta con humedales, aves y territorio vivo.
+                    </p>
+                  </div>
+                  <div className="rounded-[24px] bg-[#ecfdf5] px-5 py-6 text-[#065f46] border border-[#bbf7d0]">
+                    <p className="text-xs font-black uppercase tracking-[0.2em]">Enfoque</p>
+                    <p className="mt-3 font-contrail-one text-3xl">Aprender haciendo</p>
+                    <p className="mt-2 text-sm font-arimo text-[#14532d]">
+                      El diseño acompaña la narrativa de exploración, conservación y liderazgo.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <ProgramDescription
           fullDescription={AMBIENTALIA_DATA.fullDescription}
@@ -239,6 +292,7 @@ export default function AmbientaliaPage() {
           url={AMBIENTALIA_DATA.gallery.url}
           images={AMBIENTALIA_DATA.gallery.images}
           colors={AMBIENTALIA_DATA.colors}
+          title={AMBIENTALIA_DATA.title}
         />
 
         <CTASection
@@ -249,4 +303,3 @@ export default function AmbientaliaPage() {
     </>
   );
 }
-
