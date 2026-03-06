@@ -122,13 +122,27 @@ export default function Values(): JSX.Element {
                     <path
                       d={segment.d}
                       fill={value.colors.fill}
-                      fillOpacity={isActive ? 1 : 0.82}
+                      fillOpacity={isActive ? 1 : 0.88}
                       stroke={value.colors.stroke}
                       strokeWidth={isActive ? 3.5 : 2}
                       style={{
                         filter: isActive ? `drop-shadow(0 16px 26px ${value.colors.glow})` : "none",
-                        transition: "all 220ms ease",
+                        transition: "all 180ms ease-out",
                       }}
+                    />
+                    <path
+                      d={segment.d}
+                      fill="#ffffff"
+                      fillOpacity={0.001}
+                      stroke="#ffffff"
+                      strokeOpacity={0.001}
+                      strokeWidth={18}
+                      onMouseEnter={() => setActiveIndex(index)}
+                      onClick={() => setActiveIndex(index)}
+                      onFocus={() => setActiveIndex(index)}
+                      style={{ cursor: "pointer" }}
+                      aria-label={value.title}
+                      tabIndex={0}
                     />
                   </g>
                 );
