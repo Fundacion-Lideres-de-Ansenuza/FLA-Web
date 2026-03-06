@@ -33,7 +33,7 @@ const VALUES = [
 
 export default function Values(): JSX.Element {
   return (
-    <section className="rounded-[34px] border border-[#f1d8d8] bg-white px-6 py-8 shadow-[0_22px_60px_rgba(144,20,14,0.06)] md:px-8 md:py-10">
+    <section className="px-0 py-2">
       <div className="mb-8 flex flex-col items-center justify-center text-center">
         <div className="rounded-[26px] bg-[linear-gradient(135deg,#bc2222_0%,#f45e5e_100%)] px-6 py-4 shadow-lg">
           <Image src={imageStars} alt="Decoración valores" width={86} height={86} />
@@ -41,12 +41,9 @@ export default function Values(): JSX.Element {
         <h3 className="mt-5 text-[36px] md:text-[44px] text-[#160101] font-contrail-one">Valores</h3>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2">
-        {VALUES.map((value) => (
-          <article
-            key={value.title}
-            className="rounded-[28px] border border-[#f4dddd] bg-[linear-gradient(180deg,#fffafa_0%,#ffffff_100%)] p-6 shadow-[0_12px_30px_rgba(144,20,14,0.04)]"
-          >
+      <div className="space-y-5">
+        {VALUES.map((value, index) => (
+          <article key={value.title} className={`pb-5 ${index < VALUES.length - 1 ? "border-b border-[#f1dede]" : ""}`}>
             <div className="inline-flex rounded-full bg-[linear-gradient(135deg,#bc2222_0%,#f45e5e_100%)] px-4 py-2 text-sm font-black tracking-[0.16em] text-white">
               {value.title}
             </div>

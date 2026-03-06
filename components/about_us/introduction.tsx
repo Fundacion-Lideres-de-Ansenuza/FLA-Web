@@ -11,7 +11,7 @@ export default function Introduction(): JSX.Element {
 
   return (
     <section className="pt-4 md:pt-6">
-      <div className="overflow-hidden rounded-[40px] border border-[#f1d6d6] bg-white shadow-[0_26px_80px_rgba(144,20,14,0.08)]">
+      <div className="overflow-hidden rounded-[34px] border border-[#f1d6d6] bg-white shadow-[0_18px_50px_rgba(144,20,14,0.05)]">
         <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
           <div className="flex flex-col justify-center px-6 py-8 md:px-10 md:py-12 lg:px-12">
             <span className="inline-flex w-fit rounded-full bg-[#bc2222] px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-white shadow-lg">
@@ -39,7 +39,7 @@ export default function Introduction(): JSX.Element {
         </div>
       </div>
 
-      <div className="mx-auto mt-6 md:mt-8 max-w-5xl rounded-[32px] border border-[#f4dddd] bg-white/90 px-6 py-6 shadow-[0_20px_60px_rgba(144,20,14,0.05)] md:px-8 md:py-8">
+      <div className="mt-6 md:mt-8 px-1 md:px-2">
         <div className="space-y-5 text-[17px] md:text-[19px] leading-relaxed text-[#2c1818] font-arimo">
           <p>{t('aboutUs.foundation.paragraph1')}</p>
           <p>{t('aboutUs.foundation.paragraph2')}</p>

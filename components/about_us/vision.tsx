@@ -5,9 +5,9 @@ const girlVision = "/images/about_us/girlVision.png";
 
 export default function Vision(): JSX.Element {
   return (
-    <section className="overflow-hidden rounded-[34px] border border-[#f1d8d8] bg-white shadow-[0_22px_60px_rgba(144,20,14,0.06)]">
+    <section className="overflow-hidden">
       <div className="grid items-center gap-0 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="px-6 py-8 md:px-10 md:py-10">
+        <div className="px-0 py-6 md:px-2 md:py-8 lg:pr-8">
           <span className="inline-flex rounded-full bg-[#90140e] px-4 py-1.5 text-xs font-black uppercase tracking-[0.22em] text-white shadow-lg">
             Visión
           </span>
@@ -17,7 +17,7 @@ export default function Vision(): JSX.Element {
           </p>
         </div>
 
-        <div className="relative min-h-[260px] lg:min-h-full">
+        <div className="relative min-h-[240px] overflow-hidden rounded-[30px]">
           <Image
             src={girlVision}
             alt="Visión de la fundación"

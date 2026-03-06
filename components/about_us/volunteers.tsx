@@ -5,7 +5,7 @@ const flaMap = "/images/mapa-fla.png";
 
 export default function Volunteers(): JSX.Element {
   return (
-    <section className="grid items-center gap-6 rounded-[34px] border border-[#f1d8d8] bg-white px-6 py-8 shadow-[0_22px_60px_rgba(144,20,14,0.06)] lg:grid-cols-[0.78fr_1.22fr] md:px-8 md:py-10">
+    <section className="grid items-center gap-6 lg:grid-cols-[0.78fr_1.22fr]">
       <div className="flex justify-center">
         <div className="w-full max-w-[360px] rounded-[30px] bg-[linear-gradient(180deg,#fff4f4_0%,#ffffff_100%)] px-6 py-8 text-center shadow-[0_18px_40px_rgba(144,20,14,0.08)]">
           <p className="text-xs font-black uppercase tracking-[0.24em] text-[#bc2222]">Comunidad activa</p>
@@ -16,13 +16,13 @@ export default function Volunteers(): JSX.Element {
         </div>
       </div>
 
-      <div className="overflow-hidden rounded-[30px] border border-[#f4dddd] bg-[#fffafa] p-3 shadow-[0_18px_40px_rgba(144,20,14,0.05)]">
+      <div className="overflow-hidden rounded-[30px]">
         <Image
           src={flaMap}
           alt="Mapa de voluntarios"
           width={900}
           height={620}
-          className="h-auto w-full rounded-[24px] object-cover"
+          className="h-auto w-full rounded-[24px] object-cover shadow-[0_18px_40px_rgba(144,20,14,0.05)]"
         />
       </div>
     </section>
