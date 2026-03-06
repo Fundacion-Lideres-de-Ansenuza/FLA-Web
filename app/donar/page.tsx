@@ -69,8 +69,8 @@ export default function DonationPage() {
 
   return (
     <main className="min-h-screen bg-[linear-gradient(180deg,#ffffff_0%,#fff7f6_30%,#ffffff_100%)] pt-[108px] sm:pt-[120px] pb-20 overflow-x-hidden">
-      <div className="container mx-auto px-4 max-w-6xl pt-8">
-        <div className="flex flex-col items-center gap-6 text-center mb-14">
+      <div className="container mx-auto px-4 max-w-6xl pt-6 md:pt-8">
+        <div className="flex flex-col items-center gap-5 text-center mb-10 md:mb-14">
           <h1 className="text-5xl lg:text-7xl text-gray-900 leading-tight tracking-tight font-contrail-one">
             {t("donate.title").split(" ").map((word, i) =>
               word === "Donar?" || word === "Donate?" ? (
@@ -88,8 +88,8 @@ export default function DonationPage() {
           <div className="w-32 h-1.5 bg-[#f45e5e] rounded-full" />
         </div>
 
-        <div className="rounded-[40px] sm:rounded-[56px] border border-[#f1dddd] bg-white/85 p-6 md:p-10 shadow-[0_24px_70px_rgba(144,20,14,0.08)] backdrop-blur-sm">
-          <div className="mb-10 flex justify-center">
+        <div className="rounded-[40px] sm:rounded-[56px] border border-[#f1dddd] bg-white/85 p-5 md:p-10 shadow-[0_24px_70px_rgba(144,20,14,0.08)] backdrop-blur-sm">
+          <div className="mb-8 md:mb-10 flex justify-center">
             <div className="flex flex-wrap justify-center gap-3 rounded-full border border-[#eed9d9] bg-[#fff8f7] p-2 shadow-sm">
               {tabs.map((tab) => (
                 <button
@@ -109,7 +109,7 @@ export default function DonationPage() {
 
           <div className="min-h-[420px]">
             {activeTab === "online" && (
-              <div className="mx-auto max-w-5xl animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-10">
+              <div className="mx-auto max-w-5xl animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-8 md:space-y-10">
                 <div className="text-center space-y-4">
                   <h2 className="font-contrail-one text-4xl md:text-5xl text-gray-900 uppercase">{t("donate.online.title")}</h2>
                   <p className="font-arimo text-gray-600 text-lg max-w-2xl mx-auto italic">&quot;{t("donate.online.description")}&quot;</p>
@@ -128,7 +128,7 @@ export default function DonationPage() {
             )}
 
             {activeTab === "paypal" && (
-              <div className="mx-auto max-w-5xl animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-10">
+              <div className="mx-auto max-w-5xl animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-8 md:space-y-10">
                 <div className="text-center space-y-4">
                   <h2 className="font-contrail-one text-4xl md:text-5xl text-gray-900 uppercase">{t("donate.paypal.title")}</h2>
                   <p className="font-arimo text-gray-600 text-lg max-w-2xl mx-auto italic">&quot;{t("donate.paypal.description")}&quot;</p>
