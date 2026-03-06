@@ -13,7 +13,7 @@ export default function QuienesSomos(): JSX.Element {
   const { t } = useTranslation();
 
   return (
-    <main className="min-h-screen bg-[linear-gradient(180deg,#ffffff_0%,#fff8f8_26%,#ffffff_100%)] pt-[108px] sm:pt-[120px]">
+    <main className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(244,94,94,0.14)_0%,rgba(244,94,94,0)_32%),radial-gradient(circle_at_top_right,rgba(188,34,34,0.12)_0%,rgba(188,34,34,0)_30%),linear-gradient(180deg,#fffdfc_0%,#fff5f3_24%,#fff1ee_52%,#fff7f5_78%,#ffffff_100%)] pt-[108px] sm:pt-[120px]">
       <div className="mx-auto w-full max-w-5xl px-4 pb-14 md:px-6 md:pb-24">
         <Introduction />
 
