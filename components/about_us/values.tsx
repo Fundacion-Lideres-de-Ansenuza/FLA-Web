@@ -1,16 +1,12 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
 import { JSX, useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 
-const imageStars = "/images/voluntarioEstrellitas.png";
-
-const VALUES = [
+const VALUE_DEFINITIONS = [
   {
-    title: "LIDERAZGO",
-    description:
-      "No solo cultivamos este valor en las personas con las que trabajamos, sino también en el equipo y en toda la organización. Creemos en un liderazgo que incluye, transforma, inspira y hace que las cosas pasen.",
+    key: "leadership",
     colors: {
       fill: "#8f1f1b",
       stroke: "#f6c5bf",
@@ -18,9 +14,7 @@ const VALUES = [
     },
   },
   {
-    title: "COMPROMISO",
-    description:
-      "Impulsamos soluciones a problemas sociales junto a líderes locales y emergentes, brindando herramientas de desarrollo personal y profesional y dando lo mejor de nosotros en cada proyecto y actividad.",
+    key: "commitment",
     colors: {
       fill: "#a82822",
       stroke: "#f1b1aa",
@@ -28,9 +22,7 @@ const VALUES = [
     },
   },
   {
-    title: "EMPATÍA",
-    description:
-      "El corazón de FLA son las personas. Por y para ellas trabajamos, invirtiendo tiempo y recursos en el desarrollo integral de cada una, desde la autenticidad, el amor y la entrega.",
+    key: "empathy",
     colors: {
       fill: "#c03d34",
       stroke: "#f5bfb8",
@@ -38,9 +30,7 @@ const VALUES = [
     },
   },
   {
-    title: "LIBERTAD",
-    description:
-      "Defendemos la libertad de elegir, pensar y ser, respetando a los demás y sus singularidades. También nos guiamos por nuestros principios para decidir con autonomía como organización.",
+    key: "freedom",
     colors: {
       fill: "#d95a4d",
       stroke: "#f8cbc3",
@@ -48,9 +38,7 @@ const VALUES = [
     },
   },
   {
-    title: "INNOVACIÓN",
-    description:
-      "Nos reinventamos para mantenernos a la vanguardia, con propuestas educativas disruptivas y de calidad. Somos una usina de ideas construida de manera colaborativa, con movimiento constante.",
+    key: "innovation",
     colors: {
       fill: "#eb7a63",
       stroke: "#ffd8d0",
@@ -100,38 +88,33 @@ function createSegmentPath(startAngle: number, endAngle: number): SegmentPath {
 }
 
 export default function Values(): JSX.Element {
+  const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const values = useMemo(() => {
+    return VALUE_DEFINITIONS.map((valueDefinition) => ({
+      ...valueDefinition,
+      title: t(`aboutUs.values.${valueDefinition.key}.title`),
+      description: t(`aboutUs.values.${valueDefinition.key}.description`),
+    }));
+  }, [t]);
 
   const segments = useMemo(() => {
     const start = 180;
-    const sweep = 180 / VALUES.length;
-    return VALUES.map((_, index) =>
+    const sweep = 180 / values.length;
+    return values.map((_, index) =>
       createSegmentPath(start - sweep * index, start - sweep * (index + 1))
     );
-  }, []);
+  }, [values]);
 
   return (
-    <section className="px-0 py-2">
-      <div className="mb-8 flex flex-col items-center justify-center text-center">
-        <div className="rounded-[26px] bg-[linear-gradient(135deg,#bc2222_0%,#f45e5e_100%)] px-6 py-4 shadow-lg">
-          <Image src={imageStars} alt="Decoración valores" width={86} height={86} />
-        </div>
-        <h3 className="mt-5 text-[36px] text-[#160101] md:text-[44px] font-contrail-one">Valores</h3>
-      </div>
-
+    <section className="px-0 py-0 -mt-2">
       <div className="mx-auto max-w-4xl">
-        <div className="relative overflow-hidden rounded-t-[220px] rounded-b-[30px] border border-[#efd3ce] bg-[radial-gradient(circle_at_50%_100%,#fff8f6_0%,#fff1ee_48%,#ffffff_100%)] px-3 pb-6 pt-5 shadow-[0_24px_70px_rgba(144,20,14,0.08)] md:px-6 md:pb-8">
-          <div className="absolute inset-x-8 bottom-0 top-[34%] rounded-t-[999px] bg-[radial-gradient(circle_at_50%_110%,rgba(255,255,255,0.98)_0%,rgba(255,245,242,0.96)_55%,rgba(252,231,227,0.92)_100%)]" />
-          <div className="absolute inset-x-[12%] bottom-[8%] top-[42%] rounded-t-[999px] border border-white/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.34)_0%,rgba(255,255,255,0.82)_100%)] blur-[1px]" />
-
+        <div className="relative">
           <div className="relative aspect-[10/7] w-full">
-            <svg viewBox="0 0 1000 620" className="h-full w-full" aria-hidden="true">
-              <path
-                d="M 70 520 A 430 430 0 0 1 930 520 L 770 520 A 270 270 0 0 0 230 520 Z"
-                fill="rgba(255,255,255,0.54)"
-              />
+            <svg viewBox="0 0 1000 560" className="h-full w-full" aria-hidden="true">
               {segments.map((segment, index) => {
-                const value = VALUES[index];
+                const value = values[index];
                 const isActive = activeIndex === index;
 
                 return (
@@ -139,13 +122,27 @@ export default function Values(): JSX.Element {
                     <path
                       d={segment.d}
                       fill={value.colors.fill}
-                      fillOpacity={isActive ? 1 : 0.82}
+                      fillOpacity={isActive ? 1 : 0.88}
                       stroke={value.colors.stroke}
                       strokeWidth={isActive ? 3.5 : 2}
                       style={{
                         filter: isActive ? `drop-shadow(0 16px 26px ${value.colors.glow})` : "none",
-                        transition: "all 220ms ease",
+                        transition: "all 180ms ease-out",
                       }}
+                    />
+                    <path
+                      d={segment.d}
+                      fill="#ffffff"
+                      fillOpacity={0.001}
+                      stroke="#ffffff"
+                      strokeOpacity={0.001}
+                      strokeWidth={18}
+                      onMouseEnter={() => setActiveIndex(index)}
+                      onClick={() => setActiveIndex(index)}
+                      onFocus={() => setActiveIndex(index)}
+                      style={{ cursor: "pointer" }}
+                      aria-label={value.title}
+                      tabIndex={0}
                     />
                   </g>
                 );
@@ -153,10 +150,10 @@ export default function Values(): JSX.Element {
             </svg>
 
             {segments.map((segment, index) => {
-              const value = VALUES[index];
+              const value = values[index];
               const isActive = activeIndex === index;
               const xPercent = (segment.labelX / 1000) * 100;
-              const yPercent = (segment.labelY / 620) * 100;
+              const yPercent = (segment.labelY / 560) * 100;
 
               return (
                 <button
@@ -185,25 +182,26 @@ export default function Values(): JSX.Element {
               );
             })}
 
-            <div className="absolute inset-x-[8%] bottom-[5%] top-[39%] flex items-center justify-center px-5 text-center md:inset-x-[13%] md:px-12">
+          </div>
+
+          <div className="mt-2 px-4 text-center md:mt-3 md:px-8 lg:mt-4">
               <AnimatePresence mode="wait">
                 <motion.div
-                  key={VALUES[activeIndex].title}
+                  key={values[activeIndex].title}
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
                   transition={{ duration: 0.26, ease: "easeOut" }}
-                  className="w-full"
+                  className="mx-auto max-w-2xl text-center"
                 >
                   <p className="text-[11px] font-black uppercase tracking-[0.34em] text-[#9d211c] md:text-[12px]">
-                    {VALUES[activeIndex].title}
+                    {values[activeIndex].title}
                   </p>
-                  <p className="mx-auto mt-3 max-w-[32rem] text-[15px] leading-relaxed text-[#341715] md:text-[18px]">
-                    {VALUES[activeIndex].description}
+                  <p className="mt-3 text-[15px] leading-relaxed text-[#341715] md:text-[18px]">
+                    {values[activeIndex].description}
                   </p>
                 </motion.div>
               </AnimatePresence>
-            </div>
           </div>
         </div>
       </div>
