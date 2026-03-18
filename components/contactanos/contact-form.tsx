@@ -5,7 +5,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Send, HeartHandshake, Mail, PhoneCall } from "lucide-react"
+import { Send, HeartHandshake } from "lucide-react"
 import { useTranslation } from "react-i18next"
 
 export default function ContactForm() {
@@ -69,39 +69,7 @@ export default function ContactForm() {
               </p>
             </div>
 
-            <div className="mt-8 space-y-4">
-              <div className="rounded-[1.4rem] border border-[#bc2222]/10 bg-white/90 p-4 shadow-[0_14px_35px_rgba(188,34,34,0.08)]">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#f45e5e]/12 text-[#bc2222]">
-                    <Mail className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <p className="font-arimo text-xs font-bold uppercase tracking-[0.18em] text-[#bc2222]">
-                      {t("contact.info.email")}
-                    </p>
-                    <p className="font-arimo text-sm text-black/65">
-                      {t("contact.info.emailResponse")}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-[1.4rem] border border-[#bc2222]/10 bg-[#90140e] p-4 text-white shadow-[0_18px_40px_rgba(144,20,14,0.18)]">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/12 text-white">
-                    <PhoneCall className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <p className="font-arimo text-xs font-bold uppercase tracking-[0.18em] text-white/70">
-                      {t("contact.info.officeHours")}
-                    </p>
-                    <p className="font-arimo text-sm text-white/80">
-                      {t("contact.info.phoneHours")}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div className="mt-8 h-px w-full max-w-[14rem] bg-[linear-gradient(90deg,rgba(188,34,34,0.42)_0%,rgba(244,94,94,0.18)_100%)]" />
           </div>
 
           <div className="p-7 md:p-8 lg:p-10">
