@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { CheckCircle2, Globe, CreditCard, Landmark, ArrowRight, Mail, Copy } from "lucide-react"
+import { CheckCircle2, Globe, CreditCard, Landmark, Mail, Copy } from "lucide-react"
 import { useTranslation } from "react-i18next"
 
 const DARK_BROWN = "#90140e"
@@ -11,40 +11,69 @@ const DARK_BROWN = "#90140e"
 function TimelineSteps({ steps, accent }: { steps: string[]; accent: string }) {
   return (
     <div className="relative mx-auto max-w-4xl">
-      <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-[#e8caca] to-transparent md:block" />
-      <div className="space-y-5">
-        {steps.map((step, i) => {
-          const isRight = i % 2 === 1
-          return (
-            <div key={i} className={`grid items-center gap-4 md:grid-cols-2 ${isRight ? "" : ""}`}>
-              <div className={`${isRight ? "md:order-2" : ""}`}>
-                <div className="flex items-center gap-4">
-                  <div className="hidden md:flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-4 border-white text-sm font-black text-white shadow-lg" style={{ backgroundColor: accent }}>
-                    {i + 1}
-                  </div>
-                  <div className="w-full rounded-[26px] border border-[#f1dcdc] bg-white px-5 py-5 shadow-[0_16px_40px_rgba(144,20,14,0.06)]">
-                    <div className="mb-3 flex md:hidden h-9 w-9 items-center justify-center rounded-full text-sm font-black text-white" style={{ backgroundColor: accent }}>
-                      {i + 1}
-                    </div>
-                    <p className="font-arimo text-gray-700 text-sm md:text-base leading-relaxed">{step}</p>
-                  </div>
-                </div>
+      <div className="absolute left-4 top-2 hidden h-[calc(100%-1rem)] w-px bg-gradient-to-b from-transparent via-[#e8caca] to-transparent md:block" />
+      <div className="space-y-4 md:space-y-5">
+        {steps.map((step, i) => (
+          <div
+            key={i}
+            className="relative transition-transform duration-300"
+            style={{ marginLeft: `${Math.min(i * 1.5, 5.5)}rem` }}
+          >
+            <div className="flex items-start gap-4 md:gap-5">
+              <div
+                className="relative z-10 hidden h-11 w-11 shrink-0 items-center justify-center rounded-[18px] border-4 border-white text-sm font-black text-white shadow-lg md:flex"
+                style={{ backgroundColor: accent }}
+              >
+                {i + 1}
               </div>
-              <div className={`${isRight ? "md:order-1" : ""} hidden md:block`} />
+              <div className="relative w-full rounded-[28px] border border-[#f1dcdc] bg-white px-5 py-5 shadow-[0_16px_40px_rgba(144,20,14,0.06)] md:px-6">
+                <div
+                  className="mb-3 flex h-9 w-9 items-center justify-center rounded-[14px] text-sm font-black text-white md:hidden"
+                  style={{ backgroundColor: accent }}
+                >
+                  {i + 1}
+                </div>
+                <p className="font-arimo text-sm leading-relaxed text-gray-700 md:text-base">{step}</p>
+              </div>
             </div>
-          )
-        })}
+          </div>
+        ))}
       </div>
     </div>
   )
+}
+
+function DonationChip({ href }: { href: string }) {
+  return (
+    <Button
+      asChild
+      className="rounded-full px-8 py-6 text-sm font-black tracking-[0.28em] text-white shadow-[0_18px_40px_rgba(144,20,14,0.16)] transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_22px_46px_rgba(144,20,14,0.2)]"
+      style={{ backgroundColor: DARK_BROWN }}
+    >
+      <Link href={href}>DONAR</Link>
+    </Button>
+  )
+}
+
+function WelcomeNote() {
+  return <p className="text-center font-arimo text-base text-gray-600 md:text-lg">Recibirás un mail de bienvenida con el detalle.</p>
 }
 
 export default function DonationPage() {
   const { t } = useTranslation()
   const [activeTab, setActiveTab] = useState("online")
 
-  const onlineSteps = t("donate.online.steps", { returnObjects: true }) as string[]
-  const paypalSteps = t("donate.paypal.steps", { returnObjects: true }) as string[]
+  const onlineSteps = [
+    "Seleccioná el botón donar y elegí el monto.",
+    "Definí la frecuencia de donación y completa con tus datos personales.",
+    "Confirmá el medio de pago y presioná 'Donar a Fundación Líderes de Ansenuza'.",
+  ]
+
+  const paypalSteps = [
+    "Seleccioná el botón donar y elegí el monto.",
+    "Elegí PayPal como medio de pago y completá tus datos personales.",
+    "Confirmá la donación única y presioná 'Donar a Fundación Líderes de Ansenuza'.",
+  ]
 
   const bankData = {
     cbu: "0000000000000000000000",
@@ -68,34 +97,22 @@ export default function DonationPage() {
   ]
 
   return (
-    <main className="min-h-screen bg-[linear-gradient(180deg,#ffffff_0%,#fff7f6_30%,#ffffff_100%)] pt-[108px] sm:pt-[120px] pb-20 overflow-x-hidden">
-      <div className="container mx-auto px-4 max-w-6xl pt-6 md:pt-8">
-        <div className="flex flex-col items-center gap-5 text-center mb-10 md:mb-14">
-          <h1 className="text-5xl lg:text-7xl text-gray-900 leading-tight tracking-tight font-contrail-one">
-            {t("donate.title").split(" ").map((word, i) =>
-              word === "Donar?" || word === "Donate?" ? (
-                <span key={i} className="text-[#bc2222]">
-                  {word}
-                </span>
-              ) : (
-                <span key={i}>{word} </span>
-              )
-            )}
-          </h1>
-          <p className="font-arimo text-lg md:text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed">
-            {t("donate.subtitle")}
-          </p>
-          <div className="w-32 h-1.5 bg-[#f45e5e] rounded-full" />
+    <main className="min-h-screen overflow-x-hidden bg-[linear-gradient(180deg,#ffffff_0%,#fff7f6_30%,#ffffff_100%)] pb-20 pt-[108px] sm:pt-[120px]">
+      <div className="container mx-auto max-w-6xl px-4 pt-6 md:pt-8">
+        <div className="mb-10 flex flex-col items-center gap-5 text-center md:mb-14">
+          <h1 className="text-5xl leading-tight tracking-tight text-gray-900 lg:text-7xl font-contrail-one">¿Cómo Donar?</h1>
+          <p className="mx-auto max-w-2xl font-arimo text-lg leading-relaxed text-gray-700 md:text-xl">{t("donate.subtitle")}</p>
+          <div className="h-1.5 w-32 rounded-full bg-[#f45e5e]" />
         </div>
 
-        <div className="rounded-[40px] sm:rounded-[56px] border border-[#f1dddd] bg-white/85 p-5 md:p-10 shadow-[0_24px_70px_rgba(144,20,14,0.08)] backdrop-blur-sm">
-          <div className="mb-8 md:mb-10 flex justify-center">
+        <div className="rounded-[40px] border border-[#f1dddd] bg-white/85 p-5 shadow-[0_24px_70px_rgba(144,20,14,0.08)] backdrop-blur-sm sm:rounded-[56px] md:p-10">
+          <div className="mb-8 flex justify-center md:mb-10">
             <div className="flex flex-wrap justify-center gap-3 rounded-full border border-[#eed9d9] bg-[#fff8f7] p-2 shadow-sm">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center rounded-full px-6 py-3 font-arimo text-sm sm:text-base font-bold transition-all duration-300 ${
+                  className={`flex items-center rounded-full px-6 py-3 font-arimo text-sm font-bold transition-all duration-300 sm:text-base ${
                     activeTab === tab.id ? "scale-[1.02] text-white shadow-md" : "text-[#7b5a57] hover:bg-white"
                   }`}
                   style={activeTab === tab.id ? { backgroundColor: DARK_BROWN } : {}}
@@ -109,79 +126,73 @@ export default function DonationPage() {
 
           <div className="min-h-[420px]">
             {activeTab === "online" && (
-              <div className="mx-auto max-w-5xl animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-8 md:space-y-10">
-                <div className="text-center space-y-4">
-                  <h2 className="font-contrail-one text-4xl md:text-5xl text-gray-900 uppercase">{t("donate.online.title")}</h2>
-                  <p className="font-arimo text-gray-600 text-lg max-w-2xl mx-auto italic">&quot;{t("donate.online.description")}&quot;</p>
+              <div className="mx-auto max-w-5xl space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500 md:space-y-10">
+                <div className="space-y-4 text-center">
+                  <h2 className="font-contrail-one text-4xl text-gray-900 uppercase md:text-5xl">{t("donate.online.title")}</h2>
+                  <p className="mx-auto max-w-2xl font-arimo text-lg italic text-gray-600">&quot;{t("donate.online.description")}&quot;</p>
                 </div>
 
                 <TimelineSteps steps={onlineSteps} accent="#bc2222" />
+                <WelcomeNote />
 
                 <div className="flex justify-center">
-                  <Button asChild className="rounded-full px-12 py-8 text-xl font-contrail text-white shadow-lg transition-all group hover:shadow-[0_18px_40px_rgba(144,20,14,0.18)]" style={{ backgroundColor: DARK_BROWN }}>
-                    <Link href="https://donaronline.org">
-                      {t("donate.online.button")} <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </Button>
+                  <DonationChip href="https://donaronline.org" />
                 </div>
               </div>
             )}
 
             {activeTab === "paypal" && (
-              <div className="mx-auto max-w-5xl animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-8 md:space-y-10">
-                <div className="text-center space-y-4">
-                  <h2 className="font-contrail-one text-4xl md:text-5xl text-gray-900 uppercase">{t("donate.paypal.title")}</h2>
-                  <p className="font-arimo text-gray-600 text-lg max-w-2xl mx-auto italic">&quot;{t("donate.paypal.description")}&quot;</p>
+              <div className="mx-auto max-w-5xl space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500 md:space-y-10">
+                <div className="space-y-4 text-center">
+                  <h2 className="font-contrail-one text-4xl text-gray-900 uppercase md:text-5xl">{t("donate.paypal.title")}</h2>
+                  <p className="mx-auto max-w-2xl font-arimo text-lg italic text-gray-600">&quot;{t("donate.paypal.description")}&quot;</p>
                 </div>
 
                 <TimelineSteps steps={paypalSteps} accent="#bc2222" />
+                <WelcomeNote />
 
                 <div className="flex justify-center">
-                  <Button asChild className="rounded-full px-12 py-8 text-xl font-contrail text-white shadow-lg transition-all group hover:shadow-[0_18px_40px_rgba(144,20,14,0.18)]" style={{ backgroundColor: DARK_BROWN }}>
-                    <Link href="https://paypal.me">
-                      {t("donate.paypal.button")} <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </Button>
+                  <DonationChip href="https://paypal.me" />
                 </div>
               </div>
             )}
 
             {activeTab === "transfer" && (
-              <div className="mx-auto max-w-4xl space-y-10 animate-in fade-in slide-in-from-bottom-4 duration-500">
-                <div className="text-center space-y-4">
-                  <h2 className="font-contrail-one text-4xl md:text-5xl text-gray-900 uppercase">{t("donate.transfer.title")}</h2>
-                  <p className="font-arimo text-gray-600 text-lg max-w-2xl mx-auto">{t("donate.transfer.description")}</p>
+              <div className="mx-auto max-w-4xl animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-10">
+                <div className="space-y-4 text-center">
+                  <h2 className="font-contrail-one text-4xl text-gray-900 uppercase md:text-5xl">{t("donate.transfer.title")}</h2>
+                  <p className="mx-auto max-w-2xl font-arimo text-lg text-gray-600">{t("donate.transfer.description")}</p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-white p-8 rounded-[34px] border border-[#f1dcdc] shadow-[0_18px_50px_rgba(144,20,14,0.06)] space-y-8 relative">
+                <div className="grid gap-6 md:grid-cols-2">
+                  <div className="relative space-y-8 rounded-[34px] border border-[#f1dcdc] bg-white p-8 shadow-[0_18px_50px_rgba(144,20,14,0.06)]">
                     <div className="space-y-4">
                       <div className="space-y-1">
-                        <p className="text-xs font-black text-[#90140e] uppercase tracking-widest">{t("donate.transfer.cbu")}</p>
+                        <p className="text-xs font-black uppercase tracking-widest text-[#90140e]">{t("donate.transfer.cbu")}</p>
                         <div className="flex items-center justify-between gap-2">
-                          <p className="font-arimo text-2xl text-gray-800 break-all select-all font-medium leading-none">{bankData.cbu}</p>
-                          <button onClick={() => copyToClipboard(bankData.cbu, "cbu")} className="p-2 hover:bg-gray-100 rounded-lg transition-colors text-gray-400 hover:text-[#90140e]">
-                            {copied === "cbu" ? <CheckCircle2 className="w-5 h-5 text-green-500" /> : <Copy className="w-5 h-5" />}
+                          <p className="select-all break-all font-arimo text-2xl font-medium leading-none text-gray-800">{bankData.cbu}</p>
+                          <button onClick={() => copyToClipboard(bankData.cbu, "cbu")} className="rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-[#90140e]">
+                            {copied === "cbu" ? <CheckCircle2 className="h-5 w-5 text-green-500" /> : <Copy className="h-5 w-5" />}
                           </button>
                         </div>
                       </div>
-                      <div className="space-y-1 pt-4 border-t border-gray-100">
-                        <p className="text-xs font-black text-[#90140e] uppercase tracking-widest">{t("donate.transfer.alias")}</p>
+                      <div className="space-y-1 border-t border-gray-100 pt-4">
+                        <p className="text-xs font-black uppercase tracking-widest text-[#90140e]">{t("donate.transfer.alias")}</p>
                         <div className="flex items-center justify-between gap-2">
-                          <p className="font-arimo text-2xl text-gray-800 select-all font-medium leading-none">{bankData.alias}</p>
-                          <button onClick={() => copyToClipboard(bankData.alias, "alias")} className="p-2 hover:bg-gray-100 rounded-lg transition-colors text-gray-400 hover:text-[#90140e]">
-                            {copied === "alias" ? <CheckCircle2 className="w-5 h-5 text-green-500" /> : <Copy className="w-5 h-5" />}
+                          <p className="select-all font-arimo text-2xl font-medium leading-none text-gray-800">{bankData.alias}</p>
+                          <button onClick={() => copyToClipboard(bankData.alias, "alias")} className="rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-[#90140e]">
+                            {copied === "alias" ? <CheckCircle2 className="h-5 w-5 text-green-500" /> : <Copy className="h-5 w-5" />}
                           </button>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="p-8 rounded-[34px] text-white flex flex-col justify-center gap-8 shadow-[0_18px_50px_rgba(144,20,14,0.14)]" style={{ backgroundColor: DARK_BROWN }}>
+                  <div className="flex flex-col justify-center gap-8 rounded-[34px] p-8 text-white shadow-[0_18px_50px_rgba(144,20,14,0.14)]" style={{ backgroundColor: DARK_BROWN }}>
                     <div className="space-y-6">
                       <div className="flex items-center gap-4">
                         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/20">
-                          <CheckCircle2 className="w-6 h-6" />
+                          <CheckCircle2 className="h-6 w-6" />
                         </div>
                         <div className="space-y-0.5">
                           <p className="text-[10px] font-bold uppercase tracking-widest opacity-70">{t("donate.transfer.name")}</p>
@@ -190,7 +201,7 @@ export default function DonationPage() {
                       </div>
                       <div className="flex items-center gap-4">
                         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/20">
-                          <CheckCircle2 className="w-6 h-6" />
+                          <CheckCircle2 className="h-6 w-6" />
                         </div>
                         <div className="space-y-0.5">
                           <p className="text-[10px] font-bold uppercase tracking-widest opacity-70">{t("donate.transfer.cuit")}</p>
@@ -201,13 +212,13 @@ export default function DonationPage() {
                   </div>
                 </div>
 
-                <div className="border border-[#edd6d2] bg-[#fff8f7] p-8 rounded-[32px] flex flex-col md:flex-row items-center md:items-start gap-6">
-                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg" style={{ backgroundColor: DARK_BROWN }}>
-                    <Mail className="w-7 h-7 text-white" />
+                <div className="flex flex-col items-center gap-6 rounded-[32px] border border-[#edd6d2] bg-[#fff8f7] p-8 text-center md:flex-row md:items-start md:text-left">
+                  <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl shadow-lg" style={{ backgroundColor: DARK_BROWN }}>
+                    <Mail className="h-7 w-7 text-white" />
                   </div>
-                  <div className="space-y-3 text-center md:text-left">
+                  <div className="space-y-3">
                     <h3 className="font-contrail-one text-2xl text-gray-900">{t("donate.transfer.receiptTitle")}</h3>
-                    <p className="font-arimo text-gray-700 leading-relaxed">
+                    <p className="font-arimo leading-relaxed text-gray-700">
                       {t("donate.transfer.receiptText").split(t("donate.transfer.contactPage"))[0]}
                       <Link href="/contactanos" className="font-bold hover:underline" style={{ color: DARK_BROWN }}>
                         {t("donate.transfer.contactPage")}
