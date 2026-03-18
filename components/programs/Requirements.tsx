@@ -11,38 +11,36 @@ interface RequirementsProps {
 
 export default function Requirements({ requirements, colors }: RequirementsProps) {
   return (
-    <section className="py-16 md:py-24" style={{ backgroundColor: `${colors.primary}0d` }}>
+    <section className="py-12 md:py-16" style={{ backgroundColor: `${colors.primary}0d` }}>
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="mx-auto max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="mb-10 text-center"
           >
-            <h2 className="text-3xl md:text-4xl text-gray-900 mb-3 font-contrail-one">Requisitos</h2>
-            <p className="text-base md:text-lg text-gray-600 font-arimo">
-              Para participar del programa, deberás cumplir con los siguientes requisitos:
+            <h2 className="mb-3 text-3xl md:text-4xl font-contrail-one" style={{ color: colors.secondary }}>
+              Requisitos
+            </h2>
+            <p className="text-base text-gray-600 md:text-lg font-arimo">
+              Para participar del programa, deberas cumplir con los siguientes requisitos:
             </p>
           </motion.div>
 
-          <div className="space-y-4">
+          <div className="space-y-3.5">
             {requirements.map((requirement, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex items-start gap-4 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                className="flex items-start gap-4 rounded-xl bg-white p-5 shadow-sm transition-shadow duration-300 hover:shadow-md"
               >
-                <CheckCircle2
-                  className="flex-shrink-0 mt-1"
-                  size={28}
-                  style={{ color: colors.primary }}
-                />
-                <p className="text-lg text-gray-700">{requirement}</p>
+                <CheckCircle2 className="mt-1 flex-shrink-0" size={26} style={{ color: colors.primary }} />
+                <p className="text-base text-gray-700 md:text-lg">{requirement}</p>
               </motion.div>
             ))}
           </div>
@@ -51,4 +49,3 @@ export default function Requirements({ requirements, colors }: RequirementsProps
     </section>
   );
 }
-

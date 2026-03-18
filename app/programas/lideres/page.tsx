@@ -73,6 +73,7 @@ export default function LideresPage() {
         location={LIDERES_DATA.location}
         duration={LIDERES_DATA.duration}
         modality={LIDERES_DATA.modality}
+        colors={LIDERES_DATA.colors}
       />
 
       <Requirements

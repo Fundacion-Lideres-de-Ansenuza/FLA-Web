@@ -11,20 +11,25 @@ interface EnrollmentInfoProps {
   isHistorical?: boolean;
 }
 
-export default function EnrollmentInfo({ description, availablePeriod, colors, isHistorical = false }: EnrollmentInfoProps) {
+export default function EnrollmentInfo({
+  description,
+  availablePeriod,
+  colors,
+  isHistorical = false,
+}: EnrollmentInfoProps) {
   return (
-    <section id="inscripcion" className="py-16 md:py-24 bg-white">
+    <section id="inscripcion" className="bg-white py-12 md:py-16">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="mx-auto max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="mb-10 text-center"
           >
-            <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">
-              {isHistorical ? "Información del Programa" : "¿Cómo anotarme?"}
+            <h2 className="mb-4 text-4xl md:text-5xl font-contrail-one" style={{ color: colors.secondary }}>
+              {isHistorical ? "Informacion del programa" : "Como anotarme"}
             </h2>
           </motion.div>
 
@@ -33,29 +38,27 @@ export default function EnrollmentInfo({ description, availablePeriod, colors, i
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-gradient-to-br from-gray-50 to-gray-100 p-8 md:p-12 rounded-2xl mb-8"
+            className="mb-6 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 p-8 md:p-10"
           >
-            <div className="flex items-start gap-4 mb-6">
-              <FileText size={32} style={{ color: colors.primary }} className="flex-shrink-0 mt-1" />
-              <p className="text-lg text-gray-700 leading-relaxed">{description}</p>
+            <div className="mb-6 flex items-start gap-4">
+              <FileText size={32} style={{ color: colors.primary }} className="mt-1 flex-shrink-0" />
+              <p className="text-lg leading-relaxed text-gray-700">{description}</p>
             </div>
 
             {availablePeriod && (
-              <div className={`flex items-center gap-4 p-4 rounded-xl ${isHistorical ? 'bg-amber-50 border border-amber-200' : 'bg-white'}`}>
-                <Calendar size={24} style={{ color: isHistorical ? '#f59e0b' : colors.primary }} />
+              <div className={`flex items-center gap-4 rounded-xl p-4 ${isHistorical ? "border border-amber-200 bg-amber-50" : "bg-white"}`}>
+                <Calendar size={24} style={{ color: isHistorical ? "#f59e0b" : colors.primary }} />
                 <div>
-                  <p className="text-sm text-gray-600 font-semibold">
-                    {isHistorical ? "Estado del programa" : "Período de inscripción"}
+                  <p className="text-sm font-semibold text-gray-600">
+                    {isHistorical ? "Estado del programa" : "Periodo de inscripcion"}
                   </p>
                   <p className="text-gray-900">{availablePeriod}</p>
                 </div>
               </div>
             )}
           </motion.div>
-
         </div>
       </div>
     </section>
   );
 }
-

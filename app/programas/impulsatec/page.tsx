@@ -54,6 +54,7 @@ export default function ImpulsatecPage() {
         location={IMPULSATEC_DATA.location}
         duration={IMPULSATEC_DATA.duration}
         modality={IMPULSATEC_DATA.modality}
+        colors={IMPULSATEC_DATA.colors}
       />
 
       <Requirements

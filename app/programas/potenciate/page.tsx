@@ -55,6 +55,7 @@ export default function PotenciatePage() {
         location={POTENCIATE_DATA.location}
         duration={POTENCIATE_DATA.duration}
         modality={POTENCIATE_DATA.modality}
+        colors={POTENCIATE_DATA.colors}
       />
 
       <Requirements

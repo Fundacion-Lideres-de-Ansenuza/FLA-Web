@@ -14,10 +14,9 @@ import {
   MessageSquare,
   BookOpen,
   Rocket,
-  PartyPopper
+  PartyPopper,
 } from "lucide-react";
-import type { Stage } from "./types";
-import type { ProgramColors } from "./types";
+import type { ProgramColors, Stage } from "./types";
 
 const iconMap: Record<string, React.ElementType> = {
   GraduationCap,
@@ -32,7 +31,7 @@ const iconMap: Record<string, React.ElementType> = {
   MessageSquare,
   BookOpen,
   Rocket,
-  PartyPopper
+  PartyPopper,
 };
 
 interface ProgramStagesProps {
@@ -42,23 +41,23 @@ interface ProgramStagesProps {
 
 export default function ProgramStages({ stages, colors }: ProgramStagesProps) {
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="bg-white py-12 md:py-16">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="mb-10 text-center"
           >
-            <h2 className="text-3xl md:text-4xl text-gray-900 mb-3 font-contrail-one">Etapas del programa</h2>
-            <p className="text-base md:text-lg text-gray-600">
-              Un recorrido transformador diseñado para tu crecimiento
-            </p>
+            <h2 className="mb-3 text-3xl md:text-4xl font-contrail-one" style={{ color: colors.secondary }}>
+              Etapas del programa
+            </h2>
+            <p className="text-base text-gray-600 md:text-lg">Un recorrido transformador disenado para tu crecimiento</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {stages.map((stage, index) => {
               const IconComponent = stage.icon ? iconMap[stage.icon] : null;
 
@@ -68,22 +67,20 @@ export default function ProgramStages({ stages, colors }: ProgramStagesProps) {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="p-6 rounded-2xl hover:shadow-lg transition-all duration-300 group"
+                  transition={{ duration: 0.5, delay: index * 0.08 }}
+                  className="group rounded-2xl p-6 transition-all duration-300 hover:shadow-lg"
                   style={{ backgroundColor: `${colors.primary}0d` }}
                 >
                   <div
-                    className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"
+                    className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110"
                     style={{ backgroundColor: `${colors.primary}20` }}
                   >
-                    {IconComponent && (
-                      <IconComponent size={28} style={{ color: colors.primary }} />
-                    )}
+                    {IconComponent ? <IconComponent size={28} style={{ color: colors.primary }} /> : null}
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  <h3 className="mb-3 text-xl font-semibold" style={{ color: colors.secondary }}>
                     {stage.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">{stage.description}</p>
+                  <p className="leading-relaxed text-gray-600">{stage.description}</p>
                 </motion.div>
               );
             })}
@@ -93,14 +90,13 @@ export default function ProgramStages({ stages, colors }: ProgramStagesProps) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-center text-gray-500 mt-8 italic"
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-6 text-center italic text-gray-500"
           >
-            * Las actividades pueden variar de año a año
+            * Las actividades pueden variar de ano a ano
           </motion.p>
         </div>
       </div>
     </section>
   );
 }
-
