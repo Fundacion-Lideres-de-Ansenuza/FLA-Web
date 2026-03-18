@@ -4,7 +4,6 @@ import { JSX } from "react"
 import { motion } from "framer-motion"
 import ContactIntro from "../../components/contactanos/contact-intro"
 import ContactForm from "../../components/contactanos/contact-form"
-import ContactInfo from "../../components/contactanos/contact-info"
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -22,7 +21,7 @@ export default function Contactanos(): JSX.Element {
       >
         <ContactIntro />
       </motion.div>
-      <div className="max-w-4xl mx-auto px-4 py-8 space-y-12">
+      <div className="mx-auto max-w-6xl px-4 pb-8 pt-1 md:pt-2">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -31,15 +30,6 @@ export default function Contactanos(): JSX.Element {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <ContactForm />
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeIn}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
-          <ContactInfo />
         </motion.div>
       </div>
     </main>
