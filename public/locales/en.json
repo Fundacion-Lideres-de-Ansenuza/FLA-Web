@@ -115,6 +115,13 @@
     "enjoyFla": {
       "badge": "Life at FLA",
       "title": "What it means to be part",
+      "subtitle": "",
+      "controlsLabel": "Gallery",
+      "controlsHint": "Swipe or pick a photo.",
+      "previous": "Previous image",
+      "next": "Next image",
+      "autoplay": "Autoplay on",
+      "goToSlide": "Go to image {{number}}",
       "imageAlt1": "Team together",
       "imageAlt2": "Happy team",
       "imageAlt3": "Smiling youth"

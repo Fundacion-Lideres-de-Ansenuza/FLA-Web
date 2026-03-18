@@ -1,11 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useCountAnimation } from "@/components/stats/hooks/useCountAnimation";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import type { Stat } from "./types";
-import type { ProgramColors } from "./types";
+import { useCountAnimation } from "@/components/stats/hooks/useCountAnimation";
+import type { ProgramColors, Stat } from "./types";
 
 interface ImpactStatsProps {
   stats: Stat[];
@@ -14,30 +12,25 @@ interface ImpactStatsProps {
 
 export default function ImpactStats({ stats, colors }: ImpactStatsProps) {
   return (
-    <section className="py-16 md:py-24" style={{ backgroundColor: `${colors.primary}0d` }}>
+    <section className="py-12 md:py-16" style={{ backgroundColor: `${colors.primary}0d` }}>
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="mb-10 text-center"
           >
-            <h2 className="text-3xl md:text-4xl text-gray-900 mb-3 font-contrail-one">Nuestro impacto</h2>
-            <p className="text-base md:text-lg text-gray-600">
-              Resultados que transforman comunidades
-            </p>
+            <h2 className="mb-3 text-3xl md:text-4xl font-contrail-one" style={{ color: colors.secondary }}>
+              Nuestro impacto
+            </h2>
+            <p className="text-base text-gray-600 md:text-lg">Resultados que transforman comunidades</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
             {stats.map((stat, index) => (
-              <StatCard
-                key={index}
-                stat={stat}
-                index={index}
-                color={colors.primary}
-              />
+              <StatCard key={index} stat={stat} index={index} color={colors.primary} />
             ))}
           </div>
         </div>
@@ -65,22 +58,17 @@ function StatCard({ stat, index, color }: StatCardProps) {
       initial={{ opacity: 0, scale: 0.8 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+      transition={{ duration: 0.5, delay: index * 0.08 }}
       className="flex justify-center"
     >
-      <div className="flex min-h-[220px] w-full max-w-[280px] flex-col items-center justify-center rounded-[28px] border border-white/70 bg-white/85 px-6 py-8 text-center shadow-[0_18px_50px_rgba(0,0,0,0.06)]">
+      <div className="flex min-h-[210px] w-full max-w-[280px] flex-col items-center justify-center rounded-[28px] border border-white/70 bg-white/85 px-6 py-8 text-center shadow-[0_18px_50px_rgba(0,0,0,0.06)]">
         <div className="mb-4 flex h-[78px] items-center justify-center">
-          <span
-            className="inline-flex items-center justify-center text-4xl md:text-5xl lg:text-6xl font-bold leading-none"
-            style={{ color }}
-          >
+          <span className="inline-flex items-center justify-center text-4xl font-bold leading-none md:text-5xl lg:text-6xl" style={{ color }}>
             {count}
             {suffix}
           </span>
         </div>
-        <p className="max-w-[18ch] text-gray-700 font-medium text-sm md:text-base leading-snug text-center">
-          {stat.label}
-        </p>
+        <p className="max-w-[18ch] text-center text-sm font-medium leading-snug text-gray-700 md:text-base">{stat.label}</p>
       </div>
     </motion.div>
   );

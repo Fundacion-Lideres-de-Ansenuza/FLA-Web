@@ -247,6 +247,7 @@ export default function AmbientaliaPage() {
           location={AMBIENTALIA_DATA.location}
           duration={AMBIENTALIA_DATA.duration}
           modality={AMBIENTALIA_DATA.modality}
+          colors={AMBIENTALIA_DATA.colors}
         />
 
         <Requirements

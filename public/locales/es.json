@@ -115,6 +115,13 @@
     "enjoyFla": {
       "badge": "Vida en FLA",
       "title": "Lo que significa ser parte",
+      "subtitle": "",
+      "controlsLabel": "Galeria",
+      "controlsHint": "Desliza o elegi una foto.",
+      "previous": "Imagen anterior",
+      "next": "Imagen siguiente",
+      "autoplay": "Autoplay activo",
+      "goToSlide": "Ir a la imagen {{number}}",
       "imageAlt1": "Equipo junto",
       "imageAlt2": "Equipo feliz",
       "imageAlt3": "Chicos sonriendo"

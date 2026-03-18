@@ -53,6 +53,7 @@ export default function CienciaFueraDeLaCajaPage() {
         location={CIENCIA_FUERA_DE_LA_CAJA_DATA.location}
         duration={CIENCIA_FUERA_DE_LA_CAJA_DATA.duration}
         modality={CIENCIA_FUERA_DE_LA_CAJA_DATA.modality}
+        colors={CIENCIA_FUERA_DE_LA_CAJA_DATA.colors}
       />
 
       <Requirements

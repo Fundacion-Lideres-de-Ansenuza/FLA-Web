@@ -52,6 +52,7 @@ export default function AventuraMatematicaPage() {
         location={AVENTURA_MATEMATICA_DATA.location}
         duration={AVENTURA_MATEMATICA_DATA.duration}
         modality={AVENTURA_MATEMATICA_DATA.modality}
+        colors={AVENTURA_MATEMATICA_DATA.colors}
       />
 
       <Requirements

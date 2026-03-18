@@ -198,6 +198,7 @@ export default function SomosPage() {
           location={SOMOS_DATA.location}
           duration={SOMOS_DATA.duration}
           modality={SOMOS_DATA.modality}
+          colors={SOMOS_DATA.colors}
         />
 
         <Requirements

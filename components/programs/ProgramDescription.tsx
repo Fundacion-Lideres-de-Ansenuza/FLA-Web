@@ -1,30 +1,38 @@
 "use client";
 
 import { motion } from "framer-motion";
+import type { ProgramColors } from "./types";
 
 interface ProgramDescriptionProps {
   fullDescription: string;
   location?: string;
   duration?: string;
   modality?: string;
+  colors?: ProgramColors;
 }
 
-export default function ProgramDescription({ fullDescription, location, duration, modality }: ProgramDescriptionProps) {
+export default function ProgramDescription({
+  fullDescription,
+  location,
+  duration,
+  modality,
+  colors,
+}: ProgramDescriptionProps) {
   return (
-    <section id="mas-info" className="py-16 md:py-24 bg-white">
+    <section id="mas-info" className="bg-white py-12 md:py-16">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
+        <div className="mx-auto max-w-5xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-12"
+            className="mb-10"
           >
-            <h2 className="text-3xl md:text-4xl text-gray-900 mb-6 font-contrail-one">Sobre el programa</h2>
-            <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 font-arimo">
-              {fullDescription}
-            </p>
+            <h2 className="mb-5 text-3xl md:text-4xl font-contrail-one" style={{ color: colors?.secondary ?? "#111827" }}>
+              Sobre el programa
+            </h2>
+            <p className="mb-6 text-base leading-relaxed text-gray-700 md:text-lg font-arimo">{fullDescription}</p>
           </motion.div>
 
           {(duration || modality) && (
@@ -33,17 +41,21 @@ export default function ProgramDescription({ fullDescription, location, duration
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="grid md:grid-cols-2 gap-6 mb-12"
+              className="mb-10 grid gap-5 md:grid-cols-2"
             >
               {duration && (
-                <div className="bg-gray-50 p-6 rounded-2xl">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Duración</h3>
+                <div className="rounded-2xl bg-gray-50 p-6">
+                  <h3 className="mb-2 text-xl font-semibold" style={{ color: colors?.secondary ?? "#111827" }}>
+                    Duracion
+                  </h3>
                   <p className="text-gray-700">{duration}</p>
                 </div>
               )}
               {modality && (
-                <div className="bg-gray-50 p-6 rounded-2xl">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Modalidad</h3>
+                <div className="rounded-2xl bg-gray-50 p-6">
+                  <h3 className="mb-2 text-xl font-semibold" style={{ color: colors?.secondary ?? "#111827" }}>
+                    Modalidad
+                  </h3>
                   <p className="text-gray-700">{modality}</p>
                 </div>
               )}
@@ -56,10 +68,12 @@ export default function ProgramDescription({ fullDescription, location, duration
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl"
+              className="rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 p-8"
             >
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">¿Dónde se desarrolla?</h3>
-              <p className="text-lg text-gray-700 leading-relaxed">{location}</p>
+              <h3 className="mb-4 text-2xl font-semibold" style={{ color: colors?.secondary ?? "#111827" }}>
+                Donde se desarrolla
+              </h3>
+              <p className="text-lg leading-relaxed text-gray-700">{location}</p>
             </motion.div>
           )}
         </div>
@@ -67,4 +81,3 @@ export default function ProgramDescription({ fullDescription, location, duration
     </section>
   );
 }
-

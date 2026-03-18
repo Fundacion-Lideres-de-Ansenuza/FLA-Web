@@ -52,6 +52,7 @@ export default function FuturasPage() {
         location={FUTURAS_DATA.location}
         duration={FUTURAS_DATA.duration}
         modality={FUTURAS_DATA.modality}
+        colors={FUTURAS_DATA.colors}
       />
 
       <Requirements
