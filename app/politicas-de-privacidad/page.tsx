@@ -141,15 +141,15 @@ function PolicyCard({
       open={defaultOpen}
       className="group relative overflow-hidden rounded-[28px] border border-[#f6caca] bg-white/90 shadow-[0_18px_50px_rgba(144,20,14,0.08)] backdrop-blur-sm transition-colors duration-300 open:border-[#efb3b3]"
     >
-      <div className="pointer-events-none absolute right-4 top-4 h-14 w-14 rounded-full bg-[radial-gradient(circle,#ffd1a8_0%,#ffd1a8_35%,transparent_36%)] opacity-80" />
-      <summary className="flex cursor-pointer list-none items-center gap-4 p-6 pr-16 sm:p-8 sm:pr-20">
+      <div className="pointer-events-none absolute right-5 top-5 h-14 w-14 rounded-full bg-[radial-gradient(circle,#ffd1a8_0%,#ffd1a8_35%,transparent_36%)] opacity-80" />
+      <summary className="relative flex cursor-pointer list-none items-start gap-4 p-6 pr-20 sm:p-8 sm:pr-24">
         <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#90140e] text-lg font-black text-white shadow-[0_10px_24px_rgba(144,20,14,0.24)]">
           {index}
         </span>
         <div className="flex-1">
           <h3 className="text-xl font-extrabold leading-tight text-[#3d1713] sm:text-2xl">{title}</h3>
         </div>
-        <span className="absolute right-6 top-1/2 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#efc7c7] bg-white text-xl font-black text-[#90140e] transition-transform duration-300 group-open:rotate-45 sm:right-8">
+        <span className="absolute right-5 top-5 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#efc7c7] bg-white text-xl font-black text-[#90140e] shadow-[0_8px_18px_rgba(144,20,14,0.08)] transition-transform duration-300 group-open:rotate-45">
           +
         </span>
       </summary>
