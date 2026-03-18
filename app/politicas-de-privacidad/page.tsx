@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ArrowUpRight, HeartHandshake, Mail, ShieldCheck, Sparkles } from "lucide-react"
+import { ArrowUpRight, HeartHandshake, Mail, ShieldCheck } from "lucide-react"
 
 const programPolicy = [
   {
@@ -129,26 +129,39 @@ function PolicyCard({
   index,
   title,
   body,
+  defaultOpen = false,
 }: {
   index: number
   title: string
   body: string[]
+  defaultOpen?: boolean
 }) {
   return (
-    <article className="relative overflow-hidden rounded-[28px] border border-[#f6caca] bg-white/90 p-6 shadow-[0_18px_50px_rgba(144,20,14,0.08)] backdrop-blur-sm sm:p-8">
-      <div className="absolute right-4 top-4 h-14 w-14 rounded-full bg-[radial-gradient(circle,#ffd1a8_0%,#ffd1a8_35%,transparent_36%)] opacity-80" />
-      <div className="mb-5 flex items-center gap-4">
+    <details
+      open={defaultOpen}
+      className="group relative overflow-hidden rounded-[28px] border border-[#f6caca] bg-white/90 shadow-[0_18px_50px_rgba(144,20,14,0.08)] backdrop-blur-sm transition-colors duration-300 open:border-[#efb3b3]"
+    >
+      <div className="pointer-events-none absolute right-4 top-4 h-14 w-14 rounded-full bg-[radial-gradient(circle,#ffd1a8_0%,#ffd1a8_35%,transparent_36%)] opacity-80" />
+      <summary className="flex cursor-pointer list-none items-center gap-4 p-6 pr-16 sm:p-8 sm:pr-20">
         <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#90140e] text-lg font-black text-white shadow-[0_10px_24px_rgba(144,20,14,0.24)]">
           {index}
         </span>
-        <h3 className="text-xl font-extrabold leading-tight text-[#3d1713] sm:text-2xl">{title}</h3>
+        <div className="flex-1">
+          <h3 className="text-xl font-extrabold leading-tight text-[#3d1713] sm:text-2xl">{title}</h3>
+        </div>
+        <span className="absolute right-6 top-1/2 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#efc7c7] bg-white text-xl font-black text-[#90140e] transition-transform duration-300 group-open:rotate-45 sm:right-8">
+          +
+        </span>
+      </summary>
+      <div className="px-6 pb-6 sm:px-8 sm:pb-8">
+        <div className="mb-5 h-px w-full bg-[linear-gradient(90deg,rgba(144,20,14,0.16),rgba(244,94,94,0.2),rgba(255,255,255,0))]" />
+        <div className="space-y-4 text-base leading-8 text-[#5a3c37] font-arimo">
+          {body.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
       </div>
-      <div className="space-y-4 text-base leading-8 text-[#5a3c37] font-arimo">
-        {body.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
-        ))}
-      </div>
-    </article>
+    </details>
   )
 }
 
@@ -163,19 +176,13 @@ export default function PoliticasDePrivacidadPage() {
             <div className="absolute bottom-0 right-20 h-24 w-24 rounded-full border-8 border-dashed border-[#f7b36c]/40" />
 
             <div className="relative grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-              <div className="space-y-5">
-                <span className="inline-flex items-center gap-2 rounded-full border border-[#f3c9c0] bg-white/80 px-4 py-2 text-sm font-bold uppercase tracking-[0.22em] text-[#90140e]">
-                  <Sparkles className="h-4 w-4" />
-                  Privacidad con claridad
-                </span>
-                <div className="space-y-4">
-                  <h1 className="max-w-3xl text-4xl leading-none text-[#2f1614] sm:text-5xl lg:text-6xl">
-                    Políticas de privacidad con tono humano y corazón FLA
-                  </h1>
-                  <p className="max-w-3xl text-lg leading-8 text-[#5b4038] font-arimo sm:text-xl">
-                    Acá reunimos la información sobre cómo cuidamos los datos personales de quienes participan en nuestros programas y de quienes se suscriben al newsletter. Mantuvimos el texto legal, pero lo ordenamos para que se lea más fácil y se sienta más cercano.
-                  </p>
-                </div>
+              <div className="space-y-4">
+                <h1 className="max-w-3xl text-4xl leading-none text-[#2f1614] sm:text-5xl lg:text-6xl">
+                  Políticas de privacidad
+                </h1>
+                <p className="max-w-3xl text-lg leading-8 text-[#5b4038] font-arimo sm:text-xl">
+                  En esta página vas a encontrar la información sobre cómo Fundación Líderes de Ansenuza recopila, utiliza y protege los datos personales vinculados a sus programas, actividades y newsletter.
+                </p>
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
@@ -241,7 +248,7 @@ export default function PoliticasDePrivacidadPage() {
             <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#bc2222]">Sección 1</p>
-                <h2 className="text-3xl text-[#2f1614] sm:text-4xl">Inscripción y participación en programas y actividades</h2>
+                <h2 className="text-3xl text-[#2f1614] sm:text-4xl">Inscripción, participación en programas y actividades</h2>
               </div>
               <div className="rounded-full border border-[#f3d7d7] bg-white/70 px-4 py-2 font-arimo text-sm text-[#6a4a44]">
                 Última actualización: 07 de marzo de 2024
@@ -250,7 +257,7 @@ export default function PoliticasDePrivacidadPage() {
 
             <div className="grid gap-5">
               {programPolicy.map((item, index) => (
-                <PolicyCard key={item.title} index={index + 1} title={item.title} body={item.body} />
+                <PolicyCard key={item.title} index={index + 1} title={item.title} body={item.body} defaultOpen={index === 0} />
               ))}
             </div>
           </section>
@@ -268,7 +275,7 @@ export default function PoliticasDePrivacidadPage() {
 
             <div className="grid gap-5">
               {newsletterPolicy.map((item, index) => (
-                <PolicyCard key={item.title} index={index + 1} title={item.title} body={item.body} />
+                <PolicyCard key={item.title} index={index + 1} title={item.title} body={item.body} defaultOpen={index === 0} />
               ))}
             </div>
           </section>
