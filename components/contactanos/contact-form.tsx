@@ -58,9 +58,6 @@ export default function ContactForm() {
             </div>
 
             <div className="mt-6 space-y-4">
-              <span className="inline-flex rounded-full border border-[#bc2222]/12 bg-white/80 px-4 py-2 font-arimo text-xs font-bold uppercase tracking-[0.22em] text-[#bc2222]">
-                FLA
-              </span>
               <h2 className="font-contrail-one text-4xl leading-none text-[#90140e] md:text-5xl">
                 {t("contact.form.title")}
               </h2>

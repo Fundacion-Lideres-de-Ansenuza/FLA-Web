@@ -21,7 +21,7 @@ export default function Contactanos(): JSX.Element {
       >
         <ContactIntro />
       </motion.div>
-      <div className="mx-auto max-w-6xl px-4 py-8">
+      <div className="mx-auto max-w-6xl px-4 pb-8 pt-1 md:pt-2">
         <motion.div
           initial="hidden"
           whileInView="visible"
