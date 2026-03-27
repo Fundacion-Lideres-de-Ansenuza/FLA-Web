@@ -24,13 +24,13 @@ export default function Hero() {
             </div>
 
             <div className="row-start-1 md:row-auto hidden sm:flex justify-center md:justify-end">
-              <Image src="/images/LogoFLA.png" alt="Identidad FLA" width={140} height={140} className="drop-shadow-lg" />
+              <Image src="/images/LogoFLA.webp" alt="Identidad FLA" width={140} height={140} className="drop-shadow-lg" />
             </div>
           </div>
 
           <div className="w-full">
             <Image
-              src="/images/DSC_0044.jpg"
+              src="/images/DSC_0044.webp"
               alt="Jóvenes colaborando en educación"
               width={1400}
               height={500}

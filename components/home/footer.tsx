@@ -3,7 +3,6 @@
 import { FaTiktok, FaInstagram, FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa"
 import Image from "next/image"
 import { useTranslation } from "react-i18next"
-import NewsletterForm from "@/components/home/newsletter-form"
 
 export default function Footer() {
   const { t } = useTranslation()
@@ -21,7 +20,7 @@ export default function Footer() {
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-red-600 to-red-400 rounded-full blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
                 <Image
-                  src="/images/Logos/fla-logo-blanco.png"
+                  src="/images/Logos/fla-logo-blanco.webp"
                   alt="Fundación Líderes de Ansenuza"
                   width={75}
                   height={75}
@@ -93,8 +92,19 @@ export default function Footer() {
           </div>
 
           {/* Newsletter Section */}
-          <div className="md:col-span-6 lg:col-span-4">
-            <NewsletterForm />
+          <div className="md:col-span-6 lg:col-span-4 space-y-6">
+            <h3 className="text-xl font-contrail text-white tracking-wider uppercase">{t('footer.newsletter')}</h3>
+            <p className="text-gray-400 font-arimo">{t('footer.newsletterText')}</p>
+            <form className="relative flex group">
+              <input
+                type="email"
+                placeholder={t('footer.emailPlaceholder')}
+                className="w-full pl-6 pr-16 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-red-600/50 focus:border-red-600/50 transition-all"
+              />
+              <button className="absolute right-2 top-2 bottom-2 bg-red-600 hover:bg-red-700 text-white px-5 rounded-xl font-black transition-all transform active:scale-95 flex items-center justify-center">
+                <span>→</span>
+              </button>
+            </form>
           </div>
         </div>
 

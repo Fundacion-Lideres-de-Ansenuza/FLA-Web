@@ -19,7 +19,7 @@ export default function WhyWeDoIt(): React.ReactElement {
           <div className="relative rounded-3xl overflow-hidden shadow-xl">
             <div className="absolute inset-0">
               <Image
-                src="/images/IMG_0745-min.png"
+                src="/images/IMG_0745-min.webp"
                 alt="Impacto social"
                 className="w-full h-full object-cover"
                 width={600}
@@ -38,7 +38,7 @@ export default function WhyWeDoIt(): React.ReactElement {
           <div className="relative rounded-3xl overflow-hidden shadow-xl">
             <div className="absolute inset-0">
               <Image
-                src="/images/TESTIMONIO_1CUT.png"
+                src="/images/TESTIMONIO_1CUT.webp"
                 alt="Educación"
                 className="w-full h-full object-cover"
                 width={600}
@@ -58,7 +58,7 @@ export default function WhyWeDoIt(): React.ReactElement {
         <div className="relative rounded-3xl overflow-hidden shadow-xl">
           <div className="absolute inset-0">
             <Image
-              src="/images/IMG_0621-min.png"
+              src="/images/IMG_0621-min.webp"
               alt="Oportunidades"
               className="w-full h-full object-cover"
               width={1200}

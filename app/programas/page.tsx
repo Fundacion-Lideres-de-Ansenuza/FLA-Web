@@ -95,7 +95,7 @@ export default function ProgramasPage() {
                         <div className="absolute inset-0 opacity-30" style={{ backgroundColor: `${program.colors.accent}30`, borderRadius: generateBlobRadius(program.title + 'bg') }} />
                         <div className="relative z-10 flex h-40 w-60 items-center justify-center rounded-[28px] border border-white/50 bg-white/65 p-5 backdrop-blur-sm shadow-[0_12px_30px_rgba(255,255,255,0.18)]">
                           <Image
-                            src={`/images/Logos/${getLogoFileName(program.title)}.png`}
+                            src={`/images/Logos/${getLogoFileName(program.title)}.webp`}
                             alt={program.title}
                             width={300}
                             height={150}
@@ -159,7 +159,7 @@ export default function ProgramasPage() {
                         <div className="absolute inset-0 opacity-20" style={{ backgroundColor: `${program.colors.accent}20`, borderRadius: generateBlobRadius(program.title + 'hist') }} />
                         <div className="relative z-10 flex h-32 w-48 items-center justify-center rounded-[24px] border border-white/60 bg-white/72 p-4 backdrop-blur-sm shadow-[0_10px_24px_rgba(255,255,255,0.18)]">
                           <Image
-                            src={`/images/Logos/${getLogoFileName(program.title)}.png`}
+                            src={`/images/Logos/${getLogoFileName(program.title)}.webp`}
                             alt={program.title}
                             width={200}
                             height={100}

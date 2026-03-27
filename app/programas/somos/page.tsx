@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Fundación Líderes de Ansenuza",
     images: [
       {
-        url: "/images/programs/somos.png",
+        url: "/images/programs/somos.webp",
         width: 1200,
         height: 630,
         alt: "SOMOS - Programa de Liderazgo en Diversidad"
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SOMOS - Liderazgo en Diversidad para Jóvenes",
     description: "Programa gratuito de 2 meses. Aprendé sobre diversidad, desarrollá liderazgo y realizá acciones de impacto en tu comunidad. Para jóvenes de 15-19 años de toda Argentina.",
-    images: ["/images/programs/somos.png"]
+    images: ["/images/programs/somos.webp"]
   },
   alternates: {
     canonical: "https://www.lideresdeansenuza.org/programas/somos"
@@ -77,7 +77,7 @@ export default function SomosPage() {
     "@type": "EducationalOrganization",
     "name": "Fundación Líderes de Ansenuza",
     "url": "https://www.lideresdeansenuza.org",
-    "logo": "https://www.lideresdeansenuza.org/images/LogoFLA.png",
+    "logo": "https://www.lideresdeansenuza.org/images/LogoFLA.webp",
     "description": "ONG que diseña y ejecuta programas educativos gratuitos en Argentina",
     "address": {
       "@type": "PostalAddress",
@@ -198,7 +198,6 @@ export default function SomosPage() {
           location={SOMOS_DATA.location}
           duration={SOMOS_DATA.duration}
           modality={SOMOS_DATA.modality}
-          colors={SOMOS_DATA.colors}
         />
 
         <Requirements

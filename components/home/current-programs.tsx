@@ -27,7 +27,7 @@ export default function CurrentPrograms() {
   const programs = ACTIVE_PROGRAMS.map(program => ({
     name: program.title,
     slug: program.slug,
-    logo: `/images/Logos/${getLogoFileName(program.title)}.png`,
+    logo: `/images/Logos/${getLogoFileName(program.title)}.webp`,
     href: `/programas/${program.slug}`,
     description: program.shortDescription,
     colors: program.colors
