@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "Fundación Líderes de Ansenuza",
     images: [
       {
-        url: "/images/programs/exp_ambientalia.png",
+        url: "/images/programs/exp_ambientalia.webp",
         width: 1200,
         height: 630,
         alt: "Experiencia Ambientalia - Programa de Educación Ambiental"
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Experiencia Ambientalia - Educación Ambiental para Jóvenes",
     description: "Programa gratuito de 8 meses en Laguna Mar Chiquita. +700 estudiantes capacitados desarrollando proyectos ambientales que transforman comunidades.",
-    images: ["/images/programs/exp_ambientalia.png"]
+    images: ["/images/programs/exp_ambientalia.webp"]
   },
   alternates: {
     canonical: "https://www.lideresdeansenuza.org/programas/ambientalia"
@@ -78,7 +78,7 @@ export default function AmbientaliaPage() {
     "@type": "EducationalOrganization",
     "name": "Fundación Líderes de Ansenuza",
     "url": "https://www.lideresdeansenuza.org",
-    "logo": "https://www.lideresdeansenuza.org/images/LogoFLA.png",
+    "logo": "https://www.lideresdeansenuza.org/images/LogoFLA.webp",
     "description": "ONG que diseña y ejecuta programas educativos gratuitos en Argentina",
     "address": {
       "@type": "PostalAddress",
@@ -247,7 +247,6 @@ export default function AmbientaliaPage() {
           location={AMBIENTALIA_DATA.location}
           duration={AMBIENTALIA_DATA.duration}
           modality={AMBIENTALIA_DATA.modality}
-          colors={AMBIENTALIA_DATA.colors}
         />
 
         <Requirements

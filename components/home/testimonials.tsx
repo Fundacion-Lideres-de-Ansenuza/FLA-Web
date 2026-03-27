@@ -25,93 +25,93 @@ const testimonials: Testimonial[] = [
     name: "Alexis Alejandro Rodriguez",
     role: TestimonialRole.VOLUNTARIO,
     content: "FLA significa mucho para mí, me uní a esta hermosa fundación en 2024 sin saber qué esperar, y todo cambió. Recuerdo escuchar la palabra 'flamilia' y no entender su verdadero significado hasta que viví la experiencia. La amistad y el cariño de cada voluntario y líder te hacen sentir parte de la flamilia sin dudas, aprendí mucho a nivel personal y profesional gracias a las herramientas y oportunidades que nos brinda la fundación. Las oportunidades de crecimiento dentro de la fundación son impresionantes, recuerdo mi primera Cumbre de SOMOS fue inolvidable, me sentí parte de un equipo con un mismo objetivo de allí surgieron amistades que perduran hasta hoy. Sin dudas, la fundación se ha convertido en una familia más para mí, y su impacto en mi vida es invaluable.",
-    avatar: "/images/testimonials/volunteers/Rodriguez_Alexis.jpg"
+    avatar: "/images/testimonials/volunteers/Rodriguez_Alexis.webp"
   },
   {
     name: "Sebastián Marcelo Pacheco",
     role: TestimonialRole.VOLUNTARIO,
     content: "Para mí, FLA es mucho más que una oportunidad. Es un lugar donde crecer se vuelve algo natural, donde equivocarse no da miedo porque sabés que hay alguien al lado que te va a tender la mano. Es ese espacio donde no solo te forman, sino que te acompañan, te cuidan y te enseñan desde el corazón. En FLA aprendí que no siempre se trata de estar bien, sino de estar acompañado. Y eso, para mí, lo hace único.",
-    avatar: "/images/testimonials/volunteers/Sebastian_Pacheco.jpg"
+    avatar: "/images/testimonials/volunteers/Sebastian_Pacheco.webp"
   },
   {
     name: "Ramiro Joaquín Gatica",
     role: TestimonialRole.VOLUNTARIO,
     program: "Líder de Comunicación",
     content: "Me uní a FLA buscando un lugar para desarrollarme profesionalmente, pero encontré mucho más. Tuve la oportunidad de conocer personas increíbles y de participar en espacios que promueven el liderazgo. Comencé voluntariando en Prensa, luego acompañé al STAFF de SOMOS en la 3ra edición del programa, y ahora me encuentro como Líder de comunicación. Desde que entré no he parado de aprender cosas nuevas, y cada día agradezco poder ser parte de esta FLAmilia.",
-    avatar: "/images/testimonials/volunteers/Imagen_formal_SOMOS_FLA.jpg"
+    avatar: "/images/testimonials/volunteers/Imagen_formal_SOMOS_FLA.webp"
   },
   {
     name: "Martina Blangetti",
     role: TestimonialRole.VOLUNTARIO,
     content: "Estar en FLA es algo que me interpela en todos los aspectos. Me hace más humana y me brinda perspectivas que jamás hubiera imaginado. Siendo voluntaria en FLA aprendí a ser líder, a tomar decisiones difíciles y a ver más allá de mi persona. Puedo afirmar que realmente es una experiencia gratificante y que me llena el alma, por ese y muchos motivos más, elijo todos los días seguir en esta hermosa Fundación.",
-    avatar: "/images/testimonials/volunteers/Martina_Blangetti.jpg"
+    avatar: "/images/testimonials/volunteers/Martina_Blangetti.webp"
   },
   {
     name: "Daniela Abigail Gutierrez",
     role: TestimonialRole.VOLUNTARIO,
     content: "FLA significa transformación para mí, tengo 16 años y unirme cómo voluntaria a la fundación hizo que aprenda tantas cosas en poco tiempo, habilidades como comunicación, trabajo en equipo y creación de material para los programas son herramientas que fui trabajando y mejorando con apoyo de mí equipo que siempre está presente. La comunidad hermosa que existe dentro de FLA no tiene comparación y no la cambiaría por nada.",
-    avatar: "/images/testimonials/volunteers/Gutierrez_Daniela.jpg"
+    avatar: "/images/testimonials/volunteers/Gutierrez_Daniela.webp"
   },
   {
     name: "Magali Galat Giorgi",
     role: TestimonialRole.VOLUNTARIO,
     program: "Medición de Impacto",
     content: "Voluntariar en FLA para mí es una oportunidad para corroborar que el trabajo colaborativo es posible, para aportar valor y continuar aprendiendo desde mi rol en la Medición de Impacto. He podido experimentar lo alegre, inspirador y refrescante que es compartir con un equipo joven y pujante, que avanza con pasión y compromiso en pos de construir un mundo mejor!",
-    avatar: "/images/testimonials/volunteers/Magali_Galat.jpg"
+    avatar: "/images/testimonials/volunteers/Magali_Galat.webp"
   },
   {
     name: "Fatima Kap",
     role: TestimonialRole.VOLUNTARIO,
     content: "La Fundación llegó en una etapa de mi vida en la que me estaba desarrollando personalmente, y fue como un impulso que me ayudó a acomodar mi camino. Me guió a ir por un rumbo mejor y siempre voy a estar agradecida con FLA por el lugar en el que estoy hoy.",
-    avatar: "/images/testimonials/volunteers/Kap_Fatima.jpg"
+    avatar: "/images/testimonials/volunteers/Kap_Fatima.webp"
   },
   {
     name: "Alejo Pucheta",
     role: TestimonialRole.PARTICIPANTE,
     program: "Bandada Coscorobas",
     content: "La Fundación para mí es un espacio que me inspira y me impulsa a crecer. Es donde aprendí que cada idea, por más pequeña que parezca, puede transformarse en algo grande si se hace con compromiso y en equipo. Me hizo entender el valor de la empatía, del trabajo colectivo y de creer que los jóvenes podemos generar un cambio real. Ser parte de Líderes de Ansenuza me ayudó a descubrir mi voz, a actuar con propósito y a sentir que formo parte de algo mucho más grande que yo.",
-    avatar: "/images/testimonials/participants/Alejo_Pucheta.jpg"
+    avatar: "/images/testimonials/participants/Alejo_Pucheta.webp"
   },
   {
     name: "Luz Barzola",
     role: TestimonialRole.PARTICIPANTE,
     program: "Bandada Federales",
     content: "La fundación para mí es mi lugar favorito, donde me ayudan a crecer, me acompañan, me desafían y me hacen creer en mí. Es como una familia, donde todos vamos con el mismo propósito y nos apoyamos siempre. Gracias a la fundación conocí personas increíbles, lugares nuevos y viví experiencias que me cambiaron. Me ayudó a sacar mi mejor versión y a formar la persona que soy hoy.",
-    avatar: "/images/testimonials/participants/Luz_Barzola.jpg"
+    avatar: "/images/testimonials/participants/Luz_Barzola.webp"
   },
   {
     name: "Abril Bianco",
     role: TestimonialRole.PARTICIPANTE,
     program: "Bandada Federales",
     content: "Para mí la fundación es una red de apoyo la cual te enseña y te brinda posibilidades para crecer como persona, a mi me permitió impulsar aspectos personales que no sabía que tenía o que estaban apagados.",
-    avatar: "/images/testimonials/participants/Abril_Bianco.jpg"
+    avatar: "/images/testimonials/participants/Abril_Bianco.webp"
   },
   {
     name: "Valentina Oyarzabal",
     role: TestimonialRole.PARTICIPANTE,
     program: "Bandada Federales",
     content: "Para mi FLA es un espacio que te inspira a creer en vos mismo, a descubrir tus capacidades y a trabajar junto a otros. Te enseña que con compromiso y confianza podes lograr grandes cosas.",
-    avatar: "/images/testimonials/participants/Valen_Oyarzabal.jpg"
+    avatar: "/images/testimonials/participants/Valen_Oyarzabal.webp"
   },
   {
     name: "Tiziana Notari",
     role: TestimonialRole.PARTICIPANTE,
     program: "Bandada Cardenales Copete Rojo",
     content: "FLA es mucho más que una Fundación, es un espacio en donde aprendemos a compartir, a cuidar y a ver el mundo de otra manera. Con cada actividad, por más pequeña que sea, podemos realizar un cambio importante y real. En este espacio descubrí el valor del trabajo en equipo y del compromiso.",
-    avatar: "/images/testimonials/participants/Tiziana_Notari.jpg"
+    avatar: "/images/testimonials/participants/Tiziana_Notari.webp"
   },
   {
     name: "Francesco Sironi",
     role: TestimonialRole.PARTICIPANTE,
     program: "Bandada Tacuaritas Azules",
     content: "FLA es mi segunda familia, los momentos que creé y los aprendizajes adquiridos en el camino con ellos son inolvidables, espero que muchos más jóvenes experimenten en carne propia esta etapa que te deja una marca en el corazón que llevarás durante toda tu vida.",
-    avatar: "/images/testimonials/participants/Francisco_Sironi.jpg"
+    avatar: "/images/testimonials/participants/Francisco_Sironi.webp"
   },
   {
     name: "Angeles Gorosito",
     role: TestimonialRole.PARTICIPANTE,
     content: "La Fundación se volvió como mi segundo hogar, la verdad que estoy super agradecidas por todo lo que me brindó este año, aprendí muchas cosas nuevas en especial a ser más líder (lo cuál, fue una de las cosas que más me gustaron), conocí gente con un gran corazón las cuales siempre las voy a tener en mi corazón en especial a MARINA, la cual nunca me dejo bajar los brazos, y obvio los falaropos que sin ellos esto no sería nada.",
-    avatar: "/images/testimonials/participants/Angeles_Gorosito.jpg"
+    avatar: "/images/testimonials/participants/Angeles_Gorosito.webp"
   },
 ]
 
@@ -141,7 +141,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
           {testimonial.program && ` • ${testimonial.program}`}
         </div>
 
-        <p className="text-sm leading-relaxed italic font-saridona line-clamp-4 overflow-hidden">
+        <p className="text-sm leading-relaxed italic font-medium line-clamp-4 overflow-hidden">
           &quot;{testimonial.content}&quot;
         </p>
       </div>
@@ -231,7 +231,7 @@ export default function Testimonials() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
           <div className="grid grid-cols-1 gap-4">
             <Image
-              src="/images/TESTIMONIO_1CUT.png"
+              src="/images/TESTIMONIO_1CUT.webp"
               alt="Testimonio 1"
               width={200}
               height={100}
@@ -239,14 +239,14 @@ export default function Testimonials() {
             />
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <Image
-                src="/images/TESTIMONIO_2.png"
+                src="/images/TESTIMONIO_2.webp"
                 alt="Testimonio 2"
                 width={200}
                 height={200}
                 className="rounded-2xl w-full h-[140px] sm:h-[190px] md:h-[250px] lg:h-[290px] shadow-lg object-cover"
               />
               <Image
-                src="/images/TESTIMONIO_3_MIN.png"
+                src="/images/TESTIMONIO_3_MIN.webp"
                 alt="Testimonio 3"
                 width={200}
                 height={200}

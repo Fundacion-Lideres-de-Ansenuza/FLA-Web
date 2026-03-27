@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "Fundación Líderes de Ansenuza",
     images: [
       {
-        url: "/images/programs/lideres.png",
+        url: "/images/programs/lideres.webp",
         width: 1200,
         height: 630,
         alt: "Líderes - Comunidad de Líderes FLA"
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Líderes - Comunidad de Líderes FLA",
     description: "Comunidad activa para ex-participantes de programas de FLA que quieren seguir potenciando sus habilidades de liderazgo.",
-    images: ["/images/programs/lideres.png"]
+    images: ["/images/programs/lideres.webp"]
   },
   robots: {
     index: true,
@@ -73,7 +73,6 @@ export default function LideresPage() {
         location={LIDERES_DATA.location}
         duration={LIDERES_DATA.duration}
         modality={LIDERES_DATA.modality}
-        colors={LIDERES_DATA.colors}
       />
 
       <Requirements

@@ -35,7 +35,7 @@ export default function Header() {
               onClick={() => window.location.href = '/'}
             >
               <Image
-                src="/images/Logos/fla-logo-blanco.png"
+                src="/images/Logos/fla-logo-blanco.webp"
                 alt="Fundación Líderes de Ansenuza"
                 width={160}
                 height={160}
