@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { JSX, useMemo, useState } from "react";
+import { JSX, KeyboardEvent, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const VALUE_DEFINITIONS = [
@@ -91,6 +91,16 @@ export default function Values(): JSX.Element {
   const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const handleSegmentKeyDown = (
+    event: KeyboardEvent<SVGPathElement>,
+    index: number
+  ): void => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      setActiveIndex(index);
+    }
+  };
+
   const values = useMemo(() => {
     return VALUE_DEFINITIONS.map((valueDefinition) => ({
       ...valueDefinition,
@@ -112,7 +122,7 @@ export default function Values(): JSX.Element {
       <div className="mx-auto max-w-4xl">
         <div className="relative">
           <div className="relative aspect-[10/7] w-full">
-            <svg viewBox="0 0 1000 560" className="h-full w-full" aria-hidden="true">
+            <svg viewBox="0 0 1000 560" className="h-full w-full" aria-label={t("aboutUs.values.wheelLabel")}>
               {segments.map((segment, index) => {
                 const value = values[index];
                 const isActive = activeIndex === index;
@@ -137,12 +147,16 @@ export default function Values(): JSX.Element {
                       stroke="#ffffff"
                       strokeOpacity={0.001}
                       strokeWidth={18}
+                      className="values-wheel-hit cursor-pointer outline-none focus:outline-none focus-visible:outline-none ring-0 focus:ring-0 focus-visible:ring-0 focus:shadow-none focus-visible:shadow-none"
+                      role="button"
+                      aria-label={value.title}
+                      aria-pressed={isActive}
+                      tabIndex={0}
                       onMouseEnter={() => setActiveIndex(index)}
                       onClick={() => setActiveIndex(index)}
                       onFocus={() => setActiveIndex(index)}
-                      style={{ cursor: "pointer" }}
-                      aria-label={value.title}
-                      tabIndex={0}
+                      onKeyDown={(event) => handleSegmentKeyDown(event, index)}
+                      style={{ outline: "none" }}
                     />
                   </g>
                 );
@@ -156,18 +170,14 @@ export default function Values(): JSX.Element {
               const yPercent = (segment.labelY / 560) * 100;
 
               return (
-                <button
+                <div
                   key={value.title}
-                  type="button"
-                  onMouseEnter={() => setActiveIndex(index)}
-                  onFocus={() => setActiveIndex(index)}
-                  onClick={() => setActiveIndex(index)}
-                  className="absolute -translate-x-1/2 -translate-y-1/2"
+                  className="pointer-events-none absolute -translate-x-1/2 -translate-y-1/2"
                   style={{
                     left: `${xPercent}%`,
                     top: `${yPercent}%`,
                   }}
-                  aria-label={value.title}
+                  aria-hidden="true"
                 >
                   <span
                     className={`inline-flex min-w-[104px] justify-center rounded-full px-3 py-2 text-[9px] font-black uppercase tracking-[0.22em] text-white transition-all duration-200 md:min-w-[132px] md:px-4 md:text-[11px] ${
@@ -178,7 +188,7 @@ export default function Values(): JSX.Element {
                   >
                     {value.title}
                   </span>
-                </button>
+                </div>
               );
             })}
 

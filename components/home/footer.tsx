@@ -27,17 +27,13 @@ export default function Footer() {
                   className="relative transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div>
-                <h2 className="text-red-600 font-contrail text-2xl leading-none tracking-tight">
-                  Fundación
-                </h2>
-                <p className="text-white/90 font-arimo font-bold text-lg tracking-wide">
-                  Lideres de Ansenuza
-                </p>
+              <div className="font-arimo text-base text-white leading-tight">
+                <p className="font-semibold tracking-wide">Fundación</p>
+                <p className="font-semibold tracking-wide">Lideres de Ansenuza</p>
               </div>
             </div>
 
-            <p className="text-gray-400 text-lg leading-relaxed max-w-md">
+            <p className="text-gray-400 font-arimo text-base leading-relaxed max-w-md">
               {t('footer.tagline')}
             </p>
 
@@ -64,13 +60,13 @@ export default function Footer() {
 
           {/* Contact Section */}
           <div className="md:col-span-6 lg:col-span-3 space-y-6">
-            <h3 className="text-xl font-contrail text-white tracking-wider uppercase">{t('footer.contact')}</h3>
-            <div className="space-y-4 text-gray-400 font-arimo">
+            <h3 className="text-base font-arimo font-semibold text-white tracking-wider uppercase">{t('footer.contact')}</h3>
+            <div className="space-y-4 text-gray-400 font-arimo text-base">
               <div className="group flex items-start gap-3">
                 <div className="mt-1 w-1.5 h-1.5 rounded-full bg-red-600 group-hover:scale-125 transition-transform" />
                 <div>
                   <p className="group-hover:text-white transition-colors">Independencia 350</p>
-                  <p className="group-hover:text-white transition-colors text-sm opacity-80">Miramar de Ansenuza, Córdoba</p>
+                  <p className="group-hover:text-white transition-colors opacity-80">Miramar de Ansenuza, Córdoba</p>
                 </div>
               </div>
               <div className="group flex items-center gap-3">
@@ -82,7 +78,7 @@ export default function Footer() {
               <div className="pt-2">
                 <a
                   href="/contactanos"
-                  className="inline-flex items-center text-red-500 font-bold hover:text-red-400 transition-colors gap-2 group/link"
+                  className="inline-flex items-center text-base font-arimo font-semibold text-white hover:text-white/80 transition-colors gap-2 group/link"
                 >
                   {t('footer.directContact')}
                   <span className="group-hover/link:translate-x-1 transition-transform">→</span>
@@ -93,15 +89,15 @@ export default function Footer() {
 
           {/* Newsletter Section */}
           <div className="md:col-span-6 lg:col-span-4 space-y-6">
-            <h3 className="text-xl font-contrail text-white tracking-wider uppercase">{t('footer.newsletter')}</h3>
-            <p className="text-gray-400 font-arimo">{t('footer.newsletterText')}</p>
+            <h3 className="text-base font-arimo font-semibold text-white tracking-wider uppercase">{t('footer.newsletter')}</h3>
+            <p className="text-gray-400 font-arimo text-base">{t('footer.newsletterText')}</p>
             <form className="relative flex group">
               <input
                 type="email"
                 placeholder={t('footer.emailPlaceholder')}
-                className="w-full pl-6 pr-16 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-red-600/50 focus:border-red-600/50 transition-all"
+                className="w-full pl-6 pr-16 py-4 rounded-2xl bg-white/5 border border-white/10 text-white text-base font-arimo placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-red-600/50 focus:border-red-600/50 transition-all"
               />
-              <button className="absolute right-2 top-2 bottom-2 bg-red-600 hover:bg-red-700 text-white px-5 rounded-xl font-black transition-all transform active:scale-95 flex items-center justify-center">
+              <button className="absolute right-2 top-2 bottom-2 bg-red-600 hover:bg-red-700 text-white px-5 rounded-xl text-base font-arimo font-semibold transition-all transform active:scale-95 flex items-center justify-center">
                 <span>→</span>
               </button>
             </form>
@@ -110,15 +106,15 @@ export default function Footer() {
 
         {/* Footer Bottom */}
         <div className="mt-20 pt-10 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-6">
-          <p className="text-gray-500 font-arimo text-sm">
+          <p className="text-gray-500 font-arimo text-base">
             {t('footer.copyright', { year: new Date().getFullYear() })}
           </p>
-          <div className="flex items-center gap-8">
-            <a href="/politicas-de-privacidad" className="text-gray-500 hover:text-white text-sm font-medium transition-colors">
+          <div className="flex items-center gap-8 font-arimo text-base">
+            <a href="/politicas-de-privacidad" className="text-gray-500 hover:text-white font-medium transition-colors">
               {t('footer.privacyPolicy')}
             </a>
             <div className="w-1.5 h-1.5 rounded-full bg-white/10" />
-            <span className="text-gray-500 text-sm font-medium">
+            <span className="text-gray-500 font-medium">
               Argentina
             </span>
           </div>
