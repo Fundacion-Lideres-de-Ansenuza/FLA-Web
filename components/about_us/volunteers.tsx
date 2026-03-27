@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { JSX } from "react";
 
-const flaMap = "/images/mapa-fla.webp";
+const flaMap = "/images/about_us/Mapa_pintado_FLA.webp";
 
 export default function Volunteers(): JSX.Element {
   return (
