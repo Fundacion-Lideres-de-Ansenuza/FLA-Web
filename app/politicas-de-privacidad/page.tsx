@@ -250,9 +250,6 @@ export default function PoliticasDePrivacidadPage() {
                 <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#bc2222]">Sección 1</p>
                 <h2 className="text-3xl text-[#2f1614] sm:text-4xl">Inscripción, participación en programas y actividades</h2>
               </div>
-              <div className="rounded-full border border-[#f3d7d7] bg-white/70 px-4 py-2 font-arimo text-sm text-[#6a4a44]">
-                Última actualización: 07 de marzo de 2024
-              </div>
             </div>
 
             <div className="grid gap-5">
@@ -267,9 +264,6 @@ export default function PoliticasDePrivacidadPage() {
               <div>
                 <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#bc2222]">Sección 2</p>
                 <h2 className="text-3xl text-[#2f1614] sm:text-4xl">Suscripción a newsletter</h2>
-              </div>
-              <div className="rounded-full border border-[#f3d7d7] bg-white/70 px-4 py-2 font-arimo text-sm text-[#6a4a44]">
-                Última actualización: 07 de marzo de 2024
               </div>
             </div>
 
