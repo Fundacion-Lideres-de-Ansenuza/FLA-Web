@@ -140,8 +140,15 @@ export default function Values(): JSX.Element {
                       onMouseEnter={() => setActiveIndex(index)}
                       onClick={() => setActiveIndex(index)}
                       onFocus={() => setActiveIndex(index)}
+                      onKeyDown={(event) => {
+                        if (event.key === "Enter" || event.key === " ") {
+                          event.preventDefault();
+                          setActiveIndex(index);
+                        }
+                      }}
                       style={{ cursor: "pointer" }}
                       aria-label={value.title}
+                      role="button"
                       tabIndex={0}
                     />
                   </g>
@@ -156,18 +163,13 @@ export default function Values(): JSX.Element {
               const yPercent = (segment.labelY / 560) * 100;
 
               return (
-                <button
+                <div
                   key={value.title}
-                  type="button"
-                  onMouseEnter={() => setActiveIndex(index)}
-                  onFocus={() => setActiveIndex(index)}
-                  onClick={() => setActiveIndex(index)}
-                  className="absolute -translate-x-1/2 -translate-y-1/2"
+                  className="pointer-events-none absolute -translate-x-1/2 -translate-y-1/2"
                   style={{
                     left: `${xPercent}%`,
                     top: `${yPercent}%`,
                   }}
-                  aria-label={value.title}
                 >
                   <span
                     className={`inline-flex min-w-[104px] justify-center rounded-full px-3 py-2 text-[9px] font-black uppercase tracking-[0.22em] text-white transition-all duration-200 md:min-w-[132px] md:px-4 md:text-[11px] ${
@@ -178,7 +180,7 @@ export default function Values(): JSX.Element {
                   >
                     {value.title}
                   </span>
-                </button>
+                </div>
               );
             })}
 
