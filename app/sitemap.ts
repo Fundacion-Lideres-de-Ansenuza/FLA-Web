@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 
 const SITE_URL = "https://www.lideresdeansenuza.org";
+export const dynamic = "force-static";
 
 type RouteConfig = {
   path: string;
