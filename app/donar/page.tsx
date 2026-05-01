@@ -7,6 +7,7 @@ import { CheckCircle2, Globe, CreditCard, Landmark, Mail, Copy } from "lucide-re
 import { useTranslation } from "react-i18next"
 
 const DARK_BROWN = "#90140e"
+const DONAR_ONLINE_URL = "https://donaronline.org/fundacion-lideres-de-ansenuza/fundacion-lideres-de-ansenuza"
 
 function TimelineSteps({ steps, accent }: { steps: string[]; accent: string }) {
   return (
@@ -62,6 +63,63 @@ function WelcomeNote() {
 export default function DonationPage() {
   const { t } = useTranslation()
   const [activeTab, setActiveTab] = useState("online")
+  const donationPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "DonateAction",
+    name: "Donar a Fundacion Lideres de Ansenuza",
+    description:
+      "Pagina de donaciones de Fundacion Lideres de Ansenuza para colaborar con programas educativos gratuitos para jovenes en Argentina.",
+    recipient: {
+      "@type": "NGO",
+      name: "Fundacion Lideres de Ansenuza",
+      url: "https://www.lideresdeansenuza.org",
+    },
+    target: [
+      {
+        "@type": "EntryPoint",
+        urlTemplate: "https://www.lideresdeansenuza.org/donar",
+        actionPlatform: [
+          "https://schema.org/DesktopWebPlatform",
+          "https://schema.org/MobileWebPlatform",
+        ],
+      },
+      {
+        "@type": "EntryPoint",
+        urlTemplate: DONAR_ONLINE_URL,
+      },
+    ],
+  }
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Como puedo donar online a Fundacion Lideres de Ansenuza?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Podes donar desde la pagina de donaciones y completar el proceso en Donar Online para hacer un aporte rapido y seguro.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Puedo pedir un recibo de donacion?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Si. Podes escribirnos desde la pagina de contacto adjuntando el comprobante para emitir tu recibo oficial de donacion.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Que metodos de donacion ofrece la fundacion?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "La fundacion ofrece Donar Online, PayPal para donaciones internacionales y transferencia bancaria directa.",
+        },
+      },
+    ],
+  }
 
   const onlineSteps = [
     "Seleccioná el botón donar y elegí el monto.",
@@ -97,7 +155,16 @@ export default function DonationPage() {
   ]
 
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[linear-gradient(180deg,#ffffff_0%,#fff7f6_30%,#ffffff_100%)] pb-20 pt-[108px] sm:pt-[120px]">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(donationPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main className="min-h-screen overflow-x-hidden bg-[linear-gradient(180deg,#ffffff_0%,#fff7f6_30%,#ffffff_100%)] pb-20 pt-[108px] sm:pt-[120px]">
       <div className="container mx-auto max-w-6xl px-4 pt-6 md:pt-8">
         <div className="mb-10 flex flex-col items-center gap-5 text-center md:mb-14">
           <h1 className="text-5xl leading-tight tracking-tight text-gray-900 lg:text-7xl font-contrail-one">¿Cómo Donar?</h1>
@@ -136,7 +203,7 @@ export default function DonationPage() {
                 <WelcomeNote />
 
                 <div className="flex justify-center">
-                  <DonationChip href="https://donaronline.org" />
+                  <DonationChip href={DONAR_ONLINE_URL} />
                 </div>
               </div>
             )}
@@ -232,6 +299,7 @@ export default function DonationPage() {
           </div>
         </div>
       </div>
-    </main>
+      </main>
+    </>
   )
 }
