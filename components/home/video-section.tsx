@@ -8,7 +8,7 @@ export default function VideoSection() {
           <div className="aspect-video w-full">
             <iframe
               className="w-full h-full rounded-[24px]"
-              src="https://www.youtube.com/embed/Gfm67bIW8T0"
+              src="https://www.youtube.com/embed/NSpQbbPEnqg"
               title="Video de nuestra historia"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
