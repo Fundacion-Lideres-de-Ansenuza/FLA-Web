@@ -1,4 +1,6 @@
-﻿import Image from "next/image";
+﻿"use client";
+
+import Image from "next/image";
 import { JSX } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -31,3 +33,4 @@ export default function Mission(): JSX.Element {
     </section>
   );
 }
+

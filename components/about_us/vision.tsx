@@ -1,4 +1,6 @@
-﻿import { JSX } from "react";
+﻿"use client";
+
+import { JSX } from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
@@ -31,3 +33,4 @@ export default function Vision(): JSX.Element {
     </section>
   );
 }
+
