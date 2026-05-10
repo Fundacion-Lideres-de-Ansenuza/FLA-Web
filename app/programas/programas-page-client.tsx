@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import Image from "next/image";
 import Link from "next/link";
@@ -10,13 +10,13 @@ import ProgramsShowcaseSlider from "@/components/programs/ProgramsShowcaseSlider
 const LOGO_PRESENTATION: Record<string, string> = {
   "Experiencia Ambientalia": "max-w-[88%] max-h-[76%]",
   "SOMOS": "max-w-[78%] max-h-[62%]",
-  "LÃ­deres": "max-w-[74%] max-h-[74%]",
+  "L�f­deres": "max-w-[74%] max-h-[74%]",
   "Potenciate": "max-w-[78%] max-h-[68%]",
   "FUTURAS": "max-w-[82%] max-h-[66%]",
   "ImpulsaTEC": "max-w-[84%] max-h-[66%]",
   "Ciencia Fuera de la Caja": "max-w-[86%] max-h-[64%]",
-  "Aventura MatemÃ¡gica": "max-w-[86%] max-h-[66%]",
-  "Academia de conservaciÃ³n": "max-w-[84%] max-h-[66%]",
+  "Aventura Matem�f¡gica": "max-w-[86%] max-h-[66%]",
+  "Academia de conservaci�f³n": "max-w-[84%] max-h-[66%]",
   "Comprometidxs": "max-w-[82%] max-h-[64%]",
 }
 
@@ -123,7 +123,7 @@ export default function ProgramasPage() {
                         </div>
                         <div className="mt-6 flex items-center justify-center gap-2 font-bold" style={{ color: program.colors.primary }}>
                           <span>{t('programs.active.learnMore')}</span>
-                          <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
+                          <span className="group-hover:translate-x-2 transition-transform duration-300">�?'</span>
                         </div>
                       </div>
                     </div>
@@ -186,7 +186,7 @@ export default function ProgramasPage() {
                         </p>
                         <div className="flex items-center justify-center gap-2 font-bold text-sm" style={{ color: program.colors.primary }}>
                           <span>{t('programs.historical.viewHistory')}</span>
-                          <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+                          <span className="group-hover:translate-x-1 transition-transform duration-300">�?'</span>
                         </div>
                       </div>
                     </div>
@@ -219,3 +219,4 @@ export default function ProgramasPage() {
     </main>
   );
 }
+

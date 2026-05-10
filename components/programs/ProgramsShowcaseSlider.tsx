@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useEffect, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
@@ -26,7 +26,7 @@ const SHOWCASE_SLIDES: ShowcaseSlide[] = [
     color: "#f45e5e",
   },
   {
-    title: "Lideres",
+    title: "Líderes",
     label: "Impacto",
     description: "Bloque preparado para mostrar actividades, encuentros o experiencias.",
     color: "#90140e",
@@ -34,7 +34,7 @@ const SHOWCASE_SLIDES: ShowcaseSlide[] = [
   {
     title: "Potenciate",
     label: "Desarrollo",
-    description: "Diseñado para que despues solo cargues tus fotos y el slider ya funcione.",
+    description: "Diseñado para que después solo cargues tus fotos y el slider ya funcione.",
     color: "#d63c3c",
   },
   {
@@ -140,7 +140,7 @@ export default function ProgramsShowcaseSlider() {
                         {currentSlide.title}
                       </h3>
                       <p className="mt-3 max-w-xl text-sm sm:text-base leading-relaxed font-arimo text-white/90">
-                        Carrusel preparado para cargar fotos reales del programa mas adelante.
+                        Carrusel preparado para cargar fotos reales del programa más adelante.
                       </p>
                     </div>
                   </div>
@@ -206,3 +206,5 @@ export default function ProgramsShowcaseSlider() {
     </section>
   )
 }
+
+

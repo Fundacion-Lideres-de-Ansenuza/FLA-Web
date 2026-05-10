@@ -57,7 +57,7 @@ function DonationChip({ href }: { href: string }) {
 }
 
 function WelcomeNote() {
-  return <p className="text-center font-arimo text-base text-gray-600 md:text-lg">Recibirás un mail de bienvenida con el detalle.</p>
+  return <p className="text-center font-arimo text-base text-gray-600 md:text-lg">Recibir�s un mail de bienvenida con el detalle.</p>
 }
 
 export default function DonationPage() {
@@ -66,12 +66,12 @@ export default function DonationPage() {
   const donationPageSchema = {
     "@context": "https://schema.org",
     "@type": "DonateAction",
-    name: "Donar a Fundacion Lideres de Ansenuza",
+    name: "Donar a Fundación Líderes de Ansenuza",
     description:
-      "Pagina de donaciones de Fundacion Lideres de Ansenuza para colaborar con programas educativos gratuitos para jovenes en Argentina.",
+      "Página de donaciones de Fundación Líderes de Ansenuza para colaborar con programas educativos gratuitos para jóvenes en Argentina.",
     recipient: {
       "@type": "NGO",
-      name: "Fundacion Lideres de Ansenuza",
+      name: "Fundación Líderes de Ansenuza",
       url: "https://www.lideresdeansenuza.org",
     },
     target: [
@@ -96,10 +96,10 @@ export default function DonationPage() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "Como puedo donar online a Fundacion Lideres de Ansenuza?",
+        name: "Cómo puedo donar online a Fundación Líderes de Ansenuza?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Podes donar desde la pagina de donaciones y completar el proceso en Donar Online para hacer un aporte rapido y seguro.",
+          text: "Podés donar desde la pagina de donaciones y completar el proceso en Donar Online para hacer un aporte rapido y seguro.",
         },
       },
       {
@@ -107,12 +107,12 @@ export default function DonationPage() {
         name: "Puedo pedir un recibo de donacion?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Si. Podes escribirnos desde la pagina de contacto adjuntando el comprobante para emitir tu recibo oficial de donacion.",
+          text: "Si. Podés escribirnos desde la pagina de contacto adjuntando el comprobante para emitir tu recibo oficial de donacion.",
         },
       },
       {
         "@type": "Question",
-        name: "Que metodos de donacion ofrece la fundacion?",
+        name: "Qué métodos de donacion ofrece la fundacion?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "La fundacion ofrece Donar Online, PayPal para donaciones internacionales y transferencia bancaria directa.",
@@ -122,22 +122,22 @@ export default function DonationPage() {
   }
 
   const onlineSteps = [
-    "SeleccionÃ¡ el botÃ³n donar y elegÃ­ el monto.",
-    "DefinÃ­ la frecuencia de donaciÃ³n y completa con tus datos personales.",
-    "ConfirmÃ¡ el medio de pago y presionÃ¡ 'Donar a FundaciÃ³n LÃ­deres de Ansenuza'.",
+    "Seleccioná el botón donar y elegí el monto.",
+    "Definí la frecuencia de donación y completa con tus datos personales.",
+    "Confirmá el medio de pago y presioná 'Donar a Fundación Líderes de Ansenuza'.",
   ]
 
   const paypalSteps = [
-    "SeleccionÃ¡ el botÃ³n donar y elegÃ­ el monto.",
-    "ElegÃ­ PayPal como medio de pago y completÃ¡ tus datos personales.",
-    "ConfirmÃ¡ la donaciÃ³n Ãºnica y presionÃ¡ 'Donar a FundaciÃ³n LÃ­deres de Ansenuza'.",
+    "Seleccioná el botón donar y elegí el monto.",
+    "Elegí PayPal como medio de pago y completá tus datos personales.",
+    "Confirmá la donación única y presioná 'Donar a Fundación Líderes de Ansenuza'.",
   ]
 
   const bankData = {
     cbu: "0000000000000000000000",
     alias: "LIDERES.ARG.ANSENUZA",
     cuit: "30-71656939-6",
-    nombre: "FundaciÃ³n LÃ­deres de Ansenuza",
+    nombre: "Fundación Líderes de Ansenuza",
   }
 
   const [copied, setCopied] = useState<string | null>(null)
@@ -303,4 +303,6 @@ export default function DonationPage() {
     </>
   )
 }
+
+
 
