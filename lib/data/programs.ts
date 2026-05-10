@@ -125,7 +125,7 @@ export const AMBIENTALIA_DATA: ProgramData = {
   stats: [
     {
       label: "Años de experiencia",
-      value: "4+"
+      value: "5+"
     },
     {
       label: "Estudiantes y docentes capacitados",
@@ -822,4 +822,3 @@ export const ALL_PROGRAMS: ProgramData[] = [
 
 export const ACTIVE_PROGRAMS: ProgramData[] = ALL_PROGRAMS.filter(p => p.status === 'active');
 export const HISTORICAL_PROGRAMS: ProgramData[] = ALL_PROGRAMS.filter(p => p.status === 'historical');
-
