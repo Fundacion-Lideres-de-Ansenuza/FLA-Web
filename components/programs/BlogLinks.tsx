@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -27,7 +27,7 @@ export default function BlogLinks({ posts, colors }: BlogLinksProps) {
             <h2 className="mb-4 text-4xl md:text-5xl font-contrail-one" style={{ color: colors.secondary }}>
               Notas y noticias
             </h2>
-            <p className="text-lg text-gray-600">Descubri mas sobre el programa en nuestro blog</p>
+            <p className="text-lg text-gray-600">Descubrí más sobre el programa en nuestro blog</p>
           </motion.div>
 
           <div className="grid gap-5 md:grid-cols-2">
@@ -67,3 +67,4 @@ export default function BlogLinks({ posts, colors }: BlogLinksProps) {
     </section>
   );
 }
+

@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useState } from "react"
 import Link from "next/link"
@@ -122,22 +122,22 @@ export default function DonationPage() {
   }
 
   const onlineSteps = [
-    "Seleccioná el botón donar y elegí el monto.",
-    "Definí la frecuencia de donación y completa con tus datos personales.",
-    "Confirmá el medio de pago y presioná 'Donar a Fundación Líderes de Ansenuza'.",
+    "SeleccionÃ¡ el botÃ³n donar y elegÃ­ el monto.",
+    "DefinÃ­ la frecuencia de donaciÃ³n y completa con tus datos personales.",
+    "ConfirmÃ¡ el medio de pago y presionÃ¡ 'Donar a FundaciÃ³n LÃ­deres de Ansenuza'.",
   ]
 
   const paypalSteps = [
-    "Seleccioná el botón donar y elegí el monto.",
-    "Elegí PayPal como medio de pago y completá tus datos personales.",
-    "Confirmá la donación única y presioná 'Donar a Fundación Líderes de Ansenuza'.",
+    "SeleccionÃ¡ el botÃ³n donar y elegÃ­ el monto.",
+    "ElegÃ­ PayPal como medio de pago y completÃ¡ tus datos personales.",
+    "ConfirmÃ¡ la donaciÃ³n Ãºnica y presionÃ¡ 'Donar a FundaciÃ³n LÃ­deres de Ansenuza'.",
   ]
 
   const bankData = {
     cbu: "0000000000000000000000",
     alias: "LIDERES.ARG.ANSENUZA",
     cuit: "30-71656939-6",
-    nombre: "Fundación Líderes de Ansenuza",
+    nombre: "FundaciÃ³n LÃ­deres de Ansenuza",
   }
 
   const [copied, setCopied] = useState<string | null>(null)
@@ -167,7 +167,7 @@ export default function DonationPage() {
       <main className="min-h-screen overflow-x-hidden bg-[linear-gradient(180deg,#ffffff_0%,#fff7f6_30%,#ffffff_100%)] pb-20 pt-[108px] sm:pt-[120px]">
       <div className="container mx-auto max-w-6xl px-4 pt-6 md:pt-8">
         <div className="mb-10 flex flex-col items-center gap-5 text-center md:mb-14">
-          <h1 className="text-5xl leading-tight tracking-tight text-gray-900 lg:text-7xl font-contrail-one">¿Cómo Donar?</h1>
+          <h1 className="text-5xl leading-tight tracking-tight text-gray-900 lg:text-7xl font-contrail-one">{t("donate.title")}</h1>
           <p className="mx-auto max-w-2xl font-arimo text-lg leading-relaxed text-gray-700 md:text-xl">{t("donate.subtitle")}</p>
           <div className="h-1.5 w-32 rounded-full bg-[#f45e5e]" />
         </div>
@@ -303,3 +303,4 @@ export default function DonationPage() {
     </>
   )
 }
+

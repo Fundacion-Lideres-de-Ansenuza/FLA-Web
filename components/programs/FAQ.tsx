@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -31,7 +31,7 @@ export default function FAQ({ faqs, colors }: FAQProps) {
             <h2 className="mb-4 text-4xl md:text-5xl font-contrail-one" style={{ color: colors.secondary }}>
               Preguntas frecuentes
             </h2>
-            <p className="text-lg text-gray-600">Resolve tus dudas sobre el programa</p>
+            <p className="text-lg text-gray-600">Resolvé tus dudas sobre el programa</p>
           </motion.div>
 
           <div className="space-y-3.5">
@@ -77,3 +77,4 @@ export default function FAQ({ faqs, colors }: FAQProps) {
     </section>
   );
 }
+
