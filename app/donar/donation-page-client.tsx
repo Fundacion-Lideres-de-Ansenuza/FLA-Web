@@ -57,7 +57,7 @@ function DonationChip({ href }: { href: string }) {
 }
 
 function WelcomeNote() {
-  return <p className="text-center font-arimo text-base text-gray-600 md:text-lg">Recibir�s un mail de bienvenida con el detalle.</p>
+  return <p className="text-center font-arimo text-base text-gray-600 md:text-lg">Recibirás un mail de bienvenida con el detalle.</p>
 }
 
 export default function DonationPage() {
