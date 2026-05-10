@@ -52,6 +52,9 @@ export const metadata: Metadata = {
     description: "Comunidad activa para ex-participantes de programas de FLA que quieren seguir potenciando sus habilidades de liderazgo.",
     images: ["/images/programs/lideres.webp"]
   },
+  alternates: {
+    canonical: "https://www.lideresdeansenuza.org/programas/lideres"
+  },
   robots: {
     index: true,
     follow: true
@@ -59,8 +62,26 @@ export const metadata: Metadata = {
 };
 
 export default function LideresPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": LIDERES_DATA.faqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
-    <main className="min-h-screen bg-white">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main className="min-h-screen bg-white">
       <ProgramHeader
         title={LIDERES_DATA.title}
         description={LIDERES_DATA.shortDescription}
@@ -121,6 +142,7 @@ export default function LideresPage() {
         title={LIDERES_DATA.title}
         colors={LIDERES_DATA.colors}
       />
-    </main>
+      </main>
+    </>
   );
 }

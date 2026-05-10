@@ -27,7 +27,7 @@ const Accessibility = () => {
     <div className="fixed bottom-4 right-4 z-[9999]">
       <button
         onClick={toggleMenu}
-        className="bg-white p-4 rounded-full shadow-lg focus:outline-none"
+        className="bg-white p-4 rounded-full shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#bc2222] focus-visible:ring-offset-2"
         aria-label="Herramientas de accesibilidad"
       >
         <FaWheelchair size={24} />

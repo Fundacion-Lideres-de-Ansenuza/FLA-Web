@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { FaTiktok, FaInstagram, FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa"
 import Image from "next/image"
@@ -21,14 +21,14 @@ export default function Footer() {
                 <div className="absolute -inset-1 bg-gradient-to-r from-red-600 to-red-400 rounded-full blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
                 <Image
                   src="/images/Logos/fla-logo-blanco.webp"
-                  alt="Fundación Líderes de Ansenuza"
+                  alt="Fundacion Lideres de Ansenuza"
                   width={75}
                   height={75}
                   className="relative transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="font-arimo text-base text-white leading-tight">
-                <p className="font-semibold tracking-wide">Fundación</p>
+                <p className="font-semibold tracking-wide">Fundacion</p>
                 <p className="font-semibold tracking-wide">Lideres de Ansenuza</p>
               </div>
             </div>
@@ -39,11 +39,11 @@ export default function Footer() {
 
             <div className="flex items-center gap-5">
               {[
-                { icon: FaInstagram, href: "https://www.instagram.com/fundacionlideresdeansenuza/" },
-                { icon: FaFacebook, href: "https://www.facebook.com/fundacionlideresdeansenuza" },
-                { icon: FaLinkedin, href: "https://www.linkedin.com/company/fundaci%C3%B3n-l%C3%ADderes-de-ansenuza/" },
-                { icon: FaTiktok, href: "https://www.tiktok.com/@fundacionlideresansenuza" },
-                { icon: FaYoutube, href: "https://www.youtube.com/@fundacionlideresdeansenuza4512" }
+                { icon: FaInstagram, href: "https://www.instagram.com/fundacionlideresdeansenuza/", label: "Instagram" },
+                { icon: FaFacebook, href: "https://www.facebook.com/fundacionlideresdeansenuza", label: "Facebook" },
+                { icon: FaLinkedin, href: "https://www.linkedin.com/company/fundaci%C3%B3n-l%C3%ADderes-de-ansenuza/", label: "LinkedIn" },
+                { icon: FaTiktok, href: "https://www.tiktok.com/@fundacionlideresansenuza", label: "TikTok" },
+                { icon: FaYoutube, href: "https://www.youtube.com/@fundacionlideresdeansenuza4512", label: "YouTube" }
               ].map((social, idx) => (
                 <a
                   key={idx}
@@ -51,6 +51,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2.5 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:bg-red-600/20 hover:border-red-600/40 transition-all duration-300 transform hover:-translate-y-1"
+                  aria-label={social.label}
                 >
                   <social.icon className="h-6 w-6" />
                 </a>
@@ -66,7 +67,7 @@ export default function Footer() {
                 <div className="mt-1 w-1.5 h-1.5 rounded-full bg-red-600 group-hover:scale-125 transition-transform" />
                 <div>
                   <p className="group-hover:text-white transition-colors">Independencia 350</p>
-                  <p className="group-hover:text-white transition-colors opacity-80">Miramar de Ansenuza, Córdoba</p>
+                  <p className="group-hover:text-white transition-colors opacity-80">Miramar de Ansenuza, Cordoba</p>
                 </div>
               </div>
               <div className="group flex items-center gap-3">
@@ -81,7 +82,7 @@ export default function Footer() {
                   className="inline-flex items-center text-base font-arimo font-semibold text-white hover:text-white/80 transition-colors gap-2 group/link"
                 >
                   {t('footer.directContact')}
-                  <span className="group-hover/link:translate-x-1 transition-transform">→</span>
+                  <span className="group-hover/link:translate-x-1 transition-transform">-&gt;</span>
                 </a>
               </div>
             </div>
@@ -91,14 +92,12 @@ export default function Footer() {
           <div className="md:col-span-6 lg:col-span-4 space-y-6">
             <h3 className="text-base font-arimo font-semibold text-white tracking-wider uppercase">{t('footer.newsletter')}</h3>
             <p className="text-gray-400 font-arimo text-base">{t('footer.newsletterText')}</p>
-            <form className="relative flex group">
-              <input
-                type="email"
-                placeholder={t('footer.emailPlaceholder')}
+            <form className="relative flex group" aria-label="Formulario de newsletter">
+              <input type="email" name="email" autoComplete="email" aria-label={t("footer.emailPlaceholder")} placeholder={t("footer.emailPlaceholder")}
                 className="w-full pl-6 pr-16 py-4 rounded-2xl bg-white/5 border border-white/10 text-white text-base font-arimo placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-red-600/50 focus:border-red-600/50 transition-all"
               />
               <button className="absolute right-2 top-2 bottom-2 bg-red-600 hover:bg-red-700 text-white px-5 rounded-xl text-base font-arimo font-semibold transition-all transform active:scale-95 flex items-center justify-center">
-                <span>→</span>
+                <span>-&gt;</span>
               </button>
             </form>
           </div>
@@ -123,3 +122,4 @@ export default function Footer() {
     </footer>
   )
 }
+

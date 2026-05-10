@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Image from "next/image"
 import Link from "next/link"
@@ -10,12 +10,12 @@ function getLogoFileName(title: string): string {
   const logoMap: Record<string, string> = {
     "Experiencia Ambientalia": "Experiencia Ambientalia",
     "SOMOS": "Somos",
-    "Líderes": "lideres",
+    "LÃ­deres": "lideres",
     "Potenciate": "Potenciate",
     "FUTURAS": "Futuras",
     "ImpulsaTEC": "Impulsatec",
     "Ciencia Fuera de la Caja": "Ciencia fuera de la caja",
-    "Aventura Matemágica": "Aventura Matemagica"
+    "Aventura MatemÃ¡gica": "Aventura Matemagica"
   }
 
   return logoMap[title] || title
@@ -59,7 +59,7 @@ export default function CurrentPrograms() {
                       width={360}
                       height={180}
                       className="h-full w-full object-contain filter drop-shadow-md transition-transform duration-300 group-hover:scale-105"
-                      priority={index < 2}
+                      loading={index < 3 ? "eager" : "lazy"}
                     />
                   </div>
                 </div>
