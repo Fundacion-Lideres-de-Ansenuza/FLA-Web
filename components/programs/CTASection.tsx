@@ -35,7 +35,7 @@ export default function CTASection({ title, colors }: CTASectionProps) {
             Listo para ser parte de {title}?
           </h2>
           <p className="mb-10 text-xl leading-relaxed text-white/95 md:text-2xl">
-            Unite a una comunidad de jovenes lideres que estan transformando el futuro
+            Unite a una comunidad de jóvenes líderes que están transformando el futuro
           </p>
           <div className="flex justify-center">
             <Link

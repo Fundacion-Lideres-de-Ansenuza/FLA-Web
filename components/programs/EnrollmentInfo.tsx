@@ -29,7 +29,7 @@ export default function EnrollmentInfo({
             className="mb-10 text-center"
           >
             <h2 className="mb-4 text-4xl md:text-5xl font-contrail-one" style={{ color: colors.secondary }}>
-              {isHistorical ? "Informacion del programa" : "Como anotarme"}
+              {isHistorical ? "Información del programa" : "Cómo anotarse"}
             </h2>
           </motion.div>
 
