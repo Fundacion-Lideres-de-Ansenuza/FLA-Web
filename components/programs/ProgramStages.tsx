@@ -93,7 +93,7 @@ export default function ProgramStages({ stages, colors }: ProgramStagesProps) {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-6 text-center italic text-gray-500"
           >
-            * Las actividades pueden variar de ano a ano
+            * Las actividades pueden variar de año a año
           </motion.p>
         </div>
       </div>
