@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import ProgramHeader from "@/components/programs/ProgramHeader";
 import ProgramDescription from "@/components/programs/ProgramDescription";
 import Requirements from "@/components/programs/Requirements";
@@ -13,33 +13,33 @@ import Gallery from "@/components/programs/Gallery";
 import { SOMOS_DATA } from "@/lib/data/programs";
 
 export const metadata: Metadata = {
-  title: "SOMOS - Programa de Liderazgo en Diversidad para Jóvenes | FLA",
-  description: "Programa gratuito de liderazgo en diversidad para jóvenes de 15-19 años en Argentina. Aprendé sobre diversidad, desarrollá habilidades de liderazgo y realizá acciones de impacto social. +70 participantes, +4000 personas impactadas.",
+  title: "SOMOS - Programa de Liderazgo en Diversidad para JÃ³venes | FLA",
+  description: "Programa gratuito de liderazgo en diversidad para jÃ³venes de 15-19 aÃ±os en Argentina. AprendÃ© sobre diversidad, desarrollÃ¡ habilidades de liderazgo y realizÃ¡ acciones de impacto social. +70 participantes, +4000 personas impactadas.",
   keywords: [
-    "programa diversidad jóvenes",
+    "programa diversidad jÃ³venes",
     "liderazgo diversidad argentina",
-    "educación diversidad",
+    "educaciÃ³n diversidad",
     "diversidad sexual",
     "diversidad cultural",
     "diversidad funcional",
-    "inclusión escolar",
-    "programa gratuito jóvenes",
-    "acción social comunitaria",
+    "inclusiÃ³n escolar",
+    "programa gratuito jÃ³venes",
+    "acciÃ³n social comunitaria",
     "liderazgo juvenil argentina",
-    "desarrollo personal jóvenes",
-    "educación secundaria inclusiva",
-    "diversidad género",
-    "fundación líderes ansenuza",
+    "desarrollo personal jÃ³venes",
+    "educaciÃ³n secundaria inclusiva",
+    "diversidad gÃ©nero",
+    "fundaciÃ³n lÃ­deres ansenuza",
     "programa estudiantes secundaria"
   ],
-  authors: [{ name: "Fundación Líderes de Ansenuza" }],
+  authors: [{ name: "FundaciÃ³n LÃ­deres de Ansenuza" }],
   openGraph: {
-    title: "SOMOS - Liderazgo en Diversidad para Jóvenes de Argentina",
-    description: "Programa gratuito de 2 meses para jóvenes de 15-19 años. Talleres de diversidad, mentorías y acciones de impacto. +70 participantes han impactado a +4000 personas en sus comunidades.",
+    title: "SOMOS - Liderazgo en Diversidad para JÃ³venes de Argentina",
+    description: "Programa gratuito de 2 meses para jÃ³venes de 15-19 aÃ±os. Talleres de diversidad, mentorÃ­as y acciones de impacto. +70 participantes han impactado a +4000 personas en sus comunidades.",
     type: "website",
     locale: "es_AR",
     url: "https://www.lideresdeansenuza.org/programas/somos",
-    siteName: "Fundación Líderes de Ansenuza",
+    siteName: "FundaciÃ³n LÃ­deres de Ansenuza",
     images: [
       {
         url: "/images/programs/somos.webp",
@@ -51,8 +51,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SOMOS - Liderazgo en Diversidad para Jóvenes",
-    description: "Programa gratuito de 2 meses. Aprendé sobre diversidad, desarrollá liderazgo y realizá acciones de impacto en tu comunidad. Para jóvenes de 15-19 años de toda Argentina.",
+    title: "SOMOS - Liderazgo en Diversidad para JÃ³venes",
+    description: "Programa gratuito de 2 meses. AprendÃ© sobre diversidad, desarrollÃ¡ liderazgo y realizÃ¡ acciones de impacto en tu comunidad. Para jÃ³venes de 15-19 aÃ±os de toda Argentina.",
     images: ["/images/programs/somos.webp"]
   },
   alternates: {
@@ -75,17 +75,17 @@ export default function SomosPage() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    "name": "Fundación Líderes de Ansenuza",
+    "name": "FundaciÃ³n LÃ­deres de Ansenuza",
     "url": "https://www.lideresdeansenuza.org",
     "logo": "https://www.lideresdeansenuza.org/images/LogoFLA.webp",
-    "description": "ONG que diseña y ejecuta programas educativos gratuitos en Argentina",
+    "description": "ONG que diseÃ±a y ejecuta programas educativos gratuitos en Argentina",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "AR"
     },
     "sameAs": [
-      "https://www.instagram.com/lideresdeansenuza",
-      "https://www.facebook.com/lideresdeansenuza"
+      "https://www.instagram.com/fundacionlideresdeansenuza/",
+      "https://www.facebook.com/fundacionlideresdeansenuza"
     ]
   };
 
@@ -93,17 +93,17 @@ export default function SomosPage() {
     "@context": "https://schema.org",
     "@type": "Course",
     "name": "SOMOS - Programa de Liderazgo en Diversidad",
-    "description": "Programa gratuito de liderazgo en diversidad para jóvenes de entre 15 y 19 años de Argentina que quieran convertirse en líderes de sus comunidades.",
+    "description": "Programa gratuito de liderazgo en diversidad para jÃ³venes de entre 15 y 19 aÃ±os de Argentina que quieran convertirse en lÃ­deres de sus comunidades.",
     "provider": {
       "@type": "EducationalOrganization",
-      "name": "Fundación Líderes de Ansenuza",
+      "name": "FundaciÃ³n LÃ­deres de Ansenuza",
       "url": "https://www.lideresdeansenuza.org"
     },
     "educationalLevel": "Secundario",
     "audience": {
       "@type": "EducationalAudience",
       "educationalRole": "student",
-      "audienceType": "Estudiantes de secundaria de 15 a 19 años"
+      "audienceType": "Estudiantes de secundaria de 15 a 19 aÃ±os"
     },
     "isAccessibleForFree": true,
     "hasCourseInstance": {
@@ -121,7 +121,7 @@ export default function SomosPage() {
       "Diversidad cultural",
       "Diversidad corporal",
       "Diversidad funcional",
-      "Diversidad de género",
+      "Diversidad de gÃ©nero",
       "Diversidad sexual",
       "Diversidad religiosa",
       "Liderazgo juvenil",

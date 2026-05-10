@@ -1,4 +1,4 @@
-import Link from "next/link"
+﻿import Link from "next/link"
 
 export default function VideoSection() {
   return (
@@ -11,7 +11,7 @@ export default function VideoSection() {
               src="https://www.youtube.com/embed/NSpQbbPEnqg"
               title="Video de nuestra historia"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
+              loading="lazy" allowFullScreen
             />
           </div>
         </div>
@@ -23,7 +23,7 @@ export default function VideoSection() {
             className="relative group px-10 py-4 bg-gradient-to-r from-red-600 to-red-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden before:absolute before:inset-0 before:bg-white/10 before:translate-x-[-100%] hover:before:translate-x-0 before:transition-transform before:duration-500"
           >
             <span className="relative text-white text-xl md:text-2xl font-contrail tracking-wide">
-              Conocé nuestra historia
+              Conoce nuestra historia
             </span>
           </Link>
         </div>

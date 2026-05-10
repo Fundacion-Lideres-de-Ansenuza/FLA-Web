@@ -1,37 +1,53 @@
-"use client"
+﻿import type { Metadata } from "next"
+import ContactanosPageClient from "./contactanos-page-client"
 
-import { JSX } from "react"
-import { motion } from "framer-motion"
-import ContactIntro from "../../components/contactanos/contact-intro"
-import ContactForm from "../../components/contactanos/contact-form"
+const PAGE_URL = "https://www.lideresdeansenuza.org/contactanos"
 
-const fadeIn = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
+export const metadata: Metadata = {
+  title: "Contacto | Fundacion Lideres de Ansenuza",
+  description:
+    "Contactate con Fundacion Lideres de Ansenuza para voluntariado, alianzas y colaboraciones en programas educativos para jovenes en Argentina.",
+  alternates: {
+    canonical: PAGE_URL,
+    languages: {
+      "es-AR": PAGE_URL,
+      en: PAGE_URL,
+    },
+  },
+  openGraph: {
+    title: "Contacto | Fundacion Lideres de Ansenuza",
+    description:
+      "Canal de contacto institucional para voluntariado, alianzas y colaboraciones con programas educativos de impacto.",
+    url: PAGE_URL,
+    siteName: "Fundacion Lideres de Ansenuza",
+    locale: "es_AR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contacto | Fundacion Lideres de Ansenuza",
+    description: "Escribinos para voluntariado, alianzas y trabajo conjunto.",
+  },
 }
 
-export default function Contactanos(): JSX.Element {
+export default function ContactanosPage() {
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "Contacto - Fundacion Lideres de Ansenuza",
+    url: PAGE_URL,
+    about: {
+      "@type": "NGO",
+      name: "Fundacion Lideres de Ansenuza",
+      url: "https://www.lideresdeansenuza.org",
+      email: "contacto@lideresdeansenuza.org",
+    },
+  }
+
   return (
-    <main className="min-h-screen bg-white container mx-auto px-4 overflow-hidden pt-[108px] sm:pt-[120px]">
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={fadeIn}
-        transition={{ duration: 0.5 }}
-      >
-        <ContactIntro />
-      </motion.div>
-      <div className="mx-auto max-w-6xl px-4 pb-8 pt-1 md:pt-2">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeIn}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <ContactForm />
-        </motion.div>
-      </div>
-    </main>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }} />
+      <ContactanosPageClient />
+    </>
   )
 }

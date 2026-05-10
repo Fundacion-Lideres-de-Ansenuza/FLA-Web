@@ -1,4 +1,4 @@
-import type React from "react"
+﻿import type React from "react"
 import type { Metadata } from "next"
 import { Inter, Contrail_One, Arimo } from "next/font/google"
 import localFont from "next/font/local"
@@ -22,15 +22,28 @@ const contrailOne = Contrail_One({ weight: "400", subsets: ["latin"], variable: 
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.lideresdeansenuza.org"),
-  title: "Fundación Líderes de Ansenuza - Jóvenes transformando la educación",
-  description: "Somos una ONG que diseña y ejecuta programas educativos gratuitos en el territorio argentino.",
-  keywords: "educación, jóvenes, ONG, programas educativos, Argentina, voluntariado",
-  authors: [{ name: "Fundación Líderes de Ansenuza" }],
+  manifest: "/manifest.webmanifest",
+  title: "Fundacion Lideres de Ansenuza - Jovenes transformando la educacion",
+  description: "Somos una ONG que disena y ejecuta programas educativos gratuitos en Argentina.",
+  keywords: "educacion, jovenes, ONG, programas educativos, Argentina, voluntariado",
+  authors: [{ name: "Fundacion Lideres de Ansenuza" }],
+  alternates: {
+    canonical: "https://www.lideresdeansenuza.org",
+    languages: {
+      "es-AR": "https://www.lideresdeansenuza.org",
+      en: "https://www.lideresdeansenuza.org",
+    },
+  },
   openGraph: {
-    title: "Fundación Líderes de Ansenuza - Jóvenes transformando la educación",
-    description: "Somos una ONG que diseña y ejecuta programas educativos gratuitos en el territorio argentino.",
+    title: "Fundacion Lideres de Ansenuza - Jovenes transformando la educacion",
+    description: "Somos una ONG que disena y ejecuta programas educativos gratuitos en Argentina.",
     type: "website",
     locale: "es_AR",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fundacion Lideres de Ansenuza",
+    description: "Programas educativos gratuitos para jovenes en Argentina.",
   },
 }
 
@@ -48,8 +61,16 @@ export default function RootLayout({
       <body className={`${inter.className} ${fla.variable} ${saridona.variable} ${contrailOne.variable} ${arimo.variable} overflow-x-hidden`}>
         <I18nProvider>
           <AccessibilityProvider>
+            <a
+              href="#main-content"
+              className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[9999] focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-black"
+            >
+              Saltar al contenido principal
+            </a>
             <Header />
-            {children}
+            <div id="main-content" tabIndex={-1}>
+              {children}
+            </div>
             <Footer />
             <Accessibility />
           </AccessibilityProvider>

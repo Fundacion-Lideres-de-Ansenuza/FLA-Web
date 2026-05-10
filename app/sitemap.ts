@@ -1,4 +1,4 @@
-import type { MetadataRoute } from "next";
+﻿import type { MetadataRoute } from "next";
 
 const SITE_URL = "https://www.lideresdeansenuza.org";
 export const dynamic = "force-static";
@@ -27,11 +27,17 @@ const routes: RouteConfig[] = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
+  const lastModifiedByRoute: Record<string, Date> = {
+    "/": new Date("2026-05-09"),
+    "/donar": new Date("2026-05-09"),
+    "/contactanos": new Date("2026-05-09"),
+    "/quienes-somos": new Date("2026-05-09"),
+    "/programas": new Date("2026-05-09"),
+  };
 
   return routes.map(({ path, changeFrequency, priority }) => ({
     url: `${SITE_URL}${path}`,
-    lastModified,
+    lastModified: lastModifiedByRoute[path] ?? new Date("2026-01-01"),
     changeFrequency,
     priority,
   }));

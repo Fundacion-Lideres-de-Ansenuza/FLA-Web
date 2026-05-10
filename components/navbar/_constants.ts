@@ -4,8 +4,7 @@ export const NAV_ITEMS: NavItem[] = [
   { name: "PROGRAMAS", href: "/programas" },
   { name: "QUIENES SOMOS", href: "/quienes-somos" },
   { name: "DONAR", href: "/donar" },
-  { name: "BLOG", href: "/blog" },
-  { name: "CAMPUS", href: "/campus" }
+  { name: "CONTACTANOS", href: "/contactanos" }
 ] as const
 
 export const BRAND_COLOR = '#bc2222'

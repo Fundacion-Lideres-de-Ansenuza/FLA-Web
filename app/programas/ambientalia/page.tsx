@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import ProgramHeader from "@/components/programs/ProgramHeader";
 import ProgramDescription from "@/components/programs/ProgramDescription";
 import Requirements from "@/components/programs/Requirements";
@@ -14,45 +14,45 @@ import CTASection from "@/components/programs/CTASection";
 import { AMBIENTALIA_DATA } from "@/lib/data/programs";
 
 export const metadata: Metadata = {
-  title: "Experiencia Ambientalia - Programa de Educación Ambiental para Jóvenes | FLA",
-  description: "Programa gratuito de educación ambiental en Laguna Mar Chiquita, Ansenuza. Desarrollá proyectos ambientales, adquirí habilidades de liderazgo y conectá con tu ecosistema. 700+ estudiantes capacitados.",
+  title: "Experiencia Ambientalia - Programa de EducaciÃ³n Ambiental para JÃ³venes | FLA",
+  description: "Programa gratuito de educaciÃ³n ambiental en Laguna Mar Chiquita, Ansenuza. DesarrollÃ¡ proyectos ambientales, adquirÃ­ habilidades de liderazgo y conectÃ¡ con tu ecosistema. 700+ estudiantes capacitados.",
   keywords: [
-    "educación ambiental argentina",
-    "programa educación ambiental jóvenes",
+    "educaciÃ³n ambiental argentina",
+    "programa educaciÃ³n ambiental jÃ³venes",
     "laguna mar chiquita",
     "ansenuza",
     "parque nacional ansenuza",
-    "conservación biodiversidad",
+    "conservaciÃ³n biodiversidad",
     "liderazgo ambiental",
     "proyectos ambientales escolares",
     "programa gratuito estudiantes",
-    "educación secundaria córdoba",
+    "educaciÃ³n secundaria cÃ³rdoba",
     "aves playeras argentina",
     "humedales argentina",
     "rhrap argentina",
     "manomet conservation",
-    "fundación líderes ansenuza"
+    "fundaciÃ³n lÃ­deres ansenuza"
   ],
-  authors: [{ name: "Fundación Líderes de Ansenuza" }],
+  authors: [{ name: "FundaciÃ³n LÃ­deres de Ansenuza" }],
   openGraph: {
-    title: "Experiencia Ambientalia - Educación Ambiental en Laguna Mar Chiquita",
-    description: "Programa gratuito de 8 meses que conecta jóvenes con sus ecosistemas. +700 estudiantes capacitados, 62 proyectos comunitarios desarrollados en 21+ localidades de Ansenuza.",
+    title: "Experiencia Ambientalia - EducaciÃ³n Ambiental en Laguna Mar Chiquita",
+    description: "Programa gratuito de 8 meses que conecta jÃ³venes con sus ecosistemas. +700 estudiantes capacitados, 62 proyectos comunitarios desarrollados en 21+ localidades de Ansenuza.",
     type: "website",
     locale: "es_AR",
     url: "https://www.lideresdeansenuza.org/programas/ambientalia",
-    siteName: "Fundación Líderes de Ansenuza",
+    siteName: "FundaciÃ³n LÃ­deres de Ansenuza",
     images: [
       {
         url: "/images/programs/exp_ambientalia.webp",
         width: 1200,
         height: 630,
-        alt: "Experiencia Ambientalia - Programa de Educación Ambiental"
+        alt: "Experiencia Ambientalia - Programa de EducaciÃ³n Ambiental"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Experiencia Ambientalia - Educación Ambiental para Jóvenes",
+    title: "Experiencia Ambientalia - EducaciÃ³n Ambiental para JÃ³venes",
     description: "Programa gratuito de 8 meses en Laguna Mar Chiquita. +700 estudiantes capacitados desarrollando proyectos ambientales que transforman comunidades.",
     images: ["/images/programs/exp_ambientalia.webp"]
   },
@@ -76,18 +76,18 @@ export default function AmbientaliaPage() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    "name": "Fundación Líderes de Ansenuza",
+    "name": "FundaciÃ³n LÃ­deres de Ansenuza",
     "url": "https://www.lideresdeansenuza.org",
     "logo": "https://www.lideresdeansenuza.org/images/LogoFLA.webp",
-    "description": "ONG que diseña y ejecuta programas educativos gratuitos en Argentina",
+    "description": "ONG que diseÃ±a y ejecuta programas educativos gratuitos en Argentina",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "AR",
-      "addressRegion": "Córdoba"
+      "addressRegion": "CÃ³rdoba"
     },
     "sameAs": [
-      "https://www.instagram.com/lideresdeansenuza",
-      "https://www.facebook.com/lideresdeansenuza"
+      "https://www.instagram.com/fundacionlideresdeansenuza/",
+      "https://www.facebook.com/fundacionlideresdeansenuza"
     ]
   };
 
@@ -95,10 +95,10 @@ export default function AmbientaliaPage() {
     "@context": "https://schema.org",
     "@type": "Course",
     "name": "Experiencia Ambientalia",
-    "description": "Programa de educación ambiental que conecta a jóvenes con sus ecosistemas y biodiversidad, desarrollando habilidades de liderazgo a través de proyectos comunitarios ambientales.",
+    "description": "Programa de educaciÃ³n ambiental que conecta a jÃ³venes con sus ecosistemas y biodiversidad, desarrollando habilidades de liderazgo a travÃ©s de proyectos comunitarios ambientales.",
     "provider": {
       "@type": "EducationalOrganization",
-      "name": "Fundación Líderes de Ansenuza",
+      "name": "FundaciÃ³n LÃ­deres de Ansenuza",
       "url": "https://www.lideresdeansenuza.org"
     },
     "educationalLevel": "Secundario",
@@ -114,7 +114,7 @@ export default function AmbientaliaPage() {
       "duration": "P8M",
       "location": {
         "@type": "Place",
-        "name": "Laguna Mar Chiquita, Ansenuza, Córdoba, Argentina"
+        "name": "Laguna Mar Chiquita, Ansenuza, CÃ³rdoba, Argentina"
       }
     },
     "offers": {
@@ -201,11 +201,11 @@ export default function AmbientaliaPage() {
                   Identidad Ambientalia
                 </span>
                 <h2 className="text-4xl md:text-5xl font-contrail-one tracking-tight text-[#064e3b]">
-                  Una experiencia con más naturaleza, territorio e impacto visible
+                  Una experiencia con mÃ¡s naturaleza, territorio e impacto visible
                 </h2>
                 <p className="max-w-2xl text-base md:text-lg leading-relaxed text-emerald-950/80 font-arimo">
-                  Reforzamos esta página con una atmósfera más verde para que respire mejor la esencia de Ambientalia:
-                  biodiversidad, liderazgo joven, comunidad y acción ambiental concreta.
+                  Reforzamos esta pÃ¡gina con una atmÃ³sfera mÃ¡s verde para que respire mejor la esencia de Ambientalia:
+                  biodiversidad, liderazgo joven, comunidad y acciÃ³n ambiental concreta.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   {AMBIENTALIA_DATA.stats.slice(0, 4).map((stat) => (
@@ -233,7 +233,7 @@ export default function AmbientaliaPage() {
                     <p className="text-xs font-black uppercase tracking-[0.2em]">Enfoque</p>
                     <p className="mt-3 font-contrail-one text-3xl">Aprender haciendo</p>
                     <p className="mt-2 text-sm font-arimo text-[#14532d]">
-                      El diseño acompaña la narrativa de exploración, conservación y liderazgo.
+                      El diseÃ±o acompaÃ±a la narrativa de exploraciÃ³n, conservaciÃ³n y liderazgo.
                     </p>
                   </div>
                 </div>
