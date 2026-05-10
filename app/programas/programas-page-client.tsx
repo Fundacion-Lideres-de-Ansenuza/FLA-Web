@@ -78,11 +78,15 @@ export default function ProgramasPage() {
               </p>
 
               <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start justify-items-center">
-                {ACTIVE_PROGRAMS.map((program) => (
+                {ACTIVE_PROGRAMS.map((program, index) => (
                   <Link
                     key={program.slug}
                     href={`/programas/${program.slug}`}
-                    className="group w-full max-w-md"
+                    className={`group w-full max-w-md ${
+                      ACTIVE_PROGRAMS.length === 3 && index === 2
+                        ? "md:col-span-2 md:justify-self-center"
+                        : ""
+                    }`}
                   >
                     <div className="flex flex-col items-center transition-all duration-300">
                       <div
