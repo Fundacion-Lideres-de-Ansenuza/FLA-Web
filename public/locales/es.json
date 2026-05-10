@@ -1,110 +1,110 @@
-﻿{
+{
   "nav": {
     "programas": "PROGRAMAS",
-    "quienes_somos": "QUIÉNES SOMOS",
+    "quienes_somos": "QUIÃ‰NES SOMOS",
     "donar": "DONAR",
     "blog": "BLOG",
     "campus": "CAMPUS",
     "contactanos": "CONTACTANOS"
   },
   "language": {
-    "es": "Español",
+    "es": "EspaÃ±ol",
     "en": "English",
     "label": "Idioma"
   },
   "hero": {
-    "title": "Jóvenes transformando la educación",
-    "description": "Diseñamos y ejecutamos programas educativos que impulsan a jóvenes a liderar el cambio en sus comunidades.",
+    "title": "JÃ³venes transformando la educaciÃ³n",
+    "description": "DiseÃ±amos y ejecutamos programas educativos que impulsan a jÃ³venes a liderar el cambio en sus comunidades.",
     "voluntariado": "Voluntariado",
     "alianzas": "Alianzas",
     "donar": "Donar"
   },
   "stats": {
     "volunteers": "Voluntarios\nactuales",
-    "participants": "Participantes a lo\nlargo de los años",
+    "participants": "Participantes a lo\nlargo de los aÃ±os",
     "projects": "Proyectos de\nimpacto social"
   },
   "whyWeDoIt": {
-    "title": "Nuestro MOTOR",
-    "subtitle": "Porque la educación crea oportunidades y transforma comunidades.",
+    "title": "Â¿Por quÃ© lo hacemos?",
+    "subtitle": "Porque la educaciÃ³n crea oportunidades y transforma comunidades.",
     "socialImpact": {
       "title": "Impacto social",
       "description": "Porque impulsamos a quienes participan en nuestros programas a llevar a cabo proyectos que generen transformaciones en sus comunidades."
     },
     "education": {
-      "title": "Educación",
-      "description": "Porque creemos en la educación como recurso y herramienta para solucionar problemas sociales."
+      "title": "EducaciÃ³n",
+      "description": "Porque creemos en la educaciÃ³n como recurso y herramienta para solucionar problemas sociales."
     },
     "opportunities": {
       "title": "Oportunidades",
-      "description": "Porque creemos que el talento no tiene fronteras, llevamos experiencias transformadoras hasta los rincones más alejados, para que cada joven pueda ser agente de cambio en su comunidad."
+      "description": "Porque creemos que el talento no tiene fronteras, llevamos experiencias transformadoras hasta los rincones mÃ¡s alejados, para que cada joven pueda ser agente de cambio en su comunidad."
     }
   },
   "currentPrograms": {
     "title": "Programas Actuales",
-    "subtitle": "Elegí la experiencia educativa que mejor se adapte a vos y conocé sus detalles al instante.",
+    "subtitle": "ElegÃ­ la experiencia educativa que mejor se adapte a vos y conocÃ© sus detalles al instante.",
     "viewAll": "Ver todos los programas"
   },
   "testimonials": {
     "title": "Testimonios",
-    "subtitle": "Descubrí lo que dicen las personas que forman parte de nuestra FLAmilia"
+    "subtitle": "DescubrÃ­ lo que dicen las personas que forman parte de nuestra FLAmilia"
   },
   "footer": {
-    "tagline": "Empoderando a la próxima generación de líderes en la región de Ansenuza a través de la educación y la innovación.",
+    "tagline": "Empoderando a la prÃ³xima generaciÃ³n de lÃ­deres en la regiÃ³n de Ansenuza a travÃ©s de la educaciÃ³n y la innovaciÃ³n.",
     "contact": "Contacto",
     "directContact": "Contacto Directo",
     "newsletter": "Newsletter",
     "newsletterText": "Mantenete al tanto de todas nuestras novedades.",
     "emailPlaceholder": "Tu email",
-    "copyright": "© {{year}} Fundación Líderes de Ansenuza. Todos los derechos reservados.",
-    "privacyPolicy": "Políticas de Privacidad"
+    "copyright": "Â© {{year}} FundaciÃ³n Lideres de Ansenuza. Todos los derechos reservados.",
+    "privacyPolicy": "PolÃ­ticas de Privacidad"
   },
   "aboutUs": {
     "foundation": {
-      "badge": "Fundación FLA",
-      "title": "LA FUNDACI�"N",
-      "imageAlt": "Equipo de la Fundación Líderes de Ansenuza",
-      "intro": "La Fundación Líderes de Ansenuza es una organización no gubernamental con sede en Miramar de Ansenuza, Córdoba, cuyo trabajo gira en torno al diseño y ejecución de programas educativos en el territorio argentino.",
-      "paragraph1": "En la Fundación Líderes de Ansenuza (FLA), creemos en el potencial de cada joven para transformar su comunidad y construir un futuro mejor. Nuestra misión es formar agentes de cambio, ofreciendo oportunidades, herramientas y acompañamiento para que los jóvenes desarrollen liderazgo y generen impacto social.",
-      "paragraph2": "Trabajamos en todo el territorio argentino, con especial atención a las regiones rurales y semiurbanas, así como a las grandes ciudades. Nuestro objetivo es llegar a quienes más lo necesitan, brindando experiencias vivenciales, sin barreras económicas, que promueven el aprendizaje mediante la acción y la innovación.",
-      "paragraph3": "FLA no solo se centra en la formación de líderes, sino en crear una comunidad inclusiva, diversa y comprometida, donde los jóvenes encuentran un espacio seguro para potenciar sus ideas y proyectos sostenibles.",
+      "badge": "FundaciÃ³n FLA",
+      "title": "LA FUNDACIÃ“N",
+      "imageAlt": "Equipo de la FundaciÃ³n LÃ­deres de Ansenuza",
+      "intro": "La FundaciÃ³n LÃ­deres de Ansenuza es una organizaciÃ³n no gubernamental con sede en Miramar de Ansenuza, CÃ³rdoba, cuyo trabajo gira en torno al diseÃ±o y ejecuciÃ³n de programas educativos en el territorio argentino.",
+      "paragraph1": "En la FundaciÃ³n LÃ­deres de Ansenuza (FLA), creemos en el potencial de cada joven para transformar su comunidad y construir un futuro mejor. Nuestra misiÃ³n es formar agentes de cambio, ofreciendo oportunidades, herramientas y acompaÃ±amiento para que los jÃ³venes desarrollen liderazgo y generen impacto social.",
+      "paragraph2": "Trabajamos en todo el territorio argentino, con especial atenciÃ³n a las regiones rurales y semiurbanas, asÃ­ como a las grandes ciudades. Nuestro objetivo es llegar a quienes mÃ¡s lo necesitan, brindando experiencias vivenciales, sin barreras econÃ³micas, que promueven el aprendizaje mediante la acciÃ³n y la innovaciÃ³n.",
+      "paragraph3": "FLA no solo se centra en la formaciÃ³n de lÃ­deres, sino en crear una comunidad inclusiva, diversa y comprometida, donde los jÃ³venes encuentran un espacio seguro para potenciar sus ideas y proyectos sostenibles.",
       "paragraph4": "Estar en FLA significa ser parte de un movimiento que apuesta a la igualdad de oportunidades y al poder de la juventud para generar un impacto real y duradero. Juntos, estamos construyendo un futuro lleno de posibilidades y liderazgo para todos."
     },
     "authorities": {
       "title": "Autoridades",
-      "description": "Presentamos al equipo directivo de la fundación y a las personas que acompañan nuestra gestión institucional."
+      "description": "Presentamos al equipo directivo de la fundaciÃ³n y a las personas que acompaÃ±an nuestra gestiÃ³n institucional."
     },
-    "missionVisionValues": "Misión, Visión y Valores",
+    "missionVisionValues": "MisiÃ³n, VisiÃ³n y Valores",
     "mission": {
-      "tag": "Misión",
-      "text": "Empoderar a jóvenes de todo el país a ser líderes a través de programas educativos y motivacionales, brindando acompañamiento ante oportunidades de desarrollo que les permita concretar proyectos de impacto social.",
-      "imageAlt": "Misión de la fundación"
+      "tag": "MisiÃ³n",
+      "text": "Empoderar a jÃ³venes de todo el paÃ­s a ser lÃ­deres a travÃ©s de programas educativos y motivacionales, brindando acompaÃ±amiento ante oportunidades de desarrollo que les permita concretar proyectos de impacto social.",
+      "imageAlt": "MisiÃ³n de la fundaciÃ³n"
     },
-    "visión": {
-      "tag": "Visión",
-      "text": "Un mundo en el que las nuevas generaciones tengan acceso a educación de calidad, que les permita decidir con libertad y que tengan la motivación de convertirse en líderes y transformar positivamente sus comunidades.",
-      "imageAlt": "Visión de la fundación"
+    "vision": {
+      "tag": "VisiÃ³n",
+      "text": "Un mundo en el que las nuevas generaciones tengan acceso a educaciÃ³n de calidad, que les permita decidir con libertad y que tengan la motivaciÃ³n de convertirse en lÃ­deres y transformar positivamente sus comunidades.",
+      "imageAlt": "VisiÃ³n de la fundaciÃ³n"
     },
     "values": {
       "wheelLabel": "Rueda interactiva de valores",
       "leadership": {
         "title": "LIDERAZGO",
-        "description": "No solo cultivamos este valor en las personas con las que trabajamos, sino también en el equipo y en toda la organización. Creemos en un liderazgo que incluye, transforma, inspira y hace que las cosas pasen."
+        "description": "No solo cultivamos este valor en las personas con las que trabajamos, sino tambiÃ©n en el equipo y en toda la organizaciÃ³n. Creemos en un liderazgo que incluye, transforma, inspira y hace que las cosas pasen."
       },
       "commitment": {
         "title": "COMPROMISO",
-        "description": "Impulsamos soluciones a problemas sociales junto a líderes locales y emergentes, brindando herramientas de desarrollo personal y profesional y dando lo mejor de nosotros en cada proyecto y actividad."
+        "description": "Impulsamos soluciones a problemas sociales junto a lÃ­deres locales y emergentes, brindando herramientas de desarrollo personal y profesional y dando lo mejor de nosotros en cada proyecto y actividad."
       },
       "empathy": {
-        "title": "EMPATÍA",
-        "description": "El corazón de FLA son las personas. Por y para ellas trabajamos, invirtiendo tiempo y recursos en el desarrollo integral de cada una, desde la autenticidad, el amor y la entrega."
+        "title": "EMPATÃA",
+        "description": "El corazÃ³n de FLA son las personas. Por y para ellas trabajamos, invirtiendo tiempo y recursos en el desarrollo integral de cada una, desde la autenticidad, el amor y la entrega."
       },
       "freedom": {
         "title": "LIBERTAD",
-        "description": "Defendemos la libertad de elegir, pensar y ser, respetando a los demás y sus singularidades. También nos guiamos por nuestros principios para decidir con autonomía como organización."
+        "description": "Defendemos la libertad de elegir, pensar y ser, respetando a los demÃ¡s y sus singularidades. TambiÃ©n nos guiamos por nuestros principios para decidir con autonomÃ­a como organizaciÃ³n."
       },
       "innovation": {
-        "title": "INNOVACI�"N",
+        "title": "INNOVACIÃ“N",
         "description": "Nos reinventamos para mantenernos a la vanguardia, con propuestas educativas disruptivas y de calidad. Somos una usina de ideas construida de manera colaborativa, con movimiento constante."
       }
     },
@@ -117,7 +117,7 @@
       "badge": "Vida en FLA",
       "title": "Lo que significa ser parte",
       "subtitle": "",
-      "controlsLabel": "Galería",
+      "controlsLabel": "Galeria",
       "controlsHint": "Desliza o elegi una foto.",
       "previous": "Imagen anterior",
       "next": "Imagen siguiente",
@@ -129,8 +129,8 @@
     }
   },
   "donate": {
-    "title": "Apoya nuestra misi�n",
-    "subtitle": "Tu contribución permite que miles de jóvenes accedan a programas educativos gratuitos. Elegí el método que prefieras.",
+    "title": "Â¿CÃ³mo Donar?",
+    "subtitle": "Tu contribuciÃ³n permite que miles de jÃ³venes accedan a programas educativos gratuitos. ElegÃ­ el mÃ©todo que prefieras.",
     "tabs": {
       "online": "Donar Online",
       "paypal": "PayPal",
@@ -138,27 +138,27 @@
     },
     "online": {
       "title": "Plataforma Donar Online",
-      "description": "Para donaciones nacionales rápidas y seguras en pesos argentinos.",
+      "description": "Para donaciones nacionales rÃ¡pidas y seguras en pesos argentinos.",
       "steps": [
-        "Entrá a líderesdeansenuza.org y abrí la opción Donar.",
-        "Elegí Donar Online.",
-        "Definí monto y frecuencia.",
-        "Completá tus datos.",
-        "Ingresá la tarjeta.",
-        "Confirmá la donación."
+        "EntrÃ¡ a lÃ­deresdeansenuza.org y abrÃ­ la opciÃ³n Donar.",
+        "ElegÃ­ Donar Online.",
+        "DefinÃ­ monto y frecuencia.",
+        "CompletÃ¡ tus datos.",
+        "IngresÃ¡ la tarjeta.",
+        "ConfirmÃ¡ la donaciÃ³n."
       ],
       "button": "Ir al Formulario"
     },
     "paypal": {
       "title": "Donaciones Internacionales",
-      "description": "Si te encontrás fuera de Argentina o preferís usar tarjetas internacionales.",
+      "description": "Si te encontrÃ¡s fuera de Argentina o preferÃ­s usar tarjetas internacionales.",
       "steps": [
-        "Entrá a líderesdeansenuza.org y abrí la opción Donar.",
-        "Elegí PayPal.",
-        "Definí monto y frecuencia.",
-        "Elegí pagar con PayPal o tarjeta.",
-        "Completá tus datos.",
-        "Confirmá la donación."
+        "EntrÃ¡ a lÃ­deresdeansenuza.org y abrÃ­ la opciÃ³n Donar.",
+        "ElegÃ­ PayPal.",
+        "DefinÃ­ monto y frecuencia.",
+        "ElegÃ­ pagar con PayPal o tarjeta.",
+        "CompletÃ¡ tus datos.",
+        "ConfirmÃ¡ la donaciÃ³n."
       ],
       "button": "Donar por PayPal"
     },
@@ -169,42 +169,42 @@
       "alias": "Alias",
       "name": "Nombre",
       "cuit": "CUIT",
-      "receiptTitle": "¿Necesitás un recibo?",
-      "receiptText": "Escribinos a través de nuestra página de contacto adjuntando el comprobante para emitir tu recibo de donación oficial.",
-      "contactPage": "página de contacto"
+      "receiptTitle": "Â¿NecesitÃ¡s un recibo?",
+      "receiptText": "Escribinos a travÃ©s de nuestra pÃ¡gina de contacto adjuntando el comprobante para emitir tu recibo de donaciÃ³n oficial.",
+      "contactPage": "pÃ¡gina de contacto"
     }
   },
   "contact": {
     "title": "CONTACTANOS",
-    "subtitle": "¿Querés ser parte del cambio? ¿Tenés preguntas sobre nuestros programas? ¿Querés colaborar con nosotros? Estamos aquí para escucharte.",
+    "subtitle": "Â¿QuerÃ©s ser parte del cambio? Â¿TenÃ©s preguntas sobre nuestros programas? Â¿QuerÃ©s colaborar con nosotros? Estamos aquÃ­ para escucharte.",
     "form": {
-      "title": "Envíanos un mensaje",
+      "title": "EnvÃ­anos un mensaje",
       "name": "Nombre completo",
       "namePlaceholder": "Tu nombre",
-      "email": "Correo electrónico",
+      "email": "Correo electrÃ³nico",
       "emailPlaceholder": "tu@email.com",
-      "phone": "Teléfono",
+      "phone": "TelÃ©fono",
       "phonePlaceholder": "+54 123 456 7890",
       "subject": "Asunto",
-      "subjectPlaceholder": "¿En qué podemos ayudarte?",
+      "subjectPlaceholder": "Â¿En quÃ© podemos ayudarte?",
       "message": "Mensaje",
-      "messagePlaceholder": "Contanos más sobre tu consulta, idea o cómo querés colaborar con nosotros...",
+      "messagePlaceholder": "Contanos mÃ¡s sobre tu consulta, idea o cÃ³mo querÃ©s colaborar con nosotros...",
       "send": "Enviar mensaje",
-      "success": "¡Gracias por tu mensaje! Nos pondremos en contacto con vos pronto.",
+      "success": "Â¡Gracias por tu mensaje! Nos pondremos en contacto con vos pronto.",
       "required": "*"
     },
     "info": {
-      "title": "Información de contacto",
-      "description": "Estamos aquí para escucharte y trabajar juntos. Podés contactarnos de varias formas. No dudes en escribirnos, ¡tu mensaje es importante para nosotros!",
-      "email": "Correo electrónico",
+      "title": "InformaciÃ³n de contacto",
+      "description": "Estamos aquÃ­ para escucharte y trabajar juntos. PodÃ©s contactarnos de varias formas. No dudes en escribirnos, Â¡tu mensaje es importante para nosotros!",
+      "email": "Correo electrÃ³nico",
       "emailResponse": "Respondemos en 24-48 horas",
-      "phone": "Teléfono",
+      "phone": "TelÃ©fono",
       "phoneHours": "Lunes a Viernes, 9:00 - 18:00",
-      "officeHours": "Horarios de atención",
+      "officeHours": "Horarios de atenciÃ³n",
       "weekdays": "Lunes a Viernes: 9:00 - 18:00",
-      "saturday": "Sábados: 9:00 - 12:00 (solo urgencias)",
-      "collaborate": "¿Querés colaborar?",
-      "collaborateOptions": "Voluntariado �?� Donaciones �?� Alianzas",
+      "saturday": "SÃ¡bados: 9:00 - 12:00 (solo urgencias)",
+      "collaborate": "Â¿QuerÃ©s colaborar?",
+      "collaborateOptions": "Voluntariado â€¢ Donaciones â€¢ Alianzas",
       "collaborateText": "Todas las formas de apoyo son bienvenidas"
     }
   },
@@ -213,31 +213,27 @@
     "subtitle": "Programas educativos gratuitos que transforman vidas en toda Argentina",
     "active": {
       "title": "Programas vigentes",
-      "subtitle": "Programas activos en los que podés participar ahora",
-      "openEnrollment": "�o" Inscripciones abiertas",
-      "learnMore": "Conocér programa"
+      "subtitle": "Programas activos en los que podÃ©s participar ahora",
+      "openEnrollment": "âœ“ Inscripciones abiertas",
+      "learnMore": "Conocer programa"
     },
     "historical": {
-      "title": "Programas históricos",
-      "subtitle": "Programas que han dejado huella en miles de jóvenes de toda Argentina",
+      "title": "Programas histÃ³ricos",
+      "subtitle": "Programas que han dejado huella en miles de jÃ³venes de toda Argentina",
       "viewHistory": "Ver historia"
     },
     "showcase": {
       "eyebrow": "Momentos FLA",
       "title": "Un recorrido visual por cada experiencia",
-      "subtitle": "Agregamos este slider para dar más color y movimiento a la página. Después solo reemplazamos estas imágenes por las fotos finales de cada propuesta.",
+      "subtitle": "Agregamos este slider para dar mÃ¡s color y movimiento a la pÃ¡gina. DespuÃ©s solo reemplazamos estas imÃ¡genes por las fotos finales de cada propuesta.",
       "note": "Slider listo para reemplazar con tus fotos.",
       "previous": "Imagen anterior",
       "next": "Imagen siguiente"
     },
     "cta": {
-      "title": "¿Querés saber más sobre nuestros programas?",
-      "subtitle": "Si tenés alguna consulta o querés más información sobre cómo participar, no dudes en contactarnos",
-      "button": "Contáctanos"
+      "title": "Â¿QuerÃ©s saber mÃ¡s sobre nuestros programas?",
+      "subtitle": "Si tenÃ©s alguna consulta o querÃ©s mÃ¡s informaciÃ³n sobre cÃ³mo participar, no dudes en contactarnos",
+      "button": "Contactanos"
     }
   }
 }
-
-
-
-
