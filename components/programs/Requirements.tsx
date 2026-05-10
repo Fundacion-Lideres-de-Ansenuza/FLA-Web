@@ -25,7 +25,7 @@ export default function Requirements({ requirements, colors }: RequirementsProps
               Requisitos
             </h2>
             <p className="text-base text-gray-600 md:text-lg font-arimo">
-              Para participar del programa, deberas cumplir con los siguientes requisitos:
+              Para participar del programa, deberás cumplir con los siguientes requisitos:
             </p>
           </motion.div>
 

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Calendar, FileText } from "lucide-react";
@@ -29,7 +29,7 @@ export default function EnrollmentInfo({
             className="mb-10 text-center"
           >
             <h2 className="mb-4 text-4xl md:text-5xl font-contrail-one" style={{ color: colors.secondary }}>
-              {isHistorical ? "Informacion del programa" : "Como anotarme"}
+              {isHistorical ? "Información del programa" : "Cómo anotarse"}
             </h2>
           </motion.div>
 
@@ -50,7 +50,7 @@ export default function EnrollmentInfo({
                 <Calendar size={24} style={{ color: isHistorical ? "#f59e0b" : colors.primary }} />
                 <div>
                   <p className="text-sm font-semibold text-gray-600">
-                    {isHistorical ? "Estado del programa" : "Periodo de inscripcion"}
+                    {isHistorical ? "Estado del programa" : "Período de inscripción"}
                   </p>
                   <p className="text-gray-900">{availablePeriod}</p>
                 </div>
@@ -62,3 +62,5 @@ export default function EnrollmentInfo({
     </section>
   );
 }
+
+

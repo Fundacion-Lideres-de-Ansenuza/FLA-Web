@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -24,7 +24,7 @@ const FALLBACK_SLIDES: Slide[] = [
   { id: "scene-3", title: "Escena 03" },
 ];
 
-export default function Gallery({ images, colors, title = "Galeria visual" }: GalleryProps) {
+export default function Gallery({ images, colors, title = "Galería visual" }: GalleryProps) {
   const slides = useMemo<Slide[]>(() => {
     if (images && images.length > 0) {
       return images.map((_, index) => ({
@@ -71,7 +71,7 @@ export default function Gallery({ images, colors, title = "Galeria visual" }: Ga
               className="inline-flex rounded-full px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-white shadow-lg"
               style={{ backgroundColor: colors.primary }}
             >
-              Galeria visual
+              Galería visual
             </span>
             <h2 className="mt-4 text-4xl md:text-5xl font-contrail-one" style={{ color: colors.secondary }}>
               {title}
@@ -116,7 +116,7 @@ export default function Gallery({ images, colors, title = "Galeria visual" }: Ga
                           className="inline-flex rounded-full px-4 py-1.5 text-xs font-black uppercase tracking-[0.2em] text-white"
                           style={{ backgroundColor: colors.primary }}
                         >
-                          {hasCustomImages ? "Galeria" : "Visual"}
+                          {hasCustomImages ? "Galería" : "Visual"}
                         </span>
                         <span className="rounded-full bg-white/85 px-3 py-1 text-xs font-bold text-gray-700 backdrop-blur-sm">
                           {currentIndex + 1}/{slides.length}
@@ -213,3 +213,4 @@ export default function Gallery({ images, colors, title = "Galeria visual" }: Ga
     </section>
   );
 }
+

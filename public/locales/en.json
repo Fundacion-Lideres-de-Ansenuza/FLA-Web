@@ -56,16 +56,16 @@
     "newsletter": "Newsletter",
     "newsletterText": "Stay up to date with all our news.",
     "emailPlaceholder": "Your email",
-    "copyright": "© {{year}} Fundación Líderes de Ansenuza. All rights reserved.",
+    "copyright": "Â© {{year}} FundaciÃ³n LÃ­deres de Ansenuza. All rights reserved.",
     "privacyPolicy": "Privacy Policy"
   },
   "aboutUs": {
     "foundation": {
       "badge": "FLA Foundation",
       "title": "THE FOUNDATION",
-      "imageAlt": "Fundación Líderes de Ansenuza team",
-      "intro": "Fundación Líderes de Ansenuza is a non-governmental organization based in Miramar de Ansenuza, Córdoba, whose work revolves around the design and execution of educational programs in Argentina.",
-      "paragraph1": "At Fundación Líderes de Ansenuza (FLA), we believe in the potential of every young person to transform their community and build a better future. Our mission is to train agents of change, offering opportunities, tools, and support for young people to develop leadership and generate social impact.",
+      "imageAlt": "FundaciÃ³n LÃ­deres de Ansenuza team",
+      "intro": "FundaciÃ³n LÃ­deres de Ansenuza is a non-governmental organization based in Miramar de Ansenuza, CÃ³rdoba, whose work revolves around the design and execution of educational programs in Argentina.",
+      "paragraph1": "At FundaciÃ³n LÃ­deres de Ansenuza (FLA), we believe in the potential of every young person to transform their community and build a better future. Our mission is to train agents of change, offering opportunities, tools, and support for young people to develop leadership and generate social impact.",
       "paragraph2": "We work throughout Argentina, with special attention to rural and semi-urban regions, as well as large cities. Our goal is to reach those who need it most, providing hands-on experiences, without economic barriers, that promote learning through action and innovation.",
       "paragraph3": "FLA not only focuses on training leaders but also on creating an inclusive, diverse, and committed community where young people find a safe space to enhance their ideas and sustainable projects.",
       "paragraph4": "Being part of FLA means being part of a movement that bets on equal opportunities and the power of youth to generate real and lasting impact. Together, we are building a future full of possibilities and leadership for everyone."
@@ -140,7 +140,7 @@
       "title": "Donate Online Platform",
       "description": "For fast and secure national donations in Argentine pesos.",
       "steps": [
-        "Go to líderesdeansenuza.org and open Donate.",
+        "Go to lÃ­deresdeansenuza.org and open Donate.",
         "Choose Donate Online.",
         "Set amount and frequency.",
         "Complete your details.",
@@ -153,7 +153,7 @@
       "title": "International Donations",
       "description": "If you are outside Argentina or prefer to use international cards.",
       "steps": [
-        "Go to líderesdeansenuza.org and open Donate.",
+        "Go to lÃ­deresdeansenuza.org and open Donate.",
         "Choose PayPal.",
         "Set amount and frequency.",
         "Choose PayPal or card.",
@@ -204,7 +204,7 @@
       "weekdays": "Monday to Friday: 9:00 AM - 6:00 PM",
       "saturday": "Saturdays: 9:00 AM - 12:00 PM (emergencies only)",
       "collaborate": "Want to collaborate?",
-      "collaborateOptions": "Volunteering • Donations • Partnerships",
+      "collaborateOptions": "Volunteering â€¢ Donations â€¢ Partnerships",
       "collaborateText": "All forms of support are welcome"
     }
   },
@@ -214,7 +214,7 @@
     "active": {
       "title": "Active Programs",
       "subtitle": "Active programs you can participate in now",
-      "openEnrollment": "✓ Open enrollment",
+      "openEnrollment": "âœ“ Open enrollment",
       "learnMore": "Learn more"
     },
     "historical": {

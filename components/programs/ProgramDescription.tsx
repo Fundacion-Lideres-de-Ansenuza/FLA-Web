@@ -71,7 +71,7 @@ export default function ProgramDescription({
               className="rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 p-8"
             >
               <h3 className="mb-4 text-2xl font-semibold" style={{ color: colors?.secondary ?? "#111827" }}>
-                Donde se desarrolla
+                Dónde se desarrolla
               </h3>
               <p className="text-lg leading-relaxed text-gray-700">{location}</p>
             </motion.div>

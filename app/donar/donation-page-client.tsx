@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useState } from "react"
 import Link from "next/link"
@@ -66,12 +66,12 @@ export default function DonationPage() {
   const donationPageSchema = {
     "@context": "https://schema.org",
     "@type": "DonateAction",
-    name: "Donar a Fundacion Lideres de Ansenuza",
+    name: "Donar a Fundación Líderes de Ansenuza",
     description:
-      "Pagina de donaciones de Fundacion Lideres de Ansenuza para colaborar con programas educativos gratuitos para jovenes en Argentina.",
+      "Página de donaciones de Fundación Líderes de Ansenuza para colaborar con programas educativos gratuitos para jóvenes en Argentina.",
     recipient: {
       "@type": "NGO",
-      name: "Fundacion Lideres de Ansenuza",
+      name: "Fundación Líderes de Ansenuza",
       url: "https://www.lideresdeansenuza.org",
     },
     target: [
@@ -96,10 +96,10 @@ export default function DonationPage() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "Como puedo donar online a Fundacion Lideres de Ansenuza?",
+        name: "Cómo puedo donar online a Fundación Líderes de Ansenuza?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Podes donar desde la pagina de donaciones y completar el proceso en Donar Online para hacer un aporte rapido y seguro.",
+          text: "Podés donar desde la pagina de donaciones y completar el proceso en Donar Online para hacer un aporte rapido y seguro.",
         },
       },
       {
@@ -107,12 +107,12 @@ export default function DonationPage() {
         name: "Puedo pedir un recibo de donacion?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Si. Podes escribirnos desde la pagina de contacto adjuntando el comprobante para emitir tu recibo oficial de donacion.",
+          text: "Si. Podés escribirnos desde la pagina de contacto adjuntando el comprobante para emitir tu recibo oficial de donacion.",
         },
       },
       {
         "@type": "Question",
-        name: "Que metodos de donacion ofrece la fundacion?",
+        name: "Qué métodos de donacion ofrece la fundacion?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "La fundacion ofrece Donar Online, PayPal para donaciones internacionales y transferencia bancaria directa.",
@@ -167,7 +167,7 @@ export default function DonationPage() {
       <main className="min-h-screen overflow-x-hidden bg-[linear-gradient(180deg,#ffffff_0%,#fff7f6_30%,#ffffff_100%)] pb-20 pt-[108px] sm:pt-[120px]">
       <div className="container mx-auto max-w-6xl px-4 pt-6 md:pt-8">
         <div className="mb-10 flex flex-col items-center gap-5 text-center md:mb-14">
-          <h1 className="text-5xl leading-tight tracking-tight text-gray-900 lg:text-7xl font-contrail-one">¿Cómo Donar?</h1>
+          <h1 className="text-5xl leading-tight tracking-tight text-gray-900 lg:text-7xl font-contrail-one">{t("donate.title")}</h1>
           <p className="mx-auto max-w-2xl font-arimo text-lg leading-relaxed text-gray-700 md:text-xl">{t("donate.subtitle")}</p>
           <div className="h-1.5 w-32 rounded-full bg-[#f45e5e]" />
         </div>
@@ -303,3 +303,6 @@ export default function DonationPage() {
     </>
   )
 }
+
+
+

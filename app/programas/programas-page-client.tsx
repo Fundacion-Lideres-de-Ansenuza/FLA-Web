@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import Image from "next/image";
 import Link from "next/link";
@@ -10,13 +10,13 @@ import ProgramsShowcaseSlider from "@/components/programs/ProgramsShowcaseSlider
 const LOGO_PRESENTATION: Record<string, string> = {
   "Experiencia Ambientalia": "max-w-[88%] max-h-[76%]",
   "SOMOS": "max-w-[78%] max-h-[62%]",
-  "LÃ­deres": "max-w-[74%] max-h-[74%]",
+  "Líderes": "max-w-[74%] max-h-[74%]",
   "Potenciate": "max-w-[78%] max-h-[68%]",
   "FUTURAS": "max-w-[82%] max-h-[66%]",
   "ImpulsaTEC": "max-w-[84%] max-h-[66%]",
   "Ciencia Fuera de la Caja": "max-w-[86%] max-h-[64%]",
-  "Aventura MatemÃ¡gica": "max-w-[86%] max-h-[66%]",
-  "Academia de conservaciÃ³n": "max-w-[84%] max-h-[66%]",
+  "Aventura Matemágica": "max-w-[86%] max-h-[66%]",
+  "Academia de conservación": "max-w-[84%] max-h-[66%]",
   "Comprometidxs": "max-w-[82%] max-h-[64%]",
 }
 
@@ -219,3 +219,4 @@ export default function ProgramasPage() {
     </main>
   );
 }
+

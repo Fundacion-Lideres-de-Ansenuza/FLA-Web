@@ -4,9 +4,9 @@ import ProgramasPageClient from "./programas-page-client"
 const PAGE_URL = "https://www.lideresdeansenuza.org/programas"
 
 export const metadata: Metadata = {
-  title: "Programas | Fundacion Lideres de Ansenuza",
+  title: "Programas | Fundación Líderes de Ansenuza",
   description:
-    "Conoce los programas activos e historicos de Fundacion Lideres de Ansenuza para impulsar liderazgo, educacion e impacto social en jovenes.",
+    "Conocé los programas activos e históricos de Fundación Líderes de Ansenuza para impulsar liderazgo, educación e impacto social en jóvenes.",
   alternates: {
     canonical: PAGE_URL,
     languages: {
@@ -15,17 +15,17 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Programas | Fundacion Lideres de Ansenuza",
+    title: "Programas | Fundación Líderes de Ansenuza",
     description: "Catalogo de programas educativos y de liderazgo juvenil de FLA.",
     url: PAGE_URL,
-    siteName: "Fundacion Lideres de Ansenuza",
+    siteName: "Fundación Líderes de Ansenuza",
     locale: "es_AR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Programas | Fundacion Lideres de Ansenuza",
-    description: "Explora programas activos e historicos de FLA.",
+    title: "Programas | Fundación Líderes de Ansenuza",
+    description: "Explora programas activos e históricos de FLA.",
   },
 }
 
@@ -33,7 +33,7 @@ export default function ProgramasPage() {
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "Programas - Fundacion Lideres de Ansenuza",
+    name: "Programas - Fundación Líderes de Ansenuza",
     url: PAGE_URL,
     isPartOf: "https://www.lideresdeansenuza.org",
   }
@@ -45,3 +45,4 @@ export default function ProgramasPage() {
     </>
   )
 }
+
