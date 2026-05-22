@@ -4,9 +4,9 @@ import PrivacyPolicyPageClient from "./privacy-policy-page-client"
 const PAGE_URL = "https://www.lideresdeansenuza.org/politicas-de-privacidad"
 
 export const metadata: Metadata = {
-  title: "Politicas de Privacidad | Fundacion Lideres de Ansenuza",
+  title: "Políticas de Privacidad | Fundación Líderes de Ansenuza",
   description:
-    "Politicas de privacidad y tratamiento de datos personales de Fundacion Lideres de Ansenuza para programas y newsletter.",
+    "Políticas de privacidad y tratamiento de datos personales de Fundación Líderes de Ansenuza para programas y newsletter.",
   alternates: {
     canonical: PAGE_URL,
     languages: {
@@ -15,17 +15,17 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Politicas de Privacidad | Fundacion Lideres de Ansenuza",
-    description: "Informacion legal sobre privacidad y datos personales en FLA.",
+    title: "Políticas de Privacidad | Fundación Líderes de Ansenuza",
+    description: "Información legal sobre privacidad y datos personales en FLA.",
     url: PAGE_URL,
-    siteName: "Fundacion Lideres de Ansenuza",
+    siteName: "Fundación Líderes de Ansenuza",
     locale: "es_AR",
     type: "article",
   },
   twitter: {
     card: "summary",
-    title: "Politicas de Privacidad | Fundacion Lideres de Ansenuza",
-    description: "Politicas de privacidad para programas y newsletter.",
+    title: "Políticas de Privacidad | Fundación Líderes de Ansenuza",
+    description: "Políticas de privacidad para programas y newsletter.",
   },
 }
 
@@ -33,11 +33,11 @@ export default function PrivacyPolicyPage() {
   const privacySchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Politicas de Privacidad",
+    name: "Políticas de Privacidad",
     url: PAGE_URL,
     about: {
       "@type": "Thing",
-      name: "Politica de privacidad y proteccion de datos personales",
+      name: "Política de privacidad y protección de datos personales",
     },
   }
 

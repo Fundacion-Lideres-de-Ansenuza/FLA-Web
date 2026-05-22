@@ -35,7 +35,7 @@ const testimonialEntries: TestimonialEntry[] = [
     name: "Alexis Alejandro Rodriguez",
     role: TestimonialRole.VOLUNTEER,
     contentEs:
-      "FLA significa mucho para mi. Me uni a esta fundacion en 2024 sin saber que esperar y todo cambio. La amistad y el carino del equipo me hicieron sentir parte de una verdadera familia. Aprendi mucho en lo personal y profesional gracias a las oportunidades que brinda la fundacion.",
+      "FLA significa mucho para mi. Me uni a esta fundación en 2024 sin saber que esperar y todo cambio. La amistad y el carino del equipo me hicieron sentir parte de una verdadera familia. Aprendi mucho en lo personal y profesional gracias a las oportunidades que brinda la fundación.",
     contentEn:
       "FLA means a lot to me. I joined the foundation in 2024 without knowing what to expect, and everything changed. The friendship and care from the team made me feel part of a real family. I learned a lot both personally and professionally through the opportunities the foundation creates.",
     avatar: "/images/testimonials/volunteers/Rodriguez_Alexis.webp",
@@ -44,7 +44,7 @@ const testimonialEntries: TestimonialEntry[] = [
     name: "Sebastian Marcelo Pacheco",
     role: TestimonialRole.VOLUNTEER,
     contentEs:
-      "Para mi, FLA es mucho mas que una oportunidad. Es un lugar donde crecer se vuelve natural y donde siempre hay alguien para acompanarte. En FLA aprendi que no siempre se trata de estar bien, sino de estar acompanado.",
+      "Para mi, FLA es mucho mas que una oportunidad. Es un lugar donde crecer se vuelve natural y donde siempre hay alguien para acompañarte. En FLA aprendi que no siempre se trata de estar bien, sino de estar acompañado.",
     contentEn:
       "For me, FLA is much more than an opportunity. It is a place where growth becomes natural and where someone is always there to support you. At FLA I learned that it is not always about being okay, but about being accompanied.",
     avatar: "/images/testimonials/volunteers/Sebastian_Pacheco.webp",
@@ -55,7 +55,7 @@ const testimonialEntries: TestimonialEntry[] = [
     programEs: "Lider de Comunicacion",
     programEn: "Communication Lead",
     contentEs:
-      "Me uni buscando desarrollo profesional y encontre mucho mas. Conoci personas increibles, participe en espacios de liderazgo y creci en nuevos roles. Desde que entre, no pare de aprender.",
+      "Me uni buscando desarrollo profesional y encontre mucho mas. Conoci personas increíbles, participe en espacios de liderazgo y creci en nuevos roles. Desde que entre, no pare de aprender.",
     contentEn:
       "I joined looking for professional growth and found much more. I met amazing people, took part in leadership spaces, and grew into new roles. Since I joined, I have not stopped learning.",
     avatar: "/images/testimonials/volunteers/Imagen_formal_SOMOS_FLA.webp",
@@ -73,7 +73,7 @@ const testimonialEntries: TestimonialEntry[] = [
     name: "Daniela Abigail Gutierrez",
     role: TestimonialRole.VOLUNTEER,
     contentEs:
-      "FLA significa transformacion para mi. Me ayudo a desarrollar habilidades de comunicacion, trabajo en equipo y creacion de materiales para programas, siempre con acompanamiento del equipo.",
+      "FLA significa transformacion para mi. Me ayudó a desarrollar habilidades de comunicacion, trabajo en equipo y creacion de materiales para programas, siempre con acompañamiento del equipo.",
     contentEn:
       "FLA means transformation to me. It helped me build communication, teamwork, and content-creation skills, always with close support from the team.",
     avatar: "/images/testimonials/volunteers/Gutierrez_Daniela.webp",
@@ -93,7 +93,7 @@ const testimonialEntries: TestimonialEntry[] = [
     name: "Fatima Kap",
     role: TestimonialRole.VOLUNTEER,
     contentEs:
-      "La fundacion llego en un momento clave de mi vida y me ayudo a acomodar mi camino. Siempre voy a estar agradecida con FLA por el lugar en el que estoy hoy.",
+      "La fundación llegó en un momento clave de mi vida y me ayudó a acomodar mi camino. Siempre voy a estar agradecida con FLA por el lugar en el que estoy hoy.",
     contentEn:
       "The foundation came at a key moment in my life and helped me find my path. I will always be grateful to FLA for where I am today.",
     avatar: "/images/testimonials/volunteers/Kap_Fatima.webp",
@@ -104,9 +104,9 @@ const testimonialEntries: TestimonialEntry[] = [
     programEs: "Bandada Coscorobas",
     programEn: "Coscorobas Cohort",
     contentEs:
-      "La fundacion me inspiro a crecer y a transformar ideas en acciones con impacto. Ser parte de Lideres de Ansenuza me ayudo a descubrir mi voz y actuar con proposito.",
+      "La fundación me inspiró a crecer y a transformar ideas en acciones con impacto. Ser parte de Líderes de Ansenuza me ayudó a descubrir mi voz y actuar con propósito.",
     contentEn:
-      "The foundation inspired me to grow and turn ideas into impactful actions. Being part of Lideres de Ansenuza helped me discover my voice and act with purpose.",
+      "The foundation inspired me to grow and turn ideas into impactful actions. Being part of Líderes de Ansenuza helped me discover my voice and act with purpose.",
     avatar: "/images/testimonials/participants/Alejo_Pucheta.webp",
   },
   {
@@ -115,7 +115,7 @@ const testimonialEntries: TestimonialEntry[] = [
     programEs: "Bandada Federales",
     programEn: "Federales Cohort",
     contentEs:
-      "La fundacion es mi lugar favorito: me acompana, me desafia y me ayuda a creer en mi. Gracias a esta experiencia conoci personas increibles y vivi momentos que me cambiaron.",
+      "La fundación es mi lugar favorito: me acompaña, me desafía y me ayuda a creer en mi. Gracias a esta experiencia conocí personas increíbles y viví momentos que me cambiaron.",
     contentEn:
       "The foundation is my favorite place: it supports me, challenges me, and helps me believe in myself. Through this experience I met incredible people and lived moments that changed me.",
     avatar: "/images/testimonials/participants/Luz_Barzola.webp",
@@ -126,7 +126,7 @@ const testimonialEntries: TestimonialEntry[] = [
     programEs: "Bandada Federales",
     programEn: "Federales Cohort",
     contentEs:
-      "Para mi, la fundacion es una red de apoyo que ensena y brinda posibilidades para crecer como persona.",
+      "Para mi, la fundación es una red de apoyo que enseña y brinda posibilidades para crecer como persona.",
     contentEn:
       "To me, the foundation is a support network that teaches and gives real opportunities to grow as a person.",
     avatar: "/images/testimonials/participants/Abril_Bianco.webp",
@@ -148,7 +148,7 @@ const testimonialEntries: TestimonialEntry[] = [
     programEs: "Bandada Cardenales Copete Rojo",
     programEn: "Red-Crested Cardinals Cohort",
     contentEs:
-      "FLA es mucho mas que una fundacion: es un espacio para compartir, cuidar y ver el mundo de otra manera. Descubri el valor del trabajo en equipo y del compromiso.",
+      "FLA es mucho mas que una fundación: es un espacio para compartir, cuidar y ver el mundo de otra manera. Descubri el valor del trabajo en equipo y del compromiso.",
     contentEn:
       "FLA is much more than a foundation: it is a space to share, care, and see the world differently. I discovered the value of teamwork and commitment.",
     avatar: "/images/testimonials/participants/Tiziana_Notari.webp",
@@ -159,7 +159,7 @@ const testimonialEntries: TestimonialEntry[] = [
     programEs: "Bandada Tacuaritas Azules",
     programEn: "Blue Tacuaritas Cohort",
     contentEs:
-      "FLA es mi segunda familia. Los momentos y aprendizajes que vivi en este camino son inolvidables y me dejaron una marca para toda la vida.",
+      "FLA es mi segunda familia. Los momentos y aprendizajes que viví en este camino son inolvidables y me dejaron una marca para toda la vida.",
     contentEn:
       "FLA is my second family. The moments and lessons I experienced on this path are unforgettable and left a lifelong mark on me.",
     avatar: "/images/testimonials/participants/Francisco_Sironi.webp",
@@ -168,7 +168,7 @@ const testimonialEntries: TestimonialEntry[] = [
     name: "Angeles Gorosito",
     role: TestimonialRole.PARTICIPANT,
     contentEs:
-      "La fundacion se volvio mi segundo hogar. Estoy muy agradecida por todo lo que me dio: aprendi, conoci personas increibles y gane confianza para seguir creciendo.",
+      "La fundación se volvio mi segundo hogar. Estoy muy agradecida por todo lo que me dio: aprendi, conocí personas increíbles y gane confianza para seguir creciendo.",
     contentEn:
       "The foundation became my second home. I am deeply grateful for everything it gave me: I learned, met incredible people, and gained confidence to keep growing.",
     avatar: "/images/testimonials/participants/Angeles_Gorosito.webp",

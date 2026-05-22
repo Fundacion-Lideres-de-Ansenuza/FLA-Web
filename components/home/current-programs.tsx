@@ -10,12 +10,12 @@ function getLogoFileName(title: string): string {
   const logoMap: Record<string, string> = {
     "Experiencia Ambientalia": "Experiencia Ambientalia",
     "SOMOS": "Somos",
-    "LÃ­deres": "lideres",
+    "Líderes": "lideres",
     "Potenciate": "Potenciate",
     "FUTURAS": "Futuras",
     "ImpulsaTEC": "Impulsatec",
     "Ciencia Fuera de la Caja": "Ciencia fuera de la caja",
-    "Aventura MatemÃ¡gica": "Aventura Matemagica"
+    "Aventura Matemágica": "Aventura Matemagica"
   }
 
   return logoMap[title] || title

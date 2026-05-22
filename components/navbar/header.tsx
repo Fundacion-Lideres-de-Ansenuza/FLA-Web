@@ -34,7 +34,7 @@ export default function Header() {
             <Link href="/" className="cursor-pointer transition-transform hover:scale-105" aria-label="Ir al inicio">
               <Image
                 src="/images/Logos/fla-logo-blanco.webp"
-                alt="Fundacion Lideres de Ansenuza"
+                alt="Fundación Líderes de Ansenuza"
                 width={160}
                 height={160}
                 className="h-32 w-auto py-1"

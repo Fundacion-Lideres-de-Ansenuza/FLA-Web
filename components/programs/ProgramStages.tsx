@@ -54,7 +54,7 @@ export default function ProgramStages({ stages, colors }: ProgramStagesProps) {
             <h2 className="mb-3 text-3xl md:text-4xl font-contrail-one" style={{ color: colors.secondary }}>
               Etapas del programa
             </h2>
-            <p className="text-base text-gray-600 md:text-lg">Un recorrido transformador disenado para tu crecimiento</p>
+            <p className="text-base text-gray-600 md:text-lg">Un recorrido transformador diseñado para tu crecimiento</p>
           </motion.div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

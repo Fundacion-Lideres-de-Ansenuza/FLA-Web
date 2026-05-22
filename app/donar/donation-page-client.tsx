@@ -112,10 +112,10 @@ export default function DonationPage() {
       },
       {
         "@type": "Question",
-        name: "Qué métodos de donacion ofrece la fundacion?",
+        name: "¿Qué métodos de donación ofrece la fundación?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "La fundacion ofrece Donar Online, PayPal para donaciones internacionales y transferencia bancaria directa.",
+          text: "La fundación ofrece Donar Online, PayPal para donaciones internacionales y transferencia bancaria directa.",
         },
       },
     ],
@@ -219,7 +219,7 @@ export default function DonationPage() {
                 <WelcomeNote />
 
                 <div className="flex justify-center">
-                  <DonationChip href="https://paypal.me" />
+                  <DonationChip href="https://www.paypal.com/donate/?hosted_button_id=X6VW3LVURRPSN" />
                 </div>
               </div>
             )}
@@ -303,6 +303,4 @@ export default function DonationPage() {
     </>
   )
 }
-
-
 
