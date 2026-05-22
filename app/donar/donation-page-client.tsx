@@ -219,7 +219,7 @@ export default function DonationPage() {
                 <WelcomeNote />
 
                 <div className="flex justify-center">
-                  <DonationChip href="https://paypal.me" />
+                  <DonationChip href="https://www.paypal.com/donate/?hosted_button_id=X6VW3LVURRPSN" />
                 </div>
               </div>
             )}
@@ -303,6 +303,5 @@ export default function DonationPage() {
     </>
   )
 }
-
 
 
