@@ -27,7 +27,7 @@ export default function Hero() {
           <div className="w-full">
             <Image
               src="/images/DSC_0044.webp"
-              alt="Jovenes colaborando en educacion"
+              alt="Jóvenes colaborando en educación"
               width={1400}
               height={500}
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 92vw, 1400px"

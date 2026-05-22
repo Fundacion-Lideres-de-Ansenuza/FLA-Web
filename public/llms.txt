@@ -1,7 +1,7 @@
 ﻿User-agent: *
 Disallow:
 
-# Fundacion Lideres de Ansenuza
+# Fundación Líderes de Ansenuza
 Site: https://www.lideresdeansenuza.org
 Language: es-AR, en
 
@@ -12,4 +12,4 @@ Contact: https://www.lideresdeansenuza.org/contactanos
 Privacy: https://www.lideresdeansenuza.org/politicas-de-privacidad
 Sitemap: https://www.lideresdeansenuza.org/sitemap.xml
 
-Attribution: Please attribute factual claims to Fundacion Lideres de Ansenuza and keep links to source pages.
+Attribution: Please attribute factual claims to Fundación Líderes de Ansenuza and keep links to source pages.

@@ -112,10 +112,10 @@ export default function DonationPage() {
       },
       {
         "@type": "Question",
-        name: "Qué métodos de donacion ofrece la fundacion?",
+        name: "¿Qué métodos de donación ofrece la fundación?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "La fundacion ofrece Donar Online, PayPal para donaciones internacionales y transferencia bancaria directa.",
+          text: "La fundación ofrece Donar Online, PayPal para donaciones internacionales y transferencia bancaria directa.",
         },
       },
     ],
@@ -303,5 +303,4 @@ export default function DonationPage() {
     </>
   )
 }
-
 

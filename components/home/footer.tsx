@@ -21,15 +21,15 @@ export default function Footer() {
                 <div className="absolute -inset-1 bg-gradient-to-r from-red-600 to-red-400 rounded-full blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
                 <Image
                   src="/images/Logos/fla-logo-blanco.webp"
-                  alt="Fundacion Lideres de Ansenuza"
+                  alt="Fundación Líderes de Ansenuza"
                   width={75}
                   height={75}
                   className="relative transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="font-arimo text-base text-white leading-tight">
-                <p className="font-semibold tracking-wide">Fundacion</p>
-                <p className="font-semibold tracking-wide">Lideres de Ansenuza</p>
+                <p className="font-semibold tracking-wide">Fundación</p>
+                <p className="font-semibold tracking-wide">Líderes de Ansenuza</p>
               </div>
             </div>
 
@@ -122,4 +122,3 @@ export default function Footer() {
     </footer>
   )
 }
-
