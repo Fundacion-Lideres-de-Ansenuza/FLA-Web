@@ -186,7 +186,7 @@ export default function Contact() {
 
 						<Card className="bg-red-600 text-white border-0">
 							<CardContent className="p-6">
-								<h4 className="text-xl mb-2">Let's start</h4>
+								<h4 className="text-xl mb-2">Let&apos;s start</h4>
 								<p className="mb-4 opacity-90">
 									Join thousands of satisfied customers and transform your business today.
 								</p>
