@@ -235,5 +235,150 @@
       "subtitle": "If you have any questions or want more information on how to participate, don't hesitate to contact us",
       "button": "Contact Us"
     }
+  },
+  "privacyPolicy": {
+    "hero": {
+      "title": "Privacy Policies",
+      "description": "On this page you will find information about how Fundacion Lideres de Ansenuza collects, uses, and protects personal data related to its programs, activities, and newsletter.",
+      "legalBaseTitle": "Legal basis",
+      "legalBaseDescription": "Law No. 25,326, Regulatory Decree No. 1558/2001, and complementary regulations.",
+      "contactChannelTitle": "Contact channel"
+    },
+    "actionCards": [
+      {
+        "title": "Form F-DP01",
+        "description": "For minors, with the signature of a parent or guardian.",
+        "label": "Open minor form"
+      },
+      {
+        "title": "Form F-DP02",
+        "description": "For adults who want to access, correct, or delete data.",
+        "label": "Open adult form"
+      },
+      {
+        "title": "AAIP complaint",
+        "description": "Official link for complaints related to personal data protection.",
+        "label": "Go to the official AAIP portal"
+      }
+    ],
+    "intro": {
+      "eyebrow": "Introduction",
+      "body": "Welcome to our privacy policy page. At Fundacion Lideres de Ansenuza, we value and respect your privacy. These policies describe how we collect, use, and protect the information you provide to us. We invite you to read them carefully so you can understand how we handle your personal data and how you can exercise your rights. If you have any questions, do not hesitate to contact us."
+    },
+    "program": {
+      "eyebrow": "Section 1",
+      "title": "Enrollment, participation in programs, and activities",
+      "sections": [
+        {
+          "title": "What does this privacy policy describe? What legislation is it based on?",
+          "body": [
+            "This Personal Data Privacy Policy describes how Fundacion Lideres de Ansenuza, with legal address at Independencia 350, Miramar de Ansenuza, Cordoba, Argentina (hereinafter, \"the foundation\"), collects, uses, and protects the personal information of people who enroll and participate in its educational programs or in activities directly organized by the foundation.",
+            "This Privacy Policy is governed by Personal Data Protection Law No. 25,326, Regulatory Decree No. 1558/2001, and other complementary regulations."
+          ]
+        },
+        {
+          "title": "What information does the foundation collect and for what purposes?",
+          "body": [
+            "The foundation collects the following information: I) Identifying data: first and last name, national ID number, date of birth, gender; II) Contact data: address, postal code, mobile phone, email address; III) Academic information: school attended and grade level; IV) Parent or guardian data (if the participant is a minor): first and last name, mobile phone, and email address.",
+            "These data are collected and stored for the purpose of efficiently managing participation in the programs, improving the quality of the services offered, ensuring effective communication, and facilitating the evaluation of the long-term impact of the programs on participants' lives."
+          ]
+        },
+        {
+          "title": "How does the foundation protect the information collected?",
+          "body": [
+            "To guarantee the privacy and security of the information collected, the foundation has several measures in place: it limits access to authorized personnel, implements technological security protocols, and does not share information with third parties without the participant's express consent, except when required by law."
+          ]
+        },
+        {
+          "title": "What are my rights and how do I exercise them?",
+          "body": [
+            "Data subjects have the right to access, correct, and delete their personal information. To do so, they must send an email to contacto@lideresdeansenuza.org, attaching a copy of the front and back of their national ID and the completed and signed form (F-DP02).",
+            "If the data subject is a minor, a copy of the front and back of the minor's national ID, a copy of the front and back of the parent's or guardian's national ID, and the completed and signed form (F-DP01) must be attached. Both forms can be found at the end of the policy."
+          ]
+        },
+        {
+          "title": "How long will the foundation keep the information?",
+          "body": [
+            "The foundation will retain your Personal Data for the time necessary to fulfill the purposes described in this Privacy Policy. Your information will be destroyed when it is no longer necessary or relevant for the purposes for which it was collected, unless there is a legal obligation to retain it for a longer period."
+          ]
+        },
+        {
+          "title": "Is it necessary to accept this privacy policy to enroll in one of the programs?",
+          "body": [
+            "By enrolling in one of our programs, you acknowledge that you have read and understood this Privacy Policy. If you are a minor, your parent or guardian must read and accept this document."
+          ]
+        },
+        {
+          "title": "Final notes",
+          "body": [
+            "The foundation reserves the right to modify this policy at any time, within the limits of applicable law. The changes will take effect after publication.",
+            "If you have any questions or concerns, contact contacto@lideresdeansenuza.org."
+          ]
+        }
+      ]
+    },
+    "newsletter": {
+      "eyebrow": "Section 2",
+      "title": "Newsletter subscription",
+      "sections": [
+        {
+          "title": "What does this privacy policy describe? What legislation is it based on?",
+          "body": [
+            "This Personal Data Privacy Policy describes how Fundacion Lideres de Ansenuza, with legal address at Independencia 350, Miramar de Ansenuza, Cordoba, Argentina (hereinafter, \"the foundation\"), collects, uses, and protects the personal information of people who subscribe to its newsletter.",
+            "This Privacy Policy is governed by Personal Data Protection Law No. 25,326, Regulatory Decree No. 1558/2001, and other complementary regulations."
+          ]
+        },
+        {
+          "title": "What information does the foundation collect and for what purposes?",
+          "body": [
+            "The foundation collects the following information: I) Identifying data: first and last name; II) Contact data: email address. These data are collected and stored for the purpose of sending relevant and up-to-date information about the foundation, including news, events, publications, and related activities. They will also be used to manage newsletter delivery and perform statistical analysis to improve its content and operation."
+          ]
+        },
+        {
+          "title": "How does the foundation protect the information collected?",
+          "body": [
+            "To guarantee the privacy and security of the information collected, the foundation has several measures in place: it limits access to authorized personnel, implements technological security protocols, and does not share information with third parties without the participant's express consent, except when required by law."
+          ]
+        },
+        {
+          "title": "What are my rights and how do I exercise them?",
+          "body": [
+            "Data subjects have the right to access, correct, and delete their personal information. To do so, they may use the links provided in each newsletter email or contact contacto@lideresdeansenuza.org by email."
+          ]
+        },
+        {
+          "title": "How long will the foundation keep the information?",
+          "body": [
+            "The foundation will retain your Personal Data for the time necessary to fulfill the purposes described in this Privacy Policy. Your information will be destroyed when it is no longer necessary or when the data subject unsubscribes from the newsletter."
+          ]
+        },
+        {
+          "title": "Is it necessary to accept this privacy policy to subscribe to the newsletter?",
+          "body": [
+            "By submitting the newsletter subscription form, the user gives express consent to the processing of personal data in accordance with the purposes established in the Privacy Policy. If you are a minor, your parent or guardian must read and accept this document."
+          ]
+        },
+        {
+          "title": "Final notes",
+          "body": [
+            "The foundation reserves the right to modify this policy at any time, within the limits of applicable law. The changes will take effect after publication.",
+            "If you have any questions or concerns, contact contacto@lideresdeansenuza.org."
+          ]
+        }
+      ]
+    },
+    "officialLink": {
+      "eyebrow": "Required official link",
+      "title": "Authority and complaint channel",
+      "description": "If you need to file a complaint related to the protection of personal data, you can do so through the official portal of the Agency for Access to Public Information.",
+      "button": "Go to the official AAIP link"
+    },
+    "help": {
+      "eyebrow": "Need help?",
+      "title": "You can write to us directly",
+      "description": "If you want to make an inquiry about your personal data or about these policies, we are available to support you.",
+      "emailButton": "Email contact",
+      "contactButton": "Go to contact"
+    }
   }
 }
