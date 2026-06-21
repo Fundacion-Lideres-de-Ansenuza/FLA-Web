@@ -84,8 +84,14 @@
         }
       },
       "leadership": {
+        "groups": {
+          "ambientalia": "Ambientalia Experience and Conservation Academy",
+          "somos": "SOMOS",
+          "directors": "Leadership and Communication"
+        },
         "roles": {
-          "ambientaliaCoDirector": "Co-Director of Ambientalia Experience and Conservation Academy",
+          "ambientaliaCoDirector": "Co-Director",
+          "ambientaliaCoDirectorFemale": "Co-Director",
           "somosCoDirectorFemale": "Co-Director of SOMOS",
           "somosCoDirectorMale": "Co-Director of SOMOS",
           "lideresDirector": "Director of Líderes",

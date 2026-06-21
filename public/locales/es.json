@@ -84,8 +84,14 @@
         }
       },
       "leadership": {
+        "groups": {
+          "ambientalia": "Experiencia Ambientalia y Academia de Conservación",
+          "somos": "SOMOS",
+          "directors": "Dirección y Comunicación"
+        },
         "roles": {
-          "ambientaliaCoDirector": "Co-Directora de Experiencia Ambientalia y Academia de Conservación",
+          "ambientaliaCoDirector": "Co-Directora",
+          "ambientaliaCoDirectorFemale": "Co-Directora",
           "somosCoDirectorFemale": "Co-Directora de SOMOS",
           "somosCoDirectorMale": "Co-Director de SOMOS",
           "lideresDirector": "Directora de Líderes",
