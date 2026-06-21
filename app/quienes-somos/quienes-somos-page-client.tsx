@@ -8,6 +8,7 @@ import Values from "../../components/about_us/values";
 import Volunteers from "../../components/about_us/volunteers";
 import Vision from "../../components/about_us/vision";
 import EnjoyFla from "@/components/about_us/EnjoyFla";
+import AuthoritiesOrganigram from "@/components/about_us/authorities-organigram";
 
 export default function QuienesSomos(): JSX.Element {
   const { t } = useTranslation();
@@ -25,6 +26,8 @@ export default function QuienesSomos(): JSX.Element {
             {t('aboutUs.authorities.description')}
           </p>
         </section>
+
+        <AuthoritiesOrganigram />
 
         <div className="space-y-2 md:space-y-4">
           <Mission />

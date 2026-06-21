@@ -72,7 +72,27 @@
     },
     "authorities": {
       "title": "Autoridades",
-      "description": "Presentamos al equipo directivo de la fundación y a las personas que acompañan nuestra gestión institucional."
+      "description": "Presentamos al equipo directivo de la fundación y a las personas que acompañan nuestra gestión institucional.",
+      "boardTitle": "Consejo de Administración",
+      "leadershipTitle": "Equipo de Liderazgo",
+      "board": {
+        "roles": {
+          "president": "Presidenta",
+          "treasurer": "Tesorera",
+          "secretary": "Secretaria",
+          "member": "Vocal"
+        }
+      },
+      "leadership": {
+        "roles": {
+          "ambientaliaCoDirector": "Co-Directora de Experiencia Ambientalia y Academia de Conservación",
+          "somosCoDirectorFemale": "Co-Directora de SOMOS",
+          "somosCoDirectorMale": "Co-Director de SOMOS",
+          "lideresDirector": "Directora de Líderes",
+          "communicationDirector": "Director de Comunicación",
+          "institutionalDirector": "Directora de Institucional y Fortalecimiento de Voluntariado"
+        }
+      }
     },
     "missionVisionValues": "Misión, Visión y Valores",
     "mission": {

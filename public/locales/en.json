@@ -72,7 +72,27 @@
     },
     "authorities": {
       "title": "Authorities",
-      "description": "We present the foundation's leadership team and the people who support our institutional management."
+      "description": "We present the foundation's leadership team and the people who support our institutional management.",
+      "boardTitle": "Board of Directors",
+      "leadershipTitle": "Leadership Team",
+      "board": {
+        "roles": {
+          "president": "President",
+          "treasurer": "Treasurer",
+          "secretary": "Secretary",
+          "member": "Board Member"
+        }
+      },
+      "leadership": {
+        "roles": {
+          "ambientaliaCoDirector": "Co-Director of Ambientalia Experience and Conservation Academy",
+          "somosCoDirectorFemale": "Co-Director of SOMOS",
+          "somosCoDirectorMale": "Co-Director of SOMOS",
+          "lideresDirector": "Director of Líderes",
+          "communicationDirector": "Communication Director",
+          "institutionalDirector": "Director of Institutional Affairs and Volunteer Development"
+        }
+      }
     },
     "missionVisionValues": "Mission, Vision and Values",
     "mission": {
