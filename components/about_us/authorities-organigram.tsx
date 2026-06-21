@@ -81,7 +81,56 @@ const LEADERSHIP: Person[] = [
   },
 ]
 
-function PersonCard({ person }: { person: Person }) {
+function BoardCard({ person }: { person: Person }) {
+  const { t } = useTranslation()
+  const initials = person.name
+    .split(" ")
+    .filter(Boolean)
+    .map((part) => part[0])
+    .slice(0, 2)
+    .join("")
+
+  return (
+    <a
+      href={person.href}
+      target="_blank"
+      rel="noreferrer noopener"
+      aria-label={`${person.name} - ${t(person.roleKey)}`}
+      className="group block h-full overflow-hidden rounded-[28px] border border-[#f2d9d6] bg-white shadow-[0_18px_45px_rgba(144,20,14,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(144,20,14,0.11)] focus-visible:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#bc2222]/35"
+    >
+      <div className="relative h-full">
+        <div className="absolute inset-x-0 top-0 h-1.5 bg-[linear-gradient(90deg,#bc2222_0%,#f45e5e_100%)]" />
+        <div className="flex h-full flex-col gap-4 p-5 pt-6 md:flex-row md:items-center md:gap-5 md:p-6">
+          <span className="inline-flex w-fit rounded-full bg-[#fff4f3] px-3 py-1 text-[11px] font-black uppercase tracking-[0.2em] text-[#bc2222] md:order-1 md:flex-none">
+            {t(person.roleKey)}
+          </span>
+
+          <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-[24px] border border-[#f1d8d8] bg-[linear-gradient(135deg,#fff4f3_0%,#fbe1de_100%)] shadow-[0_10px_24px_rgba(144,20,14,0.08)] md:order-2">
+            {person.avatar ? (
+              <Image
+                src={person.avatar}
+                alt={person.name}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="96px"
+              />
+            ) : (
+              <div className="flex h-full w-full items-center justify-center font-contrail-one text-2xl text-[#8f1f1b]">
+                {initials}
+              </div>
+            )}
+          </div>
+
+          <h3 className="min-w-0 font-contrail-one text-[24px] leading-tight text-[#160101] md:order-3">
+            {person.name}
+          </h3>
+        </div>
+      </div>
+    </a>
+  )
+}
+
+function LeadershipCard({ person }: { person: Person }) {
   const { t } = useTranslation()
   const initials = person.name
     .split(" ")
@@ -131,7 +180,17 @@ function PersonCard({ person }: { person: Person }) {
   )
 }
 
-function OrganigramSection({ title, items, columnsClass }: { title: string; items: Person[]; columnsClass: string }) {
+function OrganigramSection({
+  title,
+  items,
+  columnsClass,
+  renderCard,
+}: {
+  title: string
+  items: Person[]
+  columnsClass: string
+  renderCard: (person: Person) => JSX.Element
+}) {
   const { t } = useTranslation()
 
   return (
@@ -144,7 +203,7 @@ function OrganigramSection({ title, items, columnsClass }: { title: string; item
 
       <div className={`grid gap-4 ${columnsClass}`}>
         {items.map((person) => (
-          <PersonCard key={`${person.name}-${person.roleKey}`} person={person} />
+          renderCard(person)
         ))}
       </div>
 
@@ -165,6 +224,7 @@ export default function AuthoritiesOrganigram() {
             title={t("aboutUs.authorities.boardTitle")}
             items={BOARD}
             columnsClass="grid-cols-1 sm:grid-cols-2 xl:grid-cols-4"
+            renderCard={(person) => <BoardCard key={`${person.name}-${person.roleKey}`} person={person} />}
           />
 
           <div className="relative mx-auto h-10 w-px bg-gradient-to-b from-[#d9b6b1] via-[#eac8c3] to-transparent" />
@@ -173,6 +233,7 @@ export default function AuthoritiesOrganigram() {
             title={t("aboutUs.authorities.leadershipTitle")}
             items={LEADERSHIP}
             columnsClass="grid-cols-1 sm:grid-cols-2 xl:grid-cols-3"
+            renderCard={(person) => <LeadershipCard key={`${person.name}-${person.roleKey}`} person={person} />}
           />
         </div>
       </div>

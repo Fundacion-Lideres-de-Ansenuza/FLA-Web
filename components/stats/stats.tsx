@@ -5,7 +5,7 @@ import { useCountAnimation } from './hooks/useCountAnimation'
 import { useTranslation } from 'react-i18next'
 
 const STATS_DATA = [
-  { number: 200, labelKey: "stats.volunteers" },
+  { number: 100, labelKey: "stats.volunteers" },
   { number: 2200, labelKey: "stats.participants" },
   { number: 250, labelKey: "stats.projects" },
 ]
