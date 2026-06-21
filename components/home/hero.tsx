@@ -9,18 +9,32 @@ export default function Hero() {
   const { t } = useTranslation()
 
   return (
-    <section className="bg-transparent py-6 lg:py-7">
+    <section className="bg-transparent py-8 lg:py-10">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center gap-7 lg:gap-8">
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-center w-full rounded-[32px] border border-[#f3d7d7] bg-white/85 px-5 py-6 shadow-[0_20px_60px_rgba(144,20,14,0.06)] backdrop-blur-sm sm:px-7 lg:px-10 lg:py-8">
-            <div className="md:col-span-2 space-y-4 text-center md:text-center">
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl text-gray-900 leading-tight tracking-tight font-contrail-one">{t("hero.title")}</h1>
-              <p className="text-base lg:text-lg text-gray-700 leading-relaxed font-arimo max-w-3xl mx-auto">{t("hero.description")}</p>
-              <div className="w-40 sm:w-52 h-1.5 bg-gradient-to-r from-[#90140e] via-[#bc2222] to-[#f45e5e] rounded-full mx-auto" />
+        <div className="mx-auto flex max-w-7xl flex-col gap-8 lg:gap-10">
+          <div className="flex flex-col items-start justify-between gap-6 lg:flex-row lg:gap-10">
+            <div className="max-w-5xl space-y-4 text-left">
+              <p className="text-lg sm:text-xl lg:text-2xl italic font-contrail-one text-[#9f231b]">
+                {t("hero.subtitle")}
+              </p>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-gray-900 leading-[0.95] tracking-tight font-contrail-one">
+                {t("hero.title")}
+              </h1>
+              <p className="max-w-4xl text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed font-arimo">
+                {t("hero.description")}
+              </p>
+              <div className="h-1.5 w-40 rounded-full bg-gradient-to-r from-[#90140e] via-[#bc2222] to-[#f45e5e] sm:w-52" />
             </div>
 
-            <div className="row-start-1 md:row-auto hidden sm:flex justify-center md:justify-end">
-              <Image src="/images/LogoFLA.webp" alt="Identidad FLA" width={140} height={140} className="drop-shadow-lg" />
+            <div className="hidden shrink-0 lg:block">
+              <Image
+                src="/images/LogoFLA.webp"
+                alt="Identidad FLA"
+                width={150}
+                height={150}
+                className="drop-shadow-lg"
+                priority
+              />
             </div>
           </div>
 
@@ -36,7 +50,7 @@ export default function Hero() {
             />
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 items-center justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 items-start justify-start">
             <Button asChild className="bg-[#90140e] hover:bg-[#a01810] text-white px-8 py-5 rounded-full text-lg md:text-xl font-bold shadow-lg transition-transform transform hover:scale-105 w-[240px] lg:w-[260px] font-contrail">
               <Link href="/contactanos">{t("hero.voluntariado")}</Link>
             </Button>
