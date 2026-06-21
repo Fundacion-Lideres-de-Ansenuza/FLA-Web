@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import { Linkedin } from "lucide-react"
 import { useTranslation } from "react-i18next"
 
 type Person = {
@@ -97,13 +96,13 @@ function PersonCard({ person }: { person: Person }) {
       target="_blank"
       rel="noreferrer noopener"
       aria-label={`${person.name} - ${t(person.roleKey)}`}
-      className="group block h-full overflow-hidden rounded-[28px] border border-[#f2d9d6] bg-white shadow-[0_18px_45px_rgba(144,20,14,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(144,20,14,0.11)] focus-visible:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#bc2222]/35"
+      className="group block h-full min-h-[340px] overflow-hidden rounded-[28px] border border-[#f2d9d6] bg-white shadow-[0_18px_45px_rgba(144,20,14,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(144,20,14,0.11)] focus-visible:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#bc2222]/35"
     >
       <div className="relative h-full">
         <div className="absolute inset-x-0 top-0 h-1.5 bg-[linear-gradient(90deg,#bc2222_0%,#f45e5e_100%)]" />
-        <div className="flex h-full flex-col gap-4 p-5 pt-6">
-          <div className="flex items-start gap-4">
-            <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-[24px] border border-[#f1d8d8] bg-[linear-gradient(135deg,#fff4f3_0%,#fbe1de_100%)] shadow-[0_10px_24px_rgba(144,20,14,0.08)]">
+        <div className="flex h-full flex-col gap-5 p-5 pt-6 md:p-6">
+          <div className="flex items-center gap-4">
+            <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-[24px] border border-[#f1d8d8] bg-[linear-gradient(135deg,#fff4f3_0%,#fbe1de_100%)] shadow-[0_10px_24px_rgba(144,20,14,0.08)]">
               {person.avatar ? (
                 <Image
                   src={person.avatar}
@@ -119,18 +118,13 @@ function PersonCard({ person }: { person: Person }) {
               )}
             </div>
             <div className="min-w-0 space-y-2">
-              <span className="inline-flex rounded-full bg-[#fff4f3] px-3 py-1 text-[11px] font-black uppercase tracking-[0.22em] text-[#bc2222]">
+              <h3 className="font-contrail-one text-[24px] leading-tight text-[#160101]">{person.name}</h3>
+              <span className="inline-flex rounded-full bg-[#fff4f3] px-3 py-1 text-[11px] font-black uppercase tracking-[0.2em] text-[#bc2222]">
                 {t(person.roleKey)}
               </span>
-              <h3 className="font-contrail-one text-[24px] leading-tight text-[#160101]">{person.name}</h3>
             </div>
           </div>
 
-          <div className="mt-auto flex items-center justify-end">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#fff4f3] text-[#7c1d1a] transition-colors duration-300 group-hover:bg-[#bc2222] group-hover:text-white">
-              <Linkedin className="h-4 w-4" />
-            </span>
-          </div>
         </div>
       </div>
     </a>
