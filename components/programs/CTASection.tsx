@@ -32,7 +32,7 @@ export default function CTASection({ title, colors }: CTASectionProps) {
           className="mx-auto max-w-4xl text-center"
         >
           <h2 className="mb-6 text-4xl text-white md:text-5xl lg:text-6xl" style={{ fontFamily: "var(--font-fla), serif", letterSpacing: "0.02em" }}>
-            ¿Listo para ser parte de {title}?
+            Listo para ser parte de {title}
           </h2>
           <p className="mb-10 text-xl leading-relaxed text-white/95 md:text-2xl">
             Unite a una comunidad de jóvenes líderes que están transformando el futuro
@@ -47,7 +47,7 @@ export default function CTASection({ title, colors }: CTASectionProps) {
             </Link>
           </div>
           <p className="mt-4 text-sm text-white/90 md:text-base">
-            ¿Tenés dudas?{" "}
+            Tenés dudas{" "}
             <Link href="/contactanos" className="font-semibold underline-offset-4 hover:underline">
               Contáctanos
             </Link>
@@ -57,5 +57,4 @@ export default function CTASection({ title, colors }: CTASectionProps) {
     </section>
   );
 }
-
 

@@ -43,9 +43,9 @@ export default function CurrentPrograms() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 items-center justify-items-center">
           {programs.map((program, index) => (
             <Link key={index} href={program.href} className="block group w-full max-w-sm">
-              <div className="relative flex flex-col items-center text-center rounded-[28px] border border-[#f0d8d8] bg-white/90 px-4 py-6 transition-all duration-300 shadow-[0_20px_50px_rgba(144,20,14,0.06)] group-hover:-translate-y-1">
+              <div className="relative flex flex-col items-center text-center px-4 py-2 transition-transform duration-300 group-hover:-translate-y-1">
                 <div
-                  className="w-56 h-56 md:w-64 md:h-64 flex items-center justify-center relative mb-5 transition-all duration-500 group-hover:scale-105"
+                  className="relative mb-4 flex h-56 w-56 items-center justify-center transition-all duration-500 group-hover:scale-105 md:h-64 md:w-64"
                   style={{
                     backgroundColor: `${program.colors.primary}25`,
                     borderRadius: generateBlobRadius(program.name)
@@ -63,7 +63,7 @@ export default function CurrentPrograms() {
                     />
                   </div>
                 </div>
-                <h3 className="text-2xl font-contrail-one text-gray-900 mb-1">{program.name}</h3>
+                <h3 className="text-2xl font-contrail-one text-gray-900">{program.name}</h3>
               </div>
             </Link>
           ))}

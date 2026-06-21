@@ -36,7 +36,7 @@ export default function Contact() {
 			<div className="container mx-auto px-4">
 				<div className="text-center mb-16">
 					<h2 className="text-3xl md:text-4xl text-gray-900 mb-4">
-						Ready to Get Started?
+						Ready to begin
 					</h2>
 					<p className="text-xl text-gray-600 max-w-2xl mx-auto">
 						Contact us today and discover how our platform can transform your business. Our team
@@ -186,7 +186,7 @@ export default function Contact() {
 
 						<Card className="bg-red-600 text-white border-0">
 							<CardContent className="p-6">
-								<h4 className="text-xl mb-2">Ready to start?</h4>
+								<h4 className="text-xl mb-2">Let's start</h4>
 								<p className="mb-4 opacity-90">
 									Join thousands of satisfied customers and transform your business today.
 								</p>
