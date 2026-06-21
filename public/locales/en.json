@@ -13,16 +13,17 @@
     "label": "Language"
   },
   "hero": {
-    "title": "Youth Transforming Education",
+    "subtitle": "Youth Transforming Education",
+    "title": "Fundación Líderes de Ansenuza",
     "description": "We design and run free educational programs throughout Argentina so that more young people can lead change in their communities.",
     "voluntariado": "Volunteer",
     "alianzas": "Partnerships",
     "donar": "Donate"
   },
   "stats": {
-    "volunteers": "Current\nVolunteers",
-    "participants": "Participants\nOver the Years",
-    "projects": "Social Impact\nProjects"
+    "volunteers": "Current Volunteers",
+    "participants": "Participants Over the Years",
+    "projects": "Social Impact Projects"
   },
   "whyWeDoIt": {
     "title": "Why We Do It",
@@ -155,7 +156,7 @@
     }
   },
   "donate": {
-    "title": "How to Donate?",
+    "title": "Support Our Mission",
     "subtitle": "Your contribution allows thousands of young people to access free educational programs. Choose the method you prefer.",
     "tabs": {
       "online": "Donate Online",
@@ -195,14 +196,14 @@
       "alias": "Alias",
       "name": "Name",
       "cuit": "CUIT",
-      "receiptTitle": "Need a receipt?",
+      "receiptTitle": "Need a receipt",
       "receiptText": "Contact us through our contact page attaching the proof of payment to issue your official donation receipt.",
       "contactPage": "contact page"
     }
   },
   "contact": {
     "title": "CONTACT US",
-    "subtitle": "Want to be part of the change? Have questions about our programs? Want to collaborate with us? We are here to listen.",
+    "subtitle": "Want to be part of the change. Have questions about our programs. Want to collaborate with us. We are here to listen.",
     "form": {
       "title": "Send us a message",
       "name": "Full name",
@@ -212,7 +213,7 @@
       "phone": "Phone",
       "phonePlaceholder": "+54 123 456 7890",
       "subject": "Subject",
-      "subjectPlaceholder": "How can we help you?",
+      "subjectPlaceholder": "How can we help you",
       "message": "Message",
       "messagePlaceholder": "Tell us more about your inquiry, idea, or how you want to collaborate with us...",
       "send": "Send message",
@@ -229,7 +230,7 @@
       "officeHours": "Office Hours",
       "weekdays": "Monday to Friday: 9:00 AM - 6:00 PM",
       "saturday": "Saturdays: 9:00 AM - 12:00 PM (emergencies only)",
-      "collaborate": "Want to collaborate?",
+      "collaborate": "Want to collaborate",
       "collaborateOptions": "Volunteering • Donations • Partnerships",
       "collaborateText": "All forms of support are welcome"
     }
@@ -257,7 +258,7 @@
       "next": "Next image"
     },
     "cta": {
-      "title": "Want to know more about our programs?",
+      "title": "Want to know more about our programs",
       "subtitle": "If you have any questions or want more information on how to participate, don't hesitate to contact us",
       "button": "Contact Us"
     }
@@ -296,40 +297,40 @@
       "title": "Enrollment, participation in programs, and activities",
       "sections": [
         {
-          "title": "What does this privacy policy describe? What legislation is it based on?",
+          "title": "What does this privacy policy describe and what legislation is it based on",
           "body": [
             "This Personal Data Privacy Policy describes how Fundacion Lideres de Ansenuza, with legal address at Independencia 350, Miramar de Ansenuza, Cordoba, Argentina (hereinafter, \"the foundation\"), collects, uses, and protects the personal information of people who enroll and participate in its educational programs or in activities directly organized by the foundation.",
             "This Privacy Policy is governed by Personal Data Protection Law No. 25,326, Regulatory Decree No. 1558/2001, and other complementary regulations."
           ]
         },
         {
-          "title": "What information does the foundation collect and for what purposes?",
+          "title": "What information does the foundation collect and for what purposes",
           "body": [
             "The foundation collects the following information: I) Identifying data: first and last name, national ID number, date of birth, gender; II) Contact data: address, postal code, mobile phone, email address; III) Academic information: school attended and grade level; IV) Parent or guardian data (if the participant is a minor): first and last name, mobile phone, and email address.",
             "These data are collected and stored for the purpose of efficiently managing participation in the programs, improving the quality of the services offered, ensuring effective communication, and facilitating the evaluation of the long-term impact of the programs on participants' lives."
           ]
         },
         {
-          "title": "How does the foundation protect the information collected?",
+          "title": "How does the foundation protect the information collected",
           "body": [
             "To guarantee the privacy and security of the information collected, the foundation has several measures in place: it limits access to authorized personnel, implements technological security protocols, and does not share information with third parties without the participant's express consent, except when required by law."
           ]
         },
         {
-          "title": "What are my rights and how do I exercise them?",
+          "title": "What are my rights and how do I exercise them",
           "body": [
             "Data subjects have the right to access, correct, and delete their personal information. To do so, they must send an email to contacto@lideresdeansenuza.org, attaching a copy of the front and back of their national ID and the completed and signed form (F-DP02).",
             "If the data subject is a minor, a copy of the front and back of the minor's national ID, a copy of the front and back of the parent's or guardian's national ID, and the completed and signed form (F-DP01) must be attached. Both forms can be found at the end of the policy."
           ]
         },
         {
-          "title": "How long will the foundation keep the information?",
+          "title": "How long will the foundation keep the information",
           "body": [
             "The foundation will retain your Personal Data for the time necessary to fulfill the purposes described in this Privacy Policy. Your information will be destroyed when it is no longer necessary or relevant for the purposes for which it was collected, unless there is a legal obligation to retain it for a longer period."
           ]
         },
         {
-          "title": "Is it necessary to accept this privacy policy to enroll in one of the programs?",
+          "title": "Is it necessary to accept this privacy policy to enroll in one of the programs",
           "body": [
             "By enrolling in one of our programs, you acknowledge that you have read and understood this Privacy Policy. If you are a minor, your parent or guardian must read and accept this document."
           ]
@@ -348,38 +349,38 @@
       "title": "Newsletter subscription",
       "sections": [
         {
-          "title": "What does this privacy policy describe? What legislation is it based on?",
+          "title": "What does this privacy policy describe and what legislation is it based on",
           "body": [
             "This Personal Data Privacy Policy describes how Fundacion Lideres de Ansenuza, with legal address at Independencia 350, Miramar de Ansenuza, Cordoba, Argentina (hereinafter, \"the foundation\"), collects, uses, and protects the personal information of people who subscribe to its newsletter.",
             "This Privacy Policy is governed by Personal Data Protection Law No. 25,326, Regulatory Decree No. 1558/2001, and other complementary regulations."
           ]
         },
         {
-          "title": "What information does the foundation collect and for what purposes?",
+          "title": "What information does the foundation collect and for what purposes",
           "body": [
             "The foundation collects the following information: I) Identifying data: first and last name; II) Contact data: email address. These data are collected and stored for the purpose of sending relevant and up-to-date information about the foundation, including news, events, publications, and related activities. They will also be used to manage newsletter delivery and perform statistical analysis to improve its content and operation."
           ]
         },
         {
-          "title": "How does the foundation protect the information collected?",
+          "title": "How does the foundation protect the information collected",
           "body": [
             "To guarantee the privacy and security of the information collected, the foundation has several measures in place: it limits access to authorized personnel, implements technological security protocols, and does not share information with third parties without the participant's express consent, except when required by law."
           ]
         },
         {
-          "title": "What are my rights and how do I exercise them?",
+          "title": "What are my rights and how do I exercise them",
           "body": [
             "Data subjects have the right to access, correct, and delete their personal information. To do so, they may use the links provided in each newsletter email or contact contacto@lideresdeansenuza.org by email."
           ]
         },
         {
-          "title": "How long will the foundation keep the information?",
+          "title": "How long will the foundation keep the information",
           "body": [
             "The foundation will retain your Personal Data for the time necessary to fulfill the purposes described in this Privacy Policy. Your information will be destroyed when it is no longer necessary or when the data subject unsubscribes from the newsletter."
           ]
         },
         {
-          "title": "Is it necessary to accept this privacy policy to subscribe to the newsletter?",
+          "title": "Is it necessary to accept this privacy policy to subscribe to the newsletter",
           "body": [
             "By submitting the newsletter subscription form, the user gives express consent to the processing of personal data in accordance with the purposes established in the Privacy Policy. If you are a minor, your parent or guardian must read and accept this document."
           ]
@@ -400,7 +401,7 @@
       "button": "Go to the official AAIP link"
     },
     "help": {
-      "eyebrow": "Need help?",
+      "eyebrow": "Need help",
       "title": "You can write to us directly",
       "description": "If you want to make an inquiry about your personal data or about these policies, we are available to support you.",
       "emailButton": "Email contact",

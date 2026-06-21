@@ -13,19 +13,20 @@
     "label": "Idioma"
   },
   "hero": {
-    "title": "Jóvenes transformando la educación",
+    "subtitle": "Jóvenes transformando la educación",
+    "title": "Fundación Líderes de Ansenuza",
     "description": "Diseñamos y ejecutamos programas educativos que impulsan a jóvenes a liderar el cambio en sus comunidades.",
     "voluntariado": "Voluntariado",
     "alianzas": "Alianzas",
     "donar": "Donar"
   },
   "stats": {
-    "volunteers": "Voluntarios\nactuales",
-    "participants": "Participantes a lo\nlargo de los años",
-    "projects": "Proyectos de\nimpacto social"
+    "volunteers": "Voluntarios actuales",
+    "participants": "Participantes a lo largo de los años",
+    "projects": "Proyectos de impacto social"
   },
   "whyWeDoIt": {
-    "title": "¿Por qué lo hacemos?",
+    "title": "Nuestro motor",
     "subtitle": "Porque la educación crea oportunidades y transforma comunidades.",
     "socialImpact": {
       "title": "Impacto social",
@@ -155,7 +156,7 @@
     }
   },
   "donate": {
-    "title": "¿Cómo Donar?",
+    "title": "APOYÁ NUESTRA MISIÓN",
     "subtitle": "Tu contribución permite que miles de jóvenes accedan a programas educativos gratuitos. Elegí el método que prefieras.",
     "tabs": {
       "online": "Donar Online",
@@ -195,14 +196,14 @@
       "alias": "Alias",
       "name": "Nombre",
       "cuit": "CUIT",
-      "receiptTitle": "¿Necesitás un recibo?",
+      "receiptTitle": "Necesitás un recibo",
       "receiptText": "Escribinos a través de nuestra página de contacto adjuntando el comprobante para emitir tu recibo de donación oficial.",
       "contactPage": "página de contacto"
     }
   },
   "contact": {
     "title": "CONTÁCTANOS",
-    "subtitle": "¿Querés ser parte del cambio? ¿Tenés preguntas sobre nuestros programas? ¿Querés colaborar con nosotros? Estamos aquí para escucharte.",
+    "subtitle": "Querés ser parte del cambio. Tenés preguntas sobre nuestros programas. Querés colaborar con nosotros. Estamos aquí para escucharte.",
     "form": {
       "title": "Envíanos un mensaje",
       "name": "Nombre completo",
@@ -212,7 +213,7 @@
       "phone": "Teléfono",
       "phonePlaceholder": "+54 123 456 7890",
       "subject": "Asunto",
-      "subjectPlaceholder": "¿En qué podemos ayudarte?",
+      "subjectPlaceholder": "En qué podemos ayudarte",
       "message": "Mensaje",
       "messagePlaceholder": "Contanos más sobre tu consulta, idea o cómo querés colaborar con nosotros...",
       "send": "Enviar mensaje",
@@ -229,7 +230,7 @@
       "officeHours": "Horarios de atención",
       "weekdays": "Lunes a Viernes: 9:00 - 18:00",
       "saturday": "Sábados: 9:00 - 12:00 (solo urgencias)",
-      "collaborate": "¿Querés colaborar?",
+      "collaborate": "Querés colaborar",
       "collaborateOptions": "Voluntariado • Donaciones • Alianzas",
       "collaborateText": "Todas las formas de apoyo son bienvenidas"
     }
@@ -257,7 +258,7 @@
       "next": "Imagen siguiente"
     },
     "cta": {
-      "title": "¿Querés saber más sobre nuestros programas?",
+      "title": "Querés saber más sobre nuestros programas",
       "subtitle": "Si tenés alguna consulta o querés más información sobre cómo participar, no dudes en contactarnos",
       "button": "Contáctanos"
     }
@@ -296,40 +297,40 @@
       "title": "Inscripcion, participacion en programas y actividades",
       "sections": [
         {
-          "title": "Que describe esta politica de privacidad? En que legislacion se basa?",
+          "title": "Que describe esta politica de privacidad y en que legislacion se basa",
           "body": [
             "La presente Politica de Privacidad de Datos Personales describe como la Fundacion Lideres de Ansenuza, con domicilio legal en Independencia 350, Miramar de Ansenuza, Cordoba, Argentina (en adelante, \"la fundacion\") recopila, utiliza y protege la informacion personal de aquellas personas que se inscriben y participan en sus programas educativos o en actividades directamente organizadas por la fundacion.",
             "Esta Politica de Privacidad se rige por la Ley N 25.326 de Proteccion de Datos Personales, su Decreto Reglamentario N 1558/2001 y demas normas complementarias."
           ]
         },
         {
-          "title": "Que informacion recopila la fundacion y con que fines?",
+          "title": "Que informacion recopila la fundacion y con que fines",
           "body": [
             "La fundacion recopila la siguiente informacion: I) Datos identificativos: nombre y apellido, DNI, fecha de nacimiento, genero; II) Datos de contacto: domicilio, codigo postal, telefono movil, correo electronico; III) Informacion academica: colegio al que asiste y curso; IV) Datos del padre, madre o tutor (en caso de ser menor de edad): nombre y apellido, telefono movil y correo electronico.",
             "Estos datos se recopilan y almacenan con el proposito de gestionar eficientemente la participacion en los programas, mejorar la calidad de los servicios ofrecidos, asegurar una comunicacion efectiva y facilitar la evaluacion del impacto a largo plazo de los programas en la vida de los participantes."
           ]
         },
         {
-          "title": "Como protege la fundacion la informacion recopilada?",
+          "title": "Como protege la fundacion la informacion recopilada",
           "body": [
             "Con el fin de garantizar la privacidad y seguridad de la informacion recopilada la fundacion tiene varias medidas en funcionamiento: limita el acceso a personal autorizado, implementa protocolos de seguridad tecnologica y no comparte la informacion con terceros sin el consentimiento expreso del participante, excepto cuando sea requerido por ley."
           ]
         },
         {
-          "title": "Cuales son mis derechos y como los ejerzo?",
+          "title": "Cuales son mis derechos y como los ejerzo",
           "body": [
             "Los titulares de los datos personales tienen el derecho de acceder, corregir y suprimir su informacion personal. Para hacerlo deben enviar un correo electronico a contacto@lideresdeansenuza.org, adjuntando una copia del frente y dorso de su DNI y el formulario (F-DP02) completo y firmado.",
             "En caso de que el titular de la informacion sea menor de edad, se debera adjuntar una copia del frente y dorso del DNI del titular, una copia del frente y dorso del DNI del padre, madre o tutor y el formulario (F-DP01) completo y firmado. Ambos formularios se pueden encontrar al final de la politica."
           ]
         },
         {
-          "title": "Cuanto tiempo conservara la fundacion la informacion?",
+          "title": "Cuanto tiempo conservara la fundacion la informacion",
           "body": [
             "La fundacion conservara sus Datos Personales por el tiempo necesario para el cumplimiento de las finalidades descritas en la presente Politica de Privacidad. Su informacion sera destruida cuando haya dejado de ser necesaria o pertinente a los fines para los cuales hubiese sido recolectada, salvo que exista una obligacion legal de conservarla por un termino mayor."
           ]
         },
         {
-          "title": "Es necesario aceptar esta politica de privacidad para inscribirse a uno de sus programas?",
+          "title": "Es necesario aceptar esta politica de privacidad para inscribirse a uno de sus programas",
           "body": [
             "Al inscribirse en alguno de nuestros programas, usted reconoce haber leido y comprendido esta Politica de Privacidad. Si usted es menor de edad, su padre, madre o tutor debera leer y aceptar el presente documento."
           ]
@@ -348,38 +349,38 @@
       "title": "Suscripcion a newsletter",
       "sections": [
         {
-          "title": "Que describe esta politica de privacidad? En que legislacion se basa?",
+          "title": "Que describe esta politica de privacidad y en que legislacion se basa",
           "body": [
             "La presente Politica de Privacidad de Datos Personales describe como la Fundacion Lideres de Ansenuza, con domicilio legal en Independencia 350, Miramar de Ansenuza, Cordoba, Argentina (en adelante, \"la fundacion\") recopila, utiliza y protege la informacion personal de aquellas personas que se suscriben en su Newsletter.",
             "Esta Politica de Privacidad se rige por la Ley N 25.326 de Proteccion de Datos Personales, su Decreto Reglamentario N 1558/2001 y demas normas complementarias."
           ]
         },
         {
-          "title": "Que informacion recopila la fundacion y con que fines?",
+          "title": "Que informacion recopila la fundacion y con que fines",
           "body": [
             "La fundacion recopila la siguiente informacion: I) Datos identificativos: nombre y apellido; II) Datos de contacto: correo electronico. Estos datos se recopilan y almacenan con el proposito de enviar informacion relevante y actualizada sobre la fundacion, incluyendo noticias, eventos, publicaciones y actividades relacionadas. Ademas, se utilizaran para gestionar el envio del Newsletter y realizar analisis estadisticos para mejorar su contenido y funcionamiento."
           ]
         },
         {
-          "title": "Como protege la fundacion la informacion recopilada?",
+          "title": "Como protege la fundacion la informacion recopilada",
           "body": [
             "Con el fin de garantizar la privacidad y seguridad de la informacion recopilada, la fundacion tiene varias medidas en funcionamiento: limita el acceso a personal autorizado, implementa protocolos de seguridad tecnologica y no comparte la informacion con terceros sin el consentimiento expreso del participante, excepto cuando sea requerido por ley."
           ]
         },
         {
-          "title": "Cuales son mis derechos y como los ejerzo?",
+          "title": "Cuales son mis derechos y como los ejerzo",
           "body": [
             "Los titulares de los datos personales tienen el derecho de acceder, corregir y suprimir su informacion personal. Para hacerlo el titular puede utilizar los enlaces proporcionados en cada correo electronico del Newsletter o contactarse por correo electronico a contacto@lideresdeansenuza.org."
           ]
         },
         {
-          "title": "Cuanto tiempo conservara la fundacion la informacion?",
+          "title": "Cuanto tiempo conservara la fundacion la informacion",
           "body": [
             "La fundacion conservara sus Datos Personales por el tiempo necesario para el cumplimiento de las finalidades descritas en la presente Politica de Privacidad. Su informacion sera destruida cuando haya dejado de ser necesaria o cuando el titular de los datos de de baja del newsletter."
           ]
         },
         {
-          "title": "Es necesario aceptar esta politica de privacidad para darse de alta en el Newsletter?",
+          "title": "Es necesario aceptar esta politica de privacidad para darse de alta en el Newsletter",
           "body": [
             "Al enviar el formulario de alta en el Newsletter, el usuario otorga su consentimiento expreso para el tratamiento de sus datos personales de acuerdo con los fines establecidos en la Politica de Privacidad. Si usted es menor de edad, su padre, madre o tutor debera leer y aceptar el presente documento."
           ]
@@ -400,7 +401,7 @@
       "button": "Ir al enlace oficial AAIP"
     },
     "help": {
-      "eyebrow": "Necesitas ayuda?",
+      "eyebrow": "Necesitas ayuda",
       "title": "Podes escribirnos directo",
       "description": "Si queres hacer una consulta sobre tus datos personales o sobre estas politicas, estamos disponibles para acompanarte.",
       "emailButton": "Escribir a contacto",
