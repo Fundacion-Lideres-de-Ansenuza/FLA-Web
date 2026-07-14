@@ -13,7 +13,6 @@ export default function Volunteers(): JSX.Element {
     <section className="grid items-center gap-6 lg:grid-cols-[0.78fr_1.22fr]">
       <div className="flex justify-center">
         <div className="w-full max-w-[360px] rounded-[30px] bg-[linear-gradient(180deg,#fff4f4_0%,#ffffff_100%)] px-6 py-8 text-center shadow-[0_18px_40px_rgba(144,20,14,0.08)]">
-          <p className="text-xs font-black uppercase tracking-[0.24em] text-[#bc2222]">{t("aboutUs.volunteers.activeCommunity")}</p>
           <h3 className="mt-3 font-contrail-one text-[#160101] text-[72px] md:text-[80px] leading-none">+100</h3>
           <p className="mt-2 font-contrail-one text-[#160101] text-[28px] md:text-[34px] leading-tight">{t("aboutUs.volunteers.current")}</p>
         </div>
@@ -31,4 +30,3 @@ export default function Volunteers(): JSX.Element {
     </section>
   );
 }
-

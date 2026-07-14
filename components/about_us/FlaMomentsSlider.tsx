@@ -80,7 +80,7 @@ export default function FlaMomentsSlider({
 
         <div className="relative z-10 grid gap-5 lg:grid-cols-[1.15fr_0.85fr]">
           <div
-            className="relative min-h-[400px] overflow-hidden rounded-[30px] border border-white/70 bg-white/70 p-3 shadow-[0_26px_70px_rgba(144,20,14,0.16)] backdrop-blur-sm sm:min-h-[470px]"
+            className="relative overflow-hidden rounded-[30px] border border-white/70 bg-white/70 p-3 shadow-[0_26px_70px_rgba(144,20,14,0.16)] backdrop-blur-sm"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
@@ -94,16 +94,16 @@ export default function FlaMomentsSlider({
                 transition={{ duration: 0.5, ease: "easeOut" }}
                 className="absolute inset-3"
               >
-                <div className="relative h-full overflow-hidden rounded-[24px]">
+                <div className="relative aspect-[16/10] min-h-[400px] overflow-hidden rounded-[24px] sm:min-h-[470px]">
                   <Image
                     src={currentSlide.src}
                     alt={currentSlide.alt}
                     fill
                     priority={currentIndex === 0}
                     sizes="(max-width: 1024px) 100vw, 60vw"
-                    className="object-cover"
+                    className="object-cover object-center"
                   />
-                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(22,1,1,0.08)_0%,rgba(22,1,1,0.16)_28%,rgba(22,1,1,0.58)_100%)]" />
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(22,1,1,0.04)_0%,rgba(22,1,1,0.12)_24%,rgba(22,1,1,0.4)_100%)]" />
                   <div className="absolute left-4 top-4 flex items-center gap-3 sm:left-6 sm:top-6">
                     <span className="inline-flex rounded-full bg-white/92 px-4 py-1.5 text-[11px] font-black uppercase tracking-[0.22em] text-[#8f1f18] shadow-lg">
                       {currentSlide.eyebrow}
@@ -150,7 +150,7 @@ export default function FlaMomentsSlider({
                           alt={slide.alt}
                           fill
                           sizes="96px"
-                          className={`object-cover transition-transform duration-500 ${isActive ? "scale-105" : "group-hover:scale-105"}`}
+                          className={`object-cover object-center transition-transform duration-500 ${isActive ? "scale-105" : "group-hover:scale-105"}`}
                         />
                       </div>
                       <div className="min-w-0 flex-1">
@@ -168,17 +168,6 @@ export default function FlaMomentsSlider({
             </div>
 
             <div className="rounded-[26px] border border-[#efcaca] bg-white/80 px-4 py-4 shadow-[0_18px_40px_rgba(144,20,14,0.08)] backdrop-blur-sm">
-              <div className="flex items-center justify-between gap-4">
-                <div>
-                  <p className="text-xs font-black uppercase tracking-[0.24em] text-[#bc2222]">
-                    {t("aboutUs.enjoyFla.controlsLabel")}
-                  </p>
-                  <p className="mt-1 text-sm leading-relaxed text-[#5f4848] font-arimo">
-                    {t("aboutUs.enjoyFla.controlsHint")}
-                  </p>
-                </div>
-              </div>
-
               {slides.length > 1 && (
                 <div className="mt-4 flex items-center justify-between gap-4">
                   <div className="flex items-center gap-2">
@@ -199,10 +188,6 @@ export default function FlaMomentsSlider({
                       <ArrowRight className="h-5 w-5" />
                     </button>
                   </div>
-
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8f6767]">
-                    {t("aboutUs.enjoyFla.autoplay")}
-                  </p>
                 </div>
               )}
             </div>
