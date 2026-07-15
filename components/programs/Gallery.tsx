@@ -86,7 +86,7 @@ export default function Gallery({ images, colors, title = "Galería visual" }: G
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55 }}
-              className="relative min-h-[320px] sm:min-h-[420px]"
+              className="relative min-h-80 sm:min-h-105"
             >
               <AnimatePresence mode="wait" custom={direction}>
                 <motion.div
@@ -127,7 +127,7 @@ export default function Gallery({ images, colors, title = "Galería visual" }: G
 
                       <div className="relative z-10 flex w-full flex-col items-center justify-center px-3 text-center sm:px-6">
                         {hasCustomImages ? (
-                          <div className="relative aspect-[3/2] w-full max-w-4xl overflow-hidden rounded-[22px] bg-white shadow-xl">
+                          <div className="relative aspect-3/2 w-full max-w-4xl overflow-hidden rounded-[22px] bg-white shadow-xl">
                             <Image
                               src={currentSlide.src!}
                               alt={currentSlide.title}
@@ -198,7 +198,7 @@ export default function Gallery({ images, colors, title = "Galería visual" }: G
                       setDirection(index > currentIndex ? 1 : -1);
                       setCurrentIndex(index);
                     }}
-                    className={`group relative h-[94px] w-[94px] overflow-hidden rounded-[26px] border p-1.5 transition-all duration-300 sm:h-[108px] sm:w-[108px] ${
+                    className={`group relative h-94px w-94px overflow-hidden rounded-3xl border p-1.5 transition-all duration-300 sm:h-[108px] sm:w-[108px] ${
                       index === currentIndex
                         ? "border-transparent bg-white shadow-[0_16px_42px_rgba(0,0,0,0.12)]"
                         : "bg-white/70 hover:bg-white"
@@ -207,7 +207,7 @@ export default function Gallery({ images, colors, title = "Galería visual" }: G
                     aria-label={`Ir a la imagen ${index + 1}`}
                   >
                     <div
-                      className="flex h-full w-full items-center justify-center rounded-[20px]"
+                      className="flex h-full w-full items-center justify-center rounded-3xl"
                       style={{
                         background: `linear-gradient(135deg, ${colors.primary}20 0%, white 54%, ${colors.accent}24 100%)`,
                       }}

@@ -94,10 +94,10 @@ export default function FlaMomentsSlider({
                 transition={{ duration: 0.5, ease: "easeOut" }}
                 className="absolute inset-3"
               >
-                <div className="relative aspect-[16/10] min-h-[400px] overflow-hidden rounded-[24px] sm:min-h-[470px]">
+                <div className="relative aspect-16/10 min-h-100 overflow-hidden rounded-3xl sm:min-h-117.5">
                   <Image
-                    src={currentSlide.src}
-                    alt={currentSlide.alt}
+                    src={currentSlide?.src}
+                    alt={currentSlide?.alt}
                     fill
                     priority={currentIndex === 0}
                     sizes="(max-width: 1024px) 100vw, 60vw"
@@ -106,7 +106,7 @@ export default function FlaMomentsSlider({
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(22,1,1,0.04)_0%,rgba(22,1,1,0.12)_24%,rgba(22,1,1,0.4)_100%)]" />
                   <div className="absolute left-4 top-4 flex items-center gap-3 sm:left-6 sm:top-6">
                     <span className="inline-flex rounded-full bg-white/92 px-4 py-1.5 text-[11px] font-black uppercase tracking-[0.22em] text-[#8f1f18] shadow-lg">
-                      {currentSlide.eyebrow}
+                      {currentSlide?.eyebrow}
                     </span>
                     <span className="rounded-full border border-white/45 bg-[#160101]/28 px-3 py-1 text-xs font-semibold text-white/92 backdrop-blur-sm">
                       {currentIndex + 1}/{slides.length}
@@ -115,7 +115,7 @@ export default function FlaMomentsSlider({
 
                   <div className="absolute inset-x-0 bottom-0 p-5 text-white sm:p-7">
                     <h4 className="max-w-xl text-3xl font-contrail-one leading-none sm:text-[42px]">
-                      {currentSlide.title}
+                      {currentSlide?.title}
                     </h4>
                   </div>
                 </div>
