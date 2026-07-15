@@ -13,7 +13,7 @@ export default function Home() {
     name: "Fundación Líderes de Ansenuza",
     alternateName: "FLA",
     url: "https://www.lideresdeansenuza.org",
-    logo: "https://www.lideresdeansenuza.org/images/LogoFLA.webp",
+    logo: "https://www.lideresdeansenuza.org/images/logo_fla.png",
     description:
       "Organización sin fines de lucro que diseña y ejecuta programas educativos gratuitos para jóvenes en Argentina.",
     email: "contacto@lideresdeansenuza.org",
