@@ -28,7 +28,7 @@ export default function Hero() {
 
             <div className="hidden shrink-0 lg:block lg:justify-self-end">
               <Image
-                src="/images/logo_fla.png"
+                src="/images/logo_fla.webp"
                 alt="Identidad FLA"
                 width={150}
                 height={150}

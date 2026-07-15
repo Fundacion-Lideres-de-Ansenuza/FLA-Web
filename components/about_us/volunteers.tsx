@@ -4,7 +4,7 @@ import Image from "next/image";
 import { JSX } from "react";
 import { useTranslation } from "react-i18next";
 
-const flaMap = "/images/Mapa_fla.png";
+const flaMap = "/images/Mapa_fla.webp";
 
 export default function Volunteers(): JSX.Element {
   const { t } = useTranslation();
