@@ -826,18 +826,18 @@ export const LIDERES_DATA_EN: ProgramData = {
         'FLA Lideres Community: open interaction group. Info FLA: closed group where institutional information is shared. Opportunity Mix: closed group where internal and external calls are shared.'
     },
     {
-      question: 'Up to what age can I be part of the community?',
-      answer: 'There is no age limit to be part of the Lideres community.'
+      question: 'Up to what age can I belong to the community?',
+      answer: 'There is no age limit to belong to the Lideres community.'
     },
     {
       question: 'I took part in FLA many years ago. Can I join the community now?',
       answer:
-        'Yes, you can be part of Lideres. Send us an email with your name and the program you were part of at comunidad@lideresdeansenuza.org and we will tell you the next steps.'
+        'Yes, you can belong to Lideres. Send us an email with your name and the program you belonged to at comunidad@lideresdeansenuza.org and we will tell you the next steps.'
     },
     {
-      question: 'If I was a mentor, speaker, or teacher in an FLA program, can I be part of the community?',
+      question: 'If I was a mentor, speaker, or teacher in an FLA program, can I belong to the community?',
       answer:
-        'Yes, you can be part of Lideres. Send us an email with your name and the program you were part of at comunidad@lideresdeansenuza.org and we will tell you the next steps.'
+        'Yes, you can belong to Lideres. Send us an email with your name and the program you belonged to at comunidad@lideresdeansenuza.org and we will tell you the next steps.'
     }
   ],
   sponsors: [

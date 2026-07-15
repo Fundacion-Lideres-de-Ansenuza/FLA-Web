@@ -141,7 +141,7 @@
     },
     "enjoyFla": {
       "badge": "Life at FLA",
-      "title": "What it means to be part",
+      "title": "What it means to belong",
       "subtitle": "",
       "previous": "Previous image",
       "next": "Next image",
@@ -199,7 +199,7 @@
   },
   "contact": {
     "title": "CONTACT US",
-    "subtitle": "Want to be part of the change. Have questions about our programs. Want to collaborate with us. We are here to listen.",
+    "subtitle": "Want to belong to the change. Have questions about our programs. Want to collaborate with us. We are here to listen.",
     "form": {
       "title": "Send us a message",
       "name": "Full name",
