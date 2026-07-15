@@ -136,7 +136,6 @@
       }
     },
     "volunteers": {
-      "activeCommunity": "Active community",
       "current": "Current volunteers",
       "imageAlt": "Volunteer map"
     },
@@ -144,11 +143,8 @@
       "badge": "Life at FLA",
       "title": "What it means to be part",
       "subtitle": "",
-      "controlsLabel": "Gallery",
-      "controlsHint": "Swipe or pick a photo.",
       "previous": "Previous image",
       "next": "Next image",
-      "autoplay": "Autoplay on",
       "goToSlide": "Go to image {{number}}",
       "imageAlt1": "Team together",
       "imageAlt2": "Happy team",
@@ -248,14 +244,6 @@
       "title": "Historical Programs",
       "subtitle": "Programs that have left their mark on thousands of young people throughout Argentina",
       "viewHistory": "View history"
-    },
-    "showcase": {
-      "eyebrow": "FLA Moments",
-      "title": "A visual journey through each experience",
-      "subtitle": "This slider adds motion and color to the page for now. Later we can simply replace these images with the final photos for each initiative.",
-      "note": "Slider ready to swap with your final photos.",
-      "previous": "Previous image",
-      "next": "Next image"
     },
     "cta": {
       "title": "Want to know more about our programs",

@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import { ArrowLeft, ArrowRight, Images } from "lucide-react";
 import type { ProgramColors } from "./types";
 
@@ -16,6 +17,7 @@ interface GalleryProps {
 type Slide = {
   id: string;
   title: string;
+  src?: string;
 };
 
 const FALLBACK_SLIDES: Slide[] = [
@@ -27,9 +29,10 @@ const FALLBACK_SLIDES: Slide[] = [
 export default function Gallery({ images, colors, title = "Galería visual" }: GalleryProps) {
   const slides = useMemo<Slide[]>(() => {
     if (images && images.length > 0) {
-      return images.map((_, index) => ({
+      return images.map((src, index) => ({
         id: `custom-${index + 1}`,
         title: `Imagen ${index + 1}`,
+        src,
       }));
     }
 
@@ -50,7 +53,6 @@ export default function Gallery({ images, colors, title = "Galería visual" }: G
   }, [slides.length]);
 
   const currentSlide = slides[currentIndex];
-
   const moveSlide = (step: number) => {
     setDirection(step);
     setCurrentIndex((prev) => (prev + step + slides.length) % slides.length);
@@ -123,16 +125,33 @@ export default function Gallery({ images, colors, title = "Galería visual" }: G
                         </span>
                       </div>
 
-                      <div className="relative z-10 mx-auto flex max-w-xl flex-col items-center justify-center px-8 text-center">
-                        <div
-                          className="mb-5 flex h-20 w-20 items-center justify-center rounded-[28px] text-white shadow-xl"
-                          style={{ backgroundColor: colors.primary }}
-                        >
-                          <Images className="h-9 w-9" />
-                        </div>
-                        <h3 className="text-3xl tracking-tight text-gray-900 sm:text-5xl font-contrail-one">
-                          {currentSlide.title}
-                        </h3>
+                      <div className="relative z-10 flex w-full flex-col items-center justify-center px-3 text-center sm:px-6">
+                        {hasCustomImages ? (
+                          <div className="relative aspect-[3/2] w-full max-w-4xl overflow-hidden rounded-[22px] bg-white shadow-xl">
+                            <Image
+                              src={currentSlide.src!}
+                              alt={currentSlide.title}
+                              fill
+                              className="object-contain object-center"
+                              sizes="(max-width: 768px) 100vw, 70vw"
+                            />
+                            <div className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-[#8f1f18]">
+                              {currentSlide.title}
+                            </div>
+                          </div>
+                        ) : (
+                          <>
+                            <div
+                              className="mb-5 flex h-20 w-20 items-center justify-center rounded-[28px] text-white shadow-xl"
+                              style={{ backgroundColor: colors.primary }}
+                            >
+                              <Images className="h-9 w-9" />
+                            </div>
+                            <h3 className="text-3xl tracking-tight text-gray-900 sm:text-5xl font-contrail-one">
+                              {currentSlide.title}
+                            </h3>
+                          </>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -193,15 +212,25 @@ export default function Gallery({ images, colors, title = "Galería visual" }: G
                         background: `linear-gradient(135deg, ${colors.primary}20 0%, white 54%, ${colors.accent}24 100%)`,
                       }}
                     >
-                      <div className="text-center">
-                        <div
-                          className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-2xl text-white"
-                          style={{ backgroundColor: colors.primary }}
-                        >
-                          <Images className="h-4.5 w-4.5" />
+                      {slide.src ? (
+                        <Image
+                          src={slide.src}
+                          alt={slide.title}
+                          width={120}
+                          height={120}
+                          className="h-full w-full rounded-[18px] object-cover"
+                        />
+                      ) : (
+                        <div className="text-center">
+                          <div
+                            className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-2xl text-white"
+                            style={{ backgroundColor: colors.primary }}
+                          >
+                            <Images className="h-4.5 w-4.5" />
+                          </div>
+                          <p className="text-sm text-gray-900 font-contrail-one">{slide.title}</p>
                         </div>
-                        <p className="text-sm text-gray-900 font-contrail-one">{slide.title}</p>
-                      </div>
+                      )}
                     </div>
                   </button>
                 ))}
@@ -213,4 +242,3 @@ export default function Gallery({ images, colors, title = "Galería visual" }: G
     </section>
   );
 }
-

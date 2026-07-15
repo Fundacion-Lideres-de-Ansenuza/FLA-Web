@@ -195,7 +195,12 @@ export const AMBIENTALIA_DATA: ProgramData = {
   ],
   gallery: {
     type: 'drive',
-    url: 'https://drive.google.com/drive/folders/1nICN2r6FvOQVpWSZVEaC_McTJkc-ShL1'
+    url: 'https://drive.google.com/drive/folders/1nICN2r6FvOQVpWSZVEaC_McTJkc-ShL1',
+    images: [
+      "/images/programs_sliders/Ambientalia%20/Amistad%20foro.JPG",
+      "/images/programs_sliders/Ambientalia%20/Cierre%20Foro%20de%20Li%CC%81deres%20Ambientales.jpg",
+      "/images/programs_sliders/Ambientalia%20/DSC_6636.jpg"
+    ]
   },
   colors: {
     primary: "#10b981",
@@ -300,7 +305,11 @@ export const SOMOS_DATA: ProgramData = {
   sponsors: [],
   gallery: {
     type: 'images',
-    images: []
+    images: [
+      "/images/programs_sliders/Ambientalia%20/Amistad%20foro.JPG",
+      "/images/programs_sliders/Ambientalia%20/Cierre%20Foro%20de%20Li%CC%81deres%20Ambientales.jpg",
+      "/images/programs_sliders/Ambientalia%20/DSC_6636.jpg"
+    ]
   },
   colors: {
     primary: "#8b5cf6",
@@ -376,7 +385,13 @@ export const POTENCIATE_DATA: ProgramData = {
   ],
   gallery: {
     type: 'images',
-    images: []
+    images: [
+      "/images/programs_sliders/SOMOS/DSC_9595.jpg",
+      "/images/programs_sliders/SOMOS/DSC_6103.jpg",
+      "/images/programs_sliders/SOMOS/DSC_2673.jpg",
+      "/images/programs_sliders/SOMOS/DSC_3234.jpg",
+      "/images/programs_sliders/SOMOS/DSC_6172.jpg"
+    ]
   },
   colors: {
     primary: "#f97316",
@@ -449,7 +464,10 @@ export const FUTURAS_DATA: ProgramData = {
   sponsors: [],
   gallery: {
     type: 'images',
-    images: []
+    images: [
+      "/images/programs_sliders/Potenciate/Jamboard.jpg",
+      "/images/programs_sliders/Potenciate/IMG-20210619-WA0096.jpg"
+    ]
   },
   colors: {
     primary: "#ec4899",
@@ -527,7 +545,11 @@ export const IMPULSATEC_DATA: ProgramData = {
   ],
   gallery: {
     type: 'images',
-    images: []
+    images: [
+      "/images/programs_sliders/FUTURAS/DSC_6220.jpg",
+      "/images/programs_sliders/FUTURAS/DSC_6090.jpg",
+      "/images/programs_sliders/FUTURAS/DSC_6244.jpg"
+    ]
   },
   colors: {
     primary: "#3b82f6",
@@ -618,7 +640,10 @@ export const CIENCIA_FUERA_DE_LA_CAJA_DATA: ProgramData = {
   ],
   gallery: {
     type: 'images',
-    images: []
+    images: [
+      "/images/programs_sliders/Li%CC%81deres/19910d25-c682-4922-8312-cb8888a81ec8%20(1).jpg",
+      "/images/programs_sliders/Li%CC%81deres/DSC_0180.jpg"
+    ]
   },
   colors: {
     primary: "#06b6d4",

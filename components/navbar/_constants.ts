@@ -3,8 +3,7 @@ import type { NavItem, AnimationConfig } from "./types"
 export const NAV_ITEMS: NavItem[] = [
   { name: "PROGRAMAS", href: "/programas" },
   { name: "QUIENES SOMOS", href: "/quienes-somos" },
-  { name: "DONAR", href: "/donar" },
-  { name: "CONTACTANOS", href: "/contactanos" }
+  { name: "DONAR", href: "/donar" }
 ] as const
 
 export const BRAND_COLOR = '#bc2222'

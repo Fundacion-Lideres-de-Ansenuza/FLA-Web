@@ -5,7 +5,6 @@ import Link from "next/link";
 import { ACTIVE_PROGRAMS, HISTORICAL_PROGRAMS } from "@/lib/data/programs";
 import { generateBlobRadius } from "@/lib/shapes";
 import { useTranslation } from "react-i18next";
-import ProgramsShowcaseSlider from "@/components/programs/ProgramsShowcaseSlider";
 
 const LOGO_PRESENTATION: Record<string, string> = {
   "Experiencia Ambientalia": "max-w-[88%] max-h-[76%]",
@@ -73,10 +72,6 @@ export default function ProgramasPage() {
                 </h2>
                 <div className="w-16 h-1.5 bg-[#bc2222] mx-auto rounded-full mt-3" />
               </div>
-              <p className="text-base md:text-lg text-gray-600 mb-10 text-center">
-                {t('programs.active.subtitle')}
-              </p>
-
               <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-12 items-start justify-items-center">
                 {ACTIVE_PROGRAMS.map((program) => (
                   <Link
@@ -127,8 +122,6 @@ export default function ProgramasPage() {
                 ))}
               </div>
             </div>
-
-            <ProgramsShowcaseSlider />
 
             <div className="border-gray-200 pt-6 md:pt-8">
               <div className="text-center mb-6">

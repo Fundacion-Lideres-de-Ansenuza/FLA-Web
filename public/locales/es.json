@@ -79,7 +79,7 @@
       "board": {
         "roles": {
           "president": "Presidenta",
-          "treasurer": "Tesorera",
+          "treasurer": "Tesorera y Directora Ejecutiva",
           "secretary": "Secretaria",
           "member": "Vocal"
         }
@@ -136,7 +136,6 @@
       }
     },
     "volunteers": {
-      "activeCommunity": "Comunidad activa",
       "current": "Voluntarios actuales",
       "imageAlt": "Mapa de voluntarios"
     },
@@ -144,11 +143,8 @@
       "badge": "Vida en FLA",
       "title": "Lo que significa ser parte",
       "subtitle": "",
-      "controlsLabel": "Galería",
-      "controlsHint": "Desliza o elegí una foto.",
       "previous": "Imagen anterior",
       "next": "Imagen siguiente",
-      "autoplay": "Autoplay activo",
       "goToSlide": "Ir a la imagen {{number}}",
       "imageAlt1": "Equipo junto",
       "imageAlt2": "Equipo feliz",
@@ -240,7 +236,6 @@
     "subtitle": "Programas educativos gratuitos que transforman vidas en toda Argentina",
     "active": {
       "title": "Programas vigentes",
-      "subtitle": "Programas activos en los que podés participar ahora",
       "openEnrollment": "✓ Inscripciones abiertas",
       "learnMore": "Conocer programa"
     },
@@ -248,14 +243,6 @@
       "title": "Programas históricos",
       "subtitle": "Programas que han dejado huella en miles de jóvenes de toda Argentina",
       "viewHistory": "Ver historia"
-    },
-    "showcase": {
-      "eyebrow": "Momentos FLA",
-      "title": "Un recorrido visual por cada experiencia",
-      "subtitle": "Agregamos este slider para dar más color y movimiento a la página. Después solo reemplazamos estas imágenes por las fotos finales de cada propuesta.",
-      "note": "Slider listo para reemplazar con tus fotos.",
-      "previous": "Imagen anterior",
-      "next": "Imagen siguiente"
     },
     "cta": {
       "title": "Querés saber más sobre nuestros programas",
