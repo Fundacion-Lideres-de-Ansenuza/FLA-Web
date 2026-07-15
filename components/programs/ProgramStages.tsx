@@ -51,7 +51,7 @@ export default function ProgramStages({ stages, colors }: ProgramStagesProps) {
             transition={{ duration: 0.6 }}
             className="mb-10 text-center"
           >
-            <h2 className="mb-3 text-3xl md:text-4xl font-contrail-one" style={{ color: colors.secondary }}>
+            <h2 className="mb-3 text-3xl md:text-4xl font-contrail" style={{ color: colors.secondary }}>
               Etapas del programa
             </h2>
             <p className="text-base text-gray-600 md:text-lg">Un recorrido transformador diseñado para tu crecimiento</p>

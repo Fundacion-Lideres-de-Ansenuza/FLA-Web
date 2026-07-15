@@ -58,7 +58,7 @@ export default function ContactForm() {
             </div>
 
             <div className="mt-6 space-y-4">
-              <h2 className="font-contrail-one text-4xl leading-none text-[#90140e] md:text-5xl">
+              <h2 className="font-contrail text-4xl leading-none text-[#90140e] md:text-5xl">
                 {t("contact.form.title")}
               </h2>
               <p className="max-w-md font-arimo text-base leading-relaxed text-black/70 md:text-lg">

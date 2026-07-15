@@ -200,7 +200,7 @@ export default function AmbientaliaPage() {
                 <span className="inline-flex rounded-full bg-[#10b981] px-4 py-1.5 text-xs font-black uppercase tracking-[0.22em] text-white shadow-lg">
                   Identidad Ambientalia
                 </span>
-                <h2 className="text-4xl md:text-5xl font-contrail-one tracking-tight text-[#064e3b]">
+                <h2 className="text-4xl md:text-5xl font-contrail tracking-tight text-[#064e3b]">
                   Una experiencia con más naturaleza, territorio e impacto visible
                 </h2>
                 <p className="max-w-2xl text-base md:text-lg leading-relaxed text-emerald-950/80 font-arimo">
@@ -213,7 +213,7 @@ export default function AmbientaliaPage() {
                       key={stat.label}
                       className="rounded-full border border-[#86efac] bg-white/85 px-4 py-2 shadow-sm"
                     >
-                      <span className="font-contrail-one text-xl text-[#047857]">{stat.value}</span>
+                      <span className="font-contrail text-xl text-[#047857]">{stat.value}</span>
                       <span className="ml-2 text-sm font-arimo text-[#14532d]">{stat.label}</span>
                     </div>
                   ))}
@@ -224,14 +224,14 @@ export default function AmbientaliaPage() {
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="rounded-3xl bg-[#10b981] px-5 py-6 text-white shadow-lg">
                     <p className="text-xs font-black uppercase tracking-[0.2em] text-white/70">Color base</p>
-                    <p className="mt-3 font-contrail-one text-3xl">Bosque y agua</p>
+                    <p className="mt-3 font-contrail text-3xl">Bosque y agua</p>
                     <p className="mt-2 text-sm font-arimo text-white/85">
                       Una paleta que conecta con humedales, aves y territorio vivo.
                     </p>
                   </div>
                   <div className="rounded-3xl bg-[#ecfdf5] px-5 py-6 text-[#065f46] border border-[#bbf7d0]">
                     <p className="text-xs font-black uppercase tracking-[0.2em]">Enfoque</p>
-                    <p className="mt-3 font-contrail-one text-3xl">Aprender haciendo</p>
+                    <p className="mt-3 font-contrail text-3xl">Aprender haciendo</p>
                     <p className="mt-2 text-sm font-arimo text-[#14532d]">
                       El diseño acompaña la narrativa de exploración, conservación y liderazgo.
                     </p>

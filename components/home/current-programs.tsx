@@ -37,7 +37,7 @@ export default function CurrentPrograms() {
     <section className="py-9 sm:py-10 bg-transparent overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10 sm:mb-12">
-          <h2 className="text-3xl md:text-5xl text-gray-900 mb-3 font-contrail-one tracking-tight">{t('currentPrograms.title')}</h2>
+          <h2 className="text-3xl md:text-5xl text-gray-900 mb-3 font-contrail tracking-tight">{t('currentPrograms.title')}</h2>
           <p className="text-base md:text-xl text-gray-600 font-arimo max-w-2xl mx-auto">{t('currentPrograms.subtitle')}</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 items-center justify-items-center">
@@ -63,7 +63,7 @@ export default function CurrentPrograms() {
                     />
                   </div>
                 </div>
-                <h3 className="text-2xl font-contrail-one text-gray-900">{program.name}</h3>
+                <h3 className="text-2xl font-contrail text-gray-900">{program.name}</h3>
               </div>
             </Link>
           ))}

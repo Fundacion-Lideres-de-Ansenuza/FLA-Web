@@ -50,7 +50,7 @@ export default function ProgramasPage() {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl text-white mb-4 font-contrail-one tracking-tight break-words">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl text-white mb-4 font-contrail tracking-tight break-words">
               {t('programs.title')}
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-white/95 leading-relaxed px-4 max-w-3xl mx-auto font-arimo">
@@ -67,7 +67,7 @@ export default function ProgramasPage() {
           <div className="max-w-6xl mx-auto">
             <div className="mb-16">
               <div className="text-center mb-6">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl text-gray-900 break-words font-contrail-one tracking-tight">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl text-gray-900 break-words font-contrail tracking-tight">
                   {t('programs.active.title')}
                 </h2>
                 <div className="w-16 h-1.5 bg-[#bc2222] mx-auto rounded-full mt-3" />
@@ -101,7 +101,7 @@ export default function ProgramasPage() {
                       </div>
 
                       <div className="text-center">
-                        <h3 className="text-2xl font-contrail-one text-gray-900 mb-3">
+                        <h3 className="text-2xl font-contrail text-gray-900 mb-3">
                           {program.title}
                         </h3>
                         <p className="text-gray-600 font-arimo mb-6 line-clamp-3 px-4">
@@ -125,7 +125,7 @@ export default function ProgramasPage() {
 
             <div className="border-gray-200 pt-6 md:pt-8">
               <div className="text-center mb-6">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl text-gray-900 break-words font-contrail-one tracking-tight">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl text-gray-900 break-words font-contrail tracking-tight">
                   {t('programs.historical.title')}
                 </h2>
                 <div className="w-16 h-1.5 bg-[#bc2222] mx-auto rounded-full mt-3" />
@@ -167,7 +167,7 @@ export default function ProgramasPage() {
                       </div>
 
                       <div className="text-center">
-                        <h3 className="text-xl font-contrail-one text-gray-800 mb-2">
+                        <h3 className="text-xl font-contrail text-gray-800 mb-2">
                           {program.title}
                         </h3>
                         <p className="text-gray-500 text-sm font-arimo mb-4 line-clamp-2 px-2">

@@ -21,7 +21,7 @@ export default function Requirements({ requirements, colors }: RequirementsProps
             transition={{ duration: 0.6 }}
             className="mb-10 text-center"
           >
-            <h2 className="mb-3 text-3xl md:text-4xl font-contrail-one" style={{ color: colors.secondary }}>
+            <h2 className="mb-3 text-3xl md:text-4xl font-contrail" style={{ color: colors.secondary }}>
               Requisitos
             </h2>
             <p className="text-base text-gray-600 md:text-lg font-arimo">

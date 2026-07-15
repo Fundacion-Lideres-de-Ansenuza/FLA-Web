@@ -28,7 +28,7 @@ export default function FAQ({ faqs, colors }: FAQProps) {
             transition={{ duration: 0.6 }}
             className="mb-10 text-center"
           >
-            <h2 className="mb-4 text-4xl md:text-5xl font-contrail-one" style={{ color: colors.secondary }}>
+            <h2 className="mb-4 text-4xl md:text-5xl font-contrail" style={{ color: colors.secondary }}>
               Preguntas frecuentes
             </h2>
             <p className="text-lg text-gray-600">Resolvé tus dudas sobre el programa</p>
@@ -66,7 +66,7 @@ export default function FAQ({ faqs, colors }: FAQProps) {
                   className="overflow-hidden"
                 >
                   <div className="px-6 pb-6">
-                    <p className="leading-relaxed text-gray-700">{faq.answer}</p>
+                    <p className="leading-relaxed text-gray-700" dangerouslySetInnerHTML={{ __html: faq.answer }}></p>
                   </div>
                 </motion.div>
               </motion.div>

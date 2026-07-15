@@ -75,7 +75,7 @@ export default function Gallery({ images, colors, title = "Galería visual" }: G
             >
               Galería visual
             </span>
-            <h2 className="mt-4 text-4xl md:text-5xl font-contrail-one" style={{ color: colors.secondary }}>
+            <h2 className="mt-4 text-4xl md:text-5xl font-contrail" style={{ color: colors.secondary }}>
               {title}
             </h2>
           </motion.div>
@@ -147,7 +147,7 @@ export default function Gallery({ images, colors, title = "Galería visual" }: G
                             >
                               <Images className="h-9 w-9" />
                             </div>
-                            <h3 className="text-3xl tracking-tight text-gray-900 sm:text-5xl font-contrail-one">
+                            <h3 className="text-3xl tracking-tight text-gray-900 sm:text-5xl font-contrail">
                               {currentSlide.title}
                             </h3>
                           </>
@@ -228,7 +228,7 @@ export default function Gallery({ images, colors, title = "Galería visual" }: G
                           >
                             <Images className="h-4.5 w-4.5" />
                           </div>
-                          <p className="text-sm text-gray-900 font-contrail-one">{slide.title}</p>
+                          <p className="text-sm text-gray-900 font-contrail">{slide.title}</p>
                         </div>
                       )}
                     </div>

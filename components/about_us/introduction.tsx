@@ -14,7 +14,7 @@ export default function Introduction(): JSX.Element {
       <div className="overflow-hidden rounded-[34px] border border-[#f1d6d6] bg-white shadow-[0_18px_50px_rgba(144,20,14,0.05)]">
         <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
           <div className="flex flex-col justify-center px-6 py-8 md:px-10 md:py-12 lg:px-12">
-            <h1 className="mt-5 text-[34px] sm:text-[44px] md:text-[54px] lg:text-[62px] leading-[0.96] tracking-tight text-[#160101] font-contrail-one">
+            <h1 className="mt-5 text-[34px] sm:text-[44px] md:text-[54px] lg:text-[62px] leading-[0.96] tracking-tight text-[#160101] font-contrail">
               {t('aboutUs.foundation.title')}
             </h1>
             <p className="mt-5 max-w-2xl text-[18px] md:text-[21px] leading-relaxed text-gray-700 font-arimo">

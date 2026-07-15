@@ -13,7 +13,7 @@ const config: Config = {
 					'fla': ['var(--font-fla)', 'serif'],
 				'saridona': ['Saridona', 'serif'],
 				'arimo': ['var(--font-arimo)', 'sans-serif'],
-				'contrail': ['Contrail One', 'cursive'],
+				'contrail': ['var(--font-contrail-one)', 'cursive'],
 			},
 			colors: {
 				background: 'hsl(var(--background))',
