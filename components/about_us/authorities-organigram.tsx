@@ -188,7 +188,7 @@ export default function AuthoritiesOrganigram() {
   return (
     <section className="relative py-2">
       <div className="mx-auto max-w-6xl">
-        <div className="relative mx-auto mb-4 h-10 w-px bg-gradient-to-b from-transparent via-[#d9b6b1] to-transparent" />
+        <div className="relative mx-auto mb-4 h-10 w-px bg-linear-to-b from-transparent via-[#d9b6b1] to-transparent" />
 
         <div className="rounded-[38px] border border-[#f1d6d6] bg-[linear-gradient(180deg,#fffefe_0%,#fff8f7_100%)] px-4 py-6 shadow-[0_18px_50px_rgba(144,20,14,0.05)] md:px-7 md:py-8">
           <div className="mb-8 text-center">
