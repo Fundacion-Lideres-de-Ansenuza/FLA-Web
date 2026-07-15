@@ -69,11 +69,6 @@ const LEADERSHIP_SOMOS: Person[] = [
 
 const LEADERSHIP_DIRECTORS: Person[] = [
   {
-    name: "Marilyn Mercado",
-    roleKey: "aboutUs.authorities.leadership.roles.lideresDirector",
-    href: "https://www.linkedin.com/in/marilyn-mercado-6b358b346?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-  },
-  {
     name: "Joaquín Gatica",
     roleKey: "aboutUs.authorities.leadership.roles.communicationDirector",
     href: "https://www.linkedin.com/in/ramirojoaquingatica?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
@@ -228,7 +223,7 @@ export default function AuthoritiesOrganigram() {
               <LeadershipCluster
                 title="aboutUs.authorities.leadership.groups.directors"
                 items={LEADERSHIP_DIRECTORS}
-                columnsClass="grid-cols-1 sm:grid-cols-3"
+                columnsClass="grid-cols-1 justify-items-center sm:grid-cols-2"
               />
             </div>
           </div>
