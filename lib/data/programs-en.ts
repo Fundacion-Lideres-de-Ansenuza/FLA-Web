@@ -276,6 +276,10 @@ export const SOMOS_DATA_EN: ProgramData = {
     {
       question: 'How do I apply?',
       answer: 'By completing the registration form on our website.'
+    },
+    {
+      question: 'Learn more about SOMOS?',
+      answer: 'Watch this video to learn more about the program: <a href="https://www.youtube.com/watch?v=Lxsl_lIZ3Ow" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-800 underline">Watch SOMOS video</a>'
     }
   ],
   sponsors: [],

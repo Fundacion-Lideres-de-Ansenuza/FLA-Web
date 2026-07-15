@@ -19,7 +19,7 @@ export default function QuienesSomos(): JSX.Element {
         <Introduction />
 
         <section className="my-8 md:my-10 px-2 text-center">
-          <h2 className="text-3xl md:text-4xl font-contrail-one text-gray-900">
+          <h2 className="text-3xl md:text-4xl font-contrail text-gray-900">
             {t('aboutUs.authorities.title')}
           </h2>
           <p className="mx-auto mt-3 max-w-3xl text-base md:text-lg text-gray-700 font-arimo">

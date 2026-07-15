@@ -301,7 +301,7 @@ export default function DonationPage() {
       <main className="min-h-screen overflow-x-hidden bg-[linear-gradient(180deg,#ffffff_0%,#fff7f6_30%,#ffffff_100%)] pb-20 pt-[108px] sm:pt-[120px]">
       <div className="container mx-auto max-w-6xl px-4 pt-6 md:pt-8">
         <div className="mb-10 flex flex-col items-center gap-5 text-center md:mb-14">
-          <h1 className="text-5xl leading-tight tracking-tight text-gray-900 lg:text-7xl font-contrail-one">{t("donate.title")}</h1>
+          <h1 className="text-5xl leading-tight tracking-tight text-gray-900 lg:text-7xl font-contrail">{t("donate.title")}</h1>
           <p className="mx-auto max-w-2xl font-arimo text-lg leading-relaxed text-gray-700 md:text-xl">{t("donate.subtitle")}</p>
           <div className="h-1.5 w-32 rounded-full bg-[#f45e5e]" />
         </div>
@@ -329,7 +329,7 @@ export default function DonationPage() {
             {activeTab === "online" && (
               <div className="mx-auto max-w-5xl space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500 md:space-y-10">
                 <div className="space-y-4 text-center">
-                  <h2 className="font-contrail-one text-4xl text-gray-900 uppercase md:text-5xl">{t("donate.online.title")}</h2>
+                  <h2 className="font-contrail text-4xl text-gray-900 uppercase md:text-5xl">{t("donate.online.title")}</h2>
                   <p className="mx-auto max-w-2xl font-arimo text-lg italic text-gray-600">&quot;{t("donate.online.description")}&quot;</p>
                 </div>
 
@@ -345,7 +345,7 @@ export default function DonationPage() {
             {activeTab === "paypal" && (
               <div className="mx-auto max-w-5xl space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500 md:space-y-10">
                 <div className="space-y-4 text-center">
-                  <h2 className="font-contrail-one text-4xl text-gray-900 uppercase md:text-5xl">{t("donate.paypal.title")}</h2>
+                  <h2 className="font-contrail text-4xl text-gray-900 uppercase md:text-5xl">{t("donate.paypal.title")}</h2>
                   <p className="mx-auto max-w-2xl font-arimo text-lg italic text-gray-600">&quot;{t("donate.paypal.description")}&quot;</p>
                 </div>
 
@@ -361,7 +361,7 @@ export default function DonationPage() {
             {activeTab === "transfer" && (
               <div className="mx-auto max-w-4xl animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-10">
                 <div className="space-y-4 text-center">
-                  <h2 className="font-contrail-one text-4xl text-gray-900 uppercase md:text-5xl">{t("donate.transfer.title")}</h2>
+                  <h2 className="font-contrail text-4xl text-gray-900 uppercase md:text-5xl">{t("donate.transfer.title")}</h2>
                   <p className="mx-auto max-w-2xl font-arimo text-lg text-gray-600">{t("donate.transfer.description")}</p>
                 </div>
 
@@ -418,7 +418,7 @@ export default function DonationPage() {
                     <Mail className="h-7 w-7 text-white" />
                   </div>
                   <div className="space-y-3">
-                    <h3 className="font-contrail-one text-2xl text-gray-900">{t("donate.transfer.receiptTitle")}</h3>
+                    <h3 className="font-contrail text-2xl text-gray-900">{t("donate.transfer.receiptTitle")}</h3>
                     <p className="font-arimo leading-relaxed text-gray-700">
                       {t("donate.transfer.receiptText").split(t("donate.transfer.contactPage"))[0]}
                       <Link href="/contactanos" className="font-bold hover:underline" style={{ color: DARK_BROWN }}>

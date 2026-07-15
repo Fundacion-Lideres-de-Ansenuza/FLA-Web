@@ -29,7 +29,7 @@ export default function ProgramDescription({
             transition={{ duration: 0.6 }}
             className="mb-10"
           >
-            <h2 className="mb-5 text-3xl md:text-4xl font-contrail-one" style={{ color: colors?.secondary ?? "#111827" }}>
+            <h2 className="mb-5 text-3xl md:text-4xl font-contrail" style={{ color: colors?.secondary ?? "#111827" }}>
               Sobre el programa
             </h2>
             <p className="mb-6 text-base leading-relaxed text-gray-700 md:text-lg font-arimo">{fullDescription}</p>

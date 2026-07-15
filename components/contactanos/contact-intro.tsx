@@ -8,7 +8,7 @@ export default function ContactIntro() {
   return (
     <div className="px-4 pb-4 pt-10 md:pb-6 md:pt-12">
       <div className="mx-auto max-w-[1535px] text-center">
-        <h1 className="font-contrail-one text-6xl text-black md:text-7xl">{t("contact.title")}</h1>
+        <h1 className="font-contrail text-6xl text-black md:text-7xl">{t("contact.title")}</h1>
       </div>
     </div>
   )

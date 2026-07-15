@@ -68,7 +68,7 @@ export default function FlaMomentsSlider({
           <span className="inline-flex rounded-full border border-[#f0bbbb] bg-white/90 px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-[#bc2222] shadow-[0_12px_30px_rgba(188,34,34,0.12)]">
             {badge}
           </span>
-          <h3 className="mt-4 text-[34px] md:text-[44px] font-contrail-one leading-none text-[#160101]">
+          <h3 className="mt-4 text-[34px] md:text-[44px] font-contrail leading-none text-[#160101]">
             {title}
           </h3>
           {subtitle ? (
@@ -114,7 +114,7 @@ export default function FlaMomentsSlider({
                   </div>
 
                   <div className="absolute inset-x-0 bottom-0 p-5 text-white sm:p-7">
-                    <h4 className="max-w-xl text-3xl font-contrail-one leading-none sm:text-[42px]">
+                    <h4 className="max-w-xl text-3xl font-contrail leading-none sm:text-[42px]">
                       {currentSlide?.title}
                     </h4>
                   </div>
@@ -157,7 +157,7 @@ export default function FlaMomentsSlider({
                         <p className="text-[11px] font-black uppercase tracking-[0.2em] text-[#bc2222]">
                           {slide.eyebrow}
                         </p>
-                        <p className="mt-1 text-xl font-contrail-one leading-none text-[#160101]">
+                        <p className="mt-1 text-xl font-contrail leading-none text-[#160101]">
                           {slide.title}
                         </p>
                       </div>

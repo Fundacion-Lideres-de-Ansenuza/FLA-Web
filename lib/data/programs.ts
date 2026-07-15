@@ -300,6 +300,10 @@ export const SOMOS_DATA: ProgramData = {
     {
       question: "¿Cómo me anoto?",
       answer: "Completando el formulario de inscripción que encontrarás en nuestra página web."
+    },
+    {
+      question: "¿Conocé más acerca de SOMOS?",
+      answer: "Mirá este video para conocer más sobre el programa: <a href=\"https://www.youtube.com/watch?v=Lxsl_lIZ3Ow\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-purple-600 hover:text-purple-800 underline\">Ver video de SOMOS</a>"
     }
   ],
   sponsors: [],

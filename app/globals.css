@@ -33,6 +33,19 @@ dd {
   hyphens: auto;
 }
 
+/* Override text-justify for centered text */
+.text-center p,
+.text-center li,
+.text-center blockquote,
+.text-center dd,
+p.text-center,
+li.text-center,
+blockquote.text-center,
+dd.text-center {
+  text-align: center !important;
+  text-justify: none !important;
+}
+
 html {
   overflow-x: hidden !important;
   scroll-behavior: smooth;
@@ -79,10 +92,6 @@ h2, h3, h4, h5, h6 {
   font-family: 'QuestionFix', var(--font-fla), serif !important;
 }
 
-.font-contrail,
-.font-contrail-one {
-  font-family: 'QuestionFix', var(--font-contrail-one), 'Contrail One', cursive !important;
-}
 
 .font-saridona {
   font-family: 'QuestionFix', 'Saridona', serif !important;

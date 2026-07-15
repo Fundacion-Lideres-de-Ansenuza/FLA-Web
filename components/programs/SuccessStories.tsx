@@ -22,7 +22,7 @@ export default function SuccessStories({ stories, colors }: SuccessStoriesProps)
             transition={{ duration: 0.6 }}
             className="mb-10 text-center"
           >
-            <h2 className="mb-3 text-3xl md:text-4xl font-contrail-one" style={{ color: colors.secondary }}>
+            <h2 className="mb-3 text-3xl md:text-4xl font-contrail" style={{ color: colors.secondary }}>
               Historias de éxito
             </h2>
             <p className="text-base text-gray-600 md:text-lg">Jóvenes que están transformando sus comunidades</p>
