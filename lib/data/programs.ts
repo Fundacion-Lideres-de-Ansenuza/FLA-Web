@@ -10,6 +10,8 @@ export interface ProgramData {
   requirements: string[];
   enrollmentInfo: {
     description: string;
+    registrationLabel?: string;
+    registrationUrl?: string;
     availablePeriod?: string;
   };
   stages: {
@@ -214,9 +216,9 @@ export const SOMOS_DATA: ProgramData = {
   slug: "somos",
   status: 'active',
   shortDescription: "Programa gratuito de liderazgo en diversidad para jóvenes de entre 15 y 19 años de Argentina que quieran convertirse en líderes de sus comunidades.",
-  fullDescription: "SOMOS es un programa gratuito de liderazgo en diversidad, para jóvenes de entre 15 y 19 años de Argentina, que quieran convertirse en líderes de sus comunidades. Durante 2 meses, lxs participantes aprenden sobre diversidad, desarrollan habilidades de liderazgo, y llevan adelante una acción de impacto social que transforme su comunidad. Todo esto a través de talleres con expertxs, mentorías personalizadas, y materiales exclusivos creados especialmente para el programa.",
+  fullDescription: "SOMOS es un programa gratuito de liderazgo en diversidad, para jóvenes de entre 15 y 19 años de Argentina, que quieran convertirse en líderes de sus comunidades. Durante 11 semanas, lxs participantes aprenden sobre diversidad, desarrollan habilidades de liderazgo, y llevan adelante una acción de impacto social que transforme su comunidad. Todo esto a través de talleres con expertxs, mentorías personalizadas, y materiales exclusivos creados especialmente para el programa.",
   location: "SOMOS llega a FLA para abrir espacios de diálogo, debate y aprendizaje colectivo, promoviendo los valores de la organización. Creemos en una sociedad más justa, igualitaria, empática y respetuosa, y sabemos que el cambio empieza en cada unx de nosotrxs.",
-  duration: "2 meses",
+  duration: "11 semanas",
   modality: "Programa virtual con talleres, mentorías personalizadas y materiales exclusivos.",
   requirements: [
     "Tener entre 15 y 19 años",
@@ -225,8 +227,10 @@ export const SOMOS_DATA: ProgramData = {
     "Compromiso de contribuir a una sociedad más justa e inclusiva realizando una acción de impacto en tu comunidad"
   ],
   enrollmentInfo: {
-    description: "Para ser parte del programa, deberás completar el formulario de inscripción disponible en nuestra página web.",
-    availablePeriod: "Consultar fechas de inscripción"
+    description: "Para ser parte del programa, completá el siguiente formulario:",
+    registrationLabel: "Form de inscripción Somos 2026",
+    registrationUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc6lL0QlYa_5SUw4y_QO4LTU_0G3lNdWFbnVcVxll_OWSWDjg/viewform?usp=header",
+    availablePeriod: "Inscripción 2026"
   },
   stages: [
     {
@@ -248,15 +252,15 @@ export const SOMOS_DATA: ProgramData = {
   stats: [
     {
       label: "Ediciones realizadas",
-      value: "3"
+      value: "4"
     },
     {
       label: "Participantes",
-      value: "70+"
+      value: "90+"
     },
     {
       label: "Personas impactadas",
-      value: "4000+"
+      value: "6000+"
     }
   ],
   successStories: [

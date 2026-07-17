@@ -6,6 +6,8 @@ import type { ProgramColors } from "./types";
 
 interface EnrollmentInfoProps {
   description: string;
+  registrationLabel?: string;
+  registrationUrl?: string;
   availablePeriod?: string;
   colors: ProgramColors;
   isHistorical?: boolean;
@@ -13,6 +15,8 @@ interface EnrollmentInfoProps {
 
 export default function EnrollmentInfo({
   description,
+  registrationLabel,
+  registrationUrl,
   availablePeriod,
   colors,
   isHistorical = false,
@@ -42,7 +46,14 @@ export default function EnrollmentInfo({
           >
             <div className="mb-6 flex items-start gap-4">
               <FileText size={32} style={{ color: colors.primary }} className="mt-1 flex-shrink-0" />
-              <p className="text-lg leading-relaxed text-gray-700">{description}</p>
+              <p className="text-lg leading-relaxed text-gray-700">
+                {description}{" "}
+                {registrationUrl && registrationLabel && (
+                  <a href={registrationUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-purple-600 underline">
+                    {registrationLabel}
+                  </a>
+                )}
+              </p>
             </div>
 
             {availablePeriod && (
@@ -62,5 +73,4 @@ export default function EnrollmentInfo({
     </section>
   );
 }
-
 
