@@ -28,7 +28,7 @@ export default function ImpactStats({ stats, colors }: ImpactStatsProps) {
             <p className="text-base text-gray-600 md:text-lg">Resultados que transforman comunidades</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="grid grid-cols-1 justify-items-center gap-5 sm:grid-cols-2 xl:grid-cols-3">
             {stats.map((stat, index) => (
               <StatCard key={index} stat={stat} index={index} color={colors.primary} />
             ))}

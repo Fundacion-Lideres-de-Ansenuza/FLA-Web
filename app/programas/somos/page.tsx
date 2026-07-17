@@ -207,6 +207,8 @@ export default function SomosPage() {
 
         <EnrollmentInfo
           description={SOMOS_DATA.enrollmentInfo.description}
+          registrationLabel={SOMOS_DATA.enrollmentInfo.registrationLabel}
+          registrationUrl={SOMOS_DATA.enrollmentInfo.registrationUrl}
           availablePeriod={SOMOS_DATA.enrollmentInfo.availablePeriod}
           colors={SOMOS_DATA.colors}
         />
