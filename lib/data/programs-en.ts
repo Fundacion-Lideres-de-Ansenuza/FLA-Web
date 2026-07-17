@@ -180,10 +180,10 @@ export const SOMOS_DATA_EN: ProgramData = {
   shortDescription:
     'Free diversity leadership program for young people ages 15 to 19 in Argentina who want to become leaders in their communities.',
   fullDescription:
-    'SOMOS is a free diversity leadership program for young people ages 15 to 19 in Argentina who want to become leaders in their communities. Over 2 months, participants learn about diversity, develop leadership skills, and carry out a social impact action that transforms their community. They do this through workshops with experts, personalized mentoring, and exclusive materials created especially for the program.',
+    'SOMOS is a free diversity leadership program for young people ages 15 to 19 in Argentina who want to become leaders in their communities. Over 11 weeks, participants learn about diversity, develop leadership skills, and carry out a social impact action that transforms their community. They do this through workshops with experts, personalized mentoring, and exclusive materials created especially for the program.',
   location:
     'SOMOS comes to FLA to open spaces for dialogue, debate, and collective learning while promoting the organization’s values. We believe in a more just, equal, empathetic, and respectful society, and we know change begins with each of us.',
-  duration: '2 months',
+  duration: '11 weeks',
   modality: 'Virtual program with workshops, personalized mentoring, and exclusive materials.',
   requirements: [
     'Be between 15 and 19 years old.',
@@ -219,15 +219,15 @@ export const SOMOS_DATA_EN: ProgramData = {
   stats: [
     {
       label: 'Editions held',
-      value: '3'
+      value: '4'
     },
     {
       label: 'Participants',
-      value: '70+'
+      value: '90+'
     },
     {
       label: 'People reached',
-      value: '4000+'
+      value: '6000+'
     }
   ],
   successStories: [

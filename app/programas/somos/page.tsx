@@ -14,7 +14,7 @@ import { SOMOS_DATA } from "@/lib/data/programs";
 
 export const metadata: Metadata = {
   title: "SOMOS - Programa de Liderazgo en Diversidad para Jóvenes | FLA",
-  description: "Programa gratuito de liderazgo en diversidad para jóvenes de 15-19 años en Argentina. Aprendé sobre diversidad, desarrollá habilidades de liderazgo y realizá acciones de impacto social. +70 participantes, +4000 personas impactadas.",
+  description: "Programa gratuito de liderazgo en diversidad para jóvenes de 15-19 años en Argentina. Aprendé sobre diversidad, desarrollá habilidades de liderazgo y realizá acciones de impacto social. +90 participantes, +6000 personas impactadas.",
   keywords: [
     "programa diversidad jóvenes",
     "liderazgo diversidad argentina",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Fundación Líderes de Ansenuza" }],
   openGraph: {
     title: "SOMOS - Liderazgo en Diversidad para Jóvenes de Argentina",
-    description: "Programa gratuito de 2 meses para jóvenes de 15-19 años. Talleres de diversidad, mentorías y acciones de impacto. +70 participantes han impactado a +4000 personas en sus comunidades.",
+    description: "Programa gratuito de 11 semanas para jóvenes de 15-19 años. Talleres de diversidad, mentorías y acciones de impacto. +90 participantes han impactado a +6000 personas en sus comunidades.",
     type: "website",
     locale: "es_AR",
     url: "https://www.lideresdeansenuza.org/programas/somos",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "SOMOS - Liderazgo en Diversidad para Jóvenes",
-    description: "Programa gratuito de 2 meses. Aprendé sobre diversidad, desarrollá liderazgo y realizá acciones de impacto en tu comunidad. Para jóvenes de 15-19 años de toda Argentina.",
+    description: "Programa gratuito de 11 semanas. Aprendé sobre diversidad, desarrollá liderazgo y realizá acciones de impacto en tu comunidad. Para jóvenes de 15-19 años de toda Argentina.",
     images: ["/images/programs/somos.webp"]
   },
   alternates: {
@@ -252,4 +252,3 @@ export default function SomosPage() {
     </>
   );
 }
-

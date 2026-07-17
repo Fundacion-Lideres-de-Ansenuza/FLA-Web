@@ -4,7 +4,7 @@ Breve descripción del programa
 
 SOMOS es un programa gratuito de liderazgo en diversidad, para jóvenes de entre 15 y 19 años de Argentina, que quieran convertirse en líderes de sus comunidades.
 
-Durante 2 meses, lxs participantes aprenden sobre diversidad, desarrollan habilidades de liderazgo, y llevan adelante una acción de impacto social que transforme su comunidad. Todo esto a través de talleres con expertxs, mentorías personalizadas, y materiales exclusivos creados especialmente para el programa.
+Durante 11 semanas, lxs participantes aprenden sobre diversidad, desarrollan habilidades de liderazgo, y llevan adelante una acción de impacto social que transforme su comunidad. Todo esto a través de talleres con expertxs, mentorías personalizadas, y materiales exclusivos creados especialmente para el programa.
 
 SOMOS llega a FLA para abrir espacios de diálogo, debate y aprendizaje colectivo, promoviendo los valores de la organización. Creemos en una sociedad más justa, igualitaria, empática y respetuosa, y sabemos que el cambio empieza en cada unx de nosotrxs. Y vos… ¿Qué esperás para sumarte?
 
@@ -15,7 +15,7 @@ Pueden participar del programa jóvenes de entre 15 y 19 años, de cualquier par
 
 Cómo anotarme
 
-Para ser parte de la edición 2025, deberás completar el siguiente formulario: [formulario]
+Para ser parte de la edición 2026, deberás completar el siguiente formulario: [Form de inscripción Somos 2026](https://docs.google.com/forms/d/e/1FAIpQLSc6lL0QlYa_5SUw4y_QO4LTU_0G3lNdWFbnVcVxll_OWSWDjg/viewform?usp=header)
 
 Etapas del programa
 
@@ -56,9 +56,9 @@ https://www.lanacion.com.ar/comunidad/esta-decidida-a-no-abandonarlos-la-lucha-d
 
 
 Impacto en números (Ej. "Hemos distribuido 5,000 comidas") 
-3 ediciones realizadas
-+70 participantes
-+4000 personas impactadas por las acciones realizadas por participantes
+4 ediciones realizadas
++90 participantes
++6000 personas impactadas por las acciones realizadas por participantes
 Galería de fotos y videos
 Fotos WEB 2025
 	
