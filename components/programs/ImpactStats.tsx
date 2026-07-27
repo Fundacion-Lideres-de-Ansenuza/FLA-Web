@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useCountAnimation } from "@/components/stats/hooks/useCountAnimation";
 import type { ProgramColors, Stat } from "./types";
+import { useTranslation } from "react-i18next";
 
 interface ImpactStatsProps {
   stats: Stat[];
@@ -11,6 +12,7 @@ interface ImpactStatsProps {
 }
 
 export default function ImpactStats({ stats, colors }: ImpactStatsProps) {
+  const { t } = useTranslation();
   return (
     <section className="py-12 md:py-16" style={{ backgroundColor: `${colors.primary}0d` }}>
       <div className="container mx-auto px-4">
@@ -23,9 +25,9 @@ export default function ImpactStats({ stats, colors }: ImpactStatsProps) {
             className="mb-10 text-center"
           >
             <h2 className="mb-3 text-3xl md:text-4xl font-contrail" style={{ color: colors.secondary }}>
-              Nuestro impacto
+              {t("programDetail.impactTitle")}
             </h2>
-            <p className="text-base text-gray-600 md:text-lg">Resultados que transforman comunidades</p>
+            <p className="text-base text-gray-600 md:text-lg">{t("programDetail.impactSubtitle")}</p>
           </motion.div>
 
           <div className="grid grid-cols-1 justify-items-center gap-5 sm:grid-cols-2 xl:grid-cols-3">

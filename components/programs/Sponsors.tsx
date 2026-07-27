@@ -3,12 +3,14 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import type { Sponsor } from "./types";
+import { useTranslation } from "react-i18next";
 
 interface SponsorsProps {
   sponsors: Sponsor[];
 }
 
 export default function Sponsors({ sponsors }: SponsorsProps) {
+  const { t } = useTranslation();
   if (sponsors.length === 0) return null;
 
   return (
@@ -22,7 +24,7 @@ export default function Sponsors({ sponsors }: SponsorsProps) {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">Con el apoyo de</h2>
+            <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">{t("programDetail.sponsorsTitle")}</h2>
           </motion.div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 items-center">
@@ -57,4 +59,3 @@ export default function Sponsors({ sponsors }: SponsorsProps) {
     </section>
   );
 }
-

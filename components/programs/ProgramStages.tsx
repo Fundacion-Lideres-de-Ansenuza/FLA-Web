@@ -17,6 +17,7 @@ import {
   PartyPopper,
 } from "lucide-react";
 import type { ProgramColors, Stage } from "./types";
+import { useTranslation } from "react-i18next";
 
 const iconMap: Record<string, React.ElementType> = {
   GraduationCap,
@@ -40,6 +41,7 @@ interface ProgramStagesProps {
 }
 
 export default function ProgramStages({ stages, colors }: ProgramStagesProps) {
+  const { t } = useTranslation();
   return (
     <section className="bg-white py-12 md:py-16">
       <div className="container mx-auto px-4">
@@ -52,9 +54,9 @@ export default function ProgramStages({ stages, colors }: ProgramStagesProps) {
             className="mb-10 text-center"
           >
             <h2 className="mb-3 text-3xl md:text-4xl font-contrail" style={{ color: colors.secondary }}>
-              Etapas del programa
+              {t("programDetail.stagesTitle")}
             </h2>
-            <p className="text-base text-gray-600 md:text-lg">Un recorrido transformador diseñado para tu crecimiento</p>
+            <p className="text-base text-gray-600 md:text-lg">{t("programDetail.stagesSubtitle")}</p>
           </motion.div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -93,7 +95,7 @@ export default function ProgramStages({ stages, colors }: ProgramStagesProps) {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-6 text-center italic text-gray-500"
           >
-            * Las actividades pueden variar de año a año
+            * {t("programDetail.stagesNote")}
           </motion.p>
         </div>
       </div>

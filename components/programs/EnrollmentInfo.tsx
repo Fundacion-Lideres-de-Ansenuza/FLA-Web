@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Calendar, FileText } from "lucide-react";
 import type { ProgramColors } from "./types";
+import { useTranslation } from "react-i18next";
 
 interface EnrollmentInfoProps {
   description: string;
@@ -21,6 +22,7 @@ export default function EnrollmentInfo({
   colors,
   isHistorical = false,
 }: EnrollmentInfoProps) {
+  const { t } = useTranslation();
   return (
     <section id="inscripcion" className="bg-white py-12 md:py-16">
       <div className="container mx-auto px-4">
@@ -33,7 +35,7 @@ export default function EnrollmentInfo({
             className="mb-10 text-center"
           >
             <h2 className="mb-4 text-4xl md:text-5xl font-contrail" style={{ color: colors.secondary }}>
-              {isHistorical ? "Información del programa" : "Cómo anotarse"}
+              {isHistorical ? t("programDetail.programInfo") : t("programDetail.howToEnroll")}
             </h2>
           </motion.div>
 
@@ -61,7 +63,7 @@ export default function EnrollmentInfo({
                 <Calendar size={24} style={{ color: isHistorical ? "#f59e0b" : colors.primary }} />
                 <div>
                   <p className="text-sm font-semibold text-gray-600">
-                    {isHistorical ? "Estado del programa" : "Período de inscripción"}
+                    {isHistorical ? t("programDetail.programStatus") : t("programDetail.enrollmentPeriod")}
                   </p>
                   <p className="text-gray-900">{availablePeriod}</p>
                 </div>
@@ -73,4 +75,3 @@ export default function EnrollmentInfo({
     </section>
   );
 }
-

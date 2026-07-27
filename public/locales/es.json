@@ -5,12 +5,53 @@
     "donar": "DONAR",
     "blog": "BLOG",
     "campus": "CAMPUS",
-    "contactanos": "CONTÁCTANOS"
+    "contactanos": "CONTÁCTANOS",
+    "openMenu": "Abrir menú de navegación",
+    "closeMenu": "Cerrar menú de navegación"
   },
   "language": {
     "es": "Español",
     "en": "English",
     "label": "Idioma"
+  },
+  "gallery": {
+    "title": "Galería visual",
+    "image": "Imagen",
+    "label": "Galería",
+    "visual": "Visual",
+    "previous": "Imagen anterior",
+    "next": "Imagen siguiente"
+  },
+  "accessibility": {
+    "open": "Abrir herramientas de accesibilidad",
+    "title": "Herramientas de accesibilidad",
+    "increaseText": "Aumentar texto",
+    "decreaseText": "Reducir texto",
+    "grayscale": "Escala de grises",
+    "highContrast": "Alto contraste",
+    "negativeContrast": "Contraste negativo",
+    "lightBackground": "Fondo claro",
+    "underlineLinks": "Subrayar enlaces",
+    "readableFont": "Fuente legible",
+    "reset": "Restablecer"
+  },
+  "system": {
+    "loading": "Cargando Fundación Líderes de Ansenuza",
+    "error": "Error",
+    "errorTitle": "Algo salió mal",
+    "errorDescription": "Ocurrió un problema al cargar esta sección. Intentá nuevamente.",
+    "retry": "Reintentar",
+    "notFoundTitle": "Página no encontrada",
+    "notFoundDescription": "La ruta que buscás no existe o fue movida.",
+    "backHome": "Volver al inicio"
+  },
+  "ambientaliaIdentity": {
+    "baseColor": "Color base",
+    "forestAndWater": "Bosque y agua",
+    "baseColorDescription": "Una paleta que conecta con humedales, aves y territorio vivo.",
+    "approach": "Enfoque",
+    "learningByDoing": "Aprender haciendo",
+    "approachDescription": "El diseño acompaña la narrativa de exploración, conservación y liderazgo."
   },
   "hero": {
     "subtitle": "Jóvenes transformando la educación",
@@ -48,7 +89,11 @@
   },
   "testimonials": {
     "title": "Testimonios",
-    "subtitle": "Descubrí lo que dicen las personas que forman parte de nuestra FLAmilia"
+    "subtitle": "Descubrí lo que dicen las personas que forman parte de nuestra FLAmilia",
+    "volunteer": "Voluntario",
+    "participant": "Participante",
+    "previous": "Testimonio anterior",
+    "next": "Siguiente testimonio"
   },
   "footer": {
     "tagline": "Empoderando a la próxima generación de líderes en la región de Ansenuza a través de la educación y la innovación.",
@@ -148,8 +193,27 @@
       "goToSlide": "Ir a la imagen {{number}}",
       "imageAlt1": "Equipo junto",
       "imageAlt2": "Equipo feliz",
-      "imageAlt3": "Chicos sonriendo"
+      "imageAlt3": "Chicos sonriendo",
+      "imageAlt4": "Equipo de FLA reunido",
+      "community": "Comunidad",
+      "team": "Equipo",
+      "impact": "Impacto",
+      "meetings": "Encuentros",
+      "moments": "Momentos",
+      "memories": "Recuerdos",
+      "people": "Personas"
     }
+  },
+  "successStories": {
+    "title": "Historias de éxito",
+    "subtitle": "Jóvenes que están transformando sus comunidades"
+  },
+  "donationUi": {
+    "paypalButtonAlt": "Botón de PayPal para donar",
+    "paypalLoading": "Cargando botón de PayPal...",
+    "paypalMissingConfig": "Configurá la integración de PayPal para habilitar el botón.",
+    "paypalError": "No pudimos cargar PayPal en este momento. Intentá nuevamente en unos segundos.",
+    "welcome": "Recibirás un correo de bienvenida con el detalle."
   },
   "donate": {
     "title": "APOYÁ NUESTRA MISIÓN",
@@ -236,6 +300,7 @@
     "subtitle": "Programas educativos gratuitos que transforman vidas en toda Argentina",
     "active": {
       "title": "Programas vigentes",
+      "subtitle": "Programas activos en los que podés participar actualmente",
       "openEnrollment": "✓ Inscripciones abiertas",
       "learnMore": "Conocer programa"
     },
@@ -394,5 +459,51 @@
       "emailButton": "Escribir a contacto",
       "contactButton": "Ir a contacto"
     }
+  },
+  "programDetail": {
+    "about": "Sobre el programa",
+    "duration": "Duración",
+    "modality": "Modalidad",
+    "location": "Dónde se desarrolla",
+    "faqTitle": "Preguntas frecuentes",
+    "faqSubtitle": "Resolvé tus dudas sobre el programa",
+    "requirementsTitle": "Requisitos",
+    "requirementsSubtitle": "Para participar del programa, deberás cumplir con los siguientes requisitos:",
+    "programInfo": "Información del programa",
+    "howToEnroll": "Cómo anotarse",
+    "programStatus": "Estado del programa",
+    "enrollmentPeriod": "Período de inscripción",
+    "stagesTitle": "Etapas del programa",
+    "stagesSubtitle": "Un recorrido transformador diseñado para tu crecimiento",
+    "stagesNote": "Las actividades pueden variar de año a año",
+    "impactTitle": "Nuestro impacto",
+    "impactSubtitle": "Resultados que transforman comunidades",
+    "readMore": "Leer más",
+    "blogSubtitle": "Descubrí más sobre el programa en nuestro blog",
+    "readArticle": "Leer artículo",
+    "sponsorsTitle": "Con el apoyo de"
+  },
+  "contactSection": {
+    "title": "Empecemos",
+    "subtitle": "Escribinos y conocé cómo podés vincularte con Fundación Líderes de Ansenuza.",
+    "sendMessage": "Enviar un mensaje",
+    "success": "¡Gracias por tu mensaje! Nos pondremos en contacto con vos pronto.",
+    "fullName": "Nombre completo",
+    "namePlaceholder": "Tu nombre",
+    "email": "Correo electrónico",
+    "organization": "Organización",
+    "organizationPlaceholder": "Tu organización",
+    "message": "Mensaje",
+    "messagePlaceholder": "Contanos cómo podemos ayudarte...",
+    "send": "Enviar mensaje",
+    "getInTouch": "Contacto",
+    "helpText": "Estamos para responder tus consultas y acompañarte. Esperamos tu mensaje.",
+    "emailUs": "Escribinos",
+    "callUs": "Teléfono",
+    "phonePending": "Consultanos por correo electrónico",
+    "visitUs": "Visitános",
+    "start": "Sumate a FLA",
+    "startText": "Conocé nuestras oportunidades de participación y colaboración.",
+    "startButton": "Conocer oportunidades"
   }
 }

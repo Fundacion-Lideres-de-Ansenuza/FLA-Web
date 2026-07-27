@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import type { ProgramColors } from "./types";
 
 interface ProgramDescriptionProps {
@@ -18,6 +19,7 @@ export default function ProgramDescription({
   modality,
   colors,
 }: ProgramDescriptionProps) {
+  const { t } = useTranslation();
   return (
     <section id="mas-info" className="bg-white py-12 md:py-16">
       <div className="container mx-auto px-4">
@@ -30,7 +32,7 @@ export default function ProgramDescription({
             className="mb-10"
           >
             <h2 className="mb-5 text-3xl md:text-4xl font-contrail" style={{ color: colors?.secondary ?? "#111827" }}>
-              Sobre el programa
+              {t("programDetail.about")}
             </h2>
             <p className="mb-6 text-base leading-relaxed text-gray-700 md:text-lg font-arimo">{fullDescription}</p>
           </motion.div>
@@ -46,7 +48,7 @@ export default function ProgramDescription({
               {duration && (
                 <div className="rounded-2xl bg-gray-50 p-6">
                   <h3 className="mb-2 text-xl font-semibold" style={{ color: colors?.secondary ?? "#111827" }}>
-                    Duracion
+                    {t("programDetail.duration")}
                   </h3>
                   <p className="text-gray-700">{duration}</p>
                 </div>
@@ -54,7 +56,7 @@ export default function ProgramDescription({
               {modality && (
                 <div className="rounded-2xl bg-gray-50 p-6">
                   <h3 className="mb-2 text-xl font-semibold" style={{ color: colors?.secondary ?? "#111827" }}>
-                    Modalidad
+                    {t("programDetail.modality")}
                   </h3>
                   <p className="text-gray-700">{modality}</p>
                 </div>
@@ -71,7 +73,7 @@ export default function ProgramDescription({
               className="rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 p-8"
             >
               <h3 className="mb-4 text-2xl font-semibold" style={{ color: colors?.secondary ?? "#111827" }}>
-                Dónde se desarrolla
+                {t("programDetail.location")}
               </h3>
               <p className="text-lg leading-relaxed text-gray-700">{location}</p>
             </motion.div>

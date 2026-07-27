@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import type { BlogPost, ProgramColors } from "./types";
+import { useTranslation } from "react-i18next";
 
 interface BlogLinksProps {
   posts: BlogPost[];
@@ -11,6 +12,7 @@ interface BlogLinksProps {
 }
 
 export default function BlogLinks({ posts, colors }: BlogLinksProps) {
+  const { t } = useTranslation();
   if (posts.length === 0) return null;
 
   return (
@@ -27,7 +29,7 @@ export default function BlogLinks({ posts, colors }: BlogLinksProps) {
             <h2 className="mb-4 text-4xl md:text-5xl font-contrail" style={{ color: colors.secondary }}>
               Notas y noticias
             </h2>
-            <p className="text-lg text-gray-600">Descubrí más sobre el programa en nuestro blog</p>
+            <p className="text-lg text-gray-600">{t("programDetail.blogSubtitle")}</p>
           </motion.div>
 
           <div className="grid gap-5 md:grid-cols-2">
@@ -48,7 +50,7 @@ export default function BlogLinks({ posts, colors }: BlogLinksProps) {
                   <div className="flex-grow">
                     <h3 className="mb-2 text-lg font-semibold text-gray-900 group-hover:underline">{post.title}</h3>
                     <span className="inline-flex items-center gap-1 text-sm font-medium" style={{ color: colors.primary }}>
-                      Leer articulo
+                      {t("programDetail.readArticle")}
                       <ExternalLink size={14} />
                     </span>
                   </div>
@@ -67,4 +69,3 @@ export default function BlogLinks({ posts, colors }: BlogLinksProps) {
     </section>
   );
 }
-

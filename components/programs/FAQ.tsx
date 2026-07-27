@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import type { FAQ as FAQType, ProgramColors } from "./types";
+import { useTranslation } from "react-i18next";
 
 interface FAQProps {
   faqs: FAQType[];
@@ -12,6 +13,7 @@ interface FAQProps {
 
 export default function FAQ({ faqs, colors }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const { t } = useTranslation();
 
   const toggleFAQ = (index: number): void => {
     setOpenIndex(openIndex === index ? null : index);
@@ -29,9 +31,9 @@ export default function FAQ({ faqs, colors }: FAQProps) {
             className="mb-10 text-center"
           >
             <h2 className="mb-4 text-4xl md:text-5xl font-contrail" style={{ color: colors.secondary }}>
-              Preguntas frecuentes
+              {t("programDetail.faqTitle")}
             </h2>
-            <p className="text-lg text-gray-600">Resolvé tus dudas sobre el programa</p>
+            <p className="text-lg text-gray-600">{t("programDetail.faqSubtitle")}</p>
           </motion.div>
 
           <div className="space-y-3.5">
@@ -77,4 +79,3 @@ export default function FAQ({ faqs, colors }: FAQProps) {
     </section>
   );
 }
-

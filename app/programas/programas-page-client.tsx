@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ACTIVE_PROGRAMS, HISTORICAL_PROGRAMS } from "@/lib/data/programs";
+import { useMemo } from "react";
+import { getActivePrograms, getHistoricalPrograms } from "@/lib/data/programs-i18n";
 import { generateBlobRadius } from "@/lib/shapes";
 import { useTranslation } from "react-i18next";
 
@@ -40,6 +41,9 @@ function getLogoPresentation(title: string): string {
 
 export default function ProgramasPage() {
   const { t } = useTranslation();
+  const locale = (t("language.label") === "Language" ? "en" : "es") as "es" | "en";
+  const activePrograms = useMemo(() => getActivePrograms(locale), [locale]);
+  const historicalPrograms = useMemo(() => getHistoricalPrograms(locale), [locale]);
 
   return (
     <main className="min-h-screen bg-white overflow-x-hidden pt-[108px] sm:pt-[120px]">
@@ -73,7 +77,7 @@ export default function ProgramasPage() {
                 <div className="w-16 h-1.5 bg-[#bc2222] mx-auto rounded-full mt-3" />
               </div>
               <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-12 items-start justify-items-center">
-                {ACTIVE_PROGRAMS.map((program) => (
+                {activePrograms.map((program) => (
                   <Link
                     key={program.slug}
                     href={`/programas/${program.slug}`}
@@ -135,7 +139,7 @@ export default function ProgramasPage() {
               </p>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 items-start justify-items-center">
-                {HISTORICAL_PROGRAMS.map((program) => (
+                {historicalPrograms.map((program) => (
                   <Link
                     key={program.slug}
                     href={`/programas/${program.slug}`}

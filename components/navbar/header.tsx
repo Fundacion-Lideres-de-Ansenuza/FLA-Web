@@ -83,7 +83,7 @@ export default function Header() {
           <button
             className="lg:hidden p-2 rounded-full hover:bg-white/10 transition relative z-50 text-white"
             onClick={toggleMobileMenu}
-            aria-label="Toggle mobile menu"
+            aria-label={isMobileMenuOpen ? t("nav.closeMenu") : t("nav.openMenu")}
           >
             <motion.div animate={isMobileMenuOpen ? "open" : "closed"} className="w-7 h-7 flex flex-col justify-center items-center">
               <motion.span
@@ -139,7 +139,7 @@ export default function Header() {
 
                 <div className="pt-6 pb-2 border-t border-white/20">
                   <div className="flex items-center justify-between px-4 mb-6">
-                    <span className="text-sm font-medium opacity-70 uppercase tracking-wider">Language / Idioma</span>
+                    <span className="text-sm font-medium opacity-70 uppercase tracking-wider">{t("language.label")}</span>
                     <LanguageSwitcher />
                   </div>
                 </div>
