@@ -23,7 +23,7 @@ export default function Contact() {
 		e.preventDefault()
 		console.log("Form submitted:", formData)
 		setFormData({ name: "", email: "", company: "", message: "" })
-		alert("Thank you for your message! We'll get back to you soon.")
+		alert(t("contactSection.success"))
 	}
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

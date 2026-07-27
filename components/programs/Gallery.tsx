@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight, Images } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import type { ProgramColors } from "./types";
 
 interface GalleryProps {
@@ -26,18 +27,20 @@ const FALLBACK_SLIDES: Slide[] = [
   { id: "scene-3", title: "Escena 03" },
 ];
 
-export default function Gallery({ images, colors, title = "Galería visual" }: GalleryProps) {
+export default function Gallery({ images, colors, title }: GalleryProps) {
+  const { t } = useTranslation();
+  const galleryTitle = title || t("gallery.title");
   const slides = useMemo<Slide[]>(() => {
     if (images && images.length > 0) {
       return images.map((src, index) => ({
         id: `custom-${index + 1}`,
-        title: `Imagen ${index + 1}`,
+      title: `${t("gallery.image")} ${index + 1}`,
         src,
       }));
     }
 
     return FALLBACK_SLIDES;
-  }, [images]);
+  }, [images, t]);
 
   const hasCustomImages = Boolean(images && images.length > 0);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -73,10 +76,10 @@ export default function Gallery({ images, colors, title = "Galería visual" }: G
               className="inline-flex rounded-full px-4 py-1.5 text-xs font-black uppercase tracking-[0.24em] text-white shadow-lg"
               style={{ backgroundColor: colors.primary }}
             >
-              Galería visual
+              {t("gallery.title")}
             </span>
             <h2 className="mt-4 text-4xl md:text-5xl font-contrail" style={{ color: colors.secondary }}>
-              {title}
+              {galleryTitle}
             </h2>
           </motion.div>
 
@@ -118,7 +121,7 @@ export default function Gallery({ images, colors, title = "Galería visual" }: G
                           className="inline-flex rounded-full px-4 py-1.5 text-xs font-black uppercase tracking-[0.2em] text-white"
                           style={{ backgroundColor: colors.primary }}
                         >
-                          {hasCustomImages ? "Galería" : "Visual"}
+                          {hasCustomImages ? t("gallery.label") : t("gallery.visual")}
                         </span>
                         <span className="rounded-full bg-white/85 px-3 py-1 text-xs font-bold text-gray-700 backdrop-blur-sm">
                           {currentIndex + 1}/{slides.length}
@@ -165,7 +168,7 @@ export default function Gallery({ images, colors, title = "Galería visual" }: G
                     onClick={() => moveSlide(-1)}
                     className="absolute left-4 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border bg-white/92 text-gray-700 shadow-[0_12px_30px_rgba(0,0,0,0.16)] backdrop-blur-sm transition-colors hover:bg-white"
                     style={{ borderColor: `${colors.accent}45` }}
-                    aria-label="Imagen anterior"
+                    aria-label={t("gallery.previous")}
                   >
                     <ArrowLeft className="h-5 w-5" />
                   </button>
@@ -174,7 +177,7 @@ export default function Gallery({ images, colors, title = "Galería visual" }: G
                     onClick={() => moveSlide(1)}
                     className="absolute right-4 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full text-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] transition-colors"
                     style={{ backgroundColor: colors.primary }}
-                    aria-label="Imagen siguiente"
+                    aria-label={t("gallery.next")}
                   >
                     <ArrowRight className="h-5 w-5" />
                   </button>

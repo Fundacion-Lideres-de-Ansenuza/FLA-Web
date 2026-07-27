@@ -61,6 +61,7 @@ function loadPayPalDonateSdk() {
 }
 
 function PayPalDonateWidget() {
+  const { t } = useTranslation()
   const [status, setStatus] = useState<"idle" | "loading" | "ready" | "error" | "missing-config">("idle")
 
   useEffect(() => {
@@ -94,7 +95,7 @@ function PayPalDonateWidget() {
           image: {
             src: "https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif",
             title: "PayPal - The safer, easier way to pay online!",
-            alt: "Donate with PayPal button",
+            alt: t("donationUi.paypalButtonAlt"),
           },
         }
 
@@ -118,25 +119,25 @@ function PayPalDonateWidget() {
     return () => {
       cancelled = true
     }
-  }, [])
+  }, [t])
 
   return (
     <div className="flex w-full flex-col items-center gap-4">
       <div id={PAYPAL_DONATE_CONTAINER_ID} className="min-h-12" />
 
       {status === "loading" && (
-        <p className="text-sm font-arimo text-gray-500">Cargando boton de PayPal...</p>
+        <p className="text-sm font-arimo text-gray-500">{t("donationUi.paypalLoading")}</p>
       )}
 
       {status === "missing-config" && (
         <p className="max-w-lg text-center text-sm font-arimo text-[#90140e]">
-          Configura NEXT_PUBLIC_PAYPAL_DONATE_HOSTED_BUTTON_ID (o NEXT_PUBLIC_PAYPAL_DONATE_BUSINESS) para habilitar el boton.
+          {t("donationUi.paypalMissingConfig")}
         </p>
       )}
 
       {status === "error" && (
         <p className="max-w-lg text-center text-sm font-arimo text-[#90140e]">
-          No pudimos cargar PayPal en este momento. Intenta nuevamente en unos segundos.
+          {t("donationUi.paypalError")}
         </p>
       )}
     </div>
@@ -179,19 +180,21 @@ function TimelineSteps({ steps, accent }: { steps: string[]; accent: string }) {
 }
 
 function DonationChip({ href }: { href: string }) {
+  const { t } = useTranslation()
   return (
     <Button
       asChild
       className="rounded-full px-8 py-6 text-sm font-black tracking-[0.28em] text-white shadow-[0_18px_40px_rgba(144,20,14,0.16)] transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_22px_46px_rgba(144,20,14,0.2)]"
       style={{ backgroundColor: DARK_BROWN }}
     >
-      <Link href={href}>DONAR</Link>
+      <Link href={href}>{t("nav.donar")}</Link>
     </Button>
   )
 }
 
 function WelcomeNote() {
-  return <p className="text-center font-arimo text-base text-gray-600 md:text-lg">Recibirás un mail de bienvenida con el detalle.</p>
+  const { t } = useTranslation()
+  return <p className="text-center font-arimo text-base text-gray-600 md:text-lg">{t("donationUi.welcome")}</p>
 }
 
 export default function DonationPage() {

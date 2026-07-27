@@ -231,8 +231,8 @@ export default function Testimonials() {
   const isEnglish = (i18n.resolvedLanguage || i18n.language || "es").startsWith("en")
 
   const testimonials = useMemo<TestimonialView[]>(() => {
-    const volunteerLabel = isEnglish ? "Volunteer" : "Voluntario"
-    const participantLabel = isEnglish ? "Participant" : "Participante"
+    const volunteerLabel = t("testimonials.volunteer")
+    const participantLabel = t("testimonials.participant")
 
     return testimonialEntries.map((entry) => ({
       name: entry.name,
@@ -242,7 +242,7 @@ export default function Testimonials() {
       content: isEnglish ? entry.contentEn : entry.contentEs,
       avatar: entry.avatar,
     }))
-  }, [isEnglish])
+  }, [isEnglish, t])
 
   const testimonialPairs = useMemo(
     () =>
@@ -324,7 +324,7 @@ export default function Testimonials() {
               <button
                 onClick={goToPrevious}
                 className="p-3 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors shadow-md hover:shadow-lg"
-                aria-label={isEnglish ? "Previous testimonial" : "Testimonio anterior"}
+                aria-label={t("testimonials.previous")}
               >
                 <ChevronUp className="w-5 h-5 text-gray-700" />
               </button>
@@ -332,7 +332,7 @@ export default function Testimonials() {
               <button
                 onClick={goToNext}
                 className="p-3 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors shadow-md hover:shadow-lg"
-                aria-label={isEnglish ? "Next testimonial" : "Siguiente testimonio"}
+                aria-label={t("testimonials.next")}
               >
                 <ChevronDown className="w-5 h-5 text-gray-700" />
               </button>

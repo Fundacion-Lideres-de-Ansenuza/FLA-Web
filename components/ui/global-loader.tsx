@@ -1,4 +1,9 @@
+"use client";
+
+import { useTranslation } from "react-i18next";
+
 export default function GlobalLoader() {
+  const { t } = useTranslation();
   return (
     <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[linear-gradient(180deg,#fff7f6_0%,#ffffff_45%,#fff4f4_100%)]">
       <div className="absolute -left-20 top-20 h-56 w-56 rounded-full bg-[#f45e5e]/20 blur-3xl" />
@@ -10,7 +15,7 @@ export default function GlobalLoader() {
           <span className="absolute inset-0 rounded-full border-4 border-transparent border-t-[#bc2222] border-r-[#f45e5e] animate-spin" />
         </div>
         <p className="font-arimo text-base font-semibold tracking-[0.08em] text-[#90140e] uppercase">
-          Cargando Fundación Líderes de Ansenuza
+          {t("system.loading")}
         </p>
       </div>
     </div>

@@ -25,9 +25,9 @@ export default function SuccessStories({ stories, colors }: SuccessStoriesProps)
             className="mb-10 text-center"
           >
             <h2 className="mb-3 text-3xl md:text-4xl font-contrail" style={{ color: colors.secondary }}>
-              Historias de éxito
+              {t("successStories.title")}
             </h2>
-            <p className="text-base text-gray-600 md:text-lg">Jóvenes que están transformando sus comunidades</p>
+            <p className="text-base text-gray-600 md:text-lg">{t("successStories.subtitle")}</p>
           </motion.div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

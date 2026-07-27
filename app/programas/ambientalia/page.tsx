@@ -11,6 +11,7 @@ import FAQ from "@/components/programs/FAQ";
 import Sponsors from "@/components/programs/Sponsors";
 import Gallery from "@/components/programs/Gallery";
 import CTASection from "@/components/programs/CTASection";
+import AmbientaliaIdentity from "@/components/programs/AmbientaliaIdentity";
 import { AMBIENTALIA_DATA } from "@/lib/data/programs";
 
 export const metadata: Metadata = {
@@ -220,24 +221,7 @@ export default function AmbientaliaPage() {
                 </div>
               </div>
 
-              <div className="rounded-3xl border border-[#bbf7d0] bg-white/80 p-6 shadow-[0_24px_60px_rgba(16,185,129,0.12)] backdrop-blur-sm">
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-3xl bg-[#10b981] px-5 py-6 text-white shadow-lg">
-                    <p className="text-xs font-black uppercase tracking-[0.2em] text-white/70">Color base</p>
-                    <p className="mt-3 font-contrail text-3xl">Bosque y agua</p>
-                    <p className="mt-2 text-sm font-arimo text-white/85">
-                      Una paleta que conecta con humedales, aves y territorio vivo.
-                    </p>
-                  </div>
-                  <div className="rounded-3xl bg-[#ecfdf5] px-5 py-6 text-[#065f46] border border-[#bbf7d0]">
-                    <p className="text-xs font-black uppercase tracking-[0.2em]">Enfoque</p>
-                    <p className="mt-3 font-contrail text-3xl">Aprender haciendo</p>
-                    <p className="mt-2 text-sm font-arimo text-[#14532d]">
-                      El diseño acompaña la narrativa de exploración, conservación y liderazgo.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <AmbientaliaIdentity />
             </div>
           </div>
         </section>
@@ -303,4 +287,3 @@ export default function AmbientaliaPage() {
     </>
   );
 }
-
