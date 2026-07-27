@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import type { ProgramColors } from "./types";
+import { useTranslation } from "react-i18next";
 
 interface RequirementsProps {
   requirements: string[];
@@ -10,6 +11,7 @@ interface RequirementsProps {
 }
 
 export default function Requirements({ requirements, colors }: RequirementsProps) {
+  const { t } = useTranslation();
   return (
     <section className="py-12 md:py-16" style={{ backgroundColor: `${colors.primary}0d` }}>
       <div className="container mx-auto px-4">
@@ -22,10 +24,10 @@ export default function Requirements({ requirements, colors }: RequirementsProps
             className="mb-10 text-center"
           >
             <h2 className="mb-3 text-3xl md:text-4xl font-contrail" style={{ color: colors.secondary }}>
-              Requisitos
+              {t("programDetail.requirementsTitle")}
             </h2>
             <p className="text-base text-gray-600 md:text-lg font-arimo">
-              Para participar del programa, deberás cumplir con los siguientes requisitos:
+              {t("programDetail.requirementsSubtitle")}
             </p>
           </motion.div>
 

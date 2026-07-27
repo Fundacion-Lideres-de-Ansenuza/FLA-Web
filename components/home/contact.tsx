@@ -3,6 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
+import { useTranslation } from "react-i18next"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -10,6 +11,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
 
 export default function Contact() {
+	const { t } = useTranslation()
 	const [formData, setFormData] = useState({
 		name: "",
 		email: "",
@@ -36,11 +38,10 @@ export default function Contact() {
 			<div className="container mx-auto px-4">
 				<div className="text-center mb-16">
 					<h2 className="text-3xl md:text-4xl text-gray-900 mb-4">
-						Ready to begin
+						{t("contactSection.title")}
 					</h2>
 					<p className="text-xl text-gray-600 max-w-2xl mx-auto">
-						Contact us today and discover how our platform can transform your business. Our team
-						is ready to help you succeed.
+						{t("contactSection.subtitle")}
 					</p>
 				</div>
 
@@ -48,7 +49,7 @@ export default function Contact() {
 					<Card className="shadow-xl border-0">
 						<CardHeader>
 							<CardTitle className="text-2xl text-gray-900">
-								Send us a message
+								{t("contactSection.sendMessage")}
 							</CardTitle>
 						</CardHeader>
 						<CardContent>
@@ -59,7 +60,7 @@ export default function Contact() {
 											htmlFor="name"
 											className="block text-sm font-medium text-gray-700 mb-2"
 										>
-											Full Name *
+											{t("contactSection.fullName")} *
 										</label>
 										<Input
 											id="name"
@@ -69,7 +70,7 @@ export default function Contact() {
 											value={formData.name}
 											onChange={handleChange}
 											className="w-full"
-											placeholder="John Doe"
+											placeholder={t("contactSection.namePlaceholder")}
 										/>
 									</div>
 									<div>
@@ -77,7 +78,7 @@ export default function Contact() {
 											htmlFor="email"
 											className="block text-sm font-medium text-gray-700 mb-2"
 										>
-											Email Address *
+											{t("contactSection.email")} *
 										</label>
 										<Input
 											id="email"
@@ -97,7 +98,7 @@ export default function Contact() {
 										htmlFor="company"
 										className="block text-sm font-medium text-gray-700 mb-2"
 									>
-										Company Name
+											{t("contactSection.organization")}
 									</label>
 									<Input
 										id="company"
@@ -106,7 +107,7 @@ export default function Contact() {
 										value={formData.company}
 										onChange={handleChange}
 										className="w-full"
-										placeholder="Your Company"
+										placeholder={t("contactSection.organizationPlaceholder")}
 									/>
 								</div>
 
@@ -115,7 +116,7 @@ export default function Contact() {
 										htmlFor="message"
 										className="block text-sm font-medium text-gray-700 mb-2"
 									>
-										Message *
+										{t("contactSection.message")} *
 									</label>
 									<Textarea
 										id="message"
@@ -125,7 +126,7 @@ export default function Contact() {
 										onChange={handleChange}
 										rows={5}
 										className="w-full"
-										placeholder="Tell us about your project and how we can help..."
+										placeholder={t("contactSection.messagePlaceholder")}
 									/>
 								</div>
 
@@ -134,7 +135,7 @@ export default function Contact() {
 									className="w-full bg-red-600 hover:bg-red-700 text-white py-3"
 								>
 									<Send className="mr-2 h-5 w-5" />
-									Send Message
+									{t("contactSection.send")}
 								</Button>
 							</form>
 						</CardContent>
@@ -142,10 +143,9 @@ export default function Contact() {
 
 					<div className="space-y-8">
 						<div>
-							<h3 className="text-2xl text-gray-900 mb-6">Get in touch</h3>
+							<h3 className="text-2xl text-gray-900 mb-6">{t("contactSection.getInTouch")}</h3>
 							<p className="text-gray-600 text-lg leading-relaxed mb-8">
-								We&apos;re here to help and answer any question you might have. We look
-								forward to hearing from you.
+								{t("contactSection.helpText")}
 							</p>
 						</div>
 
@@ -155,9 +155,8 @@ export default function Contact() {
 									<Mail className="h-6 w-6 text-red-600" />
 								</div>
 								<div>
-									<h4 className="text-gray-900 mb-1">Email Us</h4>
-									<p className="text-gray-600">hello@company.com</p>
-									<p className="text-gray-600">support@company.com</p>
+									<h4 className="text-gray-900 mb-1">{t("contactSection.emailUs")}</h4>
+									<p className="text-gray-600">contacto@lideresdeansenuza.org</p>
 								</div>
 							</div>
 
@@ -166,9 +165,8 @@ export default function Contact() {
 									<Phone className="h-6 w-6 text-blue-600" />
 								</div>
 								<div>
-									<h4 className="text-gray-900 mb-1">Call Us</h4>
-									<p className="text-gray-600">+1 (555) 123-4567</p>
-									<p className="text-gray-600">Mon-Fri 9am-6pm EST</p>
+									<h4 className="text-gray-900 mb-1">{t("contactSection.callUs")}</h4>
+									<p className="text-gray-600">{t("contactSection.phonePending")}</p>
 								</div>
 							</div>
 
@@ -177,21 +175,21 @@ export default function Contact() {
 									<MapPin className="h-6 w-6 text-green-600" />
 								</div>
 								<div>
-									<h4 className="text-gray-900 mb-1">Visit Us</h4>
-									<p className="text-gray-600">123 Business Ave</p>
-									<p className="text-gray-600">New York, NY 10001</p>
+									<h4 className="text-gray-900 mb-1">{t("contactSection.visitUs")}</h4>
+									<p className="text-gray-600">Independencia 350</p>
+									<p className="text-gray-600">Miramar de Ansenuza, Córdoba</p>
 								</div>
 							</div>
 						</div>
 
 						<Card className="bg-red-600 text-white border-0">
 							<CardContent className="p-6">
-								<h4 className="text-xl mb-2">Let&apos;s start</h4>
+								<h4 className="text-xl mb-2">{t("contactSection.start")}</h4>
 								<p className="mb-4 opacity-90">
-									Join thousands of satisfied customers and transform your business today.
+									{t("contactSection.startText")}
 								</p>
 								<Button variant="secondary" className="w-full">
-									Start Free Trial
+									{t("contactSection.startButton")}
 								</Button>
 							</CardContent>
 						</Card>

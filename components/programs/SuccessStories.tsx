@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import type { ProgramColors, SuccessStory } from "./types";
+import { useTranslation } from "react-i18next";
 
 interface SuccessStoriesProps {
   stories: SuccessStory[];
@@ -11,6 +12,7 @@ interface SuccessStoriesProps {
 }
 
 export default function SuccessStories({ stories, colors }: SuccessStoriesProps) {
+  const { t } = useTranslation();
   return (
     <section className="bg-white py-12 md:py-16">
       <div className="container mx-auto px-4">
@@ -50,7 +52,7 @@ export default function SuccessStories({ stories, colors }: SuccessStoriesProps)
                     className="inline-flex items-center gap-2 font-semibold hover:underline"
                     style={{ color: colors.primary }}
                   >
-                    Leer mas
+                    {t("programDetail.readMore")}
                     <ExternalLink size={16} />
                   </Link>
                 ) : null}
