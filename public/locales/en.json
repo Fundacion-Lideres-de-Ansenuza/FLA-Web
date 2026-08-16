@@ -277,7 +277,9 @@
       "message": "Message",
       "messagePlaceholder": "Tell us more about your inquiry, idea, or how you want to collaborate with us...",
       "send": "Send message",
+      "sending": "Sending...",
       "success": "Thank you for your message! We will contact you soon.",
+      "error": "We could not send your message. Please try again.",
       "required": "*"
     },
     "info": {

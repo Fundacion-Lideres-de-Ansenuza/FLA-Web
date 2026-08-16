@@ -277,7 +277,9 @@
       "message": "Mensaje",
       "messagePlaceholder": "Contanos más sobre tu consulta, idea o cómo querés colaborar con nosotros...",
       "send": "Enviar mensaje",
+      "sending": "Enviando...",
       "success": "¡Gracias por tu mensaje! Nos pondremos en contacto con vos pronto.",
+      "error": "No pudimos enviar tu mensaje. Intentá nuevamente.",
       "required": "*"
     },
     "info": {
