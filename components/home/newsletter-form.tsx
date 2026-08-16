@@ -3,12 +3,6 @@
 import { FormEvent, useState } from "react"
 import { useTranslation } from "react-i18next"
 
-const FORM_NAME = "newsletter"
-
-function encodeFormData(data: Record<string, string>) {
-  return new URLSearchParams(data).toString()
-}
-
 export default function NewsletterForm() {
   const { t } = useTranslation()
   const [email, setEmail] = useState("")
@@ -24,16 +18,10 @@ export default function NewsletterForm() {
     setStatus("loading")
 
     try {
-      const response = await fetch("/", {
+      const response = await fetch("/api/newsletter", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: encodeFormData({
-          "form-name": FORM_NAME,
-          email: email.trim(),
-          "bot-field": "",
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email.trim(), website: "" }),
       })
 
       if (!response.ok) {
@@ -55,15 +43,9 @@ export default function NewsletterForm() {
       </h3>
       <p className="text-gray-400 font-arimo">{t("footer.newsletterText")}</p>
       <form
-        name={FORM_NAME}
-        method="POST"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
         className="space-y-3"
       >
-        <input type="hidden" name="form-name" value={FORM_NAME} />
-        <input type="hidden" name="bot-field" tabIndex={-1} autoComplete="off" />
         <div className="relative flex group">
           <input
             type="email"

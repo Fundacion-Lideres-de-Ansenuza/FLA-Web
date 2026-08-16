@@ -1,15 +1,27 @@
 # Newsletter
 
-El formulario del newsletter usa Netlify Forms para funcionar sin backend propio.
+El formulario del newsletter guarda las suscripciones en una planilla de Google Sheets mediante la API de Next.js.
 
-## Como funciona
+## Estructura de la planilla
 
-1. Netlify detecta el formulario `newsletter` leyendo el archivo estatico `public/__forms.html` durante el deploy.
-2. El componente visual `components/home/newsletter-form.tsx` envia el email con `POST /` en formato `application/x-www-form-urlencoded`.
-3. Netlify captura la solicitud, guarda la suscripcion en el panel del sitio y aplica el honeypot `bot-field` para filtrar bots simples.
+Crear una pestaña llamada `Newsletter` con estos encabezados en la primera fila:
 
-## Que revisar en produccion
+| timestamp | email | source | form |
+| --- | --- | --- | --- |
 
-- El sitio debe seguir desplegandose en Netlify.
-- En el panel del sitio, la seccion Forms debe mostrar el formulario `newsletter` despues del deploy.
-- Si mas adelante quieren mandar estas altas a Mailchimp, Brevo o similar, se puede conectar desde Netlify o reemplazar el endpoint del submit.
+La API evita duplicar emails comparando la columna `email` sin distinguir mayúsculas/minúsculas.
+
+## Variables de entorno
+
+- `GOOGLE_SHEETS_SPREADSHEET_ID`: ID de la planilla, tomado de su URL.
+- `GOOGLE_SHEETS_NEWSLETTER_TAB`: nombre de la pestaña; por defecto `Newsletter`.
+- `GOOGLE_SERVICE_ACCOUNT_EMAIL` y `GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY`: credenciales de una cuenta de servicio con acceso de editor a la planilla.
+- Alternativamente, `GOOGLE_SERVICE_ACCOUNT_JSON` puede contener el JSON completo de la cuenta de servicio.
+
+## Prueba de producción
+
+1. Compartir la planilla con el email de la cuenta de servicio como Editor.
+2. Cargar las variables en el panel de Hostinger.
+3. Enviar un email nuevo desde el sitio.
+4. Confirmar que aparece una fila nueva.
+5. Repetir el mismo email y confirmar que no se duplica.

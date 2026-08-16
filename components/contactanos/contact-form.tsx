@@ -16,19 +16,30 @@ export default function ContactForm() {
     telefono: "",
     asunto: "",
     mensaje: "",
+    website: "",
   })
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
-    setFormData({
-      nombre: "",
-      email: "",
-      telefono: "",
-      asunto: "",
-      mensaje: "",
-    })
-    alert(t("contact.form.success"))
+    setStatus("loading")
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        throw new Error("Contact submission failed")
+      }
+
+      setFormData({ nombre: "", email: "", telefono: "", asunto: "", mensaje: "", website: "" })
+      setStatus("success")
+    } catch {
+      setStatus("error")
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -70,7 +81,8 @@ export default function ContactForm() {
           </div>
 
           <div className="p-7 md:p-8 lg:p-10">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6" noValidate={false}>
+              <input name="website" value={formData.website} onChange={handleChange} tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
               <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                 <div>
                   <label htmlFor="nombre" className={labelClassName}>
@@ -155,12 +167,15 @@ export default function ContactForm() {
               <div className="flex justify-end pt-2">
                 <Button
                   type="submit"
+                  disabled={status === "loading"}
                   className="h-14 rounded-2xl bg-[linear-gradient(135deg,#bc2222_0%,#90140e_100%)] px-8 text-base font-bold text-white shadow-[0_18px_30px_rgba(188,34,34,0.24)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_24px_38px_rgba(188,34,34,0.28)]"
                 >
                   <Send className="mr-3 h-5 w-5" />
-                  {t("contact.form.send")}
+                  {status === "loading" ? t("contact.form.sending", { defaultValue: "Enviando..." }) : t("contact.form.send")}
                 </Button>
               </div>
+              {status === "success" && <p role="status" className="font-arimo text-sm text-green-700">{t("contact.form.success")}</p>}
+              {status === "error" && <p role="alert" className="font-arimo text-sm text-[#90140e]">{t("contact.form.error", { defaultValue: "No pudimos enviar tu mensaje. Intentá nuevamente." })}</p>}
             </form>
           </div>
         </div>

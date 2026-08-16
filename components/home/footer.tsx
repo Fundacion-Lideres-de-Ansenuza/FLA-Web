@@ -3,6 +3,7 @@
 import { FaTiktok, FaInstagram, FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa"
 import Image from "next/image"
 import { useTranslation } from "react-i18next"
+import NewsletterForm from "./newsletter-form"
 
 export default function Footer() {
   const { t } = useTranslation()
@@ -89,17 +90,8 @@ export default function Footer() {
           </div>
 
           {/* Newsletter Section */}
-          <div className="md:col-span-6 lg:col-span-4 space-y-6">
-            <h3 className="text-base font-arimo font-semibold text-white tracking-wider uppercase">{t('footer.newsletter')}</h3>
-            <p className="text-gray-400 font-arimo text-base">{t('footer.newsletterText')}</p>
-            <form className="relative flex group" aria-label="Formulario de newsletter">
-              <input type="email" name="email" autoComplete="email" aria-label={t("footer.emailPlaceholder")} placeholder={t("footer.emailPlaceholder")}
-                className="w-full pl-6 pr-16 py-4 rounded-2xl bg-white/5 border border-white/10 text-white text-base font-arimo placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-red-600/50 focus:border-red-600/50 transition-all"
-              />
-              <button className="absolute right-2 top-2 bottom-2 bg-red-600 hover:bg-red-700 text-white px-5 rounded-xl text-base font-arimo font-semibold transition-all transform active:scale-95 flex items-center justify-center">
-                <span>-&gt;</span>
-              </button>
-            </form>
+          <div className="md:col-span-6 lg:col-span-4">
+            <NewsletterForm />
           </div>
         </div>
 
