@@ -256,6 +256,7 @@
       "alias": "Alias",
       "name": "Name",
       "cuit": "CUIT",
+      "account": "Account number",
       "receiptTitle": "Need a receipt",
       "receiptText": "Contact us through our contact page attaching the proof of payment to issue your official donation receipt.",
       "contactPage": "contact page"
