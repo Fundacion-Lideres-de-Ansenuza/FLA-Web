@@ -256,6 +256,7 @@
       "alias": "Alias",
       "name": "Nombre",
       "cuit": "CUIT",
+      "account": "Número de cuenta",
       "receiptTitle": "Necesitás un recibo",
       "receiptText": "Escribinos a través de nuestra página de contacto adjuntando el comprobante para emitir tu recibo de donación oficial.",
       "contactPage": "página de contacto"

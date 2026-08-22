@@ -221,7 +221,6 @@ export default function AmbientaliaPage() {
                 </div>
               </div>
 
-              <AmbientaliaIdentity />
             </div>
           </div>
         </section>

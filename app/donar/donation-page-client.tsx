@@ -271,10 +271,11 @@ export default function DonationPage() {
   ]
 
   const bankData = {
-    cbu: "0000000000000000000000",
-    alias: "LIDERES.ARG.ANSENUZA",
+    cbu: "0070138520000022179511",
+    alias: "FLA.EDUCACION",
     cuit: "30-71656939-6",
     nombre: "Fundación Líderes de Ansenuza",
+    cuenta: "0022179-5 138-1",
   }
 
   const [copied, setCopied] = useState<string | null>(null)
@@ -410,6 +411,15 @@ export default function DonationPage() {
                         <div className="space-y-0.5">
                           <p className="text-[10px] font-bold uppercase tracking-widest opacity-70">{t("donate.transfer.cuit")}</p>
                           <p className="font-arimo text-lg font-bold">{bankData.cuit}</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/20">
+                          <CheckCircle2 className="h-6 w-6" />
+                        </div>
+                        <div className="space-y-0.5">
+                          <p className="text-[10px] font-bold uppercase tracking-widest opacity-70">{t("donate.transfer.account")}</p>
+                          <p className="font-arimo text-lg font-bold">{bankData.cuenta}</p>
                         </div>
                       </div>
                     </div>
