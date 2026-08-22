@@ -11,7 +11,6 @@ import FAQ from "@/components/programs/FAQ";
 import Sponsors from "@/components/programs/Sponsors";
 import Gallery from "@/components/programs/Gallery";
 import CTASection from "@/components/programs/CTASection";
-import AmbientaliaIdentity from "@/components/programs/AmbientaliaIdentity";
 import { AMBIENTALIA_DATA } from "@/lib/data/programs";
 
 export const metadata: Metadata = {
