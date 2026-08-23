@@ -167,9 +167,9 @@ export const AMBIENTALIA_DATA_EN: ProgramData = {
     url: 'https://drive.google.com/drive/folders/1nICN2r6FvOQVpWSZVEaC_McTJkc-ShL1'
   },
   colors: {
-    primary: '#10b981',
-    secondary: '#059669',
-    accent: '#34d399'
+    primary: "#027353",
+    secondary: "#568c30",
+    accent: "#f2bf27"
   }
 };
 
@@ -288,9 +288,9 @@ export const SOMOS_DATA_EN: ProgramData = {
     images: []
   },
   colors: {
-    primary: '#8b5cf6',
-    secondary: '#7c3aed',
-    accent: '#a78bfa'
+    primary: "#2c04bf",
+    secondary: "#f2e313",
+    accent: "#f2a516"
   }
 };
 
@@ -373,9 +373,9 @@ export const POTENCIATE_DATA_EN: ProgramData = {
     images: []
   },
   colors: {
-    primary: '#f97316',
-    secondary: '#ea580c',
-    accent: '#fb923c'
+    primary: "#52b5a2",
+    secondary: "#e67f33",
+    accent: "#104271"
   }
 };
 
@@ -454,9 +454,9 @@ export const FUTURAS_DATA_EN: ProgramData = {
     images: []
   },
   colors: {
-    primary: '#ec4899',
-    secondary: '#db2777',
-    accent: '#f472b6'
+    primary: "#010040",
+    secondary: "#2c04bf",
+    accent: "#eac9f4"
   }
 };
 
@@ -541,9 +541,9 @@ export const IMPULSATEC_DATA_EN: ProgramData = {
     images: []
   },
   colors: {
-    primary: '#3b82f6',
-    secondary: '#2563eb',
-    accent: '#60a5fa'
+    primary: "#0ac1f7",
+    secondary: "#065072",
+    accent: "#14733e"
   }
 };
 
@@ -644,9 +644,9 @@ export const CIENCIA_FUERA_DE_LA_CAJA_DATA_EN: ProgramData = {
     images: []
   },
   colors: {
-    primary: '#06b6d4',
-    secondary: '#0891b2',
-    accent: '#22d3ee'
+    primary: "#6a29b6",
+    secondary: "#fd7a02",
+    accent: "#3ec5a1"
   }
 };
 
@@ -850,9 +850,9 @@ export const LIDERES_DATA_EN: ProgramData = {
     images: []
   },
   colors: {
-    primary: '#dc2626',
-    secondary: '#991b1b',
-    accent: '#f87171'
+    primary: "#8f130d",
+    secondary: "#f35e5f",
+    accent: "#f88a89"
   }
 };
 
