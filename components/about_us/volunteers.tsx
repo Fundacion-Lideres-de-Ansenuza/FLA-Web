@@ -22,8 +22,8 @@ export default function Volunteers(): JSX.Element {
         <Image
           src={flaMap}
           alt={t("aboutUs.volunteers.imageAlt")}
-          width={600}
-          height={400}
+          width={1080}
+          height={1920}
           className="h-auto w-full rounded-[24px] object-contain shadow-[0_18px_40px_rgba(144,20,14,0.05)] bg-transparent"
         />
       </div>

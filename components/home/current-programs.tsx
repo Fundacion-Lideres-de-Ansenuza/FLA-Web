@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next"
 
 function getLogoFileName(title: string): string {
   const logoMap: Record<string, string> = {
-    "Experiencia Ambientalia": "Experiencia Ambientalia",
+    "Experiencia Ambientalia": "Experiencia_Ambientalia",
     "SOMOS": "Somos",
     "Líderes": "lideres",
     "Potenciate": "Potenciate",

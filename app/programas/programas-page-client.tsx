@@ -22,7 +22,7 @@ const LOGO_PRESENTATION: Record<string, string> = {
 
 function getLogoFileName(title: string): string {
   const logoMap: Record<string, string> = {
-    "Experiencia Ambientalia": "Experiencia Ambientalia",
+    "Experiencia Ambientalia": "Experiencia_Ambientalia",
     "SOMOS": "Somos",
     "Líderes": "lideres",
     "Potenciate": "Potenciate",
