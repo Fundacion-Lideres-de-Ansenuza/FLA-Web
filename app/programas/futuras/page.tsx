@@ -1,13 +1,5 @@
 import type { Metadata } from "next";
-import ProgramHeader from "@/components/programs/ProgramHeader";
-import ProgramDescription from "@/components/programs/ProgramDescription";
-import Requirements from "@/components/programs/Requirements";
-import EnrollmentInfo from "@/components/programs/EnrollmentInfo";
-import ProgramStages from "@/components/programs/ProgramStages";
-import ImpactStats from "@/components/programs/ImpactStats";
-import SuccessStories from "@/components/programs/SuccessStories";
-import Gallery from "@/components/programs/Gallery";
-import { FUTURAS_DATA } from "@/lib/data/programs";
+import FuturasPageClient from "./FuturasPageClient";
 
 export const metadata: Metadata = {
   title: "FUTURAS - Programa de Liderazgo y Empoderamiento Femenino | FLA",
@@ -38,57 +30,6 @@ export const metadata: Metadata = {
 
 export default function FuturasPage() {
   return (
-    <main className="min-h-screen bg-white">
-      <ProgramHeader
-        title={FUTURAS_DATA.title}
-        description={FUTURAS_DATA.shortDescription}
-        colors={FUTURAS_DATA.colors}
-        isHistorical={true}
-        year={FUTURAS_DATA.year}
-      />
-
-      <ProgramDescription
-        fullDescription={FUTURAS_DATA.fullDescription}
-        location={FUTURAS_DATA.location}
-        duration={FUTURAS_DATA.duration}
-        modality={FUTURAS_DATA.modality}
-        colors={FUTURAS_DATA.colors}
-      />
-
-      <Requirements
-        requirements={FUTURAS_DATA.requirements}
-        colors={FUTURAS_DATA.colors}
-      />
-
-      <EnrollmentInfo
-        description={FUTURAS_DATA.enrollmentInfo.description}
-        availablePeriod={FUTURAS_DATA.enrollmentInfo.availablePeriod}
-        colors={FUTURAS_DATA.colors}
-        isHistorical={true}
-      />
-
-      <ProgramStages
-        stages={FUTURAS_DATA.stages}
-        colors={FUTURAS_DATA.colors}
-      />
-
-      <ImpactStats
-        stats={FUTURAS_DATA.stats}
-        colors={FUTURAS_DATA.colors}
-      />
-
-      <SuccessStories
-        stories={FUTURAS_DATA.successStories}
-        colors={FUTURAS_DATA.colors}
-      />
-
-      <Gallery
-        type={FUTURAS_DATA.gallery.type}
-        url={FUTURAS_DATA.gallery.url}
-        images={FUTURAS_DATA.gallery.images}
-        colors={FUTURAS_DATA.colors}
-        title={FUTURAS_DATA.title}
-      />
-    </main>
+    <FuturasPageClient />
   );
 }

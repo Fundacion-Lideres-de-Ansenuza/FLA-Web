@@ -1,13 +1,5 @@
 import type { Metadata } from "next";
-import ProgramHeader from "@/components/programs/ProgramHeader";
-import ProgramDescription from "@/components/programs/ProgramDescription";
-import Requirements from "@/components/programs/Requirements";
-import EnrollmentInfo from "@/components/programs/EnrollmentInfo";
-import ProgramStages from "@/components/programs/ProgramStages";
-import ImpactStats from "@/components/programs/ImpactStats";
-import SuccessStories from "@/components/programs/SuccessStories";
-import Gallery from "@/components/programs/Gallery";
-import { AVENTURA_MATEMATICA_DATA } from "@/lib/data/programs";
+import AventuraMatematicaPageClient from "./AventuraMatematicaPageClient";
 
 export const metadata: Metadata = {
   title: "Aventura Matemágica - Concurso de Matemática Creativa | FLA",
@@ -38,57 +30,6 @@ export const metadata: Metadata = {
 
 export default function AventuraMatematicaPage() {
   return (
-    <main className="min-h-screen bg-white">
-      <ProgramHeader
-        title={AVENTURA_MATEMATICA_DATA.title}
-        description={AVENTURA_MATEMATICA_DATA.shortDescription}
-        colors={AVENTURA_MATEMATICA_DATA.colors}
-        isHistorical={true}
-        year={AVENTURA_MATEMATICA_DATA.year}
-      />
-
-      <ProgramDescription
-        fullDescription={AVENTURA_MATEMATICA_DATA.fullDescription}
-        location={AVENTURA_MATEMATICA_DATA.location}
-        duration={AVENTURA_MATEMATICA_DATA.duration}
-        modality={AVENTURA_MATEMATICA_DATA.modality}
-        colors={AVENTURA_MATEMATICA_DATA.colors}
-      />
-
-      <Requirements
-        requirements={AVENTURA_MATEMATICA_DATA.requirements}
-        colors={AVENTURA_MATEMATICA_DATA.colors}
-      />
-
-      <EnrollmentInfo
-        description={AVENTURA_MATEMATICA_DATA.enrollmentInfo.description}
-        availablePeriod={AVENTURA_MATEMATICA_DATA.enrollmentInfo.availablePeriod}
-        colors={AVENTURA_MATEMATICA_DATA.colors}
-        isHistorical={true}
-      />
-
-      <ProgramStages
-        stages={AVENTURA_MATEMATICA_DATA.stages}
-        colors={AVENTURA_MATEMATICA_DATA.colors}
-      />
-
-      <ImpactStats
-        stats={AVENTURA_MATEMATICA_DATA.stats}
-        colors={AVENTURA_MATEMATICA_DATA.colors}
-      />
-
-      <SuccessStories
-        stories={AVENTURA_MATEMATICA_DATA.successStories}
-        colors={AVENTURA_MATEMATICA_DATA.colors}
-      />
-
-      <Gallery
-        type={AVENTURA_MATEMATICA_DATA.gallery.type}
-        url={AVENTURA_MATEMATICA_DATA.gallery.url}
-        images={AVENTURA_MATEMATICA_DATA.gallery.images}
-        colors={AVENTURA_MATEMATICA_DATA.colors}
-        title={AVENTURA_MATEMATICA_DATA.title}
-      />
-    </main>
+    <AventuraMatematicaPageClient />
   );
 }

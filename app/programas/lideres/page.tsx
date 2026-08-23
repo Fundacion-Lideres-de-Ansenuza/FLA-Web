@@ -1,16 +1,6 @@
 import type { Metadata } from "next";
-import ProgramHeader from "@/components/programs/ProgramHeader";
-import ProgramDescription from "@/components/programs/ProgramDescription";
-import Requirements from "@/components/programs/Requirements";
-import EnrollmentInfo from "@/components/programs/EnrollmentInfo";
-import ProgramStages from "@/components/programs/ProgramStages";
-import SuccessStories from "@/components/programs/SuccessStories";
-import BlogLinks from "@/components/programs/BlogLinks";
-import FAQ from "@/components/programs/FAQ";
-import Sponsors from "@/components/programs/Sponsors";
-import CTASection from "@/components/programs/CTASection";
-import Gallery from "@/components/programs/Gallery";
 import { LIDERES_DATA } from "@/lib/data/programs";
+import LideresPageClient from "./LideresPageClient";
 
 export const metadata: Metadata = {
   title: "Líderes - Comunidad de Líderes FLA | Fundación Líderes de Ansenuza",
@@ -81,68 +71,8 @@ export default function LideresPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <main className="min-h-screen bg-white">
-      <ProgramHeader
-        title={LIDERES_DATA.title}
-        description={LIDERES_DATA.shortDescription}
-        colors={LIDERES_DATA.colors}
-        isHistorical={false}
-      />
 
-      <ProgramDescription
-        fullDescription={LIDERES_DATA.fullDescription}
-        location={LIDERES_DATA.location}
-        duration={LIDERES_DATA.duration}
-        modality={LIDERES_DATA.modality}
-      />
-
-      <Requirements
-        requirements={LIDERES_DATA.requirements}
-        colors={LIDERES_DATA.colors}
-      />
-
-      <EnrollmentInfo
-        description={LIDERES_DATA.enrollmentInfo.description}
-        availablePeriod={LIDERES_DATA.enrollmentInfo.availablePeriod}
-        colors={LIDERES_DATA.colors}
-        isHistorical={false}
-      />
-
-      <ProgramStages
-        stages={LIDERES_DATA.stages}
-        colors={LIDERES_DATA.colors}
-      />
-
-      <SuccessStories
-        stories={LIDERES_DATA.successStories}
-        colors={LIDERES_DATA.colors}
-      />
-
-      <BlogLinks
-        posts={LIDERES_DATA.blogPosts}
-        colors={LIDERES_DATA.colors}
-      />
-
-      <FAQ
-        faqs={LIDERES_DATA.faqs}
-        colors={LIDERES_DATA.colors}
-      />
-
-      <Sponsors sponsors={LIDERES_DATA.sponsors} />
-
-      <Gallery
-        type={LIDERES_DATA.gallery.type}
-        url={LIDERES_DATA.gallery.url}
-        images={LIDERES_DATA.gallery.images}
-        colors={LIDERES_DATA.colors}
-        title={LIDERES_DATA.title}
-      />
-
-      <CTASection
-        title={LIDERES_DATA.title}
-        colors={LIDERES_DATA.colors}
-      />
-      </main>
+      <LideresPageClient />
     </>
   );
 }
