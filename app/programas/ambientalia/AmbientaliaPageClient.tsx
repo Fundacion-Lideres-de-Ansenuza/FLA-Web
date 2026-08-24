@@ -40,14 +40,13 @@ export default function AmbientaliaPageClient() {
             <div className="max-w-6xl mx-auto grid gap-8 lg:grid-cols-[1fr_0.95fr] items-center">
               <div className="space-y-5">
                 <span className="inline-flex rounded-full bg-[#027353] px-4 py-1.5 text-xs font-black uppercase tracking-[0.22em] text-white shadow-lg">
-                  Identidad Ambientalia
+                  {data.identity?.badge}
                 </span>
                 <h2 className="text-4xl md:text-5xl font-contrail tracking-tight text-[#027353]">
-                  Una experiencia con más naturaleza, territorio e impacto visible
+                  {data.identity?.heading}
                 </h2>
                 <p className="max-w-2xl text-base md:text-lg leading-relaxed text-emerald-950/80 font-arimo">
-                  Reforzamos esta página con una atmósfera más verde para que respire mejor la esencia de Ambientalia:
-                  biodiversidad, liderazgo joven, comunidad y acción ambiental concreta.
+                  {data.identity?.description}
                 </p>
                 <div className="flex flex-wrap gap-3">
                   {data.stats.slice(0, 4).map((stat) => (

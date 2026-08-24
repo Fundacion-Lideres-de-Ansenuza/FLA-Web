@@ -170,6 +170,12 @@ export const AMBIENTALIA_DATA_EN: ProgramData = {
     primary: "#027353",
     secondary: "#568c30",
     accent: "#f2bf27"
+  },
+  identity: {
+    badge: "Ambientalia Identity",
+    heading: "An experience with more nature, territory and visible impact",
+    description:
+      "We refreshed this page with a greener atmosphere so the essence of Ambientalia can breathe: biodiversity, young leadership, community and concrete environmental action."
   }
 };
 
