@@ -30,7 +30,7 @@ export default function SuccessStories({ stories, colors }: SuccessStoriesProps)
             <p className="text-base text-gray-600 md:text-lg">{t("successStories.subtitle")}</p>
           </motion.div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid justify-items-center gap-6 text-center md:grid-cols-2 lg:grid-cols-3">
             {stories.map((story, index) => (
               <motion.div
                 key={index}

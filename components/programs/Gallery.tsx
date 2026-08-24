@@ -27,8 +27,11 @@ const FALLBACK_SLIDES: Slide[] = [
   { id: "scene-3", title: "Escena 03" },
 ];
 
-export default function Gallery({ images, colors, title }: GalleryProps) {
+export default function Gallery({ images, colors, title, type }: GalleryProps) {
   const { t } = useTranslation();
+  if (type === "images" && (!images || images.length === 0)) {
+    return null;
+  }
   const galleryTitle = title || t("gallery.title");
   const slides = useMemo<Slide[]>(() => {
     if (images && images.length > 0) {
