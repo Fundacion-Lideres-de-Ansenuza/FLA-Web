@@ -83,7 +83,7 @@ export default function ProgramasPage() {
                 </h2>
                 <div className="w-16 h-1.5 bg-[#bc2222] mx-auto rounded-full mt-3" />
               </div>
-              <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-12 items-start justify-items-center">
+              <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-12 items-start justify-items-center lg:[&>*:nth-last-child(1):nth-child(3n+1)]:col-start-2">
                 {activePrograms.map((program) => (
                   <Link
                     key={program.slug}
@@ -145,7 +145,7 @@ export default function ProgramasPage() {
                 {t('programs.historical.subtitle')}
               </p>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 items-start justify-items-center">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 items-start justify-items-center lg:[&>*:nth-last-child(1):nth-child(3n+1)]:col-start-2">
                 {historicalPrograms.map((program) => (
                   <Link
                     key={program.slug}

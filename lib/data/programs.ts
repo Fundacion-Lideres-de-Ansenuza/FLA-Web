@@ -91,7 +91,7 @@ export const AMBIENTALIA_DATA: ProgramData = {
     {
       title: "Salidas de campo",
       description: "Visitas a áreas naturales de la región que permiten a los participantes observar la biodiversidad local, comprender problemáticas ambientales de forma directa y fortalecer su vínculo con el sitio.",
-      icon: "TreePine"
+      icon: "Binoculars"
     },
     {
       title: "Eventos internacionales y comunitarios",
@@ -101,12 +101,12 @@ export const AMBIENTALIA_DATA: ProgramData = {
     {
       title: "Involucramiento comunitario",
       description: "Un Compromiso de difusión promueve la comunicación a la comunidad de los proyectos ambientales realizados, la realización de talleres comunitarios y la creación de alianzas locales.",
-      icon: "Users"
+      icon: "Megaphone"
     },
     {
       title: "Liderazgo",
       description: "Se brinda seguimiento personalizado a cada participante para poder promover su desarrollo de habilidades blandas.",
-      icon: "Award"
+      icon: "Compass"
     },
     {
       title: "Interacción",
@@ -121,7 +121,7 @@ export const AMBIENTALIA_DATA: ProgramData = {
     {
       title: "Foro de Líderes Ambientales",
       description: "La última actividad del año reúne a los participantes más destacados en una jornada donde participan en capacitaciones intensivas, talleres y charlas con expertos en conservación y desarrollo sostenible.",
-      icon: "MessageSquare"
+      icon: "Presentation"
     }
   ],
   stats: [
@@ -350,12 +350,12 @@ export const POTENCIATE_DATA: ProgramData = {
     {
       title: "CONÓCETE",
       description: "Etapa de autoconocimiento donde los participantes exploraron sus fortalezas, valores y pasiones.",
-      icon: "User"
+      icon: "HeartHandshake"
     },
     {
       title: "INSPÍRATE",
       description: "Networking con líderes y especialistas que inspiraron a los participantes a través de sus experiencias.",
-      icon: "Lightbulb"
+      icon: "Sparkles"
     },
     {
       title: "ENTRÁ EN ACCIÓN",
@@ -429,17 +429,17 @@ export const FUTURAS_DATA: ProgramData = {
     {
       title: "Mentoría Individual",
       description: "Acompañamiento personalizado en duplas mentora-aprendiz para el desarrollo de habilidades de liderazgo.",
-      icon: "Users"
+      icon: "HeartHandshake"
     },
     {
       title: "Talleres Especializados",
       description: "Capacitaciones en gestión de proyectos, liderazgo y networking.",
-      icon: "BookOpen"
+      icon: "PencilRuler"
     },
     {
       title: "Cumbre Presencial",
       description: "Encuentro presencial de mujeres líderes en Miramar de Ansenuza, Córdoba.",
-      icon: "MapPin"
+      icon: "Landmark"
     }
   ],
   stats: [
@@ -512,12 +512,12 @@ export const IMPULSATEC_DATA: ProgramData = {
     {
       title: "Mentoría con EY GDS",
       description: "Acompañamiento quincenal de mentores profesionales de EY GDS Argentina.",
-      icon: "Users"
+      icon: "Briefcase"
     },
     {
       title: "Experiencia Presencial",
       description: "Los 15 participantes destacados visitaron las oficinas de EY GDS en Buenos Aires y participaron en actividades culturales y de networking.",
-      icon: "Building"
+      icon: "Building2"
     }
   ],
   stats: [
@@ -599,7 +599,7 @@ export const CIENCIA_FUERA_DE_LA_CAJA_DATA: ProgramData = {
     {
       title: "Foros Creativos",
       description: "Desarrollo del pensamiento lateral a través de foros creativos con un promedio de 73.4 entradas por semana.",
-      icon: "MessageSquare"
+      icon: "MessagesSquare"
     },
     {
       title: "Premio Inmersivo",
@@ -693,12 +693,12 @@ export const DECIDIR_CON_CIENCIA_DATA: ProgramData = {
     {
       title: "Trabajo entre encuentros",
       description: "El curso continúa trabajando con el acompañamiento del docente referente, profundizando el análisis y desarrollando una propuesta de solución.",
-      icon: "Users"
+      icon: "Microscope"
     },
     {
       title: "Segundo encuentro presencial",
       description: "Los equipos presentan sus soluciones y comparten el proceso recorrido, las evidencias utilizadas y las decisiones tomadas.",
-      icon: "Award"
+      icon: "Presentation"
     }
   ],
   stats: [
@@ -867,7 +867,7 @@ export const LIDERES_DATA: ProgramData = {
     {
       title: "Acompañamiento personalizado",
       description: "Acompañamiento personalizado en la continuidad de tus proyectos para impulsar el desarrollo continuo de tu liderazgo.",
-      icon: "Users"
+      icon: "HandHeart"
     },
     {
       title: "Encuentros presenciales",

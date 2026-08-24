@@ -5,16 +5,34 @@ import {
   GraduationCap,
   Monitor,
   School,
-  TreePine,
+  Binoculars,
   Globe,
   Users,
+  User,
   Award,
   Gamepad2,
   Trophy,
   MessageSquare,
+  MessagesSquare,
   BookOpen,
   Rocket,
   PartyPopper,
+  Sparkles,
+  HeartHandshake,
+  PencilRuler,
+  Landmark,
+  Briefcase,
+  Building2,
+  Wand2,
+  Gift,
+  Video,
+  Microscope,
+  HandHeart,
+  MapPin,
+  Lightbulb,
+  Compass,
+  Megaphone,
+  Presentation,
 } from "lucide-react";
 import type { ProgramColors, Stage } from "./types";
 import { useTranslation } from "react-i18next";
@@ -23,16 +41,34 @@ const iconMap: Record<string, React.ElementType> = {
   GraduationCap,
   Monitor,
   School,
-  TreePine,
+  Binoculars,
   Globe,
   Users,
+  User,
   Award,
   Gamepad2,
   Trophy,
   MessageSquare,
+  MessagesSquare,
   BookOpen,
   Rocket,
   PartyPopper,
+  Sparkles,
+  HeartHandshake,
+  PencilRuler,
+  Landmark,
+  Briefcase,
+  Building2,
+  Wand2,
+  Gift,
+  Video,
+  Microscope,
+  HandHeart,
+  MapPin,
+  Lightbulb,
+  Compass,
+  Megaphone,
+  Presentation,
 };
 
 interface ProgramStagesProps {
@@ -59,7 +95,7 @@ export default function ProgramStages({ stages, colors }: ProgramStagesProps) {
             <p className="text-base text-gray-600 md:text-lg">{t("programDetail.stagesSubtitle")}</p>
           </motion.div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:[&>*:nth-last-child(1):nth-child(3n+1)]:col-start-2">
             {stages.map((stage, index) => {
               const IconComponent = stage.icon ? iconMap[stage.icon] : null;
 

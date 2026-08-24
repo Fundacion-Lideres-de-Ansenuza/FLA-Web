@@ -47,7 +47,7 @@ export const AMBIENTALIA_DATA_EN: ProgramData = {
       title: 'Field trips',
       description:
         'Visits to natural areas in the region allow participants to observe local biodiversity, understand environmental issues firsthand, and strengthen their connection to the site.',
-      icon: 'TreePine'
+      icon: 'Binoculars'
     },
     {
       title: 'International and community events',
@@ -59,13 +59,13 @@ export const AMBIENTALIA_DATA_EN: ProgramData = {
       title: 'Community engagement',
       description:
         'An outreach commitment promotes sharing environmental projects with the wider community, running community workshops, and building local partnerships.',
-      icon: 'Users'
+      icon: 'Megaphone'
     },
     {
       title: 'Leadership',
       description:
         'Each participant receives personalized follow-up to support the development of soft skills.',
-      icon: 'Award'
+      icon: 'Compass'
     },
     {
       title: 'Interaction',
@@ -83,7 +83,7 @@ export const AMBIENTALIA_DATA_EN: ProgramData = {
       title: 'Environmental Leaders Forum',
       description:
         'The final activity of the year brings together the most outstanding participants for a day of intensive training, workshops, and talks with experts in conservation and sustainable development.',
-      icon: 'MessageSquare'
+      icon: 'Presentation'
     }
   ],
   stats: [
@@ -322,13 +322,13 @@ export const POTENCIATE_DATA_EN: ProgramData = {
       title: 'Know Yourself',
       description:
         'A self-awareness stage where participants explored their strengths, values, and passions.',
-      icon: 'User'
+      icon: 'HeartHandshake'
     },
     {
       title: 'Get Inspired',
       description:
         'Networking with leaders and specialists who inspired participants through their experiences.',
-      icon: 'Lightbulb'
+      icon: 'Sparkles'
     },
     {
       title: 'Take Action',
@@ -407,18 +407,18 @@ export const FUTURAS_DATA_EN: ProgramData = {
       title: 'Individual mentoring',
       description:
         'Personalized support in mentor-learner pairs for leadership skill development.',
-      icon: 'Users'
+      icon: 'HeartHandshake'
     },
     {
       title: 'Specialized workshops',
       description: 'Training in project management, leadership, and networking.',
-      icon: 'BookOpen'
+      icon: 'PencilRuler'
     },
     {
       title: 'In-person summit',
       description:
         'In-person gathering of women leaders in Miramar de Ansenuza, Cordoba.',
-      icon: 'MapPin'
+      icon: 'Landmark'
     }
   ],
   stats: [
@@ -494,13 +494,13 @@ export const IMPULSATEC_DATA_EN: ProgramData = {
       title: 'Mentoring with EY GDS',
       description:
         'Biweekly support from professional mentors at EY GDS Argentina.',
-      icon: 'Users'
+      icon: 'Briefcase'
     },
     {
       title: 'In-person experience',
       description:
         'The 15 selected participants visited EY GDS offices in Buenos Aires and joined cultural and networking activities.',
-      icon: 'Building'
+      icon: 'Building2'
     }
   ],
   stats: [
@@ -588,7 +588,7 @@ export const CIENCIA_FUERA_DE_LA_CAJA_DATA_EN: ProgramData = {
       title: 'Creative forums',
       description:
         'Development of lateral thinking through creative forums averaging 73.4 posts per week.',
-      icon: 'MessageSquare'
+      icon: 'MessagesSquare'
     },
     {
       title: 'Immersive prize',
@@ -690,13 +690,13 @@ export const DECIDIR_CON_CIENCIA_DATA_EN: ProgramData = {
       title: 'Work between sessions',
       description:
         'The course continues working with the support of the referring teacher, deepening the analysis and developing a solution proposal.',
-      icon: 'Users'
+      icon: 'Microscope'
     },
     {
       title: 'Second in-person session',
       description:
         'Teams present their solutions and share the process, the evidence used, and the decisions made.',
-      icon: 'Award'
+      icon: 'Presentation'
     }
   ],
   stats: [
@@ -887,7 +887,7 @@ export const LIDERES_DATA_EN: ProgramData = {
       title: 'Personalized support',
       description:
         'Personalized support for the continuity of your projects to drive the ongoing development of your leadership.',
-      icon: 'Users'
+      icon: 'HandHeart'
     },
     {
       title: 'In-person gatherings',
