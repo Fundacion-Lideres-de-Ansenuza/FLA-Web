@@ -24,25 +24,25 @@ export default function AmbientaliaPageClient() {
   return (
     <>
 
-      <main className="min-h-screen bg-[linear-gradient(180deg,#ffffff_0%,#f3fff8_18%,#ffffff_42%,#ffffff_100%)]">
+      <main className="min-h-screen bg-[linear-gradient(180deg,#ffffff_0%,#f4f9ee_18%,#ffffff_42%,#ffffff_100%)]">
         <ProgramHeader
           title={data.title}
           description={data.shortDescription}
           colors={data.colors}
         />
 
-        <section className="relative overflow-hidden bg-[linear-gradient(135deg,#ecfdf5_0%,#ffffff_40%,#d1fae5_100%)] py-14 md:py-16">
+        <section className="relative overflow-hidden bg-[linear-gradient(135deg,#eef5e2_0%,#ffffff_40%,#accf7a_100%)] py-14 md:py-16">
           <div className="absolute inset-0 opacity-60">
-            <div className="absolute -left-12 top-6 h-36 w-36 rounded-full bg-[#34d399]/30 blur-3xl" />
-            <div className="absolute right-0 top-0 h-44 w-44 rounded-full bg-[#10b981]/20 blur-3xl" />
+            <div className="absolute -left-12 top-6 h-36 w-36 rounded-full bg-[#b2cc3b]/30 blur-3xl" />
+            <div className="absolute right-0 top-0 h-44 w-44 rounded-full bg-[#027353]/20 blur-3xl" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-6xl mx-auto grid gap-8 lg:grid-cols-[1fr_0.95fr] items-center">
               <div className="space-y-5">
-                <span className="inline-flex rounded-full bg-[#10b981] px-4 py-1.5 text-xs font-black uppercase tracking-[0.22em] text-white shadow-lg">
+                <span className="inline-flex rounded-full bg-[#027353] px-4 py-1.5 text-xs font-black uppercase tracking-[0.22em] text-white shadow-lg">
                   Identidad Ambientalia
                 </span>
-                <h2 className="text-4xl md:text-5xl font-contrail tracking-tight text-[#064e3b]">
+                <h2 className="text-4xl md:text-5xl font-contrail tracking-tight text-[#027353]">
                   Una experiencia con más naturaleza, territorio e impacto visible
                 </h2>
                 <p className="max-w-2xl text-base md:text-lg leading-relaxed text-emerald-950/80 font-arimo">
@@ -53,10 +53,10 @@ export default function AmbientaliaPageClient() {
                   {data.stats.slice(0, 4).map((stat) => (
                     <div
                       key={stat.label}
-                      className="rounded-full border border-[#86efac] bg-white/85 px-4 py-2 shadow-sm"
+                      className="rounded-full border border-[#accf7a] bg-white/85 px-4 py-2 shadow-sm"
                     >
-                      <span className="font-contrail text-xl text-[#047857]">{stat.value}</span>
-                      <span className="ml-2 text-sm font-arimo text-[#14532d]">{stat.label}</span>
+                      <span className="font-contrail text-xl text-[#568c30]">{stat.value}</span>
+                      <span className="ml-2 text-sm font-arimo text-[#027353]">{stat.label}</span>
                     </div>
                   ))}
                 </div>
