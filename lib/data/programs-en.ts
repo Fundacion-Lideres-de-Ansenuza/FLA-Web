@@ -644,6 +644,124 @@ export const CIENCIA_FUERA_DE_LA_CAJA_DATA_EN: ProgramData = {
     images: []
   },
   colors: {
+    primary: "#06b6d4",
+    secondary: "#0891b2",
+    accent: "#22d3ee"
+  }
+};
+
+export const DECIDIR_CON_CIENCIA_DATA_EN: ProgramData = {
+  title: 'Decidir con Ciencia',
+  slug: 'decidir-con-ciencia',
+  status: 'active',
+  year: '2026',
+  shortDescription:
+    'Educational program for secondary schools that strengthens scientific thinking to analyze information, evaluate evidence, and make well-founded decisions.',
+  fullDescription:
+    'Decidir con Ciencia is an educational program aimed at secondary-level institutions. The proposal seeks to strengthen scientific thinking skills that allow students to analyze information, evaluate evidence, consider different alternatives, and make well-founded decisions when facing real challenges. Through the Thinking-Based Learning (TBL) methodology and a STEM approach, students work collaboratively to build solution proposals while developing tools they can apply in different learning contexts and in everyday life. The program also supports teaching teams, providing strategies and resources to foster the development of these skills in their teaching practice. In a world where young people face increasingly complex challenges, learning to make informed decisions, analyze evidence, and think critically becomes a fundamental life skill: having information is not enough; you need to know what to do with it.',
+  location: 'Educational institutions in Cordoba, Argentina',
+  duration: 'September and October 2026',
+  modality:
+    'In-person sessions at the educational institution, with an initial virtual stage for teachers.',
+  requirements: [
+    'Secondary-level educational institutions, urban or rural, state-run or private.',
+    'Students aged 14 to 20.',
+    'For this first edition, priority is given to institutions in Cordoba that work in vulnerable contexts, are located in rural or hard-to-reach areas, lack training or tools related to scientific competencies, or do not regularly use decision-making as a scientific thinking tool.',
+    'Enrollment is per full course group.'
+  ],
+  enrollmentInfo: {
+    description:
+      'Applications are submitted through the program enrollment form, where details about the educational institution, the referring teacher, and motivations for participating are completed. Enrollment does not guarantee automatic admission: institutions will be selected according to the criteria established in the program rules.'
+  },
+  stages: [
+    {
+      title: 'Virtual teacher awareness session',
+      description:
+        'Referring teachers will learn about the proposal, the methodology, and the tools to support their students.',
+      icon: 'Video'
+    },
+    {
+      title: 'First in-person session',
+      description:
+        'A real challenge is presented and students incorporate thinking tools to start addressing it.',
+      icon: 'Lightbulb'
+    },
+    {
+      title: 'Work between sessions',
+      description:
+        'The course continues working with the support of the referring teacher, deepening the analysis and developing a solution proposal.',
+      icon: 'Users'
+    },
+    {
+      title: 'Second in-person session',
+      description:
+        'Teams present their solutions and share the process, the evidence used, and the decisions made.',
+      icon: 'Award'
+    }
+  ],
+  stats: [
+    {
+      label: 'In-person sessions per course',
+      value: '2'
+    },
+    {
+      label: 'Student age range',
+      value: '14-20'
+    },
+    {
+      label: 'Cost for institutions',
+      value: '$0'
+    },
+    {
+      label: 'Miramar de Ansenuza experience to be raffled',
+      value: '1'
+    }
+  ],
+  successStories: [
+    {
+      title: 'Backed methodology',
+      description:
+        'Work based on Thinking-Based Learning (TBL) and a STEM approach, with tools applicable to different learning contexts.'
+    },
+    {
+      title: 'Comprehensive support',
+      description:
+        'Full implementation of the educational proposal with support from the Fundación team and materials for all activities.'
+    },
+    {
+      title: 'Educational kit and certification',
+      description:
+        'Bibliography, worksheets, experimental and playful materials, plus certification for teachers and students.'
+    }
+  ],
+  blogPosts: [],
+  faqs: [
+    {
+      question: 'Does participation cost anything?',
+      answer:
+        'No. Participation is completely free for the selected institutions.'
+    },
+    {
+      question: 'Can a group of students enroll?',
+      answer:
+        'No. Enrollment is per full course group, since the proposal is designed to work with the group as a whole.'
+    },
+    {
+      question: 'Does the referring teacher have to be a Natural Sciences teacher?',
+      answer:
+        'No. Any teacher interested in the proposal and committed to supporting the course throughout the whole process can take part.'
+    }
+  ],
+  sponsors: [
+    {
+      name: 'STEM Fund by Latimpacto, driven by Lenovo and BHP Foundation'
+    }
+  ],
+  gallery: {
+    type: 'images',
+    images: []
+  },
+  colors: {
     primary: "#6a29b6",
     secondary: "#fd7a02",
     accent: "#3ec5a1"
@@ -864,7 +982,8 @@ export const ALL_PROGRAMS_EN: ProgramData[] = [
   IMPULSATEC_DATA_EN,
   CIENCIA_FUERA_DE_LA_CAJA_DATA_EN,
   AVENTURA_MATEMATICA_DATA_EN,
-  LIDERES_DATA_EN
+  LIDERES_DATA_EN,
+  DECIDIR_CON_CIENCIA_DATA_EN
 ];
 
 export const ACTIVE_PROGRAMS_EN: ProgramData[] = ALL_PROGRAMS_EN.filter(

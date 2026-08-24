@@ -15,7 +15,8 @@ function getLogoFileName(title: string): string {
     "FUTURAS": "Futuras",
     "ImpulsaTEC": "Impulsatec",
     "Ciencia Fuera de la Caja": "Ciencia fuera de la caja",
-    "Aventura Matemágica": "Aventura Matemagica"
+    "Aventura Matemágica": "Aventura Matemagica",
+    "Decidir con Ciencia": "Decidir_con_Ciencia.png"
   }
 
   return logoMap[title] || title
@@ -27,7 +28,7 @@ export default function CurrentPrograms() {
   const programs = ACTIVE_PROGRAMS.map(program => ({
     name: program.title,
     slug: program.slug,
-    logo: `/images/Logos/${getLogoFileName(program.title)}.webp`,
+    logo: getLogoFileName(program.title).endsWith(".png") ? `/images/Logos/${getLogoFileName(program.title)}` : `/images/Logos/${getLogoFileName(program.title)}.webp`,
     href: `/programas/${program.slug}`,
     description: program.shortDescription,
     colors: program.colors

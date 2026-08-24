@@ -654,6 +654,110 @@ export const CIENCIA_FUERA_DE_LA_CAJA_DATA: ProgramData = {
     ]
   },
   colors: {
+    primary: "#06b6d4",
+    secondary: "#0891b2",
+    accent: "#22d3ee"
+  }
+};
+
+export const DECIDIR_CON_CIENCIA_DATA: ProgramData = {
+  title: "Decidir con Ciencia",
+  slug: "decidir-con-ciencia",
+  status: 'active',
+  year: "2026",
+  shortDescription: "Programa educativo para escuelas secundarias que fortalece el pensamiento científico para analizar información, evaluar evidencias y tomar decisiones fundamentadas.",
+  fullDescription: "Decidir con ciencia es un programa educativo dirigido a instituciones de nivel secundario. La propuesta busca fortalecer habilidades de pensamiento científico que permitan analizar información, evaluar evidencias, considerar distintas alternativas y tomar decisiones fundamentadas frente a desafíos reales. A través de la metodología Thinking-Based Learning (TBL) y un enfoque STEM, los estudiantes trabajan de manera colaborativa en la construcción de propuestas de solución, mientras desarrollan herramientas que pueden aplicar en diferentes contextos de aprendizaje y en su vida cotidiana. El programa también acompaña a los equipos docentes, brindándoles estrategias y recursos para favorecer el desarrollo de estas habilidades en sus prácticas de enseñanza. En un mundo donde las y los jóvenes enfrentan desafíos cada vez más complejos, aprender a tomar decisiones informadas, analizar evidencias y pensar críticamente se vuelve una habilidad fundamental para la vida: no alcanza sólo con tener información, sino saber qué hacer con ella.",
+  location: "Instituciones educativas de Córdoba",
+  duration: "Septiembre y octubre de 2026",
+  modality: "Jornadas presenciales en la institución educativa, con instancia virtual inicial para docentes.",
+  requirements: [
+    "Instituciones educativas de nivel secundario, urbanas o rurales, de gestión estatal o privada",
+    "Estudiantes de entre 14 y 20 años",
+    "En esta primera edición, se priorizan instituciones de Córdoba que trabajen en contextos de vulnerabilidad, estén en zonas rurales o de difícil acceso, no cuenten con formación vinculada a competencias científicas o no trabajen habitualmente la toma de decisiones como herramienta de pensamiento científico",
+    "La inscripción se realiza por curso completo"
+  ],
+  enrollmentInfo: {
+    description: "La postulación se realiza a través del formulario de inscripción del programa, donde se completan datos de la institución educativa, el docente referente y las motivaciones a participar. La inscripción no implica la incorporación automática: las instituciones serán seleccionadas según los criterios establecidos en las bases."
+  },
+  stages: [
+    {
+      title: "Jornada de Sensibilización docente virtual",
+      description: "Los docentes referentes conocerán la propuesta, la metodología y las herramientas para acompañar a sus estudiantes.",
+      icon: "Video"
+    },
+    {
+      title: "Primer encuentro presencial",
+      description: "Se presenta un desafío real y los estudiantes incorporan herramientas de pensamiento para comenzar a abordarlo.",
+      icon: "Lightbulb"
+    },
+    {
+      title: "Trabajo entre encuentros",
+      description: "El curso continúa trabajando con el acompañamiento del docente referente, profundizando el análisis y desarrollando una propuesta de solución.",
+      icon: "Users"
+    },
+    {
+      title: "Segundo encuentro presencial",
+      description: "Los equipos presentan sus soluciones y comparten el proceso recorrido, las evidencias utilizadas y las decisiones tomadas.",
+      icon: "Award"
+    }
+  ],
+  stats: [
+    {
+      label: "Encuentros presenciales por curso",
+      value: "2"
+    },
+    {
+      label: "Edad de los estudiantes",
+      value: "14-20"
+    },
+    {
+      label: "Costo para las instituciones",
+      value: "$0"
+    },
+    {
+      label: "Experiencia en Miramar de Ansenuza sorteada",
+      value: "1"
+    }
+  ],
+  successStories: [
+    {
+      title: "Metodología con respaldo",
+      description: "Trabajo basado en Thinking-Based Learning (TBL) y enfoque STEM, con herramientas aplicables en distintos contextos de aprendizaje."
+    },
+    {
+      title: "Acompañamiento integral",
+      description: "Implementación completa de la propuesta con acompañamiento del equipo de la Fundación y materiales para todas las actividades."
+    },
+    {
+      title: "Kit educativo y certificación",
+      description: "Bibliografía, fichas de trabajo, materiales experimentales y lúdicos, más certificación para docentes y estudiantes."
+    }
+  ],
+  blogPosts: [],
+  faqs: [
+    {
+      question: "¿La participación tiene costo?",
+      answer: "No. La participación es totalmente gratuita para las instituciones seleccionadas."
+    },
+    {
+      question: "¿Se puede inscribir un grupo de estudiantes?",
+      answer: "No. La inscripción se realiza por curso completo, ya que la propuesta está diseñada para trabajar con el grupo en su conjunto."
+    },
+    {
+      question: "¿El docente referente tiene que ser de Ciencias Naturales?",
+      answer: "No. Puede ser cualquier docente interesado/a en la propuesta y comprometido/a con acompañar al curso durante todo el recorrido."
+    }
+  ],
+  sponsors: [
+    {
+      name: "Fondo STEM de Latimpacto, impulsado por Lenovo y BHP Foundation"
+    }
+  ],
+  gallery: {
+    type: 'images',
+    images: []
+  },
+  colors: {
     primary: "#6a29b6",
     secondary: "#fd7a02",
     accent: "#3ec5a1"
@@ -850,7 +954,8 @@ export const ALL_PROGRAMS: ProgramData[] = [
   IMPULSATEC_DATA,
   CIENCIA_FUERA_DE_LA_CAJA_DATA,
   AVENTURA_MATEMATICA_DATA,
-  LIDERES_DATA
+  LIDERES_DATA,
+  DECIDIR_CON_CIENCIA_DATA
 ];
 
 export const ACTIVE_PROGRAMS: ProgramData[] = ALL_PROGRAMS.filter(p => p.status === 'active');

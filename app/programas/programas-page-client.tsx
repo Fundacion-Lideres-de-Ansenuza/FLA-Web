@@ -15,7 +15,8 @@ const LOGO_PRESENTATION: Record<string, string> = {
   "FUTURAS": "max-w-[82%] max-h-[66%]",
   "ImpulsaTEC": "max-w-[84%] max-h-[66%]",
   "Ciencia Fuera de la Caja": "max-w-[86%] max-h-[64%]",
-  "Aventura Matemágica": "max-w-[86%] max-h-[66%]",
+    "Aventura Matemágica": "max-w-[86%] max-h-[66%]",
+    "Decidir con Ciencia": "max-w-[86%] max-h-[64%]",
   "Academia de conservación": "max-w-[84%] max-h-[66%]",
   "Comprometidxs": "max-w-[82%] max-h-[64%]",
 }
@@ -29,10 +30,16 @@ function getLogoFileName(title: string): string {
     "FUTURAS": "Futuras",
     "ImpulsaTEC": "Impulsatec",
     "Ciencia Fuera de la Caja": "Ciencia fuera de la caja",
-    "Aventura Matemágica": "Aventura Matemagica"
+    "Aventura Matemágica": "Aventura Matemagica",
+    "Decidir con Ciencia": "Decidir_con_Ciencia.png"
   };
 
   return logoMap[title] || title;
+}
+
+function getLogoSrc(title: string): string {
+  const fileName = getLogoFileName(title);
+  return fileName.endsWith(".png") ? `/images/Logos/${fileName}` : `/images/Logos/${fileName}.webp`;
 }
 
 function getLogoPresentation(title: string): string {
@@ -94,7 +101,7 @@ export default function ProgramasPage() {
                         <div className="absolute inset-0 opacity-30" style={{ backgroundColor: `${program.colors.accent}30`, borderRadius: generateBlobRadius(program.title + 'bg') }} />
                         <div className="relative z-10 flex h-40 w-60 items-center justify-center rounded-[28px] border border-white/50 bg-white/65 p-5 backdrop-blur-sm shadow-[0_12px_30px_rgba(255,255,255,0.18)]">
                           <Image
-                            src={`/images/Logos/${getLogoFileName(program.title)}.webp`}
+                            src={getLogoSrc(program.title)}
                             alt={program.title}
                             width={300}
                             height={150}
@@ -156,7 +163,7 @@ export default function ProgramasPage() {
                         <div className="absolute inset-0 opacity-20" style={{ backgroundColor: `${program.colors.accent}20`, borderRadius: generateBlobRadius(program.title + 'hist') }} />
                         <div className="relative z-10 flex h-32 w-48 items-center justify-center rounded-[24px] border border-white/60 bg-white/72 p-4 backdrop-blur-sm shadow-[0_10px_24px_rgba(255,255,255,0.18)]">
                           <Image
-                            src={`/images/Logos/${getLogoFileName(program.title)}.webp`}
+                            src={getLogoSrc(program.title)}
                             alt={program.title}
                             width={200}
                             height={100}
