@@ -1,16 +1,6 @@
 ﻿import type { Metadata } from "next";
-import ProgramHeader from "@/components/programs/ProgramHeader";
-import ProgramDescription from "@/components/programs/ProgramDescription";
-import Requirements from "@/components/programs/Requirements";
-import EnrollmentInfo from "@/components/programs/EnrollmentInfo";
-import ProgramStages from "@/components/programs/ProgramStages";
-import ImpactStats from "@/components/programs/ImpactStats";
-import SuccessStories from "@/components/programs/SuccessStories";
-import BlogLinks from "@/components/programs/BlogLinks";
-import FAQ from "@/components/programs/FAQ";
-import CTASection from "@/components/programs/CTASection";
-import Gallery from "@/components/programs/Gallery";
 import { SOMOS_DATA } from "@/lib/data/programs";
+import SomosPageClient from "./SomosPageClient";
 
 export const metadata: Metadata = {
   title: "SOMOS - Programa de Liderazgo en Diversidad para Jóvenes | FLA",
@@ -186,71 +176,7 @@ export default function SomosPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <main className="min-h-screen bg-white">
-        <ProgramHeader
-          title={SOMOS_DATA.title}
-          description={SOMOS_DATA.shortDescription}
-          colors={SOMOS_DATA.colors}
-        />
-
-        <ProgramDescription
-          fullDescription={SOMOS_DATA.fullDescription}
-          location={SOMOS_DATA.location}
-          duration={SOMOS_DATA.duration}
-          modality={SOMOS_DATA.modality}
-        />
-
-        <Requirements
-          requirements={SOMOS_DATA.requirements}
-          colors={SOMOS_DATA.colors}
-        />
-
-        <EnrollmentInfo
-          description={SOMOS_DATA.enrollmentInfo.description}
-          registrationLabel={SOMOS_DATA.enrollmentInfo.registrationLabel}
-          registrationUrl={SOMOS_DATA.enrollmentInfo.registrationUrl}
-          availablePeriod={SOMOS_DATA.enrollmentInfo.availablePeriod}
-          colors={SOMOS_DATA.colors}
-        />
-
-        <ProgramStages
-          stages={SOMOS_DATA.stages}
-          colors={SOMOS_DATA.colors}
-        />
-
-        <ImpactStats
-          stats={SOMOS_DATA.stats}
-          colors={SOMOS_DATA.colors}
-        />
-
-        <SuccessStories
-          stories={SOMOS_DATA.successStories}
-          colors={SOMOS_DATA.colors}
-        />
-
-        <BlogLinks
-          posts={SOMOS_DATA.blogPosts}
-          colors={SOMOS_DATA.colors}
-        />
-
-      <FAQ
-        faqs={SOMOS_DATA.faqs}
-        colors={SOMOS_DATA.colors}
-      />
-
-      <Gallery
-        type={SOMOS_DATA.gallery.type}
-        url={SOMOS_DATA.gallery.url}
-        images={SOMOS_DATA.gallery.images}
-        colors={SOMOS_DATA.colors}
-        title={SOMOS_DATA.title}
-      />
-
-      <CTASection
-        title={SOMOS_DATA.title}
-        colors={SOMOS_DATA.colors}
-      />
-      </main>
+      <SomosPageClient />
     </>
   );
 }

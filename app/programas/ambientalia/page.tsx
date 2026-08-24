@@ -1,17 +1,6 @@
 ﻿import type { Metadata } from "next";
-import ProgramHeader from "@/components/programs/ProgramHeader";
-import ProgramDescription from "@/components/programs/ProgramDescription";
-import Requirements from "@/components/programs/Requirements";
-import EnrollmentInfo from "@/components/programs/EnrollmentInfo";
-import ProgramStages from "@/components/programs/ProgramStages";
-import ImpactStats from "@/components/programs/ImpactStats";
-import SuccessStories from "@/components/programs/SuccessStories";
-import BlogLinks from "@/components/programs/BlogLinks";
-import FAQ from "@/components/programs/FAQ";
-import Sponsors from "@/components/programs/Sponsors";
-import Gallery from "@/components/programs/Gallery";
-import CTASection from "@/components/programs/CTASection";
 import { AMBIENTALIA_DATA } from "@/lib/data/programs";
+import AmbientaliaPageClient from "./AmbientaliaPageClient";
 
 export const metadata: Metadata = {
   title: "Experiencia Ambientalia - Programa de Educación Ambiental para Jóvenes | FLA",
@@ -182,106 +171,7 @@ export default function AmbientaliaPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <main className="min-h-screen bg-[linear-gradient(180deg,#ffffff_0%,#f3fff8_18%,#ffffff_42%,#ffffff_100%)]">
-        <ProgramHeader
-          title={AMBIENTALIA_DATA.title}
-          description={AMBIENTALIA_DATA.shortDescription}
-          colors={AMBIENTALIA_DATA.colors}
-        />
-
-        <section className="relative overflow-hidden bg-[linear-gradient(135deg,#ecfdf5_0%,#ffffff_40%,#d1fae5_100%)] py-14 md:py-16">
-          <div className="absolute inset-0 opacity-60">
-            <div className="absolute -left-12 top-6 h-36 w-36 rounded-full bg-[#34d399]/30 blur-3xl" />
-            <div className="absolute right-0 top-0 h-44 w-44 rounded-full bg-[#10b981]/20 blur-3xl" />
-          </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-6xl mx-auto grid gap-8 lg:grid-cols-[1fr_0.95fr] items-center">
-              <div className="space-y-5">
-                <span className="inline-flex rounded-full bg-[#10b981] px-4 py-1.5 text-xs font-black uppercase tracking-[0.22em] text-white shadow-lg">
-                  Identidad Ambientalia
-                </span>
-                <h2 className="text-4xl md:text-5xl font-contrail tracking-tight text-[#064e3b]">
-                  Una experiencia con más naturaleza, territorio e impacto visible
-                </h2>
-                <p className="max-w-2xl text-base md:text-lg leading-relaxed text-emerald-950/80 font-arimo">
-                  Reforzamos esta página con una atmósfera más verde para que respire mejor la esencia de Ambientalia:
-                  biodiversidad, liderazgo joven, comunidad y acción ambiental concreta.
-                </p>
-                <div className="flex flex-wrap gap-3">
-                  {AMBIENTALIA_DATA.stats.slice(0, 4).map((stat) => (
-                    <div
-                      key={stat.label}
-                      className="rounded-full border border-[#86efac] bg-white/85 px-4 py-2 shadow-sm"
-                    >
-                      <span className="font-contrail text-xl text-[#047857]">{stat.value}</span>
-                      <span className="ml-2 text-sm font-arimo text-[#14532d]">{stat.label}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-        <ProgramDescription
-          fullDescription={AMBIENTALIA_DATA.fullDescription}
-          location={AMBIENTALIA_DATA.location}
-          duration={AMBIENTALIA_DATA.duration}
-          modality={AMBIENTALIA_DATA.modality}
-        />
-
-        <Requirements
-          requirements={AMBIENTALIA_DATA.requirements}
-          colors={AMBIENTALIA_DATA.colors}
-        />
-
-        <EnrollmentInfo
-          description={AMBIENTALIA_DATA.enrollmentInfo.description}
-          availablePeriod={AMBIENTALIA_DATA.enrollmentInfo.availablePeriod}
-          colors={AMBIENTALIA_DATA.colors}
-        />
-
-        <ProgramStages
-          stages={AMBIENTALIA_DATA.stages}
-          colors={AMBIENTALIA_DATA.colors}
-        />
-
-        <ImpactStats
-          stats={AMBIENTALIA_DATA.stats}
-          colors={AMBIENTALIA_DATA.colors}
-        />
-
-        <SuccessStories
-          stories={AMBIENTALIA_DATA.successStories}
-          colors={AMBIENTALIA_DATA.colors}
-        />
-
-        <BlogLinks
-          posts={AMBIENTALIA_DATA.blogPosts}
-          colors={AMBIENTALIA_DATA.colors}
-        />
-
-        <FAQ
-          faqs={AMBIENTALIA_DATA.faqs}
-          colors={AMBIENTALIA_DATA.colors}
-        />
-
-        <Sponsors sponsors={AMBIENTALIA_DATA.sponsors} />
-
-        <Gallery
-          type={AMBIENTALIA_DATA.gallery.type}
-          url={AMBIENTALIA_DATA.gallery.url}
-          images={AMBIENTALIA_DATA.gallery.images}
-          colors={AMBIENTALIA_DATA.colors}
-          title={AMBIENTALIA_DATA.title}
-        />
-
-        <CTASection
-          title={AMBIENTALIA_DATA.title}
-          colors={AMBIENTALIA_DATA.colors}
-        />
-      </main>
+      <AmbientaliaPageClient />
     </>
   );
 }
