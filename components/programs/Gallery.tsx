@@ -29,9 +29,6 @@ const FALLBACK_SLIDES: Slide[] = [
 
 export default function Gallery({ images, colors, title, type }: GalleryProps) {
   const { t } = useTranslation();
-  if (type === "images" && (!images || images.length === 0)) {
-    return null;
-  }
   const galleryTitle = title || t("gallery.title");
   const slides = useMemo<Slide[]>(() => {
     if (images && images.length > 0) {
@@ -57,6 +54,10 @@ export default function Gallery({ images, colors, title, type }: GalleryProps) {
 
     return () => window.clearInterval(interval);
   }, [slides.length]);
+
+  if (type === "images" && (!images || images.length === 0)) {
+    return null;
+  }
 
   const currentSlide = slides[currentIndex];
   const moveSlide = (step: number) => {

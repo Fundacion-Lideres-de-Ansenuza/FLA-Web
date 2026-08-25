@@ -41,7 +41,9 @@ export default function CurrentPrograms() {
           <h2 className="text-3xl md:text-5xl text-gray-900 mb-3 font-contrail tracking-tight">{t('currentPrograms.title')}</h2>
           <p className="text-base md:text-xl text-gray-600 font-arimo max-w-2xl mx-auto">{t('currentPrograms.subtitle')}</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 items-center justify-items-center">
+        <div
+          className={`grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-10 items-center justify-items-center ${programs.length % 3 === 0 ? "lg:grid-cols-3" : ""}`}
+        >
           {programs.map((program, index) => (
             <Link key={index} href={program.href} className="block group w-full max-w-sm">
               <div className="relative flex flex-col items-center text-center px-4 py-2 transition-transform duration-300 group-hover:-translate-y-1">

@@ -711,10 +711,6 @@ export const DECIDIR_CON_CIENCIA_DATA_EN: ProgramData = {
       value: '2'
     },
     {
-      label: 'Student age range',
-      value: '14-20'
-    },
-    {
       label: 'Cost for institutions',
       value: '$0'
     },

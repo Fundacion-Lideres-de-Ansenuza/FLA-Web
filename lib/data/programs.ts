@@ -718,10 +718,6 @@ export const DECIDIR_CON_CIENCIA_DATA: ProgramData = {
       value: "2"
     },
     {
-      label: "Edad de los estudiantes",
-      value: "14-20"
-    },
-    {
       label: "Costo para las instituciones",
       value: "$0"
     },

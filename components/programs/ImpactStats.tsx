@@ -30,7 +30,7 @@ export default function ImpactStats({ stats, colors }: ImpactStatsProps) {
             <p className="text-base text-gray-600 md:text-lg">{t("programDetail.impactSubtitle")}</p>
           </motion.div>
 
-          <div className="grid grid-cols-2 justify-items-center gap-3 md:gap-4 lg:grid-cols-4">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4 md:flex-nowrap">
             {stats.map((stat, index) => (
               <StatCard key={index} stat={stat} index={index} color={colors.primary} />
             ))}
@@ -61,7 +61,7 @@ function StatCard({ stat, index, color }: StatCardProps) {
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
-      className="flex justify-center"
+      className="flex w-full max-w-[240px] justify-center"
     >
       <div className="flex min-h-[160px] w-full max-w-[240px] flex-col items-center justify-center rounded-[24px] border border-white/70 bg-white/85 px-4 py-6 text-center shadow-[0_18px_50px_rgba(0,0,0,0.06)]">
         <div className="mb-2 flex h-[56px] items-center justify-center">
