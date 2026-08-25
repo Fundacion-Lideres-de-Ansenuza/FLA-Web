@@ -47,7 +47,7 @@ export const AMBIENTALIA_DATA_EN: ProgramData = {
       title: 'Field trips',
       description:
         'Visits to natural areas in the region allow participants to observe local biodiversity, understand environmental issues firsthand, and strengthen their connection to the site.',
-      icon: 'TreePine'
+      icon: 'Binoculars'
     },
     {
       title: 'International and community events',
@@ -59,13 +59,13 @@ export const AMBIENTALIA_DATA_EN: ProgramData = {
       title: 'Community engagement',
       description:
         'An outreach commitment promotes sharing environmental projects with the wider community, running community workshops, and building local partnerships.',
-      icon: 'Users'
+      icon: 'Megaphone'
     },
     {
       title: 'Leadership',
       description:
         'Each participant receives personalized follow-up to support the development of soft skills.',
-      icon: 'Award'
+      icon: 'Compass'
     },
     {
       title: 'Interaction',
@@ -83,7 +83,7 @@ export const AMBIENTALIA_DATA_EN: ProgramData = {
       title: 'Environmental Leaders Forum',
       description:
         'The final activity of the year brings together the most outstanding participants for a day of intensive training, workshops, and talks with experts in conservation and sustainable development.',
-      icon: 'MessageSquare'
+      icon: 'Presentation'
     }
   ],
   stats: [
@@ -167,9 +167,15 @@ export const AMBIENTALIA_DATA_EN: ProgramData = {
     url: 'https://drive.google.com/drive/folders/1nICN2r6FvOQVpWSZVEaC_McTJkc-ShL1'
   },
   colors: {
-    primary: '#10b981',
-    secondary: '#059669',
-    accent: '#34d399'
+    primary: "#027353",
+    secondary: "#568c30",
+    accent: "#f2bf27"
+  },
+  identity: {
+    badge: "Ambientalia Identity",
+    heading: "An experience with more nature, territory and visible impact",
+    description:
+      "We refreshed this page with a greener atmosphere so the essence of Ambientalia can breathe: biodiversity, young leadership, community and concrete environmental action."
   }
 };
 
@@ -288,9 +294,9 @@ export const SOMOS_DATA_EN: ProgramData = {
     images: []
   },
   colors: {
-    primary: '#8b5cf6',
-    secondary: '#7c3aed',
-    accent: '#a78bfa'
+    primary: "#2c04bf",
+    secondary: "#f2e313",
+    accent: "#f2a516"
   }
 };
 
@@ -322,13 +328,13 @@ export const POTENCIATE_DATA_EN: ProgramData = {
       title: 'Know Yourself',
       description:
         'A self-awareness stage where participants explored their strengths, values, and passions.',
-      icon: 'User'
+      icon: 'HeartHandshake'
     },
     {
       title: 'Get Inspired',
       description:
         'Networking with leaders and specialists who inspired participants through their experiences.',
-      icon: 'Lightbulb'
+      icon: 'Sparkles'
     },
     {
       title: 'Take Action',
@@ -373,9 +379,9 @@ export const POTENCIATE_DATA_EN: ProgramData = {
     images: []
   },
   colors: {
-    primary: '#f97316',
-    secondary: '#ea580c',
-    accent: '#fb923c'
+    primary: "#52b5a2",
+    secondary: "#e67f33",
+    accent: "#104271"
   }
 };
 
@@ -407,18 +413,18 @@ export const FUTURAS_DATA_EN: ProgramData = {
       title: 'Individual mentoring',
       description:
         'Personalized support in mentor-learner pairs for leadership skill development.',
-      icon: 'Users'
+      icon: 'HeartHandshake'
     },
     {
       title: 'Specialized workshops',
       description: 'Training in project management, leadership, and networking.',
-      icon: 'BookOpen'
+      icon: 'PencilRuler'
     },
     {
       title: 'In-person summit',
       description:
         'In-person gathering of women leaders in Miramar de Ansenuza, Cordoba.',
-      icon: 'MapPin'
+      icon: 'Landmark'
     }
   ],
   stats: [
@@ -454,9 +460,9 @@ export const FUTURAS_DATA_EN: ProgramData = {
     images: []
   },
   colors: {
-    primary: '#ec4899',
-    secondary: '#db2777',
-    accent: '#f472b6'
+    primary: "#010040",
+    secondary: "#2c04bf",
+    accent: "#eac9f4"
   }
 };
 
@@ -494,13 +500,13 @@ export const IMPULSATEC_DATA_EN: ProgramData = {
       title: 'Mentoring with EY GDS',
       description:
         'Biweekly support from professional mentors at EY GDS Argentina.',
-      icon: 'Users'
+      icon: 'Briefcase'
     },
     {
       title: 'In-person experience',
       description:
         'The 15 selected participants visited EY GDS offices in Buenos Aires and joined cultural and networking activities.',
-      icon: 'Building'
+      icon: 'Building2'
     }
   ],
   stats: [
@@ -541,9 +547,9 @@ export const IMPULSATEC_DATA_EN: ProgramData = {
     images: []
   },
   colors: {
-    primary: '#3b82f6',
-    secondary: '#2563eb',
-    accent: '#60a5fa'
+    primary: "#0ac1f7",
+    secondary: "#065072",
+    accent: "#14733e"
   }
 };
 
@@ -588,7 +594,7 @@ export const CIENCIA_FUERA_DE_LA_CAJA_DATA_EN: ProgramData = {
       title: 'Creative forums',
       description:
         'Development of lateral thinking through creative forums averaging 73.4 posts per week.',
-      icon: 'MessageSquare'
+      icon: 'MessagesSquare'
     },
     {
       title: 'Immersive prize',
@@ -644,9 +650,123 @@ export const CIENCIA_FUERA_DE_LA_CAJA_DATA_EN: ProgramData = {
     images: []
   },
   colors: {
-    primary: '#06b6d4',
-    secondary: '#0891b2',
-    accent: '#22d3ee'
+    primary: "#06b6d4",
+    secondary: "#0891b2",
+    accent: "#22d3ee"
+  }
+};
+
+export const DECIDIR_CON_CIENCIA_DATA_EN: ProgramData = {
+  title: 'Decidir con Ciencia',
+  slug: 'decidir-con-ciencia',
+  status: 'active',
+  year: '2026',
+  shortDescription:
+    'Educational program for secondary schools that strengthens scientific thinking to analyze information, evaluate evidence, and make well-founded decisions.',
+  fullDescription:
+    'Decidir con Ciencia is an educational program aimed at secondary-level institutions. The proposal seeks to strengthen scientific thinking skills that allow students to analyze information, evaluate evidence, consider different alternatives, and make well-founded decisions when facing real challenges. Through the Thinking-Based Learning (TBL) methodology and a STEM approach, students work collaboratively to build solution proposals while developing tools they can apply in different learning contexts and in everyday life. The program also supports teaching teams, providing strategies and resources to foster the development of these skills in their teaching practice. In a world where young people face increasingly complex challenges, learning to make informed decisions, analyze evidence, and think critically becomes a fundamental life skill: having information is not enough; you need to know what to do with it.',
+  location: 'Educational institutions in Cordoba, Argentina',
+  duration: 'September and October 2026',
+  modality:
+    'In-person sessions at the educational institution, with an initial virtual stage for teachers.',
+  requirements: [
+    'Secondary-level educational institutions, urban or rural, state-run or private.',
+    'Students aged 14 to 20.',
+    'For this first edition, priority is given to institutions in Cordoba that work in vulnerable contexts, are located in rural or hard-to-reach areas, lack training or tools related to scientific competencies, or do not regularly use decision-making as a scientific thinking tool.',
+    'Enrollment is per full course group.'
+  ],
+  enrollmentInfo: {
+    description:
+      'Applications are submitted through the program enrollment form, where details about the educational institution, the referring teacher, and motivations for participating are completed. Enrollment does not guarantee automatic admission: institutions will be selected according to the criteria established in the program rules.'
+  },
+  stages: [
+    {
+      title: 'Virtual teacher awareness session',
+      description:
+        'Referring teachers will learn about the proposal, the methodology, and the tools to support their students.',
+      icon: 'Video'
+    },
+    {
+      title: 'First in-person session',
+      description:
+        'A real challenge is presented and students incorporate thinking tools to start addressing it.',
+      icon: 'Lightbulb'
+    },
+    {
+      title: 'Work between sessions',
+      description:
+        'The course continues working with the support of the referring teacher, deepening the analysis and developing a solution proposal.',
+      icon: 'Microscope'
+    },
+    {
+      title: 'Second in-person session',
+      description:
+        'Teams present their solutions and share the process, the evidence used, and the decisions made.',
+      icon: 'Presentation'
+    }
+  ],
+  stats: [
+    {
+      label: 'In-person sessions per course',
+      value: '2'
+    },
+    {
+      label: 'Cost for institutions',
+      value: '$0'
+    },
+    {
+      label: 'Miramar de Ansenuza experience to be raffled',
+      value: '1'
+    }
+  ],
+  successStories: [
+    {
+      title: 'Backed methodology',
+      description:
+        'Work based on Thinking-Based Learning (TBL) and a STEM approach, with tools applicable to different learning contexts.'
+    },
+    {
+      title: 'Comprehensive support',
+      description:
+        'Full implementation of the educational proposal with support from the Fundación team and materials for all activities.'
+    },
+    {
+      title: 'Educational kit and certification',
+      description:
+        'Bibliography, worksheets, experimental and playful materials, plus certification for teachers and students.'
+    }
+  ],
+  blogPosts: [],
+  faqs: [
+    {
+      question: 'Does participation cost anything?',
+      answer:
+        'No. Participation is completely free for the selected institutions.'
+    },
+    {
+      question: 'Can a group of students enroll?',
+      answer:
+        'No. Enrollment is per full course group, since the proposal is designed to work with the group as a whole.'
+    },
+    {
+      question: 'Does the referring teacher have to be a Natural Sciences teacher?',
+      answer:
+        'No. Any teacher interested in the proposal and committed to supporting the course throughout the whole process can take part.'
+    }
+  ],
+  sponsors: [
+    {
+      name: 'STEM Fund by Latimpacto, driven by Lenovo and BHP Foundation'
+    }
+  ],
+  gallery: {
+    type: 'images',
+    images: []
+  },
+  colors: {
+    primary: "#6a29b6",
+    secondary: "#fd7a02",
+    accent: "#3ec5a1"
   }
 };
 
@@ -769,7 +889,7 @@ export const LIDERES_DATA_EN: ProgramData = {
       title: 'Personalized support',
       description:
         'Personalized support for the continuity of your projects to drive the ongoing development of your leadership.',
-      icon: 'Users'
+      icon: 'HandHeart'
     },
     {
       title: 'In-person gatherings',
@@ -850,9 +970,9 @@ export const LIDERES_DATA_EN: ProgramData = {
     images: []
   },
   colors: {
-    primary: '#dc2626',
-    secondary: '#991b1b',
-    accent: '#f87171'
+    primary: "#8f130d",
+    secondary: "#f35e5f",
+    accent: "#f88a89"
   }
 };
 
@@ -864,7 +984,8 @@ export const ALL_PROGRAMS_EN: ProgramData[] = [
   IMPULSATEC_DATA_EN,
   CIENCIA_FUERA_DE_LA_CAJA_DATA_EN,
   AVENTURA_MATEMATICA_DATA_EN,
-  LIDERES_DATA_EN
+  LIDERES_DATA_EN,
+  DECIDIR_CON_CIENCIA_DATA_EN
 ];
 
 export const ACTIVE_PROGRAMS_EN: ProgramData[] = ALL_PROGRAMS_EN.filter(

@@ -50,6 +50,11 @@ export interface ProgramData {
     secondary: string;
     accent: string;
   };
+  identity?: {
+    badge: string;
+    heading: string;
+    description: string;
+  };
   year?: string;
 }
 
@@ -91,7 +96,7 @@ export const AMBIENTALIA_DATA: ProgramData = {
     {
       title: "Salidas de campo",
       description: "Visitas a áreas naturales de la región que permiten a los participantes observar la biodiversidad local, comprender problemáticas ambientales de forma directa y fortalecer su vínculo con el sitio.",
-      icon: "TreePine"
+      icon: "Binoculars"
     },
     {
       title: "Eventos internacionales y comunitarios",
@@ -101,12 +106,12 @@ export const AMBIENTALIA_DATA: ProgramData = {
     {
       title: "Involucramiento comunitario",
       description: "Un Compromiso de difusión promueve la comunicación a la comunidad de los proyectos ambientales realizados, la realización de talleres comunitarios y la creación de alianzas locales.",
-      icon: "Users"
+      icon: "Megaphone"
     },
     {
       title: "Liderazgo",
       description: "Se brinda seguimiento personalizado a cada participante para poder promover su desarrollo de habilidades blandas.",
-      icon: "Award"
+      icon: "Compass"
     },
     {
       title: "Interacción",
@@ -121,7 +126,7 @@ export const AMBIENTALIA_DATA: ProgramData = {
     {
       title: "Foro de Líderes Ambientales",
       description: "La última actividad del año reúne a los participantes más destacados en una jornada donde participan en capacitaciones intensivas, talleres y charlas con expertos en conservación y desarrollo sostenible.",
-      icon: "MessageSquare"
+      icon: "Presentation"
     }
   ],
   stats: [
@@ -205,9 +210,15 @@ export const AMBIENTALIA_DATA: ProgramData = {
     ]
   },
   colors: {
-    primary: "#10b981",
-    secondary: "#059669",
-    accent: "#34d399"
+    primary: "#027353",
+    secondary: "#568c30",
+    accent: "#f2bf27"
+  },
+  identity: {
+    badge: "Identidad Ambientalia",
+    heading: "Una experiencia con más naturaleza, territorio e impacto visible",
+    description:
+      "Reforzamos esta página con una atmósfera más verde para que respire mejor la esencia de Ambientalia: biodiversidad, liderazgo joven, comunidad y acción ambiental concreta."
   }
 };
 
@@ -322,9 +333,9 @@ export const SOMOS_DATA: ProgramData = {
     ]
   },
   colors: {
-    primary: "#8b5cf6",
-    secondary: "#7c3aed",
-    accent: "#a78bfa"
+    primary: "#2c04bf",
+    secondary: "#f2e313",
+    accent: "#f2a516"
   }
 };
 
@@ -350,12 +361,12 @@ export const POTENCIATE_DATA: ProgramData = {
     {
       title: "CONÓCETE",
       description: "Etapa de autoconocimiento donde los participantes exploraron sus fortalezas, valores y pasiones.",
-      icon: "User"
+      icon: "HeartHandshake"
     },
     {
       title: "INSPÍRATE",
       description: "Networking con líderes y especialistas que inspiraron a los participantes a través de sus experiencias.",
-      icon: "Lightbulb"
+      icon: "Sparkles"
     },
     {
       title: "ENTRÁ EN ACCIÓN",
@@ -401,9 +412,9 @@ export const POTENCIATE_DATA: ProgramData = {
     ]
   },
   colors: {
-    primary: "#f97316",
-    secondary: "#ea580c",
-    accent: "#fb923c"
+    primary: "#52b5a2",
+    secondary: "#e67f33",
+    accent: "#104271"
   }
 };
 
@@ -429,17 +440,17 @@ export const FUTURAS_DATA: ProgramData = {
     {
       title: "Mentoría Individual",
       description: "Acompañamiento personalizado en duplas mentora-aprendiz para el desarrollo de habilidades de liderazgo.",
-      icon: "Users"
+      icon: "HeartHandshake"
     },
     {
       title: "Talleres Especializados",
       description: "Capacitaciones en gestión de proyectos, liderazgo y networking.",
-      icon: "BookOpen"
+      icon: "PencilRuler"
     },
     {
       title: "Cumbre Presencial",
       description: "Encuentro presencial de mujeres líderes en Miramar de Ansenuza, Córdoba.",
-      icon: "MapPin"
+      icon: "Landmark"
     }
   ],
   stats: [
@@ -478,9 +489,9 @@ export const FUTURAS_DATA: ProgramData = {
     ]
   },
   colors: {
-    primary: "#ec4899",
-    secondary: "#db2777",
-    accent: "#f472b6"
+    primary: "#010040",
+    secondary: "#2c04bf",
+    accent: "#eac9f4"
   }
 };
 
@@ -512,12 +523,12 @@ export const IMPULSATEC_DATA: ProgramData = {
     {
       title: "Mentoría con EY GDS",
       description: "Acompañamiento quincenal de mentores profesionales de EY GDS Argentina.",
-      icon: "Users"
+      icon: "Briefcase"
     },
     {
       title: "Experiencia Presencial",
       description: "Los 15 participantes destacados visitaron las oficinas de EY GDS en Buenos Aires y participaron en actividades culturales y de networking.",
-      icon: "Building"
+      icon: "Building2"
     }
   ],
   stats: [
@@ -560,9 +571,9 @@ export const IMPULSATEC_DATA: ProgramData = {
     ]
   },
   colors: {
-    primary: "#3b82f6",
-    secondary: "#2563eb",
-    accent: "#60a5fa"
+    primary: "#0ac1f7",
+    secondary: "#065072",
+    accent: "#14733e"
   }
 };
 
@@ -599,7 +610,7 @@ export const CIENCIA_FUERA_DE_LA_CAJA_DATA: ProgramData = {
     {
       title: "Foros Creativos",
       description: "Desarrollo del pensamiento lateral a través de foros creativos con un promedio de 73.4 entradas por semana.",
-      icon: "MessageSquare"
+      icon: "MessagesSquare"
     },
     {
       title: "Premio Inmersivo",
@@ -657,6 +668,106 @@ export const CIENCIA_FUERA_DE_LA_CAJA_DATA: ProgramData = {
     primary: "#06b6d4",
     secondary: "#0891b2",
     accent: "#22d3ee"
+  }
+};
+
+export const DECIDIR_CON_CIENCIA_DATA: ProgramData = {
+  title: "Decidir con Ciencia",
+  slug: "decidir-con-ciencia",
+  status: 'active',
+  year: "2026",
+  shortDescription: "Programa educativo para escuelas secundarias que fortalece el pensamiento científico para analizar información, evaluar evidencias y tomar decisiones fundamentadas.",
+  fullDescription: "Decidir con ciencia es un programa educativo dirigido a instituciones de nivel secundario. La propuesta busca fortalecer habilidades de pensamiento científico que permitan analizar información, evaluar evidencias, considerar distintas alternativas y tomar decisiones fundamentadas frente a desafíos reales. A través de la metodología Thinking-Based Learning (TBL) y un enfoque STEM, los estudiantes trabajan de manera colaborativa en la construcción de propuestas de solución, mientras desarrollan herramientas que pueden aplicar en diferentes contextos de aprendizaje y en su vida cotidiana. El programa también acompaña a los equipos docentes, brindándoles estrategias y recursos para favorecer el desarrollo de estas habilidades en sus prácticas de enseñanza. En un mundo donde las y los jóvenes enfrentan desafíos cada vez más complejos, aprender a tomar decisiones informadas, analizar evidencias y pensar críticamente se vuelve una habilidad fundamental para la vida: no alcanza sólo con tener información, sino saber qué hacer con ella.",
+  location: "Instituciones educativas de Córdoba",
+  duration: "Septiembre y octubre de 2026",
+  modality: "Jornadas presenciales en la institución educativa, con instancia virtual inicial para docentes.",
+  requirements: [
+    "Instituciones educativas de nivel secundario, urbanas o rurales, de gestión estatal o privada",
+    "Estudiantes de entre 14 y 20 años",
+    "En esta primera edición, se priorizan instituciones de Córdoba que trabajen en contextos de vulnerabilidad, estén en zonas rurales o de difícil acceso, no cuenten con formación vinculada a competencias científicas o no trabajen habitualmente la toma de decisiones como herramienta de pensamiento científico",
+    "La inscripción se realiza por curso completo"
+  ],
+  enrollmentInfo: {
+    description: "La postulación se realiza a través del formulario de inscripción del programa, donde se completan datos de la institución educativa, el docente referente y las motivaciones a participar. La inscripción no implica la incorporación automática: las instituciones serán seleccionadas según los criterios establecidos en las bases."
+  },
+  stages: [
+    {
+      title: "Jornada de Sensibilización docente virtual",
+      description: "Los docentes referentes conocerán la propuesta, la metodología y las herramientas para acompañar a sus estudiantes.",
+      icon: "Video"
+    },
+    {
+      title: "Primer encuentro presencial",
+      description: "Se presenta un desafío real y los estudiantes incorporan herramientas de pensamiento para comenzar a abordarlo.",
+      icon: "Lightbulb"
+    },
+    {
+      title: "Trabajo entre encuentros",
+      description: "El curso continúa trabajando con el acompañamiento del docente referente, profundizando el análisis y desarrollando una propuesta de solución.",
+      icon: "Microscope"
+    },
+    {
+      title: "Segundo encuentro presencial",
+      description: "Los equipos presentan sus soluciones y comparten el proceso recorrido, las evidencias utilizadas y las decisiones tomadas.",
+      icon: "Presentation"
+    }
+  ],
+  stats: [
+    {
+      label: "Encuentros presenciales por curso",
+      value: "2"
+    },
+    {
+      label: "Costo para las instituciones",
+      value: "$0"
+    },
+    {
+      label: "Experiencia en Miramar de Ansenuza sorteada",
+      value: "1"
+    }
+  ],
+  successStories: [
+    {
+      title: "Metodología con respaldo",
+      description: "Trabajo basado en Thinking-Based Learning (TBL) y enfoque STEM, con herramientas aplicables en distintos contextos de aprendizaje."
+    },
+    {
+      title: "Acompañamiento integral",
+      description: "Implementación completa de la propuesta con acompañamiento del equipo de la Fundación y materiales para todas las actividades."
+    },
+    {
+      title: "Kit educativo y certificación",
+      description: "Bibliografía, fichas de trabajo, materiales experimentales y lúdicos, más certificación para docentes y estudiantes."
+    }
+  ],
+  blogPosts: [],
+  faqs: [
+    {
+      question: "¿La participación tiene costo?",
+      answer: "No. La participación es totalmente gratuita para las instituciones seleccionadas."
+    },
+    {
+      question: "¿Se puede inscribir un grupo de estudiantes?",
+      answer: "No. La inscripción se realiza por curso completo, ya que la propuesta está diseñada para trabajar con el grupo en su conjunto."
+    },
+    {
+      question: "¿El docente referente tiene que ser de Ciencias Naturales?",
+      answer: "No. Puede ser cualquier docente interesado/a en la propuesta y comprometido/a con acompañar al curso durante todo el recorrido."
+    }
+  ],
+  sponsors: [
+    {
+      name: "Fondo STEM de Latimpacto, impulsado por Lenovo y BHP Foundation"
+    }
+  ],
+  gallery: {
+    type: 'images',
+    images: []
+  },
+  colors: {
+    primary: "#6a29b6",
+    secondary: "#fd7a02",
+    accent: "#3ec5a1"
   }
 };
 
@@ -763,7 +874,7 @@ export const LIDERES_DATA: ProgramData = {
     {
       title: "Acompañamiento personalizado",
       description: "Acompañamiento personalizado en la continuidad de tus proyectos para impulsar el desarrollo continuo de tu liderazgo.",
-      icon: "Users"
+      icon: "HandHeart"
     },
     {
       title: "Encuentros presenciales",
@@ -836,9 +947,9 @@ export const LIDERES_DATA: ProgramData = {
     images: []
   },
   colors: {
-    primary: "#dc2626",
-    secondary: "#991b1b",
-    accent: "#f87171"
+    primary: "#8f130d",
+    secondary: "#f35e5f",
+    accent: "#f88a89"
   }
 };
 
@@ -850,7 +961,8 @@ export const ALL_PROGRAMS: ProgramData[] = [
   IMPULSATEC_DATA,
   CIENCIA_FUERA_DE_LA_CAJA_DATA,
   AVENTURA_MATEMATICA_DATA,
-  LIDERES_DATA
+  LIDERES_DATA,
+  DECIDIR_CON_CIENCIA_DATA
 ];
 
 export const ACTIVE_PROGRAMS: ProgramData[] = ALL_PROGRAMS.filter(p => p.status === 'active');

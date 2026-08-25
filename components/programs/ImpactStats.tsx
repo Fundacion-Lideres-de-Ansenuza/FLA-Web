@@ -30,7 +30,7 @@ export default function ImpactStats({ stats, colors }: ImpactStatsProps) {
             <p className="text-base text-gray-600 md:text-lg">{t("programDetail.impactSubtitle")}</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 justify-items-center gap-5 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4 md:flex-nowrap">
             {stats.map((stat, index) => (
               <StatCard key={index} stat={stat} index={index} color={colors.primary} />
             ))}
@@ -61,16 +61,16 @@ function StatCard({ stat, index, color }: StatCardProps) {
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
-      className="flex justify-center"
+      className="flex w-full max-w-[240px] justify-center"
     >
-      <div className="flex min-h-[210px] w-full max-w-[280px] flex-col items-center justify-center rounded-[28px] border border-white/70 bg-white/85 px-6 py-8 text-center shadow-[0_18px_50px_rgba(0,0,0,0.06)]">
-        <div className="mb-4 flex h-[78px] items-center justify-center">
-          <span className="inline-flex items-center justify-center text-4xl font-bold leading-none md:text-5xl lg:text-6xl" style={{ color }}>
+      <div className="flex min-h-[160px] w-full max-w-[240px] flex-col items-center justify-center rounded-[24px] border border-white/70 bg-white/85 px-4 py-6 text-center shadow-[0_18px_50px_rgba(0,0,0,0.06)]">
+        <div className="mb-2 flex h-[56px] items-center justify-center">
+          <span className="inline-flex items-center justify-center text-3xl font-bold leading-none md:text-4xl lg:text-5xl" style={{ color }}>
             {count}
             {suffix}
           </span>
         </div>
-        <p className="max-w-[18ch] text-center text-sm font-medium leading-snug text-gray-700 md:text-base">{stat.label}</p>
+        <p className="max-w-[18ch] text-center text-xs font-medium leading-snug text-gray-700 md:text-sm">{stat.label}</p>
       </div>
     </motion.div>
   );
