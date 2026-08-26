@@ -214,8 +214,7 @@
     "paypalButtonAlt": "Botón de PayPal para donar",
     "paypalLoading": "Cargando botón de PayPal...",
     "paypalMissingConfig": "Configurá la integración de PayPal para habilitar el botón.",
-    "paypalError": "No pudimos cargar PayPal en este momento. Intentá nuevamente en unos segundos.",
-    "welcome": "Recibirás un correo de bienvenida con el detalle."
+    "paypalError": "No pudimos cargar PayPal en este momento. Intentá nuevamente en unos segundos."
   },
   "donate": {
     "title": "APOYÁ NUESTRA MISIÓN",

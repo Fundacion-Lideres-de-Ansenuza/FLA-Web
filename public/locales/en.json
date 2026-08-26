@@ -214,8 +214,7 @@
     "paypalButtonAlt": "PayPal donate button",
     "paypalLoading": "Loading PayPal button...",
     "paypalMissingConfig": "Configure the PayPal integration to enable the button.",
-    "paypalError": "We could not load PayPal right now. Please try again in a few seconds.",
-    "welcome": "You will receive a welcome email with the details."
+    "paypalError": "We could not load PayPal right now. Please try again in a few seconds."
   },
   "donate": {
     "title": "Support Our Mission",

@@ -58,11 +58,6 @@ function DonationChip({ href }: { href: string }) {
   )
 }
 
-function WelcomeNote() {
-  const { t } = useTranslation()
-  return <p className="text-center font-arimo text-base text-gray-600 md:text-lg">{t("donationUi.welcome")}</p>
-}
-
 export default function DonationPage() {
   const { t } = useTranslation()
   const [activeTab, setActiveTab] = useState("online")
@@ -204,7 +199,6 @@ export default function DonationPage() {
                 </div>
 
                 <TimelineSteps steps={onlineSteps} accent="#bc2222" />
-                <WelcomeNote />
 
                 <div className="flex justify-center">
                   <DonationChip href={DONAR_ONLINE_URL} />
