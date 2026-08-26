@@ -29,6 +29,20 @@ function quotedSheetName(sheetName: string) {
   return `'${sheetName.replace(/'/g, "''")}'`
 }
 
+function formatTimestamp(date: Date) {
+  const parts = new Intl.DateTimeFormat("es-AR", {
+    timeZone: "America/Argentina/Cordoba",
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  }).formatToParts(date)
+  const get = (type: string) => parts.find((part) => part.type === type)?.value ?? ""
+  return `${get("day")}/${get("month")}/${get("year")} ${get("hour")}:${get("minute")}`
+}
+
 export async function addNewsletterSubscriber(email: string) {
   const spreadsheetId = requiredEnv("GOOGLE_SHEETS_SPREADSHEET_ID")
   const sheetName = process.env.GOOGLE_SHEETS_NEWSLETTER_TAB?.trim() || "Newsletter"
@@ -37,7 +51,7 @@ export async function addNewsletterSubscriber(email: string) {
 
   const existing = await sheets.spreadsheets.values.get({
     spreadsheetId,
-    range: `${sheet}!B:B`,
+    range: `${sheet}!C:C`,
   })
   const alreadySubscribed = (existing.data.values || []).some(
     ([value]) => typeof value === "string" && value.trim().toLowerCase() === email.toLowerCase(),
@@ -53,7 +67,7 @@ export async function addNewsletterSubscriber(email: string) {
     valueInputOption: "USER_ENTERED",
     insertDataOption: "INSERT_ROWS",
     requestBody: {
-      values: [[new Date().toISOString(), email, "website", "newsletter"]],
+      values: [["", "", email, formatTimestamp(new Date())]],
     },
   })
 

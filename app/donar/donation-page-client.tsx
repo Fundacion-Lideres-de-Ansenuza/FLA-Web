@@ -1,6 +1,6 @@
 ﻿"use client"
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { CheckCircle2, Globe, CreditCard, Landmark, Mail, Copy } from "lucide-react"
@@ -8,141 +8,7 @@ import { useTranslation } from "react-i18next"
 
 const DARK_BROWN = "#90140e"
 const DONAR_ONLINE_URL = "https://donaronline.org/fundacion-lideres-de-ansenuza/fundacion-lideres-de-ansenuza"
-const PAYPAL_SDK_URL = "https://www.paypalobjects.com/donate/sdk/donate-sdk.js"
-const PAYPAL_DONATE_CONTAINER_ID = "paypal-donate-button-container"
-
-const PAYPAL_HOSTED_BUTTON_ID = process.env.NEXT_PUBLIC_PAYPAL_DONATE_HOSTED_BUTTON_ID?.trim() ?? ""
-const PAYPAL_BUSINESS = process.env.NEXT_PUBLIC_PAYPAL_DONATE_BUSINESS?.trim() ?? ""
-const PAYPAL_ENV = process.env.NEXT_PUBLIC_PAYPAL_DONATE_ENV?.trim() || "production"
-
-declare global {
-  interface Window {
-    PayPal?: {
-      Donation?: {
-        Button: (config: Record<string, unknown>) => { render: (selector: string) => void }
-      }
-    }
-    __paypalDonateSdkPromise?: Promise<void>
-  }
-}
-
-function loadPayPalDonateSdk() {
-  if (typeof window === "undefined") {
-    return Promise.resolve()
-  }
-
-  if (window.PayPal?.Donation?.Button) {
-    return Promise.resolve()
-  }
-
-  if (window.__paypalDonateSdkPromise) {
-    return window.__paypalDonateSdkPromise
-  }
-
-  window.__paypalDonateSdkPromise = new Promise<void>((resolve, reject) => {
-    const existing = document.querySelector<HTMLScriptElement>(`script[src="${PAYPAL_SDK_URL}"]`)
-
-    if (existing) {
-      existing.addEventListener("load", () => resolve(), { once: true })
-      existing.addEventListener("error", () => reject(new Error("No se pudo cargar PayPal Donate SDK")), { once: true })
-      return
-    }
-
-    const script = document.createElement("script")
-    script.src = PAYPAL_SDK_URL
-    script.async = true
-    script.charset = "UTF-8"
-    script.onload = () => resolve()
-    script.onerror = () => reject(new Error("No se pudo cargar PayPal Donate SDK"))
-    document.body.appendChild(script)
-  })
-
-  return window.__paypalDonateSdkPromise
-}
-
-function PayPalDonateWidget() {
-  const { t } = useTranslation()
-  const [status, setStatus] = useState<"idle" | "loading" | "ready" | "error" | "missing-config">("idle")
-
-  useEffect(() => {
-    if (!PAYPAL_HOSTED_BUTTON_ID && !PAYPAL_BUSINESS) {
-      setStatus("missing-config")
-      return
-    }
-
-    let cancelled = false
-
-    const renderDonateButton = async () => {
-      setStatus("loading")
-
-      try {
-        await loadPayPalDonateSdk()
-
-        if (cancelled) {
-          return
-        }
-
-        const container = document.getElementById(PAYPAL_DONATE_CONTAINER_ID)
-        if (!container || !window.PayPal?.Donation?.Button) {
-          setStatus("error")
-          return
-        }
-
-        container.innerHTML = ""
-
-        const config: Record<string, unknown> = {
-          env: PAYPAL_ENV,
-          image: {
-            src: "https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif",
-            title: "PayPal - The safer, easier way to pay online!",
-            alt: t("donationUi.paypalButtonAlt"),
-          },
-        }
-
-        if (PAYPAL_HOSTED_BUTTON_ID) {
-          config.hosted_button_id = PAYPAL_HOSTED_BUTTON_ID
-        } else {
-          config.business = PAYPAL_BUSINESS
-        }
-
-        window.PayPal.Donation.Button(config).render(`#${PAYPAL_DONATE_CONTAINER_ID}`)
-        setStatus("ready")
-      } catch {
-        if (!cancelled) {
-          setStatus("error")
-        }
-      }
-    }
-
-    renderDonateButton()
-
-    return () => {
-      cancelled = true
-    }
-  }, [t])
-
-  return (
-    <div className="flex w-full flex-col items-center gap-4">
-      <div id={PAYPAL_DONATE_CONTAINER_ID} className="min-h-12" />
-
-      {status === "loading" && (
-        <p className="text-sm font-arimo text-gray-500">{t("donationUi.paypalLoading")}</p>
-      )}
-
-      {status === "missing-config" && (
-        <p className="max-w-lg text-center text-sm font-arimo text-[#90140e]">
-          {t("donationUi.paypalMissingConfig")}
-        </p>
-      )}
-
-      {status === "error" && (
-        <p className="max-w-lg text-center text-sm font-arimo text-[#90140e]">
-          {t("donationUi.paypalError")}
-        </p>
-      )}
-    </div>
-  )
-}
+const PAYPAL_DONATE_URL = "https://www.paypal.com/donate/?hosted_button_id=X6VW3LVURRPSN"
 
 function TimelineSteps({ steps, accent }: { steps: string[]; accent: string }) {
   return (
@@ -190,11 +56,6 @@ function DonationChip({ href }: { href: string }) {
       <Link href={href}>{t("nav.donar")}</Link>
     </Button>
   )
-}
-
-function WelcomeNote() {
-  const { t } = useTranslation()
-  return <p className="text-center font-arimo text-base text-gray-600 md:text-lg">{t("donationUi.welcome")}</p>
 }
 
 export default function DonationPage() {
@@ -267,7 +128,7 @@ export default function DonationPage() {
   const paypalSteps = [
     "Seleccioná el botón donar y elegí el monto.",
     "Elegí PayPal como medio de pago y completá tus datos personales.",
-    "Confirmá la donación única y presioná 'Donar a Fundación Líderes de Ansenuza'.",
+    "Confirmá la donación y presioná 'Donar a Fundación Líderes de Ansenuza'.",
   ]
 
   const bankData = {
@@ -338,7 +199,6 @@ export default function DonationPage() {
                 </div>
 
                 <TimelineSteps steps={onlineSteps} accent="#bc2222" />
-                <WelcomeNote />
 
                 <div className="flex justify-center">
                   <DonationChip href={DONAR_ONLINE_URL} />
@@ -354,10 +214,9 @@ export default function DonationPage() {
                 </div>
 
                 <TimelineSteps steps={paypalSteps} accent="#bc2222" />
-                <WelcomeNote />
 
                 <div className="flex justify-center">
-                  <PayPalDonateWidget />
+                  <DonationChip href={PAYPAL_DONATE_URL} />
                 </div>
               </div>
             )}

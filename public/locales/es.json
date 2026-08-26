@@ -103,7 +103,9 @@
     "newsletterText": "Mantenete al tanto de todas nuestras novedades.",
     "emailPlaceholder": "Tu email",
     "copyright": "© {{year}} Fundación Líderes de Ansenuza. Todos los derechos reservados.",
-    "privacyPolicy": "Políticas de Privacidad"
+    "privacyPolicy": "Políticas de Privacidad",
+    "successMessage": "Gracias por sumarte. Ya recibimos tu email.",
+    "duplicateMessage": "Este email ya esta suscripto al newsletter."
   },
   "aboutUs": {
     "foundation": {
@@ -212,8 +214,7 @@
     "paypalButtonAlt": "Botón de PayPal para donar",
     "paypalLoading": "Cargando botón de PayPal...",
     "paypalMissingConfig": "Configurá la integración de PayPal para habilitar el botón.",
-    "paypalError": "No pudimos cargar PayPal en este momento. Intentá nuevamente en unos segundos.",
-    "welcome": "Recibirás un correo de bienvenida con el detalle."
+    "paypalError": "No pudimos cargar PayPal en este momento. Intentá nuevamente en unos segundos."
   },
   "donate": {
     "title": "APOYÁ NUESTRA MISIÓN",

@@ -6,8 +6,8 @@ La aplicación requiere un entorno **Node.js Web App** porque las rutas `/api/co
 
 - Framework: Next.js
 - Node.js: 22.x o superior compatible con Next.js 16
-- Build command: `bun run build` (o `npm run build`)
-- Start command: `bun run start` (o `npm run start`)
+- Build command: `npm run build` (o `npm run build`)
+- Start command: `npm run start` (o `npm run start`)
 - Puerto: el asignado por Hostinger mediante `PORT`
 
 ## Variables requeridas
