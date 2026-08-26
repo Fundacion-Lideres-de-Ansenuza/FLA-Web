@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next"
 export default function NewsletterForm() {
   const { t } = useTranslation()
   const [email, setEmail] = useState("")
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "duplicate" | "error">("idle")
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -25,11 +25,14 @@ export default function NewsletterForm() {
       })
 
       if (!response.ok) {
-        throw new Error("Newsletter subscription failed")
+        const body = await response.json().catch(() => null)
+        const detail = body?.detail ? `: ${body.detail}` : ` (HTTP ${response.status})`
+        throw new Error(`Newsletter subscription failed${detail}`)
       }
 
+      const result = await response.json()
       setEmail("")
-      setStatus("success")
+      setStatus(result.duplicate ? "duplicate" : "success")
     } catch (error) {
       console.error(error)
       setStatus("error")
@@ -70,6 +73,11 @@ export default function NewsletterForm() {
         {status === "success" && (
           <p className="text-sm text-emerald-300 font-arimo">
             {t("footer.successMessage", { defaultValue: "Gracias por sumarte. Ya recibimos tu email." })}
+          </p>
+        )}
+        {status === "duplicate" && (
+          <p className="text-sm text-amber-300 font-arimo">
+            {t("footer.duplicateMessage", { defaultValue: "Este email ya esta suscripto al newsletter." })}
           </p>
         )}
         {status === "error" && (

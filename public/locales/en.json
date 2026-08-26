@@ -103,7 +103,9 @@
     "newsletterText": "Stay up to date with all our news.",
     "emailPlaceholder": "Your email",
     "copyright": "© {{year}} Fundación Líderes de Ansenuza. All rights reserved.",
-    "privacyPolicy": "Privacy Policy"
+    "privacyPolicy": "Privacy Policy",
+    "successMessage": "Thanks for joining. We received your email.",
+    "duplicateMessage": "This email is already subscribed to the newsletter."
   },
   "aboutUs": {
     "foundation": {

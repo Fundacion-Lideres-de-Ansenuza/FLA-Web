@@ -20,7 +20,8 @@ export async function POST(request: Request) {
     const result = await addNewsletterSubscriber(email)
     return NextResponse.json({ ok: true, ...result })
   } catch (error) {
-    console.error("Newsletter subscription error", error)
-    return NextResponse.json({ ok: false, error: "server_error" }, { status: 500 })
+    console.error("Newsletter subscription error:", error)
+    const message = error instanceof Error ? error.message : String(error)
+    return NextResponse.json({ ok: false, error: "server_error", detail: message }, { status: 500 })
   }
 }
