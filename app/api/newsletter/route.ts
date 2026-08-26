@@ -22,6 +22,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("Newsletter subscription error:", error)
     const message = error instanceof Error ? error.message : String(error)
-    return NextResponse.json({ ok: false, error: "server_error", detail: message }, { status: 500 })
+    const detail = process.env.NODE_ENV === "production" ? undefined : message
+    return NextResponse.json({ ok: false, error: "server_error", detail }, { status: 500 })
   }
 }

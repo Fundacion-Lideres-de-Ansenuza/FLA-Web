@@ -30,8 +30,17 @@ function quotedSheetName(sheetName: string) {
 }
 
 function formatTimestamp(date: Date) {
-  const pad = (value: number) => String(value).padStart(2, "0")
-  return `${pad(date.getDate())}/${pad(date.getMonth() + 1)}/${date.getFullYear()} ${pad(date.getHours())}:${pad(date.getMinutes())}`
+  const parts = new Intl.DateTimeFormat("es-AR", {
+    timeZone: "America/Argentina/Cordoba",
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  }).formatToParts(date)
+  const get = (type: string) => parts.find((part) => part.type === type)?.value ?? ""
+  return `${get("day")}/${get("month")}/${get("year")} ${get("hour")}:${get("minute")}`
 }
 
 export async function addNewsletterSubscriber(email: string) {
