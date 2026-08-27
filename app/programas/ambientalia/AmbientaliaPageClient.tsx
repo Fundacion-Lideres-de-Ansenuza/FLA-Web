@@ -39,9 +39,6 @@ export default function AmbientaliaPageClient() {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-6xl mx-auto grid gap-8 lg:grid-cols-[1fr_0.95fr] items-center">
               <div className="space-y-5">
-                <span className="inline-flex rounded-full bg-[#027353] px-4 py-1.5 text-xs font-black uppercase tracking-[0.22em] text-white shadow-lg">
-                  {data.identity?.badge}
-                </span>
                 <h2 className="text-4xl md:text-5xl font-contrail tracking-tight text-[#027353]">
                   {data.identity?.heading}
                 </h2>

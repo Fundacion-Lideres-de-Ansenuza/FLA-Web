@@ -51,7 +51,6 @@ export interface ProgramData {
     accent: string;
   };
   identity?: {
-    badge: string;
     heading: string;
     description: string;
   };
@@ -215,7 +214,6 @@ export const AMBIENTALIA_DATA: ProgramData = {
     accent: "#f2bf27"
   },
   identity: {
-    badge: "Identidad Ambientalia",
     heading: "Una experiencia con más naturaleza, territorio e impacto visible",
     description:
       "Reforzamos esta página con una atmósfera más verde para que respire mejor la esencia de Ambientalia: biodiversidad, liderazgo joven, comunidad y acción ambiental concreta."
