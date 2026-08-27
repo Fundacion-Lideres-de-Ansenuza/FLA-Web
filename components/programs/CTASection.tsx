@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import type { ProgramColors } from "./types";
+import { useTranslation } from "react-i18next";
 
 interface CTASectionProps {
   title: string;
@@ -11,6 +12,8 @@ interface CTASectionProps {
 }
 
 export default function CTASection({ title, colors }: CTASectionProps) {
+  const { t } = useTranslation();
+
   return (
     <section className="relative overflow-hidden py-14 md:py-20" style={{ background: `linear-gradient(135deg, ${colors.primary} 0%, ${colors.secondary} 100%)` }}>
       <div className="absolute inset-0 opacity-10">
@@ -31,30 +34,23 @@ export default function CTASection({ title, colors }: CTASectionProps) {
           transition={{ duration: 0.7 }}
           className="mx-auto max-w-4xl text-center"
         >
-          <h2 className="mb-6 text-4xl text-white md:text-5xl lg:text-6xl" style={{ fontFamily: "var(--font-fla), serif", letterSpacing: "0.02em" }}>
-            Listo para ser parte de {title}
+          <h2 className="mb-6 text-4xl font-normal text-white md:text-5xl lg:text-6xl" style={{ fontFamily: "var(--font-fla), serif", letterSpacing: "0.02em" }}>
+            {t("programDetail.ctaReady", { title })}
           </h2>
           <p className="mb-10 text-xl leading-relaxed text-white/95 md:text-2xl">
-            Unite a una comunidad de jóvenes líderes que están transformando el futuro
+            {t("programDetail.ctaSubtitle")}
           </p>
           <div className="flex justify-center">
             <Link
               href="/contactanos"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-10 py-4 text-lg font-semibold text-gray-900 shadow-2xl transition-all duration-300 hover:scale-105"
             >
-              Contactar
+              {t("programDetail.ctaContact")}
               <ArrowRight size={20} />
             </Link>
           </div>
-          <p className="mt-4 text-sm text-white/90 md:text-base">
-            Tenés dudas{" "}
-            <Link href="/contactanos" className="font-semibold underline-offset-4 hover:underline">
-              Contáctanos
-            </Link>
-          </p>
         </motion.div>
       </div>
     </section>
   );
 }
-

@@ -14,6 +14,7 @@ export interface ProgramData {
     registrationUrl?: string;
     availablePeriod?: string;
   };
+  enrollmentOpen?: boolean;
   stages: {
     title: string;
     description: string;
@@ -28,6 +29,7 @@ export interface ProgramData {
     description: string;
     link?: string;
   }[];
+  showSuccessStories?: boolean;
   blogPosts: {
     title: string;
     url: string;
@@ -61,6 +63,7 @@ export const AMBIENTALIA_DATA: ProgramData = {
   title: "Experiencia Ambientalia",
   slug: "ambientalia",
   status: 'active',
+  enrollmentOpen: false,
   shortDescription: "Programa de educación ambiental que conecta a jóvenes con sus ecosistemas y biodiversidad, desarrollando habilidades de liderazgo a través de proyectos comunitarios ambientales.",
   fullDescription: "Experiencia Ambientalia es un programa de educación ambiental desarrollado por Fundación Líderes de Ansenuza en conjunto con Manomet Conservation Sciences y la Oficina Ejecutiva de la RHRAP, que se lleva a cabo anualmente desde 2021. El programa busca conectar a jóvenes con sus ecosistemas y biodiversidad, al mismo tiempo que desarrolla en ellos habilidades de liderazgo a través del diseño e implementación de proyectos comunitarios de índole ambiental.",
   location: "El programa nació en el sitio RHRAP Laguna Mar Chiquita, en el interior de Córdoba, Argentina. Sin embargo, además de implementarse allí, se desarrolla en otros sitios importantes para aves playeras, principalmente lagos salados, como en el Monumento Natural Laguna de los Pozuelos en Jujuy y en lagos de Estados Unidos como el Lago Mono, el Gran Lago Salado, el Lago Walker y el Lago Abert. El programa es llevado adelante en cada sitio por socios locales, y puede variar en duración, actividades y enfoque.",
@@ -73,8 +76,8 @@ export const AMBIENTALIA_DATA: ProgramData = {
     "Cada equipo tiene que contar con un docente tutor. Máximo dos titulares."
   ],
   enrollmentInfo: {
-    description: "Para anotarte tenés que completar un formulario de inscripción, disponible cada año aproximadamente entre marzo y abril. En él deberán completar los datos de cada integrante del grupo y responder preguntas sobre su idea de proyecto, además de realizar un video.",
-    availablePeriod: "Marzo - Abril (anualmente)"
+    description: "Este programa actualmente no se encuentra disponible para inscripción.",
+    availablePeriod: "Inscripciones cerradas"
   },
   stages: [
     {
@@ -213,11 +216,6 @@ export const AMBIENTALIA_DATA: ProgramData = {
     secondary: "#568c30",
     accent: "#f2bf27"
   },
-  identity: {
-    heading: "Una experiencia con más naturaleza, territorio e impacto visible",
-    description:
-      "Reforzamos esta página con una atmósfera más verde para que respire mejor la esencia de Ambientalia: biodiversidad, liderazgo joven, comunidad y acción ambiental concreta."
-  }
 };
 
 export const SOMOS_DATA: ProgramData = {
@@ -673,6 +671,7 @@ export const DECIDIR_CON_CIENCIA_DATA: ProgramData = {
   title: "Decidir con Ciencia",
   slug: "decidir-con-ciencia",
   status: 'active',
+  showSuccessStories: false,
   year: "2026",
   shortDescription: "Programa educativo para escuelas secundarias que fortalece el pensamiento científico para analizar información, evaluar evidencias y tomar decisiones fundamentadas.",
   fullDescription: "Decidir con ciencia es un programa educativo dirigido a instituciones de nivel secundario. La propuesta busca fortalecer habilidades de pensamiento científico que permitan analizar información, evaluar evidencias, considerar distintas alternativas y tomar decisiones fundamentadas frente a desafíos reales. A través de la metodología Thinking-Based Learning (TBL) y un enfoque STEM, los estudiantes trabajan de manera colaborativa en la construcción de propuestas de solución, mientras desarrollan herramientas que pueden aplicar en diferentes contextos de aprendizaje y en su vida cotidiana. El programa también acompaña a los equipos docentes, brindándoles estrategias y recursos para favorecer el desarrollo de estas habilidades en sus prácticas de enseñanza. En un mundo donde las y los jóvenes enfrentan desafíos cada vez más complejos, aprender a tomar decisiones informadas, analizar evidencias y pensar críticamente se vuelve una habilidad fundamental para la vida: no alcanza sólo con tener información, sino saber qué hacer con ella.",
@@ -686,7 +685,9 @@ export const DECIDIR_CON_CIENCIA_DATA: ProgramData = {
     "La inscripción se realiza por curso completo"
   ],
   enrollmentInfo: {
-    description: "La postulación se realiza a través del formulario de inscripción del programa, donde se completan datos de la institución educativa, el docente referente y las motivaciones a participar. La inscripción no implica la incorporación automática: las instituciones serán seleccionadas según los criterios establecidos en las bases."
+    description: "La postulación se realiza a través del formulario de inscripción del programa, donde se completan datos de la institución educativa, el docente referente y las motivaciones a participar. La inscripción no implica la incorporación automática: las instituciones serán seleccionadas según los criterios establecidos en las bases.",
+    registrationLabel: "Formulario de inscripción",
+    registrationUrl: "https://docs.google.com/forms/d/e/1FAIpQLSerGl-MCobR5qBprxPqDpTpDfB4YkyBRyInTg0SUnXX9eTAqw/viewform"
   },
   stages: [
     {

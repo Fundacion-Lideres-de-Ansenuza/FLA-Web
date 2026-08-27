@@ -39,6 +39,10 @@ FLA-Web is a website designed to represent the Fundación Líderes de Ansenuza, 
 
 ## Getting Started
 
+### Development Guidelines
+
+- For small text or code changes, edit the file directly. Do not use Python or another scripting language for a simple one-line change.
+
 Follow these steps to get the project up and running on your local machine:
 
 ### Installation

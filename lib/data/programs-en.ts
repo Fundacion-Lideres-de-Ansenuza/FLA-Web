@@ -4,6 +4,7 @@ export const AMBIENTALIA_DATA_EN: ProgramData = {
   title: 'Ambientalia Experience',
   slug: 'ambientalia',
   status: 'active',
+  enrollmentOpen: false,
   shortDescription:
     'Environmental education program that connects young people with their ecosystems and biodiversity while developing leadership skills through community-based environmental projects.',
   fullDescription:
@@ -20,9 +21,8 @@ export const AMBIENTALIA_DATA_EN: ProgramData = {
     'Each team must have a teacher mentor. Maximum of two lead teachers.'
   ],
   enrollmentInfo: {
-    description:
-      'To apply, you must complete a registration form, usually available each year between March and April. The form asks for information about each group member, questions about your project idea, and a video submission.',
-    availablePeriod: 'March - April (annually)'
+    description: 'This program is currently not open for enrollment.',
+    availablePeriod: 'Enrollment closed'
   },
   stages: [
     {
@@ -171,11 +171,6 @@ export const AMBIENTALIA_DATA_EN: ProgramData = {
     secondary: "#568c30",
     accent: "#f2bf27"
   },
-  identity: {
-    heading: "An experience with more nature, territory and visible impact",
-    description:
-      "We refreshed this page with a greener atmosphere so the essence of Ambientalia can breathe: biodiversity, young leadership, community and concrete environmental action."
-  }
 };
 
 export const SOMOS_DATA_EN: ProgramData = {
@@ -659,6 +654,7 @@ export const DECIDIR_CON_CIENCIA_DATA_EN: ProgramData = {
   title: 'Decidir con Ciencia',
   slug: 'decidir-con-ciencia',
   status: 'active',
+  showSuccessStories: false,
   year: '2026',
   shortDescription:
     'Educational program for secondary schools that strengthens scientific thinking to analyze information, evaluate evidence, and make well-founded decisions.',
@@ -676,7 +672,9 @@ export const DECIDIR_CON_CIENCIA_DATA_EN: ProgramData = {
   ],
   enrollmentInfo: {
     description:
-      'Applications are submitted through the program enrollment form, where details about the educational institution, the referring teacher, and motivations for participating are completed. Enrollment does not guarantee automatic admission: institutions will be selected according to the criteria established in the program rules.'
+      'Applications are submitted through the program enrollment form, where details about the educational institution, the referring teacher, and motivations for participating are completed. Enrollment does not guarantee automatic admission: institutions will be selected according to the criteria established in the program rules.',
+    registrationLabel: 'Registration form',
+    registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSerGl-MCobR5qBprxPqDpTpDfB4YkyBRyInTg0SUnXX9eTAqw/viewform'
   },
   stages: [
     {

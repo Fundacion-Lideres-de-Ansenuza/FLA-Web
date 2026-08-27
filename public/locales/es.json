@@ -91,6 +91,7 @@
     "title": "Testimonios",
     "subtitle": "Descubrí lo que dicen las personas que forman parte de nuestra FLAmilia",
     "volunteer": "Voluntario",
+    "femaleVolunteer": "Voluntaria",
     "participant": "Participante",
     "previous": "Testimonio anterior",
     "next": "Siguiente testimonio"
@@ -485,6 +486,10 @@
     "readMore": "Leer más",
     "blogSubtitle": "Descubrí más sobre el programa en nuestro blog",
     "readArticle": "Leer artículo",
+    "moreInfo": "Más información",
+    "ctaReady": "Listo para ser parte de {{title}}",
+    "ctaSubtitle": "Unite a una comunidad de jóvenes líderes que están transformando el futuro",
+    "ctaContact": "Contactar",
     "sponsorsTitle": "En conjunto con"
   },
   "contactSection": {
