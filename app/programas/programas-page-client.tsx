@@ -30,6 +30,7 @@ function getLogoFileName(title: string): string {
     "Ambientalia Experience": "Experiencia_Ambientalia",
     "SOMOS": "Somos",
     "Líderes": "lideres",
+    "Lideres": "lideres",
     "Potenciate": "Potenciate",
     "FUTURAS": "Futuras",
     "ImpulsaTEC": "Impulsatec",
