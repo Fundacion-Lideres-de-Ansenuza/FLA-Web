@@ -7,11 +7,12 @@ import { useTranslation } from "react-i18next";
 
 interface SponsorsProps {
   sponsors: Sponsor[];
+  showSponsors?: boolean;
 }
 
-export default function Sponsors({ sponsors }: SponsorsProps) {
+export default function Sponsors({ sponsors, showSponsors = false }: SponsorsProps) {
   const { t } = useTranslation();
-  if (sponsors.length === 0) return null;
+  if (!showSponsors || sponsors.length === 0) return null;
 
   return (
     <section className="py-16 md:py-24 bg-gray-50">
