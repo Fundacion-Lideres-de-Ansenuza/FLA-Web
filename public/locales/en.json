@@ -91,6 +91,7 @@
     "title": "Testimonials",
     "subtitle": "Discover what the people who are part of our FLAmily have to say",
     "volunteer": "Volunteer",
+    "femaleVolunteer": "Volunteer",
     "participant": "Participant",
     "previous": "Previous testimonial",
     "next": "Next testimonial"
@@ -485,7 +486,11 @@
     "readMore": "Read more",
     "blogSubtitle": "Discover more about the program on our blog",
     "readArticle": "Read article",
-    "sponsorsTitle": "With the support of"
+    "moreInfo": "More information",
+    "ctaReady": "Ready to be part of {{title}}",
+    "ctaSubtitle": "Join a community of young leaders who are transforming the future",
+    "ctaContact": "Contact us",
+    "sponsorsTitle": "In collaboration with"
   },
   "contactSection": {
     "title": "Let’s get started",

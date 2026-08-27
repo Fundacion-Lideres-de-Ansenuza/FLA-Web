@@ -56,10 +56,12 @@ export default function DecidirConCienciaPageClient() {
         colors={data.colors}
       />
 
-      <SuccessStories
-        stories={data.successStories}
-        colors={data.colors}
-      />
+      {data.showSuccessStories !== false && (
+        <SuccessStories
+          stories={data.successStories}
+          colors={data.colors}
+        />
+      )}
 
       <Sponsors sponsors={data.sponsors} />
 

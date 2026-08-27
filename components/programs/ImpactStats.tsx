@@ -51,7 +51,8 @@ function StatCard({ stat, index, color }: StatCardProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
   const numericValue = parseInt(stat.value.replace(/\D/g, "")) || 0;
-  const suffix = stat.value.replace(/[0-9]/g, "");
+  const prefix = stat.value.match(/^\D+/)?.[0] || "";
+  const suffix = stat.value.match(/\D+$/)?.[0] || "";
   const count = useCountAnimation(numericValue, isInView);
 
   return (
@@ -66,6 +67,7 @@ function StatCard({ stat, index, color }: StatCardProps) {
       <div className="flex min-h-[160px] w-full max-w-[240px] flex-col items-center justify-center rounded-[24px] border border-white/70 bg-white/85 px-4 py-6 text-center shadow-[0_18px_50px_rgba(0,0,0,0.06)]">
         <div className="mb-2 flex h-[56px] items-center justify-center">
           <span className="inline-flex items-center justify-center text-3xl font-bold leading-none md:text-4xl lg:text-5xl" style={{ color }}>
+            {prefix}
             {count}
             {suffix}
           </span>

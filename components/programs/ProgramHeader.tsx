@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import type { ProgramColors } from "./types";
+import { useTranslation } from "react-i18next";
 
 interface ProgramHeaderProps {
   title: string;
@@ -13,6 +14,7 @@ interface ProgramHeaderProps {
 }
 
 export default function ProgramHeader({ title, description, colors, isHistorical = false, year }: ProgramHeaderProps) {
+  const { t } = useTranslation();
   return (
     <section className="relative mt-10 py-20 md:py-32 overflow-hidden" style={{ background: `linear-gradient(135deg, ${colors.primary} 0%, ${colors.secondary} 100%)` }}>
       <div className="absolute inset-0 opacity-10">
@@ -79,7 +81,7 @@ export default function ProgramHeader({ title, description, colors, isHistorical
               href="#mas-info"
               className="inline-block bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
-              Más información
+              {t("programDetail.moreInfo")}
             </Link>
           </motion.div>
         </div>
@@ -89,4 +91,3 @@ export default function ProgramHeader({ title, description, colors, isHistorical
     </section>
   );
 }
-

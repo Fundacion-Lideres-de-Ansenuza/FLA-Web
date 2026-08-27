@@ -9,14 +9,17 @@ import { useTranslation } from "react-i18next";
 
 const LOGO_PRESENTATION: Record<string, string> = {
   "Experiencia Ambientalia": "max-w-[88%] max-h-[76%]",
+  "Ambientalia Experience": "max-w-[88%] max-h-[76%]",
   "SOMOS": "max-w-[78%] max-h-[62%]",
   "Líderes": "max-w-[74%] max-h-[74%]",
   "Potenciate": "max-w-[78%] max-h-[68%]",
   "FUTURAS": "max-w-[82%] max-h-[66%]",
   "ImpulsaTEC": "max-w-[84%] max-h-[66%]",
   "Ciencia Fuera de la Caja": "max-w-[86%] max-h-[64%]",
-    "Aventura Matemágica": "max-w-[86%] max-h-[66%]",
-    "Decidir con Ciencia": "max-w-[86%] max-h-[64%]",
+  "Science Outside the Box": "max-w-[86%] max-h-[64%]",
+  "Aventura Matemágica": "max-w-[86%] max-h-[66%]",
+  "Math Adventure": "max-w-[86%] max-h-[66%]",
+  "Decidir con Ciencia": "max-w-[86%] max-h-[64%]",
   "Academia de conservación": "max-w-[84%] max-h-[66%]",
   "Comprometidxs": "max-w-[82%] max-h-[64%]",
 }
@@ -24,13 +27,16 @@ const LOGO_PRESENTATION: Record<string, string> = {
 function getLogoFileName(title: string): string {
   const logoMap: Record<string, string> = {
     "Experiencia Ambientalia": "Experiencia_Ambientalia",
+    "Ambientalia Experience": "Experiencia_Ambientalia",
     "SOMOS": "Somos",
     "Líderes": "lideres",
     "Potenciate": "Potenciate",
     "FUTURAS": "Futuras",
     "ImpulsaTEC": "Impulsatec",
     "Ciencia Fuera de la Caja": "Ciencia fuera de la caja",
+    "Science Outside the Box": "Ciencia fuera de la caja",
     "Aventura Matemágica": "Aventura Matemagica",
+    "Math Adventure": "Aventura Matemagica",
     "Decidir con Ciencia": "Decidir_con_Ciencia.png"
   };
 
@@ -83,7 +89,7 @@ export default function ProgramasPage() {
                 </h2>
                 <div className="w-16 h-1.5 bg-[#bc2222] mx-auto rounded-full mt-3" />
               </div>
-              <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-12 items-start justify-items-center lg:[&>*:nth-last-child(1):nth-child(3n+1)]:col-start-2">
+              <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-2 lg:gap-12 items-start justify-items-center">
                 {activePrograms.map((program) => (
                   <Link
                     key={program.slug}
@@ -118,11 +124,13 @@ export default function ProgramasPage() {
                         <p className="text-gray-600 font-arimo mb-6 line-clamp-3 px-4">
                           {program.shortDescription}
                         </p>
-                        <div className="inline-flex items-center gap-2 text-sm">
-                          <span className="px-4 py-1.5 rounded-full font-bold shadow-sm" style={{ backgroundColor: `${program.colors.primary}18`, color: program.colors.primary }}>
-                            {t('programs.active.openEnrollment')}
-                          </span>
-                        </div>
+                        {program.enrollmentOpen !== false && (
+                          <div className="inline-flex items-center gap-2 text-sm">
+                            <span className="px-4 py-1.5 rounded-full font-bold shadow-sm" style={{ backgroundColor: `${program.colors.primary}18`, color: program.colors.primary }}>
+                              {t('programs.active.openEnrollment')}
+                            </span>
+                          </div>
+                        )}
                         <div className="mt-6 flex items-center justify-center gap-2 font-bold" style={{ color: program.colors.primary }}>
                           <span>{t('programs.active.learnMore')}</span>
                           <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>

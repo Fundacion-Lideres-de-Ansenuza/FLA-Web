@@ -21,7 +21,7 @@ export default function Footer() {
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-red-600 to-red-400 rounded-full blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
                 <Image
-                  src="/images/Logos/fla-logo-blanco.webp"
+                  src="/images/Logos/Logo-FLA-Blanco.png"
                   alt="Fundación Líderes de Ansenuza"
                   width={75}
                   height={75}

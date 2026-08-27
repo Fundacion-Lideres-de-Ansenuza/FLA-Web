@@ -14,6 +14,7 @@ enum TestimonialRole {
 interface TestimonialEntry {
   name: string
   role: TestimonialRole
+  isFeminine?: boolean
   programEs?: string
   programEn?: string
   contentEs: string
@@ -63,6 +64,7 @@ const testimonialEntries: TestimonialEntry[] = [
   {
     name: "Martina Blangetti",
     role: TestimonialRole.VOLUNTEER,
+    isFeminine: true,
     contentEs:
       "Estar en FLA me interpela en todos los aspectos. Me hizo mas humana y me dio perspectivas que no imaginaba. Aprendi a liderar, a tomar decisiones dificiles y a mirar mas alla de mi persona.",
     contentEn:
@@ -72,6 +74,7 @@ const testimonialEntries: TestimonialEntry[] = [
   {
     name: "Daniela Abigail Gutierrez",
     role: TestimonialRole.VOLUNTEER,
+    isFeminine: true,
     contentEs:
       "FLA significa transformacion para mi. Me ayudó a desarrollar habilidades de comunicacion, trabajo en equipo y creacion de materiales para programas, siempre con acompañamiento del equipo.",
     contentEn:
@@ -81,6 +84,7 @@ const testimonialEntries: TestimonialEntry[] = [
   {
     name: "Magali Galat Giorgi",
     role: TestimonialRole.VOLUNTEER,
+    isFeminine: true,
     programEs: "Medicion de Impacto",
     programEn: "Impact Measurement",
     contentEs:
@@ -92,6 +96,7 @@ const testimonialEntries: TestimonialEntry[] = [
   {
     name: "Fatima Kap",
     role: TestimonialRole.VOLUNTEER,
+    isFeminine: true,
     contentEs:
       "La fundación llegó en un momento clave de mi vida y me ayudó a acomodar mi camino. Siempre voy a estar agradecida con FLA por el lugar en el que estoy hoy.",
     contentEn:
@@ -215,7 +220,6 @@ function TestimonialCard({ testimonial }: { testimonial: TestimonialView }) {
         )}
         <div>
           <span className="font-semibold block text-sm">{testimonial.name}</span>
-          <span className="text-white/80 text-xs">{testimonial.roleLabel}</span>
         </div>
       </div>
     </div>
@@ -237,7 +241,9 @@ export default function Testimonials() {
     return testimonialEntries.map((entry) => ({
       name: entry.name,
       role: entry.role,
-      roleLabel: entry.role === TestimonialRole.VOLUNTEER ? volunteerLabel : participantLabel,
+      roleLabel: entry.role === TestimonialRole.VOLUNTEER
+        ? t(entry.isFeminine ? "testimonials.femaleVolunteer" : "testimonials.volunteer")
+        : participantLabel,
       program: isEnglish ? entry.programEn : entry.programEs,
       content: isEnglish ? entry.contentEn : entry.contentEs,
       avatar: entry.avatar,

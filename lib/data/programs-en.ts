@@ -1,9 +1,21 @@
-import type { ProgramData } from './programs';
+import {
+  AMBIENTALIA_DATA,
+  AVENTURA_MATEMATICA_DATA,
+  CIENCIA_FUERA_DE_LA_CAJA_DATA,
+  DECIDIR_CON_CIENCIA_DATA,
+  FUTURAS_DATA,
+  IMPULSATEC_DATA,
+  LIDERES_DATA,
+  POTENCIATE_DATA,
+  SOMOS_DATA,
+  type ProgramData
+} from './programs';
 
 export const AMBIENTALIA_DATA_EN: ProgramData = {
   title: 'Ambientalia Experience',
   slug: 'ambientalia',
   status: 'active',
+  enrollmentOpen: false,
   shortDescription:
     'Environmental education program that connects young people with their ecosystems and biodiversity while developing leadership skills through community-based environmental projects.',
   fullDescription:
@@ -20,9 +32,8 @@ export const AMBIENTALIA_DATA_EN: ProgramData = {
     'Each team must have a teacher mentor. Maximum of two lead teachers.'
   ],
   enrollmentInfo: {
-    description:
-      'To apply, you must complete a registration form, usually available each year between March and April. The form asks for information about each group member, questions about your project idea, and a video submission.',
-    availablePeriod: 'March - April (annually)'
+    description: 'This program is currently not open for enrollment.',
+    availablePeriod: 'Enrollment closed'
   },
   stages: [
     {
@@ -163,20 +174,13 @@ export const AMBIENTALIA_DATA_EN: ProgramData = {
     }
   ],
   gallery: {
-    type: 'drive',
-    url: 'https://drive.google.com/drive/folders/1nICN2r6FvOQVpWSZVEaC_McTJkc-ShL1'
+    ...AMBIENTALIA_DATA.gallery
   },
   colors: {
     primary: "#027353",
     secondary: "#568c30",
     accent: "#f2bf27"
   },
-  identity: {
-    badge: "Ambientalia Identity",
-    heading: "An experience with more nature, territory and visible impact",
-    description:
-      "We refreshed this page with a greener atmosphere so the essence of Ambientalia can breathe: biodiversity, young leadership, community and concrete environmental action."
-  }
 };
 
 export const SOMOS_DATA_EN: ProgramData = {
@@ -290,8 +294,7 @@ export const SOMOS_DATA_EN: ProgramData = {
   ],
   sponsors: [],
   gallery: {
-    type: 'images',
-    images: []
+    ...SOMOS_DATA.gallery
   },
   colors: {
     primary: "#2c04bf",
@@ -375,8 +378,7 @@ export const POTENCIATE_DATA_EN: ProgramData = {
     }
   ],
   gallery: {
-    type: 'images',
-    images: []
+    ...POTENCIATE_DATA.gallery
   },
   colors: {
     primary: "#52b5a2",
@@ -456,8 +458,7 @@ export const FUTURAS_DATA_EN: ProgramData = {
   faqs: [],
   sponsors: [],
   gallery: {
-    type: 'images',
-    images: []
+    ...FUTURAS_DATA.gallery
   },
   colors: {
     primary: "#010040",
@@ -543,8 +544,7 @@ export const IMPULSATEC_DATA_EN: ProgramData = {
     }
   ],
   gallery: {
-    type: 'images',
-    images: []
+    ...IMPULSATEC_DATA.gallery
   },
   colors: {
     primary: "#0ac1f7",
@@ -646,8 +646,7 @@ export const CIENCIA_FUERA_DE_LA_CAJA_DATA_EN: ProgramData = {
     }
   ],
   gallery: {
-    type: 'images',
-    images: []
+    ...CIENCIA_FUERA_DE_LA_CAJA_DATA.gallery
   },
   colors: {
     primary: "#06b6d4",
@@ -660,6 +659,7 @@ export const DECIDIR_CON_CIENCIA_DATA_EN: ProgramData = {
   title: 'Decidir con Ciencia',
   slug: 'decidir-con-ciencia',
   status: 'active',
+  showSuccessStories: false,
   year: '2026',
   shortDescription:
     'Educational program for secondary schools that strengthens scientific thinking to analyze information, evaluate evidence, and make well-founded decisions.',
@@ -677,7 +677,9 @@ export const DECIDIR_CON_CIENCIA_DATA_EN: ProgramData = {
   ],
   enrollmentInfo: {
     description:
-      'Applications are submitted through the program enrollment form, where details about the educational institution, the referring teacher, and motivations for participating are completed. Enrollment does not guarantee automatic admission: institutions will be selected according to the criteria established in the program rules.'
+      'Applications are submitted through the program enrollment form, where details about the educational institution, the referring teacher, and motivations for participating are completed. Enrollment does not guarantee automatic admission: institutions will be selected according to the criteria established in the program rules.',
+    registrationLabel: 'Registration form',
+    registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSerGl-MCobR5qBprxPqDpTpDfB4YkyBRyInTg0SUnXX9eTAqw/viewform'
   },
   stages: [
     {
@@ -760,8 +762,7 @@ export const DECIDIR_CON_CIENCIA_DATA_EN: ProgramData = {
     }
   ],
   gallery: {
-    type: 'images',
-    images: []
+    ...DECIDIR_CON_CIENCIA_DATA.gallery
   },
   colors: {
     primary: "#6a29b6",
@@ -848,8 +849,7 @@ export const AVENTURA_MATEMATICA_DATA_EN: ProgramData = {
   faqs: [],
   sponsors: [],
   gallery: {
-    type: 'images',
-    images: []
+    ...AVENTURA_MATEMATICA_DATA.gallery
   },
   colors: {
     primary: '#a855f7',
@@ -966,8 +966,7 @@ export const LIDERES_DATA_EN: ProgramData = {
     }
   ],
   gallery: {
-    type: 'images',
-    images: []
+    ...LIDERES_DATA.gallery
   },
   colors: {
     primary: "#8f130d",

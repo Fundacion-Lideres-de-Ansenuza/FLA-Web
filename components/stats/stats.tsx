@@ -3,9 +3,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { useCountAnimation } from './hooks/useCountAnimation'
 import { useTranslation } from 'react-i18next'
+import { CURRENT_VOLUNTEERS } from '@/lib/site-stats'
 
 const STATS_DATA = [
-  { number: 100, labelKey: "stats.volunteers" },
+  { number: CURRENT_VOLUNTEERS, labelKey: "stats.volunteers" },
   { number: 2200, labelKey: "stats.participants" },
   { number: 250, labelKey: "stats.projects" },
 ]
