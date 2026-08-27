@@ -8,7 +8,6 @@ import ProgramStages from "@/components/programs/ProgramStages";
 import ImpactStats from "@/components/programs/ImpactStats";
 import SuccessStories from "@/components/programs/SuccessStories";
 import Sponsors from "@/components/programs/Sponsors";
-import Gallery from "@/components/programs/Gallery";
 import { CIENCIA_FUERA_DE_LA_CAJA_DATA } from "@/lib/data/programs";
 import { CIENCIA_FUERA_DE_LA_CAJA_DATA_EN } from "@/lib/data/programs-en";
 import { useTranslation } from "react-i18next";
@@ -64,14 +63,6 @@ export default function CienciaFueraDeLaCajaPageClient() {
       />
 
       <Sponsors sponsors={data.sponsors} />
-
-      <Gallery
-        type={data.gallery.type}
-        url={data.gallery.url}
-        images={data.gallery.images}
-        colors={data.colors}
-        title={data.title}
-      />
     </main>
   );
 }
