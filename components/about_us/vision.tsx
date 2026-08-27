@@ -4,7 +4,7 @@ import { JSX } from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
-const girlVision = "/images/about_us/girlVision.webp";
+const visionImage = "/images/about_us/quienes_somos_vision.jpg";
 
 export default function Vision(): JSX.Element {
   const { t } = useTranslation();
@@ -21,7 +21,7 @@ export default function Vision(): JSX.Element {
 
         <div className="relative min-h-[240px] overflow-hidden rounded-[30px]">
           <Image
-            src={girlVision}
+            src={visionImage}
             alt={t("aboutUs.vision.imageAlt")}
             fill
             className="object-cover"
@@ -33,4 +33,3 @@ export default function Vision(): JSX.Element {
     </section>
   );
 }
-

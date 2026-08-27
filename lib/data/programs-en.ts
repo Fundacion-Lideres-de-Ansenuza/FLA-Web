@@ -1,4 +1,15 @@
-import type { ProgramData } from './programs';
+import {
+  AMBIENTALIA_DATA,
+  AVENTURA_MATEMATICA_DATA,
+  CIENCIA_FUERA_DE_LA_CAJA_DATA,
+  DECIDIR_CON_CIENCIA_DATA,
+  FUTURAS_DATA,
+  IMPULSATEC_DATA,
+  LIDERES_DATA,
+  POTENCIATE_DATA,
+  SOMOS_DATA,
+  type ProgramData
+} from './programs';
 
 export const AMBIENTALIA_DATA_EN: ProgramData = {
   title: 'Ambientalia Experience',
@@ -163,8 +174,7 @@ export const AMBIENTALIA_DATA_EN: ProgramData = {
     }
   ],
   gallery: {
-    type: 'drive',
-    url: 'https://drive.google.com/drive/folders/1nICN2r6FvOQVpWSZVEaC_McTJkc-ShL1'
+    ...AMBIENTALIA_DATA.gallery
   },
   colors: {
     primary: "#027353",
@@ -284,8 +294,7 @@ export const SOMOS_DATA_EN: ProgramData = {
   ],
   sponsors: [],
   gallery: {
-    type: 'images',
-    images: []
+    ...SOMOS_DATA.gallery
   },
   colors: {
     primary: "#2c04bf",
@@ -369,8 +378,7 @@ export const POTENCIATE_DATA_EN: ProgramData = {
     }
   ],
   gallery: {
-    type: 'images',
-    images: []
+    ...POTENCIATE_DATA.gallery
   },
   colors: {
     primary: "#52b5a2",
@@ -450,8 +458,7 @@ export const FUTURAS_DATA_EN: ProgramData = {
   faqs: [],
   sponsors: [],
   gallery: {
-    type: 'images',
-    images: []
+    ...FUTURAS_DATA.gallery
   },
   colors: {
     primary: "#010040",
@@ -537,8 +544,7 @@ export const IMPULSATEC_DATA_EN: ProgramData = {
     }
   ],
   gallery: {
-    type: 'images',
-    images: []
+    ...IMPULSATEC_DATA.gallery
   },
   colors: {
     primary: "#0ac1f7",
@@ -640,8 +646,7 @@ export const CIENCIA_FUERA_DE_LA_CAJA_DATA_EN: ProgramData = {
     }
   ],
   gallery: {
-    type: 'images',
-    images: []
+    ...CIENCIA_FUERA_DE_LA_CAJA_DATA.gallery
   },
   colors: {
     primary: "#06b6d4",
@@ -757,8 +762,7 @@ export const DECIDIR_CON_CIENCIA_DATA_EN: ProgramData = {
     }
   ],
   gallery: {
-    type: 'images',
-    images: []
+    ...DECIDIR_CON_CIENCIA_DATA.gallery
   },
   colors: {
     primary: "#6a29b6",
@@ -845,8 +849,7 @@ export const AVENTURA_MATEMATICA_DATA_EN: ProgramData = {
   faqs: [],
   sponsors: [],
   gallery: {
-    type: 'images',
-    images: []
+    ...AVENTURA_MATEMATICA_DATA.gallery
   },
   colors: {
     primary: '#a855f7',
@@ -963,8 +966,7 @@ export const LIDERES_DATA_EN: ProgramData = {
     }
   ],
   gallery: {
-    type: 'images',
-    images: []
+    ...LIDERES_DATA.gallery
   },
   colors: {
     primary: "#8f130d",
