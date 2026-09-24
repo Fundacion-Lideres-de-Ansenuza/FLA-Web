@@ -3,7 +3,6 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ACTIVE_PROGRAMS } from "@/lib/data/programs"
-import { generateBlobRadius } from "@/lib/shapes"
 import { useTranslation } from "react-i18next"
 
 function getLogoFileName(title: string): string {
@@ -41,30 +40,19 @@ export default function CurrentPrograms() {
           <h2 className="text-3xl md:text-5xl text-gray-900 mb-3 font-contrail tracking-tight">{t('currentPrograms.title')}</h2>
           <p className="text-base md:text-xl text-gray-600 font-arimo max-w-2xl mx-auto">{t('currentPrograms.subtitle')}</p>
         </div>
-        <div
-          className={`grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-10 items-center justify-items-center ${programs.length % 3 === 0 ? "lg:grid-cols-3" : ""}`}
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8 items-center justify-items-center">
           {programs.map((program, index) => (
             <Link key={index} href={program.href} className="block group w-full max-w-sm">
               <div className="relative flex flex-col items-center text-center px-4 py-2 transition-transform duration-300 group-hover:-translate-y-1">
-                <div
-                  className="relative mb-4 flex h-56 w-56 items-center justify-center transition-all duration-500 group-hover:scale-105 md:h-64 md:w-64"
-                  style={{
-                    backgroundColor: `${program.colors.primary}25`,
-                    borderRadius: generateBlobRadius(program.name)
-                  }}
-                >
-                  <div className="absolute inset-0 opacity-20" style={{ backgroundColor: `${program.colors.accent}25`, borderRadius: generateBlobRadius(program.name + 'bg') }} />
-                  <div className="relative z-10 w-48 h-32 flex items-center justify-center p-4">
-                    <Image
-                      src={program.logo || "/placeholder.svg"}
-                      alt={program.name}
-                      width={360}
-                      height={180}
-                      className="h-full w-full object-contain filter drop-shadow-md transition-transform duration-300 group-hover:scale-105"
-                      loading={index < 3 ? "eager" : "lazy"}
-                    />
-                  </div>
+                <div className="relative mb-4 flex h-56 w-56 items-center justify-center rounded-[28px] border border-gray-100 bg-white p-6 shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 md:h-64 md:w-64">
+                  <Image
+                    src={program.logo || "/placeholder.svg"}
+                    alt={program.name}
+                    width={300}
+                    height={300}
+                    className="h-full w-full object-contain"
+                    loading={index < 3 ? "eager" : "lazy"}
+                  />
                 </div>
                 <h3 className="text-2xl font-contrail text-gray-900">{program.name}</h3>
               </div>
