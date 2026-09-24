@@ -146,7 +146,7 @@ export default function Header() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -8 }}
                           transition={{ duration: 0.15 }}
-                          className="absolute left-0 top-full z-20 mt-2 min-w-[220px] max-w-[280px] rounded-2xl border border-[#a81c1c]/20 bg-white p-2 shadow-xl"
+                          className="absolute left-0 top-full z-20 mt-2 before:absolute before:-top-2 before:left-0 before:right-0 before:h-2 before:content-[''] min-w-[220px] max-w-[280px] rounded-2xl border border-[#a81c1c]/20 bg-white p-2 shadow-xl"
                         >
                           {submenuItems.map((sub) => (
                             <Link
