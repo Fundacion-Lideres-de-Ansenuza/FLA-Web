@@ -234,10 +234,8 @@ export const SOMOS_DATA: ProgramData = {
     "Compromiso de contribuir a una sociedad más justa e inclusiva realizando una acción de impacto en tu comunidad"
   ],
   enrollmentInfo: {
-    description: "Para ser parte del programa, completá el siguiente formulario:",
-    registrationLabel: "Form de inscripción Somos 2026",
-    registrationUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc6lL0QlYa_5SUw4y_QO4LTU_0G3lNdWFbnVcVxll_OWSWDjg/viewform?usp=header",
-    availablePeriod: "Inscripción 2026"
+    description: "Las inscripciones para esta edición ya cerraron.",
+    availablePeriod: "Inscripciones cerradas. El programa está en curso."
   },
   stages: [
     {
@@ -310,7 +308,7 @@ export const SOMOS_DATA: ProgramData = {
     },
     {
       question: "¿Cómo me anoto?",
-      answer: "Completando el formulario de inscripción que encontrarás en nuestra página web."
+      answer: "Las inscripciones para la edición actual ya están cerradas. El programa está en curso; seguí nuestras redes para enterarte de la próxima convocatoria."
     },
     {
       question: "¿Conocé más acerca de SOMOS?",
@@ -330,8 +328,8 @@ export const SOMOS_DATA: ProgramData = {
   },
   colors: {
     primary: "#2c04bf",
-    secondary: "#f2e313",
-    accent: "#f2a516"
+    secondary: "#7c3aed",
+    accent: "#c026d3"
   }
 };
 
