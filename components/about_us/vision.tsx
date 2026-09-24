@@ -10,7 +10,7 @@ export default function Vision(): JSX.Element {
   const { t } = useTranslation();
 
   return (
-    <section className="overflow-hidden">
+    <section id="vision" className="overflow-hidden scroll-mt-[120px]">
       <div className="grid items-center gap-0 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="px-0 py-6 md:px-2 md:py-8 lg:pr-8">
           <span className="inline-flex rounded-full bg-[#90140e] px-4 py-1.5 text-xs font-black uppercase tracking-[0.22em] text-white shadow-lg">

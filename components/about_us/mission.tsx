@@ -10,7 +10,7 @@ export default function Mission(): JSX.Element {
   const { t } = useTranslation();
 
   return (
-    <section className="overflow-hidden">
+    <section id="mision" className="overflow-hidden scroll-mt-[120px]">
       <div className="grid items-center gap-0 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="relative min-h-[240px] overflow-hidden rounded-[30px]">
           <Image

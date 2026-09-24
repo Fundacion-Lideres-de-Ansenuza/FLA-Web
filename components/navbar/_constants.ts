@@ -1,8 +1,8 @@
 import type { NavItem, AnimationConfig } from "./types"
 
 export const NAV_ITEMS: NavItem[] = [
-  { name: "PROGRAMAS", href: "/programas" },
-  { name: "QUIENES SOMOS", href: "/quienes-somos" },
+  { name: "PROGRAMAS", href: "/programas", hasSubmenu: true },
+  { name: "QUIENES SOMOS", href: "/quienes-somos", hasSubmenu: true },
   { name: "DONAR", href: "/donar" }
 ] as const
 

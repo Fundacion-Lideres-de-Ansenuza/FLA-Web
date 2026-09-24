@@ -7,7 +7,17 @@
     "campus": "CAMPUS",
     "contactanos": "CONTÁCTANOS",
     "openMenu": "Abrir menú de navegación",
-    "closeMenu": "Cerrar menú de navegación"
+    "closeMenu": "Cerrar menú de navegación",
+    "viewAll": "Ver todos",
+    "toggleSubmenu": "Mostrar submenú de {{item}}",
+    "submenu": {
+      "introduccion": "Fundación",
+      "mision": "Misión",
+      "vision": "Visión",
+      "valores": "Valores",
+      "voluntariado": "Voluntariado",
+      "autoridades": "Autoridades"
+    }
   },
   "language": {
     "es": "Español",
@@ -122,6 +132,7 @@
     "authorities": {
       "title": "Autoridades",
       "description": "Presentamos al equipo directivo de la fundación y a las personas que acompañan nuestra gestión institucional.",
+      "cta": "Ver autoridades",
       "boardTitle": "Consejo de Administración",
       "leadershipTitle": "Equipo de Liderazgo",
       "board": {

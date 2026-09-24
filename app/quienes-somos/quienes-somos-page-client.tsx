@@ -1,6 +1,7 @@
 'use client'
 
 import { JSX } from "react";
+import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import Introduction from "../../components/about_us/introduction";
 import Mission from "../../components/about_us/mission";
@@ -8,7 +9,6 @@ import Values from "../../components/about_us/values";
 import Volunteers from "../../components/about_us/volunteers";
 import Vision from "../../components/about_us/vision";
 import EnjoyFla from "@/components/about_us/EnjoyFla";
-import AuthoritiesOrganigram from "@/components/about_us/authorities-organigram";
 
 export default function QuienesSomos(): JSX.Element {
   const { t } = useTranslation();
@@ -25,9 +25,13 @@ export default function QuienesSomos(): JSX.Element {
           <p className="mx-auto mt-3 max-w-3xl text-base md:text-lg text-gray-700 font-arimo">
             {t('aboutUs.authorities.description')}
           </p>
+          <Link
+            href="/quienes-somos/autoridades"
+            className="mt-5 inline-flex items-center justify-center rounded-full bg-[#bc2222] px-6 py-3 text-sm font-bold uppercase tracking-wide text-white shadow transition hover:bg-[#a81c1c]"
+          >
+            {t('aboutUs.authorities.cta')}
+          </Link>
         </section>
-
-        <AuthoritiesOrganigram />
 
         <div className="space-y-2 md:space-y-4">
           <Mission />
