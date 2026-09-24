@@ -28,6 +28,10 @@ export interface ProgramData {
     title: string;
     description: string;
     link?: string;
+    image?: {
+      src: string;
+      alt: string;
+    };
   }[];
   showSuccessStories?: boolean;
   blogPosts: {
