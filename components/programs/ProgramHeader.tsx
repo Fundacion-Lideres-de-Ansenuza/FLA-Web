@@ -11,9 +11,10 @@ interface ProgramHeaderProps {
   colors: ProgramColors;
   isHistorical?: boolean;
   year?: string;
+  isOngoing?: boolean;
 }
 
-export default function ProgramHeader({ title, description, colors, isHistorical = false, year }: ProgramHeaderProps) {
+export default function ProgramHeader({ title, description, colors, isHistorical = false, year, isOngoing = false }: ProgramHeaderProps) {
   const { t } = useTranslation();
   return (
     <section className="relative mt-10 py-20 md:py-32 overflow-hidden" style={{ background: `linear-gradient(135deg, ${colors.primary} 0%, ${colors.secondary} 100%)` }}>
@@ -39,6 +40,19 @@ export default function ProgramHeader({ title, description, colors, isHistorical
             <span className="mx-2">/</span>
             <span className="text-white">{title}</span>
           </motion.nav>
+
+          {isOngoing && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.05 }}
+              className="mb-4 inline-block"
+            >
+              <span className="bg-white/30 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold">
+                {t("programs.active.ongoing")}
+              </span>
+            </motion.div>
+          )}
 
           {isHistorical && year && (
             <motion.div

@@ -29,6 +29,7 @@ export default function AmbientaliaPageClient() {
           title={data.title}
           description={data.shortDescription}
           colors={data.colors}
+          isOngoing={data.enCurso}
         />
 
         <ProgramDescription
