@@ -35,6 +35,7 @@ export default function LideresPageClient() {
         location={data.location}
         duration={data.duration}
         modality={data.modality}
+        colors={data.colors}
       />
 
       <Requirements

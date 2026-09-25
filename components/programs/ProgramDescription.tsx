@@ -65,7 +65,7 @@ export default function ProgramDescription({
                   <h3 className="mb-2 text-xl font-semibold" style={{ color: colors?.secondary ?? "#111827" }}>
                     {t("programDetail.modality")}
                   </h3>
-                  <p className="font-semibold" style={{ color: strongColor }}>
+                  <p className="leading-relaxed text-gray-700">
                     {modality}
                   </p>
                 </div>
@@ -85,7 +85,7 @@ export default function ProgramDescription({
               <h3 className="mb-4 text-2xl font-semibold" style={{ color: colors?.secondary ?? "#111827" }}>
                 {t("programDetail.location")}
               </h3>
-              <p className="text-lg font-semibold leading-relaxed" style={{ color: strongColor }}>
+              <p className="text-lg leading-relaxed text-gray-700">
                 {location}
               </p>
             </motion.div>
