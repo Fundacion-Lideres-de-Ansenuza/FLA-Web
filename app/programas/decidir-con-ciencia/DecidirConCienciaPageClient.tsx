@@ -32,6 +32,8 @@ export default function DecidirConCienciaPageClient() {
         duration={data.duration}
         modality={data.modality}
         colors={data.colors}
+        descriptionBlocks={data.descriptionBlocks}
+        methodology={data.methodology}
       />
 
       <Requirements

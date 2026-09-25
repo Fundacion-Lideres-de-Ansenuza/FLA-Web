@@ -2,6 +2,10 @@ export interface Stage {
   title: string;
   description: string;
   icon?: string;
+  /** Color propio de la etapa (hex). Si no está definido, se usa colors.primary. */
+  color?: string;
+  /** Foto real que representa la etapa (opcional). Debe existir en public/images. */
+  image?: string;
 }
 
 export interface Stat {

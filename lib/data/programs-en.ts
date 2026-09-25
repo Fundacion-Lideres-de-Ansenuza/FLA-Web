@@ -212,19 +212,25 @@ export const SOMOS_DATA_EN: ProgramData = {
       title: 'Learn',
       description:
         'Diversity workshops, a personal development handbook, a project development handbook, and weekly mentoring.',
-      icon: 'BookOpen'
+      icon: 'BookOpen',
+      color: '#be123c',
+      image: '/images/programs_sliders/somos/1.jpg'
     },
     {
       title: 'Take action',
       description:
         'Time to implement your impact action in your community. You will have exclusive materials and staff support throughout the process.',
-      icon: 'Rocket'
+      icon: 'Rocket',
+      color: '#0369a1',
+      image: '/images/programs_sliders/somos/2.jpg'
     },
     {
       title: 'Closing',
       description:
         'We share the actions carried out and participants can then become part of the FLA community.',
-      icon: 'PartyPopper'
+      icon: 'PartyPopper',
+      color: '#6d28d9',
+      image: '/images/programs_sliders/somos/3.jpg'
     }
   ],
   stats: [
@@ -667,6 +673,25 @@ export const DECIDIR_CON_CIENCIA_DATA_EN: ProgramData = {
     'Educational program for secondary schools that strengthens scientific thinking to analyze information, evaluate evidence, and make well-founded decisions.',
   fullDescription:
     'Decidir con Ciencia is an educational program aimed at secondary-level institutions. The proposal seeks to strengthen scientific thinking skills that allow students to analyze information, evaluate evidence, consider different alternatives, and make well-founded decisions when facing real challenges. Through the Thinking-Based Learning (TBL) methodology and a STEM approach, students work collaboratively to build solution proposals while developing tools they can apply in different learning contexts and in everyday life. The program also supports teaching teams, providing strategies and resources to foster the development of these skills in their teaching practice. In a world where young people face increasingly complex challenges, learning to make informed decisions, analyze evidence, and think critically becomes a fundamental life skill: having information is not enough; you need to know what to do with it.',
+  descriptionBlocks: [
+    {
+      heading: 'What it is',
+      text: 'Decidir con Ciencia is an educational program aimed at secondary-level institutions. The proposal seeks to strengthen scientific thinking skills that allow students to analyze information, evaluate evidence, consider different alternatives, and make well-founded decisions when facing real challenges.'
+    },
+    {
+      heading: 'Support for teaching teams',
+      text: 'The program also supports teaching teams, providing strategies and resources to foster the development of these skills in their teaching practice.'
+    },
+    {
+      heading: 'Why it matters',
+      text: 'In a world where young people face increasingly complex challenges, learning to make informed decisions, analyze evidence, and think critically becomes a fundamental life skill: having information is not enough; you need to know what to do with it.'
+    }
+  ],
+  methodology: {
+    label: 'Methodology: Thinking-Based Learning (TBL) and a STEM approach',
+    summary: 'How students work throughout the program.',
+    details: 'Through the Thinking-Based Learning (TBL) methodology and a STEM approach, students work collaboratively to build solution proposals while developing tools they can apply in different learning contexts and in everyday life.'
+  },
   location: 'Educational institutions in Cordoba, Argentina',
   duration: 'September and October 2026',
   modality:

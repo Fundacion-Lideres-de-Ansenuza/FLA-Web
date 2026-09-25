@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import type { ProgramColors } from "./types";
 import { useTranslation } from "react-i18next";
+import { getAccessibleTextColor } from "@/lib/utils/color-contrast";
 
 interface RequirementsProps {
   requirements: string[];
@@ -12,6 +13,9 @@ interface RequirementsProps {
 
 export default function Requirements({ requirements, colors }: RequirementsProps) {
   const { t } = useTranslation();
+  const strongColor = getAccessibleTextColor(colors.primary, "#ffffff");
+  const cardBackground = `${colors.primary}14`;
+
   return (
     <section className="py-12 md:py-16" style={{ backgroundColor: `${colors.primary}0d` }}>
       <div className="container mx-auto px-4">
@@ -39,10 +43,11 @@ export default function Requirements({ requirements, colors }: RequirementsProps
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
-                className="flex items-start gap-4 rounded-xl bg-white p-5 shadow-sm transition-shadow duration-300 hover:shadow-md"
+                className="flex items-start gap-4 rounded-xl p-5 shadow-sm transition-shadow duration-300 hover:shadow-md"
+                style={{ backgroundColor: cardBackground }}
               >
-                <CheckCircle2 className="mt-1 flex-shrink-0" size={26} style={{ color: colors.primary }} />
-                <p className="text-base text-gray-700 md:text-lg">{requirement}</p>
+                <CheckCircle2 className="mt-1 flex-shrink-0" size={26} style={{ color: strongColor }} />
+                <p className="text-base font-medium text-gray-800 md:text-lg">{requirement}</p>
               </motion.div>
             ))}
           </div>

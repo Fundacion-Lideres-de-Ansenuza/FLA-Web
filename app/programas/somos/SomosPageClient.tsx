@@ -36,6 +36,7 @@ export default function SomosPageClient() {
           location={data.location}
           duration={data.duration}
           modality={data.modality}
+          colors={data.colors}
         />
 
         <Requirements
