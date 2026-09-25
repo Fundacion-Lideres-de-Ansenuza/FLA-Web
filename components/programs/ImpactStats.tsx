@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { useCountAnimation } from "@/components/stats/hooks/useCountAnimation";
 import type { ProgramColors, Stat } from "./types";
 import { useTranslation } from "react-i18next";
+import { getAccessibleTextColor } from "@/lib/utils/color-contrast";
 
 interface ImpactStatsProps {
   stats: Stat[];
@@ -54,6 +55,9 @@ function StatCard({ stat, index, color }: StatCardProps) {
   const prefix = stat.value.match(/^\D+/)?.[0] || "";
   const suffix = stat.value.match(/\D+$/)?.[0] || "";
   const count = useCountAnimation(numericValue, isInView);
+  // Los números son grandes/negrita (AA para texto grande exige 3:1).
+  const strongColor = getAccessibleTextColor(color, "#ffffff", 3);
+  const cardBackground = `${color}14`;
 
   return (
     <motion.div
@@ -64,9 +68,15 @@ function StatCard({ stat, index, color }: StatCardProps) {
       transition={{ duration: 0.5, delay: index * 0.08 }}
       className="flex w-full max-w-[240px] justify-center"
     >
-      <div className="flex min-h-[160px] w-full max-w-[240px] flex-col items-center justify-center rounded-[24px] border border-white/70 bg-white/85 px-4 py-6 text-center shadow-[0_18px_50px_rgba(0,0,0,0.06)]">
+      <div
+        className="flex min-h-[160px] w-full max-w-[240px] flex-col items-center justify-center rounded-[24px] border border-white/70 px-4 py-6 text-center shadow-[0_18px_50px_rgba(0,0,0,0.06)]"
+        style={{ backgroundColor: cardBackground }}
+      >
         <div className="mb-2 flex h-[56px] items-center justify-center">
-          <span className="inline-flex items-center justify-center text-3xl font-bold leading-none md:text-4xl lg:text-5xl" style={{ color }}>
+          <span
+            className="inline-flex items-center justify-center text-3xl font-bold leading-none md:text-4xl lg:text-5xl"
+            style={{ color: strongColor }}
+          >
             {prefix}
             {count}
             {suffix}

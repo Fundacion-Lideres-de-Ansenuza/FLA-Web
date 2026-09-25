@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Calendar, FileText } from "lucide-react";
 import type { ProgramColors } from "./types";
 import { useTranslation } from "react-i18next";
+import { getAccessibleTextColor } from "@/lib/utils/color-contrast";
 
 interface EnrollmentInfoProps {
   description: string;
@@ -23,6 +24,9 @@ export default function EnrollmentInfo({
   isHistorical = false,
 }: EnrollmentInfoProps) {
   const { t } = useTranslation();
+  const strongColor = getAccessibleTextColor(colors.primary, "#ffffff");
+  const cardBackground = `${colors.primary}14`;
+
   return (
     <section id="inscripcion" className="bg-white py-12 md:py-16">
       <div className="container mx-auto px-4">
@@ -44,14 +48,21 @@ export default function EnrollmentInfo({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-6 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 p-8 md:p-10"
+            className="mb-6 rounded-2xl p-8 md:p-10"
+            style={{ backgroundColor: cardBackground }}
           >
             <div className="mb-6 flex items-start gap-4">
-              <FileText size={32} style={{ color: colors.primary }} className="mt-1 flex-shrink-0" />
+              <FileText size={32} style={{ color: strongColor }} className="mt-1 flex-shrink-0" />
               <p className="text-lg leading-relaxed text-gray-700">
                 {description}{" "}
                 {registrationUrl && registrationLabel && (
-                  <a href={registrationUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-purple-600 underline">
+                  <a
+                    href={registrationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold underline"
+                    style={{ color: strongColor }}
+                  >
                     {registrationLabel}
                   </a>
                 )}
@@ -60,12 +71,14 @@ export default function EnrollmentInfo({
 
             {availablePeriod && (
               <div className={`flex items-center gap-4 rounded-xl p-4 ${isHistorical ? "border border-amber-200 bg-amber-50" : "bg-white"}`}>
-                <Calendar size={24} style={{ color: isHistorical ? "#f59e0b" : colors.primary }} />
+                <Calendar size={24} style={{ color: isHistorical ? "#f59e0b" : strongColor }} />
                 <div>
                   <p className="text-sm font-semibold text-gray-600">
                     {isHistorical ? t("programDetail.programStatus") : t("programDetail.enrollmentPeriod")}
                   </p>
-                  <p className="text-gray-900">{availablePeriod}</p>
+                  <p className="font-semibold" style={{ color: isHistorical ? "#111827" : strongColor }}>
+                    {availablePeriod}
+                  </p>
                 </div>
               </div>
             )}

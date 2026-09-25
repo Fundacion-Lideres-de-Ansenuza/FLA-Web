@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import type { ProgramColors } from "./types";
+import { getAccessibleTextColor } from "@/lib/utils/color-contrast";
 
 interface ProgramDescriptionProps {
   fullDescription: string;
@@ -20,6 +21,10 @@ export default function ProgramDescription({
   colors,
 }: ProgramDescriptionProps) {
   const { t } = useTranslation();
+  const primary = colors?.primary ?? "#111827";
+  const strongColor = getAccessibleTextColor(primary, "#ffffff");
+  const cardBackground = `${primary}14`;
+
   return (
     <section id="mas-info" className="bg-white py-12 md:py-16">
       <div className="container mx-auto px-4">
@@ -46,19 +51,23 @@ export default function ProgramDescription({
               className="mb-10 grid gap-5 md:grid-cols-2"
             >
               {duration && (
-                <div className="rounded-2xl bg-gray-50 p-6">
+                <div className="rounded-2xl p-6" style={{ backgroundColor: cardBackground }}>
                   <h3 className="mb-2 text-xl font-semibold" style={{ color: colors?.secondary ?? "#111827" }}>
                     {t("programDetail.duration")}
                   </h3>
-                  <p className="text-gray-700">{duration}</p>
+                  <p className="font-semibold" style={{ color: strongColor }}>
+                    {duration}
+                  </p>
                 </div>
               )}
               {modality && (
-                <div className="rounded-2xl bg-gray-50 p-6">
+                <div className="rounded-2xl p-6" style={{ backgroundColor: cardBackground }}>
                   <h3 className="mb-2 text-xl font-semibold" style={{ color: colors?.secondary ?? "#111827" }}>
                     {t("programDetail.modality")}
                   </h3>
-                  <p className="text-gray-700">{modality}</p>
+                  <p className="font-semibold" style={{ color: strongColor }}>
+                    {modality}
+                  </p>
                 </div>
               )}
             </motion.div>
@@ -70,12 +79,15 @@ export default function ProgramDescription({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 p-8"
+              className="rounded-2xl p-8"
+              style={{ backgroundColor: cardBackground }}
             >
               <h3 className="mb-4 text-2xl font-semibold" style={{ color: colors?.secondary ?? "#111827" }}>
                 {t("programDetail.location")}
               </h3>
-              <p className="text-lg leading-relaxed text-gray-700">{location}</p>
+              <p className="text-lg font-semibold leading-relaxed" style={{ color: strongColor }}>
+                {location}
+              </p>
             </motion.div>
           )}
         </div>
