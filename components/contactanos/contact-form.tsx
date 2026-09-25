@@ -50,9 +50,9 @@ export default function ContactForm() {
   }
 
   const fieldClassName =
-    "h-14 rounded-2xl border border-[#bc2222]/12 bg-white/85 px-4 font-arimo text-base text-black shadow-[0_10px_30px_rgba(188,34,34,0.08)] transition-all duration-300 placeholder:text-black/35 focus-visible:border-[#bc2222]/45 focus-visible:ring-[3px] focus-visible:ring-[#f45e5e]/20"
+    "h-14 rounded-2xl border border-[#bc2222]/12 bg-white/85 px-4 text-base text-black shadow-[0_10px_30px_rgba(188,34,34,0.08)] transition-all duration-300 placeholder:text-black/35 focus-visible:border-[#bc2222]/45 focus-visible:ring-[3px] focus-visible:ring-[#f45e5e]/20"
 
-  const labelClassName = "mb-2 block font-arimo text-sm font-semibold tracking-[0.01em] text-black/75"
+  const labelClassName = "mb-2 block text-sm font-semibold tracking-[0.01em] text-black/75"
 
   return (
     <section className="relative overflow-hidden rounded-[2rem] border border-[#bc2222]/15 bg-[linear-gradient(145deg,#fff7f5_0%,#fffdfc_48%,#ffe8e1_100%)] p-5 shadow-[0_30px_90px_rgba(188,34,34,0.14)] md:p-8 lg:p-10">
@@ -69,10 +69,10 @@ export default function ContactForm() {
             </div>
 
             <div className="mt-6 space-y-4">
-              <h2 className="font-contrail text-4xl leading-none text-[#90140e] md:text-5xl">
+              <h2 className="font-fla text-4xl leading-none text-[#90140e] md:text-5xl">
                 {t("contact.form.title")}
               </h2>
-              <p className="max-w-md font-arimo text-base leading-relaxed text-black/70 md:text-lg">
+              <p className="max-w-md text-base leading-relaxed text-black/70 md:text-lg">
                 {t("contact.subtitle")}
               </p>
             </div>
@@ -159,7 +159,7 @@ export default function ContactForm() {
                   value={formData.mensaje}
                   onChange={handleChange}
                   rows={7}
-                  className="min-h-[180px] rounded-[1.5rem] border border-[#bc2222]/12 bg-white/85 px-4 py-4 font-arimo text-base text-black shadow-[0_12px_30px_rgba(188,34,34,0.08)] transition-all duration-300 placeholder:text-black/35 focus-visible:border-[#bc2222]/45 focus-visible:ring-[3px] focus-visible:ring-[#f45e5e]/20 resize-none"
+                  className="min-h-[180px] rounded-[1.5rem] border border-[#bc2222]/12 bg-white/85 px-4 py-4 text-base text-black shadow-[0_12px_30px_rgba(188,34,34,0.08)] transition-all duration-300 placeholder:text-black/35 focus-visible:border-[#bc2222]/45 focus-visible:ring-[3px] focus-visible:ring-[#f45e5e]/20 resize-none"
                   placeholder={t("contact.form.messagePlaceholder")}
                 />
               </div>
@@ -174,8 +174,8 @@ export default function ContactForm() {
                   {status === "loading" ? t("contact.form.sending", { defaultValue: "Enviando..." }) : t("contact.form.send")}
                 </Button>
               </div>
-              {status === "success" && <p role="status" className="font-arimo text-sm text-green-700">{t("contact.form.success")}</p>}
-              {status === "error" && <p role="alert" className="font-arimo text-sm text-[#90140e]">{t("contact.form.error", { defaultValue: "No pudimos enviar tu mensaje. Intentá nuevamente." })}</p>}
+              {status === "success" && <p role="status" className="text-sm text-green-700">{t("contact.form.success")}</p>}
+              {status === "error" && <p role="alert" className="text-sm text-[#90140e]">{t("contact.form.error", { defaultValue: "No pudimos enviar tu mensaje. Intentá nuevamente." })}</p>}
             </form>
           </div>
         </div>

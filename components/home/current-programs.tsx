@@ -37,8 +37,8 @@ export default function CurrentPrograms() {
     <section className="py-9 sm:py-10 bg-transparent overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10 sm:mb-12">
-          <h2 className="text-3xl md:text-5xl text-gray-900 mb-3 font-contrail tracking-tight">{t('currentPrograms.title')}</h2>
-          <p className="text-base md:text-xl text-gray-600 font-arimo max-w-2xl mx-auto">{t('currentPrograms.subtitle')}</p>
+          <h2 className="text-3xl md:text-5xl text-gray-900 mb-3 font-fla tracking-tight">{t('currentPrograms.title')}</h2>
+          <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">{t('currentPrograms.subtitle')}</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8 items-center justify-items-center">
           {programs.map((program, index) => (
@@ -54,7 +54,7 @@ export default function CurrentPrograms() {
                     loading={index < 3 ? "eager" : "lazy"}
                   />
                 </div>
-                <h3 className="text-2xl font-contrail text-gray-900">{program.name}</h3>
+                <h3 className="text-2xl font-fla text-gray-900">{program.name}</h3>
               </div>
             </Link>
           ))}
@@ -62,7 +62,7 @@ export default function CurrentPrograms() {
         <div className="text-center mt-8">
           <Link
             href="/programas"
-            className="inline-block bg-[#f45e5e] hover:bg-[#f67a7a] text-white px-10 py-3 md:px-12 md:py-4 rounded-full font-contrail text-xl md:text-2xl shadow-lg"
+            className="inline-block bg-[#f45e5e] hover:bg-[#f67a7a] text-white px-10 py-3 md:px-12 md:py-4 rounded-full font-fla text-xl md:text-2xl shadow-lg"
           >
             {t('currentPrograms.viewAll')}
           </Link>

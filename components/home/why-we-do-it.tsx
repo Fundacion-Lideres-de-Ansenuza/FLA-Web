@@ -11,8 +11,8 @@ export default function WhyWeDoIt(): React.ReactElement {
     <section className="py-7 sm:py-8 bg-gradient-to-b from-transparent via-rose-50/70 to-transparent">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 sm:mb-10">
-          <h2 className="text-3xl md:text-4xl text-gray-900 mb-3 font-contrail">{t('whyWeDoIt.title')}</h2>
-          <p className="text-base md:text-lg text-gray-600 font-arimo">{t('whyWeDoIt.subtitle')}</p>
+          <h2 className="text-3xl md:text-4xl text-gray-900 mb-3 font-fla">{t('whyWeDoIt.title')}</h2>
+          <p className="text-base md:text-lg text-gray-600">{t('whyWeDoIt.subtitle')}</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-5 lg:gap-6 mb-5 lg:mb-6">

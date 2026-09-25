@@ -27,7 +27,7 @@ export default function Mission(): JSX.Element {
           <span className="inline-flex rounded-full bg-[#bc2222] px-4 py-1.5 text-xs font-black uppercase tracking-[0.22em] text-white shadow-lg">
             {t("aboutUs.mission.tag")}
           </span>
-          <p className="mt-5 text-[18px] md:text-[20px] leading-relaxed text-[#2c1818] font-arimo">{t("aboutUs.mission.text")}</p>
+          <p className="mt-5 text-[18px] md:text-[20px] leading-relaxed text-[#2c1818]">{t("aboutUs.mission.text")}</p>
         </div>
       </div>
     </section>

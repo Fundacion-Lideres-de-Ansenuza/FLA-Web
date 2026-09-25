@@ -9,8 +9,8 @@ export default function ContactInfo() {
   return (
     <div className="space-y-8">
       <div>
-        <h3 className="text-4xl font-contrail text-[#000000] mb-6">{t('contact.info.title')}</h3>
-        <p className="font-arimo text-black text-lg leading-relaxed">
+        <h3 className="text-4xl font-fla text-[#000000] mb-6">{t('contact.info.title')}</h3>
+        <p className="text-black text-lg leading-relaxed">
           {t('contact.info.description')}
         </p>
       </div>
@@ -21,9 +21,9 @@ export default function ContactInfo() {
             <Mail className="h-6 w-6 text-white" />
           </div>
           <div className="flex-1">
-            <h4 className="font-contrail text-black text-xl mb-2">{t('contact.info.email')}</h4>
-            <p className="font-arimo text-black text-base">contacto@lideresdeansenuza.org</p>
-            <p className="font-arimo text-gray-600 text-sm">{t('contact.info.emailResponse')}</p>
+            <h4 className="font-fla text-black text-xl mb-2">{t('contact.info.email')}</h4>
+            <p className="text-black text-base">contacto@lideresdeansenuza.org</p>
+            <p className="text-gray-600 text-sm">{t('contact.info.emailResponse')}</p>
           </div>
         </div>
 
@@ -32,9 +32,9 @@ export default function ContactInfo() {
             <Phone className="h-6 w-6 text-white" />
           </div>
           <div className="flex-1">
-            <h4 className="font-contrail text-black text-xl mb-2">{t('contact.info.phone')}</h4>
-            <p className="font-arimo text-black text-base">+54 358 123 4567</p>
-            <p className="font-arimo text-gray-600 text-sm">{t('contact.info.phoneHours')}</p>
+            <h4 className="font-fla text-black text-xl mb-2">{t('contact.info.phone')}</h4>
+            <p className="text-black text-base">+54 358 123 4567</p>
+            <p className="text-gray-600 text-sm">{t('contact.info.phoneHours')}</p>
           </div>
         </div>
 
@@ -43,9 +43,9 @@ export default function ContactInfo() {
             <Clock className="h-6 w-6 text-white" />
           </div>
           <div className="flex-1">
-            <h4 className="font-contrail text-black text-xl mb-2">{t('contact.info.officeHours')}</h4>
-            <p className="font-arimo text-black text-base">{t('contact.info.weekdays')}</p>
-            <p className="font-arimo text-gray-600 text-sm">{t('contact.info.saturday')}</p>
+            <h4 className="font-fla text-black text-xl mb-2">{t('contact.info.officeHours')}</h4>
+            <p className="text-black text-base">{t('contact.info.weekdays')}</p>
+            <p className="text-gray-600 text-sm">{t('contact.info.saturday')}</p>
           </div>
         </div>
 
@@ -54,9 +54,9 @@ export default function ContactInfo() {
             <Users className="h-6 w-6 text-white" />
           </div>
           <div className="flex-1">
-            <h4 className="font-contrail text-black text-xl mb-2">{t('contact.info.collaborate')}</h4>
-            <p className="font-arimo text-black text-base">{t('contact.info.collaborateOptions')}</p>
-            <p className="font-arimo text-gray-600 text-sm">{t('contact.info.collaborateText')}</p>
+            <h4 className="font-fla text-black text-xl mb-2">{t('contact.info.collaborate')}</h4>
+            <p className="text-black text-base">{t('contact.info.collaborateOptions')}</p>
+            <p className="text-gray-600 text-sm">{t('contact.info.collaborateText')}</p>
           </div>
         </div>
       </div>

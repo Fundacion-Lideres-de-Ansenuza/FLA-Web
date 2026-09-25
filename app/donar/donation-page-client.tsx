@@ -35,7 +35,7 @@ function TimelineSteps({ steps, accent }: { steps: string[]; accent: string }) {
                 >
                   {i + 1}
                 </div>
-                <p className="font-arimo text-sm leading-relaxed text-gray-700 md:text-base">{step}</p>
+                <p className="text-sm leading-relaxed text-gray-700 md:text-base">{step}</p>
               </div>
             </div>
           </div>
@@ -166,8 +166,8 @@ export default function DonationPage() {
       <main className="min-h-screen overflow-x-hidden bg-[linear-gradient(180deg,#ffffff_0%,#fff7f6_30%,#ffffff_100%)] pb-20 pt-[108px] sm:pt-[120px]">
       <div className="container mx-auto max-w-6xl px-4 pt-6 md:pt-8">
         <div className="mb-10 flex flex-col items-center gap-5 text-center md:mb-14">
-          <h1 className="text-5xl leading-tight tracking-tight text-gray-900 lg:text-7xl font-contrail">{t("donate.title")}</h1>
-          <p className="mx-auto max-w-2xl font-arimo text-lg leading-relaxed text-gray-700 md:text-xl">{t("donate.subtitle")}</p>
+          <h1 className="text-5xl leading-tight tracking-tight text-gray-900 lg:text-7xl font-fla">{t("donate.title")}</h1>
+          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-gray-700 md:text-xl">{t("donate.subtitle")}</p>
           <div className="h-1.5 w-32 rounded-full bg-[#f45e5e]" />
         </div>
 
@@ -178,7 +178,7 @@ export default function DonationPage() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center rounded-full px-6 py-3 font-arimo text-sm font-bold transition-all duration-300 sm:text-base ${
+                  className={`flex items-center rounded-full px-6 py-3 text-sm font-bold transition-all duration-300 sm:text-base ${
                     activeTab === tab.id ? "scale-[1.02] text-white shadow-md" : "text-[#7b5a57] hover:bg-white"
                   }`}
                   style={activeTab === tab.id ? { backgroundColor: DARK_BROWN } : {}}
@@ -194,8 +194,8 @@ export default function DonationPage() {
             {activeTab === "online" && (
               <div className="mx-auto max-w-5xl space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500 md:space-y-10">
                 <div className="space-y-4 text-center">
-                  <h2 className="font-contrail text-4xl text-gray-900 uppercase md:text-5xl">{t("donate.online.title")}</h2>
-                  <p className="mx-auto max-w-2xl font-arimo text-lg italic text-gray-600">&quot;{t("donate.online.description")}&quot;</p>
+                  <h2 className="font-fla text-4xl text-gray-900 uppercase md:text-5xl">{t("donate.online.title")}</h2>
+                  <p className="mx-auto max-w-2xl text-lg italic text-gray-600">&quot;{t("donate.online.description")}&quot;</p>
                 </div>
 
                 <TimelineSteps steps={onlineSteps} accent="#bc2222" />
@@ -209,8 +209,8 @@ export default function DonationPage() {
             {activeTab === "paypal" && (
               <div className="mx-auto max-w-5xl space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500 md:space-y-10">
                 <div className="space-y-4 text-center">
-                  <h2 className="font-contrail text-4xl text-gray-900 uppercase md:text-5xl">{t("donate.paypal.title")}</h2>
-                  <p className="mx-auto max-w-2xl font-arimo text-lg italic text-gray-600">&quot;{t("donate.paypal.description")}&quot;</p>
+                  <h2 className="font-fla text-4xl text-gray-900 uppercase md:text-5xl">{t("donate.paypal.title")}</h2>
+                  <p className="mx-auto max-w-2xl text-lg italic text-gray-600">&quot;{t("donate.paypal.description")}&quot;</p>
                 </div>
 
                 <TimelineSteps steps={paypalSteps} accent="#bc2222" />
@@ -224,8 +224,8 @@ export default function DonationPage() {
             {activeTab === "transfer" && (
               <div className="mx-auto max-w-4xl animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-10">
                 <div className="space-y-4 text-center">
-                  <h2 className="font-contrail text-4xl text-gray-900 uppercase md:text-5xl">{t("donate.transfer.title")}</h2>
-                  <p className="mx-auto max-w-2xl font-arimo text-lg text-gray-600">{t("donate.transfer.description")}</p>
+                  <h2 className="font-fla text-4xl text-gray-900 uppercase md:text-5xl">{t("donate.transfer.title")}</h2>
+                  <p className="mx-auto max-w-2xl text-lg text-gray-600">{t("donate.transfer.description")}</p>
                 </div>
 
                 <div className="grid gap-6 md:grid-cols-2">
@@ -234,7 +234,7 @@ export default function DonationPage() {
                       <div className="space-y-1">
                         <p className="text-xs font-black uppercase tracking-widest text-[#90140e]">{t("donate.transfer.cbu")}</p>
                         <div className="flex items-center justify-between gap-2">
-                          <p className="select-all break-all font-arimo text-2xl font-medium leading-none text-gray-800">{bankData.cbu}</p>
+                          <p className="select-all break-all text-2xl font-medium leading-none text-gray-800">{bankData.cbu}</p>
                           <button onClick={() => copyToClipboard(bankData.cbu, "cbu")} className="rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-[#90140e]">
                             {copied === "cbu" ? <CheckCircle2 className="h-5 w-5 text-green-500" /> : <Copy className="h-5 w-5" />}
                           </button>
@@ -243,7 +243,7 @@ export default function DonationPage() {
                       <div className="space-y-1 border-t border-gray-100 pt-4">
                         <p className="text-xs font-black uppercase tracking-widest text-[#90140e]">{t("donate.transfer.alias")}</p>
                         <div className="flex items-center justify-between gap-2">
-                          <p className="select-all font-arimo text-2xl font-medium leading-none text-gray-800">{bankData.alias}</p>
+                          <p className="select-all text-2xl font-medium leading-none text-gray-800">{bankData.alias}</p>
                           <button onClick={() => copyToClipboard(bankData.alias, "alias")} className="rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-[#90140e]">
                             {copied === "alias" ? <CheckCircle2 className="h-5 w-5 text-green-500" /> : <Copy className="h-5 w-5" />}
                           </button>
@@ -260,7 +260,7 @@ export default function DonationPage() {
                         </div>
                         <div className="space-y-0.5">
                           <p className="text-[10px] font-bold uppercase tracking-widest opacity-70">{t("donate.transfer.name")}</p>
-                          <p className="font-arimo text-lg font-bold">{bankData.nombre}</p>
+                          <p className="text-lg font-bold">{bankData.nombre}</p>
                         </div>
                       </div>
                       <div className="flex items-center gap-4">
@@ -269,7 +269,7 @@ export default function DonationPage() {
                         </div>
                         <div className="space-y-0.5">
                           <p className="text-[10px] font-bold uppercase tracking-widest opacity-70">{t("donate.transfer.cuit")}</p>
-                          <p className="font-arimo text-lg font-bold">{bankData.cuit}</p>
+                          <p className="text-lg font-bold">{bankData.cuit}</p>
                         </div>
                       </div>
                       <div className="flex items-center gap-4">
@@ -278,7 +278,7 @@ export default function DonationPage() {
                         </div>
                         <div className="space-y-0.5">
                           <p className="text-[10px] font-bold uppercase tracking-widest opacity-70">{t("donate.transfer.account")}</p>
-                          <p className="font-arimo text-lg font-bold">{bankData.cuenta}</p>
+                          <p className="text-lg font-bold">{bankData.cuenta}</p>
                         </div>
                       </div>
                     </div>
@@ -290,8 +290,8 @@ export default function DonationPage() {
                     <Mail className="h-7 w-7 text-white" />
                   </div>
                   <div className="space-y-3">
-                    <h3 className="font-contrail text-2xl text-gray-900">{t("donate.transfer.receiptTitle")}</h3>
-                    <p className="font-arimo leading-relaxed text-gray-700">
+                    <h3 className="font-fla text-2xl text-gray-900">{t("donate.transfer.receiptTitle")}</h3>
+                    <p className="leading-relaxed text-gray-700">
                       {t("donate.transfer.receiptText").split(t("donate.transfer.contactPage"))[0]}
                       <Link href="/contactanos" className="font-bold hover:underline" style={{ color: DARK_BROWN }}>
                         {t("donate.transfer.contactPage")}

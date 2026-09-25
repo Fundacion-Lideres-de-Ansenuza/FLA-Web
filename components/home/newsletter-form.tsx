@@ -41,10 +41,10 @@ export default function NewsletterForm() {
 
   return (
     <div className="space-y-6">
-      <h3 className="text-xl font-contrail text-white tracking-wider uppercase">
+      <h3 className="text-xl font-fla text-white tracking-wider uppercase">
         {t("footer.newsletter")}
       </h3>
-      <p className="text-gray-400 font-arimo">{t("footer.newsletterText")}</p>
+      <p className="text-gray-400">{t("footer.newsletterText")}</p>
       <form
         onSubmit={handleSubmit}
         className="space-y-3"
@@ -71,17 +71,17 @@ export default function NewsletterForm() {
           </button>
         </div>
         {status === "success" && (
-          <p className="text-sm text-emerald-300 font-arimo">
+          <p className="text-sm text-emerald-300">
             {t("footer.successMessage", { defaultValue: "Gracias por sumarte. Ya recibimos tu email." })}
           </p>
         )}
         {status === "duplicate" && (
-          <p className="text-sm text-amber-300 font-arimo">
+          <p className="text-sm text-amber-300">
             {t("footer.duplicateMessage", { defaultValue: "Este email ya esta suscripto al newsletter." })}
           </p>
         )}
         {status === "error" && (
-          <p className="text-sm text-red-300 font-arimo">
+          <p className="text-sm text-red-300">
             {t("footer.errorMessage", { defaultValue: "No pudimos registrar tu suscripcion. Proba de nuevo en unos segundos." })}
           </p>
         )}

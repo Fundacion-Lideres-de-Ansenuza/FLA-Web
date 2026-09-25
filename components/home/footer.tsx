@@ -28,13 +28,13 @@ export default function Footer() {
                   className="relative transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div className="font-arimo text-base text-white leading-tight">
+              <div className="text-base text-white leading-tight">
                 <p className="font-semibold tracking-wide">Fundación</p>
                 <p className="font-semibold tracking-wide">Líderes de Ansenuza</p>
               </div>
             </div>
 
-            <p className="text-gray-400 font-arimo text-base leading-relaxed max-w-md">
+            <p className="text-gray-400 text-base leading-relaxed max-w-md">
               {t('footer.tagline')}
             </p>
 
@@ -62,8 +62,8 @@ export default function Footer() {
 
           {/* Contact Section */}
           <div className="md:col-span-6 lg:col-span-3 space-y-6">
-            <h3 className="text-base font-arimo font-semibold text-white tracking-wider uppercase">{t('footer.contact')}</h3>
-            <div className="space-y-4 text-gray-400 font-arimo text-base">
+            <h3 className="text-base font-semibold text-white tracking-wider uppercase">{t('footer.contact')}</h3>
+            <div className="space-y-4 text-gray-400 text-base">
               <div className="group flex items-start gap-3">
                 <div className="mt-1 w-1.5 h-1.5 rounded-full bg-red-600 group-hover:scale-125 transition-transform" />
                 <div>
@@ -80,7 +80,7 @@ export default function Footer() {
               <div className="pt-2">
                 <a
                   href="/contactanos"
-                  className="inline-flex items-center text-base font-arimo font-semibold text-white hover:text-white/80 transition-colors gap-2 group/link"
+                  className="inline-flex items-center text-base font-semibold text-white hover:text-white/80 transition-colors gap-2 group/link"
                 >
                   {t('footer.directContact')}
                   <span className="group-hover/link:translate-x-1 transition-transform">-&gt;</span>
@@ -97,10 +97,10 @@ export default function Footer() {
 
         {/* Footer Bottom */}
         <div className="mt-20 pt-10 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-6">
-          <p className="text-gray-500 font-arimo text-base">
+          <p className="text-gray-500 text-base">
             {t('footer.copyright', { year: new Date().getFullYear() })}
           </p>
-          <div className="flex items-center gap-8 font-arimo text-base">
+          <div className="flex items-center gap-8 text-base">
             <a href="/politicas-de-privacidad" className="text-gray-500 hover:text-white font-medium transition-colors">
               {t('footer.privacyPolicy')}
             </a>

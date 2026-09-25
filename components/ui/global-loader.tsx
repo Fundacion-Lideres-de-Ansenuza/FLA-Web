@@ -14,7 +14,7 @@ export default function GlobalLoader() {
           <span className="absolute inset-0 rounded-full border-4 border-[#bc2222]/15" />
           <span className="absolute inset-0 rounded-full border-4 border-transparent border-t-[#bc2222] border-r-[#f45e5e] animate-spin" />
         </div>
-        <p className="font-arimo text-base font-semibold tracking-[0.08em] text-[#90140e] uppercase">
+        <p className="text-base font-semibold tracking-[0.08em] text-[#90140e] uppercase">
           {t("system.loading")}
         </p>
       </div>
