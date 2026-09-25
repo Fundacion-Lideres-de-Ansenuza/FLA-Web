@@ -74,7 +74,7 @@ export default function ProgramasPage() {
                       </div>
 
                       <div className="text-center">
-                        <h3 className="text-2xl font-fla text-gray-900 mb-3">
+                        <h3 className="text-2xl md:text-3xl font-fla text-gray-900 mb-3">
                           {program.title}
                         </h3>
                         <p className="text-gray-600 mb-6 line-clamp-3 px-4">
@@ -135,7 +135,7 @@ export default function ProgramasPage() {
                       </div>
 
                       <div className="text-center">
-                        <h3 className="text-xl font-fla text-gray-800 mb-2">
+                        <h3 className="text-2xl font-fla text-gray-800 mb-2">
                           {program.title}
                         </h3>
                         <p className="text-gray-500 text-sm mb-4 line-clamp-2 px-2">

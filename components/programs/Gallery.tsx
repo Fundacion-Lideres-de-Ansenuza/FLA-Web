@@ -235,7 +235,7 @@ export default function Gallery({ images, colors, title, type }: GalleryProps) {
                           >
                             <Images className="h-4.5 w-4.5" />
                           </div>
-                          <p className="text-sm text-gray-900 font-fla">{slide.title}</p>
+                          <p className="text-sm font-semibold text-gray-900">{slide.title}</p>
                         </div>
                       )}
                     </div>

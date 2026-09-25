@@ -63,20 +63,35 @@ main {
 
 h1 {
   font-family: var(--font-fla), 'Helvetica Neue', Arial, sans-serif;
+  font-synthesis-weight: none;
   letter-spacing: 0.02em;
 }
 
-/* En @layer base para que las utilidades de Tailwind puedan sobrescribirlo */
+/*
+ * En @layer base para que las utilidades de Tailwind puedan sobrescribirlo.
+ * FLA (Saridona) es condensada y de un solo peso: se usa en títulos (h2 y `.font-fla`).
+ * Los subtítulos chicos (h3-h6: preguntas, etiquetas, tarjetas) van en la sans del sitio
+ * porque la condensada se vuelve ilegible por debajo de ~24px.
+ */
 @layer base {
-  h2, h3, h4, h5, h6 {
+  h2 {
     font-family: var(--font-fla), 'Helvetica Neue', Arial, sans-serif;
     font-weight: 400;
+    font-synthesis-weight: none;
     letter-spacing: 0.01em;
+  }
+
+  h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.01em;
   }
 }
 
 .font-fla {
   font-family: var(--font-fla), 'Helvetica Neue', Arial, sans-serif !important;
+  /* FLA tiene un solo peso: evita la negrita falsa que genera el navegador con font-bold o h3 */
+  font-weight: 400;
+  font-synthesis-weight: none;
 }
 
 

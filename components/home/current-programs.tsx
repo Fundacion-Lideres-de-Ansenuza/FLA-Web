@@ -54,7 +54,7 @@ export default function CurrentPrograms() {
                     loading={index < 3 ? "eager" : "lazy"}
                   />
                 </div>
-                <h3 className="text-2xl font-fla text-gray-900">{program.name}</h3>
+                <h3 className="text-2xl md:text-3xl font-fla text-gray-900">{program.name}</h3>
               </div>
             </Link>
           ))}

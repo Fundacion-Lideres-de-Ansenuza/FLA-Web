@@ -11,7 +11,14 @@ import Accessibility from "@/components/accessibility/Accessibility"
 import I18nProvider from "@/components/I18nProvider"
 
 const inter = Inter({ subsets: ["latin"] })
-const fla = localFont({ src: "../public/fonts/FLA.otf", variable: "--font-fla", display: "swap" })
+// FLA (Saridona) es muy condensada: size-adjust la agranda de forma pareja para que los títulos
+// tengan el peso visual que tenían con la fuente anterior, sin tocar cada clase de tamaño.
+const fla = localFont({
+  src: "../public/fonts/FLA.otf",
+  variable: "--font-fla",
+  display: "swap",
+  declarations: [{ prop: "size-adjust", value: "115%" }],
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.lideresdeansenuza.org"),

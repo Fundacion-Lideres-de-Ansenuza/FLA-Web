@@ -48,7 +48,7 @@ export default function Stats() {
               <div className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-[#bd2222] drop-shadow-[0_10px_25px_rgba(188,34,34,0.12)] font-fla">
                 +<AnimatedNumber target={stat?.number || 0} isVisible={isVisible} />
               </div>
-              <div className="mt-2 max-w-[18rem] text-balance text-base font-bold tracking-wide text-gray-700 sm:text-lg lg:text-xl font-fla">
+              <div className="mt-2 max-w-[18rem] text-balance text-base font-bold tracking-wide text-gray-700 sm:text-lg lg:text-xl">
                 {t(stat?.labelKey || '')}
               </div>
             </div>
