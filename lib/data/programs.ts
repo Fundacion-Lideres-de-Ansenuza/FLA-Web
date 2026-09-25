@@ -2,6 +2,7 @@ export interface ProgramData {
   title: string;
   slug: string;
   status: 'active' | 'historical';
+  enCurso?: boolean;
   shortDescription: string;
   fullDescription: string;
   location?: string;
@@ -63,6 +64,7 @@ export const AMBIENTALIA_DATA: ProgramData = {
   title: "Experiencia Ambientalia",
   slug: "ambientalia",
   status: 'active',
+  enCurso: true,
   enrollmentOpen: false,
   shortDescription: "Programa de educación ambiental que conecta a jóvenes con sus ecosistemas y biodiversidad, desarrollando habilidades de liderazgo a través de proyectos comunitarios ambientales.",
   fullDescription: "Experiencia Ambientalia es un programa de educación ambiental desarrollado por Fundación Líderes de Ansenuza en conjunto con Manomet Conservation Sciences y la Oficina Ejecutiva de la RHRAP, que se lleva a cabo anualmente desde 2021. El programa busca conectar a jóvenes con sus ecosistemas y biodiversidad, al mismo tiempo que desarrolla en ellos habilidades de liderazgo a través del diseño e implementación de proyectos comunitarios de índole ambiental.",
@@ -222,6 +224,7 @@ export const SOMOS_DATA: ProgramData = {
   title: "SOMOS",
   slug: "somos",
   status: 'active',
+  enCurso: true,
   shortDescription: "Programa gratuito de liderazgo en diversidad para jóvenes de entre 15 y 19 años de Argentina que quieran convertirse en líderes de sus comunidades.",
   fullDescription: "SOMOS es un programa gratuito de liderazgo en diversidad, para jóvenes de entre 15 y 19 años de Argentina, que quieran convertirse en líderes de sus comunidades. Durante 11 semanas, lxs participantes aprenden sobre diversidad, desarrollan habilidades de liderazgo, y llevan adelante una acción de impacto social que transforme su comunidad. Todo esto a través de talleres con expertxs, mentorías personalizadas, y materiales exclusivos creados especialmente para el programa.",
   location: "SOMOS llega a FLA para abrir espacios de diálogo, debate y aprendizaje colectivo, promoviendo los valores de la organización. Creemos en una sociedad más justa, igualitaria, empática y respetuosa, y sabemos que el cambio empieza en cada unx de nosotrxs.",
@@ -671,6 +674,7 @@ export const DECIDIR_CON_CIENCIA_DATA: ProgramData = {
   title: "Decidir con Ciencia",
   slug: "decidir-con-ciencia",
   status: 'active',
+  enCurso: true,
   showSuccessStories: false,
   year: "2026",
   shortDescription: "Programa educativo para escuelas secundarias que fortalece el pensamiento científico para analizar información, evaluar evidencias y tomar decisiones fundamentadas.",
@@ -852,6 +856,7 @@ export const LIDERES_DATA: ProgramData = {
   title: "Líderes",
   slug: "lideres",
   status: 'active',
+  enCurso: true,
   shortDescription: "Programa de Fundación Líderes de Ansenuza encargado de reunir, impulsar, acompañar y reconocer a todas aquellas personas que luego de haber transitado por al menos un programa de la fundación quieran seguir potenciando sus habilidades para convertirse en líderes de sus comunidades.",
   fullDescription: "Líderes es el programa de Fundación Líderes de Ansenuza encargado de reunir, impulsar, acompañar y reconocer a todas aquellas personas que luego de haber transitado por al menos un programa de la fundación quieran seguir potenciando sus habilidades para convertirse en líderes de sus comunidades, a través de la implementación de nuevos programas exclusivos para su comunidad. En Líderes nos enfocamos en acompañar desde el compromiso sabiendo que hay personas maravillosas en nuestra comunidad que pueden lograr cosas inimaginables si se las une con las oportunidades correctas. Seguimos apostando por los jóvenes que alguna vez pasaron por la fundación, impulsamos el continuo desarrollo de su liderazgo y generamos un impacto post programa.",
   location: "Nacional, dirigido a ex-participantes de programas de FLA",

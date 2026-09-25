@@ -15,6 +15,7 @@ export const AMBIENTALIA_DATA_EN: ProgramData = {
   title: 'Ambientalia Experience',
   slug: 'ambientalia',
   status: 'active',
+  enCurso: true,
   enrollmentOpen: false,
   shortDescription:
     'Environmental education program that connects young people with their ecosystems and biodiversity while developing leadership skills through community-based environmental projects.',
@@ -187,6 +188,7 @@ export const SOMOS_DATA_EN: ProgramData = {
   title: 'SOMOS',
   slug: 'somos',
   status: 'active',
+  enCurso: true,
   shortDescription:
     'Free diversity leadership program for young people ages 15 to 19 in Argentina who want to become leaders in their communities.',
   fullDescription:
@@ -659,6 +661,7 @@ export const DECIDIR_CON_CIENCIA_DATA_EN: ProgramData = {
   title: 'Decidir con Ciencia',
   slug: 'decidir-con-ciencia',
   status: 'active',
+  enCurso: true,
   showSuccessStories: false,
   year: '2026',
   shortDescription:
@@ -862,6 +865,7 @@ export const LIDERES_DATA_EN: ProgramData = {
   title: 'Lideres',
   slug: 'lideres',
   status: 'active',
+  enCurso: true,
   shortDescription:
     'Fundacion Lideres de Ansenuza program that brings together, supports, accompanies, and recognizes people who have already gone through at least one foundation program and want to keep strengthening their skills to become leaders in their communities.',
   fullDescription:
