@@ -23,6 +23,7 @@ export default function ImpulsatecPageClient() {
         title={data.title}
         description={data.shortDescription}
         colors={data.colors}
+        isOngoing={data.enCurso}
         isHistorical={true}
         year={data.year}
       />
