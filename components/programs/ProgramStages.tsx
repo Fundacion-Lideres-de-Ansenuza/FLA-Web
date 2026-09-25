@@ -223,7 +223,7 @@ export default function ProgramStages({ stages, colors, rainbowTitle = false }: 
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.3 }}
-                className="grid gap-6 rounded-2xl p-6 md:grid-cols-[1fr_1fr] md:p-8"
+                className={`grid gap-6 rounded-2xl p-6 md:p-8 ${activeStage.image ? "md:grid-cols-[1fr_1fr]" : ""}`}
                 style={{ backgroundColor: `${activeColor}0d` }}
               >
                 <div className="flex flex-col justify-center">
@@ -233,7 +233,7 @@ export default function ProgramStages({ stages, colors, rainbowTitle = false }: 
                   >
                     {ActiveIcon ? <ActiveIcon size={28} style={{ color: activeColor }} /> : null}
                   </div>
-                  <h3 className="mb-3 text-xl font-semibold" style={{ color: colors.secondary }}>
+                  <h3 className="mb-3 text-xl font-semibold" style={{ color: activeStage.color ?? colors.secondary }}>
                     {activeStage.title}
                   </h3>
                   <p className="leading-relaxed text-gray-600">{activeStage.description}</p>
@@ -284,7 +284,7 @@ export default function ProgramStages({ stages, colors, rainbowTitle = false }: 
                           </span>
                         )}
                       </span>
-                      <span className="flex-1 font-semibold" style={{ color: colors.secondary }}>
+                      <span className="flex-1 font-semibold" style={{ color: stage.color ?? colors.secondary }}>
                         {stage.title}
                       </span>
                       <ChevronDown
