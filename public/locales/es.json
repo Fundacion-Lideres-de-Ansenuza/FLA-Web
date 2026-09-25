@@ -504,7 +504,9 @@
     "ctaContact": "Contactar",
     "sponsorsTitle": "En conjunto con",
     "methodologyExpand": "Conocer la metodología en detalle",
-    "methodologyCollapse": "Ocultar detalle de la metodología"
+    "methodologyCollapse": "Ocultar detalle de la metodología",
+    "watchVideo": "Ver video",
+    "videoTitle": "Conocé el programa"
   },
   "contactSection": {
     "title": "Empecemos",

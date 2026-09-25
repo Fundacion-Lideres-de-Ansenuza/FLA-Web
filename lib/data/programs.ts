@@ -73,6 +73,16 @@ export interface ProgramData {
     description: string;
   };
   year?: string;
+  /**
+   * Video horizontal (YouTube) del programa. Opcional: si no está definido,
+   * ProgramVideo no renderiza nada. Para agregar el video de un programa,
+   * completar `video: { url: "https://www.youtube.com/watch?v=...", title: "..." }`
+   * en su objeto de datos (y su equivalente en `programs-en.ts`).
+   */
+  video?: {
+    url: string;
+    title: string;
+  };
 }
 
 export const AMBIENTALIA_DATA: ProgramData = {
@@ -354,6 +364,10 @@ export const SOMOS_DATA: ProgramData = {
     primary: "#2c04bf",
     secondary: "#7c3aed",
     accent: "#c026d3"
+  },
+  video: {
+    url: "https://www.youtube.com/watch?v=Lxsl_lIZ3Ow",
+    title: "Conocé el programa SOMOS"
   }
 };
 

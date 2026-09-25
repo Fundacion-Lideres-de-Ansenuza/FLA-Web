@@ -2,6 +2,7 @@
 
 import ProgramHeader from "@/components/programs/ProgramHeader";
 import ProgramDescription from "@/components/programs/ProgramDescription";
+import ProgramVideo from "@/components/programs/ProgramVideo";
 import Requirements from "@/components/programs/Requirements";
 import EnrollmentInfo from "@/components/programs/EnrollmentInfo";
 import ProgramStages from "@/components/programs/ProgramStages";
@@ -25,6 +26,7 @@ export default function PotenciatePageClient() {
         description={data.shortDescription}
         colors={data.colors}
         isOngoing={data.enCurso}
+        slug={data.slug}
         isHistorical={true}
         year={data.year}
       />
@@ -36,6 +38,8 @@ export default function PotenciatePageClient() {
         modality={data.modality}
         colors={data.colors}
       />
+
+      <ProgramVideo video={data.video} colors={data.colors} />
 
       <Requirements
         requirements={data.requirements}
