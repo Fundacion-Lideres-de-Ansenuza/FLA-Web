@@ -237,10 +237,8 @@ export const SOMOS_DATA: ProgramData = {
     "Compromiso de contribuir a una sociedad más justa e inclusiva realizando una acción de impacto en tu comunidad"
   ],
   enrollmentInfo: {
-    description: "Para ser parte del programa, completá el siguiente formulario:",
-    registrationLabel: "Form de inscripción Somos 2026",
-    registrationUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc6lL0QlYa_5SUw4y_QO4LTU_0G3lNdWFbnVcVxll_OWSWDjg/viewform?usp=header",
-    availablePeriod: "Inscripción 2026"
+    description: "Las inscripciones para esta edición ya cerraron.",
+    availablePeriod: "Inscripciones cerradas. El programa está en curso."
   },
   stages: [
     {
@@ -293,11 +291,11 @@ export const SOMOS_DATA: ProgramData = {
   faqs: [
     {
       question: "¿Hay límite de edad?",
-      answer: "Te podés anotar si tenés entre 15 a 19 años y sos estudiante de colegio secundario en alguna provincia de Argentina."
+      answer: "Te podés anotar si tenés entre 15 y 19 años y sos estudiante de colegio secundario en alguna provincia de Argentina."
     },
     {
       question: "¿Hay algún costo monetario?",
-      answer: "NINGUNO. El programa es totalmente gratuito."
+      answer: "Ninguno. El programa es totalmente gratuito."
     },
     {
       question: "¿Hay algún requisito que cumplir para anotarme?",
@@ -305,7 +303,7 @@ export const SOMOS_DATA: ProgramData = {
     },
     {
       question: "¿Qué temáticas de diversidad se trabajan en el programa?",
-      answer: "Diversidad cultural, corporal, funcional, de género, sexual, religiosa, político partidaria."
+      answer: "Diversidad cultural, corporal, funcional, de género, sexual, religiosa y político-partidaria."
     },
     {
       question: "¿Es necesario realizar una acción de impacto para egresar?",
@@ -313,10 +311,10 @@ export const SOMOS_DATA: ProgramData = {
     },
     {
       question: "¿Cómo me anoto?",
-      answer: "Completando el formulario de inscripción que encontrarás en nuestra página web."
+      answer: "Las inscripciones para la edición actual ya están cerradas. El programa está en curso; seguí nuestras redes para enterarte de la próxima convocatoria."
     },
     {
-      question: "¿Conocé más acerca de SOMOS?",
+      question: "¿Dónde puedo conocer más sobre SOMOS?",
       answer: "Mirá este video para conocer más sobre el programa: <a href=\"https://www.youtube.com/watch?v=Lxsl_lIZ3Ow\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-purple-600 hover:text-purple-800 underline\">Ver video de SOMOS</a>"
     }
   ],
@@ -333,8 +331,8 @@ export const SOMOS_DATA: ProgramData = {
   },
   colors: {
     primary: "#2c04bf",
-    secondary: "#f2e313",
-    accent: "#f2a516"
+    secondary: "#7c3aed",
+    accent: "#c026d3"
   }
 };
 

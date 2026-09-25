@@ -9,9 +9,10 @@ import { useTranslation } from "react-i18next";
 interface SuccessStoriesProps {
   stories: SuccessStory[];
   colors: ProgramColors;
+  rainbowTitle?: boolean;
 }
 
-export default function SuccessStories({ stories, colors }: SuccessStoriesProps) {
+export default function SuccessStories({ stories, colors, rainbowTitle = false }: SuccessStoriesProps) {
   const { t } = useTranslation();
   return (
     <section className="bg-white py-12 md:py-16">
@@ -24,7 +25,21 @@ export default function SuccessStories({ stories, colors }: SuccessStoriesProps)
             transition={{ duration: 0.6 }}
             className="mb-10 text-center"
           >
-            <h2 className="mb-3 text-3xl md:text-4xl font-contrail" style={{ color: colors.secondary }}>
+            <h2
+              className={
+                rainbowTitle
+                  ? "mb-3 inline-block bg-clip-text text-3xl font-contrail text-transparent md:text-4xl"
+                  : "mb-3 text-3xl md:text-4xl font-contrail"
+              }
+              style={
+                rainbowTitle
+                  ? {
+                      backgroundImage:
+                        "linear-gradient(90deg, #dc2626, #ea580c, #ca8a04, #16a34a, #0284c7, #7c3aed)",
+                    }
+                  : { color: colors.secondary }
+              }
+            >
               {t("successStories.title")}
             </h2>
             <p className="text-base text-gray-600 md:text-lg">{t("successStories.subtitle")}</p>

@@ -204,9 +204,8 @@ export const SOMOS_DATA_EN: ProgramData = {
     'Commit to building a fairer and more inclusive society by carrying out an impact action in your community.'
   ],
   enrollmentInfo: {
-    description:
-      'To join the program, you must complete the registration form available on our website.',
-    availablePeriod: 'Check enrollment dates'
+    description: 'Enrollment for this edition is now closed.',
+    availablePeriod: 'Enrollment closed. The program is currently in progress.'
   },
   stages: [
     {
@@ -287,10 +286,10 @@ export const SOMOS_DATA_EN: ProgramData = {
     },
     {
       question: 'How do I apply?',
-      answer: 'By completing the registration form on our website.'
+      answer: 'Enrollment for the current edition is now closed. The program is in progress; follow our social media to find out about the next call for applications.'
     },
     {
-      question: 'Learn more about SOMOS?',
+      question: 'Where can I learn more about SOMOS?',
       answer: 'Watch this video to learn more about the program: <a href="https://www.youtube.com/watch?v=Lxsl_lIZ3Ow" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-800 underline">Watch SOMOS video</a>'
     }
   ],
@@ -300,8 +299,8 @@ export const SOMOS_DATA_EN: ProgramData = {
   },
   colors: {
     primary: "#2c04bf",
-    secondary: "#f2e313",
-    accent: "#f2a516"
+    secondary: "#7c3aed",
+    accent: "#c026d3"
   }
 };
 

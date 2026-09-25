@@ -53,6 +53,7 @@ export default function SomosPageClient() {
         <ProgramStages
           stages={data.stages}
           colors={data.colors}
+          rainbowTitle
         />
 
         <ImpactStats
@@ -63,6 +64,7 @@ export default function SomosPageClient() {
         <SuccessStories
           stories={data.successStories}
           colors={data.colors}
+          rainbowTitle
         />
 
         <BlogLinks
