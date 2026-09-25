@@ -502,7 +502,9 @@
     "ctaReady": "Ready to be part of {{title}}",
     "ctaSubtitle": "Join a community of young leaders who are transforming the future",
     "ctaContact": "Contact us",
-    "sponsorsTitle": "In collaboration with"
+    "sponsorsTitle": "In collaboration with",
+    "methodologyExpand": "See the methodology in detail",
+    "methodologyCollapse": "Hide methodology detail"
   },
   "contactSection": {
     "title": "Let’s get started",

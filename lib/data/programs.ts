@@ -20,7 +20,18 @@ export interface ProgramData {
     title: string;
     description: string;
     icon?: string;
+    color?: string;
+    image?: string;
   }[];
+  descriptionBlocks?: {
+    heading: string;
+    text: string;
+  }[];
+  methodology?: {
+    label: string;
+    summary: string;
+    details: string;
+  };
   stats: {
     label: string;
     value: string;
@@ -248,17 +259,23 @@ export const SOMOS_DATA: ProgramData = {
     {
       title: "Aprendé",
       description: "Talleres de diversidad, manual de desarrollo personal, manual de desarrollo de proyectos y mentorías semanales.",
-      icon: "BookOpen"
+      icon: "BookOpen",
+      color: "#be123c",
+      image: "/images/programs_sliders/somos/1.jpg"
     },
     {
       title: "Accioná",
       description: "Hora de implementar tu acción de impacto en tu comunidad. Contarás con material exclusivo y el apoyo del staff durante todo el proceso.",
-      icon: "Rocket"
+      icon: "Rocket",
+      color: "#0369a1",
+      image: "/images/programs_sliders/somos/2.jpg"
     },
     {
       title: "Cierre",
       description: "Compartimos las acciones realizadas y ya pueden ser parte de la comunidad de FLA.",
-      icon: "PartyPopper"
+      icon: "PartyPopper",
+      color: "#6d28d9",
+      image: "/images/programs_sliders/somos/3.jpg"
     }
   ],
   stats: [
@@ -681,6 +698,25 @@ export const DECIDIR_CON_CIENCIA_DATA: ProgramData = {
   year: "2026",
   shortDescription: "Programa educativo para escuelas secundarias que fortalece el pensamiento científico para analizar información, evaluar evidencias y tomar decisiones fundamentadas.",
   fullDescription: "Decidir con ciencia es un programa educativo dirigido a instituciones de nivel secundario. La propuesta busca fortalecer habilidades de pensamiento científico que permitan analizar información, evaluar evidencias, considerar distintas alternativas y tomar decisiones fundamentadas frente a desafíos reales. A través de la metodología Thinking-Based Learning (TBL) y un enfoque STEM, los estudiantes trabajan de manera colaborativa en la construcción de propuestas de solución, mientras desarrollan herramientas que pueden aplicar en diferentes contextos de aprendizaje y en su vida cotidiana. El programa también acompaña a los equipos docentes, brindándoles estrategias y recursos para favorecer el desarrollo de estas habilidades en sus prácticas de enseñanza. En un mundo donde las y los jóvenes enfrentan desafíos cada vez más complejos, aprender a tomar decisiones informadas, analizar evidencias y pensar críticamente se vuelve una habilidad fundamental para la vida: no alcanza sólo con tener información, sino saber qué hacer con ella.",
+  descriptionBlocks: [
+    {
+      heading: "Qué es",
+      text: "Decidir con ciencia es un programa educativo dirigido a instituciones de nivel secundario. La propuesta busca fortalecer habilidades de pensamiento científico que permitan analizar información, evaluar evidencias, considerar distintas alternativas y tomar decisiones fundamentadas frente a desafíos reales."
+    },
+    {
+      heading: "Acompañamiento a los equipos docentes",
+      text: "El programa también acompaña a los equipos docentes, brindándoles estrategias y recursos para favorecer el desarrollo de estas habilidades en sus prácticas de enseñanza."
+    },
+    {
+      heading: "Por qué importa",
+      text: "En un mundo donde las y los jóvenes enfrentan desafíos cada vez más complejos, aprender a tomar decisiones informadas, analizar evidencias y pensar críticamente se vuelve una habilidad fundamental para la vida: no alcanza sólo con tener información, sino saber qué hacer con ella."
+    }
+  ],
+  methodology: {
+    label: "Metodología: Thinking-Based Learning (TBL) y enfoque STEM",
+    summary: "Cómo trabajan los estudiantes durante el programa.",
+    details: "A través de la metodología Thinking-Based Learning (TBL) y un enfoque STEM, los estudiantes trabajan de manera colaborativa en la construcción de propuestas de solución, mientras desarrollan herramientas que pueden aplicar en diferentes contextos de aprendizaje y en su vida cotidiana."
+  },
   location: "Instituciones educativas de Córdoba",
   duration: "Septiembre y octubre de 2026",
   modality: "Jornadas presenciales en la institución educativa, con instancia virtual inicial para docentes.",
