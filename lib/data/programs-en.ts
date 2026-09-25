@@ -287,7 +287,7 @@ export const SOMOS_DATA_EN: ProgramData = {
       answer: 'Enrollment for the current edition is now closed. The program is in progress; follow our social media to find out about the next call for applications.'
     },
     {
-      question: 'Learn more about SOMOS?',
+      question: 'Where can I learn more about SOMOS?',
       answer: 'Watch this video to learn more about the program: <a href="https://www.youtube.com/watch?v=Lxsl_lIZ3Ow" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-800 underline">Watch SOMOS video</a>'
     }
   ],
