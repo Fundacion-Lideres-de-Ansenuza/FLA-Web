@@ -246,6 +246,7 @@ export const AMBIENTALIA_DATA: ProgramData = {
 };
 
 export const SOMOS_DATA: ProgramData = {
+  enrollmentOpen: false,
   title: "SOMOS",
   slug: "somos",
   status: 'active',

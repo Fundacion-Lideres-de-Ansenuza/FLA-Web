@@ -158,10 +158,10 @@ export default function ProgramHeader({ title, description, colors, slug, isHist
           {logoSrc ? (
             <Image
               src={logoSrc}
-              alt=""
-              width={80}
-              height={48}
-              className="h-11 w-20 flex-shrink-0 object-contain"
+              alt={title}
+              width={160}
+              height={64}
+              className="h-14 w-40 flex-shrink-0 object-contain object-left sm:h-11 sm:w-20 sm:object-center"
             />
           ) : (
             <span
@@ -169,7 +169,7 @@ export default function ProgramHeader({ title, description, colors, slug, isHist
               style={{ background: `linear-gradient(135deg, ${colors.primary} 0%, ${colors.secondary} 100%)` }}
             />
           )}
-          <span className="truncate font-fla text-lg md:text-xl text-gray-900">{title}</span>
+          <span className="hidden truncate font-fla text-lg md:text-xl text-gray-900 sm:inline">{title}</span>
           {isOngoing && (
             <span className="ml-auto flex-shrink-0 rounded-full px-3 py-1 text-xs font-semibold" style={{ backgroundColor: `${colors.primary}1a`, color: colors.primary }}>
               {t("programs.active.ongoing")}

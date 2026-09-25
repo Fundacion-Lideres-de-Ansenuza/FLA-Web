@@ -87,7 +87,7 @@ export default function ProgramDescription({
                   aria-expanded={methodologyOpen}
                   aria-controls={`${methodologyId}-panel`}
                   onClick={() => setMethodologyOpen((prev) => !prev)}
-                  className="flex w-full items-center justify-between gap-4 p-5 text-left"
+                  className="flex w-full flex-col items-start gap-3 p-5 text-left sm:flex-row sm:items-center sm:justify-between sm:gap-4"
                 >
                   <span>
                     <span className="block font-semibold" style={{ color: colors?.secondary ?? "#111827" }}>
@@ -95,7 +95,7 @@ export default function ProgramDescription({
                     </span>
                     <span className="mt-1 block text-sm text-gray-600">{methodology.summary}</span>
                   </span>
-                  <span className="flex shrink-0 items-center gap-2 text-sm font-medium" style={{ color: strongColor }}>
+                  <span className="flex items-center gap-2 text-sm font-medium sm:shrink-0" style={{ color: strongColor }}>
                     {methodologyOpen ? t("programDetail.methodologyCollapse") : t("programDetail.methodologyExpand")}
                     <ChevronDown
                       size={18}
