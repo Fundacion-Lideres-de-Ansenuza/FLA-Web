@@ -1,16 +1,20 @@
-﻿'use client'
+'use client'
 
 import Link from "next/link"
+import { useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import { ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { useNavbar } from "./useNavbar"
 import { NAV_ITEMS } from "./_constants"
+import type { NavSubItem } from "./types"
 import LanguageSwitcher from "./LanguageSwitcher"
 import { useTranslation } from "react-i18next"
+import { ACTIVE_PROGRAMS_BY_LOCALE } from "@/lib/data/programs-i18n"
 
 export default function Header() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const {
     hoveredItem,
     isActive,
@@ -19,12 +23,46 @@ export default function Header() {
     handleMouseLeave,
     toggleMobileMenu,
     closeMobileMenu,
+    openSubmenu,
+    toggleSubmenu,
+    closeSubmenu,
+    openMobileSubmenu,
+    toggleMobileSubmenu,
+    navRef,
   } = useNavbar()
 
   const getNavLabel = (name: string) => {
     const key = name.toLowerCase().replace(/\s+/g, "_")
     return t(`nav.${key}`, name)
   }
+
+  const locale = i18n.language.startsWith("en") ? "en" : "es"
+
+  const submenusByItem: Record<string, NavSubItem[]> = useMemo(() => {
+    const programSubmenu: NavSubItem[] = [
+      ...ACTIVE_PROGRAMS_BY_LOCALE[locale].map((program) => ({
+        label: program.title,
+        href: `/programas/${program.slug}`,
+      })),
+      { label: t("nav.viewAll"), href: "/programas" },
+    ]
+
+    const quienesSomosSubmenu: NavSubItem[] = [
+      { label: t("nav.submenu.introduccion"), href: "/quienes-somos#introduccion" },
+      { label: t("nav.submenu.mision"), href: "/quienes-somos#mision" },
+      { label: t("nav.submenu.vision"), href: "/quienes-somos#vision" },
+      { label: t("nav.submenu.valores"), href: "/quienes-somos#valores" },
+      { label: t("nav.submenu.voluntariado"), href: "/quienes-somos#voluntariado" },
+      { label: t("nav.submenu.autoridades"), href: "/quienes-somos/autoridades" },
+    ]
+
+    return {
+      PROGRAMAS: programSubmenu,
+      "QUIENES SOMOS": quienesSomosSubmenu,
+    }
+  }, [locale, t])
+
+  const isSubmenuOpen = (name: string) => hoveredItem === name || openSubmenu === name
 
   return (
     <header className="fixed top-0 left-0 right-0 z-[100] border-b border-[#a81c1c] bg-gradient-to-r from-[#bc2222] via-[#f45e5e] to-[#bc2222] shadow-md backdrop-blur-sm">
@@ -42,35 +80,92 @@ export default function Header() {
             </Link>
           </div>
 
-          <nav className="hidden lg:flex items-center space-x-2 relative" onMouseLeave={handleMouseLeave}>
-            {NAV_ITEMS.map((item) => (
-              <motion.div key={item.name} className="relative" onMouseEnter={() => handleMouseEnter(item.name)}>
-                <AnimatePresence mode="wait">
-                  {(isActive(item.name) || hoveredItem === item.name) && (
-                    <motion.div
-                      layoutId={isActive(item.name) ? "activeBackground" : "hoverBackground"}
-                      className="absolute inset-0 rounded-full"
-                      style={{ backgroundColor: hoveredItem === item.name ? "rgba(255,255,255,0.25)" : "rgba(255,255,255,0.18)" }}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.8 }}
-                      transition={{ type: "spring", stiffness: 500, damping: 30, duration: 0.15 }}
-                    />
-                  )}
-                </AnimatePresence>
+          <nav ref={navRef} className="hidden lg:flex items-center space-x-2 relative" onMouseLeave={handleMouseLeave}>
+            {NAV_ITEMS.map((item) => {
+              const submenuItems = submenusByItem[item.name]
+              const hasSubmenu = Boolean(item.hasSubmenu && submenuItems?.length)
+              const submenuOpen = hasSubmenu && isSubmenuOpen(item.name)
+              const submenuId = `navbar-submenu-${item.name.toLowerCase().replace(/\s+/g, "-")}`
 
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} transition={{ type: "spring", stiffness: 400, damping: 17 }}>
-                  <Link
-                    href={item.href}
-                    className={`px-5 py-2 rounded-full text-base font-semibold transition-colors duration-200 relative z-10 block ${
-                      isActive(item.name) ? "text-white" : "text-white/85 hover:text-white"
-                    }`}
-                  >
-                    {getNavLabel(item.name)}
-                  </Link>
+              return (
+                <motion.div
+                  key={item.name}
+                  className="relative"
+                  onMouseEnter={() => handleMouseEnter(item.name)}
+                >
+                  <AnimatePresence mode="wait">
+                    {(isActive(item.name) || hoveredItem === item.name) && (
+                      <motion.div
+                        layoutId={isActive(item.name) ? "activeBackground" : "hoverBackground"}
+                        className="absolute inset-0 rounded-full"
+                        style={{ backgroundColor: hoveredItem === item.name ? "rgba(255,255,255,0.25)" : "rgba(255,255,255,0.18)" }}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                        transition={{ type: "spring", stiffness: 500, damping: 30, duration: 0.15 }}
+                      />
+                    )}
+                  </AnimatePresence>
+
+                  <div className="relative z-10 flex items-center">
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} transition={{ type: "spring", stiffness: 400, damping: 17 }}>
+                      <Link
+                        href={item.href}
+                        className={`px-5 py-2 rounded-full text-base font-semibold transition-colors duration-200 block ${
+                          isActive(item.name) ? "text-white" : "text-white/85 hover:text-white"
+                        } ${hasSubmenu ? "pr-2" : ""}`}
+                      >
+                        {getNavLabel(item.name)}
+                      </Link>
+                    </motion.div>
+
+                    {hasSubmenu && (
+                      <button
+                        type="button"
+                        aria-haspopup="true"
+                        aria-expanded={submenuOpen}
+                        aria-controls={submenuId}
+                        aria-label={t("nav.toggleSubmenu", { item: getNavLabel(item.name) })}
+                        onClick={() => toggleSubmenu(item.name)}
+                        className="mr-1 rounded-full p-1 text-white/85 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+                      >
+                        <motion.span animate={{ rotate: submenuOpen ? 180 : 0 }} transition={{ duration: 0.2 }} className="block">
+                          <ChevronDown size={16} />
+                        </motion.span>
+                      </button>
+                    )}
+                  </div>
+
+                  {hasSubmenu && (
+                    <AnimatePresence>
+                      {submenuOpen && (
+                        <motion.div
+                          id={submenuId}
+                          role="menu"
+                          initial={{ opacity: 0, y: -8 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -8 }}
+                          transition={{ duration: 0.15 }}
+                          className="absolute left-0 top-full z-20 mt-2 before:absolute before:-top-2 before:left-0 before:right-0 before:h-2 before:content-[''] min-w-[220px] max-w-[280px] rounded-2xl border border-[#a81c1c]/20 bg-white p-2 shadow-xl"
+                        >
+                          {submenuItems.map((sub) => (
+                            <Link
+                              key={sub.href}
+                              href={sub.href}
+                              role="menuitem"
+                              onClick={closeSubmenu}
+                              className="block rounded-xl px-4 py-2 text-sm font-medium text-[#3a1414] transition-colors hover:bg-[#fff1ee] hover:text-[#bc2222]"
+                            >
+                              {sub.label}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  )}
                 </motion.div>
-              </motion.div>
-            ))}
+              )
+            })}
           </nav>
 
           <div className="hidden lg:flex items-center space-x-6">
@@ -117,25 +212,78 @@ export default function Header() {
           >
             <div className="container mx-auto px-4 py-8">
               <nav className="flex flex-col space-y-2">
-                {NAV_ITEMS.map((item, index) => (
-                  <motion.div
-                    key={item.name}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1, duration: 0.3, ease: "easeOut" }}
-                  >
-                    <Link
-                      href={item.href}
-                      className={`px-4 py-4 rounded-lg text-lg font-semibold transition-all duration-200 block ${
-                        isActive(item.name) ? "text-white" : "text-white/80 active:bg-white/10"
-                      }`}
-                      style={{ backgroundColor: isActive(item.name) ? "rgba(255,255,255,0.14)" : "transparent" }}
-                      onClick={closeMobileMenu}
+                {NAV_ITEMS.map((item, index) => {
+                  const submenuItems = submenusByItem[item.name]
+                  const hasSubmenu = Boolean(item.hasSubmenu && submenuItems?.length)
+                  const mobileSubmenuOpen = openMobileSubmenu === item.name
+                  const mobileSubmenuId = `navbar-mobile-submenu-${item.name.toLowerCase().replace(/\s+/g, "-")}`
+
+                  return (
+                    <motion.div
+                      key={item.name}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1, duration: 0.3, ease: "easeOut" }}
                     >
-                      {getNavLabel(item.name)}
-                    </Link>
-                  </motion.div>
-                ))}
+                      <div className="flex items-center">
+                        <Link
+                          href={item.href}
+                          className={`flex-1 px-4 py-4 rounded-lg text-lg font-semibold transition-all duration-200 block ${
+                            isActive(item.name) ? "text-white" : "text-white/80 active:bg-white/10"
+                          }`}
+                          style={{ backgroundColor: isActive(item.name) ? "rgba(255,255,255,0.14)" : "transparent" }}
+                          onClick={closeMobileMenu}
+                        >
+                          {getNavLabel(item.name)}
+                        </Link>
+
+                        {hasSubmenu && (
+                          <button
+                            type="button"
+                            aria-haspopup="true"
+                            aria-expanded={mobileSubmenuOpen}
+                            aria-controls={mobileSubmenuId}
+                            aria-label={t("nav.toggleSubmenu", { item: getNavLabel(item.name) })}
+                            onClick={() => toggleMobileSubmenu(item.name)}
+                            className="p-4 text-white/85 transition-colors hover:text-white"
+                          >
+                            <motion.span animate={{ rotate: mobileSubmenuOpen ? 180 : 0 }} transition={{ duration: 0.2 }} className="block">
+                              <ChevronDown size={20} />
+                            </motion.span>
+                          </button>
+                        )}
+                      </div>
+
+                      {hasSubmenu && (
+                        <AnimatePresence>
+                          {mobileSubmenuOpen && (
+                            <motion.div
+                              id={mobileSubmenuId}
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: "auto" }}
+                              exit={{ opacity: 0, height: 0 }}
+                              transition={{ duration: 0.25, ease: "easeInOut" }}
+                              className="overflow-hidden pl-4"
+                            >
+                              <div className="flex flex-col space-y-1 border-l border-white/20 py-2 pl-4">
+                                {submenuItems.map((sub) => (
+                                  <Link
+                                    key={sub.href}
+                                    href={sub.href}
+                                    className="rounded-lg px-3 py-2 text-base text-white/80 transition-colors active:bg-white/10 hover:text-white"
+                                    onClick={closeMobileMenu}
+                                  >
+                                    {sub.label}
+                                  </Link>
+                                ))}
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      )}
+                    </motion.div>
+                  )
+                })}
 
                 <div className="pt-6 pb-2 border-t border-white/20">
                   <div className="flex items-center justify-between px-4 mb-6">

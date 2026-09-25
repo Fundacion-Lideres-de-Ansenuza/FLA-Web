@@ -1,7 +1,7 @@
 'use client'
 
 import { usePathname } from "next/navigation"
-import { useState, useCallback, useMemo, useEffect } from "react"
+import { useState, useCallback, useMemo, useEffect, useRef } from "react"
 import { NAV_ITEMS } from "./_constants"
 import type { NavbarHook } from "./types"
 
@@ -9,6 +9,9 @@ export const useNavbar = (): NavbarHook => {
   const pathname = usePathname()
   const [hoveredItem, setHoveredItem] = useState<string | null>(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null)
+  const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null)
+  const navRef = useRef<HTMLElement | null>(null)
 
   const activeItem = useMemo(() => {
     return NAV_ITEMS.find(item => pathname?.startsWith(item.href))?.name || null
@@ -20,6 +23,18 @@ export const useNavbar = (): NavbarHook => {
 
   const handleMouseLeave = useCallback(() => {
     setHoveredItem(null)
+  }, [])
+
+  const toggleSubmenu = useCallback((itemName: string) => {
+    setOpenSubmenu(prev => (prev === itemName ? null : itemName))
+  }, [])
+
+  const closeSubmenu = useCallback(() => {
+    setOpenSubmenu(null)
+  }, [])
+
+  const toggleMobileSubmenu = useCallback((itemName: string) => {
+    setOpenMobileSubmenu(prev => (prev === itemName ? null : itemName))
   }, [])
 
   const toggleMobileMenu = useCallback(() => {
@@ -44,20 +59,31 @@ export const useNavbar = (): NavbarHook => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setIsMobileMenuOpen(false)
+        setOpenSubmenu(null)
+      }
+    }
+
+    const handleClickOutside = (e: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setOpenSubmenu(null)
       }
     }
 
     window.addEventListener('resize', handleResize)
     document.addEventListener('keydown', handleEscape)
+    document.addEventListener('mousedown', handleClickOutside)
 
     return () => {
       window.removeEventListener('resize', handleResize)
       document.removeEventListener('keydown', handleEscape)
+      document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [])
 
   useEffect(() => {
     setIsMobileMenuOpen(false)
+    setOpenSubmenu(null)
+    setOpenMobileSubmenu(null)
   }, [pathname])
 
   useEffect(() => {
@@ -80,6 +106,12 @@ export const useNavbar = (): NavbarHook => {
     handleMouseEnter,
     handleMouseLeave,
     toggleMobileMenu,
-    closeMobileMenu
+    closeMobileMenu,
+    openSubmenu,
+    toggleSubmenu,
+    closeSubmenu,
+    openMobileSubmenu,
+    toggleMobileSubmenu,
+    navRef
   }
 } 

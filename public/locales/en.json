@@ -7,7 +7,17 @@
     "campus": "CAMPUS",
     "contactanos": "CONTACT US",
     "openMenu": "Open navigation menu",
-    "closeMenu": "Close navigation menu"
+    "closeMenu": "Close navigation menu",
+    "viewAll": "View all",
+    "toggleSubmenu": "Show {{item}} submenu",
+    "submenu": {
+      "introduccion": "Foundation",
+      "mision": "Mission",
+      "vision": "Vision",
+      "valores": "Values",
+      "voluntariado": "Volunteering",
+      "autoridades": "Authorities"
+    }
   },
   "language": {
     "es": "Spanish",
@@ -122,6 +132,7 @@
     "authorities": {
       "title": "Authorities",
       "description": "We present the foundation's leadership team and the people who support our institutional management.",
+      "cta": "See authorities",
       "boardTitle": "Board of Directors",
       "leadershipTitle": "Leadership Team",
       "board": {

@@ -15,6 +15,7 @@ const routes: RouteConfig[] = [
   { path: "/donar", lastModified: "2026-05-22", changeFrequency: "weekly", priority: 0.95 },
   { path: "/contactanos", lastModified: "2026-05-22", changeFrequency: "monthly", priority: 0.85 },
   { path: "/quienes-somos", lastModified: "2026-05-22", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/quienes-somos/autoridades", lastModified: "2026-09-24", changeFrequency: "monthly", priority: 0.65 },
   { path: "/programas", lastModified: "2026-05-22", changeFrequency: "weekly", priority: 0.85 },
   { path: "/programas/ambientalia", lastModified: "2026-05-22", changeFrequency: "monthly", priority: 0.8 },
   { path: "/programas/somos", lastModified: "2026-05-22", changeFrequency: "monthly", priority: 0.8 },

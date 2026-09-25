@@ -118,7 +118,7 @@ export default function Values(): JSX.Element {
   }, [values]);
 
   return (
-    <section className="px-0 py-0 -mt-2">
+    <section id="valores" className="px-0 py-0 -mt-2 scroll-mt-[120px]">
       <div className="mx-auto max-w-4xl">
         <div className="relative">
           <div className="relative aspect-[10/7] w-full">
@@ -180,7 +180,7 @@ export default function Values(): JSX.Element {
                   aria-hidden="true"
                 >
                   <span
-                    className={`inline-flex min-w-[104px] justify-center rounded-full px-3 py-2 text-[9px] font-black uppercase tracking-[0.22em] text-white transition-all duration-200 md:min-w-[132px] md:px-4 md:text-[11px] ${
+                    className={`inline-flex min-w-[104px] justify-center rounded-full px-3 py-2 text-[11px] font-black uppercase tracking-[0.16em] text-white transition-all duration-200 md:min-w-[140px] md:px-4 md:text-base ${
                       isActive
                         ? "bg-white/18 shadow-[0_10px_22px_rgba(255,255,255,0.2)] backdrop-blur-sm"
                         : "bg-transparent"
@@ -204,7 +204,7 @@ export default function Values(): JSX.Element {
                   transition={{ duration: 0.26, ease: "easeOut" }}
                   className="mx-auto max-w-2xl text-center"
                 >
-                  <p className="text-[11px] font-black uppercase tracking-[0.34em] text-[#9d211c] md:text-[12px]">
+                  <p className="text-sm font-black uppercase tracking-[0.28em] text-[#9d211c] md:text-lg">
                     {values[activeIndex].title}
                   </p>
                   <p className="mt-3 text-[15px] leading-relaxed text-[#341715] md:text-[18px]">
