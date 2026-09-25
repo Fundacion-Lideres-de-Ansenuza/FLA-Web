@@ -149,7 +149,7 @@ export default function ProgramHeader({ title, description, colors, slug, isHist
       </section>
 
       <div
-        className={`fixed left-0 right-0 top-[108px] sm:top-[120px] z-[90] border-b border-black/5 bg-white/95 backdrop-blur-sm shadow-sm transition-transform duration-300 motion-reduce:transition-none ${
+        className={`fixed left-0 right-0 top-[129px] z-[90] border-b border-black/5 bg-white/95 backdrop-blur-sm shadow-sm transition-transform duration-300 motion-reduce:transition-none ${
           showStickyHeader ? "translate-y-0" : "-translate-y-full pointer-events-none"
         }`}
         aria-hidden={!showStickyHeader}
@@ -159,9 +159,9 @@ export default function ProgramHeader({ title, description, colors, slug, isHist
             <Image
               src={logoSrc}
               alt=""
-              width={36}
-              height={36}
-              className="h-9 w-9 flex-shrink-0 rounded-lg object-contain"
+              width={80}
+              height={48}
+              className="h-11 w-20 flex-shrink-0 object-contain"
             />
           ) : (
             <span
@@ -169,9 +169,9 @@ export default function ProgramHeader({ title, description, colors, slug, isHist
               style={{ background: `linear-gradient(135deg, ${colors.primary} 0%, ${colors.secondary} 100%)` }}
             />
           )}
-          <span className="truncate font-fla text-base md:text-lg text-gray-900">{title}</span>
+          <span className="truncate font-fla text-lg md:text-xl text-gray-900">{title}</span>
           {isOngoing && (
-            <span className="ml-auto hidden sm:inline-block flex-shrink-0 rounded-full bg-[color:var(--sticky-accent,#f45e5e)]/10 px-3 py-1 text-xs font-semibold text-gray-900" style={{ backgroundColor: `${colors.primary}1a`, color: colors.primary }}>
+            <span className="ml-auto flex-shrink-0 rounded-full px-3 py-1 text-xs font-semibold" style={{ backgroundColor: `${colors.primary}1a`, color: colors.primary }}>
               {t("programs.active.ongoing")}
             </span>
           )}
