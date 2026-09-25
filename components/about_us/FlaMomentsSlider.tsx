@@ -80,7 +80,7 @@ export default function FlaMomentsSlider({
 
         <div className="relative z-10 grid gap-5 lg:grid-cols-[1.15fr_0.85fr]">
           <div
-            className="relative overflow-hidden rounded-[30px] border border-white/70 bg-white/70 p-3 shadow-[0_26px_70px_rgba(144,20,14,0.16)] backdrop-blur-sm"
+            className="relative min-h-[424px] overflow-hidden rounded-[30px] border border-white/70 bg-white/70 p-3 shadow-[0_26px_70px_rgba(144,20,14,0.16)] backdrop-blur-sm sm:min-h-[494px]"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
