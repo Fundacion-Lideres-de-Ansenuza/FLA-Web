@@ -4,32 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo } from "react";
 import { getActivePrograms, getHistoricalPrograms } from "@/lib/data/programs-i18n";
+import { getProgramLogoSrc } from "@/lib/data/program-logos";
 import { useTranslation } from "react-i18next";
-
-function getLogoFileName(title: string): string {
-  const logoMap: Record<string, string> = {
-    "Experiencia Ambientalia": "Experiencia_Ambientalia",
-    "Ambientalia Experience": "Experiencia_Ambientalia",
-    "SOMOS": "Somos",
-    "Líderes": "lideres",
-    "Lideres": "lideres",
-    "Potenciate": "Potenciate",
-    "FUTURAS": "Futuras",
-    "ImpulsaTEC": "Impulsatec",
-    "Ciencia Fuera de la Caja": "Ciencia fuera de la caja",
-    "Science Outside the Box": "Ciencia fuera de la caja",
-    "Aventura Matemágica": "Aventura Matemagica",
-    "Math Adventure": "Aventura Matemagica",
-    "Decidir con Ciencia": "Decidir_con_Ciencia.png"
-  };
-
-  return logoMap[title] || title;
-}
-
-function getLogoSrc(title: string): string {
-  const fileName = getLogoFileName(title);
-  return fileName.endsWith(".png") ? `/images/Logos/${fileName}` : `/images/Logos/${fileName}.webp`;
-}
 
 export default function ProgramasPage() {
   const { t } = useTranslation();
@@ -79,7 +55,7 @@ export default function ProgramasPage() {
                       <div className="relative mb-8">
                         <div className="flex h-56 w-56 items-center justify-center rounded-[28px] border border-gray-100 bg-white p-6 shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
                           <Image
-                            src={getLogoSrc(program.title)}
+                            src={getProgramLogoSrc(program.slug) ?? "/images/Logos/logo FLA.webp"}
                             alt={program.title}
                             width={300}
                             height={300}
@@ -144,7 +120,7 @@ export default function ProgramasPage() {
                       <div className="relative mb-6">
                         <div className="flex h-48 w-48 items-center justify-center rounded-[24px] border border-gray-100 bg-white p-5 shadow-sm transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1">
                           <Image
-                            src={getLogoSrc(program.title)}
+                            src={getProgramLogoSrc(program.slug) ?? "/images/Logos/logo FLA.webp"}
                             alt={program.title}
                             width={200}
                             height={200}

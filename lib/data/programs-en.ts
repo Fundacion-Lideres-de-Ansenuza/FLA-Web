@@ -185,6 +185,7 @@ export const AMBIENTALIA_DATA_EN: ProgramData = {
 };
 
 export const SOMOS_DATA_EN: ProgramData = {
+  enrollmentOpen: false,
   title: 'SOMOS',
   slug: 'somos',
   status: 'active',
@@ -307,6 +308,10 @@ export const SOMOS_DATA_EN: ProgramData = {
     primary: "#2c04bf",
     secondary: "#7c3aed",
     accent: "#c026d3"
+  },
+  video: {
+    url: "https://www.youtube.com/watch?v=Lxsl_lIZ3Ow",
+    title: "Get to know the SOMOS program"
   }
 };
 

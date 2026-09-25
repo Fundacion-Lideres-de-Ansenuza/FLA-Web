@@ -504,7 +504,9 @@
     "ctaContact": "Contact us",
     "sponsorsTitle": "In collaboration with",
     "methodologyExpand": "See the methodology in detail",
-    "methodologyCollapse": "Hide methodology detail"
+    "methodologyCollapse": "Hide methodology detail",
+    "watchVideo": "Watch video",
+    "videoTitle": "Get to know the program"
   },
   "contactSection": {
     "title": "Let’s get started",
