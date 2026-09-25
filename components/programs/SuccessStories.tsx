@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import type { ProgramColors, SuccessStory } from "./types";
 import { useTranslation } from "react-i18next";
@@ -53,8 +54,20 @@ export default function SuccessStories({ stories, colors, rainbowTitle = false }
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
-                className="flex flex-col rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 p-6 transition-all duration-300 hover:shadow-xl"
+                className="flex w-full flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 transition-all duration-300 hover:shadow-xl"
               >
+                {story.image ? (
+                  <div className="relative h-48 w-full">
+                    <Image
+                      src={story.image.src}
+                      alt={story.image.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                ) : null}
+                <div className="flex flex-1 flex-col p-6">
                 <h3 className="mb-4 text-xl font-semibold" style={{ color: colors.secondary }}>
                   {story.title}
                 </h3>
@@ -71,6 +84,7 @@ export default function SuccessStories({ stories, colors, rainbowTitle = false }
                     <ExternalLink size={16} />
                   </Link>
                 ) : null}
+                </div>
               </motion.div>
             ))}
           </div>
