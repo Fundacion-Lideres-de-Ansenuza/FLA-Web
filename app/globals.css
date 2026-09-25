@@ -82,10 +82,13 @@ h1 {
   letter-spacing: 0.02em;
 }
 
-h2, h3, h4, h5, h6 {
-  font-family: var(--font-arimo), 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+/* En @layer base para que las utilidades de Tailwind (font-contrail, etc.) puedan sobrescribirlo */
+@layer base {
+  h2, h3, h4, h5, h6 {
+    font-family: var(--font-arimo), 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
 }
 
 .font-fla {

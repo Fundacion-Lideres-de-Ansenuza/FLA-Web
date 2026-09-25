@@ -1,5 +1,5 @@
 @import "tailwindcss";
 
-@theme {
+@theme inline {
 	--font-contrail: var(--font-contrail-one), cursive;
 }
