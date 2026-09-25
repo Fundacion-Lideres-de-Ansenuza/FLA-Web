@@ -94,7 +94,7 @@ export default function FlaMomentsSlider({
                 transition={{ duration: 0.5, ease: "easeOut" }}
                 className="absolute inset-3"
               >
-                <div className="relative aspect-16/10 min-h-100 overflow-hidden rounded-3xl sm:min-h-117.5">
+                <div className="relative aspect-16/10 min-h-100 overflow-hidden rounded-3xl sm:min-h-117.5 w-full">
                   <Image
                     src={currentSlide?.src}
                     alt={currentSlide?.alt}
