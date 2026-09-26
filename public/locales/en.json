@@ -478,6 +478,9 @@
     }
   },
   "programDetail": {
+    "breadcrumbHome": "Home",
+    "breadcrumbPrograms": "Programs",
+    "breadcrumbLabel": "Breadcrumb navigation",
     "about": "About the program",
     "duration": "Duration",
     "modality": "Format",
