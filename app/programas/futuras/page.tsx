@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { FUTURAS_DATA } from "@/lib/data/programs";
 import FuturasPageClient from "./FuturasPageClient";
 
 export const metadata: Metadata = {
@@ -20,7 +21,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_AR",
     url: "https://www.lideresdeansenuza.org/programas/futuras",
-    siteName: "Fundación Líderes de Ansenuza"
+    siteName: "Fundación Líderes de Ansenuza",
+    images: [
+      {
+        url: "/images/programs/futuras.webp",
+        width: 1200,
+        height: 630,
+        alt: "FUTURAS - Programa de Liderazgo y Empoderamiento Femenino"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/programs/futuras.webp"]
+  },
+  alternates: {
+    canonical: "/programas/futuras"
   },
   robots: {
     index: true,
@@ -29,7 +45,59 @@ export const metadata: Metadata = {
 };
 
 export default function FuturasPage() {
+  const courseSchema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": FUTURAS_DATA.title,
+    "description": FUTURAS_DATA.shortDescription,
+    "url": "https://www.lideresdeansenuza.org/programas/futuras",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Fundación Líderes de Ansenuza",
+      "url": "https://www.lideresdeansenuza.org"
+    },
+    "educationalLevel": "Secundario",
+    "isAccessibleForFree": true,
+    "inLanguage": "es"
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://www.lideresdeansenuza.org"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Programas",
+        "item": "https://www.lideresdeansenuza.org/programas"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": FUTURAS_DATA.title,
+        "item": "https://www.lideresdeansenuza.org/programas/futuras"
+      }
+    ]
+  };
+
   return (
-    <FuturasPageClient />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      <FuturasPageClient />
+    </>
   );
 }
