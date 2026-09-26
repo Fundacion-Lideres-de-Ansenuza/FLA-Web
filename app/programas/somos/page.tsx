@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     images: ["/images/programs/somos.webp"]
   },
   alternates: {
-    canonical: "https://www.lideresdeansenuza.org/programas/somos"
+    canonical: "/programas/somos"
   },
   robots: {
     index: true,

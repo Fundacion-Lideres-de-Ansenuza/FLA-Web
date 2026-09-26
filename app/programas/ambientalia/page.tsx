@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     images: ["/images/programs/exp_ambientalia.webp"]
   },
   alternates: {
-    canonical: "https://www.lideresdeansenuza.org/programas/ambientalia"
+    canonical: "/programas/ambientalia"
   },
   robots: {
     index: true,
