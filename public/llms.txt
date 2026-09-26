@@ -4,7 +4,7 @@
 
 ## Acerca de la Fundación
 
-Somos una red de apoyo conformada por 50 voluntarios actuales y ex-participantes de más de 18 provincias del territorio nacional. Nuestra misión es empoderar a jóvenes a ser líderes a través de programas educativos y motivacionales, brindando acompañamiento ante oportunidades de desarrollo que les permita concretar proyectos de impacto social. En FLA, promovemos el aprendizaje a través de la acción concreta, permitiendo que los participantes no solo adquieran conocimientos sino que los apliquen en proyectos reales que transforman sus comunidades. Con 250 proyectos de impacto social desarrollados, nuestro trabajo trasciende las tareas diarias e impacta vidas.
+Somos una red de apoyo con 50 voluntarios actuales y participantes de más de 18 provincias del territorio nacional. Nuestra misión es empoderar a jóvenes a ser líderes a través de programas educativos y motivacionales, brindando acompañamiento ante oportunidades de desarrollo que les permita concretar proyectos de impacto social. En FLA, promovemos el aprendizaje a través de la acción concreta, permitiendo que los participantes no solo adquieran conocimientos sino que los apliquen en proyectos reales que transforman sus comunidades. Con 250 proyectos de impacto social desarrollados, nuestro trabajo trasciende las tareas diarias e impacta vidas.
 
 **Contacto:** contacto@lideresdeansenuza.org
 
@@ -34,13 +34,13 @@ Somos una red de apoyo conformada por 50 voluntarios actuales y ex-participantes
 
 - [Quiénes somos](https://www.lideresdeansenuza.org/quienes-somos): Conocé nuestra historia, misión, visión, valores y equipo directivo.
 
-- [Autoridades](https://www.lideresdeansenuza.org/quienes-somos#autoridades): Presentamos nuestro Consejo de Administración y Equipo de Liderazgo.
+- [Autoridades](https://www.lideresdeansenuza.org/quienes-somos/autoridades): Presentamos nuestro Consejo de Administración y Equipo de Liderazgo.
 
 - [Donar](https://www.lideresdeansenuza.org/donar): Métodos de donación: Plataforma Donar Online, PayPal o Transferencia Directa.
 
 - [Contacto](https://www.lideresdeansenuza.org/contactanos): Escribinos tus consultas sobre programas, voluntariado, alianzas o colaboración.
 
-## Recursos adicionales
+## Optional
 
 - [Políticas de Privacidad](https://www.lideresdeansenuza.org/politicas-de-privacidad): Información sobre protección de datos personales.
 
