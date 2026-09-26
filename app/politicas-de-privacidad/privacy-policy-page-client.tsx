@@ -80,9 +80,9 @@ export default function PoliticasDePrivacidadPage() {
             <div className="absolute right-0 top-0 h-36 w-36 translate-x-8 -translate-y-8 rounded-full bg-[#ffd8a8]/70 blur-2xl" />
             <div className="absolute bottom-0 right-20 h-24 w-24 rounded-full border-8 border-dashed border-[#f7b36c]/40" />
 
-            <div className="relative grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-              <div className="space-y-4">
-                <h1 className="max-w-3xl text-4xl leading-none text-[#2f1614] sm:text-5xl lg:text-6xl">
+            <div className="relative grid grid-cols-1 gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+              <div className="min-w-0 space-y-4">
+                <h1 className="max-w-3xl text-3xl leading-none text-[#2f1614] sm:text-5xl lg:text-6xl break-words">
                   {t("privacyPolicy.hero.title")}
                 </h1>
                 <p className="max-w-3xl text-lg leading-8 text-[#5b4038] sm:text-xl">
@@ -90,7 +90,7 @@ export default function PoliticasDePrivacidadPage() {
                 </p>
               </div>
 
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+              <div className="grid min-w-0 grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-1">
                 <div className="rounded-[28px] border border-white/60 bg-white/75 p-5 shadow-[0_12px_35px_rgba(144,20,14,0.08)] backdrop-blur-sm">
                   <ShieldCheck className="mb-3 h-8 w-8 text-[#bc2222]" />
                   <h2 className="mb-2 text-xl font-black text-[#3d1713]">{t("privacyPolicy.hero.legalBaseTitle")}</h2>
@@ -101,7 +101,7 @@ export default function PoliticasDePrivacidadPage() {
                   <h2 className="mb-2 text-xl font-black">{t("privacyPolicy.hero.contactChannelTitle")}</h2>
                   <a
                     href="mailto:contacto@lideresdeansenuza.org"
-                    className="text-lg underline decoration-white/50 underline-offset-4"
+                    className="text-lg underline decoration-white/50 underline-offset-4 break-all"
                   >
                     contacto@lideresdeansenuza.org
                   </a>
@@ -110,7 +110,7 @@ export default function PoliticasDePrivacidadPage() {
             </div>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             {actionCards.map((card, index) => (
               <a
                 key={card.title}
@@ -146,7 +146,7 @@ export default function PoliticasDePrivacidadPage() {
           </p>
         </div>
 
-        <div className="grid gap-8">
+        <div className="grid grid-cols-1 gap-8">
           <section className="space-y-6">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div>

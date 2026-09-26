@@ -32,7 +32,7 @@ export default function BlogLinks({ posts, colors }: BlogLinksProps) {
             <p className="text-lg text-gray-600">{t("programDetail.blogSubtitle")}</p>
           </motion.div>
 
-          <div className="grid gap-5 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
             {posts.map((post, index) => (
               <motion.div
                 key={index}
@@ -45,10 +45,10 @@ export default function BlogLinks({ posts, colors }: BlogLinksProps) {
                   href={post.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex h-full items-start gap-4 rounded-xl bg-white p-6 transition-all duration-300 hover:shadow-lg"
+                  className="group flex h-full items-start gap-4 rounded-xl bg-white p-6 transition-all duration-300 hover:shadow-lg min-w-0"
                 >
-                  <div className="flex-grow">
-                    <h3 className="mb-2 text-lg font-semibold text-gray-900 group-hover:underline">{post.title}</h3>
+                  <div className="flex-grow min-w-0">
+                    <h3 className="mb-2 text-lg font-semibold text-gray-900 group-hover:underline break-words">{post.title}</h3>
                     <span className="inline-flex items-center gap-1 text-sm font-medium" style={{ color: colors.primary }}>
                       {t("programDetail.readArticle")}
                       <ExternalLink size={14} />
