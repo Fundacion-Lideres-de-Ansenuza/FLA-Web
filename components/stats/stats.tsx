@@ -45,10 +45,10 @@ export default function Stats() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
           {STATS_DATA?.map((stat, index) => (
             <div key={index} className="flex flex-col items-center text-center px-2 py-2">
-              <div className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-[#bd2222] drop-shadow-[0_10px_25px_rgba(188,34,34,0.12)] font-contrail">
+              <div className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-[#bd2222] drop-shadow-[0_10px_25px_rgba(188,34,34,0.12)] font-fla">
                 +<AnimatedNumber target={stat?.number || 0} isVisible={isVisible} />
               </div>
-              <div className="mt-2 max-w-[18rem] text-balance text-base font-bold tracking-wide text-gray-700 sm:text-lg lg:text-xl font-contrail">
+              <div className="mt-2 max-w-[18rem] text-balance text-base font-bold tracking-wide text-gray-700 sm:text-lg lg:text-xl">
                 {t(stat?.labelKey || '')}
               </div>
             </div>

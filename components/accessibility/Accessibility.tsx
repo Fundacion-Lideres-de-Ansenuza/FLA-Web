@@ -36,7 +36,7 @@ const Accessibility = () => {
       </button>
       {isOpen && (
         <div className="absolute bottom-16 right-0 bg-white shadow-lg rounded-lg p-4 w-64">
-          <p className="text-lg font-bold mb-2 font-arimo text-[#bc2222]">{t("accessibility.title")}</p>
+          <p className="text-lg font-bold mb-2 text-[#bc2222]">{t("accessibility.title")}</p>
           <ul>
             <li className="flex items-center mb-2">
               <button onClick={increaseFontSize} className="flex items-center w-full text-left">

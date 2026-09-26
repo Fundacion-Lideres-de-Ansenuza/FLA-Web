@@ -22,7 +22,7 @@ export default function VideoSection() {
             href="/quienes-somos"
             className="relative group px-10 py-4 bg-gradient-to-r from-red-600 to-red-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden before:absolute before:inset-0 before:bg-white/10 before:translate-x-[-100%] hover:before:translate-x-0 before:transition-transform before:duration-500"
           >
-            <span className="relative text-white text-xl md:text-2xl font-contrail tracking-wide">
+            <span className="relative text-white text-xl md:text-2xl font-fla tracking-wide">
               Conoce nuestra historia
             </span>
           </Link>

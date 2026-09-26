@@ -25,7 +25,7 @@ export default function ImpactStats({ stats, colors }: ImpactStatsProps) {
             transition={{ duration: 0.6 }}
             className="mb-10 text-center"
           >
-            <h2 className="mb-3 text-3xl md:text-4xl font-contrail" style={{ color: colors.secondary }}>
+            <h2 className="mb-3 text-3xl md:text-4xl font-fla" style={{ color: colors.secondary }}>
               {t("programDetail.impactTitle")}
             </h2>
             <p className="text-base text-gray-600 md:text-lg">{t("programDetail.impactSubtitle")}</p>

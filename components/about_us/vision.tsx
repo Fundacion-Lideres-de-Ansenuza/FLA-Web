@@ -16,7 +16,7 @@ export default function Vision(): JSX.Element {
           <span className="inline-flex rounded-full bg-[#90140e] px-4 py-1.5 text-xs font-black uppercase tracking-[0.22em] text-white shadow-lg">
             {t("aboutUs.vision.tag")}
           </span>
-          <p className="mt-5 text-[18px] md:text-[20px] leading-relaxed text-[#2c1818] font-arimo">{t("aboutUs.vision.text")}</p>
+          <p className="mt-5 text-[18px] md:text-[20px] leading-relaxed text-[#2c1818]">{t("aboutUs.vision.text")}</p>
         </div>
 
         <div className="relative min-h-[240px] overflow-hidden rounded-[30px]">

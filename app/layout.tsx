@@ -1,6 +1,6 @@
 ﻿import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Contrail_One, Arimo } from "next/font/google"
+import { Inter } from "next/font/google"
 import localFont from "next/font/local"
 import "./tailwind.css"
 import "./globals.css"
@@ -11,14 +11,14 @@ import Accessibility from "@/components/accessibility/Accessibility"
 import I18nProvider from "@/components/I18nProvider"
 
 const inter = Inter({ subsets: ["latin"] })
-const arimo = Arimo({
-  subsets: ["latin"],
+// FLA (Saridona) es muy condensada: size-adjust la agranda de forma pareja para que los títulos
+// tengan el peso visual que tenían con la fuente anterior, sin tocar cada clase de tamaño.
+const fla = localFont({
+  src: "../public/fonts/FLA.otf",
+  variable: "--font-fla",
   display: "swap",
-  variable: "--font-arimo",
+  declarations: [{ prop: "size-adjust", value: "115%" }],
 })
-const fla = localFont({ src: "../public/fonts/FLA.otf", variable: "--font-fla", display: "swap" })
-const saridona = localFont({ src: "../public/fonts/Saridona_personal use.ttf", variable: "--font-saridona", display: "swap" })
-const contrailOne = Contrail_One({ weight: "400", subsets: ["latin"], variable: "--font-contrail-one", display: "swap" })
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.lideresdeansenuza.org"),
@@ -58,7 +58,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       </head>
-      <body className={`${inter.className} ${fla.variable} ${saridona.variable} ${contrailOne.variable} ${arimo.variable} overflow-x-hidden`}>
+      <body className={`${inter.className} ${fla.variable} overflow-x-hidden`}>
         <I18nProvider>
           <AccessibilityProvider>
             <a

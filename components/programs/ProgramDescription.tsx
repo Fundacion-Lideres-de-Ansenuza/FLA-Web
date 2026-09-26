@@ -57,7 +57,7 @@ export default function ProgramDescription({
             transition={{ duration: 0.6 }}
             className="mb-10"
           >
-            <h2 className="mb-5 text-3xl md:text-4xl font-contrail" style={{ color: colors?.secondary ?? "#111827" }}>
+            <h2 className="mb-5 text-3xl md:text-4xl font-fla" style={{ color: colors?.secondary ?? "#111827" }}>
               {t("programDetail.about")}
             </h2>
 
@@ -71,12 +71,12 @@ export default function ProgramDescription({
                     >
                       {block.heading}
                     </h3>
-                    <p className="text-base leading-relaxed text-gray-700 md:text-lg font-arimo">{block.text}</p>
+                    <p className="text-base leading-relaxed text-gray-700 md:text-lg">{block.text}</p>
                   </div>
                 ))}
               </div>
             ) : (
-              <p className="mb-6 text-base leading-relaxed text-gray-700 md:text-lg font-arimo">{fullDescription}</p>
+              <p className="mb-6 text-base leading-relaxed text-gray-700 md:text-lg">{fullDescription}</p>
             )}
 
             {methodology && (

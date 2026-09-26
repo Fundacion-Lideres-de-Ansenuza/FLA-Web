@@ -51,7 +51,7 @@ function PolicyCard({
       </summary>
       <div className="px-6 pb-6 sm:px-8 sm:pb-8">
         <div className="mb-5 h-px w-full bg-[linear-gradient(90deg,rgba(144,20,14,0.16),rgba(244,94,94,0.2),rgba(255,255,255,0))]" />
-        <div className="space-y-4 font-arimo text-base leading-8 text-[#5a3c37]">
+        <div className="space-y-4 text-base leading-8 text-[#5a3c37]">
           {body.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
@@ -85,7 +85,7 @@ export default function PoliticasDePrivacidadPage() {
                 <h1 className="max-w-3xl text-4xl leading-none text-[#2f1614] sm:text-5xl lg:text-6xl">
                   {t("privacyPolicy.hero.title")}
                 </h1>
-                <p className="max-w-3xl font-arimo text-lg leading-8 text-[#5b4038] sm:text-xl">
+                <p className="max-w-3xl text-lg leading-8 text-[#5b4038] sm:text-xl">
                   {t("privacyPolicy.hero.description")}
                 </p>
               </div>
@@ -94,14 +94,14 @@ export default function PoliticasDePrivacidadPage() {
                 <div className="rounded-[28px] border border-white/60 bg-white/75 p-5 shadow-[0_12px_35px_rgba(144,20,14,0.08)] backdrop-blur-sm">
                   <ShieldCheck className="mb-3 h-8 w-8 text-[#bc2222]" />
                   <h2 className="mb-2 text-xl font-black text-[#3d1713]">{t("privacyPolicy.hero.legalBaseTitle")}</h2>
-                  <p className="font-arimo text-[#5a3c37]">{t("privacyPolicy.hero.legalBaseDescription")}</p>
+                  <p className="text-[#5a3c37]">{t("privacyPolicy.hero.legalBaseDescription")}</p>
                 </div>
                 <div className="rounded-[28px] border border-white/60 bg-[#90140e] p-5 text-white shadow-[0_18px_40px_rgba(144,20,14,0.22)]">
                   <Mail className="mb-3 h-8 w-8" />
                   <h2 className="mb-2 text-xl font-black">{t("privacyPolicy.hero.contactChannelTitle")}</h2>
                   <a
                     href="mailto:contacto@lideresdeansenuza.org"
-                    className="font-arimo text-lg underline decoration-white/50 underline-offset-4"
+                    className="text-lg underline decoration-white/50 underline-offset-4"
                   >
                     contacto@lideresdeansenuza.org
                   </a>
@@ -128,8 +128,8 @@ export default function PoliticasDePrivacidadPage() {
                   <ArrowUpRight className="h-5 w-5 text-[#90140e] transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                 </div>
                 <h2 className="mb-2 text-2xl font-black text-[#341715]">{card.title}</h2>
-                <p className="mb-4 font-arimo text-[#61443e]">{card.description}</p>
-                <span className="font-arimo text-sm font-bold uppercase tracking-[0.18em] text-[#90140e]">
+                <p className="mb-4 text-[#61443e]">{card.description}</p>
+                <span className="text-sm font-bold uppercase tracking-[0.18em] text-[#90140e]">
                   {card.label}
                 </span>
               </a>
@@ -141,7 +141,7 @@ export default function PoliticasDePrivacidadPage() {
       <section className="mx-auto w-full max-w-6xl px-4 pb-24 sm:px-6 lg:px-8">
         <div className="mb-8 rounded-[30px] border border-[#f3d7d7] bg-white/80 p-6 shadow-[0_16px_40px_rgba(144,20,14,0.07)] backdrop-blur-sm sm:p-8">
           <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#bc2222]">{t("privacyPolicy.intro.eyebrow")}</p>
-          <p className="mt-4 font-arimo text-lg leading-8 text-[#5a3c37]">
+          <p className="mt-4 text-lg leading-8 text-[#5a3c37]">
             {t("privacyPolicy.intro.body")}
           </p>
         </div>
@@ -182,7 +182,7 @@ export default function PoliticasDePrivacidadPage() {
               <div className="max-w-3xl">
                 <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#bc2222]">{t("privacyPolicy.officialLink.eyebrow")}</p>
                 <h2 className="mt-2 text-3xl text-[#2f1614] sm:text-4xl">{t("privacyPolicy.officialLink.title")}</h2>
-                <p className="mt-4 font-arimo text-lg leading-8 text-[#5a3c37]">
+                <p className="mt-4 text-lg leading-8 text-[#5a3c37]">
                   {t("privacyPolicy.officialLink.description")}
                 </p>
               </div>
@@ -191,7 +191,7 @@ export default function PoliticasDePrivacidadPage() {
                 href="https://www.argentina.gob.ar/aaip/datospersonales/reclama/30716569396--RL-2024-5099117-APN-DNPDP#AAIP"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 rounded-full bg-[#90140e] px-6 py-4 text-center font-arimo text-sm font-bold uppercase tracking-[0.14em] text-white shadow-[0_14px_34px_rgba(144,20,14,0.24)] transition-transform duration-300 hover:scale-[1.02]"
+                className="inline-flex items-center justify-center gap-3 rounded-full bg-[#90140e] px-6 py-4 text-center text-sm font-bold uppercase tracking-[0.14em] text-white shadow-[0_14px_34px_rgba(144,20,14,0.24)] transition-transform duration-300 hover:scale-[1.02]"
               >
                 {t("privacyPolicy.officialLink.button")}
                 <ArrowUpRight className="h-4 w-4" />
@@ -204,7 +204,7 @@ export default function PoliticasDePrivacidadPage() {
               <div>
                 <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#bc2222]">{t("privacyPolicy.help.eyebrow")}</p>
                 <h2 className="mt-2 text-3xl text-[#2f1614] sm:text-4xl">{t("privacyPolicy.help.title")}</h2>
-                <p className="mt-3 max-w-2xl font-arimo text-lg leading-8 text-[#5a3c37]">
+                <p className="mt-3 max-w-2xl text-lg leading-8 text-[#5a3c37]">
                   {t("privacyPolicy.help.description")}
                 </p>
               </div>
@@ -212,13 +212,13 @@ export default function PoliticasDePrivacidadPage() {
               <div className="flex flex-col gap-3 sm:flex-row">
                 <a
                   href="mailto:contacto@lideresdeansenuza.org"
-                  className="inline-flex items-center justify-center rounded-full border border-[#90140e] bg-white px-6 py-4 font-arimo text-sm font-bold uppercase tracking-[0.14em] text-[#90140e] transition-colors hover:bg-[#fff2ef]"
+                  className="inline-flex items-center justify-center rounded-full border border-[#90140e] bg-white px-6 py-4 text-sm font-bold uppercase tracking-[0.14em] text-[#90140e] transition-colors hover:bg-[#fff2ef]"
                 >
                   {t("privacyPolicy.help.emailButton")}
                 </a>
                 <Link
                   href="/contactanos"
-                  className="inline-flex items-center justify-center rounded-full bg-[#f45e5e] px-6 py-4 font-arimo text-sm font-bold uppercase tracking-[0.14em] text-white transition-colors hover:bg-[#e85353]"
+                  className="inline-flex items-center justify-center rounded-full bg-[#f45e5e] px-6 py-4 text-sm font-bold uppercase tracking-[0.14em] text-white transition-colors hover:bg-[#e85353]"
                 >
                   {t("privacyPolicy.help.contactButton")}
                 </Link>

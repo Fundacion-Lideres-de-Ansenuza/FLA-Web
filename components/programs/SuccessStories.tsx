@@ -29,8 +29,8 @@ export default function SuccessStories({ stories, colors, rainbowTitle = false }
             <h2
               className={
                 rainbowTitle
-                  ? "mb-3 inline-block bg-clip-text text-3xl font-contrail text-transparent md:text-4xl"
-                  : "mb-3 text-3xl md:text-4xl font-contrail"
+                  ? "mb-3 inline-block bg-clip-text text-3xl font-fla text-transparent md:text-4xl"
+                  : "mb-3 text-3xl md:text-4xl font-fla"
               }
               style={
                 rainbowTitle

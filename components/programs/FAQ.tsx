@@ -30,7 +30,7 @@ export default function FAQ({ faqs, colors }: FAQProps) {
             transition={{ duration: 0.6 }}
             className="mb-10 text-center"
           >
-            <h2 className="mb-4 text-4xl md:text-5xl font-contrail" style={{ color: colors.secondary }}>
+            <h2 className="mb-4 text-4xl md:text-5xl font-fla" style={{ color: colors.secondary }}>
               {t("programDetail.faqTitle")}
             </h2>
             <p className="text-lg text-gray-600">{t("programDetail.faqSubtitle")}</p>

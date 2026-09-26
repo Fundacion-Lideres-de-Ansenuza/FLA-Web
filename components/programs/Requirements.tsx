@@ -27,10 +27,10 @@ export default function Requirements({ requirements, colors }: RequirementsProps
             transition={{ duration: 0.6 }}
             className="mb-10 text-center"
           >
-            <h2 className="mb-3 text-3xl md:text-4xl font-contrail" style={{ color: colors.secondary }}>
+            <h2 className="mb-3 text-3xl md:text-4xl font-fla" style={{ color: colors.secondary }}>
               {t("programDetail.requirementsTitle")}
             </h2>
-            <p className="text-base text-gray-600 md:text-lg font-arimo">
+            <p className="text-base text-gray-600 md:text-lg">
               {t("programDetail.requirementsSubtitle")}
             </p>
           </motion.div>

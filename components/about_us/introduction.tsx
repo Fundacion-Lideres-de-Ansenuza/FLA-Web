@@ -14,10 +14,10 @@ export default function Introduction(): JSX.Element {
       <div className="overflow-hidden rounded-[34px] border border-[#f1d6d6] bg-white shadow-[0_18px_50px_rgba(144,20,14,0.05)]">
         <div className="grid lg:grid-cols-[1.35fr_0.65fr]">
           <div className="flex flex-col justify-center px-6 py-8 md:px-10 md:py-12 lg:px-14">
-            <h1 className="mt-5 text-[34px] sm:text-[44px] md:text-[54px] lg:text-[62px] leading-[0.96] tracking-tight text-[#160101] font-contrail">
+            <h1 className="mt-5 text-[34px] sm:text-[44px] md:text-[54px] lg:text-[62px] leading-[0.96] tracking-tight text-[#160101] font-fla">
               {t('aboutUs.foundation.title')}
             </h1>
-            <p className="mt-5 max-w-none text-[18px] md:text-[21px] leading-relaxed text-gray-700 font-arimo">
+            <p className="mt-5 max-w-none text-[18px] md:text-[21px] leading-relaxed text-gray-700">
               {t('aboutUs.foundation.intro')}
             </p>
           </div>
@@ -37,7 +37,7 @@ export default function Introduction(): JSX.Element {
       </div>
 
       <div className="mt-6 md:mt-8 px-1 md:px-2">
-        <div className="space-y-5 text-[17px] md:text-[19px] leading-relaxed text-[#2c1818] font-arimo">
+        <div className="space-y-5 text-[17px] md:text-[19px] leading-relaxed text-[#2c1818]">
           <p>{t('aboutUs.foundation.paragraph1')}</p>
           <p>{t('aboutUs.foundation.paragraph2')}</p>
           <p>{t('aboutUs.foundation.paragraph3')}</p>

@@ -95,7 +95,7 @@ function Avatar({ person }: { person: Person }) {
       <Image src={person.avatar} alt={person.name} fill className="object-cover" sizes="72px" />
     </div>
   ) : (
-    <div className="flex h-[4.5rem] w-[4.5rem] shrink-0 items-center justify-center rounded-[22px] border border-[#f0d9d5] bg-[linear-gradient(135deg,#fff4f3_0%,#fbe4e0_100%)] font-contrail text-xl text-[#8f1f1b] shadow-[0_10px_24px_rgba(144,20,14,0.08)]">
+    <div className="flex h-[4.5rem] w-[4.5rem] shrink-0 items-center justify-center rounded-[22px] border border-[#f0d9d5] bg-[linear-gradient(135deg,#fff4f3_0%,#fbe4e0_100%)] font-fla text-xl text-[#8f1f1b] shadow-[0_10px_24px_rgba(144,20,14,0.08)]">
       {initials}
     </div>
   )
@@ -119,7 +119,7 @@ function BoardNode({ person }: { person: Person }) {
             {t(person.roleKey)}
           </span>
           <Avatar person={person} />
-          <h3 className="text-center font-contrail text-[22px] leading-tight text-[#160101]">
+          <h3 className="text-center font-fla text-[22px] leading-tight text-[#160101]">
             {person.name}
           </h3>
         </div>
@@ -144,7 +144,7 @@ function LeadershipNode({ person }: { person: Person }) {
         <div className="flex h-full items-center gap-3 pt-2">
           <Avatar person={person} />
           <div className="min-w-0">
-            <h3 className="font-contrail text-[20px] leading-tight text-[#160101]">{person.name}</h3>
+            <h3 className="font-fla text-[20px] leading-tight text-[#160101]">{person.name}</h3>
             <p className="mt-2 inline-flex rounded-full bg-[#fff4f3] px-3 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-[#bc2222]">
               {t(person.roleKey)}
             </p>
