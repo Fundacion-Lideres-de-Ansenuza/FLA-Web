@@ -481,6 +481,7 @@
     "breadcrumbHome": "Inicio",
     "breadcrumbPrograms": "Programas",
     "breadcrumbLabel": "Ruta de navegación",
+    "historicalBadge": "Programa histórico - {{year}}",
     "about": "Sobre el programa",
     "duration": "Duración",
     "modality": "Modalidad",
