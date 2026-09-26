@@ -1,1 +1,24 @@
 @import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+/* Tokens de los componentes base (components/ui) con la paleta de FLA */
+@theme inline {
+  --color-background: #ffffff;
+  --color-foreground: #1a202c;
+  --color-card: #ffffff;
+  --color-card-foreground: #1a202c;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #1a202c;
+  --color-primary: #bc2222;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #fff1ee;
+  --color-secondary-foreground: #90140e;
+  --color-muted: #f5f5f5;
+  --color-muted-foreground: #6b7280;
+  --color-accent: #fff1ee;
+  --color-accent-foreground: #90140e;
+  --color-destructive: #dc2626;
+  --color-border: #e5e7eb;
+  --color-input: #e5e7eb;
+  --color-ring: #bc2222;
+}

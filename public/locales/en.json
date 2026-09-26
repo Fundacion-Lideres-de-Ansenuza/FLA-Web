@@ -478,6 +478,10 @@
     }
   },
   "programDetail": {
+    "breadcrumbHome": "Home",
+    "breadcrumbPrograms": "Programs",
+    "breadcrumbLabel": "Breadcrumb navigation",
+    "historicalBadge": "Historical program - {{year}}",
     "about": "About the program",
     "duration": "Duration",
     "modality": "Format",
