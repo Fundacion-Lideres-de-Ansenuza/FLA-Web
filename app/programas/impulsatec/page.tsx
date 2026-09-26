@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { IMPULSATEC_DATA } from "@/lib/data/programs";
 import ImpulsatecPageClient from "./ImpulsatecPageClient";
 
 export const metadata: Metadata = {
@@ -45,7 +46,59 @@ export const metadata: Metadata = {
 };
 
 export default function ImpulsatecPage() {
+  const courseSchema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": IMPULSATEC_DATA.title,
+    "description": IMPULSATEC_DATA.shortDescription,
+    "url": "https://www.lideresdeansenuza.org/programas/impulsatec",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Fundación Líderes de Ansenuza",
+      "url": "https://www.lideresdeansenuza.org"
+    },
+    "educationalLevel": "Secundario",
+    "isAccessibleForFree": true,
+    "inLanguage": "es"
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://www.lideresdeansenuza.org"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Programas",
+        "item": "https://www.lideresdeansenuza.org/programas"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": IMPULSATEC_DATA.title,
+        "item": "https://www.lideresdeansenuza.org/programas/impulsatec"
+      }
+    ]
+  };
+
   return (
-    <ImpulsatecPageClient />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      <ImpulsatecPageClient />
+    </>
   );
 }

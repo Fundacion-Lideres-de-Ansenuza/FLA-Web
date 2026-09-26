@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DECIDIR_CON_CIENCIA_DATA } from "@/lib/data/programs";
 import DecidirConCienciaPageClient from "./DecidirConCienciaPageClient";
 
 export const metadata: Metadata = {
@@ -47,5 +48,78 @@ export const metadata: Metadata = {
 };
 
 export default function DecidirConCienciaPage() {
-  return <DecidirConCienciaPageClient />;
+  const courseSchema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": DECIDIR_CON_CIENCIA_DATA.title,
+    "description": DECIDIR_CON_CIENCIA_DATA.shortDescription,
+    "url": "https://www.lideresdeansenuza.org/programas/decidir-con-ciencia",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Fundación Líderes de Ansenuza",
+      "url": "https://www.lideresdeansenuza.org"
+    },
+    "educationalLevel": "Secundario",
+    "isAccessibleForFree": true,
+    "inLanguage": "es"
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://www.lideresdeansenuza.org"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Programas",
+        "item": "https://www.lideresdeansenuza.org/programas"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": DECIDIR_CON_CIENCIA_DATA.title,
+        "item": "https://www.lideresdeansenuza.org/programas/decidir-con-ciencia"
+      }
+    ]
+  };
+
+  const faqSchema = DECIDIR_CON_CIENCIA_DATA.faqs && DECIDIR_CON_CIENCIA_DATA.faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": DECIDIR_CON_CIENCIA_DATA.faqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer.replace(/<[^>]*>/g, '')
+      }
+    }))
+  } : null;
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+
+      <DecidirConCienciaPageClient />
+    </>
+  );
 }

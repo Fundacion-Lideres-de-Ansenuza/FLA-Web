@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { AVENTURA_MATEMATICA_DATA } from "@/lib/data/programs";
 import AventuraMatematicaPageClient from "./AventuraMatematicaPageClient";
 
 export const metadata: Metadata = {
@@ -44,7 +45,59 @@ export const metadata: Metadata = {
 };
 
 export default function AventuraMatematicaPage() {
+  const courseSchema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": AVENTURA_MATEMATICA_DATA.title,
+    "description": AVENTURA_MATEMATICA_DATA.shortDescription,
+    "url": "https://www.lideresdeansenuza.org/programas/aventura-matematica",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Fundación Líderes de Ansenuza",
+      "url": "https://www.lideresdeansenuza.org"
+    },
+    "educationalLevel": "Secundario",
+    "isAccessibleForFree": true,
+    "inLanguage": "es"
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://www.lideresdeansenuza.org"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Programas",
+        "item": "https://www.lideresdeansenuza.org/programas"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": AVENTURA_MATEMATICA_DATA.title,
+        "item": "https://www.lideresdeansenuza.org/programas/aventura-matematica"
+      }
+    ]
+  };
+
   return (
-    <AventuraMatematicaPageClient />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      <AventuraMatematicaPageClient />
+    </>
   );
 }

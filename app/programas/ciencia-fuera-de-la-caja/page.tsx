@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CIENCIA_FUERA_DE_LA_CAJA_DATA } from "@/lib/data/programs";
 import CienciaFueraDeLaCajaPageClient from "./CienciaFueraDeLaCajaPageClient";
 
 export const metadata: Metadata = {
@@ -44,7 +45,59 @@ export const metadata: Metadata = {
 };
 
 export default function CienciaFueraDeLaCajaPage() {
+  const courseSchema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": CIENCIA_FUERA_DE_LA_CAJA_DATA.title,
+    "description": CIENCIA_FUERA_DE_LA_CAJA_DATA.shortDescription,
+    "url": "https://www.lideresdeansenuza.org/programas/ciencia-fuera-de-la-caja",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Fundación Líderes de Ansenuza",
+      "url": "https://www.lideresdeansenuza.org"
+    },
+    "educationalLevel": "Secundario",
+    "isAccessibleForFree": true,
+    "inLanguage": "es"
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://www.lideresdeansenuza.org"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Programas",
+        "item": "https://www.lideresdeansenuza.org/programas"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": CIENCIA_FUERA_DE_LA_CAJA_DATA.title,
+        "item": "https://www.lideresdeansenuza.org/programas/ciencia-fuera-de-la-caja"
+      }
+    ]
+  };
+
   return (
-    <CienciaFueraDeLaCajaPageClient />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      <CienciaFueraDeLaCajaPageClient />
+    </>
   );
 }

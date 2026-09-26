@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { POTENCIATE_DATA } from "@/lib/data/programs";
 import PotenciatePageClient from "./PotenciatePageClient";
 
 export const metadata: Metadata = {
@@ -46,7 +47,59 @@ export const metadata: Metadata = {
 };
 
 export default function PotenciatePage() {
+  const courseSchema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": POTENCIATE_DATA.title,
+    "description": POTENCIATE_DATA.shortDescription,
+    "url": "https://www.lideresdeansenuza.org/programas/potenciate",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Fundación Líderes de Ansenuza",
+      "url": "https://www.lideresdeansenuza.org"
+    },
+    "educationalLevel": "Secundario",
+    "isAccessibleForFree": true,
+    "inLanguage": "es"
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://www.lideresdeansenuza.org"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Programas",
+        "item": "https://www.lideresdeansenuza.org/programas"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": POTENCIATE_DATA.title,
+        "item": "https://www.lideresdeansenuza.org/programas/potenciate"
+      }
+    ]
+  };
+
   return (
-    <PotenciatePageClient />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      <PotenciatePageClient />
+    </>
   );
 }
