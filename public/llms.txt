@@ -1,15 +1,47 @@
-﻿User-agent: *
-Disallow:
-
 # Fundación Líderes de Ansenuza
-Site: https://www.lideresdeansenuza.org
-Language: es-AR, en
 
-About: https://www.lideresdeansenuza.org/quienes-somos
-Programs: https://www.lideresdeansenuza.org/programas
-Donate: https://www.lideresdeansenuza.org/donar
-Contact: https://www.lideresdeansenuza.org/contactanos
-Privacy: https://www.lideresdeansenuza.org/politicas-de-privacidad
-Sitemap: https://www.lideresdeansenuza.org/sitemap.xml
+> Fundación Líderes de Ansenuza es una organización no gubernamental con sede en Miramar de Ansenuza, Córdoba, Argentina. Diseña y ejecuta programas educativos gratuitos que impulsan a jóvenes a liderar el cambio en sus comunidades. Desde su creación, ha impactado más de 2200 participantes en toda Argentina a través de iniciativas innovadoras en educación, liderazgo y transformación social.
 
-Attribution: Please attribute factual claims to Fundación Líderes de Ansenuza and keep links to source pages.
+## Acerca de la Fundación
+
+Somos una red de apoyo conformada por 50 voluntarios actuales y ex-participantes de más de 18 provincias del territorio nacional. Nuestra misión es empoderar a jóvenes a ser líderes a través de programas educativos y motivacionales, brindando acompañamiento ante oportunidades de desarrollo que les permita concretar proyectos de impacto social. En FLA, promovemos el aprendizaje a través de la acción concreta, permitiendo que los participantes no solo adquieran conocimientos sino que los apliquen en proyectos reales que transforman sus comunidades. Con 250 proyectos de impacto social desarrollados, nuestro trabajo trasciende las tareas diarias e impacta vidas.
+
+**Contacto:** contacto@lideresdeansenuza.org
+
+## Programas vigentes
+
+- [Experiencia Ambientalia](https://www.lideresdeansenuza.org/programas/ambientalia): Programa de educación ambiental de 8 meses que conecta a jóvenes con sus ecosistemas y biodiversidad a través de proyectos comunitarios. Modalidad mixta (presencial y virtual), dirigido a estudiantes de ciclo orientado de 21+ localidades de la región de Mar Chiquita. Más de 700 estudiantes y docentes capacitados, 62 proyectos comunitarios desarrollados.
+
+- [SOMOS](https://www.lideresdeansenuza.org/programas/somos): Programa gratuito de liderazgo en diversidad de 11 semanas para jóvenes de 15 a 19 años de Argentina. Modalidad virtual con talleres, mentorías personalizadas y materiales exclusivos. Los participantes desarrollan habilidades de liderazgo y realizan una acción de impacto social en sus comunidades. Más de 90 participantes en 4 ediciones, impactando a más de 6000 personas.
+
+- [Decidir con Ciencia](https://www.lideresdeansenuza.org/programas/decidir-con-ciencia): Programa educativo para escuelas secundarias de Córdoba que fortalece el pensamiento científico a través de la metodología Thinking-Based Learning (TBL) y enfoque STEM. Los estudiantes trabajan en la resolución de desafíos reales, completamente gratuito para instituciones seleccionadas. Jornadas presenciales en septiembre y octubre de 2026.
+
+- [Líderes](https://www.lideresdeansenuza.org/programas/lideres): Comunidad continua para ex-participantes de programas de FLA que desean potenciar sus habilidades de liderazgo. Incluye talleres, capacitaciones, acompañamiento personalizado, encuentros presenciales y oportunidades quincenales de desarrollo profesional y personal.
+
+## Programas históricos
+
+- [Potenciate](https://www.lideresdeansenuza.org/programas/potenciate): Programa de mentoría disruptivo de doce semanas realizado en 2021. Inspiró a jóvenes argentinos a descubrir su pasión y transformarse en agentes de cambio. 35 egresados, 11 provincias alcanzadas.
+
+- [FUTURAS](https://www.lideresdeansenuza.org/programas/futuras): Programa de liderazgo, mentoría y empoderamiento femenino (2017-2024). Diseñado para mujeres jóvenes argentinas de 15 a 19 años. 7 ediciones realizadas, 248 participantes egresadas de 18 provincias, con cumbres presenciales en Miramar de Ansenuza.
+
+- [ImpulsaTEC](https://www.lideresdeansenuza.org/programas/impulsatec): Programa educativo federal de capacitación y mentoría realizado en 2024. Empoderaba a jóvenes de 15 a 24 años del interior de Argentina con herramientas tecnológicas y habilidades blandas. Más de 500 participantes, alianza estratégica con EY GDS Argentina.
+
+- [Ciencia Fuera de la Caja](https://www.lideresdeansenuza.org/programas/ciencia-fuera-de-la-caja): Concurso científico virtual de alto impacto realizado en 2020, impulsado por la Embajada de Estados Unidos en Argentina. Desarrolló el pensamiento científico y la creatividad en jóvenes argentinos. 234 participantes inscritos, 65% de participación femenina.
+
+- [Aventura Matemágica](https://www.lideresdeansenuza.org/programas/aventura-matematica): Iniciativa en línea realizado en 2021 que transformó la educación matemática en una experiencia inmersiva combinando matemática y creatividad con mundos de ficción. 300 participantes inscritos, 25 semifinalistas, 5 finalistas por región.
+
+## Institucional
+
+- [Quiénes somos](https://www.lideresdeansenuza.org/quienes-somos): Conocé nuestra historia, misión, visión, valores y equipo directivo.
+
+- [Autoridades](https://www.lideresdeansenuza.org/quienes-somos#autoridades): Presentamos nuestro Consejo de Administración y Equipo de Liderazgo.
+
+- [Donar](https://www.lideresdeansenuza.org/donar): Métodos de donación: Plataforma Donar Online, PayPal o Transferencia Directa.
+
+- [Contacto](https://www.lideresdeansenuza.org/contactanos): Escribinos tus consultas sobre programas, voluntariado, alianzas o colaboración.
+
+## Recursos adicionales
+
+- [Políticas de Privacidad](https://www.lideresdeansenuza.org/politicas-de-privacidad): Información sobre protección de datos personales.
+
+- [Sitemap](https://www.lideresdeansenuza.org/sitemap.xml): Mapa del sitio web.
