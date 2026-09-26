@@ -21,7 +21,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_AR",
     url: "https://www.lideresdeansenuza.org/programas/impulsatec",
-    siteName: "Fundación Líderes de Ansenuza"
+    siteName: "Fundación Líderes de Ansenuza",
+    images: [
+      {
+        url: "/images/Logos/Impulsatec.webp",
+        width: 1200,
+        height: 630,
+        alt: "ImpulsaTEC - Programa de Capacitación Tecnológica para Jóvenes"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/Logos/Impulsatec.webp"]
+  },
+  alternates: {
+    canonical: "/programas/impulsatec"
   },
   robots: {
     index: true,

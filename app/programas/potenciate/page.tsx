@@ -22,7 +22,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_AR",
     url: "https://www.lideresdeansenuza.org/programas/potenciate",
-    siteName: "Fundación Líderes de Ansenuza"
+    siteName: "Fundación Líderes de Ansenuza",
+    images: [
+      {
+        url: "/images/programs/potenciate.webp",
+        width: 1200,
+        height: 630,
+        alt: "Potenciate - Programa de Mentoría y Liderazgo Juvenil"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/programs/potenciate.webp"]
+  },
+  alternates: {
+    canonical: "/programas/potenciate"
   },
   robots: {
     index: true,

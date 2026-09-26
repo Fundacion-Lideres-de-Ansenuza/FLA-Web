@@ -23,7 +23,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_AR",
     url: "https://www.lideresdeansenuza.org/programas/decidir-con-ciencia",
-    siteName: "Fundación Líderes de Ansenuza"
+    siteName: "Fundación Líderes de Ansenuza",
+    images: [
+      {
+        url: "/images/Logos/Decidir_con_Ciencia.png",
+        width: 1200,
+        height: 630,
+        alt: "Decidir con Ciencia - Pensamiento científico para escuelas secundarias"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/Logos/Decidir_con_Ciencia.png"]
+  },
+  alternates: {
+    canonical: "/programas/decidir-con-ciencia"
   },
   robots: {
     index: true,

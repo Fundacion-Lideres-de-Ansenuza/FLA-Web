@@ -20,7 +20,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_AR",
     url: "https://www.lideresdeansenuza.org/programas/futuras",
-    siteName: "Fundación Líderes de Ansenuza"
+    siteName: "Fundación Líderes de Ansenuza",
+    images: [
+      {
+        url: "/images/programs/futuras.webp",
+        width: 1200,
+        height: 630,
+        alt: "FUTURAS - Programa de Liderazgo y Empoderamiento Femenino"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/programs/futuras.webp"]
+  },
+  alternates: {
+    canonical: "/programas/futuras"
   },
   robots: {
     index: true,

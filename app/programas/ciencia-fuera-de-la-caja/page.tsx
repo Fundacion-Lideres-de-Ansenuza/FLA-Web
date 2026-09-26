@@ -20,7 +20,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_AR",
     url: "https://www.lideresdeansenuza.org/programas/ciencia-fuera-de-la-caja",
-    siteName: "Fundación Líderes de Ansenuza"
+    siteName: "Fundación Líderes de Ansenuza",
+    images: [
+      {
+        url: "/images/Logos/Ciencia fuera de la caja.webp",
+        width: 1200,
+        height: 630,
+        alt: "Ciencia Fuera de la Caja - Programa Educativo Científico"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/Logos/Ciencia fuera de la caja.webp"]
+  },
+  alternates: {
+    canonical: "/programas/ciencia-fuera-de-la-caja"
   },
   robots: {
     index: true,
