@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     siteName: "Fundación Líderes de Ansenuza",
     images: [
       {
-        url: "/images/DSC_0044.webp",
-        width: 6000,
-        height: 4000,
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
         alt: "Jóvenes de Fundación Líderes de Ansenuza"
       }
     ]
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Fundación Líderes de Ansenuza",
     description: "Programas educativos gratuitos para jóvenes en Argentina.",
-    images: ["/images/DSC_0044.webp"]
+    images: ["/og-image.jpg"]
   },
 }
 

@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Jóvenes de Fundación Líderes de Ansenuza" }],
     title: "Políticas de Privacidad | Fundación Líderes de Ansenuza",
     description: "Información legal sobre privacidad y datos personales en FLA.",
     url: PAGE_URL,
