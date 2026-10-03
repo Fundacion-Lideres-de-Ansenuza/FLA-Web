@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     images: ["/images/programs/lideres.webp"]
   },
   alternates: {
-    canonical: "https://www.lideresdeansenuza.org/programas/lideres"
+    canonical: "/programas/lideres"
   },
   robots: {
     index: true,

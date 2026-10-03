@@ -27,23 +27,27 @@ export const metadata: Metadata = {
   description: "Somos una ONG que diseña y ejecuta programas educativos gratuitos en Argentina.",
   keywords: "educación, jóvenes, ONG, programas educativos, Argentina, voluntariado",
   authors: [{ name: "Fundación Líderes de Ansenuza" }],
-  alternates: {
-    canonical: "https://www.lideresdeansenuza.org",
-    languages: {
-      "es-AR": "https://www.lideresdeansenuza.org",
-      en: "https://www.lideresdeansenuza.org",
-    },
-  },
   openGraph: {
+    url: "/",
     title: "Fundación Líderes de Ansenuza - Jóvenes transformando la educación",
     description: "Somos una ONG que diseña y ejecuta programas educativos gratuitos en Argentina.",
     type: "website",
     locale: "es_AR",
+    siteName: "Fundación Líderes de Ansenuza",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Jóvenes de Fundación Líderes de Ansenuza"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
     title: "Fundación Líderes de Ansenuza",
     description: "Programas educativos gratuitos para jóvenes en Argentina.",
+    images: ["/og-image.jpg"]
   },
 }
 

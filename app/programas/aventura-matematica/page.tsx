@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { AVENTURA_MATEMATICA_DATA } from "@/lib/data/programs";
 import AventuraMatematicaPageClient from "./AventuraMatematicaPageClient";
 
 export const metadata: Metadata = {
@@ -20,7 +21,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_AR",
     url: "https://www.lideresdeansenuza.org/programas/aventura-matematica",
-    siteName: "Fundación Líderes de Ansenuza"
+    siteName: "Fundación Líderes de Ansenuza",
+    images: [
+      {
+        url: "/images/Logos/Aventura Matemagica.webp",
+        width: 1200,
+        height: 630,
+        alt: "Aventura Matemágica - Concurso de Matemática Creativa"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/Logos/Aventura Matemagica.webp"]
+  },
+  alternates: {
+    canonical: "/programas/aventura-matematica"
   },
   robots: {
     index: true,
@@ -29,7 +45,59 @@ export const metadata: Metadata = {
 };
 
 export default function AventuraMatematicaPage() {
+  const courseSchema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": AVENTURA_MATEMATICA_DATA.title,
+    "description": AVENTURA_MATEMATICA_DATA.shortDescription,
+    "url": "https://www.lideresdeansenuza.org/programas/aventura-matematica",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Fundación Líderes de Ansenuza",
+      "url": "https://www.lideresdeansenuza.org"
+    },
+    "educationalLevel": "Secundario",
+    "isAccessibleForFree": true,
+    "inLanguage": "es"
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://www.lideresdeansenuza.org"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Programas",
+        "item": "https://www.lideresdeansenuza.org/programas"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": AVENTURA_MATEMATICA_DATA.title,
+        "item": "https://www.lideresdeansenuza.org/programas/aventura-matematica"
+      }
+    ]
+  };
+
   return (
-    <AventuraMatematicaPageClient />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      <AventuraMatematicaPageClient />
+    </>
   );
 }

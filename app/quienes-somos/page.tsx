@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Jóvenes de Fundación Líderes de Ansenuza" }],
     title: "Quiénes Somos | Fundación Líderes de Ansenuza",
     description: "Historia, valores y equipo de FLA.",
     url: PAGE_URL,

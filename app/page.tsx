@@ -1,9 +1,16 @@
+import type { Metadata } from "next"
 import Hero from "@/components/home/hero"
 import VideoSection from "@/components/home/video-section"
 import Testimonials from "@/components/home/testimonials"
 import WhyWeDoIt from "@/components/home/why-we-do-it"
 import CurrentPrograms from "@/components/home/current-programs"
 import Stats from "@/components/stats/stats"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/"
+  }
+}
 
 export default function Home() {
   const organizationSchema = {
