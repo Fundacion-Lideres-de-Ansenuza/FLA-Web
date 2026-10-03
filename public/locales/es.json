@@ -41,7 +41,8 @@
     "lightBackground": "Fondo claro",
     "underlineLinks": "Subrayar enlaces",
     "readableFont": "Fuente legible",
-    "reset": "Restablecer"
+    "reset": "Restablecer",
+    "skipToContent": "Saltar al contenido principal"
   },
   "system": {
     "loading": "Cargando Fundación Líderes de Ansenuza",
@@ -59,7 +60,9 @@
     "description": "Diseñamos y ejecutamos programas educativos que impulsan a jóvenes a liderar el cambio en sus comunidades.",
     "voluntariado": "Voluntariado",
     "alianzas": "Alianzas",
-    "donar": "Donar"
+    "donar": "Donar",
+    "logoAlt": "Identidad FLA",
+    "imageAlt": "Jóvenes colaborando en educación"
   },
   "stats": {
     "volunteers": "Voluntarios actuales",
@@ -80,7 +83,10 @@
     "opportunities": {
       "title": "Oportunidades",
       "description": "Porque creemos que el talento no tiene fronteras, llevamos experiencias transformadoras hasta los rincones más alejados, para que cada joven pueda ser agente de cambio en su comunidad."
-    }
+    },
+    "imageAlt1": "Impacto social",
+    "imageAlt2": "Educación",
+    "imageAlt3": "Oportunidades"
   },
   "currentPrograms": {
     "title": "Programas Actuales",
@@ -94,7 +100,8 @@
     "femaleVolunteer": "Voluntaria",
     "participant": "Participante",
     "previous": "Testimonio anterior",
-    "next": "Siguiente testimonio"
+    "next": "Siguiente testimonio",
+    "photoAlt": "Testimonio {{number}}"
   },
   "footer": {
     "tagline": "Empoderando a la próxima generación de líderes en la región de Ansenuza a través de la educación y la innovación.",
@@ -106,7 +113,9 @@
     "copyright": "© {{year}} Fundación Líderes de Ansenuza. Todos los derechos reservados.",
     "privacyPolicy": "Políticas de Privacidad",
     "successMessage": "Gracias por sumarte. Ya recibimos tu email.",
-    "duplicateMessage": "Este email ya esta suscripto al newsletter."
+    "duplicateMessage": "Este email ya está suscripto al newsletter.",
+    "submitAriaLabel": "Suscribirme al newsletter",
+    "errorMessage": "No pudimos registrar tu suscripción. Probá de nuevo en unos segundos."
   },
   "aboutUs": {
     "foundation": {
@@ -221,24 +230,18 @@
       "title": "Plataforma Donar Online",
       "description": "Para donaciones nacionales rápidas y seguras en pesos argentinos.",
       "steps": [
-        "Entrá a lideresdeansenuza.org y abrí la opción Donar.",
-        "Elegí Donar Online.",
-        "Definí monto y frecuencia.",
-        "Completá tus datos.",
-        "Ingresá la tarjeta.",
-        "Confirmá la donación."
+        "Seleccioná el botón donar y elegí el monto.",
+        "Definí la frecuencia de donación y completá con tus datos personales.",
+        "Confirmá el medio de pago y presioná 'Donar a Fundación Líderes de Ansenuza'."
       ]
     },
     "paypal": {
       "title": "Donaciones Internacionales",
       "description": "Si te encontrás fuera de Argentina o preferís usar tarjetas internacionales.",
       "steps": [
-        "Entrá a lideresdeansenuza.org y abrí la opción Donar.",
-        "Elegí PayPal.",
-        "Definí monto y frecuencia.",
-        "Elegí pagar con PayPal o tarjeta.",
-        "Completá tus datos.",
-        "Confirmá la donación."
+        "Seleccioná el botón donar y elegí el monto.",
+        "Elegí PayPal como medio de pago y completá tus datos personales.",
+        "Confirmá la donación y presioná 'Donar a Fundación Líderes de Ansenuza'."
       ]
     },
     "transfer": {
@@ -251,7 +254,9 @@
       "account": "Número de cuenta",
       "receiptTitle": "Necesitás un recibo",
       "receiptText": "Escribinos a través de nuestra página de contacto adjuntando el comprobante para emitir tu recibo de donación oficial.",
-      "contactPage": "página de contacto"
+      "contactPage": "página de contacto",
+      "copyCbu": "Copiar CBU",
+      "copyAlias": "Copiar alias"
     }
   },
   "contact": {
@@ -488,6 +493,11 @@
     "methodologyExpand": "Conocer la metodología en detalle",
     "methodologyCollapse": "Ocultar detalle de la metodología",
     "watchVideo": "Ver video",
-    "videoTitle": "Conocé el programa"
+    "videoTitle": "Conocé el programa",
+    "blogTitle": "Notas y noticias"
+  },
+  "videoSection": {
+    "title": "Video de nuestra historia",
+    "cta": "Conocé nuestra historia"
   }
 }

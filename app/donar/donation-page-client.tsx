@@ -94,18 +94,18 @@ export default function DonationPage() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "Cómo puedo donar online a Fundación Líderes de Ansenuza?",
+        name: "¿Cómo puedo donar online a Fundación Líderes de Ansenuza?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Podés donar desde la pagina de donaciones y completar el proceso en Donar Online para hacer un aporte rapido y seguro.",
+          text: "Podés donar desde la página de donaciones y completar el proceso en Donar Online para hacer un aporte rápido y seguro.",
         },
       },
       {
         "@type": "Question",
-        name: "Puedo pedir un recibo de donacion?",
+        name: "¿Puedo pedir un recibo de donación?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Si. Podés escribirnos desde la pagina de contacto adjuntando el comprobante para emitir tu recibo oficial de donacion.",
+          text: "Sí. Podés escribirnos desde la página de contacto adjuntando el comprobante para emitir tu recibo oficial de donación.",
         },
       },
       {
@@ -119,17 +119,8 @@ export default function DonationPage() {
     ],
   }
 
-  const onlineSteps = [
-    "Seleccioná el botón donar y elegí el monto.",
-    "Definí la frecuencia de donación y completa con tus datos personales.",
-    "Confirmá el medio de pago y presioná 'Donar a Fundación Líderes de Ansenuza'.",
-  ]
-
-  const paypalSteps = [
-    "Seleccioná el botón donar y elegí el monto.",
-    "Elegí PayPal como medio de pago y completá tus datos personales.",
-    "Confirmá la donación y presioná 'Donar a Fundación Líderes de Ansenuza'.",
-  ]
+  const onlineSteps = t("donate.online.steps", { returnObjects: true }) as string[]
+  const paypalSteps = t("donate.paypal.steps", { returnObjects: true }) as string[]
 
   const bankData = {
     cbu: "0070138520000022179511",
@@ -235,7 +226,7 @@ export default function DonationPage() {
                         <p className="text-xs font-black uppercase tracking-widest text-[#90140e]">{t("donate.transfer.cbu")}</p>
                         <div className="flex items-center justify-between gap-2">
                           <p className="select-all break-all text-2xl font-medium leading-none text-gray-800">{bankData.cbu}</p>
-                          <button onClick={() => copyToClipboard(bankData.cbu, "cbu")} className="rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-[#90140e]">
+                          <button type="button" aria-label={t("donate.transfer.copyCbu")} onClick={() => copyToClipboard(bankData.cbu, "cbu")} className="rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-[#90140e]">
                             {copied === "cbu" ? <CheckCircle2 className="h-5 w-5 text-green-500" /> : <Copy className="h-5 w-5" />}
                           </button>
                         </div>
@@ -244,7 +235,7 @@ export default function DonationPage() {
                         <p className="text-xs font-black uppercase tracking-widest text-[#90140e]">{t("donate.transfer.alias")}</p>
                         <div className="flex items-center justify-between gap-2">
                           <p className="select-all text-2xl font-medium leading-none text-gray-800">{bankData.alias}</p>
-                          <button onClick={() => copyToClipboard(bankData.alias, "alias")} className="rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-[#90140e]">
+                          <button type="button" aria-label={t("donate.transfer.copyAlias")} onClick={() => copyToClipboard(bankData.alias, "alias")} className="rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-[#90140e]">
                             {copied === "alias" ? <CheckCircle2 className="h-5 w-5 text-green-500" /> : <Copy className="h-5 w-5" />}
                           </button>
                         </div>

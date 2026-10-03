@@ -20,7 +20,7 @@ export default function WhyWeDoIt(): React.ReactElement {
             <div className="absolute inset-0">
               <Image
                 src="/images/IMG_0745-min.webp"
-                alt="Impacto social"
+                alt={t("whyWeDoIt.imageAlt1")}
                 className="w-full h-full object-cover"
                 width={600}
                 height={400}
@@ -39,7 +39,7 @@ export default function WhyWeDoIt(): React.ReactElement {
             <div className="absolute inset-0">
               <Image
                 src="/images/TESTIMONIO_1CUT.webp"
-                alt="Educación"
+                alt={t("whyWeDoIt.imageAlt2")}
                 className="w-full h-full object-cover"
                 width={600}
                 height={400}
@@ -59,7 +59,7 @@ export default function WhyWeDoIt(): React.ReactElement {
           <div className="absolute inset-0">
             <Image
               src="/images/IMG_0621-min.webp"
-              alt="Oportunidades"
+              alt={t("whyWeDoIt.imageAlt3")}
               className="w-full h-full object-cover"
               width={1200}
               height={600}

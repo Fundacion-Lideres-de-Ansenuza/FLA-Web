@@ -25,7 +25,7 @@ export default function Introduction(): JSX.Element {
           <div className="relative min-h-70 lg:min-h-full">
             <Image
               src={introImage}
-              alt="Equipo de la Fundación Líderes de Ansenuza"
+              alt={t("aboutUs.foundation.imageAlt")}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 45vw"

@@ -29,7 +29,7 @@ export default function Hero() {
             <div className="hidden shrink-0 lg:block lg:justify-self-end">
               <Image
                 src="/images/logo_fla.webp"
-                alt="Identidad FLA"
+                alt={t("hero.logoAlt")}
                 width={150}
                 height={150}
                 className="drop-shadow-lg"
@@ -41,7 +41,7 @@ export default function Hero() {
           <div className="w-full">
             <Image
               src="/images/DSC_0044.webp"
-              alt="Jóvenes colaborando en educación"
+              alt={t("hero.imageAlt")}
               width={1400}
               height={500}
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 92vw, 1400px"

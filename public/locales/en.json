@@ -41,7 +41,8 @@
     "lightBackground": "Light background",
     "underlineLinks": "Underline links",
     "readableFont": "Readable font",
-    "reset": "Reset settings"
+    "reset": "Reset settings",
+    "skipToContent": "Skip to main content"
   },
   "system": {
     "loading": "Loading Fundación Líderes de Ansenuza",
@@ -59,7 +60,9 @@
     "description": "We design and run free educational programs throughout Argentina so that more young people can lead change in their communities.",
     "voluntariado": "Volunteer",
     "alianzas": "Partnerships",
-    "donar": "Donate"
+    "donar": "Donate",
+    "logoAlt": "FLA identity",
+    "imageAlt": "Young people collaborating in education"
   },
   "stats": {
     "volunteers": "Current Volunteers",
@@ -80,7 +83,10 @@
     "opportunities": {
       "title": "Opportunities",
       "description": "Because we believe talent has no borders, we bring transformative experiences to the most remote places, so every young person can be an agent of change in their community."
-    }
+    },
+    "imageAlt1": "Social impact",
+    "imageAlt2": "Education",
+    "imageAlt3": "Opportunities"
   },
   "currentPrograms": {
     "title": "Current Programs",
@@ -94,7 +100,8 @@
     "femaleVolunteer": "Volunteer",
     "participant": "Participant",
     "previous": "Previous testimonial",
-    "next": "Next testimonial"
+    "next": "Next testimonial",
+    "photoAlt": "Testimonial {{number}}"
   },
   "footer": {
     "tagline": "Empowering the next generation of leaders in the Ansenuza region through education and innovation.",
@@ -106,7 +113,9 @@
     "copyright": "© {{year}} Fundación Líderes de Ansenuza. All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "successMessage": "Thanks for joining. We received your email.",
-    "duplicateMessage": "This email is already subscribed to the newsletter."
+    "duplicateMessage": "This email is already subscribed to the newsletter.",
+    "submitAriaLabel": "Subscribe to the newsletter",
+    "errorMessage": "We could not register your subscription. Please try again in a few seconds."
   },
   "aboutUs": {
     "foundation": {
@@ -221,24 +230,18 @@
       "title": "Donate Online Platform",
       "description": "For fast and secure national donations in Argentine pesos.",
       "steps": [
-        "Go to lideresdeansenuza.org and open Donate.",
-        "Choose Donate Online.",
-        "Set amount and frequency.",
-        "Complete your details.",
-        "Enter your card.",
-        "Confirm the donation."
+        "Select the donate button and choose the amount.",
+        "Set the donation frequency and fill in your personal details.",
+        "Confirm the payment method and press 'Donate to Fundación Líderes de Ansenuza'."
       ]
     },
     "paypal": {
       "title": "International Donations",
       "description": "If you are outside Argentina or prefer to use international cards.",
       "steps": [
-        "Go to lideresdeansenuza.org and open Donate.",
-        "Choose PayPal.",
-        "Set amount and frequency.",
-        "Choose PayPal or card.",
-        "Complete your details.",
-        "Confirm the donation."
+        "Select the donate button and choose the amount.",
+        "Choose PayPal as the payment method and fill in your personal details.",
+        "Confirm the donation and press 'Donate to Fundación Líderes de Ansenuza'."
       ]
     },
     "transfer": {
@@ -251,7 +254,9 @@
       "account": "Account number",
       "receiptTitle": "Need a receipt",
       "receiptText": "Contact us through our contact page attaching the proof of payment to issue your official donation receipt.",
-      "contactPage": "contact page"
+      "contactPage": "contact page",
+      "copyCbu": "Copy CBU",
+      "copyAlias": "Copy alias"
     }
   },
   "contact": {
@@ -488,6 +493,11 @@
     "methodologyExpand": "See the methodology in detail",
     "methodologyCollapse": "Hide methodology detail",
     "watchVideo": "Watch video",
-    "videoTitle": "Get to know the program"
+    "videoTitle": "Get to know the program",
+    "blogTitle": "Notes and news"
+  },
+  "videoSection": {
+    "title": "Video about our story",
+    "cta": "Learn about our story"
   }
 }
