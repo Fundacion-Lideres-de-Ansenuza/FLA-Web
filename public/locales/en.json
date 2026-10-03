@@ -249,12 +249,9 @@
       "title": "Donate Online Platform",
       "description": "For fast and secure national donations in Argentine pesos.",
       "steps": [
-        "Go to lideresdeansenuza.org and open Donate.",
-        "Choose Donate Online.",
-        "Set amount and frequency.",
-        "Complete your details.",
-        "Enter your card.",
-        "Confirm the donation."
+        "Select the donate button and choose the amount.",
+        "Set the donation frequency and fill in your personal details.",
+        "Confirm the payment method and press 'Donate to Fundación Líderes de Ansenuza'."
       ],
       "button": "Go to Form"
     },
@@ -262,12 +259,9 @@
       "title": "International Donations",
       "description": "If you are outside Argentina or prefer to use international cards.",
       "steps": [
-        "Go to lideresdeansenuza.org and open Donate.",
-        "Choose PayPal.",
-        "Set amount and frequency.",
-        "Choose PayPal or card.",
-        "Complete your details.",
-        "Confirm the donation."
+        "Select the donate button and choose the amount.",
+        "Choose PayPal as the payment method and fill in your personal details.",
+        "Confirm the donation and press 'Donate to Fundación Líderes de Ansenuza'."
       ],
       "button": "Donate via PayPal"
     },

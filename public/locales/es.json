@@ -249,12 +249,9 @@
       "title": "Plataforma Donar Online",
       "description": "Para donaciones nacionales rápidas y seguras en pesos argentinos.",
       "steps": [
-        "Entrá a lideresdeansenuza.org y abrí la opción Donar.",
-        "Elegí Donar Online.",
-        "Definí monto y frecuencia.",
-        "Completá tus datos.",
-        "Ingresá la tarjeta.",
-        "Confirmá la donación."
+        "Seleccioná el botón donar y elegí el monto.",
+        "Definí la frecuencia de donación y completá con tus datos personales.",
+        "Confirmá el medio de pago y presioná 'Donar a Fundación Líderes de Ansenuza'."
       ],
       "button": "Ir al Formulario"
     },
@@ -262,12 +259,9 @@
       "title": "Donaciones Internacionales",
       "description": "Si te encontrás fuera de Argentina o preferís usar tarjetas internacionales.",
       "steps": [
-        "Entrá a lideresdeansenuza.org y abrí la opción Donar.",
-        "Elegí PayPal.",
-        "Definí monto y frecuencia.",
-        "Elegí pagar con PayPal o tarjeta.",
-        "Completá tus datos.",
-        "Confirmá la donación."
+        "Seleccioná el botón donar y elegí el monto.",
+        "Elegí PayPal como medio de pago y completá tus datos personales.",
+        "Confirmá la donación y presioná 'Donar a Fundación Líderes de Ansenuza'."
       ],
       "button": "Donar por PayPal"
     },
