@@ -41,108 +41,174 @@ export default function ProgramHeader({ title, description, colors, slug, isHist
 
   return (
     <>
-      <section ref={heroRef} className="relative mt-10 py-20 md:py-32 overflow-hidden" style={{ background: `linear-gradient(135deg, ${colors.primary} 0%, ${colors.secondary} 100%)` }}>
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }} />
+      <section
+        ref={heroRef}
+        className="relative mt-10 overflow-hidden pb-16 pt-28 md:pb-24 lg:pb-28"
+        style={{ background: `linear-gradient(135deg, ${colors.primary} 0%, ${colors.secondary} 100%)` }}
+      >
+        {/* Malla de color: manchas difusas con la paleta del programa */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+          <div
+            className="absolute -left-32 -top-32 h-[28rem] w-[28rem] rounded-full opacity-60 blur-3xl"
+            style={{ background: colors.accent }}
+          />
+          <div
+            className="absolute -bottom-40 right-[-8rem] h-[32rem] w-[32rem] rounded-full opacity-50 blur-3xl"
+            style={{ background: colors.secondary }}
+          />
+          <div
+            className="absolute right-1/4 top-0 h-72 w-72 rounded-full opacity-30 blur-3xl"
+            style={{ background: "#ffffff" }}
+          />
+          {/* Velo oscuro suave: asegura contraste del texto blanco en paletas claras */}
+          <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-black/10 to-black/25" />
+          {/* Retícula de puntos */}
+          <div
+            className="absolute inset-0 opacity-[0.12]"
+            style={{
+              backgroundImage: "radial-gradient(#ffffff 1.2px, transparent 1.2px)",
+              backgroundSize: "28px 28px",
+              maskImage: "linear-gradient(115deg, transparent 35%, #000 100%)",
+              WebkitMaskImage: "linear-gradient(115deg, transparent 35%, #000 100%)",
+            }}
+          />
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.nav
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="mb-8 text-white/90 text-sm md:text-base"
-              aria-label={t("programDetail.breadcrumbLabel")}
-            >
-              <Link href="/" className="hover:text-white transition-colors">
-                {t("programDetail.breadcrumbHome")}
-              </Link>
-              <span className="mx-2">/</span>
-              <Link href="/programas" className="hover:text-white transition-colors">
-                {t("programDetail.breadcrumbPrograms")}
-              </Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">{title}</span>
-            </motion.nav>
+        <div className="container relative z-10 mx-auto px-4">
+          <div className={`mx-auto grid items-center gap-12 lg:gap-16 ${logoSrc ? "max-w-6xl lg:grid-cols-[1.25fr_0.75fr]" : "max-w-4xl"}`}>
+            <div className={logoSrc ? "text-center lg:text-left" : "text-center"}>
+              <motion.nav
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="mb-8 text-sm text-white/90 md:text-base"
+                aria-label={t("programDetail.breadcrumbLabel")}
+              >
+                <Link href="/" className="transition-colors hover:text-white">
+                  {t("programDetail.breadcrumbHome")}
+                </Link>
+                <span className="mx-2">/</span>
+                <Link href="/programas" className="transition-colors hover:text-white">
+                  {t("programDetail.breadcrumbPrograms")}
+                </Link>
+                <span className="mx-2">/</span>
+                <span className="text-white">{title}</span>
+              </motion.nav>
+
+              {isOngoing && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.05 }}
+                  className="mb-5 inline-block"
+                >
+                  <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/20 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm">
+                    <span className="relative flex h-2.5 w-2.5">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-70 motion-reduce:animate-none" />
+                      <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-white" />
+                    </span>
+                    {t("programs.active.ongoing")}
+                  </span>
+                </motion.div>
+              )}
+
+              {isHistorical && year && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  className="mb-5 inline-block"
+                >
+                  <span className="rounded-full border border-white/30 bg-white/20 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm">
+                    {t("programDetail.historicalBadge", { year })}
+                  </span>
+                </motion.div>
+              )}
+
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+                className="mb-6 font-fla text-5xl text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.25)] md:text-6xl lg:text-7xl"
+              >
+                {title}
+              </motion.h1>
+
+              <motion.div
+                initial={{ opacity: 0, scaleX: 0 }}
+                animate={{ opacity: 1, scaleX: 1 }}
+                transition={{ duration: 0.6, delay: 0.35 }}
+                className={`mb-6 h-1.5 w-24 rounded-full ${logoSrc ? "mx-auto origin-left lg:mx-0" : "mx-auto"}`}
+                style={{ background: `linear-gradient(90deg, ${colors.accent}, #ffffff)` }}
+              />
+
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.4 }}
+                className={`mb-10 text-xl leading-relaxed text-white/95 hyphens-none! md:text-2xl ${logoSrc ? "lg:text-left!" : ""}`}
+              >
+                {description}
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.6 }}
+                className={`flex ${logoSrc ? "justify-center lg:justify-start" : "justify-center"}`}
+              >
+                <Link
+                  href="#mas-info"
+                  className="inline-block rounded-full bg-white px-8 py-4 text-lg font-semibold text-gray-900 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                >
+                  {t("programDetail.moreInfo")}
+                </Link>
+              </motion.div>
+            </div>
 
             {logoSrc && (
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.05 }}
-                className="mb-6 flex justify-center"
+                transition={{ duration: 0.7, delay: 0.2 }}
+                className="relative order-first mx-auto flex w-full max-w-[11rem] items-center justify-center sm:max-w-[16rem] lg:order-none lg:max-w-sm"
               >
-                <div className="flex h-24 w-24 md:h-28 md:w-28 items-center justify-center rounded-3xl bg-white/95 p-3 shadow-xl">
-                  <Image
-                    src={logoSrc}
-                    alt={title}
-                    width={112}
-                    height={112}
-                    className="h-full w-full object-contain"
-                    priority
-                  />
+                {/* Anillos concéntricos */}
+                <div aria-hidden="true" className="absolute inset-[-12%] rounded-full border border-white/25" />
+                <div aria-hidden="true" className="absolute inset-[-26%] rounded-full border border-white/15" />
+                {/* Panel con el logo */}
+                <div
+                  className="relative aspect-square w-full rotate-3 rounded-[2.5rem] p-1.5 shadow-2xl"
+                  style={{ background: `linear-gradient(135deg, ${colors.accent}, #ffffff 60%)` }}
+                >
+                  <div className="flex h-full w-full -rotate-3 items-center justify-center rounded-[2.1rem] bg-white p-8 sm:p-10">
+                    <Image
+                      src={logoSrc}
+                      alt={title}
+                      width={320}
+                      height={320}
+                      className="h-full w-full object-contain"
+                      priority
+                    />
+                  </div>
                 </div>
+                {/* Puntos de acento */}
+                <span
+                  aria-hidden="true"
+                  className="absolute z-10 -right-3 top-[8%] h-6 w-6 rounded-full border-4 border-white shadow-lg"
+                  style={{ background: colors.accent }}
+                />
+                <span
+                  aria-hidden="true"
+                  className="absolute z-10 -left-4 bottom-[14%] h-9 w-9 rounded-full border-4 border-white shadow-lg"
+                  style={{ background: colors.secondary }}
+                />
+                <span
+                  aria-hidden="true"
+                  className="absolute z-10 bottom-[-8%] right-[18%] h-4 w-4 rounded-full bg-white/80"
+                />
               </motion.div>
             )}
-
-            {isOngoing && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.05 }}
-                className="mb-4 inline-block"
-              >
-                <span className="bg-white/30 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold">
-                  {t("programs.active.ongoing")}
-                </span>
-              </motion.div>
-            )}
-
-            {isHistorical && year && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="mb-4 inline-block"
-              >
-                <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold">
-                  {t("programDetail.historicalBadge", { year })}
-                </span>
-              </motion.div>
-            )}
-
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-5xl md:text-6xl lg:text-7xl text-white mb-6 font-fla"
-            >
-              {title}
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.4 }}
-              className="text-xl md:text-2xl text-white/95 mb-10 leading-relaxed"
-            >
-              {description}
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.6 }}
-              className="flex justify-center"
-            >
-              <Link
-                href="#mas-info"
-                className="inline-block bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
-              >
-                {t("programDetail.moreInfo")}
-              </Link>
-            </motion.div>
           </div>
         </div>
 
