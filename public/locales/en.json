@@ -20,8 +20,6 @@
     }
   },
   "language": {
-    "es": "Spanish",
-    "en": "English",
     "label": "Language"
   },
   "gallery": {
@@ -54,14 +52,6 @@
     "notFoundTitle": "Page not found",
     "notFoundDescription": "The route you are looking for does not exist or has been moved.",
     "backHome": "Back to home"
-  },
-  "ambientaliaIdentity": {
-    "baseColor": "Base color",
-    "forestAndWater": "Forest and water",
-    "baseColorDescription": "A palette that connects with wetlands, birds, and living landscapes.",
-    "approach": "Approach",
-    "learningByDoing": "Learning by doing",
-    "approachDescription": "The design follows a narrative of exploration, conservation, and leadership."
   },
   "hero": {
     "subtitle": "Youth Transforming Education",
@@ -120,7 +110,6 @@
   },
   "aboutUs": {
     "foundation": {
-      "badge": "FLA Foundation",
       "title": "Fundación Líderes de Ansenuza",
       "imageAlt": "Fundación Líderes de Ansenuza team",
       "intro": "FLA is a non-governmental organization based in Miramar de Ansenuza, Córdoba, whose work revolves around the design and execution of educational programs in Argentina.",
@@ -150,17 +139,14 @@
           "directors": "Leadership"
         },
         "roles": {
-          "ambientaliaCoDirector": "Co-Director",
           "ambientaliaCoDirectorFemale": "Co-Director",
           "somosCoDirectorFemale": "Co-Director of SOMOS",
           "somosCoDirectorMale": "Co-Director of SOMOS",
-          "lideresDirector": "Director of Líderes",
           "communicationDirector": "Communication Director",
           "institutionalDirector": "Director of Institutional Affairs and Volunteer Development"
         }
       }
     },
-    "missionVisionValues": "Mission, Vision and Values",
     "mission": {
       "tag": "Mission",
       "text": "Empower young people from across the country to become leaders through educational and motivational programs, providing support and development opportunities so they can carry out social impact projects.",
@@ -222,12 +208,7 @@
     "title": "Achievements",
     "subtitle": "What we achieve with young people transforming their communities"
   },
-  "donationUi": {
-    "paypalButtonAlt": "PayPal donate button",
-    "paypalLoading": "Loading PayPal button...",
-    "paypalMissingConfig": "Configure the PayPal integration to enable the button.",
-    "paypalError": "We could not load PayPal right now. Please try again in a few seconds."
-  },
+  "donationUi": {},
   "donate": {
     "title": "Support Our Mission",
     "subtitle": "Your contribution allows thousands of young people to access free educational programs. Choose the method you prefer.",
@@ -246,8 +227,7 @@
         "Complete your details.",
         "Enter your card.",
         "Confirm the donation."
-      ],
-      "button": "Go to Form"
+      ]
     },
     "paypal": {
       "title": "International Donations",
@@ -259,8 +239,7 @@
         "Choose PayPal or card.",
         "Complete your details.",
         "Confirm the donation."
-      ],
-      "button": "Donate via PayPal"
+      ]
     },
     "transfer": {
       "title": "Direct Bank Transfer",
@@ -316,7 +295,6 @@
     "subtitle": "Free educational programs that transform lives throughout Argentina",
     "active": {
       "title": "Active Programs",
-      "subtitle": "Active programs you can participate in now",
       "openEnrollment": "✓ Open enrollment",
       "ongoing": "Ongoing",
       "learnMore": "Learn more"
@@ -511,28 +489,5 @@
     "methodologyCollapse": "Hide methodology detail",
     "watchVideo": "Watch video",
     "videoTitle": "Get to know the program"
-  },
-  "contactSection": {
-    "title": "Let’s get started",
-    "subtitle": "Contact us to learn how you can connect with Fundación Líderes de Ansenuza.",
-    "sendMessage": "Send us a message",
-    "success": "Thank you for your message! We will contact you soon.",
-    "fullName": "Full name",
-    "namePlaceholder": "Your name",
-    "email": "Email address",
-    "organization": "Organization",
-    "organizationPlaceholder": "Your organization",
-    "message": "Message",
-    "messagePlaceholder": "Tell us how we can help...",
-    "send": "Send message",
-    "getInTouch": "Contact",
-    "helpText": "We are here to answer your questions and support you. We look forward to hearing from you.",
-    "emailUs": "Email us",
-    "callUs": "Phone",
-    "phonePending": "Contact us by email",
-    "visitUs": "Visit us",
-    "start": "Join FLA",
-    "startText": "Discover our opportunities to participate and collaborate.",
-    "startButton": "View opportunities"
   }
 }
