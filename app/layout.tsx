@@ -9,6 +9,7 @@ import Footer from "@/components/home/footer"
 import { AccessibilityProvider } from "@/lib/context/AccessibilityContext"
 import Accessibility from "@/components/accessibility/Accessibility"
 import I18nProvider from "@/components/I18nProvider"
+import SkipLink from "@/components/SkipLink"
 
 const inter = Inter({ subsets: ["latin"] })
 // FLA (Saridona) es muy condensada: size-adjust la agranda de forma pareja para que los títulos
@@ -65,12 +66,7 @@ export default function RootLayout({
       <body className={`${inter.className} ${fla.variable} overflow-x-hidden`}>
         <I18nProvider>
           <AccessibilityProvider>
-            <a
-              href="#main-content"
-              className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[9999] focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-black"
-            >
-              Saltar al contenido principal
-            </a>
+            <SkipLink />
             <Header />
             <div id="main-content" tabIndex={-1}>
               {children}

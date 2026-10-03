@@ -1,6 +1,11 @@
-﻿import Link from "next/link"
+﻿"use client"
+
+import Link from "next/link"
+import { useTranslation } from "react-i18next"
 
 export default function VideoSection() {
+  const { t } = useTranslation()
+
   return (
     <section className="py-7 sm:py-8 bg-transparent">
       <div className="container mx-auto px-4">
@@ -9,7 +14,7 @@ export default function VideoSection() {
             <iframe
               className="w-full h-full rounded-[24px]"
               src="https://www.youtube.com/embed/NSpQbbPEnqg"
-              title="Video de nuestra historia"
+              title={t("videoSection.title")}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               loading="lazy" allowFullScreen
             />
@@ -23,7 +28,7 @@ export default function VideoSection() {
             className="relative group px-10 py-4 bg-gradient-to-r from-red-600 to-red-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden before:absolute before:inset-0 before:bg-white/10 before:translate-x-[-100%] hover:before:translate-x-0 before:transition-transform before:duration-500"
           >
             <span className="relative text-white text-xl md:text-2xl font-fla tracking-wide">
-              Conoce nuestra historia
+              {t("videoSection.cta")}
             </span>
           </Link>
         </div>

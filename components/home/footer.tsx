@@ -68,7 +68,7 @@ export default function Footer() {
                 <div className="mt-1 w-1.5 h-1.5 rounded-full bg-red-600 group-hover:scale-125 transition-transform" />
                 <div>
                   <p className="group-hover:text-white transition-colors">Independencia 350</p>
-                  <p className="group-hover:text-white transition-colors opacity-80">Miramar de Ansenuza, Cordoba</p>
+                  <p className="group-hover:text-white transition-colors opacity-80">Miramar de Ansenuza, Córdoba</p>
                 </div>
               </div>
               <div className="group flex items-center gap-3">

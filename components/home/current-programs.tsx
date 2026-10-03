@@ -2,32 +2,20 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ACTIVE_PROGRAMS } from "@/lib/data/programs"
+import { useMemo } from "react"
+import { getActivePrograms } from "@/lib/data/programs-i18n"
+import { getProgramLogoSrc } from "@/lib/data/program-logos"
 import { useTranslation } from "react-i18next"
-
-function getLogoFileName(title: string): string {
-  const logoMap: Record<string, string> = {
-    "Experiencia Ambientalia": "Experiencia_Ambientalia",
-    "SOMOS": "Somos",
-    "Líderes": "lideres",
-    "Potenciate": "Potenciate",
-    "FUTURAS": "Futuras",
-    "ImpulsaTEC": "Impulsatec",
-    "Ciencia Fuera de la Caja": "Ciencia fuera de la caja",
-    "Aventura Matemágica": "Aventura Matemagica",
-    "Decidir con Ciencia": "Decidir_con_Ciencia.png"
-  }
-
-  return logoMap[title] || title
-}
 
 export default function CurrentPrograms() {
   const { t } = useTranslation()
+  const locale = (t("language.label") === "Language" ? "en" : "es") as "es" | "en"
+  const activePrograms = useMemo(() => getActivePrograms(locale), [locale])
 
-  const programs = ACTIVE_PROGRAMS.map(program => ({
+  const programs = activePrograms.map(program => ({
     name: program.title,
     slug: program.slug,
-    logo: getLogoFileName(program.title).endsWith(".png") ? `/images/Logos/${getLogoFileName(program.title)}` : `/images/Logos/${getLogoFileName(program.title)}.webp`,
+    logo: getProgramLogoSrc(program.slug),
     href: `/programas/${program.slug}`,
     description: program.shortDescription,
     colors: program.colors

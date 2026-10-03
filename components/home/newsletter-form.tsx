@@ -64,7 +64,7 @@ export default function NewsletterForm() {
           <button
             type="submit"
             disabled={status === "loading"}
-            aria-label={t("footer.submitAriaLabel", { defaultValue: "Suscribirme al newsletter" })}
+            aria-label={t("footer.submitAriaLabel")}
             className="absolute right-2 top-2 bottom-2 bg-red-600 hover:bg-red-700 text-white px-5 rounded-xl font-black transition-all transform active:scale-95 flex items-center justify-center disabled:cursor-not-allowed disabled:bg-red-800"
           >
             <span>{status === "loading" ? "..." : "->"}</span>
@@ -72,17 +72,17 @@ export default function NewsletterForm() {
         </div>
         {status === "success" && (
           <p className="text-sm text-emerald-300">
-            {t("footer.successMessage", { defaultValue: "Gracias por sumarte. Ya recibimos tu email." })}
+            {t("footer.successMessage")}
           </p>
         )}
         {status === "duplicate" && (
           <p className="text-sm text-amber-300">
-            {t("footer.duplicateMessage", { defaultValue: "Este email ya esta suscripto al newsletter." })}
+            {t("footer.duplicateMessage")}
           </p>
         )}
         {status === "error" && (
           <p className="text-sm text-red-300">
-            {t("footer.errorMessage", { defaultValue: "No pudimos registrar tu suscripcion. Proba de nuevo en unos segundos." })}
+            {t("footer.errorMessage")}
           </p>
         )}
       </form>

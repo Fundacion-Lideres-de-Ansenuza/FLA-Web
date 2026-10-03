@@ -27,7 +27,7 @@ export default function BlogLinks({ posts, colors }: BlogLinksProps) {
             className="mb-10 text-center"
           >
             <h2 className="mb-4 text-4xl md:text-5xl font-fla" style={{ color: colors.secondary }}>
-              Notas y noticias
+              {t("programDetail.blogTitle")}
             </h2>
             <p className="text-lg text-gray-600">{t("programDetail.blogSubtitle")}</p>
           </motion.div>
