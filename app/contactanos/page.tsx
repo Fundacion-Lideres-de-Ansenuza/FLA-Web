@@ -1,5 +1,5 @@
 ﻿import type { Metadata } from "next"
-import ContáctanosPageClient from "./contactanos-page-client"
+import ContactanosPageClient from "./contactanos-page-client"
 
 const PAGE_URL = "https://www.lideresdeansenuza.org/contactanos"
 
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function ContáctanosPage() {
+export default function ContactanosPage() {
   const contactSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
@@ -48,7 +48,7 @@ export default function ContáctanosPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }} />
-      <ContáctanosPageClient />
+      <ContactanosPageClient />
     </>
   )
 }
