@@ -20,8 +20,6 @@
     }
   },
   "language": {
-    "es": "Español",
-    "en": "English",
     "label": "Idioma"
   },
   "gallery": {
@@ -54,14 +52,6 @@
     "notFoundTitle": "Página no encontrada",
     "notFoundDescription": "La ruta que buscás no existe o fue movida.",
     "backHome": "Volver al inicio"
-  },
-  "ambientaliaIdentity": {
-    "baseColor": "Color base",
-    "forestAndWater": "Bosque y agua",
-    "baseColorDescription": "Una paleta que conecta con humedales, aves y territorio vivo.",
-    "approach": "Enfoque",
-    "learningByDoing": "Aprender haciendo",
-    "approachDescription": "El diseño acompaña la narrativa de exploración, conservación y liderazgo."
   },
   "hero": {
     "subtitle": "Jóvenes transformando la educación",
@@ -120,7 +110,6 @@
   },
   "aboutUs": {
     "foundation": {
-      "badge": "Fundación FLA",
       "title": "Fundación Líderes de Ansenuza",
       "imageAlt": "Equipo de la Fundación Líderes de Ansenuza",
       "intro": "Somos una organización no gubernamental con sede en Miramar de Ansenuza, Córdoba, cuyo trabajo gira en torno al diseño y ejecución de programas educativos en el territorio argentino.",
@@ -150,17 +139,14 @@
           "directors": "Dirección"
         },
         "roles": {
-          "ambientaliaCoDirector": "Co-Directora",
           "ambientaliaCoDirectorFemale": "Co-Directora",
           "somosCoDirectorFemale": "Co-Directora de SOMOS",
           "somosCoDirectorMale": "Co-Director de SOMOS",
-          "lideresDirector": "Directora de Líderes",
           "communicationDirector": "Director de Comunicación",
           "institutionalDirector": "Directora de Institucional y Fortalecimiento de Voluntariado"
         }
       }
     },
-    "missionVisionValues": "Misión, Visión y Valores",
     "mission": {
       "tag": "Misión",
       "text": "Empoderar a jóvenes de todo el país a ser líderes a través de programas educativos y motivacionales, brindando acompañamiento ante oportunidades de desarrollo que les permita concretar proyectos de impacto social.",
@@ -222,12 +208,7 @@
     "title": "Logros",
     "subtitle": "Lo que logramos junto a jóvenes que transforman sus comunidades"
   },
-  "donationUi": {
-    "paypalButtonAlt": "Botón de PayPal para donar",
-    "paypalLoading": "Cargando botón de PayPal...",
-    "paypalMissingConfig": "Configurá la integración de PayPal para habilitar el botón.",
-    "paypalError": "No pudimos cargar PayPal en este momento. Intentá nuevamente en unos segundos."
-  },
+  "donationUi": {},
   "donate": {
     "title": "APOYÁ NUESTRA MISIÓN",
     "subtitle": "Tu contribución permite que miles de jóvenes accedan a programas educativos gratuitos. Elegí el método que prefieras.",
@@ -246,8 +227,7 @@
         "Completá tus datos.",
         "Ingresá la tarjeta.",
         "Confirmá la donación."
-      ],
-      "button": "Ir al Formulario"
+      ]
     },
     "paypal": {
       "title": "Donaciones Internacionales",
@@ -259,8 +239,7 @@
         "Elegí pagar con PayPal o tarjeta.",
         "Completá tus datos.",
         "Confirmá la donación."
-      ],
-      "button": "Donar por PayPal"
+      ]
     },
     "transfer": {
       "title": "Transferencia Directa",
@@ -316,7 +295,6 @@
     "subtitle": "Programas educativos gratuitos que transforman vidas en toda Argentina",
     "active": {
       "title": "Programas vigentes",
-      "subtitle": "Programas activos en los que podés participar actualmente",
       "openEnrollment": "✓ Inscripciones abiertas",
       "ongoing": "En curso",
       "learnMore": "Conocer programa"
@@ -511,28 +489,5 @@
     "methodologyCollapse": "Ocultar detalle de la metodología",
     "watchVideo": "Ver video",
     "videoTitle": "Conocé el programa"
-  },
-  "contactSection": {
-    "title": "Empecemos",
-    "subtitle": "Escribinos y conocé cómo podés vincularte con Fundación Líderes de Ansenuza.",
-    "sendMessage": "Enviar un mensaje",
-    "success": "¡Gracias por tu mensaje! Nos pondremos en contacto con vos pronto.",
-    "fullName": "Nombre completo",
-    "namePlaceholder": "Tu nombre",
-    "email": "Correo electrónico",
-    "organization": "Organización",
-    "organizationPlaceholder": "Tu organización",
-    "message": "Mensaje",
-    "messagePlaceholder": "Contanos cómo podemos ayudarte...",
-    "send": "Enviar mensaje",
-    "getInTouch": "Contacto",
-    "helpText": "Estamos para responder tus consultas y acompañarte. Esperamos tu mensaje.",
-    "emailUs": "Escribinos",
-    "callUs": "Teléfono",
-    "phonePending": "Consultanos por correo electrónico",
-    "visitUs": "Visitános",
-    "start": "Sumate a FLA",
-    "startText": "Conocé nuestras oportunidades de participación y colaboración.",
-    "startButton": "Conocer oportunidades"
   }
 }
