@@ -19,11 +19,6 @@ const LOGO_FILE_BY_SLUG: Record<string, string> = {
   "decidir-con-ciencia": "Decidir_con_Ciencia.png"
 };
 
-/**
- * Clases de tamaño del logo dentro de su tarjeta. El logo de Líderes es casi
- * cuadrado y se veía más grande que los demás (que son apaisados), por eso
- * se achica un poco. El resto conserva el tamaño completo.
- */
 const LOGO_SIZE_CLASS_BY_SLUG: Record<string, string> = {
   lideres: "h-[72%] w-[72%]"
 };

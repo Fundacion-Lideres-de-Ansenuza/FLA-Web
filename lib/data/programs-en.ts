@@ -668,6 +668,7 @@ export const CIENCIA_FUERA_DE_LA_CAJA_DATA_EN: ProgramData = {
 };
 
 export const DECIDIR_CON_CIENCIA_DATA_EN: ProgramData = {
+  enrollmentOpen: false,
   title: 'Decidir con Ciencia',
   slug: 'decidir-con-ciencia',
   status: 'active',
@@ -891,6 +892,7 @@ export const AVENTURA_MATEMATICA_DATA_EN: ProgramData = {
 };
 
 export const LIDERES_DATA_EN: ProgramData = {
+  enrollmentOpen: false,
   title: 'Lideres',
   slug: 'lideres',
   status: 'active',
