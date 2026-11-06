@@ -11,26 +11,28 @@ export default function Introduction(): JSX.Element {
 
   return (
     <section id="introduccion" className="pt-4 md:pt-6 scroll-mt-[120px]">
-      <div className="overflow-hidden rounded-[34px] border border-[#f1d6d6] bg-white shadow-[0_18px_50px_rgba(144,20,14,0.05)]">
-        <div className="px-6 py-8 md:px-10 md:py-10 lg:px-14">
-          <h1 className="mt-5 text-[34px] sm:text-[44px] md:text-[54px] lg:text-[62px] leading-[0.96] tracking-tight text-[#160101] font-fla">
+      <div className="relative h-[480px] sm:h-[560px] lg:h-[640px] overflow-hidden rounded-[28px] sm:rounded-[40px] lg:rounded-[56px] border border-[#f1d6d6] shadow-[0_30px_80px_rgba(144,20,14,0.16)]">
+        <Image
+          src={introImage}
+          alt={t("aboutUs.foundation.imageAlt")}
+          fill
+          className="object-cover object-[50%_30%]"
+          sizes="(max-width: 1024px) 100vw, 1152px"
+          priority
+        />
+        <div className="absolute inset-0 bg-[#bc2222]/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#90140e]/95 via-[#90140e]/45 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 px-6 pb-8 sm:px-10 sm:pb-10 lg:px-14 lg:pb-12">
+          <p className="text-lg sm:text-xl italic font-fla text-[#ffd9d9]">
+            {t('nav.quienes_somos')}
+          </p>
+          <h1 className="mt-2 max-w-3xl text-[38px] sm:text-[52px] md:text-[60px] lg:text-[68px] leading-[0.96] tracking-tight text-white font-fla drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)]">
             {t('aboutUs.foundation.title')}
           </h1>
-          <p className="mt-5 max-w-none text-[18px] md:text-[21px] leading-relaxed text-gray-700">
+          <div className="mt-4 h-1.5 w-40 rounded-full bg-gradient-to-r from-[#f45e5e] via-[#f67a7a] to-white/80 sm:w-52" />
+          <p className="mt-4 max-w-3xl text-left! text-[17px] sm:text-[19px] md:text-[21px] leading-relaxed text-white/95 drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
             {t('aboutUs.foundation.intro')}
           </p>
-        </div>
-
-        <div className="relative h-64 sm:h-80 lg:h-96">
-          <Image
-            src={introImage}
-            alt={t("aboutUs.foundation.imageAlt")}
-            fill
-            className="object-cover object-[50%_30%]"
-            sizes="(max-width: 1024px) 100vw, 1152px"
-            priority
-          />
-          <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(188,34,34,0.12)_0%,rgba(244,94,94,0.34)_100%)]" />
         </div>
       </div>
 
