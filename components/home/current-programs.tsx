@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useMemo } from "react"
 import { getActivePrograms } from "@/lib/data/programs-i18n"
-import { getProgramLogoSrc } from "@/lib/data/program-logos"
+import { getProgramLogoSrc, getProgramLogoSizeClass } from "@/lib/data/program-logos"
 import { useTranslation } from "react-i18next"
 
 export default function CurrentPrograms() {
@@ -16,6 +16,7 @@ export default function CurrentPrograms() {
     name: program.title,
     slug: program.slug,
     logo: getProgramLogoSrc(program.slug),
+    logoSize: getProgramLogoSizeClass(program.slug),
     href: `/programas/${program.slug}`,
     description: program.shortDescription,
     colors: program.colors
@@ -38,7 +39,7 @@ export default function CurrentPrograms() {
                     alt={program.name}
                     width={300}
                     height={300}
-                    className="h-full w-full object-contain"
+                    className={`${program.logoSize} object-contain`}
                     loading={index < 3 ? "eager" : "lazy"}
                   />
                 </div>

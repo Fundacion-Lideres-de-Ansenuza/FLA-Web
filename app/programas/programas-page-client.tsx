@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo } from "react";
 import { getActivePrograms, getHistoricalPrograms } from "@/lib/data/programs-i18n";
-import { getProgramLogoSrc } from "@/lib/data/program-logos";
+import { getProgramLogoSrc, getProgramLogoSizeClass } from "@/lib/data/program-logos";
 import { useTranslation } from "react-i18next";
 
 export default function ProgramasPage() {
@@ -59,7 +59,7 @@ export default function ProgramasPage() {
                             alt={program.title}
                             width={300}
                             height={300}
-                            className="h-full w-full object-contain"
+                            className={`${getProgramLogoSizeClass(program.slug)} object-contain`}
                             priority
                           />
                         </div>

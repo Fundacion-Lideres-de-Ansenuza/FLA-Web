@@ -39,15 +39,27 @@ export default function Hero() {
           </div>
 
           <div className="w-full">
-            <Image
-              src="/images/DSC_0044.webp"
-              alt={t("hero.imageAlt")}
-              width={1400}
-              height={500}
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 92vw, 1400px"
-              className="w-full h-[260px] sm:h-[320px] lg:h-[420px] rounded-3xl sm:rounded-[52px] lg:rounded-[72px] shadow-[0_30px_80px_rgba(144,20,14,0.16)] object-cover"
-              priority
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcSet="/images/hero-portada-640.avif 640w, /images/hero-portada-1000.avif 1000w, /images/hero-portada-1600.avif 1600w"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 92vw, 1400px"
+              />
+              <source
+                type="image/webp"
+                srcSet="/images/hero-portada-640.webp 640w, /images/hero-portada-1000.webp 1000w, /images/hero-portada-1600.webp 1600w"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 92vw, 1400px"
+              />
+              <img
+                src="/images/hero-portada-1600.webp"
+                alt={t("hero.imageAlt")}
+                width={1600}
+                height={1067}
+                fetchPriority="high"
+                decoding="async"
+                className="w-full h-[260px] sm:h-[320px] lg:h-[420px] rounded-3xl sm:rounded-[52px] lg:rounded-[72px] shadow-[0_30px_80px_rgba(144,20,14,0.16)] object-cover"
+              />
+            </picture>
           </div>
 
           <div className="flex flex-col items-center justify-center gap-3 md:flex-row md:gap-4">
