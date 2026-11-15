@@ -4,7 +4,7 @@ import SomosPageClient from "./SomosPageClient";
 
 export const metadata: Metadata = {
   title: "SOMOS - Programa de Liderazgo en Diversidad para Jóvenes | FLA",
-  description: "Programa gratuito de liderazgo en diversidad para jóvenes de 15-19 años en Argentina. Aprendé sobre diversidad, desarrollá habilidades de liderazgo y realizá acciones de impacto social. +90 participantes, +6000 personas impactadas.",
+  description: "Programa gratuito de liderazgo en diversidad para jóvenes de 15-19 años en Argentina. Aprendé sobre diversidad, desarrollá habilidades de liderazgo y realizá acciones de impacto social. 5 ediciones, +6000 personas impactadas.",
   keywords: [
     "programa diversidad jóvenes",
     "liderazgo diversidad argentina",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Fundación Líderes de Ansenuza" }],
   openGraph: {
     title: "SOMOS - Liderazgo en Diversidad para Jóvenes de Argentina",
-    description: "Programa gratuito de 11 semanas para jóvenes de 15-19 años. Talleres de diversidad, mentorías y acciones de impacto. +90 participantes han impactado a +6000 personas en sus comunidades.",
+    description: "Programa gratuito de 11 semanas para jóvenes de 15-19 años. Talleres de diversidad, mentorías y acciones de impacto. 5 ediciones han impactado a +6000 personas en comunidades de todo el país.",
     type: "website",
     locale: "es_AR",
     url: "https://www.lideresdeansenuza.org/programas/somos",
